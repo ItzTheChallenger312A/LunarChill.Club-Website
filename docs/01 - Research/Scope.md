@@ -22,21 +22,22 @@
   - Action Click-to-Copy Server IP (Java & Bedrock) kèm Toast thông báo "Đã sao chép vào bộ nhớ tạm".
   - Nút chuyển đổi nhanh sang cộng đồng Discord chính thức.
   - Section giới thiệu định vị gameplay và bản sắc máy chủ (Towny/Survival/Community).
-* **P0-02: Live Server Status Tracker (mcstatus.io API)**
-  - Tích hợp gọi REST API `https://api.mcstatus.io/v2/status/java/...` và fallback Bedrock.
-  - Hiển thị badge trạng thái real-time: Online/Offline, số người chơi hiện tại (`online / max`).
-  - Graceful fallback: Nếu API timeout hoặc server đang bảo trì, hiển thị trạng thái thân thiện, không làm gãy giao diện website.
+* **P0-02: Live Server Status Tracker (mcstatus.io Centralized Service)**
+  - Tích hợp gọi REST API `https://api.mcstatus.io/v2/status/java/play.lunarchill.club` qua Single Status Manager tập trung (tránh trùng request, tuân thủ giới hạn 5 req/s).
+  - Phân định rõ 5 trạng thái: `Checking`, `Online`, `Offline`, `Unable to retrieve status`, và `Maintenance` (chỉ kích hoạt khi BQT gắn cờ chủ động).
+  - Đọc hạn cache động (`expires_at`, `X-Cache-Time-Remaining`) lưu vào `sessionStorage` thay vì hardcode 60s.
+  - Graceful fallback: Nếu API timeout (> 5s) hoặc lỗi kết nối, hiển thị trạng thái "Unable to retrieve status", giữ nguyên IP để người chơi kết nối trực tiếp.
 * **P0-03: Responsive Layout 100% (Mobile, Tablet, Desktop)**
-  - Tương thích tốt nhất với người dùng di động (người chơi Minecraft Bedrock/Pocket Edition chiếm tỷ lệ lớn).
+  - Tương thích tốt nhất với người dùng di động (người chơi Minecraft Bedrock/Pocket Edition).
   - Navigation drawer trên mobile mượt mà, cảm ứng thân thiện.
 * **P0-04: Trang Nội quy máy chủ (`/rules`)**
-  - Cấu trúc văn bản mạch lạc, phân chia rõ ràng: Gian lận, Hành vi ứng xử, Xây dựng & bảo vệ tài nguyên, Khung hình phạt.
+  - Cấu trúc văn bản mạch lạc, phân chia rõ ràng: Gian lận, Hành vi ứng xử, Xây dựng & bảo vệ tài nguyên, Khung hình phạt và quy trình mở Ticket khiếu nại.
 * **P0-05: Trang Cẩm nang tân thủ (`/guide`)**
   - Địa chỉ IP & Cổng kết nối rõ ràng cho Java (mặc định 25565) và Bedrock (port 19132).
   - Bảng các câu lệnh quan trọng nhất in-game.
-* **P0-06: Văn bản Pháp lý cơ bản (`/terms` và `/privacy`)**
-  - ToS: Thỏa thuận người dùng, quyền hạn BQT, quy định không hoàn tiền, miễn trừ trách nhiệm theo Minecraft EULA.
-  - Privacy Policy: Tuân thủ quy tắc bảo vệ dữ liệu cá nhân cơ bản tại Việt Nam (Nghị định 13/2023/NĐ-CP).
+* **P0-06: Văn bản Pháp lý chuẩn xác (`/terms` và `/privacy`)**
+  - **ToS:** Khẳng định dịch vụ phi thương mại, thỏa thuận người dùng, quyền hạn BQT, miễn trừ trách nhiệm theo Minecraft EULA; loại bỏ điều khoản donate/hoàn tiền do v1.0 chưa có hoạt động này.
+  - **Privacy Policy:** Bám sát căn cứ pháp lý hiện hành tại Việt Nam — **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15** và **Nghị định 356/2025/NĐ-CP** (hiệu lực từ 01/01/2026); làm rõ chủ thể vận hành, luồng dữ liệu web (localStorage), nhật ký Vercel Edge logs (chống DDoS), dữ liệu in-game (IGN/UUID), bên thứ ba (Vercel, Discord, mcstatus.io) và kênh Ticket xử lý quyền dữ liệu.
   - Mojang Disclaimer ở footer trên mọi trang.
 * **P0-07: CI/CD & Production Deployment**
   - Cấu hình repository GitHub chuẩn, tự động deploy preview & production lên Vercel.
@@ -47,14 +48,14 @@
 ### 2.2. Nhóm P1 — Should Have (Nâng cao trải nghiệm)
 * **P1-01: Thư viện ảnh tương tác (Community Showcase / Lightbox Gallery)**
   - Hiển thị các công trình xuất sắc hoặc sự kiện máy chủ qua modal phóng to ảnh (Lightbox) nhẹ nhàng không dùng thư viện nặng.
-* **P1-02: Danh sách người chơi online chi tiết (Player Avatars / Player List)**
-  - Hiển thị avatar đầu nhân vật (Crafatar / Minotar API) của những người chơi đang có mặt in-game (nếu server bật query công khai).
-* **P1-03: Quick FAQ Accordion**
+* **P1-02: Quick FAQ Accordion**
   - Thành phần Hỏi - Đáp dạng đóng/mở (accordion) giúp giải đáp nhanh các thắc mắc thường gặp tại `/guide`.
-* **P1-04: Theme Toggle (Dark / Lunar Night Mode)**
+* **P1-03: Theme Toggle (Dark / Lunar Night Mode)**
   - Lưu tùy chọn giao diện vào LocalStorage người dùng.
-* **P1-05: Custom 404 Not Found Page**
+* **P1-04: Custom 404 Not Found Page**
   - Trang báo lỗi 404 phong cách Minecraft (ví dụ: "Bạn đã lạc vào The End") với nút quay lại Trang chủ.
+* **P1-05: Player List / Avatars (Conditional - Có điều kiện phụ thuộc)**
+  - *Lưu ý kỹ thuật:* Chỉ triển khai khi BQT máy chủ xác nhận đã bật tính năng Query (`enable-query=true`) trên server Minecraft và kiểm thử mcstatus.io trả về danh sách player ổn định. Nếu không có query, chỉ giữ bộ đếm P0 (`online / max`).
 
 ---
 
@@ -64,7 +65,7 @@
 * **P2-02: Cổng Vote thưởng tự động (Votifier Integration / Vote Leaderboard)**
   - *Lý do loại khỏi v1.0:* Yêu cầu plugin in-game và backend xử lý webhook, chưa cần thiết ở giai đoạn discovery.
 * **P2-03: Web Store / Hệ thống nạp thẻ (Donation Store)**
-  - *Lý do loại khỏi v1.0:* Server là dự án cộng đồng phi thương mại; cần hoàn thiện khung pháp lý và quy chuẩn vật phẩm trước khi mở nạp.
+  - *Lý do loại khỏi v1.0:* Server là dự án cộng đồng phi thương mại ở v1.0; chưa phát sinh nhu cầu thu phí.
 * **P2-04: Tài khoản người chơi & Đăng nhập Discord OAuth2**
   - *Lý do loại khỏi v1.0:* Vượt quá kiến trúc vanilla tĩnh (HTML/CSS/JS), làm tăng độ phức tạp vận hành cơ sở dữ liệu.
 * **P2-05: Blog / CMS thông báo tự động từ Discord**
@@ -79,8 +80,10 @@
 | IN-SCOPE (Bản v1.0)                                                      |
 | - Static site hiệu năng cao (HTML5, Vanilla CSS3, Vanilla JS).           |
 | - 5 trang: Home, Guide, Rules, Terms of Service, Privacy Policy.          |
-| - Tích hợp Client-side API mcstatus.io lấy Server Status real-time.     |
-| - 1-Click Copy IP với UX phản hồi tức thì.                               |
+| - Tích hợp Client-side mcstatus.io qua Single Status Fetcher tập trung.  |
+| - Đọc cache động (expires_at) và xử lý 5 trạng thái server rõ ràng.      |
+| - Tuân thủ Luật 91/2025/QH15, NĐ 356/2025/NĐ-CP và Mojang EULA.          |
+| - 1-Click Copy IP với UX phản hồi tức thì (Toast).                       |
 | - Host trên Vercel, kiểm soát DNS an toàn không làm gián đoạn server game.|
 +--------------------------------------------------------------------------+
                                     |
@@ -88,8 +91,9 @@
 +--------------------------------------------------------------------------+
 | OUT-OF-SCOPE (Không làm trong v1.0)                                      |
 | - Backend database riêng biệt (PostgreSQL/MongoDB).                      |
-| - Cổng thanh toán / Nạp thẻ cào / Mua hàng in-game.                      |
+| - Cổng thanh toán / Nạp thẻ cào / Mua hàng in-game (Chưa có donation).   |
 | - Hệ thống tài khoản người dùng trên website.                            |
 | - Tự viết server bot / custom status daemon.                             |
+| - Giả định cứng danh sách người chơi (Player list).                       |
 +--------------------------------------------------------------------------+
 ```

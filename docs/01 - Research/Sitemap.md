@@ -43,14 +43,14 @@ graph TD
 * **Các Section chính:**
   1. **Global Header / Nav:** Logo LunarChill, Menu (`Trang chủ`, `Nội quy`, `Hướng dẫn`, `Bản đồ`), CTA nhanh (`Tham gia Discord`, nút `Copy IP`).
   2. **Hero Section (Cinematic):** Background video/screenshot chất lượng cao, Slogan thương hiệu, nút `Copy Server IP` (với tooltip sao chép tự động), nút `Vào Discord`.
-  3. **Live Server Status Bar:** Tích hợp API mcstatus.io hiển thị real-time: Server Online/Offline, số lượng người chơi đang online (`X / Y players`), phiên bản hỗ trợ (`Java & Bedrock/PE`).
+  3. **Live Server Status Bar:** Tích hợp API mcstatus.io hiển thị theo vòng đời 5 trạng thái (`Checking`, `Online`, `Offline`, `Unable to retrieve status`, `Maintenance` nếu có cờ BQT), số lượng người chơi đang online (`players.online / players.max`), phiên bản hỗ trợ (`Java & Bedrock/PE`).
   4. **Về LunarChillSMP (Server Features & Gameplay):** Điểm đặc sắc (Kinh tế cân bằng, Towny/Claim đất, Sinh tồn nguyên bản kết hợp sự kiện cộng đồng, Không pay-to-win).
   5. **Thư viện hình ảnh cộng đồng (Community Highlights):** Showcase công trình, khoảnh khắc đáng nhớ của thành viên.
   6. **Quick Join Steps (3 bước vào game):** Hướng dẫn 3 bước cực ngắn cho cả Java & Bedrock.
   7. **Global Footer:** Bản quyền thương hiệu, Liên kết mạng xã hội, Links điều khoản (`ToS`, `Privacy Policy`), Tuyên bố miễn trừ trách nhiệm (Không liên kết với Mojang/Microsoft).
 
 ### 3.2. Cẩm nang tân thủ (`/guide` hoặc `guide.html`)
-* **Mục tiêu:** Giảm ma sát cho tân thủ (đặc biệt là người chơi Bedrock/PE) nắm cách kết nối, các lệnh cơ bản và quy tắc sinh tồn.
+* **Mục tiêu:** Giảm ma sát cho tân thủ (bao gồm người chơi Bedrock/PE) nắm cách kết nối, các lệnh cơ bản và quy tắc sinh tồn.
 * **Nội dung:**
   - Hướng dẫn kết nối: Port & IP cho Java Edition và Bedrock/Pocket Edition.
   - Hướng dẫn cài đặt gói tài nguyên / client tối ưu (Iris, Sodium).
@@ -59,7 +59,7 @@ graph TD
   - FAQ (Câu hỏi thường gặp: Mất đồ, lag, lỗi phiên bản).
 
 ### 3.3. Nội quy máy chủ (`/rules` hoặc `rules.html`)
-* **Mục tiêu:** Minh bạch quy chuẩn hành vi, bảo vệ môi trường chơi game lành mạnh, làm căn cứ xử lý vi phạm.
+* **Mục tiêu:** Minh bạch quy chuẩn hành vi, bảo vệ môi trường chơi game lành mạnh, làm căn cứ xử lý vi phạm và hỗ trợ giải quyết khiếu nại (Appeals flow).
 * **Nội dung:**
   - Quy tắc ứng xử chung (Văn hóa giao tiếp, chống phân biệt đối xử, toxicity).
   - Quy định cấm gian lận (Hack, X-ray, Auto-click, Baritone, lợi dụng bug/glitch).
@@ -67,20 +67,20 @@ graph TD
   - Khung hình phạt (Cảnh cáo, Mute, Temporary Ban, Permanent Ban) và quy trình khiếu nại (Ticket qua Discord).
 
 ### 3.4. Điều khoản dịch vụ (`/terms` hoặc `terms.html`)
-* **Mục tiêu:** Thỏa thuận người dùng, tuân thủ pháp lý cơ bản tại Việt Nam và quy định Minecraft EULA.
+* **Mục tiêu:** Thỏa thuận người dùng, minh bạch phạm vi phi thương mại của máy chủ và tuân thủ quy định Minecraft EULA.
 * **Nội dung:**
-  - Định nghĩa dịch vụ phi lợi nhuận / cộng đồng.
+  - Định nghĩa dịch vụ cộng đồng phi thương mại / giải trí.
   - Điều kiện tham gia và quyền hạn của ban quản trị (Admin/Mod).
-  - Quy định vật phẩm / ủng hộ donate (nếu có: tự nguyện, không hoàn tiền).
-  - Tuyên bố miễn trừ trách nhiệm pháp lý (Tài sản in-game, lỗi mạng, EULA Mojang).
+  - Tuyên bố miễn trừ trách nhiệm pháp lý (Tài sản in-game, lỗi mạng, EULA Mojang AB / Microsoft).
+  - *Ghi chú:* Loại bỏ hoàn toàn các điều khoản donate/hoàn tiền ở bản v1.0 do server chưa triển khai hoạt động này.
 
 ### 3.5. Chính sách bảo mật (`/privacy` hoặc `privacy.html`)
-* **Mục tiêu:** Bảo vệ quyền riêng tư người dùng theo luật Việt Nam (Nghị định 13/2023/NĐ-CP) và minh bạch việc thu thập dữ liệu web.
+* **Mục tiêu:** Tuân thủ khung pháp luật hiện hành tại Việt Nam — **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** và **Nghị định số 356/2025/NĐ-CP** (hiệu lực từ 01/01/2026).
 * **Nội dung:**
-  - Dữ liệu thu thập trên Website (Local Storage lưu theme/tùy chọn, nhật ký truy cập ẩn danh).
-  - Dữ liệu liên quan đến game (Minecraft UUID, Player IGN, IP kết nối game được bảo mật bởi máy chủ).
-  - Cam kết không bán / chia sẻ dữ liệu cho bên thứ ba.
-  - Kênh liên hệ xử lý thông tin cá nhân.
+  - Xác định rõ chủ thể vận hành (Ban Quản Trị LunarChillSMP).
+  - Minh bạch các luồng dữ liệu thực tế: Local Storage (lưu cài đặt giao diện), Nhật ký truy cập mạng/DDoS logs từ Vercel Edge, và định danh in-game (IGN, UUID, IP in-game lưu trên server Minecraft).
+  - Các bên thứ ba liên quan: Vercel Inc., mcstatus.io, Discord Inc.
+  - Quyền của chủ thể dữ liệu và kênh tiếp nhận hỗ trợ/xóa dữ liệu chính thức qua Ticket Discord.
 
 ---
 
@@ -90,7 +90,7 @@ graph TD
 | :--- | :--- | :--- | :--- |
 | **Main Header** | Trang chủ | `/` | Logo + Text |
 | | Cẩm nang | `/guide` | Hướng dẫn tân thủ & Lệnh |
-| | Nội quy | `/rules` | Luật máy chủ |
+| | Nội quy | `/rules` | Luật máy chủ & Khiếu nại |
 | | Bản đồ | `External link (Live Map)` | Mở tab mới xem web map |
 | | **Copy IP** | `Click-to-Copy Action` | Tự động copy `play.lunarchill.club` |
 | | **Discord** | `https://discord.gg/...` | Nút Button nổi bật (Primary CTA) |
