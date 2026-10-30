@@ -59,8 +59,9 @@ Tác phẩm logo chính thức mang lại một hệ sinh thái thẩm mỹ tr�
 |                    [ > Sao chép IP Server < ]   [ Tham gia Discord ]                    |
 |                                                                                         |
 |                 +------------------------------------------------------+                |
-|                 |  ● Online | 24/50 người chơi | Java & Bedrock Hỗ trợ |                |
+|                 |  ● Online | {online}/{max} người chơi | Java & Bedrock       |                |
 |                 +------------------------------------------------------+                |
+|                 *(Dữ liệu người chơi render động từ mcstatus.io API)*                   |
 +-----------------------------------------------------------------------------------------+
 |  [3 Bước vào game cực nhanh: 1. Mở Minecraft -> 2. Nhập IP -> 3. Bắt đầu sinh tồn]     |
 +-----------------------------------------------------------------------------------------+

@@ -28,11 +28,13 @@ Asset nhận diện chính thức của máy chủ là tác phẩm huy hiệu tr
 3. **Orbital Ring & Stars (Vòng quỹ đạo & Bụi sao):** Vòng hào quang quỹ đạo dạ quang xanh lơ bao quanh khung tròn cùng các vì sao lấp lánh 4 cánh đặc trưng.
 4. **The Wordmark "LUNAR":** Kiểu chữ chạm khắc nổi khối 3D kim loại ánh bạc viền dạ quang (Chiseled Fantasy Serif), góc cạnh vát nhọn mạnh mẽ, chữ `L` vươn dài bọc lấy vầng trăng, tâm chữ `U` và `A` có điểm xuyết ngôi sao lấp lánh.
 
-### 2.2. Vùng an toàn & Kích thước tối thiểu (Clear Space & Minimum Size)
+### 2.2. Vùng an toàn & Kích thước hiển thị (Clear Space & Sizing)
 * **Vùng an toàn (Clear space):** Khoảng cách tối thiểu xung quanh logo bằng chiều cao của đuôi vệt quỹ đạo hành tinh. Không để bất kỳ chi tiết đồ họa, văn bản hay nút bấm nào chạm vào viền phát sáng ngoài cùng.
-* **Kích thước tối thiểu trên Web:**
-  - Full Circular Badge (Huy hiệu đầy đủ): Chiều rộng tối thiểu `140px` (desktop header), `96px` (mobile nav), `240px` - `360px` tại Hero Showcase.
-  - Favicon / App Icon: Tối thiểu `32x32px` (chuẩn hiển thị tab trình duyệt: `16px`, `32px`, `192px`, `512px`).
+* **Kích thước hiển thị thực tế trên Web (Cần tinh chỉnh trực tiếp trong prototype):**
+  - **Desktop Header Nav:** Khuyên dùng chiều cao `36px` đến `44px` nếu dùng biểu tượng tròn (hoặc tối đa `110px` đến `120px` chiều rộng nếu dùng combo biểu tượng + chữ wordmark). Tránh để kích thước quá lớn (> 50px chiều cao) làm dày thanh Navigation một cách không cần thiết.
+  - **Mobile Header Nav:** Chiều cao biểu tượng tối ưu từ `32px` đến `36px`.
+  - **Hero Section Showcase:** Tại vị trí trung tâm Hero Section, logo huy hiệu tròn có thể hiển thị lớn và nổi bật từ `200px` đến `320px` với hiệu ứng breathing glow xung quanh.
+  - **Favicon / App Icon:** Chuẩn hiển thị tab trình duyệt: `16x16px`, `32x32px`, `192x192px`, `512x512px`.
 
 ### 2.3. Quy tắc ứng dụng Logo (Usage Rules)
 * **Khuyên dùng (Do):**

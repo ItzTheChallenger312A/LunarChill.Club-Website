@@ -76,21 +76,20 @@ Existing branding assets may be redesigned when doing so strengthens the overall
 **Important:** Do not change shared DNS records without confirming their current purpose and dependencies.
 ## 6. Project Roadmap
 
-|Phase|Planned dates|Main outcome|
-|---|---|---|
-|01 — Research & Requirements|Oct 17–21|Research notes, requirements, sitemap|
-|02 — Brand & UI Design|Oct 22–27|Design direction, wireframes, Figma prototype|
-|03 — Development|Oct 28–Nov 10|Responsive website implementation|
-|04 — QA & Review|Nov 11–16|Tested and reviewed website|
-|05 — Release Candidate|Nov 17–18|Candidate ready for handover|
-|Buffer & Final Handover|By Nov 20|Fix remaining issues and deliver|
+|Phase|Planned dates|Main outcome|Status|
+|---|---|---|---|
+|01 — Research & Requirements|Oct 17–30|Research notes, requirements, sitemap, scope matrix|Hoàn thành (Đóng)|
+|02 — Brand & UI Design|Oct 30–Nov 05|Brand guidelines, design system, UI direction, Figma prototype|Đang triển khai|
+|03 — Development|Nov 06–Nov 14|Responsive website implementation, vanilla HTML/CSS/JS|Sắp tới|
+|04 — QA & Review|Nov 15–Nov 18|Cross-browser testing, mobile audit, API edge-case verification|Dự kiến|
+|05 — Release Candidate & Handover|Nov 19–Nov 20|Vercel deployment, final review and handover|Dự kiến|
 
-Dates are planning targets and may change as requirements are clarified.
+Dates are adjusted to match actual project pace while strictly maintaining the final handover deadline: 2026-11-20.
 ## 7. Project Structure
 
-- `01 - Research/` — [[Reference Analysis]], [[Audience & User Journey]], [[Requirements]].
+- `01 - Research/` — [[Reference Analysis]], [[Audience & User Journey]], [[Requirements]], [[Scope]], [[Sitemap]].
     
-- `02 - Design/` — [[Design Directions]], [[Brand Identity]], sitemap, wireframes.
+- `02 - Design/` — [[Brand Guidelines]], [[Design System]], [[UI Direction]], Figma prototype.
     
 - `03 - Development/` — [[Technical Plan]] and [[Acceptance Criteria]].
     
@@ -98,19 +97,13 @@ Dates are planning targets and may change as requirements are clarified.
 
 ## 8. Current Priorities
 
-- Analyze the reference website.
+- Hoàn thiện các khung màn hình (Frames) trên Figma Prototype theo Design System (Homepage, Guide, Rules, Terms, Privacy).
     
-- Define audience needs and user journeys.
+- Thử nghiệm trực tiếp kích thước hiển thị logo thực tế trong prototype trên Desktop Header (thử nghiệm các mức 36px–44px cho Icon, 110px–120px cho Full Logo) để đảm bảo không bị thô/chiếm diện tích.
     
-- Confirm the website's content and functional requirements.
+- Soạn thảo tài liệu [[Technical Plan]] và [[Acceptance Criteria]] trong thư mục `03 - Development` để chuẩn bị cho giai đoạn code.
     
-- Establish the sitemap and navigation structure.
-    
-- Explore design directions and brand identity.
-    
-- Prepare wireframes and a prototype.
-    
-- Develop, test, and prepare the release candidate.
+- Thu thập hình ảnh in-game thực tế và xác nhận Discord invite link từ Ban Quản Trị server.
 
 ## 9. Key Decisions & Open Questions
 
