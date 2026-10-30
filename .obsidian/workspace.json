@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/01 - Research/Scope.md",
+                "file": "docs/00 - Project Overview/Overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scope"
+              "title": "Overview"
             }
           }
         ],
@@ -219,17 +219,23 @@
   },
   "active": "a588956785fd1e49",
   "lastOpenFiles": [
+    "state/inuse.20324.lock",
+    "state",
+    "docs/02 - Design/UI Direction.md",
+    "Lunar_Logo.png",
+    "docs/02 - Design/Design System.md",
+    "docs/02 - Design/Design Directions.md",
+    "docs/02 - Design/Brand Identity.md",
+    "docs/02 - Design/Brand Guidelines.md",
+    "docs/01 - Research/Scope.md",
     "docs/01 - Research/Sitemap.md",
     "docs/01 - Research/Reference Analysis.md",
     "docs/01 - Research/Requirements.md",
     "docs/01 - Research/Audience & User Journey.md",
-    "docs/01 - Research/Scope.md",
-    "docs/02 - Design/Brand Identity.md",
     "docs/00 - Project Overview/Overview.md",
     "audience & user journeys.md",
     "docs/03 - Development/Acceptance Criteria.md",
     "docs/03 - Development/Technical Plan.md",
-    "docs/02 - Design/Design Directions.md",
     "00 - Project Overview.md",
     "docs/04 - Meeting Notes",
     "docs/03 - Development",
@@ -240,7 +246,6 @@
     "docs/04 - Meeting Notes",
     "docs/03 - Development",
     "docs/research-and-design-brief.md",
-    "docs/02 - Design",
-    "docs/01 - Research"
+    "docs/02 - Design"
   ]
 }

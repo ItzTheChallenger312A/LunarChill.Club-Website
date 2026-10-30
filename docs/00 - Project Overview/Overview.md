@@ -11,7 +11,7 @@
     
 - **Deadline:** 2026-11-20
     
-- **Current phase:** Research & Requirements
+- **Current phase:** Brand & UI Design (Phase 02)
     
 - **Tech stack:** HTML, CSS, JavaScript
     
@@ -120,24 +120,26 @@ Dates are planning targets and may change as requirements are clarified.
     
 - The website will support both discovery and existing-player information needs.
     
-- The creative direction combines cinematic Minecraft visuals, modern minimalism, and community storytelling.
+- The creative direction combines cinematic Minecraft visuals, modern minimalism, and community storytelling ("Cosmic Sanctuary").
+    
+- Official brand asset `Lunar_Logo.png` confirmed as the central identity anchor (Floating voxel island, moon crest, waterfall glow palette).
     
 - Vercel is the planned hosting platform.
+    
+- Research Phase v1.0 closed; new feature ideas are recorded in backlog v1.1+.
 
 
 ### Open questions
 
-- Which pages and features are essential for the first release?
+- What in-game screenshots are available from the server team for the Community Showcase gallery?
     
-- What existing branding assets can be reused?
-    
-- What content and screenshots are available from the server team?
-    
-- Where are server announcements and community updates currently maintained?
+- What is the official Discord invite link to wire into the Primary CTA buttons?
     
 - Who owns the domain, and what DNS configuration must be preserved?
     
-- Which feedback and approval process will the server team use?
+- Has the server team enabled `enable-query=true` in `server.properties` for the conditional Player List feature?
+    
+- Which feedback and approval process will the server team use for the Figma Prototype?
 ## 10. Project Log
 
 Use this section to record major decisions, completed milestones, and changes in scope.
@@ -148,3 +150,15 @@ Use this section to record major decisions, completed milestones, and changes in
 - Repository and Obsidian documentation structure prepared.
     
 - Research and requirements phase initiated.
+
+### 2026-10-30
+
+- Research Phase v1.0 closed and approved: finalized `Requirements.md`, `Sitemap.md`, `Scope.md`, and `Audience & User Journey.md`.
+    
+- Transitioned to Phase 02 — Brand & UI Design.
+    
+- Integrated official brand asset `Lunar_Logo.png` into brand guidelines, design system tokens, and UI direction.
+    
+- Extracted official color palette directly from logo (Deep Abyss Black `#090914`, Waterfall Glow Blue `#688BF8`, Midnight Indigo `#0A0E2A`, Moonlight Silver `#E0EFFF`).
+    
+- Created Figma design file: `LunarChillSMP Website Prototype` (Key: `Hjdn5UhKT2D8ucSxTig4hy`).
