@@ -1,6 +1,6 @@
 # LunarChillSMP Website — Project Overview
 
-> A website built to introduce LunarChillSMP, express its identity, and connect players with its community.
+> A website built to introduce LunarChillSMP, express its identity ("Chill thôi, đừng có vội."), and connect players with its community.
 ## 1. Project Summary
 
 - **Project:** LunarChillSMP Official Website

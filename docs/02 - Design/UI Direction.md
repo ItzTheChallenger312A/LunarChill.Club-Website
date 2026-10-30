@@ -9,11 +9,17 @@
 LunarChillSMP chọn định hướng phong cách **"Cosmic Sanctuary" (Vùng trú ẩn thanh bình dưới bầu trời đêm vũ trụ)**.
 
 * **Từ khóa cảm xúc (Keywords):**
-  - *Serene (Thanh bình)*
-  - *Cinematic (Điện ảnh)*
-  - *Moonlit & Cosmic (Ánh trăng & Huyền ảo)*
-  - *Voxel Floating Islands (Đảo nổi kỳ vĩ)*
-  - *Clean & Uncluttered (Gọn gàng, tinh tế)*
+  - *Chill & Unhurried (Thư thả, không vội vã)*
+  - *Cinematic but Grounded (Điện ảnh nhưng gần gũi, ấm cúng)*
+  - *Moonlit & Cosmic (Ánh trăng dịu mát, không xa cách)*
+  - *Clean & Friendly (Gọn gàng, tinh tế, thân thiện)*
+  - *Authentic Minecraft (Chân thật, thuần chất Minecraft)*
+
+### 4 Nguyên tắc thể hiện Tinh thần "Chill":
+1. **Visual:** Vẫn giữ không gian Cosmic Sanctuary và chiều sâu điện ảnh, nhưng giảm bớt sắc thái fantasy xa cách/thần thoại huyền bí cổ xưa; tập trung vào sự ấm cúng, thư thái của màn đêm Minecraft và ánh đèn lồng.
+2. **Copywriting:** Thân thiện, tự nhiên, có chút hài hước hóm hỉnh đời thường của anh em game thủ; cấm kỵ giọng quảng cáo giật gân, câu kéo hay đao to búa lớn.
+3. **Motion:** Chuyển động nhẹ nhàng, êm dịu, không giật cục, không animation dồn dập khiến mắt bị mỏi.
+4. **Hero Presentation:** Slogan tiếng Việt *"Chill thôi, đừng có vội."* 🌙 là điểm nhấn chính trung tâm; bản dịch phụ *"Just chill, don't rush."* hiển thị tinh tế bên dưới.
 
 ### Cảm hứng thị giác từ `Lunar_Logo.png`:
 Tác phẩm logo chính thức mang lại một hệ sinh thái thẩm mỹ trọn vẹn:
@@ -53,7 +59,8 @@ Tác phẩm logo chính thức mang lại một hệ sinh thái thẩm mỹ tr�
 |                                     HERO SECTION                                        |
 |                                [ Circular Crest Logo ]                                  |
 |                                                                                         |
-|                        "Nơi sinh tồn tĩnh lặng dưới ánh trăng"                          |
+|                               "Chill thôi, đừng có vội." 🌙                              |
+|                                 *Just chill, don't rush.*                               |
 |                       play.lunarchill.club (Bedrock Port: 19132)                        |
 |                                                                                         |
 |                    [ > Sao chép IP Server < ]   [ Tham gia Discord ]                    |

@@ -7,12 +7,13 @@
 ## 1. Bản sắc thương hiệu (Brand Essence & Philosophy)
 
 * **Tên thương hiệu:** LunarChillSMP (viết tắt: LunarChill)
-* **Khẩu hiệu (Tagline / Slogan):** *"Nơi sinh tồn tĩnh lặng dưới ánh trăng"* (A serene survival under the moonlit sky).
+* **Khẩu hiệu chính thức (Official Slogan):** *"Chill thôi, đừng có vội."* 🌙
+* **Khẩu hiệu tiếng Anh phụ (Sub-tagline):** *"Just chill, don't rush."*
 * **Định vị cảm xúc (Brand Personality):**
   - **Lunar (Mặt trăng & Vũ trụ huyền ảo):** Bầu trời đêm sâu thẳm, vầng trăng khuyết phát sáng rực rỡ, các đảo nổi voxel lơ lửng và thác nước ánh sáng mang lại cảm giác kỳ ảo nhưng tĩnh lặng.
-  - **Chill (Thư giãn / Thanh bình):** Nhịp độ chơi chậm rãi, không cạnh tranh độc hại (non-toxic), cộng đồng gắn kết và văn minh.
+  - **Chill (Thư giãn / Không vội vã):** Đúng như slogan *"Chill thôi, đừng có vội"* — nhịp độ chơi chậm rãi, không chạy đua vũ trang, không cạnh tranh độc hại (non-toxic), cộng đồng gắn kết thân thiện, gần gũi và có chút hài hước hóm hỉnh. "Chill" không có nghĩa là nhạt nhẽo; nó là sự thư thả giữa một thế giới được chăm chút thẩm mỹ.
   - **SMP (Survival MultiPlayer):** Trải nghiệm sinh tồn nguyên bản kết hợp xây dựng thị trấn (Towny) và tạo lập kỷ niệm chung.
-* **Tuyên ngôn thiết kế:** Tránh xa phong cách rực rỡ lòe loẹt, quảng cáo giật gân thường thấy ở các server thương mại. LunarChill sử dụng phong cách **Cosmic Sanctuary & Cinematic Minecraft** tinh tế, có chiều sâu thị giác.
+* **Tuyên ngôn thiết kế:** Tránh xa phong cách rực rỡ lòe loẹt, quảng cáo giật gân hoặc giọng điệu fantasy quá xa cách/đao to búa lớn. LunarChill kết hợp giữa sự điện ảnh cinematic của Minecraft và tinh thần gần gũi, thư thả, đời thường.
 
 ---
 
@@ -84,6 +85,7 @@ Bảng màu được trích xuất trực tiếp từ các điểm ảnh cốt l
 
 ## 4. Ngữ điệu & Tiếng nói thương hiệu (Tone of Voice)
 
-* **Điềm tĩnh & Thân thiện (Calm & Welcoming):** Chào đón người chơi như một người bạn cũ. Không dùng câu chữ giật gân, câu like, giục giã hoặc "clickbait".
-* **Minh bạch & Rõ ràng (Transparent & Direct):** Hướng dẫn luật chơi, cấu hình IP, lệnh game ngắn gọn, đi thẳng vào trọng tâm, không vòng vo.
-* **Trọng cộng đồng (Community-Centric):** Tôn vinh các công trình, đảo bay và đóng góp của thành viên, coi trải nghiệm của người chơi là giá trị cốt lõi.
+* **Gần gũi, Tự nhiên & Hóm hỉnh (Friendly, Natural & Witty):** Nói chuyện như bạn bè trong một nhóm chơi thân thiết. Dùng ngôn từ đời thường, ấm áp, có chút hóm hỉnh nhẹ nhàng; tuyệt đối không dùng giọng quảng cáo game giật gân, đao to búa lớn hoặc câu chữ thúc giục "chơi ngay kẻo lỡ".
+* **Thư thả & Không vội vã (Unhurried & Calm):** Thể hiện tinh thần *"Chill thôi, đừng có vội."* trong từng dòng hướng dẫn và lời mời gọi.
+* **Minh bạch & Rõ ràng (Transparent & Direct):** Hướng dẫn luật chơi, cấu hình IP, lệnh game ngắn gọn, đi thẳng vào trọng tâm, không vòng vo hoa mỹ.
+* **Trọng cộng đồng (Community-Centric):** Tôn vinh các công trình, câu chuyện và kỷ niệm của người chơi; cộng đồng là trái tim của máy chủ.

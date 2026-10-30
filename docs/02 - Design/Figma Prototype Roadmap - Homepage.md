@@ -63,8 +63,8 @@ flowchart TD
   - Bụi sao 4 cánh mờ ảo phân bổ xung quanh.
 * **Cấu trúc nội dung (Auto-Layout Vertical, Center aligned, Gap 24px):**
   1. **Huy hiệu Logo Trung tâm:** `Lunar_Logo.png` hiển thị huy hiệu tròn đầy đủ kích thước `240px x 240px` (Desktop) hoặc `160px x 160px` (Mobile) với hiệu ứng viền phát sáng nhẹ.
-  2. **Headline:** *"Nơi sinh tồn tĩnh lặng dưới ánh trăng"* (Display font `48px Bold`, màu `#FEFDFD`, text glow nhẹ).
-  3. **Sub-headline & Server Domain:** `play.lunarchill.club` (Bedrock Port: `19132`) — Font `16px Regular`, màu `#94A3B8`.
+  2. **Headline:** *"Chill thôi, đừng có vội."* 🌙 (Display font `48px Bold`, màu `#FEFDFD`, text glow nhẹ) — điểm nhấn trung tâm của Hero.
+  3. **Sub-headline & Server Domain:** *"Just chill, don't rush."* (Font `18px Regular`, màu `#38BDF8`, italic/sub-label) cùng địa chỉ kết nối `play.lunarchill.club` (Bedrock Port: `19132`) — Font `15px Regular`, màu `#94A3B8`.
   4. **Call-to-Action Group (Horizontal Auto-Layout, Gap 16px):**
      - **Button Primary:** `[ > Sao chép IP Server < ]` (Nền Gradient `#688BF8` -> `#3B82F6`, bo góc 12px, padding `16px 28px`, đổ bóng phát sáng `0 4px 20px rgba(104, 139, 248, 0.4)`).
      - **Button Secondary:** `[ Tham gia Discord ]` (Nền kính tối viền 1px `#818CF8`, icon Discord).
