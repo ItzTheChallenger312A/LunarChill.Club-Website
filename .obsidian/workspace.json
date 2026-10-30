@@ -219,6 +219,7 @@
   },
   "active": "a588956785fd1e49",
   "lastOpenFiles": [
+    "link.txt",
     "state/inuse.20324.lock",
     "state",
     "docs/02 - Design/UI Direction.md",
@@ -245,7 +246,6 @@
     "docs",
     "docs/04 - Meeting Notes",
     "docs/03 - Development",
-    "docs/research-and-design-brief.md",
-    "docs/02 - Design"
+    "docs/research-and-design-brief.md"
   ]
 }
