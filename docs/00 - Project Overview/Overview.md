@@ -19,7 +19,7 @@
     
 - **Hosting plan:** Vercel
     
-- **Design tool:** Figma (planned)
+- **Design tool:** Figma ([LunarChillSMP Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)) — In Progress (Phase 02)
 ## 2. Project Goals
 
 The website should serve three main purposes:

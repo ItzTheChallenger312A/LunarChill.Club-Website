@@ -20,7 +20,7 @@
 
 Asset nhận diện chính thức của máy chủ là tác phẩm huy hiệu tròn (Circular Crest) kết hợp giữa nghệ thuật voxel Minecraft và phong cách Fantasy Art đương đại.
 
-![LunarChill Logo](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/Lunar_Logo.png)
+![LunarChill Logo](../../Lunar_Logo.png)
 
 ### 2.1. Giải phẫu cấu trúc Logo (Logo Anatomy)
 1. **The Moon Crest (Trăng Khuyết Thần Thoại):** Vầng trăng lưỡi liềm trắng bạc phát quang mạnh mẽ ở góc trên, có bề mặt vân miệng núi lửa mềm mại.
