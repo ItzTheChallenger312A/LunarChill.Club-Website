@@ -1,7 +1,7 @@
 # LunarChillSMP — Content & Data Registry (Single Source of Truth)
 
-> **Tài liệu nguồn dữ liệu chuẩn (SSOT)**
-> Quản lý tập trung toàn bộ dữ liệu thực tế, thông số kết nối, nội dung cẩm nang, nội quy và người chịu trách nhiệm xác nhận thông tin cho website LunarChillSMP.
+> **Tài liệu nguồn dữ liệu chuẩn (SSOT)**  
+> Quản lý tập trung toàn bộ dữ liệu thực tế, thông số kết nối, nội dung cẩm nang, nội quy, danh sách plugin/datapack, cơ chế sinh tồn đặc thù và người chịu trách nhiệm xác nhận thông tin cho website LunarChillSMP.
 
 ---
 
@@ -16,7 +16,7 @@
 | **PE Port** | `19143` (bắt buộc nhập) | Đang hoạt động | BQT Server |
 | **Phiên bản hỗ trợ PC** | 1.21.11 đến bản mới nhất (26.3) | Đã xác nhận | BQT Server |
 | **Phiên bản hỗ trợ PE** | 26.30 – 26.51 | Đã xác nhận | BQT Server |
-| **Query Server Mode** | `enable-query=true` (Port: 25572) | Chờ test phản hồi player list | BQT Server |
+| **Query Server Mode** | `enable-query=true` (Port: 25572) | mcstatus.io Dual Fetch | Lead Dev |
 
 ---
 
@@ -24,43 +24,95 @@
 
 | Kênh / Dịch vụ | URL thực tế | Mục đích | Trạng thái |
 | :--- | :--- | :--- | :--- |
-| **Discord Community** | `https://discord.gg/lunarchill` *(tạm thời / chờ invite vĩnh viễn)* | Tham gia cộng đồng, mở Ticket hỗ trợ | Cần link invite vĩnh viễn từ BQT |
-| **Live Map (Bản đồ web)** | `https://map.lunarchill.club` (Dynmap/BlueMap) | Xem bản đồ thế giới thời gian thực | Mở tab mới (`_blank`) |
-| **mcstatus.io PC (Java)** | `https://api.mcstatus.io/v2/status/java/LunarChill.club:25572` | Fetch trạng thái online & số người chơi | Sẵn sàng tích hợp |
-| **mcstatus.io PE (Bedrock)**| `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:19143` | Dự phòng tra cứu Bedrock | Sẵn sàng tích hợp |
+| **Discord Community** | `https://discord.gg/lunarchill` | Tham gia cộng đồng, mở Ticket hỗ trợ | Hoạt động |
+| **Live Map (Bản đồ web)** | `https://map.lunarchill.club` | Xem bản đồ thế giới thời gian thực | Mở tab mới (`_blank`) |
+| **mcstatus.io PC (Java)** | `https://api.mcstatus.io/v2/status/java/LunarChill.club:25572` | Trạng thái online & số người chơi PC | Đã tích hợp |
+| **mcstatus.io PE (Bedrock)**| `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:19143` | Trạng thái online & số người chơi PE | Đã tích hợp |
 
 ---
 
-## 3. Bản sắc & Tính năng Gameplay Thực tế (Core Features)
+## 3. Các Mod Client Được Hỗ Trợ Chính Thức (Recommended Client Mods)
 
-1. **Sinh tồn thuần khiết (Vanilla Enhanced):**
-   - Giữ nguyên trải nghiệm sinh tồn cốt lõi của Minecraft, không mod quá đà, cân bằng kinh tế và tài nguyên.
-2. **Thị trấn & Giữ đất (Towny Protection):**
-   - Cho phép người chơi lập thị trấn, bảo vệ công trình cá nhân/tập thể, ngăn chặn hoàn toàn nạn griefing hay phá hoại.
-3. **Cộng đồng văn minh & Không Pay-to-Win (Fair Play):**
-   - Tuyệt đối không bán đồ bá đạo, không có rank tạo đặc quyền áp đảo. Mọi thành viên bình đẳng.
+1. **Xaero-Map (World Map & Minimap):** Khuyến khích sử dụng, hỗ trợ chính thức không lo bị đè map hay mất tọa độ cứ điểm.
+2. **Simple Voice Chat:** Đàm thoại giọng nói 3D định hướng theo khoảng cách nhân vật in-game.
+3. **ImageMap Client:** Mod hỗ trợ hiển thị tranh ảnh nét phân giải cao từ plugin ImageFrame.
+4. **PatPat:** Hiển thị hoạt ảnh vỗ về / xoa đầu người chơi khác.
+5. **Sodium & Iris Shaders (Fabric):** Tối ưu hóa rendering tăng FPS và hỗ trợ shaderpack ánh trăng.
 
 ---
 
-## 4. Bảng Lệnh Thông dụng In-game (`/guide`)
+## 4. Cơ chế Sinh tồn Đặc thù (Unique Gameplay Mechanics)
 
-| Nhóm lệnh | Cú pháp lệnh | Mô tả công dụng | Cho phép Copy 1-Click |
+### 4.1. Khai khoáng & Hiệu ứng Đào Chậm
+- Tọa độ $Y \le 0$: Đào Deepslate, Diorite, Andesite, Granite bị **Đào chậm 1 phút**.
+- **Miễn trừ:** Giữ **30 level kinh nghiệm trở lên** được đào bình thường không bị phạt.
+- **Ancient Debris:** Luôn bị **Đào chậm 1 phút, không thể miễn trừ**.
+- Khuyến khích thám hiểm hang động sâu tự nhiên thay vì strip mine đào hầm.
+
+### 4.2. Thanh Chỉ số Nước (Water)
+- Giảm **3% mỗi phút** khi có hoạt động.
+- Hồi phục: Uống nước, ăn dưa hấu, súp hầm (*CropAndKettle*), quả mọng.
+- Đứng yên hoàn toàn (AFK): Thanh nước được bảo toàn, không bị tụt.
+
+### 4.3. Thanh Chỉ số Oxy (Oxygen)
+- Tự động nạp đầy khi đứng trên bề mặt đất Overworld.
+- Vùng tiêu hao: Hang sâu (giảm dần), Nether (giảm **4%/phút**), The End (giảm **2%/10 giây**).
+- **Vật phẩm cứu sinh:** Cầm **Beacon (Đèn hiệu)** ở tay chính (*Main hand*) giúp liên tục hồi phục oxy cho bản thân và đồng đội đứng gần.
+
+### 4.4. Đại tu The End & Custom Crafting
+- **Nullscape:** Datapack đại tu địa hình The End (độ cao 384 block, vách đá hư không hùng vĩ).
+- **Stellarity & StellarityOptimizer:** Đại tu toàn bộ lối chơi The End (biome, đền đài, Boss mới, cổ vật thần thoại). Có **Custom Crafting**.
+- Tuyệt đối **không thể đặt nước ở The End**.
+
+### 4.5. Thay đổi Rơi đồ Quái vật (Lootable Mobs)
+- **Iron Golem:** Không rơi sắt, chỉ rơi Bí ngô.
+- **Illusioner (Raid):** Rơi khối trang trí và tranh vẽ.
+- **Evoker:** Tỷ lệ rơi Totem of Undying chỉ còn **3%**.
+- **Silverfish:** Không rơi điểm kinh nghiệm.
+
+### 4.6. Quy tắc Thế giới Khắc chế Lạm dụng (Anti-Exploit)
+- **Wither:** Chỉ summon được ở Nether, máu tăng lên **900 HP**.
+- **Giường ngủ:** Không thể ngủ qua đêm; nằm lên giường hoặc `/lay` để reset Phantom.
+- **Dân làng:** Không sinh sản, không bán Mending, không bán đồ kim cương.
+- **Zombie Lợn:** Luôn chủ động tấn công người chơi trong Nether.
+- **Hạn chế Nether:** Không đặt được Obsidian trong Nether; không đặt được block trên trần Nether.
+- **Farm quái nhân tạo:** Mọi farm nhân tạo trên không, trên biển đều bị vô hiệu hóa (kể cả farm raid).
+
+---
+
+## 5. Bảng Lệnh Thông dụng In-game (`/guide`)
+
+| Nhóm lệnh | Cú pháp lệnh | Mô tả công dụng | Cho phép Copy |
 | :--- | :--- | :--- | :--- |
-| **Di chuyển** | `/spawn` | Dịch chuyển tức thời về Khu vực Trung tâm (Spawn) | Có (`copy-cmd`) |
+| **Di chuyển & Căn cứ** | `/spawn` | Dịch chuyển tức thời về Khu vực Trung tâm (Spawn) | Có (`copy-ip`) |
 | | `/sethome [tên]` | Đặt điểm dịch chuyển tại nhà cá nhân | Có |
 | | `/home [tên]` | Quay trở về điểm nhà đã lưu | Có |
-| | `/tpa [tên_người_chơi]` | Gửi yêu cầu dịch chuyển tới vị trí bạn bè | Có |
-| | `/tpaccept` | Chấp nhận yêu cầu dịch chuyển của người khác | Có |
-| **Bảo vệ đất** | `/claim` hoặc dùng xẻng vàng | Đánh dấu ranh giới bảo vệ công trình | Có |
-| | `/trust [tên_người_chơi]` | Cấp quyền xây dựng/mở rương cho bạn bè | Có |
-| | `/untrust [tên_người_chơi]` | Hủy quyền truy cập của người chơi vào khu đất | Có |
-| **Giao tiếp** | `/msg [tên] [nội dung]` | Nhắn tin riêng tư cho một người chơi | Có |
-| | `/r [nội dung]` | Trả lời nhanh tin nhắn riêng vừa nhận | Có |
-| | `/guide` | Mở menu cẩm nang tân thủ trực tiếp in-game | Có |
+| | `/tpa [tên_người_chơi]` | Gửi yêu cầu dịch chuyển tới bạn bè | Có |
+| | `/tpaccept` | Đồng ý yêu cầu dịch chuyển | Có |
+| | `/lay` | Nằm nghỉ ngơi reset Phantom mà không cần ngủ qua đêm | Có |
+| | *Beacon Waypoint* | Tương tác với Beacon để dịch chuyển tức thời | In-game |
+| **Thị trấn & Đất đai** | `/town` | Xem thông tin thị trấn của bạn | Có |
+| | `/town new [tên]` | Thành lập thị trấn mới | Có |
+| | `/town claim` | Mở rộng ranh giới thị trấn | Có |
+| | `/claim` | Tạo vùng bảo vệ đất cá nhân | Có |
+| | `/trust [tên_người_chơi]` | Cấp quyền xây dựng / mở rương cho bạn bè | Có |
+| | `/untrust [tên_người_chơi]`| Thu hồi quyền truy cập khỏi khu đất | Có |
+| **Kỹ năng & Thú cưng** | `/skills` | Mở bảng cấp độ 11+ kỹ năng Aura Skills | Có |
+| | `/stats` | Xem các chỉ số sức mạnh, máu, hồi phục, may mắn | Có |
+| | `/pet` | Mở menu quản lý thú cưng MyPet | Có |
+| | `/petcall` | Gọi thú cưng đến vị trí hiện tại | Có |
+| **Giao thương & Kinh tế** | `/ah` | Mở sàn đấu giá người chơi (Auction House) | Có |
+| | `/ah sell [giá]` | Đăng bán vật phẩm đang cầm trên tay | Có |
+| | `/orders` | Mở bảng đặt hàng thu mua tài nguyên số lượng lớn | Có |
+| **Tiện ích & Chat** | `[item]` hoặc `[i]` | Khoe vật phẩm đang cầm trên tay lên khung chat | Có |
+| | `[inv]` | Hiển thị toàn bộ túi đồ hiện tại lên khung chat | Có |
+| | `/skin [tên_skin]` | Thay đổi trang phục skin nhân vật | Có |
+| | `/redeem [mã_code]` | Nhập mã giftcode nhận quà tân thủ / sự kiện | Có |
+| | *AxShulkers* | Shift + Chuột phải vào Shulker trong balo để mở nhanh | In-game |
 
 ---
 
-## 5. Danh mục Nội quy & Khung Kỷ luật (`/rules`)
+## 6. Danh mục Nội quy & Khung Kỷ luật (`/rules`)
 
 * **Điều 1 — Chống gian lận (Zero Tolerance for Cheating):**
   - Nghiêm cấm hack, x-ray, auto-click, baritone, freecam hoặc lợi dụng lỗi game (glitch/dupe).
@@ -70,13 +122,13 @@
   - *Hình phạt:* Cảnh cáo ➔ Mute 1 giờ ➔ Mute 24 giờ ➔ Tạm khóa tài khoản.
 * **Điều 3 — Bảo vệ công trình & Cấm Griefing:**
   - Không phá hoại công trình của người khác (dù chưa kịp claim), không bẫy người chơi (trap/kill) tại khu vực cấm PvP.
-  - *Hình phạt:* Rollback hoàn trả tài sản + Tạm khóa 3 đến 7 ngày.
+  - *Hình phạt:* Rollback hoàn trả tài sản qua CoreProtect + Tạm khóa 3 đến 7 ngày.
 * **Điều 4 — Quy trình Khiếu nại (Appeals Ticket):**
   - Mọi sự cố bị hại hoặc tố cáo vi phạm được tiếp nhận duy nhất qua hệ thống **Ticket trên Discord chính thức**. BQT xử lý theo bằng chứng (ảnh/video/logs CoreProtect).
 
 ---
 
-## 6. Người Chịu Trách nhiệm Xác nhận Dữ liệu
+## 7. Người Chịu Trách nhiệm Xác nhận Dữ liệu
 
 | Hạng mục | Người phụ trách | Kênh liên hệ |
 | :--- | :--- | :--- |

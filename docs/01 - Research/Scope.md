@@ -1,4 +1,4 @@
-﻿# LunarChillSMP Website — Project Scope & Prioritization (P0 / P1 / P2)
+# LunarChillSMP Website — Project Scope & Prioritization (P0 / P1 / P2)
 
 > Xác định phạm vi dự án, tiêu chuẩn bàn giao và ma trận phân loại ưu tiên tính năng dựa trên mục tiêu tiến độ (Deadline: 2026-11-20), ngăn chặn hiện tượng phình to phạm vi (scope creep) và đảm bảo chất lượng code sạch ("không vibe-slop").
 
@@ -33,7 +33,7 @@
 * **P0-04: Trang Nội quy máy chủ (`/rules`)**
   - Cấu trúc văn bản mạch lạc, phân chia rõ ràng: Gian lận, Hành vi ứng xử, Xây dựng & bảo vệ tài nguyên, Khung hình phạt và quy trình mở Ticket khiếu nại.
 * **P0-05: Trang Cẩm nang tân thủ (`/guide`)**
-  - Địa chỉ IP & Cổng kết nối rõ ràng cho Java (mặc định 25572) và Bedrock (port 19143).
+  - Địa chỉ IP & Cổng kết nối rõ ràng cho Java (Port 25572) và Bedrock (Port 19143).
   - Bảng các câu lệnh quan trọng nhất in-game.
 * **P0-06: Văn bản Pháp lý chuẩn xác (`/terms` và `/privacy`)**
   - **ToS:** Khẳng định dịch vụ phi thương mại, thỏa thuận người dùng, quyền hạn BQT, miễn trừ trách nhiệm theo Minecraft EULA; loại bỏ điều khoản donate/hoàn tiền do v1.0 chưa có hoạt động này.

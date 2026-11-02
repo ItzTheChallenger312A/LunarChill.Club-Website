@@ -1,81 +1,178 @@
 /* ==========================================================================
    LUNARCHILL HOMEPAGE STYLES (pages/home.css)
-   Hero Section, Quick Join, Server Features, Community Showcase
+   Figma Node 24:2 "Homepage / Desktop" (1400px Container)
+   Hero Section 2-Column, Quick Join, Server Features, Community Showcase
+   Zero Slop: Borders <= 8px, No Aurora Blob, No Gradient Text Clipping
    ========================================================================== */
 
-/* --- Hero Section --- */
+/* --- Category / Eyebrow Tags (Figma Spec) --- */
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-orbit);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-tag);
+  margin-bottom: 14px;
+}
+
+/* --- Hero Section (2 Columns Desktop) --- */
 .hero-section {
-  padding: 60px 0 80px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  padding: 64px 0 88px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
   align-items: center;
 }
 
-.hero-logo-wrapper {
-  margin-bottom: 24px;
-}
-
-.hero-logo-img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 40px rgba(104, 139, 248, 0.25);
-  border: 1px solid rgba(104, 139, 248, 0.2);
+.hero-content {
+  text-align: left;
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 5.5vw, 3.2rem);
-  font-weight: 700;
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-weight: 800;
   color: var(--color-text-heading);
+  line-height: 1.15;
   margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--color-accent-orbit);
   font-style: italic;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
-.hero-server-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
+.hero-desc {
+  font-size: 1.02rem;
+  line-height: 1.65;
   color: var(--color-text-body);
   margin-bottom: 28px;
+  max-width: 580px;
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
-/* --- Quick Join Steps Section (3 Bước vào game) --- */
+.hero-status-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Hero Connection Details Card (Right Column) --- */
+.connection-card {
+  padding: 28px;
+  background: rgba(10, 14, 42, 0.75);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.connection-card h3 {
+  font-size: 1.35rem;
+  color: var(--color-text-heading);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.connection-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.connection-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.conn-box {
+  background: rgba(9, 9, 20, 0.85);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-btn);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: border-color var(--transition-fast);
+}
+
+.conn-box:hover {
+  border-color: var(--color-border-hover);
+}
+
+.conn-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.conn-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.conn-value {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.conn-sub {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Quick Join Steps Section (3 Bước để vào server) --- */
 .quick-join-section {
-  padding: 60px 0;
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .section-header {
-  text-align: center;
-  margin-bottom: 40px;
+  text-align: left;
+  margin-bottom: 36px;
 }
 
 .section-header h2 {
-  font-size: 1.85rem;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--color-text-heading);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .section-header p {
   color: var(--color-text-body);
+  font-size: 1rem;
 }
 
 .steps-grid {
@@ -85,40 +182,62 @@
 }
 
 .step-card {
-  position: relative;
+  padding: 24px;
   display: flex;
   flex-direction: column;
+  background: rgba(10, 14, 42, 0.6);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
 }
 
-.step-num {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: rgba(104, 139, 248, 0.2);
-  margin-bottom: 8px;
-  font-family: var(--font-mono);
+.step-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-text-heading);
+  margin-bottom: 10px;
 }
 
-/* --- Features Grid Section --- */
+.step-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* --- Features Section (Sinh tồn thuần khiết) --- */
 .features-section {
-  padding: 60px 0;
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 24px;
+  background: rgba(10, 14, 42, 0.6);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
 }
 
 .feature-card h3 {
-  color: var(--color-text-subheading);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-size: 1.15rem;
+  color: var(--color-text-heading);
+  margin-bottom: 10px;
+  line-height: 1.35;
 }
 
-/* --- Community Highlights Section --- */
+.feature-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* --- Community Showcase Section (Screenshot BQT) --- */
 .community-section {
-  padding: 60px 0 80px 0;
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .showcase-grid {
@@ -128,21 +247,23 @@
 }
 
 .showcase-card {
+  border-radius: var(--radius-card);
   overflow: hidden;
-  padding: 0;
+  background: rgba(10, 14, 42, 0.6);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .showcase-img-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #0d1226;
+  background: rgba(9, 9, 20, 0.9);
+  border-bottom: 1px solid var(--color-border-subtle);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--color-text-muted);
   font-size: 0.85rem;
-  border-bottom: 1px solid var(--color-border-subtle);
   padding: 16px;
   text-align: center;
 }
@@ -151,13 +272,29 @@
   padding: 16px 20px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .steps-grid, .features-grid, .showcase-grid {
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .steps-grid,
+  .features-grid,
+  .showcase-grid {
     grid-template-columns: 1fr;
   }
-  .hero-logo-img {
-    width: 170px;
-    height: 170px;
+  .section-header {
+    text-align: center;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta-group,
+  .hero-status-row {
+    justify-content: center;
   }
 }
