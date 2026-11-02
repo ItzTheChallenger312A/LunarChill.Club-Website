@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/02 - Design/Figma Prototype Roadmap - Homepage.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Figma Prototype Roadmap - Homepage"
+              "title": "README"
             }
           }
         ],
@@ -219,9 +219,9 @@
   },
   "active": "a588956785fd1e49",
   "lastOpenFiles": [
+    "docs/02 - Design/Figma Prototype Roadmap - Homepage.md",
     "state/inuse.6792.lock",
     "docs/00 - Project Overview/Overview.md",
-    "docs/02 - Design/Figma Prototype Roadmap - Homepage.md",
     "state/inuse.19372.lock",
     "link.txt",
     "state/inuse.20324.lock",
@@ -246,7 +246,6 @@
     "docs/02 - Design",
     "docs/01 - Research",
     "docs/00 - Project Overview",
-    "docs",
     "docs/research-and-design-brief.md"
   ]
 }
