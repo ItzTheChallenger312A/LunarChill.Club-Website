@@ -2,20 +2,26 @@
 
 > **Mục tiêu:** Ma trận kiểm thử toàn diện trên đa thiết bị, đa trình duyệt và theo dõi các lỗi phát sinh trong quá trình phát triển website LunarChill.  
 > **Cập nhật:** 2026-11-02  
-> **Tiêu chuẩn kiểm nghiệm:** [`docs/Quality Standards.md`](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/docs/Quality%20Standards.md) & [`docs/03 - Development/Acceptance Criteria.md`](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/docs/03%20-%20Development/Acceptance%20Criteria.md)
+> **Tiêu chuẩn kiểm nghiệm:** [`Quality Standards.md`](../Quality%20Standards.md) & [`Acceptance Criteria.md`](Acceptance%20Criteria.md)
 
 ---
 
 ## 1. Ma trận thiết bị & Trình duyệt (Test Matrix)
 
+> **Quy ước trạng thái:**  
+> • 🟢 **Đã test (Thiết bị thật):** Đã kiểm tra trực tiếp trên phần cứng thực tế.  
+> • 🟡 **DevTools (Mô phỏng):** Đã kiểm tra qua DevTools Device Mode / Responsive Viewer.  
+> • ⬜ **Chưa test:** Cần chạy smoke test sau khi deploy lên staging/production.
+
 | Thiết bị / Môi trường | Trình duyệt thử nghiệm | Kích thước màn hình | Trạng thái kiểm tra | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- |
-| **Desktop Windows** | Chrome / Edge | 1920x1080 (FHD) | ✅ Đạt | Bố cục chuẩn Figma 1400px |
-| **Desktop Windows** | Chrome / Edge | 1366x768 (Laptop) | ✅ Đạt | Responsive linh hoạt |
-| **Desktop macOS** | Safari / Chrome | 2560x1440 (2K Retina) | ✅ Đạt | Chữ sắc nét, không vỡ layout |
-| **Tablet iPad** | Safari | 810x1080 / 1024x768 | ✅ Đạt | Grid chuyển 1-2 cột mượt |
-| **Mobile Android** | Chrome Mobile | 390x844 (Pixel / Galaxy) | ✅ Đạt | Mobile Drawer & inert chuẩn |
-| **Mobile iOS** | Safari Mobile | 375x667 (iPhone SE) | ✅ Đạt | Không bị tràn ngang, touch mượt |
+| **Desktop Windows** | Google Chrome | 1920x1080 (FHD) | 🟢 Đã test | Thiết bị thật, hiển thị chuẩn 1400px |
+| **Desktop Windows** | Microsoft Edge | 1920x1080 (FHD) | 🟢 Đã test | Thiết bị thật, layout đồng nhất |
+| **Desktop Windows** | Chrome Responsive | 1366x768 (Laptop) | 🟡 DevTools | Co giãn responsive tốt |
+| **Desktop macOS** | Safari / Chrome | 2560x1440 (2K Retina) | ⬜ Chưa test | Chờ test sau khi deploy preview |
+| **Tablet iPad** | Safari Responsive | 810x1080 / 1024x768 | 🟡 DevTools | Grid chuyển 1-2 cột ổn định |
+| **Mobile Android** | Chrome Mobile | 390x844 (Pixel / Galaxy) | 🟡 DevTools | Drawer & inert hoạt động tốt |
+| **Mobile iOS** | Safari Mobile | 375x667 (iPhone SE) | ⬜ Chưa test | Chờ test trên iPhone thực tế |
 
 ---
 
@@ -29,8 +35,7 @@
 | **TC-04** | API mcstatus.io phản hồi online | Hiển thị chấm xanh + số người chơi thực | ✅ Đạt |
 | **TC-05** | API mcstatus.io timeout hoặc offline | Hiển thị chấm xám/đỏ không crash giao diện | ✅ Đạt |
 | **TC-06** | Mở/đóng Menu trên Mobile | Drawer trượt mượt mà, hỗ trợ phím Escape, quản lý focus | ✅ Đạt |
-| **TC-07** | Nhấp link Bản đồ Live Map | Mở tab mới với `rel="noopener noreferrer"` | ✅ Đạt |
-| **TC-08** | Nhấp link Discord | Mở tab mời Discord chính thức | ✅ Đạt |
+| **TC-07** | Nhấp link Discord | Mở tab mời Discord chính thức | ✅ Đạt |
 
 ---
 
@@ -54,3 +59,4 @@
 | **BUG-04** | P1 | Toast clipboard sử dụng innerHTML | Đổi sang `textContent` chống XSS an toàn | 🟢 Đã sửa |
 | **BUG-05** | P1 | Drawer mobile thiếu thuộc tính `inert` | Đã bổ sung `inert` và quản lý focus khi đóng mở | 🟢 Đã sửa |
 | **BUG-06** | P1 | Thiếu ảnh screenshot thật cho Community Gallery | Đang sử dụng thẻ placeholder chuẩn chờ BQT cung cấp | 🟡 Chờ ảnh thật |
+| **BUG-07** | P0 | Không thể chuyển trang khi mở local / link trỏ `/guide` bị 404 | Chuyển toàn bộ internal links sang file tương đối (`guide.html`, `rules.html`, ...) kết hợp explicit rewrites trong `vercel.json` | 🟢 Đã sửa |

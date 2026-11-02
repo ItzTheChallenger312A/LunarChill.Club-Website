@@ -25,7 +25,6 @@
 | Kênh / Dịch vụ | URL thực tế | Mục đích | Trạng thái |
 | :--- | :--- | :--- | :--- |
 | **Discord Community** | `https://discord.gg/lunarchill` | Tham gia cộng đồng, mở Ticket hỗ trợ | Hoạt động |
-| **Live Map (Bản đồ web)** | `https://map.lunarchill.club` | Xem bản đồ thế giới thời gian thực | Mở tab mới (`_blank`) |
 | **mcstatus.io PC (Java)** | `https://api.mcstatus.io/v2/status/java/LunarChill.club:25572` | Trạng thái online & số người chơi PC | Đã tích hợp |
 | **mcstatus.io PE (Bedrock)**| `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:19143` | Trạng thái online & số người chơi PE | Đã tích hợp |
 
@@ -91,12 +90,12 @@
 | | `/tpaccept` | Đồng ý yêu cầu dịch chuyển | Có |
 | | `/lay` | Nằm nghỉ ngơi reset Phantom mà không cần ngủ qua đêm | Có |
 | | *Beacon Waypoint* | Tương tác với Beacon để dịch chuyển tức thời | In-game |
-| **Thị trấn & Đất đai** | `/town` | Xem thông tin thị trấn của bạn | Có |
+| **Thị trấn & Đất đai (Towny)** | `/town` | Xem thông tin thị trấn của bạn | Có |
 | | `/town new [tên]` | Thành lập thị trấn mới | Có |
-| | `/town claim` | Mở rộng ranh giới thị trấn | Có |
-| | `/claim` | Tạo vùng bảo vệ đất cá nhân | Có |
-| | `/trust [tên_người_chơi]` | Cấp quyền xây dựng / mở rương cho bạn bè | Có |
-| | `/untrust [tên_người_chơi]`| Thu hồi quyền truy cập khỏi khu đất | Có |
+| | `/town claim` | Mở rộng ranh giới chunk thị trấn | Có |
+| | `/plot claim` | Nhận quyền sở hữu một lô đất trong thị trấn | Có |
+| | `/town deposit [tiền]` | Đóng góp tiền duy trì ngân sách thị trấn | Có |
+| | `/resident friend add [tên]`| Thêm bạn bè vào danh sách tin cậy | Có |
 | **Kỹ năng & Thú cưng** | `/skills` | Mở bảng cấp độ 11+ kỹ năng Aura Skills | Có |
 | | `/stats` | Xem các chỉ số sức mạnh, máu, hồi phục, may mắn | Có |
 | | `/pet` | Mở menu quản lý thú cưng MyPet | Có |

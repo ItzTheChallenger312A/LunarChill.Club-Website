@@ -15,7 +15,6 @@ export const CONFIG = {
 
   // External URLs
   DISCORD_INVITE_URL: 'https://discord.gg/lunarchill',
-  LIVE_MAP_URL: 'https://map.lunarchill.club',
   
   // mcstatus.io API Endpoints
   API_STATUS_JAVA: 'https://api.mcstatus.io/v2/status/java/LunarChill.club:25572',

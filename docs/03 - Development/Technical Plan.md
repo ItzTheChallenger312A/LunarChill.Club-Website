@@ -66,7 +66,6 @@ export const CONFIG = {
   VERSION_PC: '1.21.11 - 26.3',
   VERSION_PE: '26.30 - 26.51',
   DISCORD_INVITE_URL: 'https://discord.gg/lunarchill',
-  LIVE_MAP_URL: 'https://map.lunarchill.club',
   API_STATUS_URL: 'https://api.mcstatus.io/v2/status/java/LunarChill.club:25572',
   API_TIMEOUT_MS: 5000,
   STORAGE_CACHE_KEY: 'lunarchill_status_cache'

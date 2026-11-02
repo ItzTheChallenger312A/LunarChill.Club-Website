@@ -1,4 +1,4 @@
-﻿# LunarChillSMP Website — Sitemap Architecture
+# LunarChillSMP Website — Sitemap Architecture
 
 > Tài liệu quy hoạch cấu trúc website, đường dẫn và phân bổ nội dung nhằm tối ưu trải nghiệm khám phá máy chủ, tra cứu thông tin nhanh chóng và chuyển đổi người chơi vào cộng đồng Discord / Minecraft.
 
@@ -23,12 +23,10 @@ graph TD
 
     subgraph "External Ecosystem"
         Discord["Discord Community (discord.gg/...)"]
-        LiveMap["Dynmap / BlueMap (Live Map Web)"]
         ServerStatus["mcstatus.io API (Live Status Backend)"]
     end
 
     A -.-> Discord
-    A -.-> LiveMap
     A -.-> ServerStatus
     B -.-> Discord
     C -.-> Discord
@@ -41,7 +39,7 @@ graph TD
 ### 3.1. Trang chủ (`/` hoặc `index.html`)
 * **Mục tiêu:** Tạo ấn tượng thị giác đậm chất điện ảnh ("Cinematic Minecraft"), khẳng định bản sắc cộng đồng, cung cấp trạng thái server tức thì và nút CTA sao chép IP máy chủ.
 * **Các Section chính:**
-  1. **Global Header / Nav:** Logo LunarChill, Menu (`Trang chủ`, `Nội quy`, `Hướng dẫn`, `Bản đồ`), CTA nhanh (`Tham gia Discord`, nút `Copy IP`).
+  1. **Global Header / Nav:** Logo LunarChill, Menu (`Trang chủ`, `Cẩm nang`, `Nội quy`), CTA nhanh (`Tham gia Discord`, nút `Copy IP`).
   2. **Hero Section (Cinematic):** Background video/screenshot chất lượng cao, Slogan thương hiệu, nút `Copy Server IP` (với tooltip sao chép tự động), nút `Vào Discord`.
   3. **Live Server Status Bar:** Tích hợp API mcstatus.io hiển thị theo vòng đời 5 trạng thái (`Checking`, `Online`, `Offline`, `Unable to retrieve status`, `Maintenance` nếu có cờ BQT), số lượng người chơi đang online (`players.online / players.max`), phiên bản hỗ trợ (`Java & Bedrock/PE`).
   4. **Về LunarChillSMP (Server Features & Gameplay):** Điểm đặc sắc (Kinh tế cân bằng, Towny/Claim đất, Sinh tồn nguyên bản kết hợp sự kiện cộng đồng, Không pay-to-win).
@@ -54,8 +52,7 @@ graph TD
 * **Nội dung:**
   - Hướng dẫn kết nối: Port & IP cho Java Edition và Bedrock/Pocket Edition.
   - Hướng dẫn cài đặt gói tài nguyên / client tối ưu (Iris, Sodium).
-  - Bảng tổng hợp các câu lệnh thông dụng (`/spawn`, `/tpa`, `/home`, `/claim`, `/msg`).
-  - Hệ sinh thái mở rộng: Hướng dẫn truy cập Dynmap/BlueMap xem bản đồ thế giới thời gian thực.
+  - Bảng tổng hợp các câu lệnh thông dụng (`/town`, `/tpa`, `/home`, `/msg`).
   - FAQ (Câu hỏi thường gặp: Mất đồ, lag, lỗi phiên bản).
 
 ### 3.3. Nội quy máy chủ (`/rules` hoặc `rules.html`)
@@ -91,11 +88,10 @@ graph TD
 | **Main Header** | Trang chủ | `/` | Logo + Text |
 | | Cẩm nang | `/guide` | Hướng dẫn tân thủ & Lệnh |
 | | Nội quy | `/rules` | Luật máy chủ & Khiếu nại |
-| | Bản đồ | `External link (Live Map)` | Mở tab mới xem web map |
 | | **Copy IP** | `Click-to-Copy Action` | Tự động copy `LunarChill.club` |
 | | **Discord** | `https://discord.gg/...` | Nút Button nổi bật (Primary CTA) |
 | **Mobile Drawer** | Toàn bộ menu Header + Thêm mục FAQ & Quy định | Tối ưu hiển thị thao tác một tay |
 | **Footer** | Cụm Bản quyền & Brand | Thông tin máy chủ & Phiên bản |
-| | Cụm Khám phá | Trang chủ, Cẩm nang, Nội quy, Bản đồ |
+| | Cụm Khám phá | Trang chủ, Cẩm nang, Nội quy |
 | | Cụm Pháp lý & Văn bản | Điều khoản dịch vụ, Chính sách bảo mật |
 | | Cụm Tuyên bố | Disclaimer Mojang AB / Microsoft |

@@ -106,7 +106,7 @@ Server khuyến khích và hỗ trợ tối đa cho người chơi cài đặt c
 
 | Plugin | Chức năng chi tiết | Giá trị sinh tồn |
 | :--- | :--- | :--- |
-| **Towny** | Hệ thống thị trấn, phân quyền, claim bảo vệ đất chống phá hoại 100%. | Trụ cột cộng đồng |
+| **Towny** | Hệ thống thị trấn, phân quyền cư dân, giúp bảo vệ công trình và giảm đáng kể nguy cơ bị phá hoại. | Trụ cột cộng đồng |
 | **Aura Skills** | 11+ kỹ năng RPG (Mining, Farming, Combat, Agility,...) tăng chỉ số tự nhiên. | Tiến trình nhân vật |
 | **Mendingless** | Loại bỏ bùa Mending, khôi phục giá trị bàn rèn và đe sửa đồ. | Cân bằng kinh tế |
 | **TGVNKeepInventoryRune** | Ngọc bảo mệnh giữ nguyên túi đồ khi tử nạn tại Nether / The End. | Bảo vệ tài sản rủi ro |

@@ -1,4 +1,4 @@
-﻿# LunarChillSMP Website — Requirements Specification
+# LunarChillSMP Website — Requirements Specification
 
 > Tài liệu đặc tả yêu cầu chức năng (Functional Requirements), phi chức năng (Non-Functional Requirements), thiết kế luồng dữ liệu API và khung tuân thủ pháp lý theo chuẩn quy định hiện hành tại thời điểm tháng 10/2026.
 
@@ -30,7 +30,6 @@
 
 ### FR-03: Cổng điều hướng cộng đồng & Liên kết ngoại vi
 - **FR-03.1:** Tích hợp nút CTA kết nối trực tiếp đến máy chủ Discord (mở tab mới an toàn với `rel="noopener noreferrer"`).
-- **FR-03.2:** Nút dẫn đến Live Map thế giới (Dynmap/BlueMap) trên tab riêng biệt.
 
 ### FR-04: Hệ thống Cẩm nang & Tra cứu lệnh (Interactive Guide)
 - **FR-04.1:** Bảng lệnh in-game phân nhóm theo mục đích: Di chuyển (`/spawn`, `/home`, `/tpa`), Bảo vệ đất (`/claim`), Giao tiếp & Tiện ích.

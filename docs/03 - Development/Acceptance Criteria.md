@@ -1,4 +1,4 @@
-﻿# LunarChillSMP Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
+# LunarChillSMP Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
 
 > Bộ tiêu chuẩn và danh mục kiểm thử (Checklist) dùng để nghiệm thu toàn bộ tính năng, giao diện và hiệu năng của website LunarChillSMP trước khi xuất bản bản phát hành chính thức (Release Candidate).
 
@@ -32,7 +32,6 @@
 
 ### AC-03: Cổng Điều hướng & Liên kết Ngoại vi
 - [ ] **AC-03.1 (Discord Community):** Nút Discord mở liên kết mời chính thức trong tab mới với đầy đủ thuộc tính bảo mật `target="_blank" rel="noopener noreferrer"`.
-- [ ] **AC-03.2 (Live Map):** Nút mở bản đồ thế giới mở tab mới độc lập, không dùng iframe nhúng trực tiếp ở bản v1.0.
 
 ### AC-04: Cẩm nang Tân thủ & Bảng Lệnh (`/guide`)
 - [ ] **AC-04.1 (Copy lệnh nhanh):** Người dùng có thể click trực tiếp vào từng ô lệnh (`/spawn`, `/home`, `/claim`, `/tpa`) để sao chép cú pháp vào clipboard kèm tooltip xác nhận.

@@ -60,13 +60,11 @@
 ---
 
 ### 2.3. Nhóm P2 — Nice to Have / Out of Scope v1.0 (Dành cho bản v1.1+)
-* **P2-01: Tích hợp trực tiếp Live Map Web (Embedded Dynmap/BlueMap iframe)**
-  - *Lý do loại khỏi v1.0:* Gây tốn băng thông, tải trang nặng nề và dễ gặp lỗi mixed content / cross-origin iframe; tạm thời ở v1.0 dẫn link ra tab mới.
-* **P2-02: Cổng Vote thưởng tự động (Votifier Integration / Vote Leaderboard)**
+* **P2-01: Cổng Vote thưởng tự động (Votifier Integration / Vote Leaderboard)**
   - *Lý do loại khỏi v1.0:* Yêu cầu plugin in-game và backend xử lý webhook, chưa cần thiết ở giai đoạn discovery.
-* **P2-03: Web Store / Hệ thống nạp thẻ (Donation Store)**
+* **P2-02: Web Store / Hệ thống nạp thẻ (Donation Store)**
   - *Lý do loại khỏi v1.0:* Server là dự án cộng đồng phi thương mại ở v1.0; chưa phát sinh nhu cầu thu phí.
-* **P2-04: Tài khoản người chơi & Đăng nhập Discord OAuth2**
+* **P2-03: Tài khoản người chơi & Đăng nhập Discord OAuth2**
   - *Lý do loại khỏi v1.0:* Vượt quá kiến trúc vanilla tĩnh (HTML/CSS/JS), làm tăng độ phức tạp vận hành cơ sở dữ liệu.
 * **P2-05: Blog / CMS thông báo tự động từ Discord**
   - *Lý do loại khỏi v1.0:* Đẩy thông báo qua kênh Discord hiện hữu hiệu quả và ít tốn công hơn nhiều.

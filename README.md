@@ -36,7 +36,7 @@
 ## 🎯 Mục tiêu của Website
 
 1. **Khám phá máy chủ (Discovery):** Giúp người chơi mới nắm bắt ngay bản sắc máy chủ, kiểm tra trạng thái hoạt động tức thì cho cả PC & PE và sao chép IP chỉ với 1 click.
-2. **Cổng thông tin & Cẩm nang (Information Portal):** Cung cấp bảng tra cứu lệnh, hướng dẫn kết nối Bedrock/Java, bản đồ thời gian thực (Live Map) và nội quy minh bạch.
+2. **Cổng thông tin & Cẩm nang (Information Portal):** Cung cấp bảng tra cứu lệnh, hướng dẫn kết nối Bedrock/Java và nội quy minh bạch.
 3. **Bộ mặt thương hiệu (Brand Identity):** Thể hiện phong cách *"Cosmic Sanctuary"* — mang hơi thở điện ảnh (Cinematic Minecraft), tối giản hiện đại (Modern Minimalism), vừa sâu lắng vừa gần gũi và ấm áp.
 
 ---

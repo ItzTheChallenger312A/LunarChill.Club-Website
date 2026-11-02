@@ -1,4 +1,4 @@
-﻿# LunarChillSMP Website — Audience & User Journey
+# LunarChillSMP Website — Audience & User Journey
 
 > Phân tích đối tượng người dùng, động cơ truy cập và thiết kế bản đồ hành trình trải nghiệm (User Journey Maps) nhằm tối ưu trải nghiệm và tỷ lệ chuyển đổi người truy cập thành người chơi gắn bó.
 
@@ -22,8 +22,7 @@
 * **Đặc điểm:** Đã tham gia máy chủ, thường xuyên online và sinh hoạt trong game hoặc kênh Discord.
 * **Mục tiêu:**
   - Kiểm tra nhanh số lượng người chơi đang online trước khi khởi động game.
-  - Tra cứu nhanh bảng lệnh in-game (`/claim`, `/tpa`, `/home`, các phím tắt tiện ích).
-  - Tìm liên kết truy cập Bản đồ thế giới (Dynmap/BlueMap).
+  - Tra cứu nhanh bảng lệnh in-game (`/town`, `/home`, `/tpa`, các phím tắt tiện ích).
   - Chia sẻ liên kết website cho bạn bè để cùng tham gia.
 * **Nỗi sợ & Rào cản (Pain Points):**
   - Khó khăn trong việc tìm kiếm cú pháp lệnh chuẩn.

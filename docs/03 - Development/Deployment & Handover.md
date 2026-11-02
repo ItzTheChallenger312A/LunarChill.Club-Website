@@ -8,7 +8,7 @@
 
 ## 1. Cấu hình Vercel & Clean URLs
 
-Website LunarChill là dự án tĩnh (Static HTML/CSS/Vanilla JS) với file cấu hình [`vercel.json`](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/vercel.json):
+Website LunarChill là dự án tĩnh (Static HTML/CSS/Vanilla JS) với file cấu hình [`vercel.json`](../../vercel.json):
 
 ```json
 {
@@ -46,7 +46,7 @@ Website LunarChill là dự án tĩnh (Static HTML/CSS/Vanilla JS) với file c�
    - Root Directory: `./`
    - Build Command: Không cần (bỏ trống).
    - Output Directory: `./` (bỏ trống).
-3. **Kiểm tra File loại trừ ([`.vercelignore`](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/.vercelignore)):**
+3. **Kiểm tra File loại trừ ([`.vercelignore`](../../.vercelignore)):**
    - Đảm bảo các thư mục nội bộ `.obsidian/`, `docs/`, `link.txt` không bị public lên CDN.
 4. Nhấn **Deploy**. Mỗi lần `git push` lên branch `main`, Vercel sẽ tự động tạo bản build mới trong ~15 giây.
 
@@ -66,7 +66,6 @@ Website LunarChill là dự án tĩnh (Static HTML/CSS/Vanilla JS) với file c�
 | **CNAME** | `www` | `cname.vercel-dns.com` | Redirect về website |
 | **SRV** | `_minecraft._tcp` | Trỏ về IP VPS game với Port `25572` | Kết nối Java Minecraft |
 | **A** | `mc` (nếu dùng subdomain) | IP VPS máy chủ Minecraft | Dự phòng kết nối game |
-| **CNAME** | `map` | Trỏ về web server của Live Map | Live Map bản đồ |
 
 ---
 
@@ -85,9 +84,9 @@ Website LunarChill là dự án tĩnh (Static HTML/CSS/Vanilla JS) với file c�
 
 1. **Sửa nội dung văn bản:**
    - Mở file HTML tương ứng (`index.html`, `guide.html`,...), chỉnh sửa nội dung văn bản nằm trong các thẻ HTML.
-   - Cam kết tuân thủ [`docs/02 - Design/Borderline Of Slop & Human-like.md`](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/docs/02%20-%20Design/Borderline%20Of%20Slop%20&%20Human-like.md).
+   - Cam kết tuân thủ [`docs/02 - Design/Borderline Of Slop & Human-like.md`](../02%20-%20Design/Borderline%20Of%20Slop%20&%20Human-like.md).
 2. **Cập nhật thông số kết nối hoặc Link Discord:**
-   - Chỉ cần sửa tại một nơi duy nhất: [`assets/js/config.js`](file:///c:/Users/The%20Challenger/Documents/GitHub/LunarChill.Club-Website/assets/js/config.js).
+   - Chỉ cần sửa tại một nơi duy nhất: [`assets/js/config.js`](../../assets/js/config.js).
 3. **Commit và đẩy code:**
    ```bash
    git add .

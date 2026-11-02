@@ -1,4 +1,4 @@
-﻿# LunarChillSMP — Figma Prototype Specification & Roadmap: Homepage
+# LunarChillSMP — Figma Prototype Specification & Roadmap: Homepage
 
 > Tài liệu đặc tả kỹ thuật chi tiết các frame, components, tỷ lệ responsive và các luồng tương tác (Interactions) phục vụ triển khai trực tiếp trên file [LunarChillSMP Website Prototype (Figma)](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy).
 
@@ -52,7 +52,7 @@ flowchart TD
   - Mobile: Width `Fill (390px)`, Height `64px`, Padding `0 20px`.
 * **Phần tử bên trong:**
   - **Brand Logo:** Icon tròn `Lunar_Logo.png` với kích thước chuẩn **`38px x 38px`** (đã tinh chỉnh để thanh header giữ độ thanh thoát) + Chữ "LunarChill" `18px SemiBold`.
-  - **Menu Links (Desktop):** Trang chủ (Active), Cẩm nang (`/guide`), Nội quy (`/rules`), Bản đồ (External icon). Font `14px Medium`, màu `#94A3B8`, hover sáng `#FEFDFD`.
+  - **Menu Links (Desktop):** Trang chủ (Active), Cẩm nang (`/guide`), Nội quy (`/rules`). Font `14px Medium`, màu `#94A3B8`, hover sáng `#FEFDFD`.
   - **Action Hub:** Nút nhỏ `Copy IP` + Nút Discord icon `36px x 36px`.
   - **Mobile:** Nút Hamburger Icon mở Drawer menu.
 
@@ -93,7 +93,7 @@ flowchart TD
 ### Section 6: Global Footer & Tuyên bố EULA
 * **Nội dung:**
   - Cột 1: Logo LunarChill nhỏ + Slogan.
-  - Cột 2: Khám phá (Trang chủ, Cẩm nang, Nội quy, Bản đồ).
+  - Cột 2: Khám phá (Trang chủ, Cẩm nang, Nội quy).
   - Cột 3: Văn bản (Điều khoản dịch vụ, Chính sách bảo mật).
   - Cột 4: Cộng đồng (Discord, Fanpage).
   - **Dòng chân trang bắt buộc:** Tuyên bố miễn trừ trách nhiệm theo Mojang Commercial Usage Guidelines:
@@ -110,7 +110,6 @@ flowchart TD
      - Tự động hoàn nguyên về trạng thái ban đầu sau 2 giây.
 2. **Navigation Anchor & Modal Flow:**
    - Click `Cẩm nang` / `Nội quy` -> Chuyển màn hình tương ứng.
-   - Click `Bản đồ` -> Hiển thị Tooltip: *"Mở Live Map thế giới trong tab mới"*.
 3. **Mobile Drawer Interaction:**
    - Click nút Hamburger -> Menu trượt mượt mà từ cạnh phải màn hình với nền mờ Dark Backdrop `rgba(9, 9, 20, 0.8)`.
 
