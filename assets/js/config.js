@@ -17,12 +17,16 @@ export const CONFIG = {
   DISCORD_INVITE_URL: 'https://discord.gg/lunarchill',
   LIVE_MAP_URL: 'https://map.lunarchill.club',
   
-  // mcstatus.io API
-  API_STATUS_URL: 'https://api.mcstatus.io/v2/status/java/LunarChill.club:25572',
+  // mcstatus.io API Endpoints
+  API_STATUS_JAVA: 'https://api.mcstatus.io/v2/status/java/LunarChill.club:25572',
+  API_STATUS_BEDROCK: 'https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:19143',
   API_TIMEOUT_MS: 5000,
-  CACHE_STORAGE_KEY: 'lunarchill_server_status_v1',
-  DEFAULT_CACHE_TTL_MS: 60000, // 60s fallback nếu API không trả expires_at
   
-  // Maintenance override flag
+  // Cache keys & fallback TTL
+  CACHE_KEY_JAVA: 'lunarchill_status_java_v1',
+  CACHE_KEY_BEDROCK: 'lunarchill_status_bedrock_v1',
+  DEFAULT_CACHE_TTL_MS: 60000, // 60s fallback khi không có expires_at hoặc X-Cache-Time-Remaining
+  
+  // Maintenance override flag (chỉ bật khi BQT yêu cầu)
   FORCE_MAINTENANCE: false
 };

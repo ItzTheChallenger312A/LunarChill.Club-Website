@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LunarChillSMP — Chill thôi, đừng có vội. 🌙</title>
-  <meta name="description" content="Website chính thức của máy chủ Minecraft LunarChillSMP — Nơi sinh tồn thư thái dưới ánh trăng. Hỗ trợ Java & Bedrock. IP: LunarChill.club">
+  <meta name="description" content="Website chính thức của máy chủ Minecraft LunarChillSMP — Nơi sinh tồn thư thái dưới ánh trăng. Hỗ trợ PC (Java) & PE (Bedrock).">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <!-- OpenGraph / Discord Embed Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lunarchill.club/">
   <meta property="og:title" content="LunarChillSMP — Chill thôi, đừng có vội. 🌙">
   <meta property="og:description" content="Máy chủ Minecraft sinh tồn thư thái, công bằng, không pay-to-win. Tham gia ngay cùng cộng đồng LunarChill.">
-  <meta property="og:image" content="https://lunarchill.club/Lunar_Logo.png">
+  <meta property="og:image" content="https://lunarchill.club/assets/images/logo.png">
   <meta name="theme-color" content="#688BF8">
 
   <!-- Core Stylesheets (Zero Slop) -->
@@ -29,7 +31,7 @@
   <!-- Sticky Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="brand-link">
+      <a href="/" class="brand-link" title="LunarChillSMP Trang chủ">
         <img src="assets/images/logo.png" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
@@ -37,21 +39,21 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="/" class="nav-link active">Trang chủ</a></li>
-          <li><a href="docs/01 - Research/Sitemap.md" class="nav-link">Cẩm nang</a></li>
-          <li><a href="docs/03 - Development/Content & Data Registry.md" class="nav-link">Nội quy</a></li>
+          <li><a href="/guide" class="nav-link">Cẩm nang</a></li>
+          <li><a href="/rules" class="nav-link">Nội quy</a></li>
           <li><a href="https://map.lunarchill.club" target="_blank" rel="noopener noreferrer" class="nav-link">Bản đồ ↗</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-ip="LunarChill.club" title="Sao chép IP máy chủ">
-          Sao chép IP
+        <button class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-ip="LunarChill.club:25572" title="Sao chép IP PC">
+          Sao chép IP PC
         </button>
         <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
           Discord
         </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
@@ -60,14 +62,17 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
     <a href="/" class="mobile-nav-link">Trang chủ</a>
-    <a href="docs/01 - Research/Sitemap.md" class="mobile-nav-link">Cẩm nang tân thủ</a>
-    <a href="docs/03 - Development/Content & Data Registry.md" class="mobile-nav-link">Nội quy máy chủ</a>
+    <a href="/guide" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="/rules" class="mobile-nav-link">Nội quy máy chủ</a>
     <a href="https://map.lunarchill.club" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Bản đồ thế giới Live Map ↗</a>
     <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
+        Sao chép IP PC: LunarChill.club:25572
+      </button>
       <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club">
-        Sao chép IP: LunarChill.club
+        Sao chép IP PE: LunarChill.club (Port: 19143)
       </button>
       <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
         Tham gia Discord
@@ -75,7 +80,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="main-content">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
@@ -98,7 +103,7 @@
 
         <!-- Primary Actions -->
         <div class="hero-cta-group">
-          <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club" style="padding: 14px 28px; font-size: 1.05rem;">
+          <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club:25572" style="padding: 14px 28px; font-size: 1.05rem;" title="Sao chép địa chỉ kết nối">
             Sao chép IP Server
           </button>
           <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary" style="padding: 14px 24px;">
@@ -107,9 +112,9 @@
         </div>
 
         <!-- Live Status Pill (mcstatus.io Real-time) -->
-        <div class="status-pill" id="server-status-pill">
-          <span class="status-dot checking" id="server-status-dot"></span>
-          <span id="server-status-text">Đang kiểm tra trạng thái...</span>
+        <div class="status-pill" id="server-status-pill" role="status" aria-live="polite">
+          <span class="status-dot checking" id="server-status-dot" aria-hidden="true"></span>
+          <span id="server-status-text">Đang kiểm tra kết nối PC & PE...</span>
         </div>
 
       </div>
@@ -134,14 +139,14 @@
             <span class="step-num">02</span>
             <h3>Nhập địa chỉ máy chủ</h3>
             <p>Chọn Chơi mạng (Multiplayer) ➔ Thêm máy chủ:</p>
-            <p style="font-size: 0.9rem; margin-top: 4px;">• <strong>PC:</strong> <code class="command-chip" data-action="copy-ip" data-ip="LunarChill.club:25572">LunarChill.club:25572</code></p>
-            <p style="font-size: 0.9rem; margin-top: 4px;">• <strong>PE:</strong> <code class="command-chip" data-action="copy-ip" data-ip="LunarChill.club">LunarChill.club</code> (Port: <strong>19143</strong>)</p>
+            <p style="font-size: 0.9rem; margin-top: 4px;">• <strong>PC:</strong> <code class="command-chip" data-action="copy-ip" data-ip="LunarChill.club:25572" title="Click để sao chép IP PC">LunarChill.club:25572</code></p>
+            <p style="font-size: 0.9rem; margin-top: 4px;">• <strong>PE:</strong> <code class="command-chip" data-action="copy-ip" data-ip="LunarChill.club" title="Click để sao chép IP PE">LunarChill.club</code> (Port: <strong>19143</strong>)</p>
           </div>
 
           <div class="lunar-card step-card">
             <span class="step-num">03</span>
             <h3>Bắt đầu sinh tồn</h3>
-            <p>Tham gia thế giới, gõ lệnh <code class="command-chip" data-action="copy-ip" data-ip="/guide">/guide</code> để đọc cẩm nang và tìm cho mình một vùng đất ưng ý để dựng nhà.</p>
+            <p>Tham gia thế giới, gõ lệnh <code class="command-chip" data-action="copy-ip" data-ip="/guide" title="Click để sao chép lệnh">/guide</code> để đọc cẩm nang và tìm cho mình một vùng đất ưng ý để dựng nhà.</p>
           </div>
         </div>
       </div>
@@ -242,8 +247,8 @@
           <h4>Khám phá</h4>
           <ul class="footer-links">
             <li><a href="/">Trang chủ</a></li>
-            <li><a href="docs/01 - Research/Sitemap.md">Cẩm nang tân thủ</a></li>
-            <li><a href="docs/03 - Development/Content & Data Registry.md">Nội quy máy chủ</a></li>
+            <li><a href="/guide">Cẩm nang tân thủ</a></li>
+            <li><a href="/rules">Nội quy máy chủ</a></li>
             <li><a href="https://map.lunarchill.club" target="_blank" rel="noopener noreferrer">Bản đồ thế giới ↗</a></li>
           </ul>
         </div>
@@ -251,8 +256,8 @@
         <div class="footer-col">
           <h4>Văn bản</h4>
           <ul class="footer-links">
-            <li><a href="docs/01 - Research/Requirements.md">Điều khoản dịch vụ</a></li>
-            <li><a href="docs/01 - Research/Requirements.md">Chính sách bảo mật</a></li>
+            <li><a href="/terms">Điều khoản dịch vụ</a></li>
+            <li><a href="/privacy">Chính sách bảo mật</a></li>
             <li><a href="docs/Quality Standards.md">Quy chuẩn chất lượng</a></li>
           </ul>
         </div>
