@@ -1,4 +1,4 @@
-# LunarChillSMP — UI Direction & Visual Principles
+﻿# LunarChillSMP — UI Direction & Visual Principles
 
 > Tài liệu định hướng phong cách thị giác (Visual Direction), Moodboard, và các nguyên tắc thiết kế cốt lõi định hình diện mạo trang web LunarChillSMP theo chuẩn "Cinematic Minecraft & Cosmic Sanctuary", được dẫn dắt trực tiếp từ tác phẩm huy hiệu nhận diện `Lunar_Logo.png`.
 
@@ -61,7 +61,7 @@ Tác phẩm logo chính thức mang lại một hệ sinh thái thẩm mỹ tr�
 |                                                                                         |
 |                               "Chill thôi, đừng có vội." 🌙                              |
 |                                 *Just chill, don't rush.*                               |
-|                       play.lunarchill.club (Bedrock Port: 19132)                        |
+|                       LunarChill.club (Bedrock Port: 19143)                        |
 |                                                                                         |
 |                    [ > Sao chép IP Server < ]   [ Tham gia Discord ]                    |
 |                                                                                         |

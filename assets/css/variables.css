@@ -1,0 +1,59 @@
+/* ==========================================================================
+   LUNARCHILL DESIGN TOKENS (variables.css)
+   Triết lý: Cosmic Sanctuary & Zero Slop — Bảng màu trích xuất từ Lunar_Logo
+   ========================================================================== */
+
+:root {
+  /* --- 1. Surface & Background Colors --- */
+  --color-bg-base: #090914;               /* Deep Abyss Black từ nền logo */
+  --color-bg-surface: rgba(10, 14, 42, 0.75); /* Midnight Indigo Glass */
+  --color-bg-surface-hover: rgba(22, 27, 65, 0.85);
+  --color-bg-elevated: #0d1226;          /* Nền thẻ đặc không kính */
+  
+  /* --- 2. Borders & Dividers (Sắc nét 1px, KHÔNG TOP STRIPE) --- */
+  --color-border-subtle: rgba(104, 139, 248, 0.15); /* Viền mỏng 1px */
+  --color-border-hover: rgba(104, 139, 248, 0.35);
+  --color-border-active: #688BF8;
+
+  /* --- 3. Brand Accent Colors --- */
+  --color-accent-primary: #688BF8;        /* Waterfall Glow Blue */
+  --color-accent-secondary: #3b82f6;      /* Blue 500 gradient helper */
+  --color-accent-orbit: #38BDF8;          /* Orbit Azure Glow */
+  --color-accent-purple: #818cf8;         /* Cloud Lavender */
+
+  /* --- 4. Typography Colors (Sắc nét, WCAG AAA, KHÔNG GRADIENT CLIP) --- */
+  --color-text-heading: #FEFDFD;          /* Moon Core White */
+  --color-text-subheading: #E0EFFF;       /* Moonlight Silver */
+  --color-text-body: #94A3B8;             /* Muted Sky Gray */
+  --color-text-muted: #64748B;            /* Deep Muted */
+
+  /* --- 5. Functional Status Colors (5 States) --- */
+  --status-online: #10B981;               /* Emerald Green */
+  --status-checking: #38BDF8;             /* Sky Blue */
+  --status-offline: #EF4444;              /* Crimson Red */
+  --status-unable: #64748B;               /* Muted Gray */
+  --status-maintenance: #F59E0B;          /* Amber Gold */
+
+  /* --- 6. Border Radius (Anti-Slop: Góc bo thanh thoát, không tròn ủng) --- */
+  --radius-tag: 4px;                      /* Badge, Chip, Command block */
+  --radius-btn: 6px;                      /* Buttons, Inputs */
+  --radius-card: 8px;                     /* Cards tính năng, Containers */
+  --radius-dialog: 10px;                  /* Dialog, Modal */
+
+  /* --- 7. Shadows & Subtle Glows (Tự nhiên, không lòe loẹt) --- */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --shadow-btn-primary: 0 4px 18px rgba(104, 139, 248, 0.35);
+  --glow-moon-center: radial-gradient(circle at 50% 30%, rgba(104, 139, 248, 0.12) 0%, rgba(9, 9, 20, 0) 70%);
+
+  /* --- 8. Typography Ramp --- */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* --- 9. Layout Widths --- */
+  --container-max: 1200px;
+  --reading-max: 840px;
+
+  /* --- 10. Transitions --- */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

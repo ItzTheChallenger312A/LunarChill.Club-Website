@@ -1,0 +1,169 @@
+/* ==========================================================================
+   LUNARCHILL COMPONENTS (components.css)
+   Nút bấm, Card kính mờ 8px, Status Pill, Toast notification
+   ========================================================================== */
+
+/* --- 1. Lunar Cards (Anti-Slop: bo góc 8px chuẩn, viền 1px đồng nhất) --- */
+.lunar-card {
+  background: var(--color-bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), border-color var(--transition-fast), box-shadow var(--transition-normal);
+}
+
+.lunar-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
+}
+
+/* --- 2. Buttons (Bo góc 6px, đầm tay, KHÔNG BO VIÊN THUỐC TRÒN ỦNG) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius-btn);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+  color: #ffffff;
+  box-shadow: var(--shadow-btn-primary);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #7b9bf9, #4a8df8);
+  box-shadow: 0 6px 22px rgba(104, 139, 248, 0.5);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-subheading);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-border-hover);
+  color: #ffffff;
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+/* --- 3. Live Server Status Pill --- */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10, 14, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 999px; /* Status Pill giữ dạng con nhộng nhỏ chuẩn quốc tế */
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-subheading);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-unable);
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast);
+}
+
+.status-dot.online {
+  background-color: var(--status-online);
+  box-shadow: 0 0 8px var(--status-online);
+}
+
+.status-dot.checking {
+  background-color: var(--status-checking);
+  animation: pulse-checking 1.5s infinite ease-in-out;
+}
+
+.status-dot.offline {
+  background-color: var(--status-offline);
+}
+
+.status-dot.maintenance {
+  background-color: var(--status-maintenance);
+}
+
+@keyframes pulse-checking {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* --- 4. Command Box (Click-to-copy code chip) --- */
+.command-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #060a22;
+  border: 1px solid rgba(104, 139, 248, 0.2);
+  border-radius: var(--radius-tag);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent-orbit);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.command-chip:hover {
+  border-color: var(--color-accent-primary);
+  background: #0b1136;
+}
+
+/* --- 5. Toast Feedback Notification --- */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #0f1738;
+  border: 1px solid var(--color-accent-primary);
+  border-radius: var(--radius-btn);
+  padding: 12px 20px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast-container.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

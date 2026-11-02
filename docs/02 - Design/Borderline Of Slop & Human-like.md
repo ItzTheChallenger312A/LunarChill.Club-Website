@@ -1,4 +1,4 @@
-# LunarChillSMP — Borderline Of Slop & Human-Like Design
+﻿# LunarChillSMP — Borderline Of Slop & Human-Like Design
 
 > Bộ quy chuẩn ranh giới toàn diện: Tổng hợp **71 lỗi AI Slop (45 lỗi Design + 26 lỗi Copywriting)** từ `slop-detect.com/docs`, bản chất "AI Slop vs AI Detector" từ `slopdetector.org/slop/what-is-ai-slop`, cùng cẩm nang khắc phục triệt để từ `slopdetector.org/blog/how-to-avoid-writing-slop`.
 
@@ -133,7 +133,7 @@ Dựa trên nghiên cứu tại `slopdetector.org/blog/how-to-avoid-writing-slop
 #### Nhóm 4: Bệnh quyền lực giả tạo & Thiếu thông tin thực (Pseudo-Insight & Fake Authority)
 57. **Dẫn chứng không nguồn gốc:** *"Các nghiên cứu cho thấy người chơi thích sinh tồn tự do..."*
 58. **Khái quát hóa vô căn cứ:** *"Mọi game thủ đều mơ ước một thế giới không drama..."*
-59. **Thiếu vắng con số cụ thể:** Không ghi rõ phiên bản (`1.20+`), không ghi rõ port (`19132`), chỉ nói chung chung là "hỗ trợ mọi phiên bản".
+59. **Thiếu vắng con số cụ thể:** Không ghi rõ phiên bản (`1.20+`), không ghi rõ port (`19143`), chỉ nói chung chung là "hỗ trợ mọi phiên bản".
 60. **Thiếu hướng dẫn hành động cụ thể:** Viết 3 đoạn văn ca ngợi máy chủ nhưng không cho người ta biết làm thế nào để vào game (IP ở đâu, lệnh đầu tiên là gì).
 61. **Văn phong "tiếp thị công ty" (Corporate Tone):** Dùng giọng điệu của một công ty đa quốc gia bán phần mềm B2B để nói về một server Minecraft chơi vui cùng bạn bè.
 62. **Văn phong sách tự lực (Self-Help Slop):** *"Chơi game không chỉ để giải trí, mà là để tìm lại sự an yên trong tâm hồn..."*
@@ -145,7 +145,7 @@ Dựa trên nghiên cứu tại `slopdetector.org/blog/how-to-avoid-writing-slop
 68. **Thiếu thông tin giá trị mới (Zero Information Gain):** Đọc hết cả trang web nhưng không đọng lại được bất kỳ thông tin kỹ thuật hay đặc điểm gameplay cụ thể nào.
 69. **Văn bản pháp lý copy-paste nguyên mẫu:** ToS và Privacy trích nguyên văn của một trang thương mại điện tử mua bán hàng hóa, giữ nguyên các điều khoản "giao hàng tận nhà".
 70. **FAQ tự đặt tự trả lời sáo rỗng:** *"Q: Máy chủ có vui không? A: Rất vui, bạn hãy tham gia ngay nhé!"*
-71. **Lời kêu gọi hành động thiếu tự nhiên:** Nút bấm ghi *"Bắt đầu hành trình vĩ đại của bạn ngay hôm nay"* thay vì nút bấm rõ ràng: `Sao chép IP: play.lunarchill.club`.
+71. **Lời kêu gọi hành động thiếu tự nhiên:** Nút bấm ghi *"Bắt đầu hành trình vĩ đại của bạn ngay hôm nay"* thay vì nút bấm rõ ràng: `Sao chép IP: LunarChill.club`.
 
 ---
 
@@ -156,7 +156,7 @@ Dựa trên nghiên cứu tại `slopdetector.org/blog/how-to-avoid-writing-slop
 | Vị trí | Văn phong Slop (Bị loại bỏ ❌) | Văn phong Con người LunarChill (Áp dụng ✔️) |
 | :--- | :--- | :--- |
 | **Hero Headline** | "Mở khóa vương quốc sinh tồn đỉnh cao thế hệ mới" | **"Chill thôi, đừng có vội."** 🌙 |
-| **Hero Subtitle** | "Một kiệt tác Minecraft được dệt nên từ những giấc mơ..." | **"play.lunarchill.club • Bedrock Port: 19132"** |
+| **Hero Subtitle** | "Một kiệt tác Minecraft được dệt nên từ những giấc mơ..." | **"LunarChill.club • Bedrock Port: 19143"** |
 | **Primary CTA** | "Bắt đầu hành trình bất tận" | **"Sao chép IP Server"** |
 | **Feature 1** | "Trải nghiệm sinh tồn đột phá nâng tầm giới hạn" | **"Sinh tồn thuần khiết:"** Giữ trọn sự nguyên bản của Minecraft survival, không mod quá đà, cân bằng tài nguyên. |
 | **Feature 2** | "Xây dựng đế chế thịnh vượng không biên giới" | **"Thị trấn Towny:"** Hệ thống giữ đất an toàn, giao lưu văn minh, thỏa sức xây nhà không lo bị grief. |

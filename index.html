@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LunarChillSMP — Chill thôi, đừng có vội. 🌙</title>
+  <meta name="description" content="Website chính thức của máy chủ Minecraft LunarChillSMP — Nơi sinh tồn thư thái dưới ánh trăng. Hỗ trợ Java & Bedrock. IP: LunarChill.club">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- OpenGraph / Discord Embed Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lunarchill.club/">
+  <meta property="og:title" content="LunarChillSMP — Chill thôi, đừng có vội. 🌙">
+  <meta property="og:description" content="Máy chủ Minecraft sinh tồn thư thái, công bằng, không pay-to-win. Tham gia ngay cùng cộng đồng LunarChill.">
+  <meta property="og:image" content="https://lunarchill.club/Lunar_Logo.png">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Core Stylesheets (Zero Slop) -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-link">
+        <img src="assets/images/logo.png" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link active">Trang chủ</a></li>
+          <li><a href="docs/01 - Research/Sitemap.md" class="nav-link">Cẩm nang</a></li>
+          <li><a href="docs/03 - Development/Content & Data Registry.md" class="nav-link">Nội quy</a></li>
+          <li><a href="https://map.lunarchill.club" target="_blank" rel="noopener noreferrer" class="nav-link">Bản đồ ↗</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-ip="LunarChill.club" title="Sao chép IP máy chủ">
+          Sao chép IP
+        </button>
+        <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Discord
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="/" class="mobile-nav-link">Trang chủ</a>
+    <a href="docs/01 - Research/Sitemap.md" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="docs/03 - Development/Content & Data Registry.md" class="mobile-nav-link">Nội quy máy chủ</a>
+    <a href="https://map.lunarchill.club" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Bản đồ thế giới Live Map ↗</a>
+    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club">
+        Sao chép IP: LunarChill.club
+      </button>
+      <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+        
+        <!-- Central Logo Showcase -->
+        <div class="hero-logo-wrapper">
+          <img src="assets/images/logo.png" alt="LunarChillSMP Emblem" class="hero-logo-img" width="220" height="220">
+        </div>
+
+        <!-- Official Slogans -->
+        <h1 class="hero-title">Chill thôi, đừng có vội. 🌙</h1>
+        <p class="hero-subtitle">Just chill, don't rush.</p>
+
+        <!-- Connection Details -->
+        <div class="hero-server-info">
+          <span>PC (Java): <strong style="color: #FEFDFD;">LunarChill.club:25572</strong> (v1.21.11 – 26.3)</span>
+          <span>•</span>
+          <span>PE (Bedrock): <strong style="color: #FEFDFD;">LunarChill.club</strong> (Port: <strong style="color: #FEFDFD;">19143</strong> | v26.30 – 26.51)</span>
+        </div>
+
+        <!-- Primary Actions -->
+        <div class="hero-cta-group">
+          <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club" style="padding: 14px 28px; font-size: 1.05rem;">
+            Sao chép IP Server
+          </button>
+          <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary" style="padding: 14px 24px;">
+            Tham gia Discord
+          </a>
+        </div>
+
+        <!-- Live Status Pill (mcstatus.io Real-time) -->
+        <div class="status-pill" id="server-status-pill">
+          <span class="status-dot checking" id="server-status-dot"></span>
+          <span id="server-status-text">Đang kiểm tra trạng thái...</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3 Bước vào game cực nhanh -->
+    <section class="quick-join-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>3 bước vào game cực nhanh</h2>
+          <p>Không cài đặt rườm rà, hỗ trợ cả máy tính và điện thoại</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="lunar-card step-card">
+            <span class="step-num">01</span>
+            <h3>Mở Minecraft</h3>
+            <p>Khởi động game: PC (Java Edition <strong>1.21.11 đến 26.3</strong>) hoặc điện thoại (Bedrock / PE <strong>26.30 đến 26.51</strong>).</p>
+          </div>
+
+          <div class="lunar-card step-card">
+            <span class="step-num">02</span>
+            <h3>Nhập địa chỉ máy chủ</h3>
+            <p>Chọn Chơi mạng (Multiplayer) ➔ Thêm máy chủ:</p>
+            <p style="font-size: 0.9rem; margin-top: 4px;">• <strong>PC:</strong> <code class="command-chip" data-action="copy-ip" data-ip="LunarChill.club:25572">LunarChill.club:25572</code></p>
+            <p style="font-size: 0.9rem; margin-top: 4px;">• <strong>PE:</strong> <code class="command-chip" data-action="copy-ip" data-ip="LunarChill.club">LunarChill.club</code> (Port: <strong>19143</strong>)</p>
+          </div>
+
+          <div class="lunar-card step-card">
+            <span class="step-num">03</span>
+            <h3>Bắt đầu sinh tồn</h3>
+            <p>Tham gia thế giới, gõ lệnh <code class="command-chip" data-action="copy-ip" data-ip="/guide">/guide</code> để đọc cẩm nang và tìm cho mình một vùng đất ưng ý để dựng nhà.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bản sắc máy chủ -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Trải nghiệm sinh tồn tại LunarChill</h2>
+          <p>Tập trung vào giá trị nguyên bản, sự gắn kết và không khí thư giãn</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="lunar-card feature-card">
+            <h3>🌱 Sinh tồn thuần khiết</h3>
+            <p>Giữ trọn vẹn sự mộc mạc và thử thách của Minecraft survival nguyên bản. Không nhồi nhét plugin thừa thãi làm loãng gameplay.</p>
+          </div>
+
+          <div class="lunar-card feature-card">
+            <h3>🏡 Thị trấn Towny văn minh</h3>
+            <p>Tự do tạo lập thị trấn, liên minh cùng bạn bè, an tâm xây dựng công trình mà không sợ bị phá hoại hay lấn chiếm đất đai.</p>
+          </div>
+
+          <div class="lunar-card feature-card">
+            <h3>⚖️ Tuyệt đối không Pay-to-Win</h3>
+            <p>Mọi người chơi đều bình đẳng. Không bán trang bị bá đạo, không rank đặc quyền áp đảo. Kỹ năng và sự kiên nhẫn quyết định tất cả.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Khoảnh khắc cộng đồng -->
+    <section class="community-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Khoảnh khắc cộng đồng</h2>
+          <p>Những công trình và kỷ niệm do chính các thành viên tạo nên</p>
+        </div>
+
+        <div class="showcase-grid">
+          <div class="lunar-card showcase-card">
+            <div class="showcase-img-placeholder">
+              <span style="font-size: 1.5rem; margin-bottom: 8px;">🏛️</span>
+              <span>Khu trung tâm Spawn</span>
+              <small>(Screenshot từ máy chủ LunarChill)</small>
+            </div>
+            <div class="showcase-info">
+              <h4 style="color: var(--color-text-heading); font-size: 1.05rem;">Trung tâm đón tiếp tân thủ</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Điểm khởi đầu cho mọi hành trình sinh tồn.</p>
+            </div>
+          </div>
+
+          <div class="lunar-card showcase-card">
+            <div class="showcase-img-placeholder">
+              <span style="font-size: 1.5rem; margin-bottom: 8px;">🏰</span>
+              <span>Thị trấn ven hồ</span>
+              <small>(Screenshot từ máy chủ LunarChill)</small>
+            </div>
+            <div class="showcase-info">
+              <h4 style="color: var(--color-text-heading); font-size: 1.05rem;">Thị trấn cộng đồng</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Nơi anh em cùng nhau dựng nhà và trao đổi tài nguyên.</p>
+            </div>
+          </div>
+
+          <div class="lunar-card showcase-card">
+            <div class="showcase-img-placeholder">
+              <span style="font-size: 1.5rem; margin-bottom: 8px;">🌌</span>
+              <span>Bầu trời đêm Lunar</span>
+              <small>(Screenshot từ máy chủ LunarChill)</small>
+            </div>
+            <div class="showcase-info">
+              <h4 style="color: var(--color-text-heading); font-size: 1.05rem;">Đêm trăng thanh bình</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Không khí thư thái đặc trưng đúng tinh thần server.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" style="border-radius: 50%;">
+            <strong style="color: #FEFDFD; font-size: 1.05rem;">LunarChillSMP</strong>
+          </div>
+          <p style="color: var(--color-text-body); font-size: 0.85rem; line-height: 1.5;">
+            "Chill thôi, đừng có vội." 🌙<br>
+            Máy chủ Minecraft sinh tồn thư thái, công bằng và gắn kết.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="docs/01 - Research/Sitemap.md">Cẩm nang tân thủ</a></li>
+            <li><a href="docs/03 - Development/Content & Data Registry.md">Nội quy máy chủ</a></li>
+            <li><a href="https://map.lunarchill.club" target="_blank" rel="noopener noreferrer">Bản đồ thế giới ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Văn bản</h4>
+          <ul class="footer-links">
+            <li><a href="docs/01 - Research/Requirements.md">Điều khoản dịch vụ</a></li>
+            <li><a href="docs/01 - Research/Requirements.md">Chính sách bảo mật</a></li>
+            <li><a href="docs/Quality Standards.md">Quy chuẩn chất lượng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord">Máy chủ Discord ↗</a></li>
+            <li><a href="https://github.com/lunarchillsmp" target="_blank" rel="noopener noreferrer">Mã nguồn GitHub ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LunarChillSMP. Bản quyền thuộc về cộng đồng LunarChill.</div>
+        <div class="mojang-disclaimer">
+          Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

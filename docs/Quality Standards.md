@@ -1,4 +1,4 @@
-# LunarChillSMP — Quality Standards & Anti-Slop Charter
+﻿# LunarChillSMP — Quality Standards & Anti-Slop Charter
 > **Tài liệu Quy chuẩn Chung (Standard Operating Guidelines)**
 > Dành cho toàn bộ quá trình Thiết kế, Lập trình và Biên tập Nội dung website LunarChillSMP.
 > Bắt buộc tuân thủ 100% nhằm đảm bảo chất lượng thủ công tinh tế (Human-Crafted Excellence) và triệt tiêu hoàn toàn mã nguồn / giao diện dạng "AI-Generated Slop".
@@ -85,7 +85,7 @@
 ### 3.2. Giọng văn Con người LunarChill (The Human Voice of LunarChill)
 * ✔️ **Gần gũi & Tự nhiên:** Dùng ngôn ngữ ấm áp, đời thường, có chút hóm hỉnh như anh em trong nhóm bạn thân rủ nhau chơi game.
 * ✔️ **Trung thực & Thực tế:**
-  - Cung cấp dữ liệu cụ thể: IP kết nối `play.lunarchill.club`, Bedrock Port `19132`, phiên bản hỗ trợ.
+  - Cung cấp dữ liệu cụ thể: IP kết nối `LunarChill.club`, Bedrock Port `19143`, phiên bản hỗ trợ.
   - Hướng dẫn ngắn gọn: 3 bước vào game, lệnh `/claim` để giữ đất, gặp lỗi mở ticket Discord.
 * ✔️ **Ngắn gọn & Trực diện:** Đi thẳng vào thông tin người chơi cần, tôn trọng thời gian của người đọc.
 

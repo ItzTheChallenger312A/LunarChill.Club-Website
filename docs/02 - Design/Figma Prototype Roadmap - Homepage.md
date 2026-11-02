@@ -1,4 +1,4 @@
-# LunarChillSMP — Figma Prototype Specification & Roadmap: Homepage
+﻿# LunarChillSMP — Figma Prototype Specification & Roadmap: Homepage
 
 > Tài liệu đặc tả kỹ thuật chi tiết các frame, components, tỷ lệ responsive và các luồng tương tác (Interactions) phục vụ triển khai trực tiếp trên file [LunarChillSMP Website Prototype (Figma)](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy).
 
@@ -64,7 +64,7 @@ flowchart TD
 * **Cấu trúc nội dung (Auto-Layout Vertical, Center aligned, Gap 24px):**
   1. **Huy hiệu Logo Trung tâm:** `Lunar_Logo.png` hiển thị huy hiệu tròn đầy đủ kích thước `240px x 240px` (Desktop) hoặc `160px x 160px` (Mobile) với hiệu ứng viền phát sáng nhẹ.
   2. **Headline:** *"Chill thôi, đừng có vội."* 🌙 (Display font `48px Bold`, màu `#FEFDFD`, text glow nhẹ) — điểm nhấn trung tâm của Hero.
-  3. **Sub-headline & Server Domain:** *"Just chill, don't rush."* (Font `18px Regular`, màu `#38BDF8`, italic/sub-label) cùng địa chỉ kết nối `play.lunarchill.club` (Bedrock Port: `19132`) — Font `15px Regular`, màu `#94A3B8`.
+  3. **Sub-headline & Server Domain:** *"Just chill, don't rush."* (Font `18px Regular`, màu `#38BDF8`, italic/sub-label) cùng địa chỉ kết nối `LunarChill.club` (Bedrock Port: `19143`) — Font `15px Regular`, màu `#94A3B8`.
   4. **Call-to-Action Group (Horizontal Auto-Layout, Gap 16px):**
      - **Button Primary:** `[ > Sao chép IP Server < ]` (Nền Gradient `#688BF8` -> `#3B82F6`, bo góc 12px, padding `16px 28px`, đổ bóng phát sáng `0 4px 20px rgba(104, 139, 248, 0.4)`).
      - **Button Secondary:** `[ Tham gia Discord ]` (Nền kính tối viền 1px `#818CF8`, icon Discord).
@@ -77,7 +77,7 @@ flowchart TD
 * **Mục tiêu:** Xóa bỏ ma sát cho người chơi mới (đặc biệt là mobile/PE).
 * **Cấu trúc:** Lưới 3 cột (Desktop) hoặc 3 hàng (Mobile) gồm 3 Step Cards:
   - **Bước 1 — Mở Game:** Khởi động Minecraft phiên bản phù hợp (Java hoặc Bedrock/PE).
-  - **Bước 2 — Nhập Địa Chỉ:** Dán IP `play.lunarchill.club` (Port Bedrock mặc định `19132`).
+  - **Bước 2 — Nhập Địa Chỉ:** Dán IP `LunarChill.club` (Port Bedrock mặc định `19143`).
   - **Bước 3 — Bắt Đầu Chơi:** Tham gia thế giới và gõ lệnh `/guide` để nhận cẩm nang tân thủ.
 
 ### Section 4: Bản sắc máy chủ (Server Features / Cosmic Sanctuary)
@@ -106,7 +106,7 @@ flowchart TD
 1. **Copy IP Interaction Flow:**
    - Khi click vào nút `[ Sao chép IP Server ]` ở Hero:
      - Button chuyển sang trạng thái `Copied State`: Icon chuyển thành dấu tick xanh (`✓`), text đổi thành `Đã sao chép IP!`.
-     - Xuất hiện **Toast Notification** trượt nhẹ từ đáy màn hình: *"Đã sao chép play.lunarchill.club vào bộ nhớ tạm"*.
+     - Xuất hiện **Toast Notification** trượt nhẹ từ đáy màn hình: *"Đã sao chép LunarChill.club vào bộ nhớ tạm"*.
      - Tự động hoàn nguyên về trạng thái ban đầu sau 2 giây.
 2. **Navigation Anchor & Modal Flow:**
    - Click `Cẩm nang` / `Nội quy` -> Chuyển màn hình tương ứng.

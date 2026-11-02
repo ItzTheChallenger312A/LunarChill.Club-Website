@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
+﻿# LunarChillSMP Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
 
 > Bộ tiêu chuẩn và danh mục kiểm thử (Checklist) dùng để nghiệm thu toàn bộ tính năng, giao diện và hiệu năng của website LunarChillSMP trước khi xuất bản bản phát hành chính thức (Release Candidate).
 
@@ -22,13 +22,13 @@
 ### AC-02: Cơ chế Sao chép Địa chỉ Máy chủ 1-Click (Click-to-Copy)
 - [ ] **AC-02.1 (Tương tác nhanh & Phản hồi):**
   - Khi người dùng click vào nút `[ Sao chép IP Server ]` tại Hero hoặc Header:
-    - Clipboard hệ thống nhận được chính xác chuỗi `play.lunarchill.club`.
+    - Clipboard hệ thống nhận được chính xác chuỗi `LunarChill.club`.
     - Trạng thái nút bấm chuyển đổi thị giác sang `Đã sao chép! ✓` trong 2 giây.
     - Xuất hiện Toast Notification trượt từ đáy màn hình thông báo rõ ràng cho người dùng.
 - [ ] **AC-02.2 (Khả năng tương thích thiết bị di động):**
   - Hoạt động trơn tru trên cả Safari (iOS) và Chrome (Android). Có fallback an toàn nếu trình duyệt chặn quyền clipboard.
 - [ ] **AC-02.3 (Thông số Bedrock):**
-  - Cung cấp tùy chọn hoặc ghi chú rõ ràng cổng kết nối Bedrock mặc định `19132` để người chơi điện thoại không bị nhầm lẫn.
+  - Cung cấp tùy chọn hoặc ghi chú rõ ràng cổng kết nối Bedrock mặc định `19143` để người chơi điện thoại không bị nhầm lẫn.
 
 ### AC-03: Cổng Điều hướng & Liên kết Ngoại vi
 - [ ] **AC-03.1 (Discord Community):** Nút Discord mở liên kết mời chính thức trong tab mới với đầy đủ thuộc tính bảo mật `target="_blank" rel="noopener noreferrer"`.

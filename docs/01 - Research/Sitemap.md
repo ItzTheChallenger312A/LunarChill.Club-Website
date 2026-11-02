@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Sitemap Architecture
+﻿# LunarChillSMP Website — Sitemap Architecture
 
 > Tài liệu quy hoạch cấu trúc website, đường dẫn và phân bổ nội dung nhằm tối ưu trải nghiệm khám phá máy chủ, tra cứu thông tin nhanh chóng và chuyển đổi người chơi vào cộng đồng Discord / Minecraft.
 
@@ -92,7 +92,7 @@ graph TD
 | | Cẩm nang | `/guide` | Hướng dẫn tân thủ & Lệnh |
 | | Nội quy | `/rules` | Luật máy chủ & Khiếu nại |
 | | Bản đồ | `External link (Live Map)` | Mở tab mới xem web map |
-| | **Copy IP** | `Click-to-Copy Action` | Tự động copy `play.lunarchill.club` |
+| | **Copy IP** | `Click-to-Copy Action` | Tự động copy `LunarChill.club` |
 | | **Discord** | `https://discord.gg/...` | Nút Button nổi bật (Primary CTA) |
 | **Mobile Drawer** | Toàn bộ menu Header + Thêm mục FAQ & Quy định | Tối ưu hiển thị thao tác một tay |
 | **Footer** | Cụm Bản quyền & Brand | Thông tin máy chủ & Phiên bản |
