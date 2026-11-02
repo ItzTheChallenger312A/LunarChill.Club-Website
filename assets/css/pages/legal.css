@@ -1,0 +1,69 @@
+/* ==========================================================================
+   LUNARCHILL LEGAL PAGES STYLES (pages/legal.css)
+   Bố cục văn bản đọc tập trung 840px (Centered Reading), tối ưu typography
+   ========================================================================== */
+
+.legal-page-header {
+  padding: 50px 0 36px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: radial-gradient(circle at 50% 0%, rgba(104, 139, 248, 0.06) 0%, transparent 70%);
+}
+
+.legal-page-header h1 {
+  margin-bottom: 10px;
+}
+
+.legal-meta {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.legal-wrapper {
+  padding: 48px 0 80px 0;
+}
+
+.legal-card {
+  padding: 40px;
+  background: var(--color-bg-surface);
+  line-height: 1.8;
+}
+
+.legal-card h2 {
+  font-size: 1.35rem;
+  color: var(--color-text-heading);
+  margin-top: 36px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.legal-card h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-card p {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.legal-card ul, .legal-card ol {
+  margin: 10px 0 18px 24px;
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+}
+
+.legal-card li {
+  margin-bottom: 8px;
+}
+
+.legal-card strong {
+  color: var(--color-text-subheading);
+}
+
+@media (max-width: 600px) {
+  .legal-card {
+    padding: 24px 18px;
+  }
+}

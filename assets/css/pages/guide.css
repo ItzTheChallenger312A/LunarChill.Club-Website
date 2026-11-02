@@ -1,0 +1,149 @@
+/* ==========================================================================
+   LUNARCHILL GUIDE & RULES PAGE STYLES (pages/guide.css)
+   Bố cục 2 cột Desktop, Sidebar mục lục dính (Sticky TOC), Command Cards
+   ========================================================================== */
+
+.page-hero {
+  padding: 50px 0 40px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: radial-gradient(circle at 50% 0%, rgba(104, 139, 248, 0.08) 0%, transparent 70%);
+}
+
+.page-hero h1 {
+  margin-bottom: 12px;
+}
+
+.page-hero p {
+  color: var(--color-text-body);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  padding: 48px 0 80px 0;
+}
+
+/* Sticky Sidebar Table of Contents */
+.guide-sidebar {
+  position: sticky;
+  top: 90px;
+  height: fit-content;
+}
+
+.toc-card {
+  padding: 20px;
+}
+
+.toc-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--color-text-subheading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc-link {
+  color: var(--color-text-body);
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: var(--radius-tag);
+  transition: all var(--transition-fast);
+  display: block;
+}
+
+.toc-link:hover {
+  color: var(--color-text-heading);
+  background: rgba(104, 139, 248, 0.1);
+}
+
+/* Guide Content Blocks */
+.guide-content section {
+  margin-bottom: 56px;
+  scroll-margin-top: 90px;
+}
+
+.guide-content h2 {
+  font-size: 1.5rem;
+  color: var(--color-text-heading);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Command Table / Grid */
+.commands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.command-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.command-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.command-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+/* Callout Box */
+.lunar-callout {
+  background: rgba(104, 139, 248, 0.08);
+  border-left: 3px solid var(--color-accent-primary);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  padding: 18px 20px;
+  margin: 20px 0;
+  font-size: 0.92rem;
+}
+
+/* Rules Accordion / Cards */
+.rule-card {
+  margin-bottom: 18px;
+  border-left: 3px solid var(--color-accent-orbit);
+}
+
+.rule-penalty {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--status-maintenance);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-tag);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .guide-sidebar {
+    position: static;
+  }
+}

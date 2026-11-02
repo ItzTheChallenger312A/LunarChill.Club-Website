@@ -1,6 +1,6 @@
 /**
  * LunarChill Main Application Entry (main.js)
- * Khởi tạo Navigation, Mobile Drawer Accessibility, Clipboard actions và Server Status
+ * Khởi tạo Navigation, Mobile Drawer Accessibility, Keyboard Trap/Inert, Clipboard actions và Server Status
  */
 import { CONFIG } from './config.js';
 import { copyToClipboard, showToast } from './clipboard.js';
@@ -44,18 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Xử lý Mobile Navigation Drawer (Hoàn thiện Accessibility)
+  // 3. Xử lý Mobile Navigation Drawer (Hoàn thiện Accessibility: inert, focus trap, escape)
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
+
+  // Khởi tạo trạng thái đóng ban đầu với thuộc tính inert
+  if (mobileDrawer) {
+    mobileDrawer.setAttribute('inert', '');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
+  }
 
   function closeDrawer() {
     if (!mobileDrawer || !mobileDrawer.classList.contains('open')) return;
     mobileDrawer.classList.remove('open');
     mobileDrawer.setAttribute('aria-hidden', 'true');
+    mobileDrawer.setAttribute('inert', ''); // Ngăn focus khi đóng
     if (mobileToggle) {
       mobileToggle.setAttribute('aria-expanded', 'false');
       mobileToggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
-      mobileToggle.focus();
+      mobileToggle.focus(); // Trả focus về nút toggle
     }
   }
 
@@ -63,9 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!mobileDrawer) return;
     mobileDrawer.classList.add('open');
     mobileDrawer.setAttribute('aria-hidden', 'false');
+    mobileDrawer.removeAttribute('inert'); // Cho phép tương tác phím
     if (mobileToggle) {
       mobileToggle.setAttribute('aria-expanded', 'true');
       mobileToggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+    }
+    // Chuyển focus vào liên kết đầu tiên trong drawer
+    const firstLink = mobileDrawer.querySelector('a, button');
+    if (firstLink) {
+      setTimeout(() => firstLink.focus(), 50);
     }
   }
 

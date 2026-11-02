@@ -1,7 +1,5 @@
-# Vercel Deployment Ignore
-# Loại trừ các file tài liệu nội bộ và workspace khỏi bản build public
 .obsidian/
-# docs/
+docs/
 link.txt
 make_favicon.ps1
 *.ps1
