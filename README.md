@@ -12,6 +12,8 @@
     <br />
     <a href="docs/00 - Project Overview/Overview.md">Project Overview</a>
     ·
+    <a href="docs/Quality Standards.md">Quality Standards (Anti-Slop)</a>
+    ·
     <a href="docs/01 - Research/Sitemap.md">Sitemap</a>
     ·
     <a href="docs/02 - Design/Brand Guidelines.md">Brand Guidelines</a>

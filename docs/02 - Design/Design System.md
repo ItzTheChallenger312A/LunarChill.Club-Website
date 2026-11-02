@@ -38,10 +38,11 @@ Dựa trên bảng màu trích xuất từ Logo chính thức:
   --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-code: 'JetBrains Mono', monospace;
 
-  /* Shadows & Glows */
-  --glow-moonlight: 0 0 25px rgba(104, 139, 248, 0.25);
-  --glow-accent-btn: 0 4px 20px rgba(104, 139, 248, 0.4);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /* Radius Tokens (Quy chuẩn Anti-Slop: Góc bo thanh thoát, không bo tròn quá mức) */
+  --radius-xs: 4px;                  /* Command chip, badge */
+  --radius-sm: 6px;                  /* Nút bấm (Buttons), Input */
+  --radius-md: 8px;                  /* Card tính năng, Dialog */
+  --radius-lg: 12px;                 /* Container lớn */
 }
 ```
 
@@ -92,17 +93,17 @@ Dựa trên bảng màu trích xuất từ Logo chính thức:
 Tận dụng hiệu ứng kính mờ đêm vũ trụ (Midnight Indigo Glassmorphism):
 
 ```css
-/* Card Surface Token */
+/* Card Surface Token (Anti-Slop: bo góc 8px chắc chắn, không bo tròn lố bịch) */
 .lunar-card {
   background: var(--color-bg-surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-border-subtle);
-  border-radius: 16px;
-  box-shadow: var(--glass-shadow);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.25s ease,
-              box-shadow 0.25s ease;
+  border-radius: var(--radius-md); /* 8px thay vì 16px-24px */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
 .lunar-card:hover {
@@ -117,8 +118,8 @@ Tận dụng hiệu ứng kính mờ đêm vũ trụ (Midnight Indigo Glassmorph
 ## 5. Hệ thống Nút bấm & Tương tác (Buttons & Actions)
 
 ### 5.1. Primary Action (Nút Copy IP & Primary CTA)
-* **Visual:** Nền chuyển màu Gradient thác nước phát sáng (`linear-gradient(135deg, #688BF8, #3B82F6)`), chữ Moon White đậm, bo góc `12px`.
-* **State Hover:** Tăng nhẹ độ sáng, đổ bóng phát sáng (`box-shadow: 0 0 24px rgba(104, 139, 248, 0.5)`).
+* **Visual:** Nền chuyển màu Gradient thác nước phát sáng (`linear-gradient(135deg, #688BF8, #3B82F6)`), chữ Moon White đậm, bo góc `8px` (`--radius-sm`, không dùng dạng viên thuốc tròn ủng).
+* **State Hover:** Tăng nhẹ độ sáng, đổ bóng phát sáng tinh tế (`box-shadow: 0 0 16px rgba(104, 139, 248, 0.4)`).
 * **State Active / Click:** Co nhẹ (`transform: scale(0.98)`).
 
 ### 5.2. Secondary Action (Nút Discord Community)

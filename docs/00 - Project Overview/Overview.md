@@ -11,7 +11,7 @@
     
 - **Deadline:** 2026-11-20
     
-- **Current phase:** Brand & UI Design (Phase 02)
+- **Current phase:** Development (Phase 03)
     
 - **Tech stack:** HTML, CSS, JavaScript
     
@@ -79,31 +79,37 @@ Existing branding assets may be redesigned when doing so strengthens the overall
 |Phase|Planned dates|Main outcome|Status|
 |---|---|---|---|
 |01 — Research & Requirements|Oct 17–30|Research notes, requirements, sitemap, scope matrix|Hoàn thành (Đóng)|
-|02 — Brand & UI Design|Oct 30–Nov 05|Brand guidelines, design system, UI direction, Figma prototype|Đang triển khai|
-|03 — Development|Nov 06–Nov 14|Responsive website implementation, vanilla HTML/CSS/JS|Sắp tới|
+|02 — Brand & UI Design|Oct 30–Nov 02|Brand guidelines, design system, UI direction, Figma prototype specs|Hoàn thành (Đóng)|
+|03 — Development|Nov 02–Nov 14|Responsive website implementation, vanilla HTML/CSS/JS|Đang triển khai|
 |04 — QA & Review|Nov 15–Nov 18|Cross-browser testing, mobile audit, API edge-case verification|Dự kiến|
 |05 — Release Candidate & Handover|Nov 19–Nov 20|Vercel deployment, final review and handover|Dự kiến|
 
 Dates are adjusted to match actual project pace while strictly maintaining the final handover deadline: 2026-11-20.
 ## 7. Project Structure
 
+- `00 - Project Overview/` — [[Overview]].
+    
 - `01 - Research/` — [[Reference Analysis]], [[Audience & User Journey]], [[Requirements]], [[Scope]], [[Sitemap]].
     
-- `02 - Design/` — [[Brand Guidelines]], [[Design System]], [[UI Direction]], Figma prototype.
+- `02 - Design/` — [[Brand Guidelines]], [[Design System]], [[UI Direction]], [[Borderline Of Slop & Human-like]], Figma prototype.
     
 - `03 - Development/` — [[Technical Plan]] and [[Acceptance Criteria]].
     
 - `04 - Meeting Notes/` — Decisions, feedback, and meeting records.
 
+- `Core Guidelines:` — [[Quality Standards]] (Bộ quy chuẩn chung bất biến chống AI Slop).
+
 ## 8. Current Priorities
 
-- Hoàn thiện các khung màn hình (Frames) trên Figma Prototype theo Design System (Homepage, Guide, Rules, Terms, Privacy).
+- Triển khai cấu trúc mã nguồn cơ bản trong `assets/` (CSS Design Tokens, reset, layout, components).
     
-- Thử nghiệm trực tiếp kích thước hiển thị logo thực tế trong prototype trên Desktop Header (thử nghiệm các mức 36px–44px cho Icon, 110px–120px cho Full Logo) để đảm bảo không bị thô/chiếm diện tích.
+- Lập trình trang chủ `index.html` hoàn chỉnh với slogan *"Chill thôi, đừng có vội."* 🌙 và cơ chế 1-Click Copy IP.
     
-- Soạn thảo tài liệu [[Technical Plan]] và [[Acceptance Criteria]] trong thư mục `03 - Development` để chuẩn bị cho giai đoạn code.
+- Tích hợp module trạng thái máy chủ `status-service.js` (mcstatus.io, 5 trạng thái, dynamic cache).
     
-- Thu thập hình ảnh in-game thực tế và xác nhận Discord invite link từ Ban Quản Trị server.
+- Dựng các trang vệ tinh: Cẩm nang (`guide.html`), Nội quy (`rules.html`), Điều khoản (`terms.html`), Bảo mật (`privacy.html`) và Trang lỗi 404 (`404.html`).
+    
+- Kiểm thử responsive thực tế trên trình duyệt máy tính và di động theo bộ tiêu chí [[Acceptance Criteria]].
 
 ## 9. Key Decisions & Open Questions
 
@@ -155,3 +161,15 @@ Use this section to record major decisions, completed milestones, and changes in
 - Extracted official color palette directly from logo (Deep Abyss Black `#090914`, Waterfall Glow Blue `#688BF8`, Midnight Indigo `#0A0E2A`, Moonlight Silver `#E0EFFF`).
     
 - Created Figma design file: `LunarChillSMP Website Prototype` (Key: `Hjdn5UhKT2D8ucSxTig4hy`).
+    
+- Chốt khẩu hiệu thương hiệu chính thức: *"Chill thôi, đừng có vội."* 🌙 (*"Just chill, don't rush."*).
+
+### 2026-11-02
+
+- Phase 02 — Brand & UI Design hoàn thành và nghiệm thu.
+    
+- Chuyển trọng tâm dự án sang **Phase 03 — Development (Thiết kế website bằng code)**.
+    
+- Hoàn thiện tài liệu kỹ thuật [[Technical Plan]] và danh mục kiểm thử [[Acceptance Criteria]].
+    
+- Cập nhật toàn diện `README.md` theo chuẩn repo mã nguồn mở.
