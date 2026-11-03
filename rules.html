@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nội quy Máy chủ — LunarChillSMP 🌙</title>
-  <meta name="description" content="Nội quy ứng xử, quy tắc chống gian lận, bảo vệ công trình và quy trình giải quyết khiếu nại tại LunarChillSMP.">
+  <title>Nội quy Máy chủ - LunarChill 🌙</title>
+  <meta name="description" content="Nội quy ứng xử, quy tắc chống gian lận, bảo vệ công trình và quy trình giải quyết khiếu nại tại LunarChill.">
   
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -55,7 +60,7 @@
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
-    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+    <div class="mobile-drawer-actions">
       <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
         Sao chép IP PC: LunarChill.club:25572
       </button>
@@ -102,7 +107,7 @@
               <li>Auto-click, Killaura, Baritone, Fly, Speed, Freecam.</li>
               <li>Lợi dụng lỗi game (glitch, duplication/dupe vật phẩm) để trục lợi. Khi phát hiện bug, người chơi có nghĩa vụ báo cáo cho Ban Quản Trị.</li>
             </ul>
-            <span class="rule-penalty">Khung xử phạt: Khóa tài khoản vĩnh viễn (Permanent Ban) — Không ân xá.</span>
+            <span class="rule-penalty">Khung xử phạt: Khóa tài khoản vĩnh viễn (Permanent Ban), không ân xá.</span>
           </div>
         </section>
 
@@ -116,7 +121,7 @@
               <li>Nghiêm cấm chửi bới, lăng mạ danh dự, quấy rối, phân biệt vùng miền, tôn giáo hoặc sử dụng từ ngữ thô tục.</li>
               <li>Nghiêm cấm spam tin nhắn, quảng cáo máy chủ khác hoặc chia sẻ liên kết độc hại/lừa đảo.</li>
             </ul>
-            <span class="rule-penalty">Khung xử phạt: Cảnh cáo ➔ Cấm chat (Mute 1h – 24h) ➔ Khóa tài khoản tạm thời.</span>
+            <span class="rule-penalty">Khung xử phạt: Cảnh cáo ➔ Cấm chat (1 giờ đến 24 giờ) ➔ Khóa tài khoản tạm thời.</span>
           </div>
         </section>
 
@@ -131,7 +136,7 @@
               <li>Không cố tình đặt bẫy giết người (trap/kill) tại khu vực trung tâm hoặc các vùng an toàn.</li>
               <li>Không xây dựng các cỗ máy lag (lag machines), cỗ máy farm quái nhân tạo trên không/biển hoặc cố tình glitch lên trần Nether gây ảnh hưởng tới hiệu năng máy chủ.</li>
             </ul>
-            <span class="rule-penalty">Khung xử phạt: Rollback hoàn trả tài sản qua CoreProtect + Tạm khóa tài khoản từ 3 đến 7 ngày.</span>
+            <span class="rule-penalty">Khung xử phạt: Khôi phục hiện trạng qua CoreProtect và tạm khóa tài khoản từ 3 đến 7 ngày.</span>
           </div>
         </section>
 
@@ -160,14 +165,14 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" style="border-radius: 50%;">
-            <strong style="color: #FEFDFD; font-size: 1.05rem;">LunarChill</strong>
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <strong class="footer-brand-name">LunarChill</strong>
           </div>
-          <p style="color: var(--color-text-body); font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px;">
-            Cộng đồng sinh tồn Minecraft chân thật, chậm rãi và tập trung vào trải nghiệm đoàn kết.
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
           </p>
-          <p class="mojang-disclaimer" style="font-size: 0.78rem; color: var(--color-text-muted); line-height: 1.4;">
+          <p class="mojang-disclaimer">
             Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
           </p>
         </div>

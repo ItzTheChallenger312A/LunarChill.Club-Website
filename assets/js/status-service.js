@@ -142,11 +142,14 @@ export class StatusService {
    * - Unable to retrieve (cả hai đều lỗi kết nối hoặc timeout)
    */
   applyCombinedStatus(javaRes, bedrockRes) {
-    const javaOnline = javaRes?.status === 'ok' && Boolean(javaRes.data?.online);
-    const bedrockOnline = bedrockRes?.status === 'ok' && Boolean(bedrockRes.data?.online);
+    const javaHasValidOnline = javaRes?.status === 'ok' && typeof javaRes.data?.online === 'boolean';
+    const bedrockHasValidOnline = bedrockRes?.status === 'ok' && typeof bedrockRes.data?.online === 'boolean';
 
-    const javaError = javaRes?.status === 'error';
-    const bedrockError = bedrockRes?.status === 'error';
+    const javaOnline = javaHasValidOnline && javaRes.data.online === true;
+    const bedrockOnline = bedrockHasValidOnline && bedrockRes.data.online === true;
+
+    const javaError = javaRes?.status === 'error' || !javaHasValidOnline;
+    const bedrockError = bedrockRes?.status === 'error' || !bedrockHasValidOnline;
 
     // Trường hợp 1: Cả hai nền tảng đều online
     if (javaOnline && bedrockOnline) {

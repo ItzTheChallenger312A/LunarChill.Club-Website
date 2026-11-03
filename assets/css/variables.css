@@ -1,6 +1,10 @@
 /* ==========================================================================
    LUNARCHILL DESIGN TOKENS (variables.css)
-   Triết lý: Cosmic Sanctuary & Zero Slop — Bảng màu trích xuất từ Lunar_Logo
+   Triết lý: Cosmic Sanctuary & Anti-Slop (Quy chuẩn theo Quality Standards.md)
+   - Kiểm soát Radius: Card <= 8px, Button <= 6px, Tag <= 4px (Không rounded-full 9999px)
+   - Kiểm soát Gradient: Cấm gradient-clipped text và aurora blobs trôi nổi vô nghĩa.
+     Chỉ áp dụng gradient 2-stop tinh tế cho Primary Button (#688BF8 -> #3B82F6).
+   - Kiểm soát Glassmorphism: Blur nhẹ 8px–12px trên nền tối, không xếp lớp nhòe nhoẹt >24px.
    ========================================================================== */
 
 :root {

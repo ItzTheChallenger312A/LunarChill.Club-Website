@@ -1,4 +1,4 @@
-# LunarChillSMP — Content & Data Registry (Single Source of Truth)
+# LunarChill - Content & Data Registry (Single Source of Truth)
 
 > **Tài liệu nguồn dữ liệu chuẩn (SSOT)**  
 > Quản lý tập trung toàn bộ dữ liệu thực tế, thông số kết nối, nội dung cẩm nang, nội quy, danh sách plugin/datapack, cơ chế sinh tồn đặc thù và người chịu trách nhiệm xác nhận thông tin cho website LunarChillSMP.
@@ -59,8 +59,8 @@
 - **Vật phẩm cứu sinh:** Cầm **Beacon (Đèn hiệu)** ở tay chính (*Main hand*) giúp liên tục hồi phục oxy cho bản thân và đồng đội đứng gần.
 
 ### 4.4. Đại tu The End & Custom Crafting
-- **Nullscape:** Datapack đại tu địa hình The End (độ cao 384 block, vách đá hư không hùng vĩ).
-- **Stellarity & StellarityOptimizer:** Đại tu toàn bộ lối chơi The End (biome, đền đài, Boss mới, cổ vật thần thoại). Có **Custom Crafting**.
+- **Nullscape:** Datapack đại tu địa hình The End (độ cao 384 block, vách đá hư không).
+- **Stellarity & StellarityOptimizer:** Đại tu toàn bộ lối chơi The End (biome, đền đài, Boss mới, cổ vật). Có **Custom Crafting**.
 - Tuyệt đối **không thể đặt nước ở The End**.
 
 ### 4.5. Thay đổi Rơi đồ Quái vật (Lootable Mobs)
@@ -113,16 +113,16 @@
 
 ## 6. Danh mục Nội quy & Khung Kỷ luật (`/rules`)
 
-* **Điều 1 — Chống gian lận (Zero Tolerance for Cheating):**
+* **Điều 1: Chống gian lận (Zero Tolerance for Cheating):**
   - Nghiêm cấm hack, x-ray, auto-click, baritone, freecam hoặc lợi dụng lỗi game (glitch/dupe).
   - *Hình phạt:* Khóa tài khoản vĩnh viễn (Permanent Ban), không ân xá.
-* **Điều 2 — Văn hóa ứng xử & Tôn trọng (Respect & Anti-toxicity):**
+* **Điều 2: Văn hóa ứng xử & Tôn trọng (Respect & Anti-toxicity):**
   - Không chửi bới, xúc phạm danh dự, phân biệt vùng miền/tôn giáo, không spam kênh chat.
   - *Hình phạt:* Cảnh cáo ➔ Mute 1 giờ ➔ Mute 24 giờ ➔ Tạm khóa tài khoản.
-* **Điều 3 — Bảo vệ công trình & Cấm Griefing:**
+* **Điều 3: Bảo vệ công trình & Cấm Griefing:**
   - Không phá hoại công trình của người khác (dù chưa kịp claim), không bẫy người chơi (trap/kill) tại khu vực cấm PvP.
   - *Hình phạt:* Rollback hoàn trả tài sản qua CoreProtect + Tạm khóa 3 đến 7 ngày.
-* **Điều 4 — Quy trình Khiếu nại (Appeals Ticket):**
+* **Điều 4: Quy trình Khiếu nại (Appeals Ticket):**
   - Mọi sự cố bị hại hoặc tố cáo vi phạm được tiếp nhận duy nhất qua hệ thống **Ticket trên Discord chính thức**. BQT xử lý theo bằng chứng (ảnh/video/logs CoreProtect).
 
 ---

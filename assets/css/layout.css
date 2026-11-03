@@ -105,6 +105,13 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.mobile-drawer-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* --- 3. Footer --- */
 .site-footer {
   margin-top: auto;
@@ -112,6 +119,29 @@
   background: #060710;
   padding: 48px 0 24px 0;
   font-size: 0.9rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-brand-logo {
+  border-radius: 50%;
+}
+
+.footer-brand-name {
+  color: var(--color-text-heading);
+  font-size: 1.05rem;
+}
+
+.footer-desc {
+  color: var(--color-text-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
 }
 
 .footer-grid {

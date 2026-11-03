@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LunarChillSMP — Chill thôi, đừng có vội. 🌙</title>
-  <meta name="description" content="Website chính thức của máy chủ Minecraft LunarChillSMP — Nơi sinh tồn thư thái dưới ánh trăng. Hỗ trợ PC (Java) & PE (Bedrock).">
+  <title>LunarChill - Chill thôi, đừng có vội. 🌙</title>
+  <meta name="description" content="Website chính thức của máy chủ Minecraft LunarChill - Nơi sinh tồn thư thái dưới ánh trăng. Hỗ trợ PC (Java) & PE (Bedrock).">
   
   <!-- Favicon Icons -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -14,10 +14,15 @@
   <!-- OpenGraph / Discord Embed Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://LunarChill.club/">
-  <meta property="og:title" content="LunarChillSMP — Chill thôi, đừng có vội. 🌙">
+  <meta property="og:title" content="LunarChill - Chill thôi, đừng có vội. 🌙">
   <meta property="og:description" content="Máy chủ Minecraft sinh tồn thư thái, công bằng, không pay-to-win. Tham gia ngay cùng cộng đồng LunarChill.">
   <meta property="og:image" content="https://LunarChill.club/assets/images/logo.png">
   <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheets (Zero Slop) -->
   <link rel="stylesheet" href="assets/css/variables.css">
@@ -65,7 +70,7 @@
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
-    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+    <div class="mobile-drawer-actions">
       <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
         Sao chép IP PC: LunarChill.club:25572
       </button>
@@ -86,19 +91,18 @@
           
           <!-- Left Column: Branding, Title, Slogan, Actions -->
           <div class="hero-content">
-            <span class="section-tag">Vietnamese Minecraft survival community</span>
             <h1 class="hero-title">Chill thôi, đừng có vội. 🌙</h1>
-            <p class="hero-subtitle">Just chill, don't rush.</p>
+            <p class="hero-subtitle">LunarChill.club • Bedrock Port: 19143</p>
             <p class="hero-desc">
-              LunarChill là cộng đồng sinh tồn Minecraft chân thật, chậm rãi và tập trung vào trải nghiệm đoàn kết, không pay-to-win. Không áp lực cày cuốc, không có thời gian bất tận để xây dựng, không có không gian để vẽ vời phong cách mà chỉ cùng nhau vượt qua những đêm dài.
+              Máy chủ sinh tồn Minecraft giữ trọn nét nguyên bản, không pay-to-win và không áp lực cày cuốc. Nơi bạn cùng bạn bè dựng nhà, xây thị trấn và thư thả chơi game sau một ngày dài.
             </p>
 
             <div class="hero-cta-group">
-              <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
-                Tham gia cùng đồng minh
-              </a>
-              <a href="guide.html" class="btn btn-secondary">
-                Khám phá Server
+              <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club:25572">
+                Sao chép IP Server
+              </button>
+              <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
+                Tham gia Discord
               </a>
             </div>
 
@@ -114,51 +118,50 @@
           <!-- Right Column: Connection Details Card -->
           <div class="hero-card-col">
             <div class="connection-card">
-              <span class="section-tag" style="margin-bottom: 8px;">Connection details</span>
-              <h3>Join with one clear host and two ports.</h3>
+              <h3>Chung địa chỉ, hai cổng kết nối</h3>
               <p>
-                Use the same server host for both Java and Bedrock. The port changes depending on your client.
+                Dùng chung địa chỉ máy chủ cho cả Java và Bedrock. Cổng kết nối (port) sẽ khác nhau tùy theo bản game của bạn.
               </p>
 
               <div class="connection-boxes">
                 <!-- Host Box -->
                 <div class="conn-box">
                   <div class="conn-meta">
-                    <span class="conn-label">Server Host (Dùng chung)</span>
+                    <span class="conn-label">Địa chỉ máy chủ (Dùng chung)</span>
                     <span class="conn-value">LunarChill.club</span>
                   </div>
                   <button class="btn btn-secondary btn-sm" data-action="copy-ip" data-ip="LunarChill.club" title="Sao chép Host">
-                    Copy
+                    Sao chép
                   </button>
                 </div>
 
                 <!-- Java Port Box -->
                 <div class="conn-box">
                   <div class="conn-meta">
-                    <span class="conn-label">Java Edition (PC)</span>
+                    <span class="conn-label">Java Edition (PC / Máy tính)</span>
                     <span class="conn-value">Port: 25572</span>
                     <span class="conn-sub">Hỗ trợ: 1.21.11 đến 26.3</span>
                   </div>
                   <button class="btn btn-secondary btn-sm" data-action="copy-ip" data-ip="LunarChill.club:25572" title="Sao chép IP PC">
-                    Copy IP
+                    Sao chép IP
                   </button>
                 </div>
 
                 <!-- Bedrock Port Box -->
                 <div class="conn-box">
                   <div class="conn-meta">
-                    <span class="conn-label">Bedrock Edition (PE / Mobile)</span>
+                    <span class="conn-label">Bedrock Edition (PE / Điện thoại)</span>
                     <span class="conn-value">Port: 19143</span>
                     <span class="conn-sub">Hỗ trợ: 26.30 đến 26.51</span>
                   </div>
                   <button class="btn btn-secondary btn-sm" data-action="copy-ip" data-ip="LunarChill.club" title="Sao chép Host PE">
-                    Copy Host
+                    Sao chép Host
                   </button>
                 </div>
               </div>
 
-              <div style="display: flex; gap: 10px;">
-                <button class="btn btn-primary" style="width: 100%;" data-action="copy-ip" data-ip="LunarChill.club:25572">
+              <div class="conn-actions">
+                <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club:25572">
                   Sao chép IP Server
                 </button>
               </div>
@@ -169,72 +172,70 @@
       </div>
     </section>
 
-    <!-- Quick Join / 3 Bước để vào server -->
+    <!-- Quick Join Section -->
     <section class="quick-join-section" id="steps">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">QUICK JOIN / BA BƯỚC ĐẦU</span>
-          <h2>3 bước để vào server.</h2>
-          <p>Mở Minecraft, nhập host và port đúng, sau đó vào game để bắt đầu.</p>
+          <h2>3 bước vào game cực nhanh</h2>
+          <p>Chỉ cần nhập đúng địa chỉ và cổng kết nối theo bản game bạn đang dùng.</p>
         </div>
 
         <div class="steps-grid">
           <div class="step-card">
             <h3>1. Mở Minecraft</h3>
-            <p>Khởi động phiên bản Java (1.21.11 đến 26.3) hoặc Bedrock (26.30 đến 26.51) mà bạn muốn chơi.</p>
+            <p>Khởi động bản Java (1.21.11 đến 26.3) trên máy tính hoặc Bedrock (26.30 đến 26.51) trên điện thoại.</p>
           </div>
 
           <div class="step-card">
-            <h3>2. Nhập host và port</h3>
-            <p>Dùng host <strong style="color: #FEFDFD;">LunarChill.club</strong> với port <strong style="color: #FEFDFD;">25572</strong> cho Java hoặc port <strong style="color: #FEFDFD;">19143</strong> cho Bedrock.</p>
+            <h3>2. Nhập địa chỉ và cổng</h3>
+            <p>Dùng địa chỉ <strong>LunarChill.club</strong> với cổng <strong>25572</strong> (Java) hoặc cổng <strong>19143</strong> (Bedrock).</p>
           </div>
 
           <div class="step-card">
-            <h3>3. Vào game và đọc guide</h3>
-            <p>Sau khi vào game, mở tab <a href="guide.html" style="color: var(--color-accent-orbit); text-decoration: underline;">cẩm nang</a> để biết nội quy, cách gia nhập thị trấn Towny và các lệnh bắt đầu cơ bản.</p>
+            <h3>3. Bắt đầu sinh tồn</h3>
+            <p>Vào game và xem trang <a href="guide.html">cẩm nang tân thủ</a> để nắm các lệnh cơ bản và chọn vùng đất dựng nhà.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Core / Key Identity Section -->
+    <!-- Core Features Section -->
     <section class="features-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">CORE / KEY IDENTITY</span>
-          <h2>Sinh tồn thuần khiết, không pay-to-win.</h2>
-          <p>LunarChill tập trung vào trải nghiệm cộng đồng, xây dựng và khám phá. Không có quái săn tiền, chỉ có thế giới Minecraft nguyên bản với một vài tiện ích cần thiết.</p>
+          <h2>Sinh tồn thuần khiết, không pay-to-win</h2>
+          <p>Giữ trọn trải nghiệm sinh tồn Minecraft nguyên bản, bổ sung những tiện ích vừa đủ để chơi cùng bạn bè.</p>
         </div>
 
         <div class="features-grid">
           <div class="feature-card">
-            <h3>Bốn mùa & Nghệ thuật ẩm thực</h3>
-            <p>Khí hậu 4 mùa luân chuyển sống động (Aternum Seasons). Hàng chục công thức nấu nướng, hầm súp dinh dưỡng và bày tiệc cùng đồng minh (CropAndKettle).</p>
+            <h3>Thời tiết bốn mùa & Ẩm thực</h3>
+            <p>Chu kỳ 4 mùa luân chuyển tự nhiên với Aternum Seasons. Bổ sung nhiều món ăn và nồi súp dinh dưỡng từ CropAndKettle để cùng bạn bè thưởng thức.</p>
           </div>
 
           <div class="feature-card">
-            <h3>Thị trấn & Đất đai (Towny)</h3>
-            <p>Xây dựng, mở rộng và bảo vệ lãnh thổ thị trấn trong một thế giới có trật tự, giúp bảo vệ công trình và giảm đáng kể nguy cơ bị phá hoại. Tự do phân quyền và kết nạp công dân.</p>
+            <h3>Bảo vệ công trình với Towny</h3>
+            <p>Hệ thống giữ đất và lập thị trấn giúp công trình của bạn luôn an toàn trước nạn phá hoại. Dễ dàng mời bạn bè cùng mở rộng vùng đất chung.</p>
           </div>
 
           <div class="feature-card">
-            <h3>Kỹ năng RPG & Thú cưng</h3>
-            <p>11+ kỹ năng sinh tồn tự nhiên (Aura Skills) tăng chỉ số qua từng hành động lao động. Thuần hóa và rèn luyện thú cưng đồng hành trung thành (MyPet).</p>
+            <h3>Kỹ năng Aura Skills & Thú cưng</h3>
+            <p>11 kỹ năng tăng cấp tự nhiên qua các hoạt động lao động thường ngày. Nuôi dưỡng và đồng hành cùng thú cưng MyPet trong mọi chuyến đi.</p>
           </div>
 
           <div class="feature-card">
-            <h3>The End kỳ vĩ: Nullscape & Stellarity</h3>
-            <p>Đại tu The End toàn diện: Nullscape kiến tạo địa hình hư không cao 384 block hùng vĩ, kết hợp Stellarity mở ra lối chơi, boss, cổ vật và Custom Crafting.</p>
+            <h3>Thử thách The End: Nullscape & Stellarity</h3>
+            <p>Địa hình The End cao 384 block với nhiều cấu trúc mới, boss thử thách và công thức chế tạo đặc biệt. Lưu ý không thể đặt nước tại The End.</p>
           </div>
 
           <div class="feature-card">
-            <h3>Đào chậm & Chỉ số Oxy, Nước</h3>
-            <p>Thử thách sinh tồn chiều sâu: Đào đá sâu phạt đào chậm (miễn trừ khi đạt 30 level). Quản lý thanh nước và dùng Beacon cầm tay nạp dưỡng khí oxy.</p>
+            <h3>Cơ chế Đào sâu, Oxy & Nước</h3>
+            <p>Đào đá sâu dưới Y=0 bị hiệu ứng đào chậm (miễn trừ khi đạt cấp 30). Quản lý thanh nước khi di chuyển và cầm đèn hiệu (Beacon) để nạp oxy.</p>
           </div>
 
           <div class="feature-card">
-            <h3>Cân bằng sinh tồn & Không Pay-to-Win</h3>
-            <p>Cơ chế Mendingless giữ giá trị bền vững cho quặng khoáng sản. Khắc chế các cỗ máy farm lạm dụng kinh tế. Cam kết trải nghiệm công bằng cho mọi thành viên.</p>
+            <h3>Không Pay-to-Win & Cân bằng game</h3>
+            <p>Không bán rank hay vật phẩm can thiệp lối chơi. Giữ giá trị cho việc khai khoáng và sửa đồ đe, chặn các cỗ máy farm lạm dụng để giữ tính công bằng.</p>
           </div>
         </div>
       </div>
@@ -244,69 +245,68 @@
     <section class="community-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">COMMUNITY GALLERY</span>
-          <h2>Những góc nhỏ của LunarChill.</h2>
-          <p>Không có ảnh chứng minh giả, chỉ có hình chụp thực tế từ server để minh họa trải nghiệm.</p>
+          <h2>Hình ảnh thực tế trong server</h2>
+          <p>Ghi lại từ các góc sinh tồn và hoạt động thường nhật của người chơi.</p>
         </div>
 
         <div class="showcase-grid">
           <div class="showcase-card">
             <div class="showcase-img-placeholder">
-              <span>Screenshot cung cấp từ BQT server</span>
+              <span>Ảnh chụp từ ban quản trị</span>
             </div>
             <div class="showcase-info">
-              <h4 style="color: var(--color-text-heading); font-size: 1.05rem; margin-bottom: 4px;">Khu trung tâm Spawn</h4>
-              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Điểm đón tiếp thành viên mới dưới ánh trăng.</p>
+              <h4>Khu trung tâm Spawn</h4>
+              <p>Điểm đón tiếp thành viên mới dưới ánh trăng.</p>
             </div>
           </div>
 
           <div class="showcase-card">
             <div class="showcase-img-placeholder">
-              <span>Screenshot cung cấp từ BQT server</span>
+              <span>Ảnh chụp từ ban quản trị</span>
             </div>
             <div class="showcase-info">
-              <h4 style="color: var(--color-text-heading); font-size: 1.05rem; margin-bottom: 4px;">Thị trấn ven sông</h4>
-              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Nơi người chơi quây quần xây dựng công trình chung.</p>
+              <h4>Thị trấn ven sông</h4>
+              <p>Nơi các nhóm bạn cùng nhau xây dựng nhà cửa.</p>
             </div>
           </div>
 
           <div class="showcase-card">
             <div class="showcase-img-placeholder">
-              <span>Screenshot cung cấp từ BQT server</span>
+              <span>Ảnh chụp từ ban quản trị</span>
             </div>
             <div class="showcase-info">
-              <h4 style="color: var(--color-text-heading); font-size: 1.05rem; margin-bottom: 4px;">Cảnh đêm yên bình</h4>
-              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Khoảnh khắc thư thái không áp lực cày cuốc.</p>
+              <h4>Cảnh đêm yên bình</h4>
+              <p>Khoảnh khắc thư giãn nhẹ nhàng, không áp lực cày cuốc.</p>
             </div>
           </div>
 
           <div class="showcase-card">
             <div class="showcase-img-placeholder">
-              <span>Screenshot cung cấp từ BQT server</span>
+              <span>Ảnh chụp từ ban quản trị</span>
             </div>
             <div class="showcase-info">
-              <h4 style="color: var(--color-text-heading); font-size: 1.05rem; margin-bottom: 4px;">Khu canh tác nông trang</h4>
-              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Hợp tác làm nông và chia sẻ lương thực cùng đồng minh.</p>
+              <h4>Khu canh tác nông trang</h4>
+              <p>Làm nông, thu hoạch mùa màng và chia sẻ lương thực cùng bạn bè.</p>
             </div>
           </div>
 
           <div class="showcase-card">
             <div class="showcase-img-placeholder">
-              <span>Screenshot cung cấp từ BQT server</span>
+              <span>Ảnh chụp từ ban quản trị</span>
             </div>
             <div class="showcase-info">
-              <h4 style="color: var(--color-text-heading); font-size: 1.05rem; margin-bottom: 4px;">Công trình Towny</h4>
-              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Được bảo vệ claim toàn diện, không lo bị phá hoại.</p>
+              <h4>Công trình Towny</h4>
+              <p>Khu đất được bảo vệ an toàn, không lo bị phá hoại.</p>
             </div>
           </div>
 
           <div class="showcase-card">
             <div class="showcase-img-placeholder">
-              <span>Screenshot cung cấp từ BQT server</span>
+              <span>Ảnh chụp từ ban quản trị</span>
             </div>
             <div class="showcase-info">
-              <h4 style="color: var(--color-text-heading); font-size: 1.05rem; margin-bottom: 4px;">Góc chill bên lửa trại</h4>
-              <p style="font-size: 0.85rem; color: var(--color-text-body); margin: 0;">Cùng trò chuyện và chia sẻ câu chuyện sau một ngày dài.</p>
+              <h4>Góc nghỉ bên lửa trại</h4>
+              <p>Nơi dừng chân trò chuyện và chia sẻ kinh nghiệm sau chuyến thám hiểm.</p>
             </div>
           </div>
         </div>
@@ -319,14 +319,14 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" style="border-radius: 50%;">
-            <strong style="color: #FEFDFD; font-size: 1.05rem;">LunarChill</strong>
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <strong class="footer-brand-name">LunarChill</strong>
           </div>
-          <p style="color: var(--color-text-body); font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px;">
-            Cộng đồng sinh tồn Minecraft chân thật, chậm rãi và tập trung vào trải nghiệm đoàn kết.
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
           </p>
-          <p class="mojang-disclaimer" style="font-size: 0.78rem; color: var(--color-text-muted); line-height: 1.4;">
+          <p class="mojang-disclaimer">
             Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
           </p>
         </div>

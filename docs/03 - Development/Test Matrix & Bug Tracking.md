@@ -60,3 +60,6 @@
 | **BUG-05** | P1 | Drawer mobile thiếu thuộc tính `inert` | Đã bổ sung `inert` và quản lý focus khi đóng mở | 🟢 Đã sửa |
 | **BUG-06** | P1 | Thiếu ảnh screenshot thật cho Community Gallery | Đang sử dụng thẻ placeholder chuẩn chờ BQT cung cấp | 🟡 Chờ ảnh thật |
 | **BUG-07** | P0 | Không thể chuyển trang khi mở local / link trỏ `/guide` bị 404 | Chuyển toàn bộ internal links sang file tương đối (`guide.html`, `rules.html`, ...) kết hợp explicit rewrites trong `vercel.json` | 🟢 Đã sửa |
+| **BUG-08** | P0 | Thiếu link Google Fonts cho `Plus Jakarta Sans` & `JetBrains Mono` | Bổ sung preconnect & stylesheet Google Fonts vào `<head>` toàn bộ 6 trang | 🟢 Đã sửa |
+| **BUG-09** | P1 | `applyCombinedStatus` báo Offline giả khi API thiếu trường `online` | Thêm kiểm tra `typeof online === 'boolean'`, fallback an toàn về `unable` | 🟢 Đã sửa |
+| **BUG-10** | P2 | Quá nhiều inline styles trong `index.html` và footer | Chuyển toàn bộ sang CSS classes trong `home.css` và `layout.css`, dùng token | 🟢 Đã sửa |

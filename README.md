@@ -55,13 +55,13 @@
 ```
 LunarChill.Club-Website/
 ├── index.html                     # Trang chủ (Homepage hoàn chỉnh)
-├── guide.html                     # Cẩm nang tân thủ (/guide - Sắp triển khai Phase 03.3)
-├── rules.html                     # Nội quy máy chủ (/rules - Sắp triển khai Phase 03.3)
-├── terms.html                     # Điều khoản dịch vụ (/terms - Sắp triển khai Phase 03.4)
-├── privacy.html                   # Chính sách bảo mật (/privacy - Sắp triển khai Phase 03.4)
-├── 404.html                       # Trang lỗi 404 phong cách Minecraft (P1)
-├── vercel.json                    # Cấu hình Clean URLs và Header caching
-├── .vercelignore                  # Loại trừ docs và workspace khỏi bản build public
+├── guide.html                     # Cẩm nang tân thủ (/guide)
+├── rules.html                     # Nội quy máy chủ (/rules)
+├── terms.html                     # Điều khoản dịch vụ (/terms)
+├── privacy.html                   # Chính sách bảo mật (/privacy)
+├── 404.html                       # Trang lỗi 404 phong cách Minecraft (The End)
+├── vercel.json                    # Cấu hình Clean URLs, Rewrites và Header caching
+├── .vercelignore                  # Loại trừ docs và workspace khỏi deployment output
 │
 ├── assets/
 │   ├── css/
@@ -85,6 +85,8 @@ LunarChill.Club-Website/
 └── README.md                      # Giới thiệu tổng quan dự án
 ```
 
+> 💡 **Lưu ý về tài liệu (`docs/`):** Hệ thống tài liệu trong thư mục `docs/` được liên kết phục vụ bạn đọc trực tiếp trên GitHub repository. Do được liệt kê trong `.vercelignore`, thư mục này không xuất hiện trên website live Vercel nhằm tối ưu hiệu năng tải trang và bảo vệ cấu trúc tĩnh sạch.
+
 ---
 
 ## 🗺️ Lộ trình triển khai (Project Roadmap)
@@ -93,7 +95,7 @@ LunarChill.Club-Website/
 | :--- | :--- | :--- | :--- |
 | **01 — Research & Requirements** | 17/10 – 30/10 | Nghiên cứu, đặc tả yêu cầu, sitemap, ma trận scope | **Hoàn thành (Đóng)** |
 | **02 — Brand & UI Design** | 30/10 – 02/11 | Brand guidelines, design system, Figma prototype specs | **Hoàn thành (Đóng)** |
-| **03 — Development** | 02/11 – 14/11 | Lập trình giao diện tĩnh responsive (HTML/CSS/JS) | **Đang thực hiện (Phase 03.1 Done)** |
+| **03 — Development** | 02/11 – 14/11 | Lập trình giao diện tĩnh responsive (HTML/CSS/JS) | **Hoàn thành (Đủ 6 trang tĩnh)** |
 | **04 — QA & Review** | 15/11 – 18/11 | Kiểm thử đa thiết bị, kiểm tra hiệu năng & API | Dự kiến |
 | **05 — Handover & Launch** | 19/11 – 20/11 | Deploy Vercel Production, bàn giao chính thức | Dự kiến |
 

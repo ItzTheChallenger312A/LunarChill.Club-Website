@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cẩm nang Tân thủ — LunarChillSMP 🌙</title>
-  <meta name="description" content="Hướng dẫn kết nối PC & PE, bảng tra cứu lệnh in-game, cơ chế sinh tồn đào chậm, oxy, nước và mod client tại máy chủ Minecraft LunarChillSMP.">
+  <title>Cẩm nang Tân thủ - LunarChill 🌙</title>
+  <meta name="description" content="Hướng dẫn kết nối PC & PE, bảng tra cứu lệnh in-game, cơ chế sinh tồn đào chậm, oxy, nước và mod client tại máy chủ Minecraft LunarChill.">
   
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
@@ -13,10 +13,15 @@
   <!-- OpenGraph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://LunarChill.club/guide">
-  <meta property="og:title" content="Cẩm nang Tân thủ — LunarChillSMP">
+  <meta property="og:title" content="Cẩm nang Tân thủ - LunarChill">
   <meta property="og:description" content="Mọi thứ bạn cần biết để bắt đầu sinh tồn tại LunarChill: kết nối, lệnh cơ bản, cơ chế đào chậm, oxy, nước, The End Nullscape & Stellarity và mod hỗ trợ.">
   <meta property="og:image" content="https://LunarChill.club/assets/images/logo.png">
   <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -63,7 +68,7 @@
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
-    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+    <div class="mobile-drawer-actions">
       <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
         Sao chép IP PC: LunarChill.club:25572
       </button>
@@ -80,12 +85,11 @@
     <!-- Hero Banner (Figma Spec) -->
     <div class="page-hero">
       <div class="container">
-        <span class="section-tag">CẨM NANG & HƯỚNG DẪN TÂN THỦ</span>
         <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.01em;">
-          Một khởi đầu thật chill.
+          Cẩm nang sinh tồn LunarChill
         </h1>
         <p style="color: var(--color-text-body); max-width: 720px; margin: 0 auto 24px auto; font-size: 1.05rem; line-height: 1.6;">
-          Mọi thứ bạn cần biết để bắt đầu sinh tồn tại LunarChill: kết nối, bảng lệnh, cơ chế Đào chậm & Oxy/Nước, quy tắc thế giới chống cheese, và các mod hỗ trợ chính thức.
+          Hướng dẫn kết nối, bảng lệnh thông dụng, cơ chế đào sâu, dưỡng khí oxy và các mod client được khuyên dùng khi tham gia máy chủ.
         </p>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
           <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club:25572">
@@ -168,7 +172,7 @@
             <div class="lunar-card" style="padding: 18px 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bước 3: Gia nhập Thị trấn hoặc Lập Thị trấn mới (Towny)</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Bạn có thể xin gia nhập một thị trấn có sẵn, nhận lô đất bằng <code class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</code>, hoặc tự lập thị trấn riêng với <code class="command-chip" data-action="copy-ip" data-ip="/town new">/town new [tên]</code> để bảo vệ công trình và giảm đáng kể nguy cơ bị phá hoại.
+                Bạn có thể xin gia nhập một thị trấn có sẵn, nhận đất bằng lệnh <code class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</code>, hoặc tự lập thị trấn riêng với lệnh <code class="command-chip" data-action="copy-ip" data-ip="/town new">/town new [tên]</code> để bảo vệ công trình của bạn không bị phá hoại.
               </p>
             </div>
           </div>
@@ -176,8 +180,8 @@
 
         <!-- 3. Bảng lệnh thông dụng -->
         <section id="commands">
-          <h2>3. Một vài lệnh, bớt lạc đường.</h2>
-          <p>Các câu lệnh thiết yếu giúp bạn di chuyển, lập thị trấn, rèn luyện kỹ năng và giao thương:</p>
+          <h2>3. Bảng lệnh thông dụng</h2>
+          <p>Các câu lệnh thiết yếu giúp bạn di chuyển, quản lý thị trấn, theo dõi kỹ năng và giao thương:</p>
 
           <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 24px 0 12px 0;">Di chuyển & Căn cứ</h3>
           <div class="commands-grid">
@@ -237,7 +241,7 @@
                 <code class="command-chip" data-action="copy-ip" data-ip="/town">/town</code>
                 <small>Click để chép</small>
               </div>
-              <p class="command-desc">Xem bảng thông tin, số cư dân và ngân sách thị trấn của bạn.</p>
+              <p class="command-desc">Xem thông tin, số lượng thành viên và ngân sách thị trấn của bạn.</p>
             </div>
 
             <div class="lunar-card command-card">
@@ -398,23 +402,23 @@
                 Oxy tự nạp đầy khi đứng trên bề mặt đất Overworld. Nhưng khi tiến vào các vùng thiếu khí:<br>
                 • <strong>Hang động sâu:</strong> Oxy bắt đầu giảm dần theo độ sâu.<br>
                 • <strong>The Nether:</strong> Oxy sụt giảm <strong>4% mỗi phút</strong>.<br>
-                • <strong>The End:</strong> Khắc nghiệt tột độ, oxy sụt giảm <strong>2% mỗi 10 giây</strong>.<br>
-                • <strong>Cứu tinh Beacon:</strong> Khi cầm <strong>Beacon (Đèn hiệu) ở tay chính</strong>, lượng oxy của bạn và <strong>đồng đội đứng gần</strong> sẽ liên tục được nạp đầy!
+                • <strong>The End:</strong> Khắc nghiệt hơn, oxy sụt giảm <strong>2% mỗi 10 giây</strong>.<br>
+                • <strong>Hồi phục oxy bằng Beacon:</strong> Khi cầm <strong>Beacon (Đèn hiệu) ở tay chính</strong>, lượng oxy của bạn và <strong>người chơi đứng gần</strong> sẽ liên tục được nạp đầy!
               </p>
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🌌 The End Huyền bí: Bộ đôi Nullscape & Stellarity</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🌌 Khám phá The End: Bộ đôi Nullscape & Stellarity</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                The End được đại tu toàn diện: Datapack <strong>Nullscape</strong> kiến tạo địa hình hư không cao tới 384 block kỳ vĩ, trong khi <strong>Stellarity</strong> mang đến toàn bộ lối chơi mới với các biome huyền ảo, boss, cổ vật thần thoại và <strong>Custom Crafting</strong>.<br>
-                • <em>Lưu ý sinh tử:</em> <strong>Tuyệt đối không thể đặt nước tại The End</strong>.
+                The End được làm mới toàn diện: Datapack <strong>Nullscape</strong> kiến tạo địa hình hư không cao tới 384 block, trong khi <strong>Stellarity</strong> mang đến các biome mới, boss thử thách, cổ vật và công thức chế tạo đặc biệt (<strong>Custom Crafting</strong>).<br>
+                • <em>Lưu ý quan trọng:</em> <strong>Không thể đặt nước tại The End</strong>.
               </p>
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚖️ Mendingless & Bùa bảo mệnh KeepInventory Rune</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚖️ Không dùng bùa Mending & Giữ đồ khi tử nạn bằng Rune</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Loại bỏ bùa Mending để giữ giá trị bền vững cho quặng khoáng sản và kỹ nghệ sửa đồ đe (Anvil). Khi đi thám hiểm The End hoặc Nether, hãy mang theo <strong>Ngọc Rune bảo mệnh</strong> trong người để nếu chẳng may tử nạn, túi đồ của bạn sẽ được bảo toàn nguyên vẹn.
+                Loại bỏ bùa Mending để giữ giá trị cho quặng khoáng sản và kỹ nghệ sửa đồ đe (Anvil). Khi đi thám hiểm The End hoặc Nether, hãy mang theo <strong>Ngọc Rune bảo mệnh</strong> trong người để nếu chẳng may tử nạn, túi đồ của bạn sẽ được bảo toàn nguyên vẹn.
               </p>
             </div>
           </div>
@@ -429,21 +433,21 @@
             <div class="lunar-card" style="padding: 18px 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">👹 Wither Boss 900 Máu tại Nether</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Wither chỉ có thể triệu hồi tại The Nether với lượng máu khủng <strong>900 HP</strong>. Đây là thử thách đòi hỏi cả liên minh thị trấn cùng hiệp lực tiêu diệt.
+                Wither chỉ có thể triệu hồi tại The Nether với lượng máu <strong>900 HP</strong>. Đây là thử thách đòi hỏi các thị trấn cùng phối hợp tiêu diệt.
               </p>
             </div>
 
             <div class="lunar-card" style="padding: 18px 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">🚫 Cấm Nông trại Quái Nhân tạo (No Sky/Sea Farms)</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Mọi mob farm nhân tạo xây dựng trên không hoặc trên biển đều <strong>hoàn toàn không hoạt động</strong> (bao gồm cả farm Raid), bảo vệ TPS máy chủ luôn mượt mà.
+                Mọi mob farm nhân tạo xây dựng trên không hoặc trên biển đều <strong>không hoạt động</strong> (bao gồm cả farm Raid), bảo vệ TPS máy chủ luôn mượt mà.
               </p>
             </div>
 
             <div class="lunar-card" style="padding: 18px 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">🛡️ Dân làng & Giấc ngủ</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Dân làng <strong>không sinh sản, không bán Mending, không bán đồ kim cương</strong>. Không thể ngủ qua đêm để giữ nhịp sống thế giới, nhưng có thể nằm giường hoặc gõ <code>/lay</code> để reset Phantom.
+                Dân làng <strong>không sinh sản, không bán bùa Mending, không bán đồ kim cương</strong>. Không thể ngủ qua đêm để giữ nhịp sống thế giới, nhưng có thể nằm giường hoặc gõ <code>/lay</code> để đặt lại thời gian xuất hiện Phantom.
               </p>
             </div>
 
@@ -451,7 +455,7 @@
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">⚔️ Thay đổi Rơi đồ (Lootable Mobs)</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
                 • <strong>Iron Golem:</strong> Không rơi sắt, chỉ rơi Bí ngô.<br>
-                • <strong>Illusioner (Raid):</strong> Rơi khối trang trí nội thất và tranh vẽ nghệ thuật.<br>
+                • <strong>Illusioner (Raid):</strong> Rơi khối trang trí nội thất và tranh ảnh trang trí.<br>
                 • <strong>Evoker:</strong> Chỉ có <strong>3% cơ hội rơi Totem of Undying</strong>.<br>
                 • <strong>Silverfish:</strong> Không rơi kinh nghiệm.<br>
                 • <strong>Zombie Lợn:</strong> Luôn luôn chủ động tấn công người chơi trong Nether.<br>
@@ -480,15 +484,15 @@
               <p style="margin: 8px 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
                 Đàm thoại giọng nói 3D định hướng theo khoảng cách nhân vật trong game. Cực kỳ chân thật khi cùng nhau đi thám hiểm hang sâu.
               </p>
-              <small style="color: var(--color-accent-orbit);">Giao tiếp cộng đồng đỉnh cao.</small>
+              <small style="color: var(--color-accent-orbit);">Hỗ trợ trò chuyện giọng nói 3D.</small>
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🖼️ ImageMap Client</strong>
               <p style="margin: 8px 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
-                Hỗ trợ hiển thị tranh vẽ nghệ thuật từ plugin ImageFrame với độ phân giải sắc nét tối đa, không bị mờ nhòe.
+                Hỗ trợ hiển thị tranh vẽ từ plugin ImageFrame với độ phân giải rõ nét, không bị mờ nhòe.
               </p>
-              <small style="color: var(--color-accent-orbit);">Thưởng ngoạn tranh ảnh nét căng.</small>
+              <small style="color: var(--color-accent-orbit);">Hiển thị tranh ảnh sắc nét.</small>
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
@@ -496,15 +500,15 @@
               <p style="margin: 8px 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
                 Nhìn thấy hoạt ảnh vỗ về và xoa đầu thân thiện giữa các thành viên, gia tăng sự gắn kết ấm áp đúng chất LunarChill.
               </p>
-              <small style="color: var(--color-accent-orbit);">Tương tác ấm áp, đáng yêu.</small>
+              <small style="color: var(--color-accent-orbit);">Hoạt ảnh tương tác thân thiện giữa người chơi.</small>
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚡ Sodium & Iris Shaders</strong>
               <p style="margin: 8px 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
-                Tối ưu hóa hiệu năng render tăng vọt FPS, hỗ trợ các gói shader đồ họa ánh trăng lộng lẫy trên nền Fabric.
+                Tối ưu hóa hiệu năng render tăng FPS, hỗ trợ các gói shader đồ họa ánh trăng trên nền Fabric.
               </p>
-              <small style="color: var(--color-accent-orbit);">Mượt mà & Thẩm mỹ.</small>
+              <small style="color: var(--color-accent-orbit);">Tối ưu FPS và hỗ trợ shader ánh trăng.</small>
             </div>
           </div>
         </section>
@@ -563,14 +567,14 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" style="border-radius: 50%;">
-            <strong style="color: #FEFDFD; font-size: 1.05rem;">LunarChill</strong>
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <strong class="footer-brand-name">LunarChill</strong>
           </div>
-          <p style="color: var(--color-text-body); font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px;">
-            Cộng đồng sinh tồn Minecraft chân thật, chậm rãi và tập trung vào trải nghiệm đoàn kết.
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
           </p>
-          <p class="mojang-disclaimer" style="font-size: 0.78rem; color: var(--color-text-muted); line-height: 1.4;">
+          <p class="mojang-disclaimer">
             Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
           </p>
         </div>

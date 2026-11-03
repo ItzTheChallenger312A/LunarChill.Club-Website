@@ -87,6 +87,19 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
+.connection-card .section-tag {
+  margin-bottom: 8px;
+}
+
+.conn-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.conn-actions .btn {
+  width: 100%;
+}
+
 .connection-card h3 {
   font-size: 1.35rem;
   color: var(--color-text-heading);
@@ -202,6 +215,15 @@
   line-height: 1.6;
 }
 
+.step-card a {
+  color: var(--color-accent-orbit);
+  text-decoration: underline;
+}
+
+.step-card strong {
+  color: var(--color-text-heading);
+}
+
 /* --- Features Section (Sinh tồn thuần khiết) --- */
 .features-section {
   padding: 72px 0;
@@ -270,6 +292,18 @@
 
 .showcase-info {
   padding: 16px 20px;
+}
+
+.showcase-info h4 {
+  color: var(--color-text-heading);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.showcase-info p {
+  font-size: 0.85rem;
+  color: var(--color-text-body);
+  margin: 0;
 }
 
 /* --- Responsive Adjustments --- */

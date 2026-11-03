@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Điều khoản Dịch vụ — LunarChillSMP 🌙</title>
-  <meta name="description" content="Thỏa thuận điều khoản dịch vụ người dùng của máy chủ Minecraft phi thương mại LunarChillSMP.">
+  <title>Điều khoản Dịch vụ - LunarChill 🌙</title>
+  <meta name="description" content="Thỏa thuận điều khoản dịch vụ người dùng của máy chủ Minecraft phi thương mại LunarChill.">
   
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -55,7 +60,7 @@
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
-    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+    <div class="mobile-drawer-actions">
       <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
         Sao chép IP PC: LunarChill.club:25572
       </button>
@@ -117,14 +122,14 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" style="border-radius: 50%;">
-            <strong style="color: #FEFDFD; font-size: 1.05rem;">LunarChill</strong>
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <strong class="footer-brand-name">LunarChill</strong>
           </div>
-          <p style="color: var(--color-text-body); font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px;">
-            Cộng đồng sinh tồn Minecraft chân thật, chậm rãi và tập trung vào trải nghiệm đoàn kết.
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
           </p>
-          <p class="mojang-disclaimer" style="font-size: 0.78rem; color: var(--color-text-muted); line-height: 1.4;">
+          <p class="mojang-disclaimer">
             Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
           </p>
         </div>

@@ -3,6 +3,7 @@
    CSS Reset, Accessibility & Typography Foundations
    ========================================================================== */
 
+/* --- 1. Global Box-Sizing & Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -99,7 +100,7 @@ img, svg {
   outline-offset: 3px;
 }
 
-/* Reduce Motion for Accessibility */
+/* --- 6. Accessibility: Reduced Motion Override (Tôn trọng thiết lập OS) --- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
