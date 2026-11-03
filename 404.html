@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Lạc vào The End 🌙</title>
   <meta name="description" content="Trang bạn tìm kiếm không tồn tại trên hệ thống LunarChill.">
-  
+  <meta name="robots" content="noindex">
+
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
   <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,20 +23,22 @@
 </head>
 <body style="justify-content: center; align-items: center; text-align: center; padding: 20px;">
 
-  <div class="lunar-card" style="max-width: 520px; width: 100%; padding: 48px 24px;">
-    <div style="font-size: 3.5rem; margin-bottom: 12px;">🌌</div>
-    <h1 style="font-size: 2.2rem; margin-bottom: 8px;">404: Không tìm thấy trang</h1>
-    <p style="color: var(--color-accent-orbit); font-style: italic; margin-bottom: 16px;">
-      "Chill thôi, đừng có vội. Có vẻ bạn đã đi lạc vào The End rồi." 🌙
-    </p>
-    <p style="font-size: 0.95rem; color: var(--color-text-body); margin-bottom: 28px;">
-      Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển sang tọa độ khác.
-    </p>
-    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-      <a href="index.html" class="btn btn-primary">Quay về Trang chủ</a>
-      <a href="guide.html" class="btn btn-secondary">Xem Cẩm nang</a>
+  <main id="main-content" style="width: 100%; display: flex; justify-content: center;">
+    <div class="lunar-card" style="max-width: 520px; width: 100%; padding: 48px 24px;">
+      <div style="font-size: 3.5rem; margin-bottom: 12px;" aria-hidden="true">🌌</div>
+      <h1 style="font-size: 2.2rem; margin-bottom: 8px;">404: Không tìm thấy trang</h1>
+      <p style="color: var(--color-accent-orbit); font-style: italic; margin-bottom: 16px;">
+        "Chill thôi, đừng có vội. Có vẻ bạn đã đi lạc vào The End rồi." 🌙
+      </p>
+      <p style="font-size: 0.95rem; color: var(--color-text-body); margin-bottom: 28px;">
+        Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển sang tọa độ khác.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary">Quay về Trang chủ</a>
+        <a href="guide.html" class="btn btn-secondary">Xem Cẩm nang</a>
+      </div>
     </div>
-  </div>
+  </main>
 
 </body>
 </html>

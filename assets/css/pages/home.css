@@ -1,7 +1,7 @@
 /* ==========================================================================
    LUNARCHILL HOMEPAGE STYLES (pages/home.css)
-   Figma Node 24:2 "Homepage / Desktop" (1400px Container)
-   Hero Section 2-Column, Quick Join, Server Features, Community Showcase
+   Figma Node 24:2 "Homepage / Desktop" (1200px Container)
+   Hero Section 2-Column, Quick Join, Server Features, Community Notice
    Zero Slop: Borders <= 8px, No Aurora Blob, No Gradient Text Clipping
    ========================================================================== */
 
@@ -37,6 +37,20 @@
   text-align: left;
 }
 
+/* Hero Badge Logo (AC-06.2: 240px Desktop / 160px Mobile) */
+.hero-logo-wrap {
+  margin-bottom: 20px;
+}
+
+.hero-logo-badge {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border-hover);
+  box-shadow: var(--shadow-card);
+}
+
 .hero-title {
   font-size: clamp(2.4rem, 4.5vw, 3.4rem);
   font-weight: 800;
@@ -46,11 +60,19 @@
   letter-spacing: -0.02em;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: var(--color-accent-orbit);
+.hero-subtitle-en {
+  font-size: 1.15rem;
+  color: var(--color-text-subheading);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--color-accent-orbit);
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -79,12 +101,10 @@
 /* --- Hero Connection Details Card (Right Column) --- */
 .connection-card {
   padding: 28px;
-  background: rgba(10, 14, 42, 0.75);
+  background: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .connection-card .section-tag {
@@ -142,6 +162,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .conn-label {
@@ -157,6 +178,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-text-heading);
+  overflow-wrap: anywhere;
 }
 
 .conn-sub {
@@ -198,7 +220,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  background: rgba(10, 14, 42, 0.6);
+  background: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-card);
 }
@@ -238,7 +260,7 @@
 
 .feature-card {
   padding: 24px;
-  background: rgba(10, 14, 42, 0.6);
+  background: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-card);
 }
@@ -256,53 +278,44 @@
   line-height: 1.6;
 }
 
-/* --- Community Showcase Section (Screenshot BQT) --- */
+/* --- Community Showcase Section (Honest Update Notice) --- */
 .community-section {
   padding: 72px 0;
   border-top: 1px solid var(--color-border-subtle);
 }
 
-.showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.showcase-card {
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  background: rgba(10, 14, 42, 0.6);
+.showcase-update-notice {
+  background: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
-}
-
-.showcase-img-placeholder {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: rgba(9, 9, 20, 0.9);
-  border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  padding: 16px;
-  text-align: center;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-.showcase-info {
-  padding: 16px 20px;
+.showcase-update-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-accent-orbit);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: var(--radius-tag);
+  padding: 4px 10px;
 }
 
-.showcase-info h4 {
+.showcase-update-notice h3 {
+  font-size: 1.2rem;
   color: var(--color-text-heading);
-  font-size: 1.05rem;
-  margin-bottom: 4px;
+  margin: 4px 0 0 0;
 }
 
-.showcase-info p {
-  font-size: 0.85rem;
+.showcase-update-notice p {
+  font-size: 0.95rem;
   color: var(--color-text-body);
+  line-height: 1.6;
+  max-width: 720px;
   margin: 0;
 }
 
@@ -313,8 +326,7 @@
     gap: 40px;
   }
   .steps-grid,
-  .features-grid,
-  .showcase-grid {
+  .features-grid {
     grid-template-columns: 1fr;
   }
   .section-header {
@@ -323,6 +335,14 @@
   .hero-content {
     text-align: center;
   }
+  .hero-logo-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-logo-badge {
+    width: 160px;
+    height: 160px;
+  }
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
@@ -330,5 +350,19 @@
   .hero-cta-group,
   .hero-status-row {
     justify-content: center;
+  }
+  .showcase-update-notice {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .conn-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .conn-box .btn {
+    width: 100%;
   }
 }

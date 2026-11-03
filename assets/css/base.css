@@ -1,6 +1,6 @@
 /* ==========================================================================
    LUNARCHILL BASE STYLES (base.css)
-   CSS Reset, Accessibility & Typography Foundations
+   CSS Reset, Dark Color-Scheme, Accessibility & Typography Foundations
    ========================================================================== */
 
 /* --- 1. Global Box-Sizing & Reset --- */
@@ -11,6 +11,7 @@
 }
 
 html {
+  color-scheme: dark;
   font-family: var(--font-sans);
   background-color: var(--color-bg-base);
   color: var(--color-text-body);
@@ -26,18 +27,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
-  background: var(--color-bg-base) var(--glow-moon-center) no-repeat top center;
+  overflow-x: clip;
+  background-color: var(--color-bg-base);
 }
 
-/* Typography Hierarchy (KHÔNG GRADIENT TEXT) */
+/* Typography Hierarchy (Màu phẳng sắc nét Moon Core White #FEFDFD) */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-heading);
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  background: none;
-  -webkit-background-clip: initial;
 }
 
 h1 {
@@ -100,7 +99,7 @@ img, svg {
   outline-offset: 3px;
 }
 
-/* --- 6. Accessibility: Reduced Motion Override (Tôn trọng thiết lập OS) --- */
+/* --- Accessibility: Reduced Motion Override (Tôn trọng thiết lập OS) --- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

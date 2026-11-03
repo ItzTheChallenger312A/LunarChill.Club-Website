@@ -7,7 +7,7 @@
   padding: 50px 0 40px 0;
   text-align: center;
   border-bottom: 1px solid var(--color-border-subtle);
-  background: radial-gradient(circle at 50% 0%, rgba(104, 139, 248, 0.08) 0%, transparent 70%);
+  background-color: var(--color-bg-base);
 }
 
 .page-hero h1 {
@@ -58,7 +58,7 @@
   font-size: 0.9rem;
   padding: 6px 10px;
   border-radius: var(--radius-tag);
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
   display: block;
 }
 
@@ -68,6 +68,10 @@
 }
 
 /* Guide Content Blocks */
+.guide-content {
+  min-width: 0;
+}
+
 .guide-content section {
   margin-bottom: 56px;
   scroll-margin-top: 90px;
@@ -87,7 +91,7 @@
 /* Command Table / Grid */
 .commands-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 16px;
   margin-top: 16px;
 }
@@ -97,12 +101,15 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .command-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .command-desc {
@@ -121,7 +128,7 @@
   font-size: 0.92rem;
 }
 
-/* Rules Accordion / Cards */
+/* Rules Cards */
 .rule-card {
   margin-bottom: 18px;
   border-left: 3px solid var(--color-accent-orbit);

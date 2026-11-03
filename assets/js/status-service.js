@@ -1,8 +1,7 @@
 /**
  * LunarChill Server Status Service (status-service.js)
- * Quản lý vòng đời trạng thái độc lập cho PC (Java) và PE (Bedrock)
- * Đọc hai cache độc lập, timeout an toàn trọn vẹn (bao gồm body parsing),
- * phân biệt minh bạch: Online, Offline, Unable to retrieve, Partial status
+ * Quản lý vòng đời 5 trạng thái độc lập cho PC (Java) và PE (Bedrock)
+ * Tuân thủ AC-01.1, AC-01.2 (Dynamic Cache theo expires_at thực tế) & AC-01.3
  */
 import { CONFIG } from './config.js';
 
@@ -13,47 +12,40 @@ export class StatusService {
   }
 
   async init() {
+    if (this.text) {
+      this.text.style.fontVariantNumeric = 'tabular-nums';
+    }
+
     if (CONFIG.FORCE_MAINTENANCE) {
       this.renderState('maintenance', 'Máy chủ đang bảo trì (BQT)');
       return;
     }
 
-    // 1. Đọc hai cache độc lập
-    let javaData = this.getCachedStatus(CONFIG.CACHE_KEY_JAVA);
-    let bedrockData = this.getCachedStatus(CONFIG.CACHE_KEY_BEDROCK);
+    // 1. Đọc hai cache độc lập từ sessionStorage
+    const javaData = this.getCachedStatus(CONFIG.CACHE_KEY_JAVA);
+    const bedrockData = this.getCachedStatus(CONFIG.CACHE_KEY_BEDROCK);
 
-    // Nếu cả hai cache đều còn hạn hợp lệ -> Hiển thị ngay lập tức
+    // Nếu cả hai cache đều còn hiệu lực (Date.now() < expiresAt) -> Hiển thị tức thì
     if (javaData !== null && bedrockData !== null) {
       this.applyCombinedStatus(
-        { status: 'ok', data: javaData },
-        { status: 'ok', data: bedrockData }
+        { platform: 'java', status: 'ok', data: javaData },
+        { platform: 'bedrock', status: 'ok', data: bedrockData }
       );
       return;
     }
 
-    // Nếu thiếu 1 trong 2 hoặc cả hai -> Kiểm tra API cho nền tảng cần cập nhật
-    this.renderState('checking', 'Đang kiểm tra kết nối PC & PE...');
+    // 2. State Checking khi cần gọi API
+    this.renderState('checking', 'Đang kiểm tra kết nối Java & Bedrock...');
 
-    const promises = [];
+    const javaPromise = javaData !== null
+      ? Promise.resolve({ platform: 'java', status: 'ok', data: javaData })
+      : this.fetchPlatformStatus(CONFIG.API_STATUS_JAVA, CONFIG.CACHE_KEY_JAVA, 'java');
 
-    // Kiểm tra Java nếu thiếu cache
-    if (javaData !== null) {
-      promises.push(Promise.resolve({ platform: 'java', status: 'ok', data: javaData }));
-    } else {
-      promises.push(this.fetchPlatformStatus(CONFIG.API_STATUS_JAVA, CONFIG.CACHE_KEY_JAVA, 'java'));
-    }
+    const bedrockPromise = bedrockData !== null
+      ? Promise.resolve({ platform: 'bedrock', status: 'ok', data: bedrockData })
+      : this.fetchPlatformStatus(CONFIG.API_STATUS_BEDROCK, CONFIG.CACHE_KEY_BEDROCK, 'bedrock');
 
-    // Kiểm tra Bedrock nếu thiếu cache
-    if (bedrockData !== null) {
-      promises.push(Promise.resolve({ platform: 'bedrock', status: 'ok', data: bedrockData }));
-    } else {
-      promises.push(this.fetchPlatformStatus(CONFIG.API_STATUS_BEDROCK, CONFIG.CACHE_KEY_BEDROCK, 'bedrock'));
-    }
-
-    const results = await Promise.all(promises);
-    const javaResult = results.find(r => r.platform === 'java');
-    const bedrockResult = results.find(r => r.platform === 'bedrock');
-
+    const [javaResult, bedrockResult] = await Promise.all([javaPromise, bedrockPromise]);
     this.applyCombinedStatus(javaResult, bedrockResult);
   }
 
@@ -61,52 +53,68 @@ export class StatusService {
     try {
       const raw = sessionStorage.getItem(cacheKey);
       if (!raw) return null;
-      
+
       const parsed = JSON.parse(raw);
-      if (parsed.expiresAt && Date.now() < parsed.expiresAt) {
+      if (typeof parsed?.expiresAt === 'number' && Date.now() < parsed.expiresAt && parsed.data) {
         return parsed.data;
       }
+
       sessionStorage.removeItem(cacheKey);
       return null;
     } catch (e) {
-      console.warn('Lỗi đọc cache:', cacheKey, e);
+      console.warn('Không thể đọc cache trạng thái:', cacheKey, e);
       return null;
-    }
-  }
-
-  saveCache(cacheKey, data, responseHeaders) {
-    try {
-      let expiresAt = null;
-
-      // Đọc header X-Cache-Time-Remaining
-      if (responseHeaders && typeof responseHeaders.get === 'function') {
-        const remaining = parseInt(responseHeaders.get('x-cache-time-remaining'), 10);
-        if (!isNaN(remaining) && remaining > 0) {
-          expiresAt = Date.now() + (remaining * 1000);
-        }
-      }
-
-      // Đọc trường expires_at từ JSON
-      if (!expiresAt && data && data.expires_at) {
-        expiresAt = typeof data.expires_at === 'number'
-          ? (data.expires_at > 1e11 ? data.expires_at : data.expires_at * 1000)
-          : new Date(data.expires_at).getTime();
-      }
-
-      // Fallback an toàn nếu không có thông tin
-      if (!expiresAt || isNaN(expiresAt)) {
-        expiresAt = Date.now() + CONFIG.DEFAULT_CACHE_TTL_MS;
-      }
-
-      sessionStorage.setItem(cacheKey, JSON.stringify({ data, expiresAt }));
-    } catch (e) {
-      console.warn('Lỗi lưu cache:', cacheKey, e);
     }
   }
 
   /**
-   * Fetch từng nền tảng độc lập, giữ timeout xuyên suốt cả quá trình fetch và parse JSON
+   * Trích xuất thời điểm hết hạn thực tế từ payload JSON (`expires_at`)
+   * hoặc header `X-Cache-Time-Remaining` (nếu được expose qua CORS).
+   * Tuyệt đối không hardcode TTL cố định (tuân thủ FR-01.3 & AC-01.2).
    */
+  extractExpiresAt(data, responseHeaders) {
+    // 1. Ưu tiên trường expires_at trong JSON body của mcstatus.io v2 (epoch ms hoặc ISO string)
+    if (data && data.expires_at != null) {
+      const rawExpires = data.expires_at;
+      const parsedTime = typeof rawExpires === 'number'
+        ? (rawExpires > 1e11 ? rawExpires : rawExpires * 1000)
+        : Date.parse(rawExpires);
+
+      if (!Number.isNaN(parsedTime) && parsedTime > Date.now()) {
+        return parsedTime;
+      }
+    }
+
+    // 2. Kiểm tra header X-Cache-Time-Remaining (nếu trình duyệt/CORS cho phép đọc)
+    if (responseHeaders && typeof responseHeaders.get === 'function') {
+      const remainingHeader = responseHeaders.get('x-cache-time-remaining');
+      if (remainingHeader !== null) {
+        const remainingSeconds = Number.parseInt(remainingHeader, 10);
+        if (!Number.isNaN(remainingSeconds) && remainingSeconds > 0) {
+          return Date.now() + remainingSeconds * 1000;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  saveCache(cacheKey, data, responseHeaders) {
+    try {
+      const expiresAt = this.extractExpiresAt(data, responseHeaders);
+
+      // Chính sách: Nếu API không trả về thời hạn hợp lệ hoặc cache đã hết hạn -> không lưu mù
+      if (!expiresAt) {
+        sessionStorage.removeItem(cacheKey);
+        return;
+      }
+
+      sessionStorage.setItem(cacheKey, JSON.stringify({ data, expiresAt }));
+    } catch (e) {
+      console.warn('Không thể lưu cache trạng thái:', cacheKey, e);
+    }
+  }
+
   async fetchPlatformStatus(url, cacheKey, platformName) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), CONFIG.API_TIMEOUT_MS);
@@ -114,7 +122,7 @@ export class StatusService {
     try {
       const response = await fetch(url, {
         signal: controller.signal,
-        headers: { 'Accept': 'application/json' }
+        headers: { Accept: 'application/json' }
       });
 
       if (!response.ok) {
@@ -122,7 +130,6 @@ export class StatusService {
         return { platform: platformName, status: 'error', error: `HTTP ${response.status}` };
       }
 
-      // Giữ timeout cho đến khi đọc xong hoàn toàn body
       const data = await response.json();
       clearTimeout(timeoutId);
 
@@ -130,69 +137,65 @@ export class StatusService {
       return { platform: platformName, status: 'ok', data };
     } catch (err) {
       clearTimeout(timeoutId);
-      return { platform: platformName, status: 'error', error: err.name === 'AbortError' ? 'timeout' : 'network' };
+      return {
+        platform: platformName,
+        status: 'error',
+        error: err.name === 'AbortError' ? 'timeout' : 'network'
+      };
     }
   }
 
-  /**
-   * Tổng hợp trạng thái rõ ràng, phân biệt:
-   * - Cả hai Online
-   * - Partial Online (một bên Online, một bên Lỗi kết nối hoặc Offline)
-   * - Xác nhận Offline (cả hai phản hồi thành công và đều báo online: false)
-   * - Unable to retrieve (cả hai đều lỗi kết nối hoặc timeout)
-   */
   applyCombinedStatus(javaRes, bedrockRes) {
-    const javaHasValidOnline = javaRes?.status === 'ok' && typeof javaRes.data?.online === 'boolean';
-    const bedrockHasValidOnline = bedrockRes?.status === 'ok' && typeof bedrockRes.data?.online === 'boolean';
+    const javaValid = javaRes?.status === 'ok' && typeof javaRes.data?.online === 'boolean';
+    const bedrockValid = bedrockRes?.status === 'ok' && typeof bedrockRes.data?.online === 'boolean';
 
-    const javaOnline = javaHasValidOnline && javaRes.data.online === true;
-    const bedrockOnline = bedrockHasValidOnline && bedrockRes.data.online === true;
+    const javaOnline = javaValid && javaRes.data.online === true;
+    const bedrockOnline = bedrockValid && bedrockRes.data.online === true;
 
-    const javaError = javaRes?.status === 'error' || !javaHasValidOnline;
-    const bedrockError = bedrockRes?.status === 'error' || !bedrockHasValidOnline;
+    const javaError = javaRes?.status === 'error' || !javaValid;
+    const bedrockError = bedrockRes?.status === 'error' || !bedrockValid;
 
-    // Trường hợp 1: Cả hai nền tảng đều online
+    // 1. Cả hai nền tảng đều Online
     if (javaOnline && bedrockOnline) {
       const playersOnline = javaRes.data?.players?.online ?? bedrockRes.data?.players?.online ?? 0;
-      const maxJava = javaRes.data?.players?.max;
-      const maxBedrock = bedrockRes.data?.players?.max;
-      const maxText = (maxJava || maxBedrock) ? `/${maxJava || maxBedrock}` : '';
+      const maxPlayers = javaRes.data?.players?.max ?? bedrockRes.data?.players?.max;
+      const maxText = maxPlayers ? `/${maxPlayers}` : '';
 
-      this.renderState('online', `${playersOnline}${maxText} người chơi • PC & PE Online`);
+      this.renderState('online', `${playersOnline}${maxText} người chơi • Java & Bedrock Online`);
       return;
     }
 
-    // Trường hợp 2: PC Online, PE gặp vấn đề hoặc Offline
+    // 2. Java Online, Bedrock gặp lỗi hoặc Offline
     if (javaOnline) {
       const players = javaRes.data?.players?.online ?? 0;
       const maxText = javaRes.data?.players?.max ? `/${javaRes.data.players.max}` : '';
-      const peNote = bedrockError ? 'PE Đang kết nối lại' : 'PE Ngoại tuyến';
-      this.renderState('online', `${players}${maxText} người chơi • PC Online (${peNote})`);
+      const bedrockNote = bedrockError ? 'Bedrock đang kiểm tra' : 'Bedrock ngoại tuyến';
+      this.renderState('online', `${players}${maxText} người chơi • Java Online (${bedrockNote})`);
       return;
     }
 
-    // Trường hợp 3: PE Online, PC gặp vấn đề hoặc Offline
+    // 3. Bedrock Online, Java gặp lỗi hoặc Offline
     if (bedrockOnline) {
       const players = bedrockRes.data?.players?.online ?? 0;
       const maxText = bedrockRes.data?.players?.max ? `/${bedrockRes.data.players.max}` : '';
-      const pcNote = javaError ? 'PC Đang kết nối lại' : 'PC Ngoại tuyến';
-      this.renderState('online', `${players}${maxText} người chơi • PE Online (${pcNote})`);
+      const javaNote = javaError ? 'Java đang kiểm tra' : 'Java ngoại tuyến';
+      this.renderState('online', `${players}${maxText} người chơi • Bedrock Online (${javaNote})`);
       return;
     }
 
-    // Trường hợp 4: Cả hai kết nối API đều lỗi hoặc timeout (KHÔNG KẾT LUẬN OFFLINE)
+    // 4. Cả hai kết nối API đều lỗi/timeout -> Unable to retrieve status
     if (javaError && bedrockError) {
       this.renderState('unable', 'Không thể kiểm tra trạng thái máy chủ');
       return;
     }
 
-    // Trường hợp 5: Một bên lỗi kết nối, một bên phản hồi online: false
+    // 5. Một bên lỗi mạng, một bên phản hồi online: false
     if ((javaError && !bedrockOnline) || (bedrockError && !javaOnline)) {
       this.renderState('unable', 'Đang cập nhật trạng thái kết nối');
       return;
     }
 
-    // Trường hợp 6: Cả hai đều kết nối thành công và xác nhận máy chủ offline (online: false)
+    // 6. Cả hai đều xác nhận online: false
     this.renderState('offline', 'Máy chủ ngoại tuyến');
   }
 

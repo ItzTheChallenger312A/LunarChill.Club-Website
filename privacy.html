@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chính sách Bảo mật - LunarChill 🌙</title>
   <meta name="description" content="Chính sách bảo vệ dữ liệu cá nhân của LunarChill, tuân thủ Luật 91/2025/QH15 và Nghị định 356/2025/NĐ-CP.">
-  
+  <link rel="canonical" href="https://LunarChill.club/privacy">
+
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
   <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +28,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-link" title="LunarChillSMP Trang chủ">
-        <img src="assets/images/logo.png" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
 
@@ -40,13 +41,13 @@
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-ip="LunarChill.club:25572" title="Sao chép IP PC">
-          Sao chép IP PC
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
         </button>
         <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
-          Discord
+          Tham gia Discord
         </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -61,11 +62,11 @@
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
-      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
-        Sao chép IP PC: LunarChill.club:25572
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
+        Sao chép IP Java: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
       </button>
-      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club">
-        Sao chép IP PE: LunarChill.club (Port: 19143)
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="bedrock">
+        Sao chép Host Bedrock/PE: <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>)
       </button>
       <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
         Tham gia Discord
@@ -83,42 +84,44 @@
 
     <div class="container legal-wrapper">
       <div class="reading-container lunar-card legal-card" style="margin: 0 auto;">
-        
-        <h2>1. Chủ thể Vận hành & Cam kết Chung</h2>
+
+        <h2>1. Chủ thể Vận hành &amp; Cam kết Chung</h2>
         <p>Ban Quản Trị máy chủ Minecraft <strong>LunarChillSMP</strong> cam kết tôn trọng và bảo vệ quyền riêng tư của mọi người chơi và khách truy cập website theo quy định pháp luật hiện hành tại Việt Nam.</p>
         <p>Chính sách này công khai minh bạch toàn bộ các loại dữ liệu kỹ thuật thực tế được xử lý khi bạn truy cập website hoặc tham gia máy chủ.</p>
 
         <h2>2. Các Luồng Dữ liệu Thực tế Được Xử lý</h2>
         <ul>
-          <li><strong>Tại Website tĩnh (LunarChill.club):</strong> Website hoàn toàn <em>không yêu cầu đăng ký tài khoản</em>, không có form thu thập họ tên, số điện thoại hay email cá nhân. Website chỉ sử dụng bộ nhớ tạm <code>sessionStorage</code> trên trình duyệt của bạn để lưu cache trạng thái server (nhằm tránh spam request API) và <code>localStorage</code> (nếu bạn tùy chọn lưu cấu hình giao diện).</li>
-          <li><strong>Tại Tầng Hạ tầng mạng & Hosting:</strong> Dịch vụ lưu trữ Vercel Inc. có thể ghi nhận nhật ký kỹ thuật cơ bản (Địa chỉ IP mạng công khai, loại trình duyệt User-Agent) theo tiêu chuẩn bảo mật Edge Network toàn cầu nhằm mục đích phòng chống tấn công từ chối dịch vụ (DDoS) và phân phối nội dung tĩnh.</li>
+          <li><strong>Tại Website tĩnh (LunarChill.club):</strong> Website hoàn toàn <em>không yêu cầu đăng ký tài khoản</em>, không có biểu mẫu thu thập họ tên, số điện thoại hay email cá nhân và không sử dụng cookie theo dõi quảng cáo hay <code>localStorage</code>. Website chỉ sử dụng bộ nhớ phiên <code>sessionStorage</code> trên trình duyệt của bạn để lưu tạm kết quả truy vấn trạng thái máy chủ trong thời gian hiệu lực của gói tin API nhằm hạn chế gửi yêu cầu lặp lại.</li>
+          <li><strong>Tại Tầng Hạ tầng mạng &amp; Hosting:</strong> Dịch vụ lưu trữ Vercel Inc. có thể ghi nhận nhật ký kỹ thuật cơ bản (Địa chỉ IP mạng công khai, loại trình duyệt User-Agent) theo tiêu chuẩn bảo mật Edge Network toàn cầu nhằm mục đích phòng chống tấn công từ chối dịch vụ (DDoS) và phân phối nội dung tĩnh.</li>
+          <li><strong>Tại Dịch vụ Phông chữ &amp; API Trạng thái (Truy vấn trực tiếp từ trình duyệt):</strong> Khi trình duyệt tải trang, trình duyệt sẽ tạo kết nối HTTP tiêu chuẩn tới máy chủ <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) để tải phông chữ hiển thị và tới <strong>mcstatus.io</strong> (<code>api.mcstatus.io</code>) để lấy trạng thái hoạt động của máy chủ. Trong quá trình kết nối mạng tiêu chuẩn, các dịch vụ này nhận được địa chỉ IP công khai và chuỗi nhận diện trình duyệt (User-Agent) của thiết bị truy cập.</li>
           <li><strong>Tại Máy chủ Trò chơi Minecraft:</strong> Khi kết nối vào game, máy chủ ghi nhận Tên nhân vật (In-Game Name), mã định danh UUID của tài khoản Minecraft và địa chỉ IP kết nối phục vụ việc lưu trữ tọa độ công trình, túi đồ và quản trị an toàn (nhật ký CoreProtect phòng chống phá hoại).</li>
         </ul>
 
-        <h2>3. Mục đích & Cơ sở Xử lý Dữ liệu</h2>
+        <h2>3. Mục đích &amp; Cơ sở Xử lý Dữ liệu</h2>
         <p>Mọi dữ liệu kỹ thuật nêu trên chỉ được xử lý cho các mục đích hợp pháp sau:</p>
         <ol>
-          <li>Duy trì tính ổn định, phòng chống gian lận và bảo vệ an toàn cho máy chủ.</li>
+          <li>Duy trì tính ổn định, hiển thị giao diện trang thông tin, phòng chống gian lận và bảo vệ an toàn cho máy chủ.</li>
           <li>Lưu trữ tiến trình sinh tồn (tài nguyên, công trình) của người chơi trong suốt mùa chơi.</li>
-          <li>Cơ sở xử lý: Sự đồng ý tự nguyện của người chơi khi quyết định kết nối tham gia vào cộng đồng.</li>
+          <li>Cơ sở xử lý: Sự đồng ý tự nguyện của người chơi khi quyết định truy cập trang thông tin và kết nối tham gia vào cộng đồng.</li>
         </ol>
 
         <h2>4. Các Bên Cung cấp Dịch vụ Liên quan (Bên thứ ba)</h2>
         <p>Để vận hành website và cộng đồng, chúng tôi sử dụng các dịch vụ công nghệ tiêu chuẩn quốc tế:</p>
         <ul>
           <li><strong>Vercel Inc.:</strong> Nền tảng phân phối và lưu trữ website tĩnh qua mạng phân phối nội dung Edge toàn cầu.</li>
-          <li><strong>mcstatus.io:</strong> Dịch vụ API công khai dùng để truy vấn trạng thái ping và số người chơi trực tuyến của máy chủ.</li>
-          <li><strong>Discord Inc.:</strong> Nền tảng trao đổi cộng đồng và hệ thống tiếp nhận Ticket hỗ trợ độc lập.</li>
+          <li><strong>mcstatus.io:</strong> Dịch vụ API công khai dùng để truy vấn trạng thái hoạt động và số người chơi trực tuyến của máy chủ.</li>
+          <li><strong>Google Fonts (Google LLC):</strong> Dịch vụ cung cấp phông chữ hiển thị trực tuyến (Plus Jakarta Sans và JetBrains Mono).</li>
+          <li><strong>Discord Inc.:</strong> Nền tảng trao đổi cộng đồng và hệ thống tiếp nhận Ticket hỗ trợ độc lập (chỉ tương tác khi người dùng chủ động nhấn liên kết tham gia).</li>
         </ul>
         <p>Ban Quản Trị <strong>cam kết tuyệt đối không bán, trao đổi hoặc thương mại hóa dữ liệu người chơi</strong> cho bất kỳ bên thứ ba nào vì mục đích quảng cáo.</p>
 
         <h2>5. Thời hạn Lưu trữ Dữ liệu</h2>
         <ul>
-          <li>Dữ liệu trình duyệt web (sessionStorage / localStorage): Tự động xóa hoặc tồn tại cho đến khi người dùng chủ động xóa lịch sử duyệt web.</li>
+          <li>Dữ liệu phiên trình duyệt web (<code>sessionStorage</code>): Chỉ tồn tại trong thời hạn hiệu lực ngắn của bộ nhớ đệm trạng thái và tự động xóa ngay khi bạn đóng tab hoặc đóng trình duyệt.</li>
           <li>Dữ liệu tiến trình chơi game in-game: Lưu trữ xuyên suốt chu kỳ mùa chơi (Season) và sao lưu định kỳ vì mục đích bảo vệ tài sản của người chơi.</li>
         </ul>
 
-        <h2>6. Quyền của Chủ thể Dữ liệu & Kênh Liên hệ</h2>
+        <h2>6. Quyền của Chủ thể Dữ liệu &amp; Kênh Liên hệ</h2>
         <p>Theo Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, bạn có quyền tra cứu, yêu cầu chỉnh sửa hoặc yêu cầu xóa dữ liệu hồ sơ in-game gắn liền với nhân vật của mình.</p>
         <p>Mọi yêu cầu liên quan đến quyền riêng tư được tiếp nhận và xử lý qua <strong>Kênh Ticket tại máy chủ Discord chính thức của LunarChillSMP</strong>.</p>
 
@@ -132,7 +135,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-brand">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
             <strong class="footer-brand-name">LunarChill</strong>
           </div>
           <p class="footer-desc">
@@ -156,7 +159,7 @@
           <h4>Văn bản</h4>
           <ul class="footer-links">
             <li><a href="terms.html">Điều khoản dịch vụ</a></li>
-            <li><a href="privacy.html">Chính sách bảo mật</a></li>
+            <li><a href="privacy.html" aria-current="page">Chính sách bảo mật</a></li>
           </ul>
         </div>
 

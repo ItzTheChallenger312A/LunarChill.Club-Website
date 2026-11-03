@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cẩm nang Tân thủ - LunarChill 🌙</title>
-  <meta name="description" content="Hướng dẫn kết nối PC & PE, bảng tra cứu lệnh in-game, cơ chế sinh tồn đào chậm, oxy, nước và mod client tại máy chủ Minecraft LunarChill.">
-  
+  <meta name="description" content="Hướng dẫn kết nối Java & Bedrock/PE, bảng tra cứu lệnh in-game, cơ chế sinh tồn đào chậm, oxy, nước và mod client tại máy chủ Minecraft LunarChill.">
+  <link rel="canonical" href="https://LunarChill.club/guide">
+
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
   <!-- OpenGraph -->
   <meta property="og:type" content="article">
@@ -35,26 +36,26 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-link" title="LunarChillSMP Trang chủ">
-        <img src="assets/images/logo.png" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
 
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Trang chủ</a></li>
-          <li><a href="guide.html" class="nav-link active">Cẩm nang</a></li>
+          <li><a href="guide.html" class="nav-link active" aria-current="page">Cẩm nang</a></li>
           <li><a href="rules.html" class="nav-link">Nội quy</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-ip="LunarChill.club:25572" title="Sao chép IP PC">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
           Sao chép IP Server
         </button>
         <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
           Tham gia Discord
         </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -66,14 +67,14 @@
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
-    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="guide.html" class="mobile-nav-link" aria-current="page">Cẩm nang tân thủ</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
-      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
-        Sao chép IP PC: LunarChill.club:25572
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
+        Sao chép IP Java: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
       </button>
-      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club">
-        Sao chép IP PE: LunarChill.club (Port: 19143)
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="bedrock">
+        Sao chép Host Bedrock/PE: <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>)
       </button>
       <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
         Tham gia Discord
@@ -92,7 +93,7 @@
           Hướng dẫn kết nối, bảng lệnh thông dụng, cơ chế đào sâu, dưỡng khí oxy và các mod client được khuyên dùng khi tham gia máy chủ.
         </p>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-          <button class="btn btn-primary" data-action="copy-ip" data-ip="LunarChill.club:25572">
+          <button type="button" class="btn btn-primary" data-action="copy-ip" data-copy-target="java">
             Sao chép IP Server
           </button>
           <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
@@ -112,7 +113,7 @@
             <li><a href="#start" class="toc-link">2. Vừa vào game? Bắt đầu từ đây</a></li>
             <li><a href="#commands" class="toc-link">3. Bảng lệnh thông dụng</a></li>
             <li><a href="#mechanics" class="toc-link">4. Cơ chế sinh tồn đặc trưng</a></li>
-            <li><a href="#world-rules" class="toc-link">5. Quy tắc thế giới & Quái vật</a></li>
+            <li><a href="#world-rules" class="toc-link">5. Quy tắc thế giới &amp; Quái vật</a></li>
             <li><a href="#mods" class="toc-link">6. Mod Client khuyên dùng</a></li>
             <li><a href="#faq" class="toc-link">7. Có gì vướng? Xem FAQ</a></li>
           </ul>
@@ -121,34 +122,34 @@
 
       <!-- Main Guide Content -->
       <div class="guide-content">
-        
+
         <!-- 1. Kết nối máy chủ -->
         <section id="connect">
           <h2>1. Kết nối máy chủ</h2>
-          <p>Dùng chung một địa chỉ máy chủ duy nhất cho cả máy tính (PC) và thiết bị di động (PE):</p>
-          
+          <p>Dùng chung một địa chỉ máy chủ duy nhất cho cả máy tính (Java &amp; Bedrock Windows) và thiết bị di động (Pocket Edition):</p>
+
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <div class="command-header">
-                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Java Edition (PC)</strong>
-                <button class="btn btn-secondary btn-sm" data-action="copy-ip" data-ip="LunarChill.club:25572">Copy</button>
+                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Java Edition (PC / Máy tính)</strong>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="java">Copy</button>
               </div>
-              <p class="command-desc">Host: <code>LunarChill.club:25572</code></p>
-              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ: 1.21.11 đến 26.3</small>
+              <p class="command-desc">Host: <code data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</code></p>
+              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ: <span data-config-text="VERSION_PC">1.21.11 – 26.3</span></small>
             </div>
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bedrock / Pocket Edition</strong>
-                <button class="btn btn-secondary btn-sm" data-action="copy-ip" data-ip="LunarChill.club">Copy Host</button>
+                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bedrock Windows &amp; Pocket Edition</strong>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="bedrock">Copy Host</button>
               </div>
-              <p class="command-desc">Host: <code>LunarChill.club</code> • Port: <code>19143</code></p>
-              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ: 26.30 – 26.51</small>
+              <p class="command-desc">Host: <code data-config-text="SERVER_HOST">LunarChill.club</code> • Port: <code data-config-text="SERVER_PORT_BEDROCK">19143</code></p>
+              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ: <span data-config-text="VERSION_PE">26.30 – 26.51</span></small>
             </div>
           </div>
 
           <div class="lunar-callout" style="margin-top: 16px;">
-            💡 <strong>Mẹo nhỏ:</strong> Nhấp vào bất kỳ ô lệnh hay địa chỉ IP nào để sao chép nhanh vào bộ nhớ tạm.
+            💡 <strong>Mẹo nhỏ:</strong> Nhấp chuột hoặc nhấn phím <code>Enter</code> / <code>Space</code> vào bất kỳ ô lệnh hay địa chỉ IP nào để sao chép nhanh vào bộ nhớ tạm.
           </div>
         </section>
 
@@ -166,13 +167,13 @@
             <div class="lunar-card" style="padding: 18px 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bước 2: Tìm địa điểm và đặt Home</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Khi tìm thấy vị trí ưng ý, hãy dùng lệnh <code class="command-chip" data-action="copy-ip" data-ip="/sethome">/sethome</code> để lưu lại tọa độ nhà. Bạn luôn có thể quay lại bằng lệnh <code class="command-chip" data-action="copy-ip" data-ip="/home">/home</code>.
+                Khi tìm thấy vị trí ưng ý, hãy dùng lệnh <button type="button" class="command-chip" data-action="copy-ip" data-ip="/sethome">/sethome</button> để lưu lại tọa độ nhà. Bạn luôn có thể quay lại bằng lệnh <button type="button" class="command-chip" data-action="copy-ip" data-ip="/home">/home</button>.
               </p>
             </div>
             <div class="lunar-card" style="padding: 18px 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bước 3: Gia nhập Thị trấn hoặc Lập Thị trấn mới (Towny)</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Bạn có thể xin gia nhập một thị trấn có sẵn, nhận đất bằng lệnh <code class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</code>, hoặc tự lập thị trấn riêng với lệnh <code class="command-chip" data-action="copy-ip" data-ip="/town new">/town new [tên]</code> để bảo vệ công trình của bạn không bị phá hoại.
+                Bạn có thể xin gia nhập một thị trấn có sẵn, nhận đất bằng lệnh <button type="button" class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</button>, hoặc tự lập thị trấn riêng với lệnh <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town new [tên]">/town new [tên]</button> để bảo vệ công trình của bạn không bị phá hoại.
               </p>
             </div>
           </div>
@@ -183,11 +184,11 @@
           <h2>3. Bảng lệnh thông dụng</h2>
           <p>Các câu lệnh thiết yếu giúp bạn di chuyển, quản lý thị trấn, theo dõi kỹ năng và giao thương:</p>
 
-          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 24px 0 12px 0;">Di chuyển & Căn cứ</h3>
+          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 24px 0 12px 0;">Di chuyển &amp; Căn cứ</h3>
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/spawn">/spawn</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/spawn">/spawn</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Dịch chuyển tức thời về khu vực trung tâm Spawn của máy chủ.</p>
@@ -195,7 +196,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/sethome">/sethome [tên]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/sethome [tên]">/sethome [tên]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Lưu vị trí hiện tại làm điểm nhà riêng của bạn.</p>
@@ -203,7 +204,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/home">/home [tên]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/home [tên]">/home [tên]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Quay trở về điểm nhà bạn đã lưu trước đó.</p>
@@ -211,7 +212,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/tpa">/tpa [tên_bạn]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/tpa [tên_bạn]">/tpa [tên_bạn]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Gửi yêu cầu xin dịch chuyển đến vị trí người chơi khác.</p>
@@ -219,7 +220,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/tpaccept">/tpaccept</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/tpaccept">/tpaccept</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Chấp nhận yêu cầu dịch chuyển từ người khác đến mình.</p>
@@ -227,18 +228,18 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/lay">/lay</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/lay">/lay</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Nằm nghỉ ngơi reset Phantom mà không cần ngủ qua đêm.</p>
             </div>
           </div>
 
-          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Thị trấn & Đất đai (Towny)</h3>
+          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Thị trấn &amp; Đất đai (Towny)</h3>
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/town">/town</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town">/town</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Xem thông tin, số lượng thành viên và ngân sách thị trấn của bạn.</p>
@@ -246,7 +247,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/town new">/town new [tên]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town new [tên]">/town new [tên]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Thành lập thị trấn mới tại vị trí bạn đang đứng.</p>
@@ -254,7 +255,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/town claim">/town claim</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town claim">/town claim</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Mở rộng diện tích chunk lãnh thổ thuộc về thị trấn.</p>
@@ -262,7 +263,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Nhận quyền sở hữu một lô đất cá nhân trong thị trấn.</p>
@@ -270,7 +271,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/town deposit">/town deposit [tiền]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town deposit [tiền]">/town deposit [tiền]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Đóng góp tiền vào ngân sách duy trì thị trấn.</p>
@@ -278,18 +279,18 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/resident friend add">/resident friend add [tên]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/resident friend add [tên]">/resident friend add [tên]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Thêm bạn bè vào danh sách tin cậy để cùng xây dựng.</p>
             </div>
           </div>
 
-          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Kỹ năng & Thú cưng (Aura Skills & MyPet)</h3>
+          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Kỹ năng &amp; Thú cưng (Aura Skills &amp; MyPet)</h3>
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/skills">/skills</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/skills">/skills</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Mở bảng theo dõi 11+ kỹ năng RPG (Mining, Farming, Combat,...).</p>
@@ -297,7 +298,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/stats">/stats</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/stats">/stats</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Xem chỉ số nội tại nhân vật: Sức mạnh, Máu, Hồi phục, May mắn.</p>
@@ -305,7 +306,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/pet">/pet</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/pet">/pet</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Mở giao diện quản lý thú cưng đồng hành MyPet.</p>
@@ -313,18 +314,18 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/petcall">/petcall</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/petcall">/petcall</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Gọi thú cưng tức thời đến vị trí của bạn khi bị kẹt.</p>
             </div>
           </div>
 
-          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Giao thương & Tiện ích</h3>
+          <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Giao thương &amp; Tiện ích</h3>
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/ah">/ah</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/ah">/ah</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Mở sàn đấu giá người chơi để mua bán vật phẩm tự do.</p>
@@ -332,7 +333,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/orders">/orders</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/orders">/orders</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Bảng đặt hàng: Nhận đơn giao tài nguyên kiếm tiền.</p>
@@ -340,7 +341,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="[item]">[item]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="[item]">[item]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Gõ vào chat để khoe món đồ đang cầm trên tay cho mọi người xem.</p>
@@ -348,7 +349,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/skin">/skin [tên_skin]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/skin [tên_skin]">/skin [tên_skin]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Đổi ngoại trang skin nhân vật theo ý thích hoàn toàn miễn phí.</p>
@@ -356,7 +357,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/redeem">/redeem [code]</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/redeem [code]">/redeem [code]</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Nhập mã giftcode tân thủ hoặc code sự kiện cộng đồng.</p>
@@ -364,7 +365,7 @@
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <code class="command-chip" data-action="copy-ip" data-ip="/discord">/discord</code>
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/discord">/discord</button>
                 <small>Click để chép</small>
               </div>
               <p class="command-desc">Lấy đường dẫn tham gia máy chủ Discord LunarChill.</p>
@@ -379,7 +380,7 @@
 
           <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⛏️ Khai khoáng & Hiệu ứng Đào chậm (Mining Fatigue)</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⛏️ Khai khoáng &amp; Hiệu ứng Đào chậm (Mining Fatigue)</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
                 Khi đào các khối <strong>Đá bảng sâu (Deepslate), Diorite, Andesite và Granite từ tọa độ Y = 0 trở xuống</strong>, nhân vật sẽ bị phạt <strong>Đào chậm kéo dài 1 phút</strong>.<br>
                 • <strong>Điều kiện miễn trừ:</strong> Khi bạn duy trì từ <strong>30 level kinh nghiệm trở lên</strong>, bạn có thể đào các khối đá này bình thường mà không bị phạt.<br>
@@ -397,7 +398,7 @@
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🫁 Chỉ số Oxy & Vật phẩm Cứu sinh Beacon</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🫁 Chỉ số Oxy &amp; Vật phẩm Cứu sinh Beacon</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
                 Oxy tự nạp đầy khi đứng trên bề mặt đất Overworld. Nhưng khi tiến vào các vùng thiếu khí:<br>
                 • <strong>Hang động sâu:</strong> Oxy bắt đầu giảm dần theo độ sâu.<br>
@@ -408,7 +409,7 @@
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🌌 Khám phá The End: Bộ đôi Nullscape & Stellarity</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🌌 Khám phá The End: Bộ đôi Nullscape &amp; Stellarity</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
                 The End được làm mới toàn diện: Datapack <strong>Nullscape</strong> kiến tạo địa hình hư không cao tới 384 block, trong khi <strong>Stellarity</strong> mang đến các biome mới, boss thử thách, cổ vật và công thức chế tạo đặc biệt (<strong>Custom Crafting</strong>).<br>
                 • <em>Lưu ý quan trọng:</em> <strong>Không thể đặt nước tại The End</strong>.
@@ -416,7 +417,7 @@
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚖️ Không dùng bùa Mending & Giữ đồ khi tử nạn bằng Rune</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚖️ Không dùng bùa Mending &amp; Giữ đồ khi tử nạn bằng Rune</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
                 Loại bỏ bùa Mending để giữ giá trị cho quặng khoáng sản và kỹ nghệ sửa đồ đe (Anvil). Khi đi thám hiểm The End hoặc Nether, hãy mang theo <strong>Ngọc Rune bảo mệnh</strong> trong người để nếu chẳng may tử nạn, túi đồ của bạn sẽ được bảo toàn nguyên vẹn.
               </p>
@@ -426,7 +427,7 @@
 
         <!-- 5. Quy tắc thế giới & Quái vật -->
         <section id="world-rules">
-          <h2>5. Quy tắc thế giới & Quái vật</h2>
+          <h2>5. Quy tắc thế giới &amp; Quái vật</h2>
           <p>Các thiết lập cân bằng nhằm loại bỏ triệt để các cỗ máy farm lạm dụng làm phá vỡ nền kinh tế:</p>
 
           <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
@@ -445,7 +446,7 @@
             </div>
 
             <div class="lunar-card" style="padding: 18px 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.05rem;">🛡️ Dân làng & Giấc ngủ</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.05rem;">🛡️ Dân làng &amp; Giấc ngủ</strong>
               <p style="margin: 6px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
                 Dân làng <strong>không sinh sản, không bán bùa Mending, không bán đồ kim cương</strong>. Không thể ngủ qua đêm để giữ nhịp sống thế giới, nhưng có thể nằm giường hoặc gõ <code>/lay</code> để đặt lại thời gian xuất hiện Phantom.
               </p>
@@ -469,7 +470,7 @@
         <section id="mods">
           <h2>6. Mod Client được hỗ trợ chính thức</h2>
           <p>Các mod client-side được khuyến khích cài đặt để tận hưởng trọn vẹn đồ họa và tính năng của server:</p>
-          
+
           <div class="commands-grid">
             <div class="lunar-card" style="padding: 20px;">
               <strong style="color: var(--color-text-heading); font-size: 1.1rem;">🗺️ Xaero-Map (World Map)</strong>
@@ -504,7 +505,7 @@
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚡ Sodium & Iris Shaders</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">⚡ Sodium &amp; Iris Shaders</strong>
               <p style="margin: 8px 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
                 Tối ưu hóa hiệu năng render tăng FPS, hỗ trợ các gói shader đồ họa ánh trăng trên nền Fabric.
               </p>
@@ -513,37 +514,37 @@
           </div>
         </section>
 
-        <!-- 7. FAQ -->
+        <!-- 7. FAQ Accordion (Native <details> & <summary> per AC-04.2) -->
         <section id="faq">
           <h2>7. Có gì vướng? Xem thử ở đây.</h2>
-          <div style="display: flex; flex-direction: column; gap: 14px;">
-            <div class="lunar-card" style="padding: 18px 20px;">
-              <strong style="color: var(--color-text-heading);">Q: Làm sao để đào đá sâu ở tọa độ âm mà không bị mỏi tay (Đào chậm)?</strong>
-              <p style="margin: 8px 0 0 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">Q: Làm sao để đào đá sâu ở tọa độ âm mà không bị mỏi tay (Đào chậm)?</summary>
+              <div class="faq-answer">
                 Bạn chỉ cần tích lũy và duy trì từ <strong>30 level kinh nghiệm trở lên</strong>, bạn sẽ không còn bị áp dụng hiệu ứng đào chậm khi đào đá sâu, diorite, andesite hay granite. Tuy nhiên khi đào Mảnh vỡ cổ đại (Ancient Debris), bạn sẽ luôn bị đào chậm 1 phút.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div class="lunar-card" style="padding: 18px 20px;">
-              <strong style="color: var(--color-text-heading);">Q: Làm sao để thở oxy khi đi khám phá Nether và The End?</strong>
-              <p style="margin: 8px 0 0 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
+            <details class="faq-item">
+              <summary class="faq-question">Q: Làm sao để thở oxy khi đi khám phá Nether và The End?</summary>
+              <div class="faq-answer">
                 Hãy trang bị <strong>Beacon (Đèn hiệu) ở tay chính</strong>. Vật phẩm này sẽ đóng vai trò như bình dưỡng khí hồi phục oxy liên tục cho bạn và những người đồng đội đi bên cạnh.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div class="lunar-card" style="padding: 18px 20px;">
-              <strong style="color: var(--color-text-heading);">Q: Tại sao tôi xây farm sắt và farm quái trên biển lại không ra quái?</strong>
-              <p style="margin: 8px 0 0 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
+            <details class="faq-item">
+              <summary class="faq-question">Q: Tại sao tôi xây farm sắt và farm quái trên biển lại không ra quái?</summary>
+              <div class="faq-answer">
                 Máy chủ đã vô hiệu hóa mọi farm nhân tạo trên không và trên biển để chống lạm dụng kinh tế và giữ TPS server ổn định. Iron Golem cũng chỉ rơi bí ngô chứ không rơi sắt.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div class="lunar-card" style="padding: 18px 20px;">
-              <strong style="color: var(--color-text-heading);">Q: Chơi Bedrock / PE thì nhập thông số như thế nào?</strong>
-              <p style="margin: 8px 0 0 0; font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5;">
-                Vào mục Chơi mạng ➔ Máy chủ ➔ Thêm máy chủ. Nhập Tên máy chủ tùy thích, Địa chỉ máy chủ là <code>LunarChill.club</code> và Cổng (Port) là <code>19143</code>.
-              </p>
-            </div>
+            <details class="faq-item">
+              <summary class="faq-question">Q: Chơi Bedrock / PE thì nhập thông số như thế nào?</summary>
+              <div class="faq-answer">
+                Vào mục Chơi mạng ➔ Máy chủ ➔ Thêm máy chủ. Nhập Tên máy chủ tùy thích, Địa chỉ máy chủ là <code data-config-text="SERVER_HOST">LunarChill.club</code> và Cổng (Port) là <code data-config-text="SERVER_PORT_BEDROCK">19143</code>.
+              </div>
+            </details>
           </div>
 
           <div class="lunar-card" style="margin-top: 24px; padding: 24px; text-align: center; background: rgba(104, 139, 248, 0.06); border-color: rgba(104, 139, 248, 0.25);">
@@ -568,7 +569,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-brand">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
             <strong class="footer-brand-name">LunarChill</strong>
           </div>
           <p class="footer-desc">
@@ -583,7 +584,7 @@
           <h4>Khám phá</h4>
           <ul class="footer-links">
             <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="guide.html" aria-current="page">Cẩm nang</a></li>
             <li><a href="rules.html">Nội quy</a></li>
           </ul>
         </div>

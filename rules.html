@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nội quy Máy chủ - LunarChill 🌙</title>
   <meta name="description" content="Nội quy ứng xử, quy tắc chống gian lận, bảo vệ công trình và quy trình giải quyết khiếu nại tại LunarChill.">
-  
+  <link rel="canonical" href="https://LunarChill.club/rules">
+
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
   <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +28,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-link" title="LunarChillSMP Trang chủ">
-        <img src="assets/images/logo.png" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
 
@@ -35,18 +36,18 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Trang chủ</a></li>
           <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
-          <li><a href="rules.html" class="nav-link active">Nội quy</a></li>
+          <li><a href="rules.html" class="nav-link active" aria-current="page">Nội quy</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-ip="LunarChill.club:25572" title="Sao chép IP PC">
-          Sao chép IP PC
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
         </button>
         <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
-          Discord
+          Tham gia Discord
         </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -59,13 +60,13 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
-    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <a href="rules.html" class="mobile-nav-link" aria-current="page">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
-      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club:25572">
-        Sao chép IP PC: LunarChill.club:25572
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
+        Sao chép IP Java: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
       </button>
-      <button class="btn btn-secondary" data-action="copy-ip" data-ip="LunarChill.club">
-        Sao chép IP PE: LunarChill.club (Port: 19143)
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="bedrock">
+        Sao chép Host Bedrock/PE: <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>)
       </button>
       <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
         Tham gia Discord
@@ -113,7 +114,7 @@
 
         <!-- Điều 2 -->
         <section id="rule-behavior">
-          <h2><span>🤝</span> Điều 2. Văn hóa ứng xử & Tôn trọng cộng đồng</h2>
+          <h2><span>🤝</span> Điều 2. Văn hóa ứng xử &amp; Tôn trọng cộng đồng</h2>
           <div class="lunar-card rule-card">
             <p>LunarChill là nơi thư giãn, mọi hành vi gây chia rẽ hay độc hại đều không được hoan nghênh:</p>
             <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
@@ -127,7 +128,7 @@
 
         <!-- Điều 3 -->
         <section id="rule-griefing">
-          <h2><span>🏡</span> Điều 3. Bảo vệ công trình & Cấm phá hoại (No Griefing)</h2>
+          <h2><span>🏡</span> Điều 3. Bảo vệ công trình &amp; Cấm phá hoại (No Griefing)</h2>
           <div class="lunar-card rule-card">
             <p>Công trình của mỗi thành viên là công sức và kỷ niệm đáng trân trọng:</p>
             <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
@@ -142,7 +143,7 @@
 
         <!-- Điều 4 -->
         <section id="rule-appeal">
-          <h2><span>🎫</span> Điều 4. Quy trình khiếu nại & Hỗ trợ (Appeals Flow)</h2>
+          <h2><span>🎫</span> Điều 4. Quy trình khiếu nại &amp; Hỗ trợ (Appeals Flow)</h2>
           <div class="lunar-card" style="padding: 24px;">
             <p>Nếu bạn bị người khác phá hoại công trình, gặp sự cố tranh chấp hoặc cho rằng mình bị xử phạt nhầm lẫn:</p>
             <ol style="margin: 10px 0 16px 20px; line-height: 1.8;">
@@ -166,7 +167,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-brand">
-            <img src="assets/images/logo.png" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
             <strong class="footer-brand-name">LunarChill</strong>
           </div>
           <p class="footer-desc">
@@ -182,7 +183,7 @@
           <ul class="footer-links">
             <li><a href="index.html">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang</a></li>
-            <li><a href="rules.html">Nội quy</a></li>
+            <li><a href="rules.html" aria-current="page">Nội quy</a></li>
           </ul>
         </div>
 

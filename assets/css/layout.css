@@ -9,9 +9,9 @@
   top: 0;
   width: 100%;
   height: 68px;
-  background: rgba(9, 9, 20, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(9, 9, 20, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border-subtle);
   z-index: 100;
   display: flex;
@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 12px;
 }
 
 .brand-link {
@@ -33,6 +34,7 @@
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.01em;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
@@ -56,7 +58,9 @@
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active,
+.nav-link[aria-current="page"] {
   color: var(--color-text-heading);
 }
 
@@ -64,6 +68,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 /* Mobile Nav Toggle Button */
@@ -74,6 +79,7 @@
   color: var(--color-text-heading);
   cursor: pointer;
   padding: 8px;
+  border-radius: var(--radius-tag);
 }
 
 /* --- 2. Mobile Drawer --- */
@@ -89,7 +95,7 @@
   flex-direction: column;
   gap: 16px;
   transform: translateY(-150%);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 99;
 }
 
@@ -99,10 +105,15 @@
 
 .mobile-nav-link {
   color: var(--color-text-subheading);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobile-nav-link[aria-current="page"] {
+  color: var(--color-accent-primary);
+  font-weight: 600;
 }
 
 .mobile-drawer-actions {
@@ -110,6 +121,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.mobile-drawer-actions .btn {
+  white-space: normal;
+  text-align: center;
 }
 
 /* --- 3. Footer --- */
@@ -168,13 +184,14 @@
   color: var(--color-text-body);
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links a[aria-current="page"] {
   color: var(--color-text-heading);
 }
 
 .footer-bottom {
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -208,5 +225,12 @@
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+}
+
+@media (max-width: 390px) {
+  .header-actions .btn-primary {
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
 }
