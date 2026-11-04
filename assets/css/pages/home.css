@@ -2,10 +2,12 @@
    LUNARCHILL HOMEPAGE STYLES (pages/home.css)
    Figma Node 24:2 "Homepage / Desktop" (1200px Container)
    Hero Section 2-Column, Quick Join, Server Features, Community Notice
-   Zero Slop: Borders <= 8px, No Aurora Blob, No Gradient Text Clipping
+   Hệ thống Khung Box Pixel (Chính - Phụ):
+   - Khung Chính (Plaque có gờ nhô giữa cạnh + góc cắt 2 bậc theo ảnh mẫu): .connection-card
+   - Khung Phụ (Góc cắt bậc thang pixel 4px gọn gàng): .conn-box, .step-card, .feature-card, .showcase-update-notice
    ========================================================================== */
 
-/* --- Category / Eyebrow Tags (Figma Spec) --- */
+/* --- Category / Eyebrow Tags --- */
 .section-tag {
   display: inline-block;
   font-family: var(--font-mono);
@@ -15,175 +17,621 @@
   letter-spacing: 0.08em;
   color: var(--color-accent-orbit);
   background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 2px solid rgba(56, 189, 248, 0.25);
   padding: 4px 10px;
-  border-radius: var(--radius-tag);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
   margin-bottom: 14px;
 }
 
-/* --- Hero Section (2 Columns Desktop) --- */
-.hero-section {
-  padding: 64px 0 88px 0;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+/* --- Hero Section: Centered Cosmic Stage & Minecraft Campsite --- */
+.hero-centered {
+  padding: 48px 0 0 0;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-content {
-  text-align: left;
+@media (max-height: 800px) {
+  .hero-centered {
+    min-height: auto;
+    padding: 36px 0 0 0;
+  }
 }
 
-/* Hero Badge Logo (AC-06.2: 240px Desktop / 160px Mobile) */
+.hero-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.hero-center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .hero-logo-wrap {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .hero-logo-badge {
-  width: 240px;
-  height: 240px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--color-border-hover);
-  box-shadow: var(--shadow-card);
+  border: 2px solid var(--color-border-hover);
+  box-shadow: 0 0 32px rgba(104, 139, 248, 0.3);
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+  font-weight: 700;
   color: var(--color-text-heading);
-  line-height: 1.15;
+  line-height: 1.18;
   margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  word-spacing: -0.05em;
 }
 
 .hero-subtitle-en {
+  font-family: var(--font-display);
   font-size: 1.15rem;
   color: var(--color-text-subheading);
-  font-style: italic;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-family: var(--font-mono);
-  font-size: 0.92rem;
-  color: var(--color-accent-orbit);
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  word-spacing: normal;
+  margin-bottom: 16px;
 }
 
 .hero-desc {
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 1.05rem;
+  line-height: 1.68;
   color: var(--color-text-body);
-  margin-bottom: 28px;
-  max-width: 580px;
+  margin-bottom: 24px;
+  max-width: 660px;
+}
+
+/* Badges / Highlights (Căn giữa) */
+.hero-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--color-text-subheading);
+  background: rgba(11, 16, 38, 0.85);
+  border: 1px solid var(--color-border-subtle);
+  padding: 6px 14px;
+  clip-path: var(--clip-pixel-card);
+}
+
+.hero-badge-pill .badge-dot {
+  color: var(--color-accent-orbit);
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+/* --- Campsite Scenery & Terrain Floor Divider --- */
+.hero-campsite-divider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 24px;
+}
+
+.campsite-scenery {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 48px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: -2px; /* Dính khớp vào mặt trên khối cỏ */
+}
+
+.campsite-prop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Prop: Oak Log Bench (Ghế gỗ sồi) */
+.pixel-oak-log {
+  width: 52px;
+  height: 24px;
+  background-image: url('../../images/minecraft/oak_log.png');
+  background-repeat: repeat-x;
+  background-size: 24px 24px;
+  image-rendering: pixelated;
+  border-top: 2px solid #5a3d28;
+  border-bottom: 2px solid #1a1008;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Prop: Campfire (Lửa trại Minecraft có animation bập bùng) */
+.prop-campfire {
+  width: 48px;
+  height: 48px;
+}
+
+.campfire-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.38) 0%, rgba(239, 68, 68, 0.14) 50%, transparent 75%);
+  filter: blur(14px);
+  pointer-events: none;
+  animation: campfire-glow-pulse 2.8s infinite ease-in-out;
+}
+
+@keyframes campfire-glow-pulse {
+  0%, 100% { opacity: 0.85; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+}
+
+.campfire-sprite {
+  width: 48px;
+  height: 48px;
+  background-image: url('../../images/minecraft/campfire_fire.png');
+  background-repeat: no-repeat;
+  background-size: 48px 384px;
+  background-position: 0 0;
+  image-rendering: pixelated;
+  animation: campfire-flame 0.9s steps(8) infinite;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.7));
+}
+
+@keyframes campfire-flame {
+  from { background-position: 0 0; }
+  to { background-position: 0 -384px; }
+}
+
+/* Khói Lửa Trại (Pixel Smoke Particles) */
+.campfire-smoke {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 64px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.smoke-particle {
+  position: absolute;
+  bottom: 0;
+  background: rgba(190, 205, 225, 0.65);
+  border-radius: 1px;
+  image-rendering: pixelated;
+  animation: smoke-rise 3.2s infinite ease-out;
+}
+
+.smoke-particle.p1 {
+  width: 6px;
+  height: 6px;
+  left: 3px;
+  animation-delay: 0s;
+}
+
+.smoke-particle.p2 {
+  width: 8px;
+  height: 8px;
+  left: 9px;
+  animation-delay: 0.8s;
+}
+
+.smoke-particle.p3 {
+  width: 5px;
+  height: 5px;
+  left: 1px;
+  animation-delay: 1.6s;
+}
+
+.smoke-particle.p4 {
+  width: 7px;
+  height: 7px;
+  left: 8px;
+  animation-delay: 2.4s;
+}
+
+@keyframes smoke-rise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-54px) translateX(12px) scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Prop: Lantern Post (Đèn lồng vàng) */
+.prop-lantern {
+  width: 32px;
+  height: 42px;
+}
+
+.lantern-glow {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.28) 0%, rgba(245, 158, 11, 0.08) 50%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  animation: lantern-glow-pulse 4s infinite ease-in-out;
+}
+
+@keyframes lantern-glow-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.lantern-sprite {
+  width: 32px;
+  height: 40px;
+  background-image: url('../../images/minecraft/item_lantern.png');
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: center bottom;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.55));
+}
+
+/* Minecraft Terrain Floor */
+.minecraft-floor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.grass-block-strip {
+  width: 100%;
+  height: 28px;
+  background-image: url('../../images/minecraft/grass_block_side.png');
+  background-repeat: repeat-x;
+  background-size: 28px 28px;
+  image-rendering: pixelated;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.6);
+}
+
+.dirt-block-strip {
+  width: 100%;
+  height: 28px;
+  background-image: url('../../images/minecraft/dirt.png');
+  background-repeat: repeat-x;
+  background-size: 28px 28px;
+  image-rendering: pixelated;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+}
+
+/* --- Dedicated Server Portal & Live Status Section (Inspired by TheLovelyValley × LunarChill) --- */
+.server-portal-section {
+  padding: 48px 0 64px 0;
+}
+
+.portal-card {
+  position: relative;
+  padding: 36px 36px 28px 36px;
+  background: radial-gradient(circle at 82% 20%, rgba(16, 185, 129, 0.08) 0%, rgba(56, 189, 248, 0.05) 38%, transparent 68%), var(--color-bg-surface);
+  border: 2px solid var(--color-border-hover);
+  clip-path: var(--clip-pixel-plaque);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.08), inset 0 -4px 0 rgba(0, 0, 0, 0.55);
+}
+
+/* Gờ điểm nhấn Plaque đỉnh & đáy */
+.portal-card::before,
+.portal-card::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 20%;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-primary);
+  pointer-events: none;
+}
+
+.portal-card::before {
+  top: 0;
+}
+
+.portal-card::after {
+  bottom: 0;
+}
+
+/* Row 1: Top Header & Status Pill */
+.portal-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.portal-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.sparkle-icon {
+  color: #F59E0B;
+}
+
+.portal-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0 0 4px 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  word-spacing: normal;
+}
+
+.portal-subtitle {
+  color: var(--color-text-body);
+  font-size: 0.96rem;
+  margin: 0;
+}
+
+/* Row 2: Big Player Counter & Version Box */
+.portal-metrics-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.portal-player-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.metric-online {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--color-text-heading);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-max {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  word-spacing: -0.15em;
+}
+
+.metric-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-subheading);
+  margin-left: 6px;
+}
+
+.portal-version-box {
+  background: rgba(6, 8, 20, 0.75);
+  border: 1px solid var(--color-border-subtle);
+  clip-path: var(--clip-pixel-card);
+  padding: 12px 20px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.version-box-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.version-box-value {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.portal-divider {
+  border: none;
+  border-top: 1px solid var(--color-border-subtle);
+  margin: 0 0 24px 0;
+}
+
+/* Row 3: Nodes / Gateways Section */
+.portal-nodes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   gap: 16px;
   flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.nodes-title {
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 0;
+}
+
+.nodes-hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.nodes-hint strong {
+  color: var(--color-accent-orbit);
+  font-family: var(--font-mono);
+}
+
+.portal-nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin-bottom: 24px;
 }
 
-.hero-status-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* --- Hero Connection Details Card (Right Column) --- */
-.connection-card {
-  padding: 28px;
-  background: var(--color-bg-surface);
+.node-card {
+  background-color: #060814;
   border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-}
-
-.connection-card .section-tag {
-  margin-bottom: 8px;
-}
-
-.conn-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.conn-actions .btn {
-  width: 100%;
-}
-
-.connection-card h3 {
-  font-size: 1.35rem;
-  color: var(--color-text-heading);
-  margin-top: 4px;
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-
-.connection-card p {
-  font-size: 0.9rem;
-  color: var(--color-text-body);
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.connection-boxes {
+  clip-path: var(--clip-pixel-card);
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.conn-box {
-  background: rgba(9, 9, 20, 0.85);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-btn);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 4px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.55);
   transition: border-color var(--transition-fast);
 }
 
-.conn-box:hover {
+.node-card:hover {
   border-color: var(--color-border-hover);
 }
 
-.conn-meta {
+.node-card-top {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.conn-label {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  font-family: var(--font-mono);
-  letter-spacing: 0.04em;
+.node-icon-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--status-online);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  clip-path: var(--clip-pixel-card);
+  flex-shrink: 0;
 }
 
-.conn-value {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 600;
+.node-icon-box.checking {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--status-checking);
+  border-color: rgba(56, 189, 248, 0.28);
+}
+
+.node-icon-box.offline {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--status-offline);
+  border-color: rgba(239, 68, 68, 0.28);
+}
+
+.node-icon-box.unable {
+  background: rgba(136, 153, 176, 0.12);
+  color: var(--status-unable);
+  border-color: rgba(136, 153, 176, 0.28);
+}
+
+.node-name {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 700;
   color: var(--color-text-heading);
-  overflow-wrap: anywhere;
 }
 
-.conn-sub {
-  font-size: 0.8rem;
+.node-status {
+  font-size: 0.82rem;
   color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.node-value {
+  font-family: var(--font-mono);
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: var(--status-online);
+}
+
+/* Row 4: Footer Meta & Timestamp */
+.portal-footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.meta-check-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* --- Quick Join Steps Section (3 Bước để vào server) --- */
@@ -198,11 +646,12 @@
 }
 
 .section-header h2 {
+  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-text-heading);
   margin-bottom: 6px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .section-header p {
@@ -216,17 +665,21 @@
   gap: 20px;
 }
 
+/* --- Khung Phụ: Step Card & Feature Card --- */
 .step-card {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-card);
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -2px 0 rgba(0, 0, 0, 0.45);
 }
 
 .step-card h3 {
-  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
   color: var(--color-text-heading);
   margin-bottom: 10px;
 }
@@ -260,13 +713,16 @@
 
 .feature-card {
   padding: 24px;
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-card);
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -2px 0 rgba(0, 0, 0, 0.45);
 }
 
 .feature-card h3 {
-  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
   color: var(--color-text-heading);
   margin-bottom: 10px;
   line-height: 1.35;
@@ -285,9 +741,11 @@
 }
 
 .showcase-update-notice {
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-card);
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -2px 0 rgba(0, 0, 0, 0.45);
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
@@ -300,13 +758,15 @@
   font-size: 0.78rem;
   color: var(--color-accent-orbit);
   background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  border-radius: var(--radius-tag);
+  border: 2px solid rgba(56, 189, 248, 0.25);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
   padding: 4px 10px;
 }
 
 .showcase-update-notice h3 {
-  font-size: 1.2rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
   color: var(--color-text-heading);
   margin: 4px 0 0 0;
 }
@@ -321,9 +781,16 @@
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-  .hero-grid {
+  .portal-nodes-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 14px;
+  }
+  .portal-card {
+    padding: 28px 20px 22px 20px;
+  }
+  .portal-version-box {
+    text-align: left;
+    width: 100%;
   }
   .steps-grid,
   .features-grid {
@@ -332,25 +799,6 @@
   .section-header {
     text-align: center;
   }
-  .hero-content {
-    text-align: center;
-  }
-  .hero-logo-wrap {
-    display: flex;
-    justify-content: center;
-  }
-  .hero-logo-badge {
-    width: 160px;
-    height: 160px;
-  }
-  .hero-desc {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-cta-group,
-  .hero-status-row {
-    justify-content: center;
-  }
   .showcase-update-notice {
     align-items: center;
     text-align: center;
@@ -358,11 +806,28 @@
 }
 
 @media (max-width: 480px) {
-  .conn-box {
+  .portal-top-bar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
   }
-  .conn-box .btn {
+  .portal-footer-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .campsite-scenery {
+    gap: 20px;
+  }
+  .pixel-oak-log {
+    width: 40px;
+    height: 20px;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-group .btn {
     width: 100%;
   }
 }

@@ -31,9 +31,10 @@
   align-items: center;
   gap: 10px;
   color: var(--color-text-heading);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
+  font-size: 1.2rem;
+  letter-spacing: -0.04em;
   flex-shrink: 0;
 }
 
@@ -149,8 +150,9 @@
 }
 
 .footer-brand-name {
+  font-family: var(--font-display);
   color: var(--color-text-heading);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .footer-desc {
@@ -206,7 +208,7 @@
 
 /* --- Responsive Breakpoints --- */
 @media (max-width: 900px) {
-  .nav-menu {
+  .site-header nav {
     display: none;
   }
   .mobile-toggle {
@@ -228,9 +230,20 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 8px;
+  }
+  .header-actions {
+    gap: 6px;
+  }
   .header-actions .btn-primary {
-    padding: 8px 10px;
-    font-size: 0.8rem;
+    padding: 7px 10px;
+    font-size: 0.72rem;
+    letter-spacing: -0.02em;
+  }
+  .brand-link {
+    font-size: 0.98rem;
+    gap: 6px;
   }
 }

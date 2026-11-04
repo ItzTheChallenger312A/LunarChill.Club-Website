@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thị Trấn &amp; Lãnh Thổ (Towny) | LunarChill Minecraft Server</title>
+  <meta name="description" content="Danh bạ thị trấn cộng đồng, lộ trình thành lập Towny, hệ thống lệnh bảo hộ đất đai và liên kết triển lãm kiến trúc tại máy chủ Minecraft LunarChill.club.">
+  <meta name="theme-color" content="#090914">
+  <link rel="canonical" href="https://LunarChill.club/towns.html">
+
+  <!-- OpenGraph / Facebook / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LunarChill">
+  <meta property="og:title" content="Thị Trấn &amp; Lãnh Thổ (Towny) | LunarChill Minecraft Server">
+  <meta property="og:description" content="Khám phá hệ thống Thị trấn Towny, cách lập lãnh thổ bảo hộ công trình và kết nối tới Triển lãm ảnh cộng đồng LunarChill.club.">
+  <meta property="og:url" content="https://LunarChill.club/towns.html">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" href="assets/images/logo-small.webp">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/community.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LunarChill Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="towns.html" class="nav-link active" aria-current="page">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="towns.html" class="mobile-nav-link" aria-current="page">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
+        Sao chép IP Java: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="bedrock">
+        Sao chép Host Bedrock/PE: <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>)
+      </button>
+      <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <!-- Community Hub Hero & Tab Switcher -->
+  <section class="community-hero">
+    <div class="container">
+      <div class="community-hero-top">
+        <div class="community-hero-title-group">
+          <span class="community-eyebrow">Không gian Cộng đồng • Towny &amp; Gallery</span>
+          <h1>Thị trấn &amp; Lãnh thổ</h1>
+          <p class="community-hero-desc">
+            Nơi lưu trữ danh bạ các thị trấn do người chơi thành lập, hướng dẫn quy hoạch lãnh thổ bằng hệ thống Towny và kết nối trực tiếp tới bộ sưu tập ảnh kiến trúc tại Triển lãm.
+          </p>
+        </div>
+
+        <!-- Thanh chuyển nhanh 2 chiều giữa trang Town và trang Gallery -->
+        <nav class="community-hub-switcher" aria-label="Chuyển đổi giữa Thị trấn và Triển lãm">
+          <a href="towns.html" class="hub-tab active" aria-current="page">
+            <span>Hồ sơ Thị trấn</span>
+            <span class="hub-tab-badge">Towns</span>
+          </a>
+          <a href="gallery.html" class="hub-tab">
+            <span>Triển lãm Ảnh</span>
+            <span class="hub-tab-badge">Gallery ➔</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="container community-main">
+
+    <!-- 1. Danh bạ Thị trấn (Trạng thái mở ghi danh thực tế + Liên kết chéo sang Gallery) -->
+    <section id="town-directory">
+      <div class="community-section-head">
+        <div>
+          <h2>Danh bạ Thị trấn trên máy chủ</h2>
+          <p>Hồ sơ các thị trấn hoạt động tại <span data-config-text="SERVER_HOST">LunarChill.club</span> và liên kết tới ảnh chụp công trình thực tế.</p>
+        </div>
+        <a href="gallery.html#filter-towns" class="btn btn-secondary btn-sm">
+          Xem ảnh các Thị trấn tại Gallery ➔
+        </a>
+      </div>
+
+      <div class="community-plaque-banner">
+        <div class="community-plaque-grid">
+          <div>
+            <span class="plaque-status-tag">Đang mở cổng ghi danh Thị trấn</span>
+            <h3>Đăng ký đưa Thị trấn của bạn lên Danh bạ &amp; Triển lãm</h3>
+            <p>
+              Danh bạ này chỉ hiển thị các thị trấn đang hoạt động thực tế trong game, không đăng tải dữ liệu mẫu hay thị trấn ảo. Nếu bạn là Thị trưởng (Mayor) và muốn giới thiệu thị trấn của mình để tuyển cư dân mới hoặc trưng bày công trình, hãy gửi hồ sơ tại kênh cộng đồng trên Discord.
+            </p>
+            <div class="plaque-actions">
+              <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+                Gửi hồ sơ Thị trấn qua Discord
+              </a>
+              <a href="gallery.html#filter-towns" class="btn btn-secondary">
+                Mở kho ảnh Kiến trúc Thị trấn
+              </a>
+            </div>
+          </div>
+
+          <!-- Khung minh họa cấu trúc 1 thẻ Hồ sơ Thị trấn khi được duyệt -->
+          <div class="blueprint-card" aria-label="Cấu trúc thông tin hồ sơ thị trấn">
+            <div class="blueprint-header">
+              <span class="blueprint-label">Cấu trúc Hồ sơ Town</span>
+              <span class="blueprint-label">Towny Registry</span>
+            </div>
+            <ul class="blueprint-meta-list">
+              <li>• <strong>Tên Thị trấn &amp; Thị trưởng:</strong> Ghi nhận theo dữ liệu <code>/town</code> trong game.</li>
+              <li>• <strong>Quy mô &amp; Tọa độ:</strong> Số cư dân, số chunk lãnh thổ đã claim và lệnh ghé thăm.</li>
+              <li>• <strong>Trạng thái tuyển quân:</strong> Đang mở nhận cư dân mới hoặc thị trấn nội bộ.</li>
+            </ul>
+            <a href="gallery.html#filter-towns" class="blueprint-crosslink">
+              Liên kết tự động sang album ảnh tại trang Gallery ➔
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        =====================================================================
+        MẪU THẺ HỒ SƠ THỊ TRẤN (DÀNH CHO BQT KHI CẬP NHẬT DỮ LIỆU THỰC TẾ)
+        Khi có thị trấn đăng ký, BQT bỏ comment khối dưới và điền thông tin thật:
+        =====================================================================
+        <div class="town-steps-grid" style="margin-top: 24px;">
+          <article class="lunar-card" id="town-ten-thi-tran">
+            <span class="community-eyebrow">Đang tuyển cư dân</span>
+            <h3>[Tên Thị Trấn Thực Tế]</h3>
+            <p>Thị trưởng: <strong>[Tên In-game]</strong> • Quy mô: <strong>[X] cư dân</strong></p>
+            <p>[Mô tả ngắn gọn về phong cách kiến trúc và sinh hoạt của thị trấn]</p>
+            <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="gallery.html#filter-towns" class="btn btn-secondary btn-sm">Xem ảnh công trình ➔</a>
+            </div>
+          </article>
+        </div>
+      -->
+    </section>
+
+    <!-- 2. Lộ trình 4 bước Thành lập & Quản lý Thị trấn -->
+    <section id="town-lifecycle">
+      <div class="community-section-head">
+        <div>
+          <h2>Quy trình 4 bước xây dựng Thị trấn</h2>
+          <p>Từ mảnh đất hoang đầu tiên đến một khu định cư có phân lô, quỹ ngân sách và bảo hộ hoàn toàn.</p>
+        </div>
+      </div>
+
+      <div class="town-steps-grid">
+        <article class="town-step-card">
+          <span class="town-step-num">Bước 01</span>
+          <h3>Khởi tạo tại vị trí chọn</h3>
+          <p>
+            Đứng tại khu vực đất trống (cách lãnh thổ thị trấn khác tối thiểu <strong>50 blocks</strong> theo Nội quy) và dùng lệnh <code>/town new [tên]</code> để đặt nền móng.
+          </p>
+        </article>
+
+        <article class="town-step-card">
+          <span class="town-step-num">Bước 02</span>
+          <h3>Mở rộng Chunk &amp; Phân lô</h3>
+          <p>
+            Di chuyển sang các chunk liền kề và gõ <code>/town claim</code> để mở rộng biên giới. Dùng <code>/plot claim</code> để chia các lô đất riêng cho từng thành viên.
+          </p>
+        </article>
+
+        <article class="town-step-card">
+          <span class="town-step-num">Bước 03</span>
+          <h3>Đóng góp Ngân sách Town</h3>
+          <p>
+            Thị trấn cần quỹ duy trì hoạt động hằng ngày. Thành viên có thể gửi tiền vào két sắt chung bằng lệnh <code>/town deposit [tiền]</code> để tránh sụp đổ lãnh thổ.
+          </p>
+        </article>
+
+        <article class="town-step-card">
+          <span class="town-step-num">Bước 04</span>
+          <h3>Kết nạp Bạn bè &amp; Lên ảnh</h3>
+          <p>
+            Thêm bạn bè bằng <code>/resident friend add [tên]</code> để cùng xây dựng, sau đó chụp lại công trình và gửi lên <a href="gallery.html">trang Triển lãm</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Bảng Lệnh Thị trấn & Đất đai Tương tác -->
+    <section id="town-commands">
+      <div class="community-section-head">
+        <div>
+          <h2>Bảng lệnh Thị trấn &amp; Đất đai (Towny)</h2>
+          <p>Nhấp chuột hoặc nhấn phím <code>Enter</code> vào từng ô lệnh bên dưới để sao chép nhanh vào bộ nhớ tạm.</p>
+        </div>
+        <a href="guide.html#section-commands" class="btn btn-secondary btn-sm">
+          Xem toàn bộ lệnh máy chủ tại Cẩm nang ➔
+        </a>
+      </div>
+
+      <div class="community-commands-grid">
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town">/town</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Xem bảng thông tin tổng quan, danh sách thành viên, số chunk và ngân sách thị trấn của bạn.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town new [tên]">/town new [tên]</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Thành lập thị trấn mới ngay tại chunk bạn đang đứng.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town claim">/town claim</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Mở rộng diện tích chunk lãnh thổ thuộc quyền bảo hộ của thị trấn.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Nhận quyền sở hữu cá nhân đối với một lô đất được quy hoạch trong thị trấn.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town deposit [tiền]">/town deposit [tiền]</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Đóng góp tiền vào ngân sách chung để duy trì và nâng cấp thị trấn.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/resident friend add [tên]">/resident friend add [tên]</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Thêm bạn bè vào danh sách tin cậy để cùng xây dựng và sử dụng rương trên đất của bạn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Quy định Bảo hộ Lãnh thổ & Cầu nối sang trang Gallery -->
+    <section id="town-regulations">
+      <div class="lunar-card" style="margin-bottom: 28px;">
+        <h3>Quy định bảo vệ lãnh thổ &amp; Khoảng cách 50 Blocks</h3>
+        <p style="margin-top: 8px;">
+          Theo <a href="rules.html#rule-griefing">Điều 3 Nội quy Máy chủ</a>, mọi hành vi phá hoại công trình (Griefing), trộm cắp vật phẩm trong rương hoặc xây dựng công trình mới cách lãnh thổ thị trấn của người khác <strong>dưới 50 blocks</strong> khi chưa có sự đồng ý của chủ đất đều bị nghiêm cấm và xử lý khôi phục dữ liệu.
+        </p>
+      </div>
+
+      <!-- Cầu nối liên kết trực tiếp sang trang Triển lãm (Gallery) -->
+      <div class="cross-page-bridge">
+        <div class="cross-page-bridge-text">
+          <h3>Bạn muốn ngắm nhìn các công trình &amp; treo ảnh kỷ niệm trong thị trấn?</h3>
+          <p>Chuyển sang trang Triển lãm Cộng đồng để xem tư liệu kiến trúc và hướng dẫn dùng lệnh treo tranh <code>/imageframe</code> trong game.</p>
+        </div>
+        <a href="gallery.html" class="btn btn-primary">
+          Mở trang Triển lãm Ảnh (Gallery) ➔
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
+            <strong class="footer-brand-name">LunarChill</strong>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
+          </p>
+          <p class="mojang-disclaimer">
+            Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="towns.html" aria-current="page">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
+            <li><a href="rules.html">Nội quy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Văn bản</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Điều khoản dịch vụ</a></li>
+            <li><a href="privacy.html">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord">Discord ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LunarChill Club.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

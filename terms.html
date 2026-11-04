@@ -11,10 +11,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
-  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -27,7 +27,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-link" title="LunarChillSMP Trang chủ">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
         <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
@@ -36,6 +36,7 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Trang chủ</a></li>
           <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
           <li><a href="rules.html" class="nav-link">Nội quy</a></li>
         </ul>
       </nav>
@@ -60,6 +61,8 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
       <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
@@ -86,22 +89,22 @@
       <div class="reading-container lunar-card legal-card" style="margin: 0 auto;">
 
         <h2>1. Bản chất Dịch vụ &amp; Phạm vi Áp dụng</h2>
-        <p>LunarChillSMP là một dự án máy chủ trò chơi Minecraft do cộng đồng tự nguyện xây dựng và duy trì phi thương mại vì mục đích giải trí lành mạnh. Website <strong>LunarChill.club</strong> đóng vai trò là cổng cung cấp thông tin, hướng dẫn kỹ thuật và kết nối cộng đồng.</p>
+        <p>LunarChill.Club là một dự án máy chủ trò chơi Minecraft do cộng đồng tự nguyện xây dựng và duy trì phi thương mại vì mục đích giải trí lành mạnh. Website <strong>LunarChill.club</strong> đóng vai trò là cổng cung cấp thông tin, hướng dẫn kỹ thuật và kết nối cộng đồng.</p>
         <p>Bằng việc truy cập website hoặc kết nối vào máy chủ trò chơi, bạn xác nhận đã đọc, hiểu và đồng ý tuân thủ toàn bộ các điều khoản được nêu tại văn bản này cùng <a href="rules.html">Nội quy máy chủ</a>.</p>
 
         <h2>2. Tuyên bố Bản quyền &amp; Miễn trừ Mojang (Minecraft EULA)</h2>
-        <p>Website và máy chủ LunarChillSMP <strong>KHÔNG PHẢI LÀ SẢN PHẨM MINECRAFT CHÍNH THỨC, KHÔNG ĐƯỢC PHÊ DUYỆT HOẶC LIÊN KẾT VỚI MOJANG AB HOẶC MICROSOFT CORPORATION</strong>.</p>
+        <p>Website và máy chủ LunarChill.Club <strong>KHÔNG PHẢI LÀ SẢN PHẨM MINECRAFT CHÍNH THỨC, KHÔNG ĐƯỢC PHÊ DUYỆT HOẶC LIÊN KẾT VỚI MOJANG AB HOẶC MICROSOFT CORPORATION</strong>.</p>
         <p>Mọi nhãn hiệu, hình ảnh, tài nguyên khối và mã nguồn liên quan đến trò chơi Minecraft thuộc quyền sở hữu độc quyền của Mojang AB và Microsoft Corporation theo các nguyên tắc sử dụng thương mại (Mojang Commercial Usage Guidelines).</p>
 
         <h2>3. Quyền hạn của Ban Quản Trị &amp; Chế tài Kỷ luật</h2>
-        <p>Để bảo vệ môi trường chơi game công bằng cho toàn thể cộng đồng, Ban Quản Trị LunarChillSMP giữ toàn quyền:</p>
+        <p>Để bảo vệ môi trường chơi game công bằng cho toàn thể cộng đồng, Ban Quản Trị LunarChill.Club giữ toàn quyền:</p>
         <ul>
           <li>Áp dụng các biện pháp kỷ luật (cảnh cáo, cấm chat, tạm khóa hoặc cấm vĩnh viễn) đối với bất kỳ người chơi nào vi phạm Nội quy máy chủ hoặc có hành vi gian lận (hack, dupe, x-ray, phá hoại).</li>
           <li>Từ chối phục vụ hoặc chấm dứt quyền truy cập máy chủ của các cá nhân có hành vi gây ảnh hưởng xấu tới an ninh mạng, hạ tầng máy chủ hoặc cộng đồng.</li>
         </ul>
 
         <h2>4. Phạm vi Tài chính &amp; Quyên góp (Donation Scope)</h2>
-        <p>Ở phiên bản hiện tại (v1.0), LunarChillSMP <strong>hoàn toàn không thu phí tham gia, không bán trang bị in-game, không bán rank ưu đãi và không mở bất kỳ cổng thanh toán nạp thẻ nào</strong>.</p>
+        <p>Ở phiên bản hiện tại (v1.0), LunarChill.Club <strong>hoàn toàn không thu phí tham gia, không bán trang bị in-game, không bán rank ưu đãi và không mở bất kỳ cổng thanh toán nạp thẻ nào</strong>.</p>
         <p>Nếu trong tương lai có các hoạt động tự nguyện đóng góp kinh phí duy trì hạ tầng máy chủ, Ban Quản Trị sẽ ban hành quy chế tài chính độc lập theo quy định pháp luật hiện hành.</p>
 
         <h2>5. Giới hạn Trách nhiệm Kỹ thuật</h2>
@@ -112,7 +115,7 @@
         </ul>
 
         <h2>6. Kênh Tiếp nhận Yêu cầu</h2>
-        <p>Mọi thắc mắc, góp ý hoặc khiếu nại về điều khoản dịch vụ được tiếp nhận chính thức qua hệ thống <strong>Ticket Hỗ trợ tại máy chủ Discord của LunarChillSMP</strong>.</p>
+        <p>Mọi thắc mắc, góp ý hoặc khiếu nại về điều khoản dịch vụ được tiếp nhận chính thức qua hệ thống <strong>Ticket Hỗ trợ tại máy chủ Discord của LunarChill.Club</strong>.</p>
 
       </div>
     </div>
@@ -140,6 +143,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
             <li><a href="rules.html">Nội quy</a></li>
           </ul>
         </div>

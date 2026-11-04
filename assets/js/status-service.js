@@ -9,6 +9,19 @@ export class StatusService {
   constructor(elements) {
     this.dot = elements.dot;
     this.text = elements.text;
+    this.playersOnlineEl = document.getElementById('portal-players-online');
+    this.playersMaxEl = document.getElementById('portal-players-max');
+    this.javaStatusEl = document.getElementById('java-node-status');
+    this.javaIconEl = document.getElementById('java-node-icon');
+    this.bedrockStatusEl = document.getElementById('bedrock-node-status');
+    this.bedrockIconEl = document.getElementById('bedrock-node-icon');
+    this.checkedTimeEl = document.getElementById('status-checked-time');
+  }
+
+  formatNowTimestamp() {
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())} ${pad(now.getDate())}-${pad(now.getMonth() + 1)}`;
   }
 
   async init() {
@@ -17,7 +30,11 @@ export class StatusService {
     }
 
     if (CONFIG.FORCE_MAINTENANCE) {
-      this.renderState('maintenance', 'Máy chủ đang bảo trì (BQT)');
+      this.renderState('maintenance', 'Đang bảo trì (BQT)');
+      if (this.playersOnlineEl) this.playersOnlineEl.textContent = '0';
+      if (this.javaStatusEl) this.javaStatusEl.textContent = 'Đang bảo trì';
+      if (this.bedrockStatusEl) this.bedrockStatusEl.textContent = 'Đang bảo trì';
+      if (this.checkedTimeEl) this.checkedTimeEl.textContent = this.formatNowTimestamp();
       return;
     }
 
@@ -35,7 +52,7 @@ export class StatusService {
     }
 
     // 2. State Checking khi cần gọi API
-    this.renderState('checking', 'Đang kiểm tra kết nối Java & Bedrock...');
+    this.renderState('checking', 'Đang kiểm tra...');
 
     const javaPromise = javaData !== null
       ? Promise.resolve({ platform: 'java', status: 'ok', data: javaData })
@@ -155,43 +172,74 @@ export class StatusService {
     const javaError = javaRes?.status === 'error' || !javaValid;
     const bedrockError = bedrockRes?.status === 'error' || !bedrockValid;
 
+    if (this.checkedTimeEl) {
+      this.checkedTimeEl.textContent = this.formatNowTimestamp();
+    }
+
+    // Cập nhật trạng thái riêng cho từng cổng (Node Cards)
+    if (this.javaStatusEl && this.javaIconEl) {
+      if (javaOnline) {
+        this.javaStatusEl.textContent = 'Đang hoạt động';
+        this.javaIconEl.className = 'node-icon-box online';
+      } else if (javaError) {
+        this.javaStatusEl.textContent = 'Không thể kiểm tra';
+        this.javaIconEl.className = 'node-icon-box unable';
+      } else {
+        this.javaStatusEl.textContent = 'Ngoại tuyến';
+        this.javaIconEl.className = 'node-icon-box offline';
+      }
+    }
+
+    if (this.bedrockStatusEl && this.bedrockIconEl) {
+      if (bedrockOnline) {
+        this.bedrockStatusEl.textContent = 'Đang hoạt động';
+        this.bedrockIconEl.className = 'node-icon-box online';
+      } else if (bedrockError) {
+        this.bedrockStatusEl.textContent = 'Không thể kiểm tra';
+        this.bedrockIconEl.className = 'node-icon-box unable';
+      } else {
+        this.bedrockStatusEl.textContent = 'Ngoại tuyến';
+        this.bedrockIconEl.className = 'node-icon-box offline';
+      }
+    }
+
+    // Cập nhật bộ đếm người chơi lớn (Big Metric)
+    if (javaOnline || bedrockOnline) {
+      const playersOnline = javaRes?.data?.players?.online ?? bedrockRes?.data?.players?.online ?? 0;
+      const maxPlayers = javaRes?.data?.players?.max ?? bedrockRes?.data?.players?.max ?? 50;
+      if (this.playersOnlineEl) this.playersOnlineEl.textContent = String(playersOnline);
+      if (this.playersMaxEl) this.playersMaxEl.textContent = String(maxPlayers);
+    } else {
+      if (this.playersOnlineEl) this.playersOnlineEl.textContent = '0';
+    }
+
     // 1. Cả hai nền tảng đều Online
     if (javaOnline && bedrockOnline) {
-      const playersOnline = javaRes.data?.players?.online ?? bedrockRes.data?.players?.online ?? 0;
-      const maxPlayers = javaRes.data?.players?.max ?? bedrockRes.data?.players?.max;
-      const maxText = maxPlayers ? `/${maxPlayers}` : '';
-
-      this.renderState('online', `${playersOnline}${maxText} người chơi • Java & Bedrock Online`);
+      this.renderState('online', 'Đang hoạt động');
       return;
     }
 
     // 2. Java Online, Bedrock gặp lỗi hoặc Offline
     if (javaOnline) {
-      const players = javaRes.data?.players?.online ?? 0;
-      const maxText = javaRes.data?.players?.max ? `/${javaRes.data.players.max}` : '';
-      const bedrockNote = bedrockError ? 'Bedrock đang kiểm tra' : 'Bedrock ngoại tuyến';
-      this.renderState('online', `${players}${maxText} người chơi • Java Online (${bedrockNote})`);
+      this.renderState('online', 'Java đang hoạt động');
       return;
     }
 
     // 3. Bedrock Online, Java gặp lỗi hoặc Offline
     if (bedrockOnline) {
-      const players = bedrockRes.data?.players?.online ?? 0;
-      const maxText = bedrockRes.data?.players?.max ? `/${bedrockRes.data.players.max}` : '';
-      const javaNote = javaError ? 'Java đang kiểm tra' : 'Java ngoại tuyến';
-      this.renderState('online', `${players}${maxText} người chơi • Bedrock Online (${javaNote})`);
+      this.renderState('online', 'Bedrock đang hoạt động');
       return;
     }
 
     // 4. Cả hai kết nối API đều lỗi/timeout -> Unable to retrieve status
     if (javaError && bedrockError) {
-      this.renderState('unable', 'Không thể kiểm tra trạng thái máy chủ');
+      this.renderState('unable', 'Không thể kiểm tra');
       return;
     }
 
     // 5. Một bên lỗi mạng, một bên phản hồi online: false
     if ((javaError && !bedrockOnline) || (bedrockError && !javaOnline)) {
-      this.renderState('unable', 'Đang cập nhật trạng thái kết nối');
+      this.renderState('unable', 'Đang cập nhật');
       return;
     }
 

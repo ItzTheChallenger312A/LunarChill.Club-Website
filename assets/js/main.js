@@ -181,4 +181,105 @@ document.addEventListener('DOMContentLoaded', () => {
   discordLinks.forEach(link => {
     link.href = CONFIG.DISCORD_INVITE_URL;
   });
+
+  // 6. Bộ lọc danh mục trang Triển lãm (gallery.html + hỗ trợ liên kết chéo #filter-towns)
+  const filterButtons = document.querySelectorAll('[data-gallery-filter]');
+  if (filterButtons.length > 0) {
+    const filterStatusLabel = document.getElementById('gallery-active-filter-label');
+    const filterLabels = {
+      all: 'Đang tổng hợp ảnh chụp thực tế từ máy chủ',
+      towns: 'Danh mục: Kiến trúc Thị trấn (Đang tổng hợp tư liệu)',
+      builds: 'Danh mục: Công trình Cá nhân (Đang tổng hợp tư liệu)',
+      moments: 'Danh mục: Khoảnh khắc Sinh tồn (Đang tổng hợp tư liệu)'
+    };
+
+    const applyGalleryFilter = (category) => {
+      filterButtons.forEach(btn => {
+        const isMatch = btn.getAttribute('data-gallery-filter') === category;
+        btn.classList.toggle('active', isMatch);
+        btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+      });
+
+      if (filterStatusLabel && filterLabels[category]) {
+        filterStatusLabel.textContent = filterLabels[category];
+      }
+
+      const galleryItems = document.querySelectorAll('[data-gallery-category]');
+      galleryItems.forEach(item => {
+        const itemCat = item.getAttribute('data-gallery-category');
+        item.hidden = category !== 'all' && itemCat !== category;
+      });
+    };
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-gallery-filter') || 'all';
+        applyGalleryFilter(category);
+      });
+    });
+
+    const syncFilterFromHash = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#filter-')) {
+        const cat = hash.replace('#filter-', '');
+        if (filterLabels[cat]) {
+          applyGalleryFilter(cat);
+        }
+      }
+    };
+
+    syncFilterFromHash();
+    window.addEventListener('hashchange', syncFilterFromHash);
+  }
+
+  // 7. Tương tác Hotspots trên Đảo Nổi (Hero Island Showcase)
+  const islandHotspots = document.querySelectorAll('.island-hotspot');
+  const btnExplore = document.getElementById('btn-explore-world');
+
+  if (islandHotspots.length > 0) {
+    islandHotspots.forEach(spot => {
+      const pin = spot.querySelector('.hotspot-pin');
+      if (pin) {
+        pin.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isActive = spot.classList.contains('active');
+          islandHotspots.forEach(s => s.classList.remove('active'));
+          if (!isActive) {
+            spot.classList.add('active');
+          }
+        });
+      }
+    });
+
+    document.addEventListener('click', () => {
+      islandHotspots.forEach(s => s.classList.remove('active'));
+    });
+
+    if (btnExplore) {
+      btnExplore.addEventListener('click', (e) => {
+        const islandShowcase = document.getElementById('island-showcase');
+        if (islandShowcase && window.innerWidth <= 992) {
+          e.preventDefault();
+          islandShowcase.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        let currentIdx = 0;
+        islandHotspots.forEach(s => s.classList.remove('active'));
+        islandHotspots[0]?.classList.add('active');
+
+        const interval = setInterval(() => {
+          currentIdx++;
+          if (currentIdx < islandHotspots.length) {
+            islandHotspots.forEach(s => s.classList.remove('active'));
+            islandHotspots[currentIdx]?.classList.add('active');
+          } else {
+            clearInterval(interval);
+            setTimeout(() => {
+              islandHotspots.forEach(s => s.classList.remove('active'));
+            }, 3000);
+          }
+        }, 1800);
+      });
+    }
+  }
 });

@@ -1,97 +1,154 @@
 /* ==========================================================================
    LUNARCHILL COMPONENTS (components.css)
-   Nút bấm, Card 8px, Status Badge 6px, Command Chip (Button/Code), FAQ Accordion, Toast
-   Tuân thủ: WCAG AA Contrast, Anti-Slop Radius (<= 8px), Không uniform hover lift trên card tĩnh
+   Hệ thống Khung Box Pixel (Chính - Phụ):
+   - Khung Chính (Plaque có gờ nhô giữa cạnh + góc bậc thang theo ảnh mẫu):
+     + Nút bấm (.btn), Status Badge (.status-pill), Bảng kết nối chính (.connection-card)
+   - Khung Phụ (Góc cắt bậc thang pixel 4px gọn gàng):
+     + Các thẻ nội dung (.lunar-card, .step-card, .feature-card, .faq-item, .command-chip)
    ========================================================================== */
 
-/* --- 1. Lunar Cards (Bo góc 8px chuẩn, viền 1px đồng nhất, không tự nhảy khi hover) --- */
+/* --- 1. Khung Phụ: Lunar Cards (Góc cắt bậc thang pixel 4px, viền khối sắc nét) --- */
 .lunar-card {
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-card);
+  position: relative;
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: 0;
   padding: 24px;
-  box-shadow: var(--shadow-card);
+  clip-path: var(--clip-pixel-card);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -2px 0 rgba(0, 0, 0, 0.45);
   transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
-/* Chỉ card có tương tác thực sự mới đổi trạng thái khi hover */
 a.lunar-card:hover,
 button.lunar-card:hover,
 .lunar-card-interactive:hover {
   border-color: var(--color-border-hover);
-  background: var(--color-bg-surface-hover);
+  background-color: var(--color-bg-surface-hover);
 }
 
-/* --- 2. Buttons (Bo góc 6px, WCAG AA contrast 6.26:1 cho Primary CTA) --- */
+/* --- 2. Khung Chính: Buttons (Pixel Plaque có gờ nhô & cạnh nổi Voxel 3D) --- */
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  word-spacing: -0.1em;
   line-height: 1.2;
   padding: 12px 20px;
-  border-radius: var(--radius-btn);
-  border: 1px solid transparent;
+  border-radius: 0;
+  border: 2px solid transparent;
+  clip-path: var(--clip-pixel-plaque);
   cursor: pointer;
   transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
   white-space: nowrap;
 }
 
+/* Mấu gờ nhô đặc trưng ở 2 bên trái/phải của nút (theo ảnh mẫu) */
+.btn::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 36%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.btn::before {
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn::after {
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.28);
+}
+
 .btn:active {
-  transform: scale(0.98);
+  transform: translateY(2px);
 }
 
 .btn-primary {
   background-color: var(--color-accent-primary);
   color: var(--color-on-accent);
-  font-weight: 700;
+  border-color: #93affc;
   box-shadow: var(--shadow-btn-primary);
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-primary-hover);
   color: var(--color-on-accent);
+  border-color: #b4c7fe;
 }
 
 .btn-secondary {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #111836;
   color: var(--color-text-subheading);
-  border-color: rgba(104, 139, 248, 0.25);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-btn-secondary);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(104, 139, 248, 0.14);
-  border-color: var(--color-border-hover);
+  background-color: #19234d;
+  border-color: var(--color-accent-primary);
   color: var(--color-text-heading);
 }
 
 .btn-sm {
-  padding: 8px 14px;
-  font-size: 0.85rem;
+  padding: 8px 16px;
+  font-size: 0.9rem;
 }
 
-/* --- 3. Live Server Status Badge (Thang bo góc 6px, không dùng 999px) --- */
+/* --- 3. Khung Chính: Live Server Status Plaque (Hình dáng biển hiệu có gờ nhô theo ảnh mẫu) --- */
 .status-pill {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(10, 14, 42, 0.9);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-btn);
-  padding: 7px 14px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  background-color: #0d1430;
+  border: 2px solid var(--color-border-hover);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-plaque);
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--color-text-subheading);
   font-variant-numeric: tabular-nums;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.06), inset 0 -2px 0 rgba(0, 0, 0, 0.5);
 }
 
+/* Gờ điểm nhấn ở chính giữa đỉnh & đáy của Status Plaque (đúng hình thái ảnh mẫu) */
+.status-pill::before,
+.status-pill::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 28%;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-primary);
+  pointer-events: none;
+}
+
+.status-pill::before {
+  top: 0;
+}
+
+.status-pill::after {
+  bottom: 0;
+}
+
+/* Chấm trạng thái cũng vuông vức kiểu Pixel 8x8 */
 .status-dot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: 0;
   background-color: var(--status-unable);
   flex-shrink: 0;
   transition: background-color var(--transition-fast);
@@ -99,7 +156,7 @@ button.lunar-card:hover,
 
 .status-dot.online {
   background-color: var(--status-online);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
 }
 
 .status-dot.checking {
@@ -124,33 +181,39 @@ button.lunar-card:hover,
   50% { opacity: 1; }
 }
 
-/* --- 4. Command Chip (Hỗ trợ cả <button type="button"> và <code> cho bàn phím) --- */
+/* --- 4. Khung Phụ: Command Chip (Ô lệnh kiểu khung chat Minecraft) --- */
 .command-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #060a22;
-  border: 1px solid rgba(104, 139, 248, 0.24);
-  border-radius: var(--radius-tag);
-  padding: 4px 10px;
+  background-color: #050816;
+  border: 2px solid #283870;
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
+  padding: 4px 12px;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   line-height: 1.4;
   color: var(--color-accent-orbit);
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   text-align: left;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.6);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .command-chip:hover {
   border-color: var(--color-accent-primary);
-  background-color: #0d1538;
+  background-color: #0d1638;
   color: var(--color-text-heading);
 }
 
-/* --- 5. FAQ Accordion (<details> & <summary> chuẩn AC-04.2) --- */
+.command-chip:active {
+  transform: translateY(1px);
+}
+
+/* --- 5. Khung Phụ: FAQ Accordion (<details> & <summary> góc cắt bậc thang) --- */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -159,8 +222,9 @@ button.lunar-card:hover,
 
 .faq-item {
   background-color: var(--color-bg-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-card);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
   overflow: hidden;
   transition: border-color var(--transition-fast);
 }
@@ -177,6 +241,7 @@ button.lunar-card:hover,
   justify-content: space-between;
   gap: 16px;
   padding: 18px 20px;
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.98rem;
   color: var(--color-text-heading);
@@ -189,42 +254,42 @@ button.lunar-card:hover,
 }
 
 .faq-question::after {
-  content: '+';
+  content: '[+]';
   font-family: var(--font-mono);
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--color-accent-primary);
   flex-shrink: 0;
-  transition: transform var(--transition-fast);
 }
 
 .faq-item[open] .faq-question::after {
-  content: '−';
+  content: '[-]';
 }
 
 .faq-answer {
-  padding: 0 20px 18px 20px;
+  padding: 14px 20px 18px 20px;
   font-size: 0.92rem;
   color: var(--color-text-body);
   line-height: 1.65;
-  border-top: 1px solid rgba(104, 139, 248, 0.1);
-  padding-top: 14px;
+  border-top: 1px solid rgba(104, 139, 248, 0.16);
 }
 
-/* --- 6. Toast Feedback Notification --- */
+/* --- 6. Khung Chính: Toast Feedback Notification --- */
 .toast-container {
   position: fixed;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
   background-color: #0d132e;
-  border: 1px solid var(--color-accent-primary);
-  border-radius: var(--radius-btn);
-  padding: 12px 20px;
+  border: 2px solid var(--color-accent-primary);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-plaque);
+  padding: 12px 22px;
   color: var(--color-text-heading);
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.65);
   z-index: 1000;
   pointer-events: none;
   opacity: 0;

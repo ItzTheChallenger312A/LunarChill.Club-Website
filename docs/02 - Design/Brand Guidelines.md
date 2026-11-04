@@ -1,12 +1,12 @@
-# LunarChillSMP — Brand Guidelines
+﻿# LunarChill.Club — Brand Guidelines
 
-> Tài liệu quy chuẩn nhận diện thương hiệu, nguyên tắc sử dụng logo, bảng màu và giọng điệu thương hiệu (Brand Tone of Voice) cho LunarChillSMP. Được chuẩn hóa và cập nhật dựa trên asset gốc `Lunar_Logo.png`.
+> Tài liệu quy chuẩn nhận diện thương hiệu, nguyên tắc sử dụng logo, bảng màu và giọng điệu thương hiệu (Brand Tone of Voice) cho LunarChill.Club. Được chuẩn hóa và cập nhật dựa trên asset gốc `Lunar_Logo.png`.
 
 ---
 
 ## 1. Bản sắc thương hiệu (Brand Essence & Philosophy)
 
-* **Tên thương hiệu:** LunarChillSMP (viết tắt: LunarChill)
+* **Tên thương hiệu:** LunarChill.Club (viết tắt: LunarChill)
 * **Khẩu hiệu chính thức (Official Slogan):** *"Chill thôi, đừng có vội."* 🌙
 * **Khẩu hiệu tiếng Anh phụ (Sub-tagline):** *"Just chill, don't rush."*
 * **Định vị cảm xúc (Brand Personality):**

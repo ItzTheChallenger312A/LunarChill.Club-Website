@@ -1,9 +1,9 @@
-# LunarChillSMP Website — Project Overview
+﻿# LunarChill.Club Website — Project Overview
 
-> A website built to introduce LunarChillSMP, express its identity ("Chill thôi, đừng có vội."), and connect players with its community.
+> A website built to introduce LunarChill.Club, express its identity ("Chill thôi, đừng có vội."), and connect players with its community.
 ## 1. Project Summary
 
-- **Project:** LunarChillSMP Official Website
+- **Project:** LunarChill.Club Official Website
     
 - **Project type:** Minecraft server website
     
@@ -19,12 +19,12 @@
     
 - **Hosting plan:** Vercel
     
-- **Design tool:** Figma ([LunarChillSMP Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)) — In Progress (Phase 02)
+- **Design tool:** Figma ([LunarChill.Club Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)) — In Progress (Phase 02)
 ## 2. Project Goals
 
 The website should serve three main purposes:
 
-1. **Server Discovery** — Help new players understand LunarChillSMP and decide whether to join.
+1. **Server Discovery** — Help new players understand LunarChill.Club and decide whether to join.
     
 2. **Information Portal** — Give new and existing players a convenient place to find server information, guides, rules, and relevant links.
     
@@ -33,7 +33,7 @@ The website should serve three main purposes:
 
 ### Primary audience
 
-- Players discovering LunarChillSMP for the first time.
+- Players discovering LunarChill.Club for the first time.
     
 - Existing players looking for useful server information.
     
@@ -55,10 +55,10 @@ The website should serve three main purposes:
     
 - **Modern Minimalism** — Keep layouts intentional, clear, and uncluttered.
     
-- **Community Storytelling** — Show the people, experiences, builds, and stories that make LunarChillSMP distinctive.
+- **Community Storytelling** — Show the people, experiences, builds, and stories that make LunarChill.Club distinctive.
 ### Creative principle
 
-The website should feel like LunarChillSMP, not a generic Minecraft server template.
+The website should feel like LunarChill.Club, not a generic Minecraft server template.
 
 Existing branding assets may be redesigned when doing so strengthens the overall identity.
 ## 5. Technical Direction
@@ -160,7 +160,7 @@ Use this section to record major decisions, completed milestones, and changes in
     
 - Extracted official color palette directly from logo (Deep Abyss Black `#090914`, Waterfall Glow Blue `#688BF8`, Midnight Indigo `#0A0E2A`, Moonlight Silver `#E0EFFF`).
     
-- Created Figma design file: `LunarChillSMP Website Prototype` (Key: `Hjdn5UhKT2D8ucSxTig4hy`).
+- Created Figma design file: `LunarChill.Club Website Prototype` (Key: `Hjdn5UhKT2D8ucSxTig4hy`).
     
 - Chốt khẩu hiệu thương hiệu chính thức: *"Chill thôi, đừng có vội."* 🌙 (*"Just chill, don't rush."*).
 

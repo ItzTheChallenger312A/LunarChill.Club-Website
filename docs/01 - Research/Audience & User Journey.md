@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Audience & User Journey
+﻿# LunarChill.Club Website — Audience & User Journey
 
 > Phân tích đối tượng người dùng, động cơ truy cập và thiết kế bản đồ hành trình trải nghiệm (User Journey Maps) nhằm tối ưu trải nghiệm và tỷ lệ chuyển đổi người truy cập thành người chơi gắn bó.
 

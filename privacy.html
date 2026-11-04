@@ -11,10 +11,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
-  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -27,7 +27,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-link" title="LunarChillSMP Trang chủ">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
         <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
@@ -36,6 +36,7 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Trang chủ</a></li>
           <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
           <li><a href="rules.html" class="nav-link">Nội quy</a></li>
         </ul>
       </nav>
@@ -60,6 +61,8 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
       <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
@@ -86,12 +89,12 @@
       <div class="reading-container lunar-card legal-card" style="margin: 0 auto;">
 
         <h2>1. Chủ thể Vận hành &amp; Cam kết Chung</h2>
-        <p>Ban Quản Trị máy chủ Minecraft <strong>LunarChillSMP</strong> cam kết tôn trọng và bảo vệ quyền riêng tư của mọi người chơi và khách truy cập website theo quy định pháp luật hiện hành tại Việt Nam.</p>
+        <p>Ban Quản Trị máy chủ Minecraft <strong>LunarChill.Club</strong> cam kết tôn trọng và bảo vệ quyền riêng tư của mọi người chơi và khách truy cập website theo quy định pháp luật hiện hành tại Việt Nam.</p>
         <p>Chính sách này công khai minh bạch toàn bộ các loại dữ liệu kỹ thuật thực tế được xử lý khi bạn truy cập website hoặc tham gia máy chủ.</p>
 
         <h2>2. Các Luồng Dữ liệu Thực tế Được Xử lý</h2>
         <ul>
-          <li><strong>Tại Website tĩnh (LunarChill.club):</strong> Website hoàn toàn <em>không yêu cầu đăng ký tài khoản</em>, không có biểu mẫu thu thập họ tên, số điện thoại hay email cá nhân và không sử dụng cookie theo dõi quảng cáo hay <code>localStorage</code>. Website chỉ sử dụng bộ nhớ phiên <code>sessionStorage</code> trên trình duyệt của bạn để lưu tạm kết quả truy vấn trạng thái máy chủ trong thời gian hiệu lực của gói tin API nhằm hạn chế gửi yêu cầu lặp lại.</li>
+          <li><strong>Tại Website tĩnh (LunarChill.club):</strong> Website hoàn toàn <em>không yêu cầu đăng ký tài khoản</em>, không có biểu mẫu thu thập họ tên, số điện thoại hay email cá nhân và không sử dụng cookie theo dõi quảng cáo. Website chỉ sử dụng bộ nhớ phiên <code>sessionStorage</code> trên trình duyệt của bạn để lưu tạm kết quả truy vấn trạng thái máy chủ trong thời gian hiệu lực của gói tin API nhằm hạn chế gửi yêu cầu lặp lại.</li>
           <li><strong>Tại Tầng Hạ tầng mạng &amp; Hosting:</strong> Dịch vụ lưu trữ Vercel Inc. có thể ghi nhận nhật ký kỹ thuật cơ bản (Địa chỉ IP mạng công khai, loại trình duyệt User-Agent) theo tiêu chuẩn bảo mật Edge Network toàn cầu nhằm mục đích phòng chống tấn công từ chối dịch vụ (DDoS) và phân phối nội dung tĩnh.</li>
           <li><strong>Tại Dịch vụ Phông chữ &amp; API Trạng thái (Truy vấn trực tiếp từ trình duyệt):</strong> Khi trình duyệt tải trang, trình duyệt sẽ tạo kết nối HTTP tiêu chuẩn tới máy chủ <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) để tải phông chữ hiển thị và tới <strong>mcstatus.io</strong> (<code>api.mcstatus.io</code>) để lấy trạng thái hoạt động của máy chủ. Trong quá trình kết nối mạng tiêu chuẩn, các dịch vụ này nhận được địa chỉ IP công khai và chuỗi nhận diện trình duyệt (User-Agent) của thiết bị truy cập.</li>
           <li><strong>Tại Máy chủ Trò chơi Minecraft:</strong> Khi kết nối vào game, máy chủ ghi nhận Tên nhân vật (In-Game Name), mã định danh UUID của tài khoản Minecraft và địa chỉ IP kết nối phục vụ việc lưu trữ tọa độ công trình, túi đồ và quản trị an toàn (nhật ký CoreProtect phòng chống phá hoại).</li>
@@ -110,7 +113,7 @@
         <ul>
           <li><strong>Vercel Inc.:</strong> Nền tảng phân phối và lưu trữ website tĩnh qua mạng phân phối nội dung Edge toàn cầu.</li>
           <li><strong>mcstatus.io:</strong> Dịch vụ API công khai dùng để truy vấn trạng thái hoạt động và số người chơi trực tuyến của máy chủ.</li>
-          <li><strong>Google Fonts (Google LLC):</strong> Dịch vụ cung cấp phông chữ hiển thị trực tuyến (Plus Jakarta Sans và JetBrains Mono).</li>
+          <li><strong>Google Fonts (Google LLC):</strong> Dịch vụ cung cấp phông chữ hiển thị trực tuyến (Space Mono, Plus Jakarta Sans và JetBrains Mono).</li>
           <li><strong>Discord Inc.:</strong> Nền tảng trao đổi cộng đồng và hệ thống tiếp nhận Ticket hỗ trợ độc lập (chỉ tương tác khi người dùng chủ động nhấn liên kết tham gia).</li>
         </ul>
         <p>Ban Quản Trị <strong>cam kết tuyệt đối không bán, trao đổi hoặc thương mại hóa dữ liệu người chơi</strong> cho bất kỳ bên thứ ba nào vì mục đích quảng cáo.</p>
@@ -123,7 +126,7 @@
 
         <h2>6. Quyền của Chủ thể Dữ liệu &amp; Kênh Liên hệ</h2>
         <p>Theo Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, bạn có quyền tra cứu, yêu cầu chỉnh sửa hoặc yêu cầu xóa dữ liệu hồ sơ in-game gắn liền với nhân vật của mình.</p>
-        <p>Mọi yêu cầu liên quan đến quyền riêng tư được tiếp nhận và xử lý qua <strong>Kênh Ticket tại máy chủ Discord chính thức của LunarChillSMP</strong>.</p>
+        <p>Mọi yêu cầu liên quan đến quyền riêng tư được tiếp nhận và xử lý qua <strong>Kênh Ticket tại máy chủ Discord chính thức của LunarChill.Club</strong>.</p>
 
       </div>
     </div>
@@ -151,6 +154,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
             <li><a href="rules.html">Nội quy</a></li>
           </ul>
         </div>

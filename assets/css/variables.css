@@ -1,12 +1,17 @@
 /* ==========================================================================
    LUNARCHILL DESIGN TOKENS (variables.css)
-   Triết lý: Cosmic Sanctuary & Anti-Slop (Quy chuẩn theo Quality Standards.md)
-   - Kiểm soát Radius: Tag = 4px, Button = 6px, Card/Dialog = 8px (Tối đa 8px, không 999px)
+   Triết lý: Cosmic Sanctuary × Minecraft Voxel UI (Zero-Slop)
+   - Typography:
+     + Display / Headings / Buttons: 'Space Mono' (Retro Cosmic Terminal, hỗ trợ 100% dấu tiếng Việt)
+     + Monospace / Commands / IP / Ports: 'JetBrains Mono' & 'Space Mono'
+     + Body Reading: 'Plus Jakarta Sans'
+   - Khung Box (Pixel Stepped Architecture):
+     + Chính (Buttons, Status Badge, Connection Plaque): Góc bậc thang + gờ nhô (Plaque)
+     + Phụ (Cards, Command Chips, FAQ items): Góc cắt bậc thang pixel gọn gàng (0px radius)
    - Độ tương phản WCAG AA/AAA:
      + Body (#94A3B8) trên #090914 = 7.72:1 (AAA)
-     + Muted (#8899B0) trên #090914 = 6.45:1 (AA+ trên cả card surface #0A0E2A)
+     + Muted (#8899B0) trên #090914 = 6.45:1 (AA+)
      + Primary CTA Text (#090914) trên Waterfall Glow Blue (#688BF8) = 6.26:1 (AA+)
-   - Giữ trọn bản sắc Deep Abyss Black (#090914) & Waterfall Glow Blue (#688BF8)
    ========================================================================== */
 
 :root {
@@ -14,18 +19,18 @@
 
   /* --- 1. Surface & Background Colors --- */
   --color-bg-base: #090914;                    /* Deep Abyss Black từ nền logo */
-  --color-bg-surface: rgba(10, 14, 42, 0.88);  /* Midnight Indigo Surface (sắc nét, ít phụ thuộc blur) */
-  --color-bg-surface-hover: rgba(18, 24, 62, 0.94);
-  --color-bg-elevated: #0d1226;                /* Nền thẻ đặc không kính */
+  --color-bg-surface: #0b1026;                 /* Midnight Indigo Voxel Surface */
+  --color-bg-surface-hover: #121a3a;
+  --color-bg-elevated: #0d132c;                /* Nền thẻ nổi */
 
-  /* --- 2. Borders & Dividers (Sắc nét 1px đồng nhất 4 cạnh) --- */
-  --color-border-subtle: rgba(104, 139, 248, 0.16);
-  --color-border-hover: rgba(104, 139, 248, 0.36);
+  /* --- 2. Borders & Dividers (Viền khối Voxel sắc cạnh) --- */
+  --color-border-subtle: #233163;              /* Viền pixel trầm */
+  --color-border-hover: #4c69c7;               /* Viền pixel sáng khi tương tác */
   --color-border-active: #688BF8;
 
   /* --- 3. Brand Accent Colors --- */
   --color-accent-primary: #688BF8;             /* Waterfall Glow Blue */
-  --color-accent-primary-hover: #7E9DFA;       /* Sáng hơn nhẹ khi hover, tăng contrast với chữ tối */
+  --color-accent-primary-hover: #7E9DFA;       /* Sáng hơn khi hover */
   --color-accent-secondary: #3B82F6;           /* Blue 500 */
   --color-accent-orbit: #38BDF8;               /* Orbit Azure */
   --color-accent-purple: #818CF8;              /* Cloud Lavender */
@@ -35,7 +40,7 @@
   --color-text-heading: #FEFDFD;               /* Moon Core White (19.3:1) */
   --color-text-subheading: #E0EFFF;            /* Moonlight Silver (16.4:1) */
   --color-text-body: #94A3B8;                  /* Muted Sky Gray (7.72:1) */
-  --color-text-muted: #8899B0;                 /* Slate Muted nâng sáng đạt 6.45:1 (trước đây #64748B là 4.16:1) */
+  --color-text-muted: #8899B0;                 /* Slate Muted (6.45:1) */
 
   /* --- 5. Functional Status Colors (5 States) --- */
   --status-online: #10B981;                    /* Emerald Green */
@@ -44,25 +49,45 @@
   --status-unable: #8899B0;                    /* Neutral Slate */
   --status-maintenance: #F59E0B;               /* Amber Gold */
 
-  /* --- 6. Border Radius (Chuẩn thang 0–8px theo Quality Standards 2.1) --- */
-  --radius-tag: 4px;                           /* Badge, Chip, Command block */
-  --radius-btn: 6px;                           /* Buttons, Inputs, Status Badge */
-  --radius-card: 8px;                          /* Cards tính năng, Containers */
-  --radius-dialog: 8px;                        /* Dialog, Modal (Trần tối đa 8px) */
+  /* --- 6. Border Radius (0px Voxel Pixel Corners) --- */
+  --radius-tag: 0px;
+  --radius-btn: 0px;
+  --radius-card: 0px;
+  --radius-dialog: 0px;
 
-  /* --- 7. Shadows (Tự nhiên, tạo chiều sâu bằng bóng tối thay vì colored glow) --- */
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.45);
-  --shadow-btn-primary: 0 2px 10px rgba(0, 0, 0, 0.35);
+  /* --- 7. Pixel Stepped Clip-Paths (Chính - Phụ) --- */
+  /* Khung Phụ: Cắt góc bậc thang pixel 4px gọn gàng cho Card, Box, Chip */
+  --clip-pixel-card: polygon(
+    0 4px, 4px 4px, 4px 0,
+    calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+    100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+    4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px)
+  );
 
-  /* --- 8. Typography Ramp --- */
+  /* Khung Chính (Plaque theo mẫu ảnh): Cắt góc 2 bậc (6px) + gờ cạnh đặc trưng */
+  --clip-pixel-plaque: polygon(
+    0 6px, 3px 6px, 3px 3px, 6px 3px, 6px 0,
+    calc(100% - 6px) 0, calc(100% - 6px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 6px, 100% 6px,
+    100% calc(100% - 6px), calc(100% - 3px) calc(100% - 6px), calc(100% - 3px) calc(100% - 3px), calc(100% - 6px) calc(100% - 3px), calc(100% - 6px) 100%,
+    6px 100%, 6px calc(100% - 3px), 3px calc(100% - 3px), 3px calc(100% - 6px), 0 calc(100% - 6px)
+  );
+
+  /* --- 8. Voxel Tactile Shadows --- */
+  --shadow-card: 0 4px 0 rgba(0, 0, 0, 0.55);
+  --shadow-btn-primary: inset 0 2px 0 rgba(255, 255, 255, 0.35), inset 0 -3px 0 rgba(9, 9, 20, 0.35);
+  --shadow-btn-secondary: inset 0 2px 0 rgba(104, 139, 248, 0.18), inset 0 -3px 0 rgba(0, 0, 0, 0.5);
+
+  /* --- 9. Typography Ramp (Space Mono + JetBrains Mono + Plus Jakarta Sans) --- */
+  --font-display: 'Space Mono', 'JetBrains Mono', ui-monospace, monospace;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --font-mono: 'JetBrains Mono', 'Space Mono', ui-monospace, monospace;
+  --font-pixel-mono: 'Space Mono', 'JetBrains Mono', ui-monospace, monospace;
 
-  /* --- 9. Layout Widths --- */
-  --container-max: 1200px;
-  --reading-max: 840px;
+  /* --- 10. Layout Widths (Chuẩn 16:9 Desktop: 1600×900 & 1920×1080) --- */
+  --container-max: 1280px;
+  --reading-max: 860px;
 
-  /* --- 10. Transitions --- */
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  /* --- 11. Transitions --- */
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }

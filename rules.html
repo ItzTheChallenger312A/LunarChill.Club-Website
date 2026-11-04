@@ -11,10 +11,21 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
-  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://LunarChill.club/rules">
+  <meta property="og:title" content="Nội quy Máy chủ - LunarChill 🌙">
+  <meta property="og:description" content="Nội quy ứng xử, quy tắc chống gian lận, bảo vệ công trình và quy trình giải quyết khiếu nại tại LunarChill.">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -27,7 +38,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-link" title="LunarChillSMP Trang chủ">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
         <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
@@ -36,6 +47,7 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Trang chủ</a></li>
           <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
           <li><a href="rules.html" class="nav-link active" aria-current="page">Nội quy</a></li>
         </ul>
       </nav>
@@ -60,6 +72,8 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
     <a href="rules.html" class="mobile-nav-link" aria-current="page">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
       <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
@@ -100,7 +114,7 @@
       <div class="guide-content">
         <!-- Điều 1 -->
         <section id="rule-cheating">
-          <h2><span>⚖️</span> Điều 1. Tuyệt đối không gian lận (Zero Tolerance for Cheating)</h2>
+          <h2>Điều 1. Tuyệt đối không gian lận (Zero Tolerance for Cheating)</h2>
           <div class="lunar-card rule-card">
             <p>Nghiêm cấm sử dụng bất kỳ client hack, phần mềm can thiệp nào đem lại lợi thế bất công so với người chơi khác, bao gồm nhưng không giới hạn:</p>
             <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
@@ -114,7 +128,7 @@
 
         <!-- Điều 2 -->
         <section id="rule-behavior">
-          <h2><span>🤝</span> Điều 2. Văn hóa ứng xử &amp; Tôn trọng cộng đồng</h2>
+          <h2>Điều 2. Văn hóa ứng xử &amp; Tôn trọng cộng đồng</h2>
           <div class="lunar-card rule-card">
             <p>LunarChill là nơi thư giãn, mọi hành vi gây chia rẽ hay độc hại đều không được hoan nghênh:</p>
             <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
@@ -128,7 +142,7 @@
 
         <!-- Điều 3 -->
         <section id="rule-griefing">
-          <h2><span>🏡</span> Điều 3. Bảo vệ công trình &amp; Cấm phá hoại (No Griefing)</h2>
+          <h2>Điều 3. Bảo vệ công trình &amp; Cấm phá hoại (No Griefing)</h2>
           <div class="lunar-card rule-card">
             <p>Công trình của mỗi thành viên là công sức và kỷ niệm đáng trân trọng:</p>
             <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
@@ -143,7 +157,7 @@
 
         <!-- Điều 4 -->
         <section id="rule-appeal">
-          <h2><span>🎫</span> Điều 4. Quy trình khiếu nại &amp; Hỗ trợ (Appeals Flow)</h2>
+          <h2>Điều 4. Quy trình khiếu nại &amp; Hỗ trợ (Appeals Flow)</h2>
           <div class="lunar-card" style="padding: 24px;">
             <p>Nếu bạn bị người khác phá hoại công trình, gặp sự cố tranh chấp hoặc cho rằng mình bị xử phạt nhầm lẫn:</p>
             <ol style="margin: 10px 0 16px 20px; line-height: 1.8;">
@@ -183,6 +197,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
             <li><a href="rules.html" aria-current="page">Nội quy</a></li>
           </ul>
         </div>

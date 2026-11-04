@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Sitemap Architecture
+﻿# LunarChill.Club Website — Sitemap Architecture
 
 > Tài liệu quy hoạch cấu trúc website, đường dẫn và phân bổ nội dung nhằm tối ưu trải nghiệm khám phá máy chủ, tra cứu thông tin nhanh chóng và chuyển đổi người chơi vào cộng đồng Discord / Minecraft.
 
@@ -42,7 +42,7 @@ graph TD
   1. **Global Header / Nav:** Logo LunarChill, Menu (`Trang chủ`, `Cẩm nang`, `Nội quy`), CTA nhanh (`Tham gia Discord`, nút `Copy IP`).
   2. **Hero Section (Cinematic):** Background video/screenshot chất lượng cao, Slogan thương hiệu, nút `Copy Server IP` (với tooltip sao chép tự động), nút `Vào Discord`.
   3. **Live Server Status Bar:** Tích hợp API mcstatus.io hiển thị theo vòng đời 5 trạng thái (`Checking`, `Online`, `Offline`, `Unable to retrieve status`, `Maintenance` nếu có cờ BQT), số lượng người chơi đang online (`players.online / players.max`), phiên bản hỗ trợ (`Java & Bedrock/PE`).
-  4. **Về LunarChillSMP (Server Features & Gameplay):** Điểm đặc sắc (Kinh tế cân bằng, Towny/Claim đất, Sinh tồn nguyên bản kết hợp sự kiện cộng đồng, Không pay-to-win).
+  4. **Về LunarChill.Club (Server Features & Gameplay):** Điểm đặc sắc (Kinh tế cân bằng, Towny/Claim đất, Sinh tồn nguyên bản kết hợp sự kiện cộng đồng, Không pay-to-win).
   5. **Thư viện hình ảnh cộng đồng (Community Highlights):** Showcase công trình, khoảnh khắc đáng nhớ của thành viên.
   6. **Quick Join Steps (3 bước vào game):** Hướng dẫn 3 bước cực ngắn cho cả Java & Bedrock.
   7. **Global Footer:** Bản quyền thương hiệu, Liên kết mạng xã hội, Links điều khoản (`ToS`, `Privacy Policy`), Tuyên bố miễn trừ trách nhiệm (Không liên kết với Mojang/Microsoft).
@@ -74,7 +74,7 @@ graph TD
 ### 3.5. Chính sách bảo mật (`/privacy` hoặc `privacy.html`)
 * **Mục tiêu:** Tuân thủ khung pháp luật hiện hành tại Việt Nam — **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** và **Nghị định số 356/2025/NĐ-CP** (hiệu lực từ 01/01/2026).
 * **Nội dung:**
-  - Xác định rõ chủ thể vận hành (Ban Quản Trị LunarChillSMP).
+  - Xác định rõ chủ thể vận hành (Ban Quản Trị LunarChill.Club).
   - Minh bạch các luồng dữ liệu thực tế: Local Storage (lưu cài đặt giao diện), Nhật ký truy cập mạng/DDoS logs từ Vercel Edge, và định danh in-game (IGN, UUID, IP in-game lưu trên server Minecraft).
   - Các bên thứ ba liên quan: Vercel Inc., mcstatus.io, Discord Inc.
   - Quyền của chủ thể dữ liệu và kênh tiếp nhận hỗ trợ/xóa dữ liệu chính thức qua Ticket Discord.

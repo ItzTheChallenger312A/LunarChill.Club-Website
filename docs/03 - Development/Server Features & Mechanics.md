@@ -1,6 +1,6 @@
-# Server Features & Gameplay Mechanics — LunarChillSMP
+﻿# Server Features & Gameplay Mechanics — LunarChill.Club
 
-> **Nguồn dữ liệu:** Đặc tả kỹ thuật chính thức từ BQT máy chủ LunarChillSMP  
+> **Nguồn dữ liệu:** Đặc tả kỹ thuật chính thức từ BQT máy chủ LunarChill.Club  
 > **Cập nhật lần cuối:** 2026-11-02  
 > **Phiên bản:** 2.0 (Toàn diện & Chi tiết cơ chế)  
 > **Triết lý vận hành:** Sinh tồn thư thái nhưng có chiều sâu (*"Chill thôi, đừng có vội."* 🌙). Loại bỏ các thủ thuật lạm dụng lỗi game (anti-cheese), khuyến khích thám hiểm tự nhiên, tương trợ đồng đội và trải nghiệm khám phá chân thật.

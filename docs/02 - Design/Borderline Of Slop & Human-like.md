@@ -1,4 +1,4 @@
-﻿# LunarChillSMP — Borderline Of Slop & Human-Like Design
+﻿# LunarChill.Club — Borderline Of Slop & Human-Like Design
 
 > Bộ quy chuẩn ranh giới toàn diện: Tổng hợp **71 lỗi AI Slop (45 lỗi Design + 26 lỗi Copywriting)** từ `slop-detect.com/docs`, bản chất "AI Slop vs AI Detector" từ `slopdetector.org/slop/what-is-ai-slop`, cùng cẩm nang khắc phục triệt để từ `slopdetector.org/blog/how-to-avoid-writing-slop`.
 
@@ -13,7 +13,7 @@ Theo định nghĩa chuẩn từ `slopdetector.org`:
 * **Sự khác biệt giữa AI Detector và Slop Detector:**
   - *AI Detector (mô hình xác suất):* Cố đoán xem một đoạn text hay trang web có phải do máy viết không dựa trên entropy/perplexity (thường gây bắt nhầm người viết tốt).
   - *Slop Detector (kiểm định xác định - Deterministic Rules):* Không quan tâm bạn dùng công cụ gì để gõ; nó kiểm tra **hành vi thẩm mỹ và nội dung**: Có đang dùng góc bo tròn lố bịch không? Có nhồi nhét buzzwords vô nghĩa không? Có lạm dụng gradient text không?
-* **Mục tiêu của LunarChillSMP:** Xây dựng một sản phẩm **Human-Crafted 100%**: Sắc sảo, chân thật, tối giản, có cá tính riêng và đạt điểm `0 Slop` trên toàn bộ 71 tiêu chí kiểm định.
+* **Mục tiêu của LunarChill.Club:** Xây dựng một sản phẩm **Human-Crafted 100%**: Sắc sảo, chân thật, tối giản, có cá tính riêng và đạt điểm `0 Slop` trên toàn bộ 71 tiêu chí kiểm định.
 
 ---
 
@@ -149,7 +149,7 @@ Dựa trên nghiên cứu tại `slopdetector.org/blog/how-to-avoid-writing-slop
 
 ---
 
-## 3. Bản đồ chuyển đổi: Cách khắc phục trên từng trang của LunarChillSMP
+## 3. Bản đồ chuyển đổi: Cách khắc phục trên từng trang của LunarChill.Club
 
 Để đảm bảo website đạt chuẩn **Human-Crafted Quality**, toàn bộ nội dung được chuyển đổi theo nguyên tắc:
 

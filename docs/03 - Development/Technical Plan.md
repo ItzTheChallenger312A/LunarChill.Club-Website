@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Technical Plan
+﻿# LunarChill.Club Website — Technical Plan
 
 > Kế hoạch kỹ thuật chi tiết phục vụ triển khai mã nguồn Phase 03: Thiết kế website bằng code sạch (Vanilla HTML5, CSS3, JavaScript ES6+), tối ưu hiệu năng tải trang, responsive toàn diện và tích hợp API trạng thái máy chủ chuẩn mực.
 

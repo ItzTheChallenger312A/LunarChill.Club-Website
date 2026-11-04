@@ -118,12 +118,13 @@
   margin: 0;
 }
 
-/* Callout Box */
+/* Callout Box (Khung Phụ góc cắt bậc thang pixel) */
 .lunar-callout {
-  background: rgba(104, 139, 248, 0.08);
-  border-left: 3px solid var(--color-accent-primary);
-  border-radius: 0 var(--radius-card) var(--radius-card) 0;
-  padding: 18px 20px;
+  background-color: rgba(104, 139, 248, 0.08);
+  border: 2px solid var(--color-border-hover);
+  border-radius: 0;
+  clip-path: var(--clip-pixel-card);
+  padding: 16px 20px;
   margin: 20px 0;
   font-size: 0.92rem;
 }
@@ -131,17 +132,19 @@
 /* Rules Cards */
 .rule-card {
   margin-bottom: 18px;
-  border-left: 3px solid var(--color-accent-orbit);
 }
 
 .rule-penalty {
   display: inline-block;
   margin-top: 10px;
+  font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--status-maintenance);
-  background: rgba(245, 158, 11, 0.1);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  clip-path: var(--clip-pixel-card);
   padding: 4px 10px;
-  border-radius: var(--radius-tag);
+  border-radius: 0;
 }
 
 /* Responsive */

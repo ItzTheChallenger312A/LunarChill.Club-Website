@@ -1,12 +1,12 @@
-﻿# LunarChillSMP — UI Direction & Visual Principles
+﻿# LunarChill.Club — UI Direction & Visual Principles
 
-> Tài liệu định hướng phong cách thị giác (Visual Direction), Moodboard, và các nguyên tắc thiết kế cốt lõi định hình diện mạo trang web LunarChillSMP theo chuẩn "Cinematic Minecraft & Cosmic Sanctuary", được dẫn dắt trực tiếp từ tác phẩm huy hiệu nhận diện `Lunar_Logo.png`.
+> Tài liệu định hướng phong cách thị giác (Visual Direction), Moodboard, và các nguyên tắc thiết kế cốt lõi định hình diện mạo trang web LunarChill.Club theo chuẩn "Cinematic Minecraft & Cosmic Sanctuary", được dẫn dắt trực tiếp từ tác phẩm huy hiệu nhận diện `Lunar_Logo.png`.
 
 ---
 
 ## 1. Định hướng ý tưởng thị giác (Visual Concept & Moodboard)
 
-LunarChillSMP chọn định hướng phong cách **"Cosmic Sanctuary" (Vùng trú ẩn thanh bình dưới bầu trời đêm vũ trụ)**.
+LunarChill.Club chọn định hướng phong cách **"Cosmic Sanctuary" (Vùng trú ẩn thanh bình dưới bầu trời đêm vũ trụ)**.
 
 * **Từ khóa cảm xúc (Keywords):**
   - *Chill & Unhurried (Thư thả, không vội vã)*
@@ -76,7 +76,7 @@ Tác phẩm logo chính thức mang lại một hệ sinh thái thẩm mỹ tr�
 +-----------------------------------------------------------------------------------------+
 |  [Thư viện khoảnh khắc cộng đồng: Showcase ảnh công trình & sự kiện máy chủ]            |
 +-----------------------------------------------------------------------------------------+
-| [Footer] Copyright LunarChillSMP | Links nhanh | Mojang EULA Disclaimer bắt buộc        |
+| [Footer] Copyright LunarChill.Club | Links nhanh | Mojang EULA Disclaimer bắt buộc        |
 +-----------------------------------------------------------------------------------------+
 ```
 

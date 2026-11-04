@@ -17,13 +17,17 @@
   <meta property="og:url" content="https://LunarChill.club/">
   <meta property="og:title" content="LunarChill - Chill thôi, đừng có vội. 🌙">
   <meta property="og:description" content="Máy chủ Minecraft sinh tồn thư thái, công bằng, không pay-to-win. Tham gia ngay cùng cộng đồng LunarChill.">
-  <meta property="og:image" content="https://LunarChill.club/assets/images/logo.png">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LunarChill Minecraft SMP - Chill thôi, đừng có vội.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#688BF8">
 
-  <!-- Typography Fonts (Plus Jakarta Sans & JetBrains Mono) -->
+  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheets (Zero Slop) -->
   <link rel="stylesheet" href="assets/css/variables.css">
@@ -46,6 +50,7 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active" aria-current="page">Trang chủ</a></li>
           <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
           <li><a href="rules.html" class="nav-link">Nội quy</a></li>
         </ul>
       </nav>
@@ -70,6 +75,8 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link" aria-current="page">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
       <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
@@ -85,93 +92,184 @@
   </div>
 
   <main id="main-content">
-    <!-- Hero Section (2-Column Desktop per Figma Node 24:2 & AC-06) -->
-    <section class="hero-section">
+    <!-- Hero Section (Centered Cosmic Stage & Minecraft Campfire Campsite) -->
+    <section class="hero-section hero-centered" id="hero">
+      <div class="container hero-container">
+
+        <!-- Top / Center Content -->
+        <div class="hero-center-content">
+          <div class="hero-logo-wrap">
+            <img src="assets/images/logo.webp" alt="Huy hiệu LunarChill" class="hero-logo-badge" width="130" height="130" fetchpriority="high">
+          </div>
+
+          <span class="section-tag">Cosmic Sanctuary</span>
+          <h1 class="hero-title">Chill thôi, đừng có vội. 🌙</h1>
+          <p class="hero-subtitle-en">Just chill, don't rush.</p>
+
+          <p class="hero-desc">
+            Thế giới sinh tồn Minecraft thanh bình, ấm cúng và phi thương mại. Nơi bạn cùng bạn bè dựng nhà, xây thị trấn và thong thả ngắm sao đêm sau những giờ học tập, làm việc mệt mỏi.
+          </p>
+
+          <!-- Core Badges / Highlights -->
+          <div class="hero-badges">
+            <span class="hero-badge-pill">
+              <span class="badge-dot">✦</span> Không áp lực cày cuốc &amp; No P2W
+            </span>
+            <span class="hero-badge-pill">
+              <span class="badge-dot">✦</span> Hỗ trợ cả PC (Java) lẫn Điện thoại (PE)
+            </span>
+          </div>
+
+          <!-- CTA Actions -->
+          <div class="hero-cta-group">
+            <a href="#server-portal" class="btn btn-primary">
+              🎮 Lấy IP kết nối ngay ↓
+            </a>
+            <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
+              Tham gia Discord
+            </a>
+            <a href="guide.html" class="btn btn-secondary">
+              📖 Cẩm nang tân thủ
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Minecraft Campsite Floor Divider (Sát ranh giới chuyển tầng) -->
+      <div class="hero-campsite-divider">
+        <div class="campsite-scenery">
+
+          <!-- Left Prop: Oak Log Bench (Chỗ ngồi cắm trại) -->
+          <div class="campsite-prop prop-bench" title="Khúc gỗ sồi cắm trại">
+            <div class="pixel-oak-log"></div>
+          </div>
+
+          <!-- Center Prop: Minecraft Campfire with Fire & Smoke -->
+          <div class="campsite-prop prop-campfire" title="Lửa trại ấm cúng LunarChill">
+            <div class="campfire-smoke" aria-hidden="true">
+              <span class="smoke-particle p1"></span>
+              <span class="smoke-particle p2"></span>
+              <span class="smoke-particle p3"></span>
+              <span class="smoke-particle p4"></span>
+            </div>
+            <div class="campfire-glow" aria-hidden="true"></div>
+            <div class="campfire-sprite" role="img" aria-label="Đốm lửa trại Minecraft bập bùng"></div>
+          </div>
+
+          <!-- Right Prop: Lantern Post (Đèn lồng vàng) -->
+          <div class="campsite-prop prop-lantern" title="Đèn lồng soi đêm">
+            <div class="lantern-glow" aria-hidden="true"></div>
+            <div class="lantern-sprite" role="img" aria-label="Đèn lồng Minecraft tỏa sáng vàng ấm"></div>
+          </div>
+
+        </div>
+
+        <!-- Minecraft Terrain Floor (Khối cỏ Minecraft lặp ngang) -->
+        <div class="minecraft-floor" aria-hidden="true">
+          <div class="grass-block-strip"></div>
+          <div class="dirt-block-strip"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Server Portal & Live Status Section (Inspired by TheLovelyValley × LunarChill Cosmic Sanctuary) -->
+    <section class="server-portal-section" id="server-portal">
       <div class="container">
-        <div class="hero-grid">
+        <div class="portal-card">
 
-          <!-- Left Column: Hero Badge, Slogan (VI + EN), Description, Actions, Live Status -->
-          <div class="hero-content">
-            <div class="hero-logo-wrap">
-              <img src="assets/images/logo.webp" alt="Huy hiệu LunarChill" class="hero-logo-badge" width="240" height="240" fetchpriority="high">
-            </div>
-            <h1 class="hero-title">Chill thôi, đừng có vội. 🌙</h1>
-            <p class="hero-subtitle-en">Just chill, don't rush.</p>
-            <p class="hero-subtitle">
-              <span data-config-text="SERVER_HOST">LunarChill.club</span> • Java Port: <span data-config-text="SERVER_PORT_JAVA">25572</span> • Bedrock/PE Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>
-            </p>
-            <p class="hero-desc">
-              Máy chủ sinh tồn Minecraft giữ trọn nét nguyên bản, không pay-to-win và không áp lực cày cuốc. Nơi bạn cùng bạn bè dựng nhà, xây thị trấn và thư thả chơi game trên cả Java Edition, Bedrock Windows và Pocket Edition (Điện thoại).
-            </p>
-
-            <div class="hero-cta-group">
-              <button type="button" class="btn btn-primary" data-action="copy-ip" data-copy-target="java">
-                Sao chép IP Server
-              </button>
-              <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
-                Tham gia Discord
-              </a>
+          <!-- Row 1: Top Header & Status Pill -->
+          <div class="portal-top-bar">
+            <div class="portal-brand-group">
+              <div class="portal-eyebrow">
+                <span class="sparkle-icon" aria-hidden="true">✦</span>
+                <span>MINECRAFT JAVA &amp; BEDROCK · CROSS-PLAY</span>
+              </div>
+              <h2 class="portal-title">LunarChill.Club</h2>
+              <p class="portal-subtitle">Một thế giới, hai cổng kết nối</p>
             </div>
 
-            <!-- Live Status Badge (mcstatus.io Real-time) -->
-            <div class="hero-status-row">
+            <div class="portal-status-wrap">
               <div class="status-pill" id="server-status-pill" role="status" aria-live="polite">
                 <span class="status-dot checking" id="server-status-dot" aria-hidden="true"></span>
-                <span id="server-status-text">Đang kiểm tra kết nối Java & Bedrock...</span>
+                <span id="server-status-text">Đang kiểm tra...</span>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Connection Details Card -->
-          <div class="hero-card-col">
-            <div class="connection-card">
-              <h3>Chung địa chỉ, hai cổng kết nối</h3>
-              <p>
-                Dùng chung địa chỉ máy chủ cho cả Java và Bedrock. Cổng kết nối (port) sẽ khác nhau tùy theo phiên bản game bạn đang mở.
-              </p>
+          <!-- Row 2: Big Player Counter & Version Box -->
+          <div class="portal-metrics-row">
+            <div class="portal-player-metric">
+              <span class="metric-online" id="portal-players-online">--</span>
+              <span class="metric-max">/ <span id="portal-players-max">50</span></span>
+              <span class="metric-label">người đang chơi</span>
+            </div>
 
-              <div class="connection-boxes">
-                <!-- Host Box -->
-                <div class="conn-box">
-                  <div class="conn-meta">
-                    <span class="conn-label">Địa chỉ máy chủ (Dùng chung)</span>
-                    <span class="conn-value" data-config-text="SERVER_HOST">LunarChill.club</span>
-                  </div>
-                  <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="host" title="Sao chép Host">
-                    Sao chép Host
-                  </button>
-                </div>
+            <div class="portal-version-box">
+              <span class="version-box-label">PHIÊN BẢN HỖ TRỢ</span>
+              <strong class="version-box-value">
+                PC <span data-config-text="VERSION_PC">1.21.11 – 26.3</span> · PE <span data-config-text="VERSION_PE">26.30 – 26.51</span>
+              </strong>
+            </div>
+          </div>
 
-                <!-- Java Port Box -->
-                <div class="conn-box">
-                  <div class="conn-meta">
-                    <span class="conn-label">Java Edition (PC / Máy tính)</span>
-                    <span class="conn-value">Port: <span data-config-text="SERVER_PORT_JAVA">25572</span></span>
-                    <span class="conn-sub">Phiên bản: <span data-config-text="VERSION_PC">1.21.11 – 26.3</span></span>
-                  </div>
-                  <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="java" title="Sao chép IP kèm Port Java">
-                    Sao chép IP
-                  </button>
-                </div>
+          <hr class="portal-divider" aria-hidden="true">
 
-                <!-- Bedrock Port Box -->
-                <div class="conn-box">
-                  <div class="conn-meta">
-                    <span class="conn-label">Bedrock Windows &amp; Pocket Edition (Điện thoại)</span>
-                    <span class="conn-value">Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span></span>
-                    <span class="conn-sub">Phiên bản: <span data-config-text="VERSION_PE">26.30 – 26.51</span></span>
-                  </div>
-                  <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="bedrock" title="Sao chép Host Bedrock/PE">
-                    Sao chép Host
-                  </button>
-                </div>
-              </div>
+          <!-- Row 3: Nodes / Gateways Section -->
+          <div class="portal-nodes-header">
+            <h3 class="nodes-title">Trạng thái các cổng kết nối</h3>
+            <span class="nodes-hint">Dùng chung địa chỉ <strong data-config-text="SERVER_HOST">LunarChill.club</strong> cho mọi thiết bị</span>
+          </div>
 
-              <div class="conn-actions">
-                <button type="button" class="btn btn-primary" data-action="copy-ip" data-copy-target="java">
-                  Sao chép IP Server
+          <div class="portal-nodes-grid">
+            <!-- Node 1: Địa chỉ chung (Host) -->
+            <div class="node-card node-host">
+              <div class="node-card-top">
+                <div class="node-icon-box online" aria-hidden="true">✦</div>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="host">
+                  Sao chép Host
                 </button>
               </div>
+              <strong class="node-name">Địa chỉ máy chủ</strong>
+              <span class="node-status">Tên miền chính thức</span>
+              <span class="node-value" data-config-text="SERVER_HOST">LunarChill.club</span>
+            </div>
+
+            <!-- Node 2: Cổng Java (PC) -->
+            <div class="node-card node-java" id="java-node-card">
+              <div class="node-card-top">
+                <div class="node-icon-box checking" id="java-node-icon" aria-hidden="true">✦</div>
+                <button type="button" class="btn btn-primary btn-sm" data-action="copy-ip" data-copy-target="java">
+                  Sao chép IP Java
+                </button>
+              </div>
+              <strong class="node-name">Java Edition (PC)</strong>
+              <span class="node-status" id="java-node-status">Đang kiểm tra kết nối...</span>
+              <span class="node-value">Port: <span data-config-text="SERVER_PORT_JAVA">25572</span></span>
+            </div>
+
+            <!-- Node 3: Cổng Bedrock (PE / Mobile & Win) -->
+            <div class="node-card node-bedrock" id="bedrock-node-card">
+              <div class="node-card-top">
+                <div class="node-icon-box checking" id="bedrock-node-icon" aria-hidden="true">✦</div>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="bedrock">
+                  Sao chép Host PE
+                </button>
+              </div>
+              <strong class="node-name">Bedrock / PE (Điện thoại)</strong>
+              <span class="node-status" id="bedrock-node-status">Đang kiểm tra kết nối...</span>
+              <span class="node-value">Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span></span>
+            </div>
+          </div>
+
+          <!-- Row 4: Footer Meta & Timestamp -->
+          <div class="portal-footer-meta">
+            <div class="meta-check-time">
+              <span class="sparkle-icon" aria-hidden="true">✦</span>
+              <span>Kiểm tra: <span id="status-checked-time">--:--:--</span></span>
+            </div>
+            <div class="meta-disclaimer">
+              Trạng thái đồng bộ thời gian thực từ máy chủ LunarChill
             </div>
           </div>
 
@@ -222,7 +320,7 @@
 
           <div class="feature-card">
             <h3>Bảo vệ công trình với Towny</h3>
-            <p>Hệ thống giữ đất và lập thị trấn giúp công trình của bạn luôn an toàn trước nạn phá hoại. Dễ dàng mời bạn bè cùng mở rộng vùng đất chung.</p>
+            <p>Hệ thống giữ đất và lập thị trấn giúp công trình của bạn luôn an toàn trước nạn phá hoại. Xem thêm tại <a href="towns.html">trang Thị trấn</a>.</p>
           </div>
 
           <div class="feature-card">
@@ -260,8 +358,12 @@
           <span class="showcase-update-badge">Đang cập nhật tư liệu thực tế</span>
           <h3>Bộ sưu tập ảnh chụp in-game đang được Ban Quản Trị tổng hợp</h3>
           <p>
-            Chúng tôi chỉ đăng tải những bức ảnh chụp thực tế từ các thị trấn, công trình và khoảnh khắc sinh tồn của người chơi trong máy chủ — không sử dụng ảnh minh họa có sẵn. Bạn có thể chia sẻ góc nhà của mình tại kênh cộng đồng trên Discord.
+            Chúng tôi chỉ đăng tải những bức ảnh chụp thực tế từ các thị trấn, công trình và khoảnh khắc sinh tồn của người chơi trong máy chủ, không sử dụng ảnh minh họa có sẵn. Bạn có thể chia sẻ góc nhà của mình tại kênh cộng đồng trên Discord.
           </p>
+          <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <a href="gallery.html" class="btn btn-primary btn-sm">Mở Triển lãm Cộng đồng (Gallery)</a>
+            <a href="towns.html" class="btn btn-secondary btn-sm">Xem Danh bạ Thị trấn (Towns)</a>
+          </div>
         </div>
       </div>
     </section>
@@ -289,6 +391,8 @@
           <ul class="footer-links">
             <li><a href="index.html" aria-current="page">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
             <li><a href="rules.html">Nội quy</a></li>
           </ul>
         </div>

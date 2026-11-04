@@ -1,0 +1,435 @@
+/* ==========================================================================
+   LUNARCHILL COMMUNITY PAGES STYLES (pages/community.css)
+   Dùng chung cho 2 trang liên kết song hành:
+   - towns.html (Thị trấn & Lãnh thổ Towny)
+   - gallery.html (Triển lãm & Tư liệu Cộng đồng)
+   Triết lý: Cosmic Sanctuary × Minecraft Voxel UI (Zero-Slop)
+   ========================================================================== */
+
+/* --- 1. Community Page Hero & Hub Switcher (Liên kết 2 chiều Towns <-> Gallery) --- */
+.community-hero {
+  padding: 52px 0 36px 0;
+  border-bottom: 1px solid rgba(104, 139, 248, 0.14);
+}
+
+.community-hero-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.community-hero-title-group {
+  max-width: 700px;
+}
+
+.community-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-orbit);
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 2px solid rgba(56, 189, 248, 0.28);
+  padding: 4px 10px;
+  clip-path: var(--clip-pixel-card);
+  margin-bottom: 12px;
+}
+
+.community-hero h1 {
+  margin-bottom: 10px;
+}
+
+.community-hero-desc {
+  color: var(--color-text-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Thanh chuyển nhanh (Tab Switcher) giữa Thị trấn (towns.html) và Triển lãm (gallery.html) */
+.community-hub-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 8px;
+  background-color: #060919;
+  border: 2px solid var(--color-border-subtle);
+  clip-path: var(--clip-pixel-card);
+}
+
+.hub-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  word-spacing: -0.1em;
+  color: var(--color-text-body);
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  clip-path: var(--clip-pixel-card);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.hub-tab:hover {
+  color: var(--color-text-heading);
+  border-color: var(--color-border-hover);
+  background-color: var(--color-bg-surface-hover);
+}
+
+.hub-tab.active {
+  background-color: var(--color-accent-primary);
+  color: var(--color-on-accent);
+  border-color: #93affc;
+  clip-path: var(--clip-pixel-plaque);
+  box-shadow: var(--shadow-btn-primary);
+}
+
+.hub-tab-badge {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  background-color: rgba(9, 9, 20, 0.24);
+  border: 1px solid rgba(9, 9, 20, 0.35);
+}
+
+.hub-tab:not(.active) .hub-tab-badge {
+  background-color: rgba(104, 139, 248, 0.12);
+  border-color: rgba(104, 139, 248, 0.3);
+  color: var(--color-text-subheading);
+}
+
+/* --- 2. Main Sections & Grid Layouts --- */
+.community-main {
+  padding: 48px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.community-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.community-section-head h2 {
+  margin-bottom: 6px;
+}
+
+.community-section-head p {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* --- 3. Khung Chính: Cross-Link Plaque & Directory Status Notice --- */
+.community-plaque-banner {
+  position: relative;
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-hover);
+  clip-path: var(--clip-pixel-plaque);
+  padding: 28px 30px;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.08), inset 0 -4px 0 rgba(0, 0, 0, 0.55);
+}
+
+.community-plaque-banner::before,
+.community-plaque-banner::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 22%;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-primary);
+  pointer-events: none;
+}
+
+.community-plaque-banner::before {
+  top: 0;
+}
+
+.community-plaque-banner::after {
+  bottom: 0;
+}
+
+.plaque-status-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--status-maintenance);
+  background-color: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  padding: 4px 10px;
+  clip-path: var(--clip-pixel-card);
+  margin-bottom: 12px;
+}
+
+.community-plaque-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.plaque-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Bản thiết kế cấu trúc thẻ Hồ sơ Thị trấn / Thẻ Ảnh (Blueprint Preview) */
+.blueprint-card {
+  background-color: #060919;
+  border: 2px dashed var(--color-border-hover);
+  clip-path: var(--clip-pixel-card);
+  padding: 20px;
+}
+
+.blueprint-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(104, 139, 248, 0.2);
+}
+
+.blueprint-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent-orbit);
+  text-transform: uppercase;
+}
+
+.blueprint-meta-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--color-text-body);
+  margin-bottom: 14px;
+}
+
+.blueprint-meta-list code {
+  font-family: var(--font-mono);
+  color: var(--color-text-subheading);
+  background-color: rgba(104, 139, 248, 0.12);
+  padding: 1px 6px;
+}
+
+.blueprint-crosslink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+  padding-top: 8px;
+  border-top: 1px solid rgba(104, 139, 248, 0.16);
+}
+
+.blueprint-crosslink:hover {
+  color: var(--color-accent-orbit);
+}
+
+/* --- 4. Town Lifecycle Steps & Cards --- */
+.town-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.town-step-card {
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  clip-path: var(--clip-pixel-card);
+  padding: 22px 20px;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -3px 0 rgba(0, 0, 0, 0.45);
+}
+
+.town-step-num {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-on-accent);
+  background-color: var(--color-accent-primary);
+  padding: 3px 9px;
+  clip-path: var(--clip-pixel-card);
+  margin-bottom: 12px;
+}
+
+.town-step-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 8px;
+}
+
+.town-step-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* --- 5. Commands Grid (Dùng chung cấu trúc command-chip tương tác) --- */
+.community-commands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.community-command-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px;
+}
+
+.community-command-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.community-command-top small {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.community-command-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+/* --- 6. Gallery Filter Bar & Submission Spec Grid --- */
+.gallery-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.gallery-filter-btn {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  word-spacing: -0.1em;
+  padding: 8px 16px;
+  color: var(--color-text-body);
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-subtle);
+  clip-path: var(--clip-pixel-card);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.gallery-filter-btn:hover {
+  color: var(--color-text-heading);
+  border-color: var(--color-border-hover);
+}
+
+.gallery-filter-btn.active {
+  background-color: var(--color-accent-primary);
+  color: var(--color-on-accent);
+  border-color: #93affc;
+  clip-path: var(--clip-pixel-plaque);
+}
+
+.gallery-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-spec-card h3 {
+  font-size: 1.06rem;
+  margin-bottom: 8px;
+}
+
+.gallery-spec-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* Cross-Link Footer Banner giữa 2 trang */
+.cross-page-bridge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #080d22;
+  border: 2px solid var(--color-border-hover);
+  clip-path: var(--clip-pixel-plaque);
+  padding: 24px 28px;
+}
+
+.cross-page-bridge-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.cross-page-bridge-text p {
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+/* --- 7. Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .town-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .community-plaque-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .town-steps-grid,
+  .community-commands-grid {
+    grid-template-columns: 1fr;
+  }
+  .community-plaque-banner,
+  .cross-page-bridge {
+    padding: 20px 16px;
+  }
+  .community-main .btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+  }
+  .community-hub-switcher {
+    width: 100%;
+  }
+  .hub-tab {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,7 +1,7 @@
-# LunarChill - Content & Data Registry (Single Source of Truth)
+﻿# LunarChill - Content & Data Registry (Single Source of Truth)
 
 > **Tài liệu nguồn dữ liệu chuẩn (SSOT)**  
-> Quản lý tập trung toàn bộ dữ liệu thực tế, thông số kết nối, nội dung cẩm nang, nội quy, danh sách plugin/datapack, cơ chế sinh tồn đặc thù và người chịu trách nhiệm xác nhận thông tin cho website LunarChillSMP.
+> Quản lý tập trung toàn bộ dữ liệu thực tế, thông số kết nối, nội dung cẩm nang, nội quy, danh sách plugin/datapack, cơ chế sinh tồn đặc thù và người chịu trách nhiệm xác nhận thông tin cho website LunarChill.Club.
 
 ---
 

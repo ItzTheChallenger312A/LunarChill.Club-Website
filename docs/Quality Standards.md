@@ -1,6 +1,6 @@
-﻿# LunarChillSMP — Quality Standards & Anti-Slop Charter
+﻿# LunarChill.Club — Quality Standards & Anti-Slop Charter
 > **Tài liệu Quy chuẩn Chung (Standard Operating Guidelines)**
-> Dành cho toàn bộ quá trình Thiết kế, Lập trình và Biên tập Nội dung website LunarChillSMP.
+> Dành cho toàn bộ quá trình Thiết kế, Lập trình và Biên tập Nội dung website LunarChill.Club.
 > Bắt buộc tuân thủ 100% nhằm đảm bảo chất lượng thủ công tinh tế (Human-Crafted Excellence) và triệt tiêu hoàn toàn mã nguồn / giao diện dạng "AI-Generated Slop".
 
 ---

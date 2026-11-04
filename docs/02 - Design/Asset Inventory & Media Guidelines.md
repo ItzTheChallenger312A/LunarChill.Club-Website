@@ -1,4 +1,4 @@
-# LunarChillSMP — Asset Inventory & Media Guidelines
+﻿# LunarChill.Club — Asset Inventory & Media Guidelines
 
 > **Tài liệu quản lý toàn diện tài nguyên hình ảnh, logo và đa phương tiện**
 > Đảm bảo tính nhất quán thị giác, tối ưu hiệu năng tải trang và tuyệt đối nói không với ảnh stock AI giả tạo.
@@ -41,5 +41,5 @@
   - Không tải ảnh stock Minecraft 3D render giả tạo, người que hoạt họa sến sẩm từ Google/Pinterest.
   - Không dùng AI Midjourney/DALL-E vẽ tranh phong cảnh Minecraft kỳ dị với các khối voxel biến dạng méo mó.
 * ✔️ **Bắt buộc:**
-  - 100% hình ảnh minh họa trên web phải là **ảnh chụp màn hình thực tế từ chính máy chủ LunarChillSMP** (dùng shader nhẹ nhàng như Complementary/BSL để giữ trọn vẹn chất game chân thật).
+  - 100% hình ảnh minh họa trên web phải là **ảnh chụp màn hình thực tế từ chính máy chủ LunarChill.Club** (dùng shader nhẹ nhàng như Complementary/BSL để giữ trọn vẹn chất game chân thật).
   - Tôn vinh công trình thật do người chơi trên máy chủ xây dựng.

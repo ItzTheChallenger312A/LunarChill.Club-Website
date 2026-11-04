@@ -1,6 +1,6 @@
-# LunarChillSMP — Figma Prototype Specification & Roadmap: Homepage
+﻿# LunarChill.Club — Figma Prototype Specification & Roadmap: Homepage
 
-> Tài liệu đặc tả kỹ thuật chi tiết các frame, components, tỷ lệ responsive và các luồng tương tác (Interactions) phục vụ triển khai trực tiếp trên file [LunarChillSMP Website Prototype (Figma)](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy).
+> Tài liệu đặc tả kỹ thuật chi tiết các frame, components, tỷ lệ responsive và các luồng tương tác (Interactions) phục vụ triển khai trực tiếp trên file [LunarChill.Club Website Prototype (Figma)](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy).
 
 ---
 

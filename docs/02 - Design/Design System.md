@@ -1,4 +1,4 @@
-# LunarChillSMP — Design System
+﻿# LunarChill.Club — Design System
 
 > Quy chuẩn hệ thống thiết kế giao diện (Design System Tokens & Components) phục vụ xây dựng mã nguồn HTML5, CSS3 hiện đại, đảm bảo tính nhất quán từ Figma Prototype đến mã nguồn thực tế, đồng bộ hoàn toàn với asset nhận diện `Lunar_Logo.png`.
 

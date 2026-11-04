@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triển Lãm Cộng Đồng (Gallery) | LunarChill Minecraft Server</title>
+  <meta name="description" content="Triển lãm hình ảnh thực tế từ các thị trấn, công trình kiến trúc và khoảnh khắc sinh tồn của người chơi tại máy chủ Minecraft LunarChill.club.">
+  <meta name="theme-color" content="#090914">
+  <link rel="canonical" href="https://LunarChill.club/gallery.html">
+
+  <!-- OpenGraph / Facebook / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LunarChill">
+  <meta property="og:title" content="Triển Lãm Cộng Đồng (Gallery) | LunarChill Minecraft Server">
+  <meta property="og:description" content="Bộ sưu tập ảnh chụp in-game thực tế từ các thị trấn, công trình và hướng dẫn treo ảnh kỷ niệm bằng ImageFrame tại LunarChill.club.">
+  <meta property="og:url" content="https://LunarChill.club/gallery.html">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" href="assets/images/logo-small.webp">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/community.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LunarChill Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="towns.html" class="nav-link active" aria-current="page">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link" aria-current="page">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
+        Sao chép IP Java: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="bedrock">
+        Sao chép Host Bedrock/PE: <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>)
+      </button>
+      <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <!-- Community Hub Hero & Tab Switcher -->
+  <section class="community-hero">
+    <div class="container">
+      <div class="community-hero-top">
+        <div class="community-hero-title-group">
+          <span class="community-eyebrow">Không gian Cộng đồng • Towny &amp; Gallery</span>
+          <h1>Triển lãm Cộng đồng</h1>
+          <p class="community-hero-desc">
+            Không gian trưng bày những bức ảnh chụp thực tế từ các thị trấn, công trình kiến trúc và khoảnh khắc sinh tồn tại <span data-config-text="SERVER_HOST">LunarChill.club</span>, gắn kết trực tiếp với hồ sơ các Thị trấn.
+          </p>
+        </div>
+
+        <!-- Thanh chuyển nhanh 2 chiều giữa trang Town và trang Gallery -->
+        <nav class="community-hub-switcher" aria-label="Chuyển đổi giữa Thị trấn và Triển lãm">
+          <a href="towns.html" class="hub-tab">
+            <span>← Hồ sơ Thị trấn</span>
+            <span class="hub-tab-badge">Towns</span>
+          </a>
+          <a href="gallery.html" class="hub-tab active" aria-current="page">
+            <span>Triển lãm Ảnh</span>
+            <span class="hub-tab-badge">Gallery</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="container community-main">
+
+    <!-- 1. Bộ lọc Danh mục & Khung Trưng bày Tư liệu Thực tế -->
+    <section id="gallery-showcase">
+      <div class="community-section-head">
+        <div>
+          <h2>Kho tư liệu hình ảnh in-game</h2>
+          <p>Phân loại theo kiến trúc Thị trấn, công trình cá nhân và kỷ niệm sinh tồn của người chơi.</p>
+        </div>
+        <a href="towns.html#town-directory" class="btn btn-secondary btn-sm">
+          ← Tra cứu Danh bạ Thị trấn
+        </a>
+      </div>
+
+      <!-- Thanh lọc danh mục (hỗ trợ cả click lẫn hash #filter-towns từ trang Town sang) -->
+      <div class="gallery-filter-bar" role="group" aria-label="Bộ lọc danh mục ảnh triển lãm">
+        <button type="button" class="gallery-filter-btn active" data-gallery-filter="all" id="filter-all" aria-pressed="true">
+          Tất cả tư liệu
+        </button>
+        <button type="button" class="gallery-filter-btn" data-gallery-filter="towns" id="filter-towns" aria-pressed="false">
+          Kiến trúc Thị trấn
+        </button>
+        <button type="button" class="gallery-filter-btn" data-gallery-filter="builds" id="filter-builds" aria-pressed="false">
+          Công trình Cá nhân
+        </button>
+        <button type="button" class="gallery-filter-btn" data-gallery-filter="moments" id="filter-moments" aria-pressed="false">
+          Khoảnh khắc Sinh tồn
+        </button>
+      </div>
+
+      <div class="community-plaque-banner">
+        <div class="community-plaque-grid">
+          <div>
+            <span class="plaque-status-tag" id="gallery-active-filter-label">Đang tổng hợp ảnh chụp thực tế từ máy chủ</span>
+            <h3>Chỉ đăng tải hình ảnh chụp trực tiếp tại LunarChill</h3>
+            <p>
+              Trang Triển lãm cam kết không sử dụng ảnh minh họa có sẵn trên mạng hay ảnh dựng giả lập. Mọi khung hình được chọn đăng lên đây đều có ghi rõ tên người chụp, tọa độ và liên kết về hồ sơ Thị trấn sở hữu công trình đó.
+            </p>
+            <div class="plaque-actions">
+              <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+                Gửi ảnh chụp lên kênh Discord
+              </a>
+              <a href="towns.html#town-directory" class="btn btn-secondary">
+                Xem cách đăng ký Hồ sơ Thị trấn
+              </a>
+            </div>
+          </div>
+
+          <!-- Khung minh họa cấu trúc 1 Thẻ Ảnh Triển lãm gắn kết với Thị trấn -->
+          <div class="blueprint-card" aria-label="Cấu trúc thông tin thẻ ảnh triển lãm">
+            <div class="blueprint-header">
+              <span class="blueprint-label">Cấu trúc Thẻ Ảnh</span>
+              <span class="blueprint-label">16:9 WebP</span>
+            </div>
+            <ul class="blueprint-meta-list">
+              <li>• <strong>Tác giả &amp; Góc máy:</strong> Tên người chơi chụp và shader sử dụng (nếu có).</li>
+              <li>• <strong>Vị trí công trình:</strong> Thế giới (Overworld / Nether / The End) &amp; tọa độ.</li>
+              <li>• <strong>Nhãn Thị trấn:</strong> Gắn thẻ trực tiếp tới Thị trấn sở hữu công trình.</li>
+            </ul>
+            <a href="towns.html#town-directory" class="blueprint-crosslink">
+              Nhấp vào nhãn Thị trấn trên ảnh để mở hồ sơ Town ➔
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        =====================================================================
+        MẪU THẺ ẢNH GALLERY (DÀNH CHO BQT KHI CẬP NHẬT ẢNH THỰC TẾ)
+        Khi có ảnh in-game thật, BQT bỏ comment khối dưới và điền đường dẫn:
+        =====================================================================
+        <div class="gallery-specs-grid" style="margin-top: 24px;">
+          <article class="lunar-card" data-gallery-category="towns">
+            <img src="assets/images/gallery/ten-anh.webp" alt="[Mô tả cụ thể công trình và thị trấn]" width="640" height="360" loading="lazy">
+            <div style="margin-top: 14px;">
+              <span class="community-eyebrow">Kiến trúc Thị trấn</span>
+              <h3>[Tên Công Trình / Góc Máy]</h3>
+              <p>Chụp bởi: <strong>[Tên Người Chơi]</strong></p>
+              <a href="towns.html#town-directory" class="blueprint-crosslink">Thuộc Thị trấn: [Tên Town] ➔ Xem hồ sơ</a>
+            </div>
+          </article>
+        </div>
+      -->
+    </section>
+
+    <!-- 2. Quy chuẩn 3 bước đóng góp ảnh lên Triển lãm -->
+    <section id="gallery-submission">
+      <div class="community-section-head">
+        <div>
+          <h2>Quy chuẩn gửi ảnh lên Triển lãm</h2>
+          <p>Ba lưu ý ngắn gọn để bức ảnh của bạn hoặc thị trấn hiển thị sắc nét nhất trên trang web.</p>
+        </div>
+      </div>
+
+      <div class="gallery-specs-grid">
+        <article class="lunar-card gallery-spec-card">
+          <span class="town-step-num">Quy chuẩn 01</span>
+          <h3>Bấm phím F1 ẩn thanh giao diện</h3>
+          <p>
+            Trước khi nhấn <code>F2</code> chụp màn hình trong Minecraft, hãy bấm <code>F1</code> để ẩn thanh máu, thanh thức ăn và khung chat giúp bố cục công trình thoáng đãng.
+          </p>
+        </article>
+
+        <article class="lunar-card gallery-spec-card">
+          <span class="town-step-num">Quy chuẩn 02</span>
+          <h3>Khung hình ngang 16:9 rõ nét</h3>
+          <p>
+            Ưu tiên ảnh chụp ở độ phân giải từ <code>1920×1080</code> trở lên. Bạn có thể dùng ánh sáng mặc định (Vanilla) hoặc bật <em>Iris Shaders</em> tùy theo phong cách công trình.
+          </p>
+        </article>
+
+        <article class="lunar-card gallery-spec-card">
+          <span class="town-step-num">Quy chuẩn 03</span>
+          <h3>Đính kèm tên Thị trấn (nếu có)</h3>
+          <p>
+            Khi đăng ảnh vào kênh cộng đồng trên Discord, hãy ghi kèm tên người chụp và tên Thị trấn để Ban Quản Trị gắn liên kết sang <a href="towns.html">trang Thị trấn</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Hướng dẫn treo ảnh kỷ niệm ngay trong Game (ImageFrame & ImageMap) -->
+    <section id="in-game-frames">
+      <div class="community-section-head">
+        <div>
+          <h2>Treo ảnh kỷ niệm ngay trong Thị trấn (ImageFrame)</h2>
+          <p>Ngoài việc trưng bày trên web, bạn có thể biến bất kỳ bức ảnh nào thành tranh treo tường nhiều mảnh ngay trong tòa thị chính bằng bộ lệnh dưới đây.</p>
+        </div>
+        <a href="guide.html#section-mods" class="btn btn-secondary btn-sm">
+          Xem thêm mod ImageMap Client tại Cẩm nang ➔
+        </a>
+      </div>
+
+      <div class="community-commands-grid">
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/imageframe create [tên] [url] [rộng] [cao]">/imageframe create [tên] [url] [rộng] [cao]</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Tạo bộ tranh bản đồ từ đường dẫn ảnh trực tiếp (PNG/JPG) với số khung chiều rộng và chiều cao tùy chọn.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/imageframe overlay [tên] [url]">/imageframe overlay [tên] [url]</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Tạo tranh đơn gắn trực tiếp lên Khung vật phẩm (Item Frame) bạn đang cầm trên tay.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/imageframe get [tên] combined">/imageframe get [tên] combined</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Lấy lại vật phẩm tranh ghép đã tạo để gắn hàng loạt lên mảng tường Khung vật phẩm trong nhà.</p>
+        </div>
+
+        <div class="lunar-card community-command-card">
+          <div class="community-command-top">
+            <button type="button" class="command-chip" data-action="copy-ip" data-ip="/imageframe select">/imageframe select</button>
+            <small>Click để chép</small>
+          </div>
+          <p class="community-command-desc">Chọn nhanh vùng Khung vật phẩm trên tường để căn chỉnh kích thước tranh tự động.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cầu nối ngược về trang Thị trấn (Towns) -->
+    <section id="gallery-to-towns-bridge">
+      <div class="cross-page-bridge">
+        <div class="cross-page-bridge-text">
+          <h3>Bạn muốn lập một Thị trấn riêng để bảo vệ công trình trước khi lên ảnh?</h3>
+          <p>Xem ngay lộ trình 4 bước khởi tạo lãnh thổ Towny, phân lô đất và bảng lệnh quản lý ngân sách tại trang Thị trấn.</p>
+        </div>
+        <a href="towns.html" class="btn btn-primary">
+          ← Mở trang Thị trấn &amp; Lãnh thổ (Towns)
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
+            <strong class="footer-brand-name">LunarChill</strong>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
+          </p>
+          <p class="mojang-disclaimer">
+            Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html" aria-current="page">Triển lãm (Gallery)</a></li>
+            <li><a href="rules.html">Nội quy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Văn bản</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Điều khoản dịch vụ</a></li>
+            <li><a href="privacy.html">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord">Discord ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LunarChill Club.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

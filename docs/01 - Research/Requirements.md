@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Requirements Specification
+﻿# LunarChill.Club Website — Requirements Specification
 
 > Tài liệu đặc tả yêu cầu chức năng (Functional Requirements), phi chức năng (Non-Functional Requirements), thiết kế luồng dữ liệu API và khung tuân thủ pháp lý theo chuẩn quy định hiện hành tại thời điểm tháng 10/2026.
 
@@ -101,7 +101,7 @@ sequenceDiagram
 * **Quy chuẩn Minecraft EULA & Commercial Usage Guidelines** từ Mojang AB / Microsoft.
 
 ### 3.2. Cấu trúc Điều khoản Dịch vụ (Terms of Service - ToS)
-1. **Chủ thể vận hành & Mục đích:** Khẳng định LunarChillSMP là dự án máy chủ Minecraft cộng đồng phi thương mại được vận hành bởi Ban Quản Trị LunarChill với mục đích giải trí và giao lưu lành mạnh. Website là cổng thông tin tra cứu và kết nối.
+1. **Chủ thể vận hành & Mục đích:** Khẳng định LunarChill.Club là dự án máy chủ Minecraft cộng đồng phi thương mại được vận hành bởi Ban Quản Trị LunarChill với mục đích giải trí và giao lưu lành mạnh. Website là cổng thông tin tra cứu và kết nối.
 2. **Tuyên bố bản quyền Mojang (Disclaimer):** Khẳng định rõ website và máy chủ **KHÔNG PHẢI LÀ SẢN PHẨM MINECRAFT CHÍNH THỨC, KHÔNG ĐƯỢC PHÊ DUYỆT HOẶC LIÊN KẾT VỚI MOJANG HOẶC MICROSOFT**. Mọi nhãn hiệu Minecraft thuộc quyền sở hữu của Mojang AB / Microsoft.
 3. **Quy tắc ứng xử và chế tài:** Người chơi tham gia bắt buộc phải tuân thủ Nội quy (`/rules`). BQT giữ quyền xử lý các vi phạm (Cảnh cáo, Mute, Khóa tài khoản tạm thời hoặc vĩnh viễn) để bảo vệ môi trường chung.
 4. **Phạm vi giao dịch / Đóng góp tài chính (Donation scope):**
@@ -112,7 +112,7 @@ sequenceDiagram
 Nhằm khắc phục triệt để các giả định phi thực tế, Chính sách Bảo mật được xây dựng minh bạch trên 7 trụ cột:
 
 1. **Chủ thể kiểm soát & xử lý dữ liệu:**
-   - Ban Quản Trị LunarChillSMP (Liên hệ chính thức qua kênh Discord quản trị).
+   - Ban Quản Trị LunarChill.Club (Liên hệ chính thức qua kênh Discord quản trị).
 2. **Các luồng dữ liệu thực tế được xử lý:**
    - **Tại Website:** Tùy chọn giao diện người dùng (lưu cục bộ tại `localStorage` trình duyệt client); không thu thập Form họ tên, email hay số điện thoại trên web.
    - **Tại Hạ tầng mạng:** Địa chỉ IP công khai của người truy cập, thông tin User-Agent cơ bản được ghi nhận tại nhật ký truy cập (edge access logs) của nhà cung cấp dịch vụ hosting (Vercel) phục vụ giám sát bảo mật hệ thống và phòng chống tấn công từ chối dịch vụ (DDoS/WAF).
@@ -132,7 +132,7 @@ Nhằm khắc phục triệt để các giả định phi thực tế, Chính s�
    - Dữ liệu server game: Lưu trữ trong suốt thời gian mùa chơi (Season) đang hoạt động và được lưu trữ sao lưu định kỳ.
 7. **Quyền của người dùng & Kênh tiếp nhận:**
    - Người dùng có quyền tra cứu, yêu cầu chỉnh sửa hoặc xóa hồ sơ dữ liệu game liên quan đến nhân vật của mình.
-   - Kênh tiếp nhận duy nhất: **Hệ thống Ticket Hỗ trợ tại Discord chính thức của LunarChillSMP** (được tiếp nhận và xử lý bởi Quản trị viên chỉ định).
+   - Kênh tiếp nhận duy nhất: **Hệ thống Ticket Hỗ trợ tại Discord chính thức của LunarChill.Club** (được tiếp nhận và xử lý bởi Quản trị viên chỉ định).
 
 ---
 

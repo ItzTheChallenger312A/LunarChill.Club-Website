@@ -1,4 +1,4 @@
-# LunarChillSMP Website — Project Scope & Prioritization (P0 / P1 / P2)
+﻿# LunarChill.Club Website — Project Scope & Prioritization (P0 / P1 / P2)
 
 > Xác định phạm vi dự án, tiêu chuẩn bàn giao và ma trận phân loại ưu tiên tính năng dựa trên mục tiêu tiến độ (Deadline: 2026-11-20), ngăn chặn hiện tượng phình to phạm vi (scope creep) và đảm bảo chất lượng code sạch ("không vibe-slop").
 

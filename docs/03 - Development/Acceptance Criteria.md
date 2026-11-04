@@ -1,6 +1,6 @@
-# LunarChillSMP Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
+﻿# LunarChill.Club Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
 
-> Bộ tiêu chuẩn và danh mục kiểm thử (Checklist) dùng để nghiệm thu toàn bộ tính năng, giao diện và hiệu năng của website LunarChillSMP trước khi xuất bản bản phát hành chính thức (Release Candidate).
+> Bộ tiêu chuẩn và danh mục kiểm thử (Checklist) dùng để nghiệm thu toàn bộ tính năng, giao diện và hiệu năng của website LunarChill.Club trước khi xuất bản bản phát hành chính thức (Release Candidate).
 > **Nguyên tắc nghiệm thu:** Chỉ đánh dấu `[x]` khi đã xác minh thực tế trên code hoặc môi trường chạy thật; các hạng mục cần trình duyệt thật, thiết bị di động thật hoặc môi trường Vercel Preview được giữ `[ ]` kèm trạng thái rõ ràng.
 
 ---
@@ -14,9 +14,9 @@
   - Trạng thái `Offline`: Khi API trả về `online: false` ở cả hai cổng, giao diện hiển thị trạng thái `Máy chủ ngoại tuyến` rõ ràng, không hiển thị sai lệch sang bảo trì.
   - Trạng thái `Unable to retrieve status`: Khi ngắt mạng hoặc API timeout > 5s, badge chuyển sang màu xám trung tính thông báo không thể lấy trạng thái, nút Copy IP vẫn giữ nguyên để người dùng tự kết nối trực tiếp in-game.
   - Trạng thái `Maintenance`: Chỉ hiển thị khi cờ cấu hình `CONFIG.FORCE_MAINTENANCE` được bật chủ động từ BQT.
-- [ ] **AC-01.2 (Quản lý Cache động — Đã sửa code bỏ TTL 60s cố định, chờ kiểm thử runtime với response thực tế từ `mcstatus.io`):**
-  - Đọc trường `expires_at` (hoặc header `X-Cache-Time-Remaining` nếu CORS cho phép) do `mcstatus.io` trả về và lưu vào `sessionStorage`. Nếu thiếu metadata hạn sử dụng hợp lệ, không lưu cache mù.
-  - Khi reload trang hoặc chuyển tab trong khoảng thời gian cache còn hiệu lực (`Date.now() < expiresAt`), dữ liệu hiển thị tức thì mà không tạo ra bất kỳ request mạng mới nào.
+- [x] **AC-01.2 (Quản lý Cache động — Đã kiểm chứng runtime với `mcstatus.io` trên Chrome):**
+  - API `mcstatus.io` trả về trường `expires_at` (epoch ms, dài hơn `retrieved_at` đúng 60,000 ms; lưu ý header `x-cache-time-remaining` không được expose qua CORS nên việc ưu tiên đọc `data.expires_at` là hoàn toàn chính xác).
+  - Khi reload trang hoặc chuyển tab trong khoảng thời gian cache còn hiệu lực (`Date.now() < expiresAt`), dữ liệu hiển thị tức thì từ `sessionStorage` mà không tạo ra request mạng mới.
 - [x] **AC-01.3 (Kiểm soát Rate Limit & Single Service):**
   - Chỉ có duy nhất một module `StatusService` fetch trạng thái trên trang chủ, không xảy ra hiện tượng nhiều component gọi API trùng lặp.
 
@@ -52,10 +52,11 @@
 
 ### AC-06: Thể hiện Nhận diện Thương hiệu, Slogan & Anti-Slop
 - [x] **AC-06.1 (Slogan chính thức):** Slogan trung tâm tại Hero Section là: **"Chill thôi, đừng có vội."** 🌙 kèm dòng phụ tiếng Anh *"Just chill, don't rush."*.
-- [x] **AC-06.2 (Ứng dụng Logo):**
+- [x] **AC-06.2 (Ứng dụng Logo & OpenGraph Image):**
   - Logo `logo-small.webp` (`64×64px`, `2.41 KB`) hiển thị kích thước `36×36px` trên Header và `28×28px` dưới Footer.
   - Huy hiệu tròn `logo.webp` (`240×240px`, `12.55 KB`) hiển thị sắc nét ở Hero Section (`240px` Desktop / `160px` Mobile).
-  - Biểu tượng `apple-touch-icon.png` (`180×180px`, `61.00 KB`) dùng riêng cho iOS, giữ nguyên `logo.png` (`1254×1254px`) làm master asset.
+  - Biểu tượng `apple-touch-icon.png` (`180×180px`, `61.00 KB`) dùng riêng cho iOS.
+  - Ảnh chia sẻ mạng xã hội `og-banner.jpg` (`1200×630px`, `87.47 KB`) và `og-banner.webp` (`1200×630px`, `49.66 KB`) thay thế hoàn toàn việc trỏ `og:image` vào file `logo.png` (`1.71 MB`). Giữ nguyên `logo.png` (`1254×1254px`) làm master asset.
 - [x] **AC-06.3 (Độ chuẩn xác Bảng màu, Contrast WCAG AA & Thang Radius):**
   - Giữ bản sắc Deep Abyss Black (`#090914`), Midnight Indigo (`rgba(10, 14, 42, 0.88)`), Waterfall Glow Blue (`#688BF8`), Moon Core White (`#FEFDFD`).
   - Độ tương phản đạt chuẩn WCAG AA+: chữ trên nút Primary CTA đạt `6.26:1`, chữ `--color-text-muted` (`#8899B0`) đạt `6.45:1`.
@@ -68,7 +69,7 @@
 
 ### AC-07: Điều khoản Dịch vụ & Chính sách Bảo mật (`/terms` & `/privacy`)
 - [x] **AC-07.1 (Tuân thủ Luật Việt Nam):** Trang `/privacy` trích dẫn **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** và **Nghị định số 356/2025/NĐ-CP**. *(Cần Operator/BQT rà soát xác nhận lần cuối trước khi phát hành).*
-- [x] **AC-07.2 (Minh bạch Luồng dữ liệu thực tế):** Mô tả chính xác website chỉ dùng `sessionStorage` để lưu tạm cache trạng thái máy chủ (không khai báo `localStorage`), nêu rõ kết nối tải phông chữ tới `Google Fonts`, truy vấn API `mcstatus.io`, nhật ký hạ tầng `Vercel Inc.` và dữ liệu in-game.
+- [x] **AC-07.2 (Minh bạch Luồng dữ liệu thực tế):** Mô tả chính xác website chỉ dùng `sessionStorage` để lưu tạm cache trạng thái máy chủ, nêu rõ kết nối tải phông chữ tới `Google Fonts`, truy vấn API `mcstatus.io`, nhật ký hạ tầng `Vercel Inc.` và dữ liệu in-game.
 - [x] **AC-07.3 (Loại bỏ quy định nạp tiền ở v1.0):** Không có điều khoản quy định mua bán/hoàn tiền do máy chủ v1.0 phi thương mại.
 - [x] **AC-07.4 (Mojang Disclaimer bắt buộc):** Chân trang (Footer) trên toàn bộ các trang hiển thị đầy đủ dòng tuyên bố:
   > *"Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft."*

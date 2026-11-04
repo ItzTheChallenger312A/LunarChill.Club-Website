@@ -1,10 +1,10 @@
-# LunarChillSMP — Official Website
+# LunarChill.Club — Official Website
 
 <div align="center">
   <img src="assets/images/logo.png" alt="LunarChill Logo" width="180" height="180" style="border-radius: 50%;" />
   <h3>🌙 "Chill thôi, đừng có vội."</h3>
   <p><em>Just chill, don't rush.</em></p>
-  <p>Website chính thức của máy chủ Minecraft <strong>LunarChillSMP</strong> — Cổng thông tin, cẩm nang sinh tồn và kết nối cộng đồng.</p>
+  <p>Website chính thức của máy chủ Minecraft <strong>LunarChill.Club</strong> — Cổng thông tin, cẩm nang sinh tồn và kết nối cộng đồng.</p>
 
   <p>
     <a href="https://lunarchill.club"><strong>Khám phá Website »</strong></a>
@@ -22,9 +22,9 @@
 
 ---
 
-## 🌟 Giới thiệu về LunarChillSMP
+## 🌟 Giới thiệu về LunarChill.Club
 
-**LunarChillSMP** là một máy chủ sinh tồn Minecraft (Survival MultiPlayer) hướng tới trải nghiệm thư thái, cân bằng và gắn kết:
+**LunarChill.Club** là một máy chủ sinh tồn Minecraft (Survival MultiPlayer) hướng tới trải nghiệm thư thái, cân bằng và gắn kết:
 - **Thông số kết nối:**
   - **PC (Java Edition):** `LunarChill.club:25572` (Hỗ trợ 1.21.11 đến 26.3)
   - **PE (Bedrock Edition):** `LunarChill.club` (Port: `19143` | Hỗ trợ 26.30 đến 26.51)
@@ -46,7 +46,7 @@
 - **Frontend Core:** Vanilla HTML5, Modern CSS3 (CSS Variables, Flexbox/Grid, Glassmorphism 8px), Vanilla JavaScript (ES6+ Modules).
 - **Trạng thái máy chủ thời gian thực:** Tích hợp REST API từ `mcstatus.io` với cơ chế kiểm tra song song độc lập cho PC (Java: 25572) và PE (Bedrock: 19143), đọc chính xác `X-Cache-Time-Remaining` và `expires_at`.
 - **Lưu trữ & Triển khai (Hosting & CI/CD):** Vercel Edge Network (`vercel.json` clean URLs).
-- **Thiết kế & Prototype:** Figma ([LunarChillSMP Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)).
+- **Thiết kế & Prototype:** Figma ([LunarChill.Club Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)).
 
 ---
 
@@ -103,12 +103,12 @@ LunarChill.Club-Website/
 
 ## ⚖️ Tuân thủ & Pháp lý
 
-- **Quy chuẩn Minecraft (Mojang EULA):** Website và máy chủ LunarChillSMP là dự án cộng đồng độc lập, **KHÔNG PHẢI LÀ SẢN PHẨM MINECRAFT CHÍNH THỨC, KHÔNG ĐƯỢC PHÊ DUYỆT HOẶC LIÊN KẾT VỚI MOJANG HOẶC MICROSOFT**.
+- **Quy chuẩn Minecraft (Mojang EULA):** Website và máy chủ LunarChill.Club là dự án cộng đồng độc lập, **KHÔNG PHẢI LÀ SẢN PHẨM MINECRAFT CHÍNH THỨC, KHÔNG ĐƯỢC PHÊ DUYỆT HOẶC LIÊN KẾT VỚI MOJANG HOẶC MICROSOFT**.
 - **Bảo vệ dữ liệu cá nhân tại Việt Nam:** Toàn bộ chính sách bảo mật tuân thủ nghiêm ngặt **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** và **Nghị định số 356/2025/NĐ-CP** (hiệu lực từ 01/01/2026).
 - **Phạm vi thương mại:** Máy chủ vận hành phi thương mại ở phiên bản hiện tại, không thu phí ép buộc hay nạp thẻ pay-to-win.
 
 ---
 
 <div align="center">
-  <sub>Được phát triển với niềm đam mê dành cho cộng đồng LunarChillSMP. 🌙</sub>
+  <sub>Được phát triển với niềm đam mê dành cho cộng đồng LunarChill.Club. 🌙</sub>
 </div>

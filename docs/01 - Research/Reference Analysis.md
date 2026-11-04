@@ -1,10 +1,10 @@
-# Reference Analysis - The Lovely Valley
+﻿# Reference Analysis - The Lovely Valley
 
 ## 1. Project Overview
 
 - **Reference:** [The Lovely Valley](https://thelovelyvalley.org/)
     
-- **Purpose:** Analyze a Minecraft server website as a reference for LunarChillSMP.
+- **Purpose:** Analyze a Minecraft server website as a reference for LunarChill.Club.
     
 - **Analysis date:** 2026-10-17
 ## 2. First Impression
@@ -79,7 +79,7 @@ For each visitor:
 3.   Not much animations.
     
 
-## 8. Lessons for LunarChillSMP
+## 8. Lessons for LunarChill.Club
 
 ### Ideas worth adapting
 
