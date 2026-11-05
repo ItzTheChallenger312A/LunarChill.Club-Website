@@ -26,8 +26,9 @@
 
 **LunarChill.Club** là một máy chủ sinh tồn Minecraft (Survival MultiPlayer) hướng tới trải nghiệm thư thái, cân bằng và gắn kết:
 - **Thông số kết nối:**
-  - **PC (Java Edition):** `LunarChill.club:25572` (Hỗ trợ 1.21.11 đến 26.3)
-  - **PE (Bedrock Edition):** `LunarChill.club` (Port: `19143` | Hỗ trợ 26.30 đến 26.51)
+  - **Địa chỉ kết nối dùng chung:** `LunarChill.club` (Cổng duy nhất: `25572`)
+  - **Bản PC (Java & Bedrock trên máy tính):** `LunarChill.club:25572` (Hỗ trợ 1.21.11 đến 26.3)
+  - **Bản PE riêng (Điện thoại / Pocket Edition):** `LunarChill.club` (Port: `25572` | Hỗ trợ 26.30 đến 26.51)
 - **Không áp lực chạy đua:** Tôn vinh lối chơi thong thả, sáng tạo, thị trấn Towny văn minh và tạo dựng kỷ niệm cùng bạn bè.
 - **Công bằng & Văn minh:** Môi trường hoàn toàn phi thương mại, không pay-to-win, tôn trọng quyền riêng tư và tinh thần fair-play.
 
@@ -44,7 +45,7 @@
 ## 🛠️ Công nghệ & Hạ tầng (Tech Stack)
 
 - **Frontend Core:** Vanilla HTML5, Modern CSS3 (CSS Variables, Flexbox/Grid, Glassmorphism 8px), Vanilla JavaScript (ES6+ Modules).
-- **Trạng thái máy chủ thời gian thực:** Tích hợp REST API từ `mcstatus.io` với cơ chế kiểm tra song song độc lập cho PC (Java: 25572) và PE (Bedrock: 19143), đọc chính xác `X-Cache-Time-Remaining` và `expires_at`.
+- **Trạng thái máy chủ thời gian thực:** Tích hợp REST API từ `mcstatus.io` với cơ chế kiểm tra song song độc lập cho PC (Java: 25572) và PE (Bedrock: 25572, hỗ trợ fallback 19143 chuyển tiếp), đọc chính xác `X-Cache-Time-Remaining` và `expires_at`.
 - **Lưu trữ & Triển khai (Hosting & CI/CD):** Vercel Edge Network (`vercel.json` clean URLs).
 - **Thiết kế & Prototype:** Figma ([LunarChill.Club Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)).
 
@@ -54,8 +55,10 @@
 
 ```
 LunarChill.Club-Website/
-├── index.html                     # Trang chủ (Homepage hoàn chỉnh)
+├── index.html                     # Trang chủ (Homepage hoàn chỉnh: Campsite Horizon & Server Portal)
 ├── guide.html                     # Cẩm nang tân thủ (/guide)
+├── towns.html                     # Danh bạ thị trấn & lãnh thổ (/towns)
+├── gallery.html                   # Triển lãm ảnh cộng đồng (/gallery)
 ├── rules.html                     # Nội quy máy chủ (/rules)
 ├── terms.html                     # Điều khoản dịch vụ (/terms)
 ├── privacy.html                   # Chính sách bảo mật (/privacy)
@@ -65,23 +68,26 @@ LunarChill.Club-Website/
 │
 ├── assets/
 │   ├── css/
-│   │   ├── variables.css          # CSS Design Tokens trích xuất từ Lunar_Logo
+│   │   ├── variables.css          # CSS Design Tokens, Pixel Stepped Clip-Paths (0px radius)
 │   │   ├── base.css               # Reset, WCAG AAA, typography phẳng sắc nét
-│   │   ├── components.css         # Lunar Cards 8px, Buttons 6px, Status Pill, Toast
+│   │   ├── components.css         # Lunar Cards, Buttons, Status Pill, Toast, Plaque
 │   │   ├── layout.css             # Sticky Header, Accessible Mobile Drawer, Footer
-│   │   └── pages/home.css         # Hero Section, Quick Join, Features, Community
+│   │   └── pages/home.css         # Hero Centered, Minecraft Campsite, Server Portal
 │   ├── js/
 │   │   ├── config.js              # Hằng số cấu hình tập trung (SSOT)
-│   │   ├── status-service.js      # Module kiểm tra PC & PE độc lập + Dynamic Cache
+│   │   ├── status-service.js      # Module kiểm tra PC & PE độc lập + Dynamic Cache + Fallback an toàn
 │   │   ├── clipboard.js           # 1-Click Copy IP có kiểm tra kết quả thực tế
-│   │   └── main.js                # App bootstrap & drawer accessibility
+│   │   └── main.js                # App bootstrap, drawer accessibility & gallery filters
 │   └── images/
-│       ├── logo.png               # Asset huy hiệu nhận diện chính
+│       ├── logo.png               # Asset huy hiệu nhận diện chính (Master 1254x1254)
+│       ├── logo.webp              # Huy hiệu WebP nén siêu nhẹ
+│       ├── logo-small.webp        # Logo nhỏ cho Header và Footer (64x64)
+│       ├── minecraft/             # Bộ asset texture gốc Minecraft 16x16 (lửa trại, đèn lồng, cỏ, đất)
 │       ├── favicon.ico            # Favicon định dạng chuẩn đa kích thước
 │       ├── favicon.png            # Favicon PNG 32x32
-│       └── showcase/              # Thư mục ảnh chụp in-game thực tế
+│       └── showcase/              # Thư mục ảnh chụp in-game thực tế (BQT tổng hợp)
 │
-├── docs/                          # Hệ thống tài liệu dự án (Obsidian Vault)
+├── docs/                          # Hệ thống tài liệu dự án (Obsidian Vault: 00 đến 04)
 └── README.md                      # Giới thiệu tổng quan dự án
 ```
 
@@ -94,9 +100,9 @@ LunarChill.Club-Website/
 | Giai đoạn | Thời gian | Trọng tâm | Trạng thái |
 | :--- | :--- | :--- | :--- |
 | **01 — Research & Requirements** | 17/10 – 30/10 | Nghiên cứu, đặc tả yêu cầu, sitemap, ma trận scope | **Hoàn thành (Đóng)** |
-| **02 — Brand & UI Design** | 30/10 – 02/11 | Brand guidelines, design system, Figma prototype specs | **Hoàn thành (Đóng)** |
-| **03 — Development** | 02/11 – 14/11 | Lập trình giao diện tĩnh responsive (HTML/CSS/JS) | **Hoàn thành (Đủ 6 trang tĩnh)** |
-| **04 — QA & Review** | 15/11 – 18/11 | Kiểm thử đa thiết bị, kiểm tra hiệu năng & API | Dự kiến |
+| **02 — Brand & UI Design** | 30/10 – 02/11 | Brand guidelines, design system, chuyển đổi Minecraft Voxel UI | **Hoàn thành (Đóng)** |
+| **03 — Development** | 02/11 – 04/11 | Lập trình giao diện tĩnh responsive (HTML/CSS/JS) | **Hoàn thành (Đủ 8 trang tĩnh)** |
+| **04 — QA & Review** | 04/11 – 18/11 | Kiểm thử đa thiết bị, kiểm tra hiệu năng, API & Vercel Clean URLs | **Đang tiến hành** |
 | **05 — Handover & Launch** | 19/11 – 20/11 | Deploy Vercel Production, bàn giao chính thức | Dự kiến |
 
 ---

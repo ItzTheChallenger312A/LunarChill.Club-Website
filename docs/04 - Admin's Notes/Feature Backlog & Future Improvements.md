@@ -28,7 +28,7 @@
 
 | Mức độ | Tính năng / Hạng mục cải tiến | Mô tả chi tiết | Trạng thái |
 | :---: | :--- | :--- | :---: |
-| **P0** | **Đồng nhất Port 25572 cho cả Java & Bedrock** | Bỏ port riêng cho PC, gộp thống nhất chung đuôi `:25572` cho cả hai nền tảng Java và Bedrock (cấu hình GeyserMC UDP lắng nghe trên port 25572). Cập nhật lại toàn bộ `config.js`, các nút copy và card kết nối trên website. | ⏳ Đang chuẩn bị |
+| **P0** | **Đồng nhất Port 25572 cho cả Java & Bedrock** | Thống nhất chung port `:25572` cho cả hai nền tảng Java và Bedrock (cấu hình GeyserMC UDP lắng nghe trên port 25572). Đã cập nhật toàn bộ `config.js`, các nút copy, header, drawer và thẻ kết nối trên website kèm fallback an toàn. | ✅ Đã hoàn thành |
 | **P1** | **Mã QR kết nối 1-chạm cho Mobile (Bedrock/PE)** | Hiển thị mã QR hoặc deep link `minecraft://?addExternalServer=...` để người chơi trên điện thoại chỉ cần chạm là tự mở Minecraft và thêm máy chủ. | ⏳ Đang chờ |
 | **P2** | **Biểu đồ Người chơi trực tuyến trong ngày** | Hiển thị một sparkline / mini graph nhỏ thể hiện khung giờ đông người chơi nhất trong 24h để anh em biết lúc nào đông vui để vào. | 💡 Ý tưởng |
 | **P2** | **Tra cứu Ping thời gian thực theo khu vực** | Bổ sung hiển thị độ trễ mạng thực tế từ 3 miền (Hà Nội, Đà Nẵng, TP.HCM) như phong cách của TheLovelyValley. | 💡 Ý tưởng |

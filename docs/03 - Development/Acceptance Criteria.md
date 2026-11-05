@@ -1,4 +1,4 @@
-﻿# LunarChill.Club Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
+# LunarChill.Club Website — Acceptance Criteria (Tiêu chí Nghiệm thu Chất lượng)
 
 > Bộ tiêu chuẩn và danh mục kiểm thử (Checklist) dùng để nghiệm thu toàn bộ tính năng, giao diện và hiệu năng của website LunarChill.Club trước khi xuất bản bản phát hành chính thức (Release Candidate).
 > **Nguyên tắc nghiệm thu:** Chỉ đánh dấu `[x]` khi đã xác minh thực tế trên code hoặc môi trường chạy thật; các hạng mục cần trình duyệt thật, thiết bị di động thật hoặc môi trường Vercel Preview được giữ `[ ]` kèm trạng thái rõ ràng.
@@ -28,8 +28,8 @@
     - Xuất hiện Toast Notification trượt từ đáy màn hình thông báo rõ ràng cho người dùng.
 - [ ] **AC-02.2 (Khả năng tương thích thiết bị di động — Chờ test thiết bị iOS/Android thật):**
   - Hoạt động trơn tru trên cả Safari (iOS) và Chrome (Android). Có fallback an toàn nếu trình duyệt chặn quyền clipboard.
-- [x] **AC-02.3 (Thông số Bedrock & Pocket Edition):**
-  - Cung cấp rõ ràng `data-copy-target="bedrock"` (`LunarChill.club`) và cổng kết nối Bedrock/PE `19143` cho cả người chơi Bedrock Windows và điện thoại.
+- [x] **AC-02.3 (Thông số Bản PC & Bản PE riêng — Đã đồng nhất P0):**
+  - Cung cấp rõ ràng `data-copy-target="pc"` (`LunarChill.club:25572`) cho bản PC (Java & Bedrock trên máy tính) và `data-copy-target="pe"` (`LunarChill.club`, Cổng: `25572`, kèm fallback `:19143`) cho bản PE riêng trên điện thoại.
 
 ### AC-03: Cổng Điều hướng & Liên kết Ngoại vi
 - [x] **AC-03.1 (Discord Community & Active State):**
@@ -57,11 +57,34 @@
   - Huy hiệu tròn `logo.webp` (`240×240px`, `12.55 KB`) hiển thị sắc nét ở Hero Section (`240px` Desktop / `160px` Mobile).
   - Biểu tượng `apple-touch-icon.png` (`180×180px`, `61.00 KB`) dùng riêng cho iOS.
   - Ảnh chia sẻ mạng xã hội `og-banner.jpg` (`1200×630px`, `87.47 KB`) và `og-banner.webp` (`1200×630px`, `49.66 KB`) thay thế hoàn toàn việc trỏ `og:image` vào file `logo.png` (`1.71 MB`). Giữ nguyên `logo.png` (`1254×1254px`) làm master asset.
-- [x] **AC-06.3 (Độ chuẩn xác Bảng màu, Contrast WCAG AA & Thang Radius):**
+- [x] **AC-06.3 (Độ chuẩn xác Bảng màu, Contrast WCAG AA & Quyết định Chuyển đổi Pixel Voxel UI):**
   - Giữ bản sắc Deep Abyss Black (`#090914`), Midnight Indigo (`rgba(10, 14, 42, 0.88)`), Waterfall Glow Blue (`#688BF8`), Moon Core White (`#FEFDFD`).
   - Độ tương phản đạt chuẩn WCAG AA+: chữ trên nút Primary CTA đạt `6.26:1`, chữ `--color-text-muted` (`#8899B0`) đạt `6.45:1`.
-  - Thang bo góc tuân thủ tối đa `8px` (`--radius-tag: 4px`, `--radius-btn: 6px`, `--radius-card: 8px`, `--radius-dialog: 8px`).
-  - Phần **Community Showcase** hiển thị thông báo trung thực đang cập nhật ảnh chụp thực tế từ BQT, không dùng placeholder giả lập hay ảnh stock.
+  - **Quyết định Thiết kế Chính thức (Design Decision Record):** Chuyển từ thang bo góc tròn truyền thống (`8px`) sang **Minecraft Voxel UI (Pixel Stepped Corners)** thuần chất voxel: `--radius: 0px`, sử dụng `--clip-pixel-card` (cắt góc bậc thang 4px) và `--clip-pixel-plaque` (cắt góc 2 bậc 6px có gờ đỉnh/đáy) kết hợp tactile shadow (`inset 0 2px 0`, `inset 0 -3px 0`).
+  - Phần **Community Showcase** hiển thị thông báo trung thực đang cập nhật ảnh chụp thực tế từ BQT, không dùng placeholder giả lập hay ảnh stock (Anti-Slop).
+
+### AC-10: Cấu trúc Homepage Mới & Góc Cắm Trại (The Campsite Horizon & Server Portal)
+- [x] **AC-10.1 (Hero Căn Giữa & Campsite Divider):**
+  - Bố cục Hero căn giữa trang trọng, loại bỏ khung 2 cột lặp logo.
+  - Ranh giới chuyển tầng (Campsite Divider) sử dụng asset texture gốc Minecraft 16×16px: khối cỏ `grass_block_side.png`, đất `dirt.png`, đốm lửa trại bập bùng bằng CSS sprite `steps(8)`, khói pixel trôi lên và đèn lồng vàng tỏa sáng dịu.
+- [x] **AC-10.2 (Server Portal Card — Phong cách TheLovelyValley):**
+  - Bộ đếm người chơi lớn (`0 / 50 người đang chơi`), ưu tiên nền tảng đang Online trước để tránh việc Java offline trả về 0 đè lên Bedrock.
+  - Lưới 3 thẻ cổng kết nối (Host dùng chung, Java Port 25572, Bedrock Port 25572) có icon `[✦]` chuyển màu động theo trạng thái mạng.
+  - Timestamp kiểm tra thời gian thực định dạng `HH:mm:ss DD-MM`.
+
+### AC-11: Danh Bạ Thị Trấn (`/towns` — Honest Skeleton & Zero-Slop)
+- [x] **AC-11.1 (Cấu trúc Chờ dữ liệu Thực tế):**
+  - Tuân thủ nguyên tắc Anti-Slop: Không dựng danh sách thị trấn giả hoặc số liệu cư dân ảo.
+  - Hiển thị thông báo minh bạch BQT đang tổng hợp hồ sơ thị trấn thực tế từ máy chủ.
+- [x] **AC-11.2 (Cẩm nang Lập thị trấn & Tra cứu Lệnh Towny):**
+  - Cung cấp hướng dẫn 4 giai đoạn phát triển thị trấn (Khai hoang -> Cắm cờ -> Thu nạp cư dân -> Liên minh quốc gia).
+  - Bảng lệnh Towny trực quan, nút sao chép 1-click có phản hồi toast.
+
+### AC-12: Triển Lãm Cộng Đồng (`/gallery` — Honest Skeleton & Filter Logic)
+- [x] **AC-12.1 (Cấu trúc Chờ Ảnh Thực tế từ In-game):**
+  - Thông báo minh bạch đang thu thập ảnh chụp công trình và khoảnh khắc sinh tồn thực tế từ người chơi qua Discord.
+- [x] **AC-12.2 (Bộ lọc Danh mục & Hỗ trợ URL Hash):**
+  - Hệ thống nút lọc 4 danh mục (`Tất cả`, `Thị trấn`, `Công trình`, `Khoảnh khắc`) đã có sẵn logic JavaScript xử lý `data-gallery-filter` và tự động kích hoạt bộ lọc khi truy cập qua URL hash (ví dụ: `gallery.html#filter-towns`).
 
 ---
 

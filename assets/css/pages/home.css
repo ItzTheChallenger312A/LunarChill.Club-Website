@@ -48,6 +48,129 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Hero Celestial Sky (Mặt trăng Minecraft & Luồng ánh trăng dịu êm) --- */
+.hero-celestial-sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.celestial-moon-wrap {
+  position: absolute;
+  top: 36px;
+  right: clamp(24px, 12vw, 160px);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lunar-float 7s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.pixel-moon {
+  width: 64px;
+  height: 64px;
+  background-image: url('../../images/minecraft/moon_crescent.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 16px rgba(224, 242, 254, 0.8)) drop-shadow(0 0 32px rgba(56, 189, 248, 0.35));
+}
+
+/* Vầng hào quang ánh trăng dịu mát (Moonlight Halo) */
+.moonlight-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224, 242, 254, 0.18) 0%, rgba(56, 189, 248, 0.08) 42%, transparent 72%);
+  z-index: 1;
+  pointer-events: none;
+  animation: moonlight-pulse 5.5s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+/* Luồng ánh trăng rọi nghiêng huyền ảo hướng về khu cắm trại (Moonlight Beam) */
+.moonlight-beam {
+  position: absolute;
+  top: -20px;
+  right: clamp(10px, 9vw, 130px);
+  width: 320px;
+  height: 640px;
+  background: linear-gradient(142deg, rgba(224, 242, 254, 0.09) 0%, rgba(56, 189, 248, 0.035) 45%, transparent 75%);
+  transform: rotate(-18deg);
+  transform-origin: top right;
+  pointer-events: none;
+  filter: blur(14px);
+  animation: moonlight-beam-sway 9s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+/* Tinh tú lấp lánh nhẹ quanh vầng trăng */
+.lunar-star {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(224, 242, 254, 0.85);
+  user-select: none;
+  pointer-events: none;
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
+  animation: star-twinkle 3.2s ease-in-out infinite alternate;
+}
+
+.lunar-star.star-1 {
+  top: -14px;
+  right: 18px;
+  animation-delay: 0s;
+}
+
+.lunar-star.star-2 {
+  bottom: -10px;
+  left: -16px;
+  font-size: 9px;
+  animation-delay: 1.1s;
+}
+
+.lunar-star.star-3 {
+  top: 24px;
+  left: -28px;
+  font-size: 8px;
+  animation-delay: 2.2s;
+}
+
+@keyframes lunar-float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-7px) rotate(-1.5deg); }
+}
+
+@keyframes moonlight-pulse {
+  0% { opacity: 0.72; transform: translate(-50%, -50%) scale(0.94); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes moonlight-beam-sway {
+  0% { opacity: 0.65; transform: rotate(-19deg) scaleX(0.96); }
+  100% { opacity: 1; transform: rotate(-16deg) scaleX(1.05); }
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 
 .hero-center-content {
@@ -149,10 +272,11 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 48px;
+  gap: clamp(18px, 4vw, 44px);
   position: relative;
   z-index: 3;
   margin-bottom: -2px; /* Dính khớp vào mặt trên khối cỏ */
+  max-width: 100%;
 }
 
 .campsite-prop {
@@ -160,6 +284,73 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Prop: Trees (Cây thông Spruce Taiga & Cây sồi Oak voxel Minecraft) */
+.prop-tree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Đổ bóng elip mờ dưới gốc cây trên nền cỏ */
+.prop-tree::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Cây thông Spruce (Taiga / Đêm lạnh) đứng cánh trái */
+.pixel-spruce-tree {
+  width: 90px;
+  height: 150px;
+  background-image: url('../../images/minecraft/spruce_tree.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  image-rendering: pixelated;
+  transform-origin: bottom center;
+  animation: tree-sway-left 7s ease-in-out infinite alternate;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+  will-change: transform;
+}
+
+/* Cây sồi Oak đứng cánh phải */
+.pixel-oak-tree {
+  width: 98px;
+  height: 122px;
+  background-image: url('../../images/minecraft/oak_tree.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  image-rendering: pixelated;
+  transform-origin: bottom center;
+  animation: tree-sway-right 8.5s ease-in-out infinite alternate;
+  animation-delay: 1.2s;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+  will-change: transform;
+}
+
+@keyframes tree-sway-left {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(1.1deg); }
+  100% { transform: rotate(-0.8deg); }
+}
+
+@keyframes tree-sway-right {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-0.9deg); }
+  100% { transform: rotate(0.8deg); }
 }
 
 /* Prop: Oak Log Bench (Ghế gỗ sồi) */
@@ -175,10 +366,11 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Prop: Campfire (Lửa trại Minecraft có animation bập bùng) */
+/* Prop: Campfire (Lửa trại Minecraft có animation bập bùng & đế gỗ) */
 .prop-campfire {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 52px;
+  position: relative;
 }
 
 .campfire-glow {
@@ -186,13 +378,14 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 110px;
+  width: 220px;
+  height: 120px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.38) 0%, rgba(239, 68, 68, 0.14) 50%, transparent 75%);
+  background: radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.42) 0%, rgba(239, 68, 68, 0.16) 50%, transparent 75%);
   filter: blur(14px);
   pointer-events: none;
   animation: campfire-glow-pulse 2.8s infinite ease-in-out;
+  z-index: 1;
 }
 
 @keyframes campfire-glow-pulse {
@@ -200,35 +393,57 @@
   50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
 }
 
+/* Đế gỗ khúc củi lửa trại Minecraft isometric */
+.campfire-base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 45px;
+  background-image: url('../../images/minecraft/campfire_log_base.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  image-rendering: pixelated;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+/* Ngọn lửa bập bùng nằm giữa các khúc củi */
 .campfire-sprite {
-  width: 48px;
-  height: 48px;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
   background-image: url('../../images/minecraft/campfire_fire.png');
   background-repeat: no-repeat;
-  background-size: 48px 384px;
+  background-size: 44px 352px;
   background-position: 0 0;
   image-rendering: pixelated;
   animation: campfire-flame 0.9s steps(8) infinite;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.7));
+  position: absolute;
+  z-index: 3;
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.85)) drop-shadow(0 -4px 8px rgba(239, 68, 68, 0.4));
 }
 
 @keyframes campfire-flame {
   from { background-position: 0 0; }
-  to { background-position: 0 -384px; }
+  to { background-position: 0 -352px; }
 }
 
-/* Khói Lửa Trại (Pixel Smoke Particles) */
+/* Khói Lửa Trại (Pixel Smoke Particles bốc lên từ ngọn lửa) */
 .campfire-smoke {
   position: absolute;
-  bottom: 38px;
+  bottom: 46px;
   left: 50%;
   transform: translateX(-50%);
   width: 20px;
   height: 64px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 4;
 }
 
 .smoke-particle {
@@ -805,6 +1020,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  .campsite-scenery {
+    gap: 18px;
+  }
+  .pixel-spruce-tree {
+    width: 68px;
+    height: 114px;
+  }
+  .pixel-oak-tree {
+    width: 74px;
+    height: 92px;
+  }
+  .celestial-moon-wrap {
+    right: 20px;
+    top: 26px;
+  }
+}
+
 @media (max-width: 480px) {
   .portal-top-bar {
     flex-direction: column;
@@ -817,11 +1050,44 @@
     gap: 6px;
   }
   .campsite-scenery {
-    gap: 20px;
+    gap: 10px;
+  }
+  .pixel-spruce-tree {
+    width: 48px;
+    height: 80px;
+  }
+  .pixel-oak-tree {
+    width: 52px;
+    height: 65px;
   }
   .pixel-oak-log {
-    width: 40px;
-    height: 20px;
+    width: 36px;
+    height: 18px;
+  }
+  .prop-campfire {
+    width: 48px;
+    height: 44px;
+  }
+  .campfire-base {
+    width: 48px;
+    height: 38px;
+  }
+  .celestial-moon-wrap {
+    right: 12px;
+    top: 18px;
+    width: 48px;
+    height: 48px;
+  }
+  .pixel-moon {
+    width: 48px;
+    height: 48px;
+  }
+  .moonlight-halo {
+    width: 130px;
+    height: 130px;
+  }
+  .moonlight-beam {
+    display: none; /* Tránh che khuất nội dung & tiết kiệm tài nguyên di động */
   }
   .hero-cta-group {
     flex-direction: column;
@@ -829,5 +1095,24 @@
   }
   .hero-cta-group .btn {
     width: 100%;
+  }
+}
+
+/* --- Accessibility: Respect Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .celestial-moon-wrap,
+  .moonlight-halo,
+  .moonlight-beam,
+  .lunar-star,
+  .pixel-spruce-tree,
+  .pixel-oak-tree,
+  .campfire-glow,
+  .lantern-glow,
+  .smoke-particle {
+    animation: none !important;
+    transition: none !important;
+  }
+  .campfire-sprite {
+    animation-duration: 4s; /* Giảm giật nếu người dùng nhạy cảm chuyển động */
   }
 }

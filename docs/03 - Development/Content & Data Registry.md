@@ -1,4 +1,4 @@
-﻿# LunarChill - Content & Data Registry (Single Source of Truth)
+# LunarChill - Content & Data Registry (Single Source of Truth)
 
 > **Tài liệu nguồn dữ liệu chuẩn (SSOT)**  
 > Quản lý tập trung toàn bộ dữ liệu thực tế, thông số kết nối, nội dung cẩm nang, nội quy, danh sách plugin/datapack, cơ chế sinh tồn đặc thù và người chịu trách nhiệm xác nhận thông tin cho website LunarChill.Club.
@@ -10,10 +10,10 @@
 | Thông số | Giá trị thực tế | Tình trạng xác nhận | Người xác nhận |
 | :--- | :--- | :--- | :--- |
 | **Domain chính (Web & Server)** | `LunarChill.club` | Đã cấu hình DNS | BQT Server |
-| **PC (Java Edition) IP** | `LunarChill.club` | Đang hoạt động | BQT Server |
+| **Bản PC (Java & Bedrock) IP** | `LunarChill.club` | Đang hoạt động | BQT Server |
 | **PC Port** | `25572` | Đang hoạt động | BQT Server |
-| **PE (Bedrock Edition) IP** | `LunarChill.club` | Đang hoạt động | BQT Server |
-| **PE Port** | `19143` (bắt buộc nhập) | Đang hoạt động | BQT Server |
+| **Bản PE riêng (Điện thoại) IP** | `LunarChill.club` | Đang hoạt động | BQT Server |
+| **PE Port** | `25572` (đồng nhất với PC, fallback `19143`) | Đã thống nhất P0 | BQT Server |
 | **Phiên bản hỗ trợ PC** | 1.21.11 đến bản mới nhất (26.3) | Đã xác nhận | BQT Server |
 | **Phiên bản hỗ trợ PE** | 26.30 – 26.51 | Đã xác nhận | BQT Server |
 | **Query Server Mode** | `enable-query=true` (Port: 25572) | mcstatus.io Dual Fetch | Lead Dev |
@@ -26,7 +26,7 @@
 | :--- | :--- | :--- | :--- |
 | **Discord Community** | `https://discord.gg/lunarchill` | Tham gia cộng đồng, mở Ticket hỗ trợ | Hoạt động |
 | **mcstatus.io PC (Java)** | `https://api.mcstatus.io/v2/status/java/LunarChill.club:25572` | Trạng thái online & số người chơi PC | Đã tích hợp |
-| **mcstatus.io PE (Bedrock)**| `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:19143` | Trạng thái online & số người chơi PE | Đã tích hợp |
+| **mcstatus.io PE (Bedrock)**| `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:25572` (fallback: `:19143`) | Trạng thái online & số người chơi PE | Đã tích hợp |
 
 ---
 
@@ -37,15 +37,17 @@
 3. **ImageMap Client:** Mod hỗ trợ hiển thị tranh ảnh nét phân giải cao từ plugin ImageFrame.
 4. **PatPat:** Hiển thị hoạt ảnh vỗ về / xoa đầu người chơi khác.
 5. **Sodium & Iris Shaders (Fabric):** Tối ưu hóa rendering tăng FPS và hỗ trợ shaderpack ánh trăng.
+6. ⚠️ **Cảnh báo Litematica:** Tạm thời **KHÔNG DÙNG** Litematica (tránh bị hệ thống Anti-Cheat tự động ban).
 
 ---
 
 ## 4. Cơ chế Sinh tồn Đặc thù (Unique Gameplay Mechanics)
 
 ### 4.1. Khai khoáng & Hiệu ứng Đào Chậm
-- Tọa độ $Y \le 0$: Đào Deepslate, Diorite, Andesite, Granite bị **Đào chậm 1 phút**.
-- **Miễn trừ:** Giữ **30 level kinh nghiệm trở lên** được đào bình thường không bị phạt.
-- **Ancient Debris:** Luôn bị **Đào chậm 1 phút, không thể miễn trừ**.
+- **Mục tiêu mới:** Cày đủ **Level 30** để mở khóa sức mạnh đào bới bình thường!
+- **Tọa độ $Y \le 0$ (Đổi từ $Y \le 40$ thành $Y \le 0$):** Chưa đạt Level 30 mà đào *Stone, Deepslate, Diorite, Andesite, Granite* tại $Y \le 0$ bị phạt **Mining Fatigue Level 4 trong 60 giây**.
+- **Bảo vệ Mảnh Vỡ Cổ Đại (Ancient Debris) tại Nether:** Chưa đủ Level 30 mà đào Ancient Debris nhận ngay hình phạt cực gắt: **Mining Fatigue Level 4 kéo dài tận 5 PHÚT**.
+- **Mở khóa sức mạnh (Level 30+):** Đạt cấp 30 trở lên được đào bình thường không bị dính debuff ở $Y \le 0$ và Netherite.
 - Khuyến khích thám hiểm hang động sâu tự nhiên thay vì strip mine đào hầm.
 
 ### 4.2. Thanh Chỉ số Nước (Water)
@@ -77,6 +79,19 @@
 - **Hạn chế Nether:** Không đặt được Obsidian trong Nether; không đặt được block trên trần Nether.
 - **Farm quái nhân tạo:** Mọi farm nhân tạo trên không, trên biển đều bị vô hiệu hóa (kể cả farm raid).
 
+### 4.7. Rương Tử Nạn (DeathChest)
+- Hoạt động tại **cả 3 World** (Overworld, Nether, The End).
+- Thời hạn lưu trữ: **1 giờ (60 phút)** kể từ thời điểm tử nạn.
+
+### 4.8. Bảo toàn Ngọc Rune & Hỗ trợ Đền bù
+- Rune được **bảo toàn nguyên vẹn Level và vật phẩm** sau cập nhật.
+- Hỗ trợ tạo ticket Discord đền bù cho người chơi đã chuẩn bị nguyên liệu mua Rune trước cập nhật.
+
+### 4.9. Điểm Mốc Tọa Độ (BeaconWaypoint)
+- **Bật lại Discovery Mode:** Lần đầu tiên đến trạm Beacon tại làng, nhấp chuột phải để mở khóa (Unlock 🗺️); sau đó tự do dịch chuyển.
+- **Chi phí đi lại:** Thu phí mỗi chuyến dịch chuyển bằng điểm kinh nghiệm (EXP).
+- **Tắt sharing:** Không chia sẻ waypoint đi chung, giữ trải nghiệm khám phá độc lập.
+
 ---
 
 ## 5. Bảng Lệnh Thông dụng In-game (`/guide`)
@@ -89,8 +104,10 @@
 | | `/tpa [tên_người_chơi]` | Gửi yêu cầu dịch chuyển tới bạn bè | Có |
 | | `/tpaccept` | Đồng ý yêu cầu dịch chuyển | Có |
 | | `/lay` | Nằm nghỉ ngơi reset Phantom mà không cần ngủ qua đêm | Có |
-| | *Beacon Waypoint* | Tương tác với Beacon để dịch chuyển tức thời | In-game |
-| **Thị trấn & Đất đai (Towny)** | `/town` | Xem thông tin thị trấn của bạn | Có |
+| | `/sit` | Ngồi xuống; nhấp chuột phải đầu bạn bè để ngồi đầu (tối đa 2 người - We Bare Bears 🐻🐻) | Có |
+| | *Beacon Waypoint* | Chuột phải vào Beacon mở khóa trạm dịch chuyển (thu phí bằng EXP) | In-game |
+| **Thị trấn & Đất đai (Towny)** | `/t menu` | **MỚI:** Mở giao diện Menu GUI bấm chuột quản lý thị trấn trực quan | Có |
+| | `/town` | Xem thông tin thị trấn của bạn | Có |
 | | `/town new [tên]` | Thành lập thị trấn mới | Có |
 | | `/town claim` | Mở rộng ranh giới chunk thị trấn | Có |
 | | `/plot claim` | Nhận quyền sở hữu một lô đất trong thị trấn | Có |
@@ -103,8 +120,10 @@
 | **Giao thương & Kinh tế** | `/ah` | Mở sàn đấu giá người chơi (Auction House) | Có |
 | | `/ah sell [giá]` | Đăng bán vật phẩm đang cầm trên tay | Có |
 | | `/orders` | Mở bảng đặt hàng thu mua tài nguyên số lượng lớn | Có |
+| | **Dynamic Pricing** | Cơ chế tự cân bằng giá mua/bán theo cung - cầu thị trường (xả nhiều giảm giá, mua nhiều tăng giá, tự hồi phục theo chu kỳ) | Hoạt động |
 | **Tiện ích & Chat** | `[item]` hoặc `[i]` | Khoe vật phẩm đang cầm trên tay lên khung chat | Có |
 | | `[inv]` | Hiển thị toàn bộ túi đồ hiện tại lên khung chat | Có |
+| | `/itemedit` | **MỚI:** Chỉnh sửa vật phẩm trên tay với đủ mọi cách (đổi tên, sửa lore, màu sắc, làm kỷ vật) | Có |
 | | `/skin [tên_skin]` | Thay đổi trang phục skin nhân vật | Có |
 | | `/redeem [mã_code]` | Nhập mã giftcode nhận quà tân thủ / sự kiện | Có |
 | | *AxShulkers* | Shift + Chuột phải vào Shulker trong balo để mở nhanh | In-game |

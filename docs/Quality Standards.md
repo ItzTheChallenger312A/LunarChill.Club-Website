@@ -1,4 +1,4 @@
-﻿# LunarChill.Club — Quality Standards & Anti-Slop Charter
+# LunarChill.Club — Quality Standards & Anti-Slop Charter
 > **Tài liệu Quy chuẩn Chung (Standard Operating Guidelines)**
 > Dành cho toàn bộ quá trình Thiết kế, Lập trình và Biên tập Nội dung website LunarChill.Club.
 > Bắt buộc tuân thủ 100% nhằm đảm bảo chất lượng thủ công tinh tế (Human-Crafted Excellence) và triệt tiêu hoàn toàn mã nguồn / giao diện dạng "AI-Generated Slop".
@@ -21,14 +21,15 @@
 
 > Áp dụng trực tiếp để khắc chế 45 lỗi Design Slop từ `slop-detect.com/docs`:
 
-### 2.1. Kiểm soát Góc bo (Corner Radii Control) — *Tuyệt đối không bo tròn quá mức*
+### 2.1. Quyết định Thiết kế Chính thức: Chuyển đổi sang Minecraft Voxel UI (Pixel Stepped Corners)
 * ❌ **Cấm triệt để:** 
-  - Không dùng `border-radius: 16px`, `20px`, `24px` hoặc `32px` trên các thẻ Card, Container.
+  - Không dùng bo tròn bán kính cong tròn (`border-radius: 8px`, `12px`, `16px`, `24px`...) làm mất đi bản sắc khối vuông Minecraft.
   - Không biến mọi nút bấm, tag, badge thành dạng viên thuốc tròn ủng (`rounded-full: 9999px`).
-* ✔️ **Quy chuẩn bắt buộc:**
-  - **Card tính năng, Popup, Dialog:** Cố định **`8px`** (`--radius-card: 8px`).
-  - **Nút bấm (Buttons), Input:** Cố định **`6px`** (`--radius-btn: 6px`).
-  - **Tag nhỏ, Command chip:** Cố định **`4px`** (`--radius-tag: 4px`).
+* ✔️ **Quy chuẩn Voxel Pixel UI mới (Chính thức áp dụng):**
+  - **Triết lý:** `--radius: 0px` trên toàn hệ thống tokens, thay thế bằng cắt góc bậc thang pixel sắc nét (Pixel Stepped Architecture).
+  - **Khung Phụ (Card, Box, Step, Feature, Command Chip):** Sử dụng `--clip-pixel-card` (cắt góc bậc thang 4px) kết hợp viền pixel sắc cạnh.
+  - **Khung Chính (Plaque Connection Card, Buttons):** Sử dụng `--clip-pixel-plaque` (cắt góc 2 bậc 6px có gờ nhô đặc trưng Minecraft) kết hợp tactile shadow (`inset 0 2px 0`, `inset 0 -3px 0`).
+  - **Sàn địa hình Voxel (Campsite Horizon):** Sử dụng dải texture pixel 16×16 nguyên bản của Minecraft (`grass_block_side`, `dirt`, `campfire_fire`, `item_lantern`) với `image-rendering: pixelated`.
 
 ### 2.2. Kiểm soát Màu sắc & Hiệu ứng (Colors & Glows)
 * ❌ **Cấm triệt để:**
@@ -85,7 +86,7 @@
 ### 3.2. Giọng văn Con người LunarChill (The Human Voice of LunarChill)
 * ✔️ **Gần gũi & Tự nhiên:** Dùng ngôn ngữ ấm áp, đời thường, có chút hóm hỉnh như anh em trong nhóm bạn thân rủ nhau chơi game.
 * ✔️ **Trung thực & Thực tế:**
-  - Cung cấp dữ liệu cụ thể: IP kết nối `LunarChill.club`, Bedrock Port `19143`, phiên bản hỗ trợ.
+  - Cung cấp dữ liệu cụ thể: IP kết nối `LunarChill.club`, Cổng dùng chung `25572` (Java & Bedrock), phiên bản hỗ trợ.
   - Hướng dẫn ngắn gọn: 3 bước vào game, lệnh `/claim` để giữ đất, gặp lỗi mở ticket Discord.
 * ✔️ **Ngắn gọn & Trực diện:** Đi thẳng vào thông tin người chơi cần, tôn trọng thời gian của người đọc.
 

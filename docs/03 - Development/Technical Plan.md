@@ -1,4 +1,4 @@
-﻿# LunarChill.Club Website — Technical Plan
+# LunarChill.Club Website — Technical Plan
 
 > Kế hoạch kỹ thuật chi tiết phục vụ triển khai mã nguồn Phase 03: Thiết kế website bằng code sạch (Vanilla HTML5, CSS3, JavaScript ES6+), tối ưu hiệu năng tải trang, responsive toàn diện và tích hợp API trạng thái máy chủ chuẩn mực.
 
@@ -62,7 +62,8 @@ export const CONFIG = {
   SERVER_IP_JAVA: 'LunarChill.club',
   SERVER_PORT_JAVA: 25572,
   SERVER_IP_BEDROCK: 'LunarChill.club',
-  SERVER_PORT_BEDROCK: 19143,
+  SERVER_PORT_BEDROCK: 25572, // Đã đồng nhất 25572 cho cả Java & Bedrock (P0)
+  SERVER_PORT_BEDROCK_FALLBACK: 19143,
   VERSION_PC: '1.21.11 - 26.3',
   VERSION_PE: '26.30 - 26.51',
   DISCORD_INVITE_URL: 'https://discord.gg/lunarchill',

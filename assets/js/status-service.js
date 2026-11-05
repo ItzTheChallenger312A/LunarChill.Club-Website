@@ -60,10 +60,43 @@ export class StatusService {
 
     const bedrockPromise = bedrockData !== null
       ? Promise.resolve({ platform: 'bedrock', status: 'ok', data: bedrockData })
-      : this.fetchPlatformStatus(CONFIG.API_STATUS_BEDROCK, CONFIG.CACHE_KEY_BEDROCK, 'bedrock');
+      : this.fetchBedrockStatus();
 
     const [javaResult, bedrockResult] = await Promise.all([javaPromise, bedrockPromise]);
     this.applyCombinedStatus(javaResult, bedrockResult);
+  }
+
+  /**
+   * Truy vấn trạng thái Bedrock: Thử trước endpoint cổng 25572 thống nhất,
+   * nếu GeyserMC chưa hoàn tất chuyển port thì fallback an toàn sang cổng 19143.
+   */
+  async fetchBedrockStatus() {
+    const primaryResult = await this.fetchPlatformStatus(
+      CONFIG.API_STATUS_BEDROCK,
+      CONFIG.CACHE_KEY_BEDROCK,
+      'bedrock'
+    );
+
+    if (primaryResult.status === 'ok' && primaryResult.data?.online === true) {
+      return primaryResult;
+    }
+
+    if (CONFIG.API_STATUS_BEDROCK_FALLBACK) {
+      try {
+        const fallbackResult = await this.fetchPlatformStatus(
+          CONFIG.API_STATUS_BEDROCK_FALLBACK,
+          CONFIG.CACHE_KEY_BEDROCK,
+          'bedrock'
+        );
+        if (fallbackResult.status === 'ok' && fallbackResult.data?.online === true) {
+          return fallbackResult;
+        }
+      } catch (e) {
+        // Fallback thất bại thì trả về primaryResult ban đầu
+      }
+    }
+
+    return primaryResult;
   }
 
   getCachedStatus(cacheKey) {
@@ -204,13 +237,33 @@ export class StatusService {
     }
 
     // Cập nhật bộ đếm người chơi lớn (Big Metric)
-    if (javaOnline || bedrockOnline) {
-      const playersOnline = javaRes?.data?.players?.online ?? bedrockRes?.data?.players?.online ?? 0;
-      const maxPlayers = javaRes?.data?.players?.max ?? bedrockRes?.data?.players?.max ?? 50;
-      if (this.playersOnlineEl) this.playersOnlineEl.textContent = String(playersOnline);
-      if (this.playersMaxEl) this.playersMaxEl.textContent = String(maxPlayers);
-    } else {
-      if (this.playersOnlineEl) this.playersOnlineEl.textContent = '0';
+    // Ưu tiên nền tảng đang Online thực tế; tránh việc Java Offline trả về 0 đè lên Bedrock đang có người chơi
+    let playersOnline = 0;
+    let maxPlayers = 50;
+
+    if (javaOnline && bedrockOnline) {
+      // Trong môi trường cross-play GeyserMC, lấy giá trị cao nhất giữa hai bên để phản ánh chính xác nhất
+      playersOnline = Math.max(
+        javaRes.data?.players?.online ?? 0,
+        bedrockRes.data?.players?.online ?? 0
+      );
+      maxPlayers = Math.max(
+        javaRes.data?.players?.max ?? 0,
+        bedrockRes.data?.players?.max ?? 0
+      ) || 50;
+    } else if (javaOnline) {
+      playersOnline = javaRes.data?.players?.online ?? 0;
+      maxPlayers = javaRes.data?.players?.max ?? 50;
+    } else if (bedrockOnline) {
+      playersOnline = bedrockRes.data?.players?.online ?? 0;
+      maxPlayers = bedrockRes.data?.players?.max ?? 50;
+    }
+
+    if (this.playersOnlineEl) {
+      this.playersOnlineEl.textContent = String(playersOnline);
+    }
+    if (this.playersMaxEl) {
+      this.playersMaxEl.textContent = String(maxPlayers);
     }
 
     // 1. Cả hai nền tảng đều Online
@@ -219,15 +272,15 @@ export class StatusService {
       return;
     }
 
-    // 2. Java Online, Bedrock gặp lỗi hoặc Offline
+    // 2. PC Online, PE gặp lỗi hoặc Offline
     if (javaOnline) {
-      this.renderState('online', 'Java đang hoạt động');
+      this.renderState('online', 'Bản PC đang hoạt động');
       return;
     }
 
-    // 3. Bedrock Online, Java gặp lỗi hoặc Offline
+    // 3. PE Online, PC gặp lỗi hoặc Offline
     if (bedrockOnline) {
-      this.renderState('online', 'Bedrock đang hoạt động');
+      this.renderState('online', 'Bản PE đang hoạt động');
       return;
     }
 

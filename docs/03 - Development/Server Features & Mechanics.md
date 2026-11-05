@@ -1,4 +1,4 @@
-﻿# Server Features & Gameplay Mechanics — LunarChill.Club
+# Server Features & Gameplay Mechanics — LunarChill.Club
 
 > **Nguồn dữ liệu:** Đặc tả kỹ thuật chính thức từ BQT máy chủ LunarChill.Club  
 > **Cập nhật lần cuối:** 2026-11-02  
@@ -10,12 +10,15 @@
 ## 1. Cơ chế Sinh tồn Đặc thù (Unique Survival Mechanics)
 
 ### 1.1. Khai khoáng & Hiệu ứng Đào Chậm (Mining Fatigue Penalty)
-- **Khu vực áp dụng:** Từ tọa độ **$Y \le 0$ trở xuống** lòng đất sâu.
-- **Khối bị ảnh hưởng:** Đá bảng sâu (*Deepslate*), Đá hoa cương (*Granite*), Đá điorit (*Diorite*), Đá anđêzit (*Andesite*).
-- **Hình phạt:** Khi đào các khối đá trên ở độ sâu $Y \le 0$, nhân vật sẽ bị dính hiệu ứng **Đào chậm (Mining Fatigue) kéo dài trong 1 phút**.
-- **Điều kiện miễn trừ (Exemption):** Khi người chơi duy trì từ **30 cấp độ kinh nghiệm (Level 30+)** trở lên, nhân vật sẽ được miễn trừ hoàn toàn và có thể đào đá sâu bình thường.
-- **Quy tắc Ancient Debris:** Khối **Mảnh vỡ cổ đại (Ancient Debris)** khi đào sẽ **LUÔN LUÔN bị hiệu ứng Đào chậm 1 phút**, tuyệt đối **KHÔNG THỂ MIỄN TRỪ** kể cả khi đạt cấp 30+.
-- **Định hướng lối chơi:** Chấm dứt lối chơi cày hầm đào thẳng thủ công (strip-mining) nhàm chán. Khuyến khích người chơi mạo hiểm thám hiểm các mạng lưới hang động sâu tự nhiên khổng lồ (*Deep Dark, Mega Caves*) để khai thác quặng lộ thiên.
+- **Mục tiêu cốt lõi:** Cày đủ **Level 30** để mở khóa sức mạnh đào bới bình thường!
+- **Khu vực áp dụng tại Overworld:** Từ tọa độ **$Y \le 0$ trở xuống** lòng đất sâu (đã cập nhật thay đổi từ mốc $Y \le 40$ về $Y \le 0$).
+- **Khối bị ảnh hưởng:** Đá thường (*Stone*), Đá bảng sâu (*Deepslate*), Đá điorit (*Diorite*), Đá anđêzit (*Andesite*), Đá hoa cương (*Granite*).
+- **Hình phạt chưa đủ cấp (Dưới Level 30):** Nếu chưa đạt Level 30 mà cố tình xuống dưới độ cao $Y \le 0$ để mining, nhân vật sẽ bị dính ngay debuff **Mining Fatigue (Đào chậm) Level 4 trong 60 giây** mỗi khi phá các loại block trên.
+- **Cơ chế Bảo vệ Mảnh Vỡ Cổ Đại (Ancient Debris) tại Nether:**
+  - *Nether không dành cho newbie!* Nếu chưa đủ **Level 30** mà cố tình vác cúp đi cày Ancient Debris, nhân vật sẽ nhận ngay hình phạt cực gắt: debuff **Mining Fatigue Level 4 kéo dài tận 5 PHÚT (300 giây)**.
+  - Hãy cày đủ cấp (Level 30+) rồi hẵng mơ đến Netherite!
+- **Mở khóa sức mạnh (Đủ Level 30+):** Khi đạt và duy trì từ **Level 30 trở lên**, người chơi sẽ được giải phóng hoàn toàn, đào bới bình thường không còn bị dính debuff ở độ sâu $Y \le 0$ hay khi đào Ancient Debris.
+- **Định hướng lối chơi:** Chấm dứt lối chơi cày hầm đào thẳng thủ công (strip-mining) và rush Netherite sớm khi chưa sẵn sàng. Khuyến khích người chơi mạo hiểm thám hiểm các mạng lưới hang động sâu tự nhiên khổng lồ (*Deep Dark, Mega Caves*) để khai thác quặng lộ thiên.
 
 ---
 
@@ -40,6 +43,51 @@
   - Trang bị **Beacon (Đèn hiệu)** ở tay chính (*Main Hand*).
   - Khi cầm Beacon trên tay, lượng oxy của bản thân và **tất cả người chơi đứng gần** sẽ liên tục được nạp đầy.
   - *Ý nghĩa:* Tôn vinh tinh thần đồng đội và chiến thuật phối hợp thám hiểm The End / Nether.
+
+---
+
+### 1.4. Hệ thống Giá thị trường biến động (Dynamic Pricing)
+Chính thức kích hoạt cơ chế tự cân bằng giá mua/bán theo cung - cầu thị trường thực tế:
+- 🔻 **Bán ra quá nhiều (Oversupply Dump):** Khi cộng đồng xả một mặt hàng với số lượng quá lớn, giá thu mua mặt hàng đó của server sẽ tự động giảm dần nhằm chống tình trạng lạm phát tiền tệ và tích trữ farm quá mức.
+- 🔺 **Mua vào liên tục (High Demand Surge):** Khi nhu cầu tiêu thụ tăng cao, giá bán ra của vật phẩm tại shop sẽ tăng nhẹ theo thời gian để phản ánh chính xác giá trị khan hiếm của tài nguyên.
+- ⚖️ **Cơ chế hồi phục (Equilibrium Recovery):** Giá sẽ tự động cân bằng lại theo từng chu kỳ khi thị trường ổn định trở lại, giữ vững nền kinh tế sinh tồn lành mạnh, tuần hoàn và lâu dài.
+
+---
+
+### 1.5. Rương Tử Nạn (DeathChest) ở cả 3 Thế Giới
+- **Khu vực kích hoạt:** Áp dụng đồng bộ tại cả 3 World: **Overworld (Thế giới thực)**, **The Nether (Địa ngục)** và **The End (Hư không)**.
+- **Cơ chế lưu trữ:** Khi người chơi tử nạn, toàn bộ trang bị và vật phẩm trong túi đồ sẽ được thu gom an toàn vào một khối DeathChest tại đúng vị trí ngã xuống.
+- **Thời hạn tồn tại:** DeathChest có thời hạn bảo quản **chính xác 1 giờ (60 phút)**. Sau 1 giờ, rương sẽ tự động biến mất. Người chơi cần nhanh chóng quay lại tọa độ cũ để thu hồi đồ đạc (💀📦).
+
+---
+
+### 1.6. Cơ chế Bảo Toàn Rune & Chính Sách Đền Bù Ticket
+- **Đặc quyền Rune:** Thay vì bùa Mending, server sử dụng hệ thống Ngọc Rune bảo mệnh giúp bảo toàn trang bị khi tử nạn tại các chiều không gian nguy hiểm.
+- **Bảo toàn sau cập nhật:** Dữ liệu Rune được **giữ nguyên 100% cả Cấp độ (Level) lẫn vật phẩm đính kèm** qua các đợt bảo trì và cập nhật hệ thống ✨.
+- **Chính sách đền bù:** Những người chơi đã chuẩn bị sẵn nguyên liệu hoặc vật phẩm để mua Rune trước đợt cập nhật có thể **tạo Ticket tại kênh hỗ trợ Discord LunarChill** để được BQT kiểm tra và đền bù thỏa đáng.
+
+---
+
+### 1.7. Hệ thống Điểm Mốc Tọa Độ (BeaconWaypoint)
+- **Bật lại Discovery Mode (Chế độ khám phá):** Tái hiện trải nghiệm mở map RPG thế giới mở chân thực.
+  - **Cách mở khóa (Unlock):** Lần đầu tiên, người chơi chịu khó "chạy bằng cơm" tới thẳng vị trí đặt ngọn Beacon ở các ngôi làng. Khi tới nơi, chỉ cần **nhấp chuột phải vào trạm Beacon** để mở khóa điểm mốc (🗺️). Mở khóa thành công 1 lần là từ sau có thể dịch chuyển tức thời tới trạm đó vô tư bất kỳ lúc nào!
+- **Chi phí đi lại (Travel Cost):** Mỗi lượt dịch chuyển qua BeaconWaypoint có **thu phí bằng điểm kinh nghiệm (EXP)** của nhân vật.
+- **Tắt tính năng đi chung (Sharing disabled):** Vô hiệu hóa tính năng chia sẻ điểm Waypoint cho người khác dùng chung, bảo đảm tính công bằng và khuyến khích mỗi cá nhân tự mình thám hiểm mở bản đồ riêng.
+
+---
+
+### 1.8. Tiện ích Tương tác Cộng đồng: Towny Menu & GSit
+- **Towny Menu (`/t menu`):** Cung cấp giao diện đồ họa (GUI) bấm chuột trực quan cho hệ thống Towny, cho phép Thị trưởng và cư dân quản lý plot, ngân sách, phân quyền dễ dàng mà không cần ghi nhớ hàng tá câu lệnh.
+- **GSit - Ngồi đầu 2 tầng We Bare Bears (`/sit`):** Cho phép nhấp chuột phải vào đầu người chơi khác để ngồi lên đầu họ, hỗ trợ xếp chồng **tối đa 2 người** theo phong cách hoạt hình *Chúng Tôi Đơn Giản Là Gấu* 🐻🐻. Không cần lý do phức tạp, đơn giản là vì niềm vui giải trí lành mạnh!
+
+---
+
+### 1.9. Tùy biến Vật Phẩm Toàn Diện (ItemRename / ItemEdit)
+- **Cơ chế:** Cho phép người chơi tự do chỉnh sửa vật phẩm đang cầm trên tay chính với đầy đủ mọi tùy biến sáng tạo bằng lệnh `/itemedit`.
+- **Khả năng chỉnh sửa phong phú:**
+  - **Đổi tên vật phẩm (Rename):** Đặt tên độc bản cho vũ khí, công cụ, giáp trụ hoặc quà tặng với sự hỗ trợ của bảng mã màu phong phú.
+  - **Thêm và chỉnh sửa dòng mô tả (Lore):** Soạn thảo các dòng cốt truyện, trích dẫn, lời chúc tặng bạn bè hoặc ghi lại dấu ấn thám hiểm đáng nhớ.
+  - **Cá nhân hóa:** Biến trang bị và tài nguyên thông thường thành những kỷ vật độc nhất vô nhị mang đậm dấu ấn phong cách riêng.
 
 ---
 
@@ -100,6 +148,9 @@ Server khuyến khích và hỗ trợ tối đa cho người chơi cài đặt c
 5. **Sodium & Iris Shaders (Fabric):**
    - Tối ưu hóa FPS vượt trội và hỗ trợ các gói shader ánh trăng tuyệt đẹp.
 
+> [!WARNING] Cảnh Báo Khẩn Về Mod Litematica
+> Tạm thời **KHÔNG SỬ DỤNG** mod Litematica khi tham gia server. Việc sử dụng Litematica ở thời điểm hiện tại có thể khiến hệ thống Anti-Cheat nhận diện nhầm hành vi và tự động ban tài khoản. BQT sẽ hỗ trợ lại sau khi hoàn thiện kiểm tra tương thích. Hãy chờ thông báo chính thức, đừng thử vận may với Anti-Cheat! 😭
+
 ---
 
 ## 6. Danh mục 20 Plugins Vận hành
@@ -126,4 +177,4 @@ Server khuyến khích và hỗ trợ tối đa cho người chơi cài đặt c
 | **ImageFrame** | Treo tranh ảnh nghệ thuật từ URL lên khung tranh trong game. | Thẩm mỹ |
 | **BoatLimiter** | Ngăn chặn spam thuyền trôi dạt giữ TPS máy chủ luôn mượt mà. | Ổn định server |
 | **Chunky** | Pre-generate thế giới chống drop FPS khi người chơi mở map mới. | Hiệu năng |
-| **ItemEdit** | Quản lý tên/lore cho các vật phẩm lưu niệm giải đấu, lễ hội. | Quản trị sự kiện |
+| **ItemEdit / ItemRename** | Cho phép người chơi tự do chỉnh sửa vật phẩm trên tay với đủ mọi cách (đổi tên, sửa lore, định dạng màu sắc, làm kỷ vật/quà tặng). | Cá nhân hóa trang bị |

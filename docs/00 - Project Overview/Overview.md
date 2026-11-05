@@ -1,4 +1,4 @@
-﻿# LunarChill.Club Website — Project Overview
+# LunarChill.Club Website — Project Overview
 
 > A website built to introduce LunarChill.Club, express its identity ("Chill thôi, đừng có vội."), and connect players with its community.
 ## 1. Project Summary
@@ -11,15 +11,15 @@
     
 - **Deadline:** 2026-11-20
     
-- **Current phase:** Development (Phase 03)
+- **Current phase:** Development (Phase 03 Core Complete) ➔ QA & Review (Phase 04)
     
-- **Tech stack:** HTML, CSS, JavaScript
+- **Tech stack:** Vanilla HTML5, Modern CSS3 (GPU-accelerated, Pixel Stepped Voxel UI), Vanilla JavaScript (ES6+ Modules)
     
 - **Version control:** Git and GitHub Desktop
     
-- **Hosting plan:** Vercel
+- **Hosting plan:** Vercel (Edge Network, Clean URLs)
     
-- **Design tool:** Figma ([LunarChill.Club Website Prototype](https://www.figma.com/design/Hjdn5UhKT2D8ucSxTig4hy)) — In Progress (Phase 02)
+- **Design direction:** Minecraft Voxel UI × Cosmic Sanctuary (Figma Key: `Hjdn5UhKT2D8ucSxTig4hy`) — Design Decision: Pixel Stepped Architecture (0px radius) & Campsite Horizon
 ## 2. Project Goals
 
 The website should serve three main purposes:
@@ -173,3 +173,17 @@ Use this section to record major decisions, completed milestones, and changes in
 - Hoàn thiện tài liệu kỹ thuật [[Technical Plan]] và danh mục kiểm thử [[Acceptance Criteria]].
     
 - Cập nhật toàn diện `README.md` theo chuẩn repo mã nguồn mở.
+
+### 2026-11-04
+
+- **Hoàn thành triển khai trọn bộ 8 trang tĩnh:** `index.html`, `guide.html`, `towns.html`, `gallery.html`, `rules.html`, `terms.html`, `privacy.html`, `404.html`.
+    
+- **Quyết định Thiết kế Chính thức:** Chuyển đổi giao diện sang **Minecraft Voxel UI** (0px border-radius, cắt góc bậc thang pixel `--clip-pixel-card`, Plaque gờ nhô `--clip-pixel-plaque`).
+    
+- **Tái thiết kế Homepage:** Triển khai **The Campsite Horizon** (Hero căn giữa, lửa trại pixel animated 8 frame, đèn lồng vàng, sàn đất cỏ Minecraft) và **Server Portal Card** lấy cảm hứng từ TheLovelyValley (bộ đếm người chơi lớn, lưới 3 node kết nối, timestamp thời gian thực).
+    
+- **Khắc phục lỗi logic Status Service:** Sửa lỗi player count fallback để luôn ưu tiên nền tảng đang Online thực tế (chống đè số 0 khi Java offline).
+    
+- **Đồng bộ thương hiệu:** Thay thế triệt để `LunarChillSMP` thành `LunarChill.Club` trên toàn bộ mã nguồn và tài liệu.
+    
+- Khởi tạo thư mục `04 - Admin's Notes` với các tài liệu ghi chú kỹ thuật và backlog tính năng tương lai. Chuyển trạng thái dự án sang **Phase 04 — QA & Review**.

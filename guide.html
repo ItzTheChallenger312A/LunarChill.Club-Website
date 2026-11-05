@@ -77,11 +77,11 @@
     <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
-      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="java">
-        Sao chép IP Java: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
+        Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
       </button>
-      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="bedrock">
-        Sao chép Host Bedrock/PE: <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">19143</span>)
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pe">
+        Sao chép Host PE (Điện thoại): <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span>)
       </button>
       <a href="https://discord.gg/lunarchill" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
         Tham gia Discord
@@ -133,25 +133,25 @@
         <!-- 1. Kết nối máy chủ -->
         <section id="connect">
           <h2>1. Kết nối máy chủ</h2>
-          <p>Dùng chung một địa chỉ máy chủ duy nhất cho cả máy tính (Java &amp; Bedrock Windows) và thiết bị di động (Pocket Edition):</p>
+          <p>Dùng chung một địa chỉ máy chủ duy nhất cho cả máy tính (bản PC: Java &amp; Bedrock) và điện thoại di động (bản PE riêng):</p>
 
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <div class="command-header">
-                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Java Edition (PC / Máy tính)</strong>
-                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="java">Copy</button>
+                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bản PC (Java &amp; Bedrock trên máy tính)</strong>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="pc">Copy IP PC</button>
               </div>
               <p class="command-desc">Host: <code data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</code></p>
-              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ: <span data-config-text="VERSION_PC">1.21.11 – 26.3</span></small>
+              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ PC: <span data-config-text="VERSION_PC">1.21.11 – 26.3</span></small>
             </div>
 
             <div class="lunar-card command-card">
               <div class="command-header">
-                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bedrock Windows &amp; Pocket Edition</strong>
-                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="bedrock">Copy Host</button>
+                <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Bản PE riêng (Pocket Edition / Điện thoại)</strong>
+                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="pe">Copy Host PE</button>
               </div>
-              <p class="command-desc">Host: <code data-config-text="SERVER_HOST">LunarChill.club</code> • Port: <code data-config-text="SERVER_PORT_BEDROCK">19143</code></p>
-              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ: <span data-config-text="VERSION_PE">26.30 – 26.51</span></small>
+              <p class="command-desc">Host: <code data-config-text="SERVER_HOST">LunarChill.club</code> • Port: <code data-config-text="SERVER_PORT_BEDROCK">25572</code></p>
+              <small style="color: var(--color-text-muted);">Phiên bản hỗ trợ PE: <span data-config-text="VERSION_PE">26.30 – 26.51</span></small>
             </div>
           </div>
 
@@ -240,10 +240,26 @@
               </div>
               <p class="command-desc">Nằm nghỉ ngơi reset Phantom mà không cần ngủ qua đêm.</p>
             </div>
+
+            <div class="lunar-card command-card">
+              <div class="command-header">
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/sit">/sit</button>
+                <small>Click để chép</small>
+              </div>
+              <p class="command-desc">Ngồi xuống mọi khối block. Đặc biệt: nhấp chuột phải vào đầu người khác để ngồi lên đầu nhau tối đa 2 người (phong cách Chúng Tôi Đơn Giản Là Gấu 🐻🐻).</p>
+            </div>
           </div>
 
           <h3 style="font-size: 1.15rem; color: var(--color-text-subheading); margin: 28px 0 12px 0;">Thị trấn &amp; Đất đai (Towny)</h3>
           <div class="commands-grid">
+            <div class="lunar-card command-card" style="border-color: var(--color-accent-orbit);">
+              <div class="command-header">
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/t menu" style="color: var(--color-accent-orbit); font-weight: 700;">/t menu</button>
+                <span style="font-size: 0.72rem; color: var(--color-accent-orbit); border: 1px solid rgba(56, 189, 248, 0.3); padding: 2px 6px;">MỚI</span>
+              </div>
+              <p class="command-desc">Mở Menu GUI Towny trực quan dạng bấm chuột để thao tác với thị trấn tiện lợi, không cần nhớ command.</p>
+            </div>
+
             <div class="lunar-card command-card">
               <div class="command-header">
                 <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town">/town</button>
@@ -346,6 +362,14 @@
               <p class="command-desc">Bảng đặt hàng: Nhận đơn giao tài nguyên kiếm tiền.</p>
             </div>
 
+            <div class="lunar-card command-card" style="border-color: var(--color-accent-orbit);">
+              <div class="command-header">
+                <button type="button" class="command-chip" data-action="copy-ip" data-ip="/itemedit" style="color: var(--color-accent-orbit); font-weight: 700;">/itemedit</button>
+                <span style="font-size: 0.72rem; color: var(--color-accent-orbit); border: 1px solid rgba(56, 189, 248, 0.3); padding: 2px 6px;">MỚI</span>
+              </div>
+              <p class="command-desc">Chỉnh sửa toàn diện vật phẩm trên tay: Đổi tên, thêm dòng lore, định dạng màu sắc tạo kỷ vật độc bản.</p>
+            </div>
+
             <div class="lunar-card command-card">
               <div class="command-header">
                 <button type="button" class="command-chip" data-action="copy-ip" data-ip="[item]">[item]</button>
@@ -387,12 +411,12 @@
 
           <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Khai khoáng &amp; Hiệu ứng Đào chậm (Mining Fatigue)</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Khai khoáng &amp; Mục tiêu Cày Level 30 Mở Khóa Đào Bình Thường</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Khi đào các khối <strong>Đá bảng sâu (Deepslate), Diorite, Andesite và Granite từ tọa độ Y = 0 trở xuống</strong>, nhân vật sẽ bị phạt <strong>Đào chậm kéo dài 1 phút</strong>.<br>
-                • <strong>Điều kiện miễn trừ:</strong> Khi bạn duy trì từ <strong>30 level kinh nghiệm trở lên</strong>, bạn có thể đào các khối đá này bình thường mà không bị phạt.<br>
-                • <strong>Đặc biệt:</strong> Đào <strong>Mảnh vỡ cổ đại (Ancient Debris)</strong> sẽ <strong>LUÔN bị đào chậm 1 phút, KHÔNG THỂ MIỄN TRỪ</strong>.<br>
-                • <em>Định hướng lối chơi:</em> Hãy khám phá các hang động sâu tự nhiên để tìm quặng thay vì cày hầm đào thẳng (strip-mining).
+                👉 <strong>Mục tiêu mới:</strong> Cày đủ <strong>Level 30</strong> để mở khóa toàn bộ sức mạnh đào bới bình thường!<br>
+                • <strong>Độ cao Y ≤ 0 (Đổi từ Y ≤ 40 về Y ≤ 0):</strong> Nếu chưa đạt Level 30 mà cố tình xuống dưới độ cao Y=0 để mining, bạn sẽ bị dính ngay debuff <strong>Mining Fatigue (Đào chậm) Level 4 trong 60 giây</strong> mỗi khi phá các block: <em>Stone, Deepslate, Diorite, Andesite, Granite</em>.<br>
+                • <strong>Bảo vệ Mảnh Vỡ Cổ Đại (Ancient Debris) tại Nether:</strong> Nether không dành cho newbie! Nếu chưa đủ Level 30 mà dám vác cúp đi cày Ancient Debris, bạn sẽ nhận ngay hình phạt cực gắt: <strong>Mining Fatigue Level 4 kéo dài tận 5 PHÚT</strong>. Hãy cày đủ cấp rồi hẵng mơ đến Netherite nhé!<br>
+                • <strong>Khi đạt Level 30+:</strong> Bạn mở khóa sức mạnh đào bới bình thường, được miễn trừ toàn bộ debuff Đào chậm ở độ sâu Y ≤ 0 và khi khai thác Ancient Debris.
               </p>
             </div>
 
@@ -424,9 +448,49 @@
             </div>
 
             <div class="lunar-card" style="padding: 20px;">
-              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Không dùng bùa Mending &amp; Giữ đồ khi tử nạn bằng Rune</strong>
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Rương Tử Nạn (DeathChest) ở cả 3 Thế Giới</strong>
               <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
-                Loại bỏ bùa Mending để giữ giá trị cho quặng khoáng sản và kỹ nghệ sửa đồ đe (Anvil). Khi đi thám hiểm The End hoặc Nether, hãy mang theo <strong>Ngọc Rune bảo mệnh</strong> trong người để nếu chẳng may tử nạn, túi đồ của bạn sẽ được bảo toàn nguyên vẹn.
+                Chính thức kích hoạt <strong>DeathChest ở cả 3 World</strong> (Overworld, The Nether và The End). Khi bạn không may ngã xuống, toàn bộ trang bị sẽ được bảo vệ gọn gàng trong rương.<br>
+                • 💀📦 <strong>Thời hạn tồn tại:</strong> DeathChest có thời hạn <strong>1 giờ (60 phút)</strong>. Hãy nhanh chóng quay lại tọa độ cũ lấy đồ trước khi quá muộn nhé!
+              </p>
+            </div>
+
+            <div class="lunar-card" style="padding: 20px;">
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Bảo toàn Rune &amp; Chính sách Đền bù Ticket</strong>
+              <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
+                Thay vì dùng bùa Mending, server khuyến khích dùng <strong>Ngọc Rune</strong> để bảo mệnh túi đồ khi thám hiểm hiểm nguy.<br>
+                • ✨ <strong>Bảo toàn dữ liệu:</strong> Rune được <strong>giữ nguyên cả Level lẫn đồ</strong> sau các đợt cập nhật lớn.<br>
+                • 🎫 <strong>Hỗ trợ đền bù:</strong> Nếu bạn đã chuẩn bị đồ để mua Rune trước đợt cập nhật, hãy mở <strong>Ticket tại kênh Discord</strong> để BQT kiểm tra và đền bù đầy đủ!
+              </p>
+            </div>
+
+            <div class="lunar-card" style="padding: 20px;">
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Điểm Mốc Tọa Độ BeaconWaypoint (Discovery Mode)</strong>
+              <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
+                Hệ thống trạm dịch chuyển cổ kính phong cách RPG thế giới mở mang lại trải nghiệm khám phá chân thật:<br>
+                • 🧭 <strong>Cách mở khóa (Unlock):</strong> Lần đầu tiên, bạn chịu khó "chạy bằng cơm" tới thẳng vị trí đặt Beacon ở các ngôi làng. Khi tới nơi, chỉ cần <strong>nhấp chuột phải vào trạm Beacon</strong> để mở khóa (y chang cảm giác đi mở bản đồ trong các tựa game thế giới mở nhập vai 🗺️). Mở khóa thành công 1 lần là từ sau có thể dịch chuyển tới điểm đó vô tư!<br>
+                • 🔮 <strong>Chi phí dịch chuyển:</strong> Mỗi chuyến dịch chuyển tức thời giữa các trạm Beacon có <strong>thu phí đi lại bằng điểm kinh nghiệm (EXP)</strong>.<br>
+                • 🚫 <strong>Tắt tính năng đi chung (Sharing):</strong> Hệ thống Waypoint là hành trình cá nhân, tắt tính năng chia sẻ waypoint đi chung để đảm bảo tính công bằng và cảm giác thám hiểm tự thân.
+              </p>
+            </div>
+
+            <div class="lunar-card" style="padding: 20px;">
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Hệ thống Giá thị trường biến động (Dynamic Pricing)</strong>
+              <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
+                Chính thức kích hoạt cơ chế tự cân bằng giá mua/bán theo quy luật cung - cầu thị trường thực tế:<br>
+                • 🔻 <strong>Bán ra quá nhiều:</strong> Khi cộng đồng xả một mặt hàng với số lượng quá lớn, giá thu mua mặt hàng đó của server sẽ tự động giảm dần.<br>
+                • 🔺 <strong>Mua vào liên tục:</strong> Nhu cầu mua tăng cao sẽ đẩy giá bán ra của vật phẩm tại shop tăng nhẹ theo thời gian.<br>
+                • ⚖️ <strong>Cơ chế hồi phục:</strong> Giá sẽ tự động cân bằng lại theo từng chu kỳ khi thị trường ổn định trở lại.
+              </p>
+            </div>
+
+            <div class="lunar-card" style="padding: 20px;">
+              <strong style="color: var(--color-text-heading); font-size: 1.1rem;">Tùy biến Vật Phẩm &amp; Kỷ Vật (ItemRename / ItemEdit)</strong>
+              <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
+                Khơi dậy tinh thần sáng tạo không giới hạn! Bạn có thể tự do <strong>chỉnh sửa vật phẩm đang cầm trên tay với đủ mọi cách</strong> bằng lệnh <code>/itemedit</code>:<br>
+                • 🏷️ <strong>Đổi tên vật phẩm (Rename):</strong> Đặt tên riêng độc bản cho vũ khí, công cụ, giáp trụ với bảng mã màu và định dạng phong phú.<br>
+                • 📜 <strong>Thêm chú thích cốt truyện (Lore):</strong> Tự tay ghi lại những kỷ niệm đẹp, lời nhắn gửi hay thông điệp ý nghĩa cho bạn bè lên món đồ lưu niệm.<br>
+                • ✨ <strong>Cá nhân hóa mọi chi tiết:</strong> Biến mỗi trang bị thành một tác phẩm nghệ thuật mang đậm dấu ấn phong cách riêng của bạn.
               </p>
             </div>
           </div>
@@ -519,6 +583,14 @@
               <small style="color: var(--color-accent-orbit);">Tối ưu FPS và hỗ trợ shader ánh trăng.</small>
             </div>
           </div>
+
+          <div class="lunar-card" style="margin-top: 18px; padding: 18px 20px; border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.08);">
+            <strong style="color: #fca5a5; font-size: 1.05rem;">🚫 Tạm thời KHÔNG sử dụng mod Litematica</strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6;">
+              Việc sử dụng <strong>Litematica</strong> ở thời điểm hiện tại có thể khiến hệ thống Anti-Cheat của máy chủ nhận diện nhầm hành vi và <strong>tự động ban</strong>.<br>
+              Bọn mình sẽ hỗ trợ lại Litematica sau khi hoàn thiện và kiểm tra độ tương thích. 👉 <em>Vì vậy, đừng thử vận may với Anti-Cheat nhé! 😭</em>
+            </p>
+          </div>
         </section>
 
         <!-- 7. FAQ Accordion (Native <details> & <summary> per AC-04.2) -->
@@ -526,9 +598,30 @@
           <h2>7. Có gì vướng? Xem thử ở đây.</h2>
           <div class="faq-list">
             <details class="faq-item" open>
-              <summary class="faq-question">Q: Làm sao để đào đá sâu ở tọa độ âm mà không bị mỏi tay (Đào chậm)?</summary>
+              <summary class="faq-question">Q: Làm sao để đào đá sâu ở tọa độ Y ≤ 0 và đào Ancient Debris mà không bị Đào chậm?</summary>
               <div class="faq-answer">
-                Bạn chỉ cần tích lũy và duy trì từ <strong>30 level kinh nghiệm trở lên</strong>, bạn sẽ không còn bị áp dụng hiệu ứng đào chậm khi đào đá sâu, diorite, andesite hay granite. Tuy nhiên khi đào Mảnh vỡ cổ đại (Ancient Debris), bạn sẽ luôn bị đào chậm 1 phút.
+                Bạn chỉ cần tích lũy và duy trì từ <strong>Level 30 trở lên</strong>! Khi đạt cấp 30, bạn sẽ mở khóa sức mạnh đào bới bình thường, không còn bị dính debuff Mining Fatigue Level 4 ở độ sâu Y ≤ 0 (áp dụng khi phá Stone, Deepslate, Diorite, Andesite, Granite) cũng như thoát khỏi hình phạt 5 phút đào chậm khi khai thác Mảnh Vỡ Cổ Đại (Ancient Debris) tại Nether.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Q: Tôi đã chuẩn bị đồ để mua Rune trước đợt cập nhật thì phải làm sao?</summary>
+              <div class="faq-answer">
+                Rune được <strong>giữ nguyên cả Level lẫn đồ sau đợt cập nhật ✨</strong>. Nếu bạn đã chuẩn bị đồ để mua Rune trước đợt update, hãy <strong>tạo ticket tại kênh hỗ trợ Discord</strong> để BQT kiểm tra và đền bù nhé!
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Q: Rương tử nạn (DeathChest) hoạt động ở những đâu và có thời hạn bao lâu?</summary>
+              <div class="faq-answer">
+                DeathChest hiện đã có mặt tại <strong>cả 3 World (Overworld, The Nether và The End)</strong> với thời hạn bảo quản <strong>1 giờ (60 phút)</strong>. Hãy nhanh chân quay lại lấy đồ trước khi quá muộn nhé 💀📦!
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Q: Làm sao để ngồi lên đầu bạn bè xếp tầng We Bare Bears?</summary>
+              <div class="faq-answer">
+                Plugin GSit cho phép bạn <strong>nhấp chuột phải vào đầu bạn bè để ngồi lên đầu họ, tối đa 2 người xếp chồng</strong> (🐻🐻 phong cách <em>Chúng Tôi Đơn Giản Là Gấu</em>). Lý do? Vì BQT thích phim Chúng Tôi Đơn Giản Là Gấu, không cần lý do nào hợp lý hơn!
               </div>
             </details>
 
@@ -547,9 +640,33 @@
             </details>
 
             <details class="faq-item">
-              <summary class="faq-question">Q: Chơi Bedrock / PE thì nhập thông số như thế nào?</summary>
+              <summary class="faq-question">Q: Hệ thống Giá thị trường biến động (Dynamic Pricing) vận hành như thế nào?</summary>
               <div class="faq-answer">
-                Vào mục Chơi mạng ➔ Máy chủ ➔ Thêm máy chủ. Nhập Tên máy chủ tùy thích, Địa chỉ máy chủ là <code data-config-text="SERVER_HOST">LunarChill.club</code> và Cổng (Port) là <code data-config-text="SERVER_PORT_BEDROCK">19143</code>.
+                Hệ thống tự cân bằng giá mua/bán tại shop theo quy luật cung - cầu thị trường thực tế:<br>
+                • 🔻 <strong>Bán ra quá nhiều:</strong> Khi cộng đồng xả một mặt hàng quá lớn, giá thu mua mặt hàng đó của server sẽ tự động giảm dần.<br>
+                • 🔺 <strong>Mua vào liên tục:</strong> Nhu cầu mua tăng cao sẽ đẩy giá bán ra của vật phẩm tại shop tăng nhẹ theo thời gian.<br>
+                • ⚖️ <strong>Cơ chế hồi phục:</strong> Giá sẽ tự động cân bằng lại theo từng chu kỳ khi thị trường ổn định trở lại.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Q: Làm sao để đổi tên và viết dòng mô tả (lore) cho món đồ đang cầm trên tay?</summary>
+              <div class="faq-answer">
+                Bạn chỉ cần cầm vật phẩm muốn chỉnh sửa trên tay chính và gõ lệnh <strong>/itemedit</strong>. Tính năng cho phép bạn tự do đổi tên (Rename), thêm các dòng chú thích (Lore) và thỏa sức phối mã màu theo đủ mọi cách để sáng tạo những món kỷ vật độc nhất vô nhị!
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Q: Làm sao để mở khóa và sử dụng trạm dịch chuyển BeaconWaypoint?</summary>
+              <div class="faq-answer">
+                Lần đầu tiên, bạn hãy chịu khó "chạy bằng cơm" tới vị trí đặt Beacon ở các ngôi làng và <strong>nhấp chuột phải vào trạm Beacon để mở khóa (Unlock)</strong> 🗺️. Mở khóa thành công 1 lần là từ sau bạn có thể tự do dịch chuyển tức thời tới trạm đó vô tư với một khoản <strong>chi phí đi lại bằng điểm kinh nghiệm (EXP)</strong>. Lưu ý tính năng chia sẻ waypoint đi chung đã được tắt để giữ trọn vẹn cảm giác thám hiểm tự thân!
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Q: Chơi bản PE trên điện thoại thì nhập thông số như thế nào?</summary>
+              <div class="faq-answer">
+                Vào mục Chơi mạng ➔ Máy chủ ➔ Thêm máy chủ. Nhập Tên máy chủ tùy thích, Địa chỉ máy chủ là <code data-config-text="SERVER_HOST">LunarChill.club</code> và Cổng (Port) là <code data-config-text="SERVER_PORT_BEDROCK">25572</code>.
               </div>
             </details>
           </div>

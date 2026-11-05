@@ -1,4 +1,4 @@
-﻿# LunarChill.Club Website — Requirements Specification
+# LunarChill.Club Website — Requirements Specification
 
 > Tài liệu đặc tả yêu cầu chức năng (Functional Requirements), phi chức năng (Non-Functional Requirements), thiết kế luồng dữ liệu API và khung tuân thủ pháp lý theo chuẩn quy định hiện hành tại thời điểm tháng 10/2026.
 
@@ -7,7 +7,7 @@
 ## 1. Yêu cầu Chức năng (Functional Requirements - FR)
 
 ### FR-01: Hệ thống hiển thị trạng thái máy chủ (Live Server Status)
-- **FR-01.1 Tích hợp API mcstatus.io:** Website thực hiện gọi API công khai `mcstatus.io` để lấy trạng thái máy chủ. Mặc định ưu tiên truy vấn Java status `https://api.mcstatus.io/v2/status/java/LunarChill.club`, có hỗ trợ hiển thị port Bedrock `19143`.
+- **FR-01.1 Tích hợp API mcstatus.io:** Website thực hiện gọi API công khai `mcstatus.io` để lấy trạng thái máy chủ. Mặc định ưu tiên truy vấn Java status `https://api.mcstatus.io/v2/status/java/LunarChill.club:25572` và Bedrock status `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:25572` (đồng nhất cổng 25572).
 - **FR-01.2 Kiến trúc Quản lý Trạng thái (5 State Lifecycle):** Giao diện phân định rõ ràng 5 trạng thái vận hành, tránh ngộ nhận giữa mất mạng/offline với bảo trì:
   1. `Checking`: Đang khởi tạo kết nối hoặc đang fetch dữ liệu API (hiển thị skeleton/pulsing loader).
   2. `Online`: Máy chủ phản hồi thành công và trả về `online: true` (hiển thị badge xanh và số người chơi hiện tại).
@@ -26,7 +26,7 @@
 - **FR-02.1:** Cung cấp nút copy IP tiện lợi tại Hero Section và Navigation Header.
 - **FR-02.2:** Tích hợp `navigator.clipboard.writeText()` chuẩn hiện đại, có cơ chế fallback `document.execCommand('copy')` cho trình duyệt cũ.
 - **FR-02.3:** Hiển thị Toast / Popup thông báo xác nhận đã sao chép trong 2 giây để tạo phản hồi thị giác (visual feedback).
-- **FR-02.4:** Cho phép chọn sao chép linh hoạt giữa IP Java (`LunarChill.club`) và Bedrock IP/Port (`LunarChill.club` : `19143`).
+- **FR-02.4:** Cho phép chọn sao chép linh hoạt giữa IP Java (`LunarChill.club:25572`), Bedrock Host (`LunarChill.club`), Bedrock Port (`25572`) hoặc Host chung (`LunarChill.club`).
 
 ### FR-03: Cổng điều hướng cộng đồng & Liên kết ngoại vi
 - **FR-03.1:** Tích hợp nút CTA kết nối trực tiếp đến máy chủ Discord (mở tab mới an toàn với `rel="noopener noreferrer"`).
