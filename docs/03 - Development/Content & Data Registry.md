@@ -131,17 +131,28 @@
 
 ## 6. Danh mục Nội quy & Khung Kỷ luật (`/rules`)
 
-* **Điều 1: Chống gian lận (Zero Tolerance for Cheating):**
-  - Nghiêm cấm hack, x-ray, auto-click, baritone, freecam hoặc lợi dụng lỗi game (glitch/dupe).
-  - *Hình phạt:* Khóa tài khoản vĩnh viễn (Permanent Ban), không ân xá.
-* **Điều 2: Văn hóa ứng xử & Tôn trọng (Respect & Anti-toxicity):**
-  - Không chửi bới, xúc phạm danh dự, phân biệt vùng miền/tôn giáo, không spam kênh chat.
-  - *Hình phạt:* Cảnh cáo ➔ Mute 1 giờ ➔ Mute 24 giờ ➔ Tạm khóa tài khoản.
-* **Điều 3: Bảo vệ công trình & Cấm Griefing:**
-  - Không phá hoại công trình của người khác (dù chưa kịp claim), không bẫy người chơi (trap/kill) tại khu vực cấm PvP.
-  - *Hình phạt:* Rollback hoàn trả tài sản qua CoreProtect + Tạm khóa 3 đến 7 ngày.
-* **Điều 4: Quy trình Khiếu nại (Appeals Ticket):**
-  - Mọi sự cố bị hại hoặc tố cáo vi phạm được tiếp nhận duy nhất qua hệ thống **Ticket trên Discord chính thức**. BQT xử lý theo bằng chứng (ảnh/video/logs CoreProtect).
+* **I. Những hành vi gian lận (Hack):**
+  - *1.1. Xray, Freecam, Map Mod nhìn xuyên lòng đất:* Nhắc nhở + Jail. (Ngoại lệ: Freecam chụp ảnh công trình hoặc Map Mod bản đồ mặc định được chấp nhận).
+  - *1.2. Hack vận động & chiến đấu (Fly, Kill Aura, Speed, Double Jump):* Jail + Ban.
+  - *1.3. Crack Seed:* Ban ngay lập tức.
+  - *1.4. Lợi dụng lỗi, bug, lỗ hổng để dupe vật phẩm:* Thu hồi hoặc xóa toàn bộ vật phẩm dupe khỏi túi đồ.
+  - *Cảnh báo Litematica:* Tạm thời cấm mod Litematica chống Anti-Cheat auto-ban nhầm.
+* **II. Quy định về PvP và phá hoại căn cứ:**
+  - *2.1. Cố tình giết người chơi không lý do:* Tịch thu/xóa hung khí + Phạt tù 1 giờ + Hoàn trả toàn bộ đồ cho nạn nhân.
+  - *2.2. Trường hợp được phép PvP:* Đã thống nhất kèo đấu trước đó, HOẶC đối phương đang phá hoại base (giết pet/gia súc chưa xin phép, dắt thú cưỡi khỏi claim, trộm đồ, phá khu vực base chưa kịp claim).
+  - *2.3. Báo cáo khi bị hại:* Không tự ý leo thang bạo lực, báo ngay cho Admin/Ticket để can thiệp.
+* **III. Vùng đất Wilderness:**
+  - Đất chưa claim là đất công cộng; tuy nhiên nếu người khác đang xây dựng căn cứ chưa kịp claim thì phải tôn trọng và tuyệt đối không phá hoại.
+* **IV. Phá base và cướp bóc:**
+  - Cố tình phá hoại base hoặc giết người cướp đồ: Ban thẳng, không ngoại lệ.
+* **V. Giải quyết mâu thuẫn:**
+  - Giải quyết nội bộ trong server, không mang drama lên Messenger hay các box trò chuyện bên ngoài; nếu không tự giải quyết được hãy inbox Admin.
+* **VI. Gây chiến và chia phe:**
+  - Nghiêm cấm gây war, lôi kéo bè phái, kích động đấu đá. Xử lý từ nhắc nhở, cảnh cáo đến Ban tùy mức độ.
+* **VII. Văn hóa ứng xử:**
+  - Không nói tục chửi bậy, không gửi ảnh 18+/phản cảm, không xúc phạm hay thiếu tôn trọng người khác. Vi phạm bị xử lý nghiêm theo quy định.
+* **VIII. Quy trình khiếu nại (Appeals Ticket):**
+  - Mọi sự cố tiếp nhận qua hệ thống Ticket trên Discord chính thức (`https://discord.gg/SM9cn8pQQH`), đối soát qua logs CoreProtect.
 
 ---
 

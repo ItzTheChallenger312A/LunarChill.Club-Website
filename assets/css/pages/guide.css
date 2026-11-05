@@ -147,6 +147,12 @@
   border-radius: 0;
 }
 
+.rule-penalty.danger {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .guide-layout {

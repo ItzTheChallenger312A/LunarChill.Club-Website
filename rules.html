@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nội quy Máy chủ - LunarChill 🌙</title>
-  <meta name="description" content="Nội quy ứng xử, quy tắc chống gian lận, bảo vệ công trình và quy trình giải quyết khiếu nại tại LunarChill.">
+  <meta name="description" content="Nội quy chính thức của máy chủ LunarChill: quy định chống hack, quy tắc PvP, bảo vệ căn cứ, ứng xử văn minh và quy trình xử lý khiếu nại.">
   <link rel="canonical" href="https://LunarChill.club/rules">
 
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -15,7 +15,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://LunarChill.club/rules">
   <meta property="og:title" content="Nội quy Máy chủ - LunarChill 🌙">
-  <meta property="og:description" content="Nội quy ứng xử, quy tắc chống gian lận, bảo vệ công trình và quy trình giải quyết khiếu nại tại LunarChill.">
+  <meta property="og:description" content="Nội quy chính thức máy chủ LunarChill: quy định chống hack, quy tắc PvP, bảo vệ căn cứ, Wilderness, ứng xử văn minh và quy trình khiếu nại.">
   <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -73,9 +73,10 @@
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="advanced-guide.html" class="mobile-nav-link">Hướng dẫn chi tiết (Nâng cao)</a>
     <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
     <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
-    <a href="rules.html" class="mobile-nav-link" aria-current="page">Nội quy máy chủ</a>
+    <a href="rules.html" class="mobile-nav-link active" aria-current="page">Nội quy máy chủ</a>
     <div class="mobile-drawer-actions">
       <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
         Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
@@ -93,7 +94,7 @@
     <div class="page-hero">
       <div class="container">
         <h1>Nội quy Máy chủ</h1>
-        <p>Quy chuẩn ứng xử chung nhằm duy trì một sân chơi văn minh, thư thái và tôn trọng lẫn nhau.</p>
+        <p>Quy chuẩn ứng xử chung nhằm duy trì một sân chơi văn minh, thư thái, công bằng và tôn trọng lẫn nhau.</p>
       </div>
     </div>
 
@@ -101,81 +102,239 @@
       <!-- Sidebar TOC -->
       <aside class="guide-sidebar" aria-label="Mục lục nội quy">
         <div class="lunar-card toc-card">
-          <h3>Nội quy</h3>
+          <h3>Mục lục Nội quy</h3>
           <ul class="toc-list">
-            <li><a href="#rule-cheating" class="toc-link">Điều 1. Chống gian lận</a></li>
-            <li><a href="#rule-behavior" class="toc-link">Điều 2. Văn hóa ứng xử</a></li>
-            <li><a href="#rule-griefing" class="toc-link">Điều 3. Bảo vệ công trình</a></li>
-            <li><a href="#rule-appeal" class="toc-link">Điều 4. Quy trình khiếu nại</a></li>
+            <li><a href="#rule-cheating" class="toc-link">I. Hành vi gian lận (Hack)</a></li>
+            <li><a href="#rule-pvp" class="toc-link">II. PvP &amp; Phá hoại căn cứ</a></li>
+            <li><a href="#rule-wilderness" class="toc-link">III. Vùng đất Wilderness</a></li>
+            <li><a href="#rule-griefing" class="toc-link">IV. Phá base &amp; Cướp bóc</a></li>
+            <li><a href="#rule-disputes" class="toc-link">V. Giải quyết mâu thuẫn</a></li>
+            <li><a href="#rule-factions" class="toc-link">VI. Gây chiến &amp; Chia phe</a></li>
+            <li><a href="#rule-behavior" class="toc-link">VII. Văn hóa ứng xử</a></li>
+            <li><a href="#rule-appeal" class="toc-link">VIII. Quy trình khiếu nại</a></li>
           </ul>
         </div>
       </aside>
 
       <!-- Main Rules Content -->
       <div class="guide-content">
-        <!-- Điều 1 -->
-        <section id="rule-cheating">
-          <h2>Điều 1. Tuyệt đối không gian lận (Zero Tolerance for Cheating)</h2>
-          <div class="lunar-card rule-card">
-            <p>Nghiêm cấm sử dụng bất kỳ client hack, phần mềm can thiệp nào đem lại lợi thế bất công so với người chơi khác, bao gồm nhưng không giới hạn:</p>
-            <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
-              <li>X-ray (dưới dạng mod, gói tài nguyên texture pack hay client).</li>
-              <li>Auto-click, Killaura, Baritone, Fly, Speed, Freecam.</li>
-              <li>Lợi dụng lỗi game (glitch, duplication/dupe vật phẩm) để trục lợi. Khi phát hiện bug, người chơi có nghĩa vụ báo cáo cho Ban Quản Trị.</li>
-            </ul>
-            <span class="rule-penalty">Khung xử phạt: Khóa tài khoản vĩnh viễn (Permanent Ban), không ân xá.</span>
 
-            <div style="margin-top: 14px; padding: 12px 14px; background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; font-size: 0.88rem; line-height: 1.6;">
-              <strong style="color: #fca5a5;">🚫 Cảnh báo khẩn về Mod Litematica:</strong> Tạm thời <strong>KHÔNG SỬ DỤNG</strong> Litematica khi tham gia server. Việc sử dụng Litematica ở thời điểm hiện tại có thể khiến hệ thống Anti-Cheat nhận diện nhầm hành vi bất thường và tự động ban tài khoản. Đội ngũ BQT sẽ hỗ trợ lại sau khi hoàn thiện kiểm tra tương thích. Vì vậy, <em>đừng thử vận may với Anti-Cheat nhé! 😭</em>
+        <!-- I. Những hành vi gian lận (Hack) -->
+        <section id="rule-cheating">
+          <h2>I. Những hành vi gian lận (Hack)</h2>
+          <p style="font-style: italic; color: var(--color-text-subheading); margin-bottom: 20px;">
+            "Ta luôn đề cao tài năng chân chính. Nếu phải nhờ đến hack để mạnh hơn... thì thật đáng tiếc."
+          </p>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              1.1. Sử dụng Xray, Freecam hoặc Map Mod nhằm nhìn xuyên lòng đất
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Nghiêm cấm mọi hành vi cài đặt và sử dụng mod, resource pack hoặc phần mềm can thiệp để nhìn xuyên các khối block tìm kiếm quặng, hang động hay công trình ngầm.<br>
+              <em>* Lưu ý ngoại lệ:</em> Riêng <strong>Freecam</strong> chỉ dùng để chụp ảnh công trình nghệ thuật hoặc <strong>Map Mod</strong> chỉ hiển thị bản đồ địa hình mặc định thì vẫn được chấp nhận.
+            </p>
+            <span class="rule-penalty">Hình phạt: Nhắc nhở + Jail</span>
+          </div>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              1.2. Sử dụng các loại hack vận động và chiến đấu
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Nghiêm cấm sử dụng các module hack can thiệp trực tiếp vào tương tác nhân vật, bao gồm:
+            </p>
+            <ul style="margin: 6px 0 10px 20px; line-height: 1.8; font-size: 0.92rem; color: var(--color-text-body);">
+              <li><strong>Fly</strong> (Bay lượn bất hợp pháp)</li>
+              <li><strong>Kill Aura</strong> (Tự động đánh quái hoặc người chơi xung quanh)</li>
+              <li><strong>Speed</strong> (Gia tăng tốc độ chạy bất thường)</li>
+              <li><strong>Double Jump</strong> (Nhảy hai lần trên không)</li>
+            </ul>
+            <span class="rule-penalty danger">➡️ Hình phạt: Jail + Ban</span>
+          </div>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              1.3. Crack Seed thế giới
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Hành vi dò tìm, giải mã hoặc phát tán Seed thế giới của máy chủ nhằm trục lợi vị trí tài nguyên, cấu trúc hiếm là hành vi phá hoại tính công bằng nghiêm trọng.
+            </p>
+            <span class="rule-penalty danger">➡️ Hình phạt: Ban ngay lập tức</span>
+          </div>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              1.4. Lợi dụng lỗi, bug hoặc lỗ hổng của máy chủ để dupe vật phẩm
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Khi phát hiện lỗi game hoặc lỗ hổng nhân bản vật phẩm (dupe), người chơi có trách nhiệm báo ngay cho Ban Quản Trị qua Ticket Discord. Mọi hành vi cố tình giấu giếm và trục lợi nhân bản tài nguyên đều bị xử lý nghiêm.
+            </p>
+            <span class="rule-penalty danger">➡️ Hình phạt: Toàn bộ vật phẩm dupe sẽ bị thu hồi hoặc xóa khỏi túi đồ</span>
+          </div>
+
+          <div class="lunar-callout" style="background: rgba(239, 68, 68, 0.08); border: 2px solid #ef4444; margin-top: 16px;">
+            <strong style="color: #fca5a5;">🚫 Cảnh báo khẩn về Mod Litematica:</strong> Tạm thời <strong>KHÔNG SỬ DỤNG</strong> mod Litematica khi tham gia server. Việc sử dụng Litematica ở thời điểm hiện tại có thể khiến hệ thống Anti-Cheat nhận diện nhầm hành vi và tự động ban tài khoản. Đội ngũ BQT sẽ thông báo lại sau khi hoàn thiện kiểm tra tương thích. <em>Đừng thử vận may với Anti-Cheat nhé! 😭</em>
+          </div>
+        </section>
+
+        <!-- II. Quy định về PvP và phá hoại căn cứ -->
+        <section id="rule-pvp">
+          <h2>II. Quy định về PvP và phá hoại căn cứ</h2>
+          <p style="font-style: italic; color: var(--color-text-subheading); margin-bottom: 20px;">
+            "Server này không phải chiến trường tự do. Vì vậy..."
+          </p>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              2.1. Cố tình giết người chơi khác
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Nếu tấn công và hạ gục người chơi khác mà không có lý do hợp lệ được chấp thuận:
+            </p>
+            <ul style="margin: 6px 0 10px 20px; line-height: 1.8; font-size: 0.92rem; color: var(--color-text-body);">
+              <li>Tịch thu hoặc xóa hoàn toàn hung khí gây án.</li>
+              <li>Phạt tù (Jail) 1 giờ.</li>
+              <li>Bắt buộc hoàn trả toàn bộ đồ đạc và trang bị cho người bị hạ gục.</li>
+            </ul>
+            <span class="rule-penalty">Hình phạt: Tịch thu/xóa vũ khí + Phạt tù 1 giờ + Hoàn trả toàn bộ đồ</span>
+          </div>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              2.2. Những trường hợp được phép PvP
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Hành vi PvP chỉ được chấp nhận trong các trường hợp sau:
+            </p>
+            <ul style="margin: 6px 0 10px 20px; line-height: 1.8; font-size: 0.92rem; color: var(--color-text-body);">
+              <li><strong>Trường hợp 1:</strong> Hai bên đã thống nhất và đồng ý kèo đấu trước đó.</li>
+              <li><strong>Trường hợp 2:</strong> Đối phương đang có hành vi xâm phạm hoặc phá hoại base căn cứ của bạn qua một trong các hành vi:
+                <ul style="margin: 6px 0 6px 18px; list-style-type: circle;">
+                  <li>Giết động vật hoặc thú cưng khi chưa được chủ base cho phép.</li>
+                  <li>Dắt thú cưỡi ra khỏi phạm vi Town Claim mà chưa xin phép.</li>
+                  <li>Trộm cắp đồ đạc trong căn cứ.</li>
+                  <li>Phá hoại những khu vực của base chưa kịp claim đất bảo vệ.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="lunar-card rule-card">
+            <strong style="color: var(--color-text-heading); font-size: 1.05rem;">
+              2.3. Khi không thể tự bảo vệ căn cứ trong lúc xảy ra PvP
+            </strong>
+            <p style="margin: 8px 0 0 0; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65;">
+              Nếu các bạn không thể tự bảo vệ base của mình trong lúc xảy ra đụng độ PvP:<br>
+              • <strong>Đừng tự ý leo thang sự việc</strong> hoặc chửi bới, kích động trả thù bừa bãi.<br>
+              • <strong>Hãy báo cáo ngay cho đội ngũ Admin</strong> qua kênh Ticket Discord để được kiểm tra nhật ký CoreProtect và xử lý can thiệp kịp thời.
+            </p>
+          </div>
+        </section>
+
+        <!-- III. Wilderness -->
+        <section id="rule-wilderness">
+          <h2>III. Vùng đất Wilderness</h2>
+          <div class="lunar-card rule-card">
+            <p style="font-size: 0.95rem; color: var(--color-text-body); line-height: 1.75; margin: 0 0 12px 0;">
+              Những vùng đất <strong>Wilderness</strong> chưa được claim là đất công cộng. Mọi người chơi đều có quyền khai thác tài nguyên và sử dụng tự do.
+            </p>
+            <div class="lunar-callout" style="margin: 12px 0 0 0; background: rgba(104, 139, 248, 0.08); border-left: 3px solid var(--color-accent-orbit);">
+              <strong>Tuy nhiên...</strong> Nếu khu vực đó đang được người chơi khác xây dựng nhà cửa hoặc căn cứ nhưng chưa kịp claim đất, <strong>hãy tôn trọng công sức của họ và tuyệt đối đừng phá hoại</strong>. Sinh tồn văn minh bắt đầu từ sự tôn trọng thành quả của đồng đội.
             </div>
           </div>
         </section>
 
-        <!-- Điều 2 -->
-        <section id="rule-behavior">
-          <h2>Điều 2. Văn hóa ứng xử &amp; Tôn trọng cộng đồng</h2>
-          <div class="lunar-card rule-card">
-            <p>LunarChill là nơi thư giãn, mọi hành vi gây chia rẽ hay độc hại đều không được hoan nghênh:</p>
-            <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
-              <li>Tôn trọng các thành viên khác trong kênh chat chung và kênh thoại Discord.</li>
-              <li>Nghiêm cấm chửi bới, lăng mạ danh dự, quấy rối, phân biệt vùng miền, tôn giáo hoặc sử dụng từ ngữ thô tục.</li>
-              <li>Nghiêm cấm spam tin nhắn, quảng cáo máy chủ khác hoặc chia sẻ liên kết độc hại/lừa đảo.</li>
-            </ul>
-            <span class="rule-penalty">Khung xử phạt: Cảnh cáo ➔ Cấm chat (1 giờ đến 24 giờ) ➔ Khóa tài khoản tạm thời.</span>
-          </div>
-        </section>
-
-        <!-- Điều 3 -->
+        <!-- IV. Phá base và cướp bóc -->
         <section id="rule-griefing">
-          <h2>Điều 3. Bảo vệ công trình &amp; Cấm phá hoại (No Griefing)</h2>
-          <div class="lunar-card rule-card">
-            <p>Công trình của mỗi thành viên là công sức và kỷ niệm đáng trân trọng:</p>
-            <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
-              <li>Nghiêm cấm phá hoại công trình của người khác (kể cả khu vực người chơi chưa kịp dùng lệnh claim bảo vệ).</li>
-              <li>Không trộm cắp đồ trong rương của người khác khi chưa có sự đồng ý.</li>
-              <li>Không cố tình đặt bẫy giết người (trap/kill) tại khu vực trung tâm hoặc các vùng an toàn.</li>
-              <li>Không xây dựng các cỗ máy lag (lag machines), cỗ máy farm quái nhân tạo trên không/biển hoặc cố tình glitch lên trần Nether gây ảnh hưởng tới hiệu năng máy chủ.</li>
+          <h2>IV. Phá base và cướp bóc</h2>
+          <div class="lunar-card rule-card" style="border-color: #ef4444;">
+            <p style="font-size: 0.95rem; color: var(--color-text-body); line-height: 1.75; margin: 0 0 12px 0;">
+              Nếu cố tình thực hiện các hành vi sau:
+            </p>
+            <ul style="margin: 6px 0 12px 20px; line-height: 1.8; font-size: 0.95rem; color: var(--color-text-body);">
+              <li><strong>Phá hoại base</strong> / công trình kiến trúc của người khác.</li>
+              <li><strong>Giết người để cướp đồ</strong> (griefing &amp; looting bất hợp pháp).</li>
             </ul>
-            <span class="rule-penalty">Khung xử phạt: Khôi phục hiện trạng qua CoreProtect và tạm khóa tài khoản từ 3 đến 7 ngày.</span>
+            <span class="rule-penalty danger" style="font-size: 0.95rem; padding: 6px 14px;">
+              ➡️ Ban thẳng — Không có ngoại lệ.
+            </span>
           </div>
         </section>
 
-        <!-- Điều 4 -->
+        <!-- V. Giải quyết mâu thuẫn -->
+        <section id="rule-disputes">
+          <h2>V. Giải quyết mâu thuẫn</h2>
+          <div class="lunar-card rule-card">
+            <p style="font-style: italic; color: var(--color-text-subheading); margin-bottom: 12px;">
+              "Nếu xảy ra tranh chấp..."
+            </p>
+            <ul style="margin: 8px 0 12px 20px; line-height: 1.8; font-size: 0.92rem; color: var(--color-text-body);">
+              <li>Xin hãy giải quyết trong phạm vi nội bộ của server một cách bình tĩnh và tôn trọng.</li>
+              <li><strong>Tuyệt đối không mang drama lên Messenger hay các box trò chuyện bên ngoài</strong> để công kích, bêu rếu lẫn nhau.</li>
+              <li>Nếu không thể tự giải quyết ổn thỏa, <strong>hãy inbox hoặc mở Ticket gửi Admin</strong> để được phân xử minh bạch.</li>
+            </ul>
+            <p style="margin: 8px 0 0 0; font-weight: 600; color: var(--color-accent-orbit); font-size: 0.92rem;">
+              Đó mới là cách hành xử văn minh của một người chơi trưởng thành!
+            </p>
+          </div>
+        </section>
+
+        <!-- VI. Gây chiến và chia phe -->
+        <section id="rule-factions">
+          <h2>VI. Gây chiến và chia phe</h2>
+          <div class="lunar-card rule-card">
+            <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65; margin: 0 0 10px 0;">
+              Nghiêm cấm các hành vi làm xáo trộn không khí bình yên của cộng đồng:
+            </p>
+            <ul style="margin: 6px 0 12px 20px; line-height: 1.8; font-size: 0.92rem; color: var(--color-text-body);">
+              <li>Gây chiến (gây war) vô cớ.</li>
+              <li>Lôi kéo bè phái, cô lập người chơi khác.</li>
+              <li>Kích động, xúi giục người khác đấu đá dưới mọi hình thức.</li>
+            </ul>
+            <span class="rule-penalty">Hình thức xử lý: Từ nhắc nhở, cảnh cáo cho đến Ban, tùy theo mức độ vi phạm.</span>
+          </div>
+        </section>
+
+        <!-- VII. Văn hóa ứng xử -->
+        <section id="rule-behavior">
+          <h2>VII. Văn hóa ứng xử</h2>
+          <p style="font-style: italic; color: var(--color-text-subheading); margin-bottom: 20px;">
+            "Xin hãy nhớ rằng... Một cộng đồng tốt đẹp luôn bắt đầu từ cách mọi người đối xử với nhau."
+          </p>
+
+          <div class="lunar-card rule-card">
+            <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.65; margin: 0 0 10px 0;">
+              Vì vậy, khi tham gia máy chủ và các kênh cộng đồng:
+            </p>
+            <ul style="margin: 6px 0 14px 20px; line-height: 1.8; font-size: 0.92rem; color: var(--color-text-body);">
+              <li><strong>Không nói tục, chửi bậy</strong> trong hoặc ngoài game.</li>
+              <li><strong>Không gửi hình ảnh 18+ hoặc nội dung phản cảm</strong>, dung tục.</li>
+              <li><strong>Không xúc phạm hay thiếu tôn trọng người khác</strong> (kỳ thị vùng miền, giới tính, tôn giáo).</li>
+            </ul>
+            <span class="rule-penalty danger">Nếu vi phạm, các bạn sẽ bị xử lý nghiêm theo quy định máy chủ.</span>
+          </div>
+        </section>
+
+        <!-- VIII. Quy trình khiếu nại & Hỗ trợ -->
         <section id="rule-appeal">
-          <h2>Điều 4. Quy trình khiếu nại &amp; Hỗ trợ (Appeals Flow)</h2>
+          <h2>VIII. Quy trình khiếu nại &amp; Hỗ trợ Ticket</h2>
           <div class="lunar-card" style="padding: 24px;">
-            <p>Nếu bạn bị người khác phá hoại công trình, gặp sự cố tranh chấp hoặc cho rằng mình bị xử phạt nhầm lẫn:</p>
-            <ol style="margin: 10px 0 16px 20px; line-height: 1.8;">
+            <p style="font-size: 0.94rem; color: var(--color-text-body); line-height: 1.65;">
+              Nếu bạn bị người khác phá hoại công trình, trộm cắp tài nguyên, xảy ra tranh chấp hoặc cho rằng mình bị xử phạt nhầm lẫn:
+            </p>
+            <ol style="margin: 12px 0 18px 20px; line-height: 1.85; font-size: 0.92rem; color: var(--color-text-body);">
               <li>Truy cập vào máy chủ Discord chính thức của LunarChill.</li>
               <li>Vào kênh <strong>#tao-ticket</strong> và bấm nút mở Ticket hỗ trợ mới.</li>
-              <li>Cung cấp tọa độ xảy ra sự cố, tên nhân vật liên quan và ảnh/video bằng chứng (nếu có).</li>
-              <li>Ban Quản Trị sẽ tra cứu lịch sử qua hệ thống CoreProtect và giải quyết minh bạch theo đúng khung nội quy.</li>
+              <li>Cung cấp tọa độ (XYZ) xảy ra sự cố, tên nhân vật liên quan và ảnh chụp/video bằng chứng (nếu có).</li>
+              <li>Ban Quản Trị sẽ tra cứu lịch sử qua hệ thống dữ liệu <strong>CoreProtect</strong> và giải quyết công tâm theo đúng khung nội quy.</li>
             </ol>
             <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
               Mở Ticket hỗ trợ trên Discord ↗
             </a>
           </div>
         </section>
+
       </div>
     </div>
   </main>
@@ -202,6 +361,7 @@
           <ul class="footer-links">
             <li><a href="index.html">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="advanced-guide.html">HD Chi tiết</a></li>
             <li><a href="towns.html">Thị trấn (Towny)</a></li>
             <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
             <li><a href="rules.html" aria-current="page">Nội quy</a></li>
