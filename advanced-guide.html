@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hướng dẫn Chi tiết &amp; Tính năng Chuyên sâu - LunarChill 🌙</title>
+  <meta name="description" content="Khám phá toàn diện các cơ chế sinh tồn chuyên sâu tại LunarChill: khai khoáng Y<=0, thanh oxy & nước, đại tu The End & Nether, kinh tế biến động, ngọc Rune và Towny GUI.">
+  <link rel="canonical" href="https://LunarChill.club/advanced-guide">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://LunarChill.club/advanced-guide">
+  <meta property="og:title" content="Hướng dẫn Chi tiết &amp; Tính năng Chuyên sâu - LunarChill">
+  <meta property="og:description" content="Chi tiết cơ chế sinh tồn nâng cao: khai khoáng tầng sâu Y<=0, dưỡng khí oxy, cơn khát nước, Nullscape The End, Wither 900 HP, Dynamic Pricing và ngọc Rune.">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hướng dẫn Chuyên sâu LunarChill Minecraft SMP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/advanced-guide.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="advanced-guide.html" class="nav-link active" aria-current="page">HD Chi tiết</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="advanced-guide.html" class="mobile-nav-link active" aria-current="page">Hướng dẫn chi tiết (Nâng cao)</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
+        Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pe">
+        Sao chép Host PE (Điện thoại): <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span>)
+      </button>
+      <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <div class="page-hero">
+      <div class="container">
+        <div style="display: inline-block; margin-bottom: 12px;">
+          <span class="mechanic-badge badge-info">Tài liệu Chuyên sâu · Gameplay Mechanics v2.0</span>
+        </div>
+        <h1 style="font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.01em;">
+          Hướng dẫn Chi tiết &amp; Cơ chế Sâu
+        </h1>
+        <p style="color: var(--color-text-body); max-width: 720px; margin: 0 auto 24px auto; font-size: 1.05rem; line-height: 1.6;">
+          Phân tích toàn diện các cơ chế sinh tồn nguyên bản, đại tu thế giới ngầm và hư không, hệ thống kinh tế tự cân bằng, ngọc bảo mệnh Rune và quy tắc thế giới chống lạm phát.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="guide.html" class="btn btn-secondary">
+            ← Xem Cẩm nang tân thủ
+          </a>
+          <button type="button" class="btn btn-primary" data-action="copy-ip" data-copy-target="java">
+            Sao chép IP Server
+          </button>
+          <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
+            Hỗ trợ Ticket Discord
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container guide-layout">
+      <!-- Sidebar TOC (Sticky) -->
+      <aside class="guide-sidebar" aria-label="Mục lục hướng dẫn chuyên sâu">
+        <div class="lunar-card toc-card">
+          <h3>Mục lục Chuyên sâu</h3>
+          <ul class="toc-list">
+            <li><a href="#mining" class="toc-link">1. Khai khoáng sâu &amp; Level 30</a></li>
+            <li><a href="#vitals" class="toc-link">2. Cơn khát Nước &amp; Oxy</a></li>
+            <li><a href="#dimensions" class="toc-link">3. Đại tu Nether &amp; The End</a></li>
+            <li><a href="#economy" class="toc-link">4. Kinh tế &amp; Ngọc Rune</a></li>
+            <li><a href="#world-rules" class="toc-link">5. Quy tắc thế giới &amp; Anti-Cheese</a></li>
+            <li><a href="#travel-towny" class="toc-link">6. BeaconWaypoint &amp; Towny GUI</a></li>
+            <li><a href="#skills-custom" class="toc-link">7. Kỹ năng RPG &amp; ItemEdit</a></li>
+            <li><a href="#client-mods" class="toc-link">8. Mod Client &amp; Cảnh báo An toàn</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Guide Content -->
+      <div class="guide-content">
+
+        <!-- Ribbon Switcher -->
+        <div class="guide-switcher">
+          <div class="guide-switcher-text">
+            <strong>Bạn là người chơi mới vừa vào game?</strong> Hãy bắt đầu với Cẩm nang Tân thủ để nắm các bước 15 phút đầu và bảng lệnh cơ bản.
+          </div>
+          <a href="guide.html" class="btn btn-secondary guide-switcher-btn">Mở Cẩm nang Tân thủ →</a>
+        </div>
+
+        <!-- 1. Khai khoáng sâu & Level 30 -->
+        <section id="mining">
+          <h2>
+            <span>1. Khai khoáng Tầng sâu &amp; Mở khóa Level 30</span>
+          </h2>
+          <p>
+            Nhằm chấm dứt lối chơi cày hầm đào thẳng thủ công (strip-mining) vô hồn và rush Netherite sớm khi chưa sẵn sàng, LunarChill áp dụng cơ chế giới hạn thể lực khai thác theo cấp độ nhân vật.
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Khai khoáng tầng sâu (Overworld $Y \le 0$)</h3>
+              <span class="mechanic-badge badge-warning">Cột mốc $Y \le 0$</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Từ tọa độ độ cao <strong>$Y \le 0$ trở xuống</strong> lòng đất sâu (khu vực Đá bảng sâu - Deepslate):
+              </p>
+              <ul>
+                <li><strong>Khối bị ảnh hưởng:</strong> Đá thường (<em>Stone</em>), Đá bảng sâu (<em>Deepslate</em>), Đá điorit (<em>Diorite</em>), Đá anđêzit (<em>Andesite</em>), Đá hoa cương (<em>Granite</em>).</li>
+                <li><strong>Hình phạt chưa đủ cấp (Dưới Level 30):</strong> Nếu nhân vật chưa đạt <strong>Level 30</strong> mà cố tình xuống dưới mốc $Y \le 0$ để đào các khối trên, bạn sẽ bị phạt ngay hiệu ứng bất lợi <strong>Mining Fatigue IV (Đào chậm cấp 4) kéo dài 60 giây</strong> mỗi khi phá block.</li>
+                <li><strong>Mở khóa sức mạnh (Đủ Level 30+):</strong> Khi tích lũy và duy trì từ <strong>Level 30 trở lên</strong>, bạn được giải phóng hoàn toàn và đào bới bình thường ở mọi tầng sâu.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-color: #ef4444;">
+            <div class="deep-card-header">
+              <h3>Cơ chế Bảo vệ Mảnh Vỡ Cổ Đại (Ancient Debris) tại Nether</h3>
+              <span class="mechanic-badge badge-danger">Phạt nặng 5 Phút</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Nether là chiều không gian nguy hiểm và không dành cho người chơi vội vàng. Nếu chưa tích lũy đủ <strong>Level 30</strong> mà cố tình vác cúp đi cày cuốc Ancient Debris:
+              </p>
+              <div class="lunar-callout callout-danger" style="margin: 12px 0;">
+                <strong>Hình phạt cảnh cáo:</strong> Nhân vật sẽ nhận ngay debuff <strong>Mining Fatigue IV kéo dài tận 5 PHÚT (300 giây)</strong>. Mọi thao tác khai quật sẽ gần như tê liệt hoàn toàn trong thời gian này.
+              </div>
+              <p>
+                <strong>Chiến thuật khuyên dùng:</strong> Hãy rèn luyện kỹ năng, làm nông, săn quái hoặc giao thương để đạt Level 30 trước khi mạo hiểm tiến sâu vào các mỏ Netherite. Khám phá các hang động sâu tự nhiên khổng lồ (<em>Mega Caves, Deep Dark</em>) để tìm kiếm quặng lộ thiên thay vì đào đường hầm thủ công.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Cơn khát Nước & Dưỡng khí Oxy -->
+        <section id="vitals">
+          <h2>
+            <span>2. Hệ thống Thể trạng: Cơn khát Nước &amp; Dưỡng khí Oxy</span>
+          </h2>
+          <p>
+            Thế giới sinh tồn chân thực đòi hỏi người chơi phải quan tâm đến hai chỉ số sinh học quan trọng bên cạnh thanh máu và thanh thức ăn vanilla:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Thanh Chỉ số Nước (Water / Thirst System)</h3>
+              <span class="mechanic-badge badge-info">Tiêu hao 3% / Phút</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Trong quá trình di chuyển, chạy nhảy và lao động thông thường, lượng nước của nhân vật sẽ tự động giảm dần với tốc độ <strong>3% mỗi phút</strong>.
+              </p>
+              <ul>
+                <li><strong>Cách bổ sung nước nhanh:</strong>
+                  <ul>
+                    <li>Uống chai nước (<em>Water Bottle</em>).</li>
+                    <li>Ăn dưa hấu (<em>Melon Slice</em>) hoặc quả mọng (<em>Sweet Berries</em>).</li>
+                    <li>Thưởng thức các món súp hầm ấm cúng và canh dinh dưỡng từ ẩm thực <strong>CropAndKettle</strong>.</li>
+                  </ul>
+                </li>
+                <li><strong>Cơ chế Treo máy (AFK Protection):</strong> Khi nhân vật đứng yên hoàn toàn và không thực hiện thao tác di chuyển, thanh nước sẽ được giữ nguyên 100%, không bị tụt giảm.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Thanh Dưỡng khí Oxy (Oxygen System) &amp; Đèn hiệu Cứu sinh</h3>
+              <span class="mechanic-badge badge-purple">Khắc nghiệt Đa chiều</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Khi bước vào những môi trường thiếu dưỡng khí hoặc không gian hư vô, lượng oxy của bạn sẽ bị bào mòn nhanh chóng:
+              </p>
+              <ul>
+                <li><strong>Bề mặt Overworld:</strong> Tự động hồi phục đầy 100% thanh oxy tự nhiên.</li>
+                <li><strong>Hang động sâu (Deep Caves):</strong> Oxy tiêu hao chậm dần theo độ sâu lòng đất.</li>
+                <li><strong>The Nether:</strong> Không khí độc hại ngột ngạt, oxy sụt giảm <strong>4% mỗi phút</strong>.</li>
+                <li><strong>The End:</strong> Vùng không gian hư không khắc nghiệt, oxy sụt giảm cực nhanh <strong>2% mỗi 10 giây</strong>.</li>
+              </ul>
+
+              <div class="lunar-callout callout-info" style="margin-top: 16px;">
+                <strong style="color: var(--color-accent-orbit);">Vật phẩm Cứu sinh Đồng đội (Beacon Lifeline):</strong><br>
+                Khi một người chơi cầm <strong>Đèn hiệu (Beacon)</strong> ở tay chính (<em>Main Hand</em>), lượng oxy của chính bản thân và <strong>toàn bộ người chơi đứng ở cự ly gần</strong> sẽ liên tục được nạp đầy! Hãy phân công một thành viên đảm nhận vị trí "Cầm đèn cứu sinh" khi cả đội cùng nhau thám hiểm The End hoặc đi săn Wither tại The Nether.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Đại tu The Nether & The End -->
+        <section id="dimensions">
+          <h2>
+            <span>3. Đại tu Chiều không gian The Nether &amp; The End</span>
+          </h2>
+          <p>
+            Hai chiều không gian huyền thoại được thiết kế lại toàn diện để trở thành đỉnh cao thử thách của người chơi sinh tồn:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>The Nether: Lãnh địa Hiểm họa &amp; Wither Raid Boss</h3>
+              <span class="mechanic-badge badge-danger">Boss Máu 900 HP</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Piglin hiếu chiến:</strong> Zombie Lợn (Piglin) luôn luôn chủ động tấn công người chơi khi chạm trán trong Nether (không phụ thuộc việc mặc đồ vàng).</li>
+                <li><strong>Quy tắc trần Nether (Nether Roof):</strong> Nghiêm cấm và vô hiệu hóa việc đặt block trên trần Bedrock của Nether nhằm loại bỏ thủ thuật di chuyển an toàn và xây farm tự động trên nóc.</li>
+                <li><strong>Hạn chế Obsidian:</strong> Không thể đặt khối Hắc diện thạch (Obsidian) tự do trong Nether.</li>
+                <li><strong>Triệu hồi Wither Boss:</strong>
+                  <ul>
+                    <li>Chỉ có thể triệu hồi Wither tại chiều không gian <strong>The Nether</strong> (không thể triệu hồi ở Overworld hay The End).</li>
+                    <li>Lượng máu của Wither được gia tăng lên <strong>900 HP</strong> (gấp 3 lần thông thường), biến đây thành một trận Raid Boss tổ đội thực thụ đòi hỏi trang bị, thuốc cường hóa và chiến thuật phối hợp nhịp nhàng.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-color: var(--color-accent-orbit);">
+            <div class="deep-card-header">
+              <h3>The End: Bộ đôi Nullscape &amp; Stellarity</h3>
+              <span class="mechanic-badge badge-purple">Độ cao 384 Blocks</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Không còn là những bãi cát vàng đơn điệu, The End tại LunarChill là kỳ quan vũ trụ tráng lệ:
+              </p>
+              <ul>
+                <li><strong>Nullscape:</strong> Mở rộng trần thế giới The End lên tới 384 block, kiến tạo các vết nứt không gian kỳ vĩ, hố sâu thăm thẳm và những hòn đảo bay lơ lửng khổng lồ.</li>
+                <li><strong>Stellarity &amp; StellarityOptimizer:</strong> Bổ sung hệ thống quần xã sinh vật (biome) kỳ bí ngoài không gian, pháo đài vũ trụ, Boss độc bản mới, cổ vật thần thoại và công thức chế tạo đặc biệt (Custom Crafting).</li>
+                <li><strong>Quy tắc The End:</strong>
+                  <div class="lunar-callout callout-warning" style="margin: 10px 0;">
+                    <strong>Tuyệt đối KHÔNG THỂ đặt nước tại The End:</strong> Bạn không thể dùng xô nước để tiếp đất chống ngã (water-bucket MLG). Hãy chuẩn bị kỹ năng ném Ngọc Ender (Ender Pearl), cánh cứng Elytra, giáp bảo hộ hoặc các khối block giảm sát thương rơi!
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Kinh tế & Ngọc Rune -->
+        <section id="economy">
+          <h2>
+            <span>4. Kinh tế Thị trường, Mendingless &amp; Ngọc Bảo Mệnh Rune</span>
+          </h2>
+          <p>
+            Nền kinh tế sinh tồn tại LunarChill vận hành theo nguyên tắc tự do nhưng được kiểm soát tự động để giữ vững giá trị tài nguyên bền vững:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Hệ thống Giá thị trường biến động (Dynamic Pricing)</h3>
+              <span class="mechanic-badge badge-info">Tự cân bằng Cung - Cầu</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Thị trường tự động điều chỉnh biểu giá mua/bán của server dựa trên hành vi giao dịch thực tế của toàn bộ người chơi:
+              </p>
+              <div class="table-responsive">
+                <table class="mechanics-table">
+                  <thead>
+                    <tr>
+                      <th>Tình huống thị trường</th>
+                      <th>Cơ chế tự động</th>
+                      <th>Mục đích vận hành</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong style="color: #f87171;">Bán ra quá nhiều (Oversupply Dump)</strong></td>
+                      <td>Giá thu mua mặt hàng đó của server tự động giảm dần theo khối lượng xả hàng.</td>
+                      <td>Ngăn chặn tình trạng lạm phát tiền tệ và cày cuốc tích trữ tài nguyên farm công nghiệp.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #38bdf8;">Mua vào liên tục (High Demand Surge)</strong></td>
+                      <td>Giá bán ra của mặt hàng tại shop tự động tăng nhẹ theo thời gian.</td>
+                      <td>Phản ánh chính xác giá trị khan hiếm của tài nguyên ngoài thị trường.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #4ade80;">Cơ chế hồi phục (Equilibrium Recovery)</strong></td>
+                      <td>Giá trị tự động hồi phục dần về mốc cân bằng ban đầu sau mỗi chu kỳ thị trường ổn định.</td>
+                      <td>Bảo đảm chu kỳ kinh tế tuần hoàn, công bằng và sống động lâu dài.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Triết lý Mendingless &amp; Ngọc Bảo Mệnh Rune (TGVNKeepInventoryRune)</h3>
+              <span class="mechanic-badge badge-success">Bảo toàn Trang bị</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Server loại bỏ bùa chú Mending vô hạn nhằm hồi sinh giá trị chân chính của đe rèn, bàn rèn và kỹ nghệ sửa chữa trang bị thủ công. Để bảo vệ thành quả khám phá của người chơi trong các chuyến thám hiểm hiểm nguy:
+              </p>
+              <ul>
+                <li><strong>Ngọc Rune bảo mệnh:</strong> Vật phẩm phong ấn đặc biệt giúp bảo toàn nguyên vẹn trang bị và túi đồ của bạn khi chẳng may tử nạn tại The Nether hoặc The End.</li>
+                <li><strong>Bảo toàn tuyệt đối qua cập nhật:</strong> Dữ liệu Rune được bảo tồn 100% cả Cấp độ (Level) lẫn vật phẩm đính kèm qua mọi đợt bảo trì và nâng cấp phiên bản hệ thống.</li>
+                <li><strong>Chính sách hỗ trợ Ticket:</strong> Người chơi đã chuẩn bị sẵn nguyên liệu hoặc vật phẩm để mua Rune trước các đợt cập nhật có thể tạo Ticket tại kênh Discord LunarChill để được Ban Quản Trị đối soát và đền bù thỏa đáng.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Rương Tử Nạn (DeathChest) ở cả 3 Thế Giới</h3>
+              <span class="mechanic-badge badge-warning">Hạn lưu 60 Phút</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Khi bạn ngã xuống tại bất kỳ đâu trong <strong>Overworld</strong>, <strong>The Nether</strong> hay <strong>The End</strong>, một khối DeathChest an toàn sẽ tự động xuất hiện tại đúng tọa độ ngã xuống để cất giữ toàn bộ tài sản.
+              </p>
+              <div class="lunar-callout callout-warning">
+                <strong>Thời hạn bảo quản:</strong> Rương tồn tại chính xác <strong>1 giờ (60 phút)</strong>. Hãy nhanh chóng định vị tọa độ và quay lại thu hồi vật phẩm trước khi rương tự động biến mất!
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Quy tắc thế giới & Anti-Cheese -->
+        <section id="world-rules">
+          <h2>
+            <span>5. Quy tắc Thế giới &amp; Khắc chế Cheese (Anti-Exploit)</span>
+          </h2>
+          <p>
+            Các điều chỉnh chi tiết nhằm bảo vệ TPS máy chủ luôn mượt mà và giữ trọn vẹn trải nghiệm sinh tồn hợp tác:
+          </p>
+
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Hạng mục</th>
+                  <th style="width: 45%;">Quy định kỹ thuật thực tế</th>
+                  <th style="width: 30%;">Ý nghĩa sinh tồn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Giấc ngủ &amp; Đêm trăng</strong></td>
+                  <td><strong>Không thể ngủ để tua qua đêm</strong>. Người chơi có thể nằm lên giường hoặc gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/lay">/lay</button> để <strong>reset Phantom</strong> mà không làm đổi thời gian thế giới.</td>
+                  <td>Bảo toàn nhịp sống ban đêm, ánh sáng đèn lồng và bầu không khí yên bình của server.</td>
+                </tr>
+                <tr>
+                  <td><strong>Dân làng (Villagers)</strong></td>
+                  <td>Dân làng <strong>không thể sinh sản</strong>, <strong>không bán sách Mending</strong> và <strong>không bán trang bị Kim Cương</strong>.</td>
+                  <td>Chấm dứt các trại ép nô dịch dân làng công nghiệp (Trading Hall), khôi phục giá trị nghề rèn và đào khoáng.</td>
+                </tr>
+                <tr>
+                  <td><strong>Farm Quái Nhân tạo</strong></td>
+                  <td>Mọi cỗ máy farm quái nhân tạo <strong>trên không hoặc trên biển đều KHÔNG HOẠT ĐỘNG</strong> (bao gồm cả farm Raid công nghiệp).</td>
+                  <td>Chống treo máy afk xả rác tài nguyên làm tụt giảm TPS và giật lag thế giới.</td>
+                </tr>
+                <tr>
+                  <td><strong>Người sắt (Iron Golem)</strong></td>
+                  <td>Iron Golem khi bị tiêu diệt <strong>KHÔNG rơi thỏi sắt</strong>, mà chỉ rơi <strong>Bí ngô (Pumpkin)</strong>.</td>
+                  <td>Ngăn chặn triệt để các cỗ máy Iron Farm vô hạn làm rác thị trường sắt.</td>
+                </tr>
+                <tr>
+                  <td><strong>Ảo ảnh sư (Illusioner)</strong></td>
+                  <td>Xuất hiện trong các đợt Raid. Khi bị hạ gục, Illusioner rơi các <strong>khối trang trí nội thất độc lạ và tranh vẽ nghệ thuật</strong>.</td>
+                  <td>Phần thưởng sưu tầm nghệ thuật quý giá cho người chơi thích trang hoàng nhà cửa.</td>
+                </tr>
+                <tr>
+                  <td><strong>Evoker &amp; Totem</strong></td>
+                  <td>Evoker chỉ có tỷ lệ <strong>3% rơi Totem of Undying</strong>.</td>
+                  <td>Totem trở lại đúng vị thế bùa hộ mệnh cứu sinh hiếm có, không thể tích trữ hàng rương dễ dãi.</td>
+                </tr>
+                <tr>
+                  <td><strong>Bọ bạc (Silverfish)</strong></td>
+                  <td>Bọ bạc <strong>KHÔNG rơi điểm kinh nghiệm (EXP)</strong>.</td>
+                  <td>Khắc phục triệt để lỗi khai thác bug farm exp vô hạn từ khối đá lồng ấp.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 6. BeaconWaypoint & Towny GUI -->
+        <section id="travel-towny">
+          <h2>
+            <span>6. Mạng lưới Dịch chuyển BeaconWaypoint &amp; Quản trị Towny GUI</span>
+          </h2>
+          <p>
+            Hệ thống đi lại và quản trị lãnh thổ mang tính phiêu lưu khám phá phong cách RPG thế giới mở:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Điểm Mốc Tọa Độ (BeaconWaypoint)</h3>
+              <span class="mechanic-badge badge-info">Discovery Mode RPG</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Cơ chế mở khóa (Unlock 🗺️):</strong> Lần đầu tiên, người chơi di chuyển bộ đến vị trí đặt ngọn Beacon ở các ngôi làng hoặc cứ điểm. Khi tới nơi, hãy <strong>nhấp chuột phải vào ngọn Beacon</strong> để mở khóa điểm mốc. Từ sau thời điểm đó, bạn có thể tự do mở menu và dịch chuyển tức thời tới trạm này!</li>
+                <li><strong>Thu phí bằng EXP:</strong> Mỗi chuyến dịch chuyển qua trạm BeaconWaypoint sẽ tiêu tốn một lượng điểm kinh nghiệm (EXP) nhất định của nhân vật.</li>
+                <li><strong>Độc lập cá nhân (Tắt Sharing):</strong> Mỗi người chơi phải tự mình khám phá và mở khóa từng trạm, không thể chia sẻ điểm đi chung, khuyến khích tinh thần thám hiểm độc lập.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Quản trị Thị trấn Trực quan với Towny Menu GUI</h3>
+              <span class="mechanic-badge badge-success">Giao diện Bấm chuột</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Không còn phải gõ hàng chục câu lệnh phức tạp, gõ ngay <button type="button" class="command-chip" data-action="copy-ip" data-ip="/t menu">/t menu</button> để mở bảng điều khiển đồ họa trực quan:
+              </p>
+              <ul>
+                <li><strong>Thành lập thị trấn mới:</strong> Đứng tại vị trí muốn lập căn cứ và gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town new [tên]">/town new [tên]</button>.</li>
+                <li><strong>Mở rộng ranh giới:</strong> Gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town claim">/town claim</button> để mở rộng diện tích chunk bảo vệ.</li>
+                <li><strong>Cấp quyền ô đất cho cư dân:</strong> Gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/plot claim">/plot claim</button> để nhận chủ quyền một lô đất trong thị trấn.</li>
+                <li><strong>Quản lý ngân sách:</strong> Nộp tiền vào quỹ duy trì thị trấn với <button type="button" class="command-chip" data-action="copy-ip" data-ip="/town deposit [tiền]">/town deposit [tiền]</button>.</li>
+                <li><strong>Phân quyền bạn bè:</strong> Thêm người chơi tin cậy để cùng xây dựng với <button type="button" class="command-chip" data-action="copy-ip" data-ip="/resident friend add [tên]">/resident friend add [tên]</button>.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Kỹ năng RPG & ItemEdit -->
+        <section id="skills-custom">
+          <h2>
+            <span>7. Tiến trình Kỹ năng RPG &amp; Tùy biến Vật phẩm Toàn diện</span>
+          </h2>
+          <p>
+            Phát triển chiều sâu nhân vật và tạo dấu ấn cá nhân độc bản trên từng món trang bị:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Hệ thống 11+ Kỹ năng Aura Skills &amp; Chỉ số Nhân vật</h3>
+              <span class="mechanic-badge badge-purple">RPG Progression</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Mọi hành động sinh tồn trong game đều tích lũy điểm kinh nghiệm cho các nhánh kỹ năng chuyên sâu:
+              </p>
+              <ul>
+                <li><strong>11 Nhánh kỹ năng:</strong> Khai khoáng (Mining), Làm nông (Farming), Chiến đấu (Combat), Nhanh nhẹn (Agility), Khai quật (Excavation), Đốn gỗ (Foraging), Câu cá (Fishing), Bắn cung (Archery), Phòng ngự (Defense), Luyện kim (Forging), Luyện độc/thuốc (Alchemy).</li>
+                <li>Gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/skills">/skills</button> để mở bảng cấp độ và xem các hiệu ứng nội tại vừa được mở khóa.</li>
+                <li>Gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/stats">/stats</button> để tra cứu các chỉ số thực tế: Sức mạnh (Strength), Máu tối đa (Health), Tốc độ hồi phục (Regeneration) và Chỉ số may mắn (Luck).</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Tùy biến Trang bị Toàn diện với ItemEdit</h3>
+              <span class="mechanic-badge badge-info">Sáng tạo Kỷ vật</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Cầm vật phẩm trên tay chính và gõ lệnh <button type="button" class="command-chip" data-action="copy-ip" data-ip="/itemedit">/itemedit</button> để mở giao diện chỉnh sửa tự do:
+              </p>
+              <ul>
+                <li><strong>Đổi tên độc bản:</strong> Đặt tên tùy ý cho thanh kiếm, cây cúp, bộ giáp hay món quà trao tay với hỗ trợ định dạng mã màu sinh động.</li>
+                <li><strong>Thêm dòng mô tả (Lore):</strong> Tự tay viết những câu chuyện truyền thuyết, ghi lại tọa độ chiến tích, dấu ấn ngày tham gia thị trấn hoặc những lời chúc ý nghĩa cho bạn bè.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Tiện ích Thư thái: AxShulkers, MyPet &amp; GSit Ngồi Đầu</h3>
+              <span class="mechanic-badge badge-success">Quality of Life</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>AxShulkers (Mở balo tức thời):</strong> Giữ phím <code>Shift</code> + Nhấp chuột phải vào hộp Shulker trong túi đồ để mở trực tiếp giao diện lưu trữ mà không cần đặt hộp xuống đất (tiện lợi khi di chuyển, chống nguy cơ bị nhặt mất).</li>
+                <li><strong>Thú cưng MyPet:</strong> Gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/pet">/pet</button> để mở giao diện quản lý thú cưng, rèn luyện kỹ năng chiến đấu và gọi thú cưng tức thời với <button type="button" class="command-chip" data-action="copy-ip" data-ip="/petcall">/petcall</button>.</li>
+                <li><strong>GSit Ngồi đầu 2 người (We Bare Bears 🐻🐻):</strong> Nhấp chuột phải lên đầu người chơi khác để ngồi lên đầu họ (tối đa 2 người xếp chồng) hoặc gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/sit">/sit</button> để ngồi thư giãn trên mọi khối block.</li>
+                <li><strong>Khoe trang bị lên chat:</strong> Gõ <code>[item]</code> hoặc <code>[i]</code> để hiển thị món đồ trên tay, hoặc <code>[inv]</code> để chia sẻ toàn bộ túi đồ cho cả máy chủ chiêm ngưỡng.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Mod Client & Cảnh báo An toàn -->
+        <section id="client-mods">
+          <h2>
+            <span>8. Danh sách Mod Client Được Khuyên Dùng &amp; Cảnh báo An toàn</span>
+          </h2>
+          <p>
+            Các mod hỗ trợ tối đa trải nghiệm âm thanh, bản đồ và hình ảnh được server tương thích chính thức:
+          </p>
+
+          <div class="commands-grid">
+            <div class="lunar-card command-card">
+              <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Simple Voice Chat</strong>
+              <p class="command-desc" style="margin-top: 8px;">
+                Đàm thoại giọng nói 3D định hướng không gian chân thực trong game. Nghe tiếng bạn bè to nhỏ theo cự ly và hướng đứng khi cùng nhau đào hang.
+              </p>
+            </div>
+
+            <div class="lunar-card command-card">
+              <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Xaero's Minimap &amp; World Map</strong>
+              <p class="command-desc" style="margin-top: 8px;">
+                Bản đồ thu nhỏ và toàn cảnh thế giới, hỗ trợ đồng bộ mốc tọa độ căn cứ an toàn, không lo bị đè dữ liệu hay lạc đường.
+              </p>
+            </div>
+
+            <div class="lunar-card command-card">
+              <strong style="color: var(--color-text-heading); font-size: 1.05rem;">ImageMap Client</strong>
+              <p class="command-desc" style="margin-top: 8px;">
+                Hiển thị tranh ảnh nghệ thuật độ phân giải cao được BQT và các thị trấn treo lên khung tranh trong game qua plugin ImageFrame.
+              </p>
+            </div>
+
+            <div class="lunar-card command-card">
+              <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Sodium &amp; Iris Shaders</strong>
+              <p class="command-desc" style="margin-top: 8px;">
+                Bộ đôi mod tối ưu hóa chỉ số khung hình FPS vượt trội trên Fabric và hỗ trợ các gói shader đêm trăng sao tuyệt đẹp.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-callout callout-danger" style="margin-top: 24px;">
+            <strong style="color: #f87171; font-size: 1rem;">⚠️ CẢNH BÁO QUAN TRỌNG VỀ MOD LITEMATICA:</strong><br>
+            Tạm thời <strong>TUYỆT ĐỐI KHÔNG SỬ DỤNG</strong> mod Litematica khi tham gia máy chủ LunarChill. Hệ thống Anti-Cheat tự động của server có thể nhận diện nhầm các packet từ mod này và thực hiện auto-ban tài khoản. Ban Quản Trị sẽ có thông báo chính thức sau khi hoàn tất kiểm tra tính tương thích. Vui lòng tuân thủ để tránh gián đoạn trải nghiệm của bạn!
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-link">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="32" height="32">
+            <span class="brand-name">LunarChill</span>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
+          </p>
+          <p class="mojang-disclaimer">
+            Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang tân thủ</a></li>
+            <li><a href="advanced-guide.html" aria-current="page">Hướng dẫn chi tiết</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
+            <li><a href="rules.html">Nội quy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Văn bản</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Điều khoản dịch vụ</a></li>
+            <li><a href="privacy.html">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord">Discord ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LunarChill Club.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

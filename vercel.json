@@ -4,6 +4,7 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/guide", "destination": "/guide.html" },
+    { "source": "/advanced-guide", "destination": "/advanced-guide.html" },
     { "source": "/towns", "destination": "/towns.html" },
     { "source": "/gallery", "destination": "/gallery.html" },
     { "source": "/rules", "destination": "/rules.html" },

@@ -1,8 +1,12 @@
 # Deployment & Handover Guide
 
 > **Mục tiêu:** Hướng dẫn toàn diện quy trình triển khai website LunarChill lên Internet qua Vercel, cấu hình DNS an toàn không ảnh hưởng máy chủ Minecraft, và quy trình bàn giao vận hành.  
-> **Cập nhật:** 2026-11-02  
-> **Phiên bản:** 1.0 (Phase 03.1)
+> **Cập nhật:** 2026-11-05  
+> **Trạng thái:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.  
+> **Phiên bản:** 1.1 (Phase 03 Continuous Improvement)
+
+> [!NOTE]
+> **Hiện trạng:** Dự án đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
 
 ---
 

@@ -11,7 +11,7 @@
     
 - **Deadline:** 2026-11-20
     
-- **Current phase:** Development (Phase 03 Core Complete) ➔ QA & Review (Phase 04)
+- **Current phase:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
     
 - **Tech stack:** Vanilla HTML5, Modern CSS3 (GPU-accelerated, Pixel Stepped Voxel UI), Vanilla JavaScript (ES6+ Modules)
     
@@ -80,9 +80,9 @@ Existing branding assets may be redesigned when doing so strengthens the overall
 |---|---|---|---|
 |01 — Research & Requirements|Oct 17–30|Research notes, requirements, sitemap, scope matrix|Hoàn thành (Đóng)|
 |02 — Brand & UI Design|Oct 30–Nov 02|Brand guidelines, design system, UI direction, Figma prototype specs|Hoàn thành (Đóng)|
-|03 — Development|Nov 02–Nov 14|Responsive website implementation, vanilla HTML/CSS/JS|Đang triển khai|
-|04 — QA & Review|Nov 15–Nov 18|Cross-browser testing, mobile audit, API edge-case verification|Dự kiến|
-|05 — Release Candidate & Handover|Nov 19–Nov 20|Vercel deployment, final review and handover|Dự kiến|
+|03 — Development|Nov 02–Nov 14|Responsive website implementation, vanilla HTML/CSS/JS|Hoàn thành core|
+|04 — Deployment & Domain Verification|Nov 05|Deploy Vercel, cấu hình DNS domain có sẵn|Đã deploy, đợi xác thực|
+|05 — Continuous Improvement & Handover|Nov 05–Nov 20|Liên tục cải thiện trang web, QA, tối ưu hiệu năng|Đang triển khai|
 
 Dates are adjusted to match actual project pace while strictly maintaining the final handover deadline: 2026-11-20.
 ## 7. Project Structure

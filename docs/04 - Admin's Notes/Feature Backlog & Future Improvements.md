@@ -2,6 +2,9 @@
 
 > Nơi lưu trữ ý tưởng mới, các tính năng dự kiến mở rộng và những hạng mục cần cải tiến trong tương lai cho website và máy chủ LunarChill.Club.
 
+> [!NOTE]
+> **Hiện trạng dự án:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
+
 ---
 
 ## 📌 Phân loại mức độ ưu tiên (Priority Levels)
@@ -50,7 +53,7 @@
 
 | Mức độ | Tính năng / Hạng mục cải tiến | Mô tả chi tiết | Trạng thái |
 | :---: | :--- | :--- | :---: |
-| **P1** | **Thanh tìm kiếm lệnh nhanh (Instant Command Search)** | Cho phép gõ từ khóa (ví dụ: `/t new`, `/pet`, `/sethome`) để lọc tức thì các câu lệnh trong `guide.html`. | ⏳ Đang chờ |
+| **P1** | **Thanh tìm kiếm lệnh nhanh (Instant Command Search)** | Cho phép gõ từ khóa (ví dụ: `/t new`, `/pet`, `/rtp`) để lọc tức thì các câu lệnh trong `guide.html`. | ⏳ Đang chờ |
 | **P2** | **Máy tính nạp oxy & độ sâu (Deepslate Mining Calculator)** | Công cụ nhỏ giúp người chơi tra cứu độ sâu nào cần đèn hiệu Beacon và cách nạp oxy an toàn. | 💡 Ý tưởng |
 
 ---

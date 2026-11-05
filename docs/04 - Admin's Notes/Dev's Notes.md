@@ -9,7 +9,7 @@
 - **Dự án:** Website chính thức LunarChill.Club
 - **Tập tin:** `docs/04 - Admin's Notes/Dev's Notes.md`
 - **Khởi tạo:** 04/11/2026
-- **Trạng thái:** Tài liệu mở (Living Document)
+- **Trạng thái:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
 - **Tech Stack:** Vanilla HTML5, Modern CSS3 (GPU-accelerated, Pixel Voxel Architecture), Vanilla JavaScript (ES6+ Modules)
 
 ---
@@ -77,13 +77,21 @@ Giao diện đầu trang được thiết kế theo cấu trúc **2 tầng chuy�
 | **04/11/2026** | **Tính năng Tùy biến Vật phẩm (ItemRename / ItemEdit):** Mở rộng tính năng cho phép người chơi tự do chỉnh sửa vật phẩm trên tay với đủ mọi cách bằng lệnh `/itemedit` (đổi tên, thêm dòng lore, phối mã màu, sáng tạo kỷ vật cá nhân). Đã cập nhật vào `guide.html`, `Server Features & Mechanics.md`, `Content & Data Registry.md`. | Dev / Antigravity |
 | **04/11/2026** | **Chi tiết Cơ chế BeaconWaypoint:** Làm rõ quy trình mở khóa trạm bằng cách đến trực tiếp Beacon ở làng và nhấp chuột phải (Unlock 🗺️, phong cách game RPG thế giới mở) cùng cơ chế thu phí dịch chuyển bằng điểm kinh nghiệm (EXP). Cập nhật vào `guide.html`, `Server Features & Mechanics.md`, `Content & Data Registry.md`. | Dev / Antigravity |
 | **04/11/2026** | Khởi tạo thư mục `04 - Admin's Notes` và tệp `Dev's Notes.md`. | Dev / Antigravity |
+| **05/11/2026** | **Deploy Vercel & Cập nhật Cẩm nang:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực DNS, tiến hành sang công đoạn liên tục cải thiện trang web. Cập nhật cẩm nang tân thủ (`/redeem tanthu`, 3h dùng `/rtp`, loại bỏ `/sethome` và `/home`). Thay thế phong cảnh tĩnh hero bằng video nền vòng lặp tối ưu kèm nút bật/tắt chuyển động. | Dev / Antigravity |
+| **05/11/2026** | **Trang Hướng dẫn chi tiết & Tính năng sâu (`advanced-guide.html`):** Thiết kế và xuất bản trang Hướng dẫn chuyên sâu toàn diện, phân tích chi tiết: Khai khoáng tầng sâu $Y \le 0$ & phạt Ancient Debris Nether, thể trạng cơn khát nước & oxy (Beacon cứu sinh đồng đội), đại tu The Nether (Wither 900 HP) & The End Nullscape 384 block / Stellarity (cấm đặt nước), kinh tế thị trường Dynamic Pricing, Mendingless, ngọc Rune, DeathChest 60p, BeaconWaypoint Discovery Mode, Towny GUI menu `/t menu`, ItemEdit `/itemedit`, và cảnh báo mod Litematica. Đồng bộ thanh điều hướng và footer trên toàn bộ 8 trang web. | Dev / Antigravity |
+| **05/11/2026** | **Cập nhật Link Discord chính thức:** Cập nhật link Discord mời chính thức sang `https://discord.gg/SM9cn8pQQH` đồng bộ trên `assets/js/config.js`, toàn bộ 8 trang HTML và hệ thống tài liệu. | Dev / Antigravity |
 
 ---
 
 ## 5. Các hạng mục dự kiến tiếp theo (Next Steps)
 
-1. [x] **Hạ tầng mạng (P0):** Thống nhất chung port `:25572` cho cả Java và Bedrock (đồng bộ `config.js`, UI và fallback trên web).
-2. [ ] **Hệ thống Whitelist / Đăng ký:** Thiết kế luồng đăng ký bằng Email + IGN, lọc trùng email, xác thực OTP chống clone và tự động đồng bộ vào server Minecraft.
-3. [ ] Tinh chỉnh và bổ sung thêm các tương tác animation tĩnh nhẹ nhàng khi cuộn trang (Intersection Observer).
-4. [ ] Hoàn thiện thư viện ảnh in-game thực tế (`gallery.html` & `assets/images/showcase/`).
-5. [ ] Kiểm thử responsive trên các màn hình di động cỡ nhỏ (< 380px).
+> [!NOTE]
+> **Hiện trạng:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
+
+1. [x] **Deploy Vercel & Domain:** Đã deploy lên Vercel, domain có sẵn, đợi hoàn tất xác thực DNS.
+2. [x] **Hạ tầng mạng (P0):** Thống nhất chung port `:25572` cho cả Java và Bedrock (đồng bộ `config.js`, UI và fallback trên web).
+3. [ ] **Công đoạn liên tục cải thiện trang web:**
+   - [ ] Tinh chỉnh và bổ sung thêm các tương tác animation tĩnh nhẹ nhàng khi cuộn trang (Intersection Observer).
+   - [ ] Hoàn thiện thư viện ảnh in-game thực tế (`gallery.html` & `assets/images/showcase/`).
+   - [ ] Kiểm thử responsive trên các màn hình di động cỡ nhỏ (< 380px).
+   - [ ] Hệ thống Whitelist / Đăng ký: Thiết kế luồng đăng ký bằng Email + IGN, lọc trùng email, xác thực OTP chống clone và tự động đồng bộ vào server Minecraft.

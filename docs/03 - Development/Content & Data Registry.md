@@ -24,7 +24,7 @@
 
 | Kênh / Dịch vụ | URL thực tế | Mục đích | Trạng thái |
 | :--- | :--- | :--- | :--- |
-| **Discord Community** | `https://discord.gg/lunarchill` | Tham gia cộng đồng, mở Ticket hỗ trợ | Hoạt động |
+| **Discord Community** | `https://discord.gg/SM9cn8pQQH` | Tham gia cộng đồng, mở Ticket hỗ trợ | Hoạt động |
 | **mcstatus.io PC (Java)** | `https://api.mcstatus.io/v2/status/java/LunarChill.club:25572` | Trạng thái online & số người chơi PC | Đã tích hợp |
 | **mcstatus.io PE (Bedrock)**| `https://api.mcstatus.io/v2/status/bedrock/LunarChill.club:25572` (fallback: `:19143`) | Trạng thái online & số người chơi PE | Đã tích hợp |
 
@@ -99,8 +99,7 @@
 | Nhóm lệnh | Cú pháp lệnh | Mô tả công dụng | Cho phép Copy |
 | :--- | :--- | :--- | :--- |
 | **Di chuyển & Căn cứ** | `/spawn` | Dịch chuyển tức thời về Khu vực Trung tâm (Spawn) | Có (`copy-ip`) |
-| | `/sethome [tên]` | Đặt điểm dịch chuyển tại nhà cá nhân | Có |
-| | `/home [tên]` | Quay trở về điểm nhà đã lưu | Có |
+| | `/rtp` | Dịch chuyển ngẫu nhiên đến khu vực an toàn (kích hoạt qua `/redeem tanthu`) | Có |
 | | `/tpa [tên_người_chơi]` | Gửi yêu cầu dịch chuyển tới bạn bè | Có |
 | | `/tpaccept` | Đồng ý yêu cầu dịch chuyển | Có |
 | | `/lay` | Nằm nghỉ ngơi reset Phantom mà không cần ngủ qua đêm | Có |

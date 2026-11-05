@@ -1,4 +1,4 @@
-﻿# LunarChill.Club Website — Sitemap Architecture
+# LunarChill.Club Website — Sitemap Architecture
 
 > Tài liệu quy hoạch cấu trúc website, đường dẫn và phân bổ nội dung nhằm tối ưu trải nghiệm khám phá máy chủ, tra cứu thông tin nhanh chóng và chuyển đổi người chơi vào cộng đồng Discord / Minecraft.
 
@@ -78,6 +78,16 @@ graph TD
   - Minh bạch các luồng dữ liệu thực tế: Local Storage (lưu cài đặt giao diện), Nhật ký truy cập mạng/DDoS logs từ Vercel Edge, và định danh in-game (IGN, UUID, IP in-game lưu trên server Minecraft).
   - Các bên thứ ba liên quan: Vercel Inc., mcstatus.io, Discord Inc.
   - Quyền của chủ thể dữ liệu và kênh tiếp nhận hỗ trợ/xóa dữ liệu chính thức qua Ticket Discord.
+
+### 3.6. Hướng dẫn chi tiết &amp; Tính năng chuyên sâu (`/advanced-guide` hoặc `advanced-guide.html`)
+* **Mục tiêu:** Hướng dẫn toàn diện và phân tích sâu các cơ chế sinh tồn độc bản, kinh tế thị trường, đại tu đa chiều không gian và quy tắc chống cheese cho người chơi kỳ cựu.
+* **Nội dung:**
+  - Khai khoáng tầng sâu ($Y \le 0$) & điều kiện mở khóa Level 30+; phạt Mining Fatigue 5 phút với Ancient Debris Nether.
+  - Thể trạng sinh học: Cơn khát nước (Thirst), Oxy đa chiều & Đèn hiệu Beacon cứu sinh đồng đội.
+  - Đại tu The Nether (Wither Boss 900 HP, Piglin chủ động tấn công, cấm nóc Nether) & The End (Nullscape 384 blocks, Stellarity, cấm đặt nước).
+  - Kinh tế thị trường biến động (Dynamic Pricing), Mendingless & Ngọc Rune bảo mệnh (TGVNKeepInventoryRune), Rương tử nạn DeathChest 60 phút.
+  - Du hành BeaconWaypoint (Discovery Mode, phí EXP), Quản trị Towny GUI (`/t menu`) và Tùy biến vật phẩm (`/itemedit`).
+  - Danh mục mod client tối ưu (Simple Voice Chat, Xaero, Iris) và cảnh báo an toàn cấm Litematica.
 
 ---
 

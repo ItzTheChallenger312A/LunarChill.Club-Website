@@ -38,7 +38,7 @@
 
 ### AC-04: Cẩm nang Tân thủ & Bảng Lệnh (`/guide`)
 - [x] **AC-04.1 (Copy lệnh nhanh & Hỗ trợ bàn phím):**
-  - Toàn bộ 26 ô lệnh sử dụng phần tử `<button type="button" class="command-chip">`, hỗ trợ đầy đủ cả click chuột và phím `Tab` / `Enter` / `Space` để sao chép cú pháp đầy đủ (kèm đối số gợi ý như `/sethome [tên]`, `/town new [tên]`).
+  - Toàn bộ các ô lệnh sử dụng phần tử `<button type="button" class="command-chip">`, hỗ trợ đầy đủ cả click chuột và phím `Tab` / `Enter` / `Space` để sao chép cú pháp đầy đủ (kèm đối số gợi ý như `/town new [tên]`).
 - [x] **AC-04.2 (FAQ Accordion Native):**
   - Các câu hỏi thường gặp được triển khai bằng `<details class="faq-item">` và `<summary class="faq-question">`, đóng/mở tự nhiên bằng cả chuột và bàn phím mà không phụ thuộc JS.
 

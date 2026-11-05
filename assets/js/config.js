@@ -31,7 +31,7 @@ export const CONFIG = Object.freeze({
   VERSION_PE: '26.30 – 26.51',   // Bản PE riêng (Điện thoại)
 
   // 3. External Ecosystem URLs
-  DISCORD_INVITE_URL: 'https://discord.gg/lunarchill',
+  DISCORD_INVITE_URL: 'https://discord.gg/SM9cn8pQQH',
 
   // 4. mcstatus.io API Endpoints
   API_STATUS_JAVA: `https://api.mcstatus.io/v2/status/java/${SERVER_HOST}:${SERVER_PORT_JAVA}`,
