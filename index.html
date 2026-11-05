@@ -92,18 +92,14 @@
   </div>
 
   <main id="main-content">
-    <!-- Hero Section (Centered Cosmic Stage & Minecraft Campfire Campsite) -->
+    <!-- Hero Section (Centered Cosmic Stage & Looping Ambient Video Backdrop) -->
     <section class="hero-section hero-centered" id="hero">
-      <!-- Celestial Sky: Pixel Moon & Moonlight Glow / Beams -->
-      <div class="hero-celestial-sky" aria-hidden="true">
-        <div class="celestial-moon-wrap">
-          <div class="moonlight-halo"></div>
-          <div class="pixel-moon"></div>
-          <span class="lunar-star star-1">✦</span>
-          <span class="lunar-star star-2">✦</span>
-          <span class="lunar-star star-3">✦</span>
-        </div>
-        <div class="moonlight-beam"></div>
+      <!-- Looping Ambient Video Backdrop -->
+      <div class="hero-video-backdrop" aria-hidden="true">
+        <video class="hero-video-element" autoplay loop muted playsinline poster="assets/images/hero-video-poster.webp" preload="auto">
+          <source src="assets/videos/hero-ambient-loop.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
       </div>
 
       <div class="container hero-container">
@@ -148,51 +144,12 @@
 
       </div>
 
-      <!-- Minecraft Campsite Floor Divider (Sát ranh giới chuyển tầng) -->
-      <div class="hero-campsite-divider">
-        <div class="campsite-scenery">
-
-          <!-- Left Prop: Spruce Tree (Cây thông Minecraft Taiga) -->
-          <div class="campsite-prop prop-tree tree-left" title="Cây thông Taiga LunarChill">
-            <div class="pixel-spruce-tree" role="img" aria-label="Cây thông Minecraft Taiga"></div>
-          </div>
-
-          <!-- Mid-Left Prop: Oak Log Bench (Chỗ ngồi cắm trại) -->
-          <div class="campsite-prop prop-bench" title="Khúc gỗ sồi cắm trại">
-            <div class="pixel-oak-log"></div>
-          </div>
-
-          <!-- Center Prop: Minecraft Campfire with Logs, Fire & Smoke -->
-          <div class="campsite-prop prop-campfire" title="Lửa trại ấm cúng LunarChill">
-            <div class="campfire-smoke" aria-hidden="true">
-              <span class="smoke-particle p1"></span>
-              <span class="smoke-particle p2"></span>
-              <span class="smoke-particle p3"></span>
-              <span class="smoke-particle p4"></span>
-            </div>
-            <div class="campfire-glow" aria-hidden="true"></div>
-            <div class="campfire-base" aria-hidden="true"></div>
-            <div class="campfire-sprite" role="img" aria-label="Đốm lửa trại Minecraft bập bùng"></div>
-          </div>
-
-          <!-- Mid-Right Prop: Lantern Post (Đèn lồng vàng) -->
-          <div class="campsite-prop prop-lantern" title="Đèn lồng soi đêm">
-            <div class="lantern-glow" aria-hidden="true"></div>
-            <div class="lantern-sprite" role="img" aria-label="Đèn lồng Minecraft tỏa sáng vàng ấm"></div>
-          </div>
-
-          <!-- Right Prop: Oak Tree (Cây sồi Minecraft) -->
-          <div class="campsite-prop prop-tree tree-right" title="Cây sồi xanh LunarChill">
-            <div class="pixel-oak-tree" role="img" aria-label="Cây sồi Minecraft"></div>
-          </div>
-
-        </div>
-
-        <!-- Minecraft Terrain Floor (Khối cỏ Minecraft lặp ngang) -->
-        <div class="minecraft-floor" aria-hidden="true">
-          <div class="grass-block-strip"></div>
-          <div class="dirt-block-strip"></div>
-        </div>
+      <!-- Video Attribution Credit (Bottom-Right of Hero frame) -->
+      <div class="hero-video-credit" aria-label="Nguồn video nền">
+        <span class="credit-sparkle" aria-hidden="true">✦</span>
+        <span class="credit-text">
+          Background video: <a href="https://youtu.be/DPXs4YlNl7k" target="_blank" rel="noopener noreferrer" title="Xem video gốc trên YouTube">Ambient Worlds</a> &middot; <em>I do not own this video</em>
+        </span>
       </div>
     </section>
 
@@ -406,6 +363,9 @@
           </p>
           <p class="mojang-disclaimer">
             Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
+          </p>
+          <p class="video-credit-disclaimer">
+            Hero background ambience video &copy; <a href="https://youtu.be/DPXs4YlNl7k" target="_blank" rel="noopener noreferrer">Ambient Worlds</a> in partnership with @CozyCraftYT. Used under fair attribution. I do not own this video.
           </p>
         </div>
 
