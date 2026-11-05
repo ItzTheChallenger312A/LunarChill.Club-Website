@@ -7,7 +7,7 @@
 ## 📌 Thông tin tài liệu
 
 - **Dự án:** Website chính thức LunarChill.Club
-- **Tập tin:** `docs/04 - Admin's Notes/Dev's Notes.md`
+- **Tập tin:** `docs/04 - Feedbacks/Dev's Notes.md`
 - **Khởi tạo:** 04/11/2026
 - **Trạng thái:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
 - **Tech Stack:** Vanilla HTML5, Modern CSS3 (GPU-accelerated, Pixel Voxel Architecture), Vanilla JavaScript (ES6+ Modules)
@@ -81,6 +81,9 @@ Giao diện đầu trang được thiết kế theo cấu trúc **2 tầng chuy�
 | **05/11/2026** | **Trang Hướng dẫn chi tiết & Tính năng sâu (`advanced-guide.html`):** Thiết kế và xuất bản trang Hướng dẫn chuyên sâu toàn diện, phân tích chi tiết: Khai khoáng tầng sâu $Y \le 0$ & phạt Ancient Debris Nether, thể trạng cơn khát nước & oxy (Beacon cứu sinh đồng đội), đại tu The Nether (Wither 900 HP) & The End Nullscape 384 block / Stellarity (cấm đặt nước), kinh tế thị trường Dynamic Pricing, Mendingless, ngọc Rune, DeathChest 60p, BeaconWaypoint Discovery Mode, Towny GUI menu `/t menu`, ItemEdit `/itemedit`, và cảnh báo mod Litematica. Đồng bộ thanh điều hướng và footer trên toàn bộ 8 trang web. | Dev / Antigravity |
 | **05/11/2026** | **Cập nhật Link Discord chính thức:** Cập nhật link Discord mời chính thức sang `https://discord.gg/SM9cn8pQQH` đồng bộ trên `assets/js/config.js`, toàn bộ 8 trang HTML và hệ thống tài liệu. | Dev / Antigravity |
 | **05/11/2026** | **Ban hành Nội quy máy chủ chính thức (`rules.html`):** Cập nhật toàn bộ 7 điều khoản nội quy chính thức: I. Những hành vi gian lận (Xray, Fly/Killaura/Speed/Double Jump, Crack Seed, Dupe lỗi); II. Quy định PvP & Căn cứ (giết người vô cớ, trường hợp được phép PvP); III. Wilderness (tôn trọng công trình chưa kịp claim); IV. Phá base và cướp bóc (Ban thẳng); V. Giải quyết mâu thuẫn (nội bộ, không drama ra ngoài); VI. Gây chiến và chia phe; VII. Văn hóa ứng xử (văn minh, cấm tục tĩu/18+); VIII. Quy trình Ticket CoreProtect. | Dev / Antigravity |
+| **05/11/2026** | **Tái cấu trúc thư mục `04 - Feedbacks` & Tạo sổ tay Góp ý người chơi:** Đổi tên thư mục `docs/04 - Admin's Notes` thành `docs/04 - Feedbacks`, khởi tạo tệp [`Player Feedback & Suggestions.md`](Player%20Feedback%20&%20Suggestions.md) tổng hợp 11 ý kiến đóng góp tiêu biểu của cộng đồng, quy trình sàng lọc 4 bước và danh sách đề xuất bị từ chối minh bạch. | Dev / Antigravity |
+| **05/11/2026** | **Cải tiến Cẩm nang & Xuất bản Trang Mod máy yếu (`low-end-mods.html`):** Tinh chỉnh mô tả PatPat thành câu trực quan, loại bỏ văn phong gượng gạo; bổ sung cảnh báo cấu hình đồ họa Iris Shader trên `guide.html` & `advanced-guide.html`; tạo trang chuyên mục độc lập [`low-end-mods.html`](../../low-end-mods.html) (không nằm trên navigation của `index.html`) tổng hợp bộ mod tối ưu hiệu năng (Sodium, Lithium, FerriteCore, ImmediatelyFast, ModernFix, Entity Culling) cùng bảng thông số cài đặt đồ họa mẫu và cấu hình rewrite `/low-end-mods` trong `vercel.json`. | Dev / Antigravity |
+| **05/11/2026** | **Tái cấu trúc Trang Mods thành Cẩm nang Hỗ trợ Người chơi toàn diện (`mods.html` & `low-end-mods.html`):** Viết lại toàn bộ trang mod theo cấu trúc hỗ trợ thực chiến 8 phần: Hướng dẫn cài đặt nhanh 3 bước & phân bổ RAM chuẩn; Gói mod siêu tối ưu 60+ FPS cho máy yếu; Tiện ích QoL sinh tồn siêu nhẹ; Thiết lập Video Settings tối ưu; Nhận biết mod nặng cần tránh (Iris Shader, Particle rain/leaves, AmbientSounds 81MB); Cẩm nang bắt bệnh & khắc phục sự cố (crash, tụt FPS khi cầm đuốc, spike lag); Bảng tra cứu toàn diện hơn 60 mod phổ biến; Kênh nhận hỗ trợ kỹ thuật 1-1 trên Discord. Cấu hình rewrite song song `/mods` và `/low-end-mods` trong `vercel.json`. | Dev / Antigravity |
 
 ---
 

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Mod Client &amp; Tối Ưu Hiệu Năng - LunarChill 🌙</title>
+  <meta name="description" content="Cẩm nang hướng dẫn cài đặt Fabric, bộ mod tối ưu FPS cho máy yếu, tiện ích sinh tồn QoL và giải pháp khắc phục sự cố giật lag khi chơi Minecraft LunarChill.">
+  <link rel="canonical" href="https://LunarChill.club/mods">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://LunarChill.club/mods">
+  <meta property="og:title" content="Cẩm Nang Mod Client &amp; Tối Ưu Hiệu Năng - LunarChill">
+  <meta property="og:description" content="Danh sách mod tăng FPS, giảm tiêu thụ RAM, mẹo thiết lập Video Settings và cẩm nang khắc phục giật lag cho người chơi LunarChill.">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/advanced-guide.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="advanced-guide.html" class="nav-link">HD Chi tiết</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="advanced-guide.html" class="mobile-nav-link">Hướng dẫn chi tiết (Nâng cao)</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
+        Sao chép IP PC: <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <div class="page-hero">
+      <div class="container">
+        <div style="display: inline-block; margin-bottom: 12px;">
+          <span class="mechanic-badge badge-success">Cẩm Nang Mod Client · Tối Ưu Hóa &amp; Hỗ Trợ Người Chơi</span>
+        </div>
+        <h1 style="font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.01em;">
+          Cẩm Nang Mod Client &amp; Tối Ưu Hiệu Năng
+        </h1>
+        <p style="color: var(--color-text-body); max-width: 720px; margin: 0 auto 24px auto; font-size: 1.05rem; line-height: 1.6;">
+          Hướng dẫn cài đặt Fabric, gói mod tăng FPS cho máy yếu, tiện ích sinh tồn QoL, cẩm nang bắt bệnh sự cố và bảng tra cứu hơn 100 mod phổ biến giúp bạn trải nghiệm mượt mà tại LunarChill.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="guide.html" class="btn btn-secondary">
+            ← Quay lại Cẩm nang
+          </a>
+          <button type="button" class="btn btn-primary" data-action="copy-ip" data-copy-target="java">
+            Sao chép IP Server
+          </button>
+          <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
+            Hỏi đáp Kỹ thuật trên Discord ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container guide-layout">
+      <!-- Sidebar TOC -->
+      <aside class="guide-sidebar" aria-label="Mục lục mod tối ưu">
+        <div class="lunar-card toc-card">
+          <h3>Hỗ Trợ Cho Người Chơi</h3>
+          <ul class="toc-list">
+            <li><a href="#quick-setup" class="toc-link">1. Cài đặt nhanh &amp; Môi trường</a></li>
+            <li><a href="#minimal-preset" class="toc-link">2. Gói mod siêu tối ưu (60+ FPS)</a></li>
+            <li><a href="#qol-mods" class="toc-link">3. Tiện ích sinh tồn QoL siêu nhẹ</a></li>
+            <li><a href="#settings-guide" class="toc-link">4. Thiết lập Video Settings chuẩn</a></li>
+            <li><a href="#heavy-mods" class="toc-link">5. Nhận biết mod nặng cần tránh</a></li>
+            <li><a href="#troubleshooting" class="toc-link">6. Bắt bệnh &amp; Khắc phục sự cố</a></li>
+            <li><a href="#mod-directory" class="toc-link">7. Bảng tra cứu toàn bộ Mod</a></li>
+            <li><a href="#support-channel" class="toc-link">8. Kênh nhận hỗ trợ kỹ thuật 1-1</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="guide-content">
+
+        <!-- 1. Hướng dẫn cài đặt nhanh & Môi trường -->
+        <section id="quick-setup">
+          <h2>1. Hướng Dẫn Cài Đặt Nhanh &amp; Môi Trường Chuẩn (Quick Setup)</h2>
+          <p>
+            Để bắt đầu chơi mượt mà tại LunarChill trên máy tính cấu hình yếu hoặc laptop văn phòng, bạn chỉ cần thực hiện 3 bước cơ bản sau:
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0;">
+            <div class="lunar-card" style="padding: 20px; border-top: 3px solid #38bdf8;">
+              <span class="mechanic-badge badge-info" style="margin-bottom: 8px;">Bước 1</span>
+              <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #fff;">Cài Fabric Loader</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-body); margin: 0; line-height: 1.6;">
+                Chọn phiên bản <strong>Minecraft 1.21.x</strong> (khuyên dùng 1.21.1) và Fabric Loader phiên bản từ <strong>0.18.5 trở lên</strong>. Có thể dùng launcher tiện lợi như Prism Launcher hoặc Modrinth App.
+              </p>
+            </div>
+
+            <div class="lunar-card" style="padding: 20px; border-top: 3px solid #34d399;">
+              <span class="mechanic-badge badge-success" style="margin-bottom: 8px;">Bước 2</span>
+              <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #fff;">Cài Java 21 LTS</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-body); margin: 0; line-height: 1.6;">
+                Đảm bảo máy tính đã cài đặt <strong>Java 21 LTS 64-bit</strong>. Tránh dùng Java 8 hoặc 17 cũ sẽ gây lỗi không nạp được mod (Crash on launch).
+              </p>
+            </div>
+
+            <div class="lunar-card" style="padding: 20px; border-top: 3px solid #fbbf24;">
+              <span class="mechanic-badge badge-warning" style="margin-bottom: 8px;">Bước 3</span>
+              <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #fff;">Bỏ Mod vào Thư mục</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-body); margin: 0; line-height: 1.6;">
+                Tải các file mod <code>.jar</code> tương thích và dán vào thư mục <code>.minecraft/mods</code>. Khởi động game bằng profile Fabric vừa tạo.
+              </p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 24px; color: var(--color-accent-orbit);">Thông số Phân bổ RAM Chuẩn (Tránh Giật Stuttering)</h3>
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Tổng RAM máy tính</th>
+                  <th style="width: 35%;">Mức RAM nên cấp cho Minecraft</th>
+                  <th style="width: 40%;">Lưu ý kỹ thuật quan trọng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>4 GB RAM</strong></td>
+                  <td><strong>2500 MB &rarr; 3072 MB</strong> (2.5G – 3GB)</td>
+                  <td>Để lại tối thiểu 1GB cho hệ điều hành Windows hoạt động, tránh tràn RAM ảo.</td>
+                </tr>
+                <tr>
+                  <td><strong>8 GB RAM (Phổ biến)</strong></td>
+                  <td><strong>3500 MB &rarr; 4096 MB</strong> (3.5G – 4GB)</td>
+                  <td>Mức vàng tối ưu nhất. Nhờ có FerriteCore, game chỉ tiêu tốn thực tế ~2GB RAM.</td>
+                </tr>
+                <tr>
+                  <td><strong>16 GB RAM trở lên</strong></td>
+                  <td><strong>4096 MB &rarr; 6144 MB</strong> (4GB – 6GB)</td>
+                  <td><strong>Không nên cấp quá 6GB</strong>. Cấp RAM quá nhiều sẽ khiến bộ thu gom rác Java (GC) bị trễ, gây khựng hình chu kỳ 30s một lần.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 2. Gói mod siêu tối ưu (60+ FPS) -->
+        <section id="minimal-preset">
+          <h2>2. Gói Mod Siêu Tối Ưu Cho Máy Yếu (Khuyên Dùng · 60+ FPS)</h2>
+          <p>
+            Dành cho bạn nào muốn chơi mượt ngay lập tức mà không phải tốn thời gian tìm tòi. Đây là <strong>bộ mod tinh gọn gồm 10 mod hiệu năng cốt lõi</strong> giúp máy yếu, card onboard Intel UHD hoặc laptop nóng quạt đạt mức 60 FPS ổn định:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Sodium &amp; Sodium Extra</h3>
+              <span class="mechanic-badge badge-success">Tăng 2x – 5x FPS</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Tác dụng:</strong> Thay thế hoàn toàn engine dựng hình cũ kỹ của Minecraft. Giúp tăng vọt FPS từ 2 đến 5 lần, đồng thời bổ sung các công tắc tắt sạch mây, mưa, khói trong cài đặt để máy cực nhẹ.
+              </p>
+              <small style="color: var(--color-accent-orbit);">File khuyến nghị: <code>sodium-fabric-*.jar</code> + <code>sodium-extra-fabric-*.jar</code></small>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Lithium</h3>
+              <span class="mechanic-badge badge-info">Giảm Tải CPU &amp; Vật Lý</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Tác dụng:</strong> Tối ưu hóa các phép tính chuyển động, va chạm, tải khối và AI của sinh vật. Giúp CPU không bị quá tải khi bạn đi qua khu vực nông trại hay nhiều cỗ máy sinh tồn.
+              </p>
+              <small style="color: var(--color-accent-orbit);">File khuyến nghị: <code>lithium-fabric-*.jar</code></small>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>FerriteCore &amp; ModernFix</h3>
+              <span class="mechanic-badge badge-warning">Giảm 30% – 50% RAM &amp; Chống Tràn Bộ Nhớ</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Tác dụng:</strong> FerriteCore nén chặt dữ liệu mô hình khối trong bộ nhớ, tiết kiệm hàng trăm MB đến 1GB RAM. ModernFix vá triệt để lỗi rò rỉ RAM khi chơi nhiều giờ liền và giúp game mở nhanh hơn gấp 2 lần.
+              </p>
+              <small style="color: var(--color-accent-orbit);">Cứu tinh tuyệt đối cho laptop 4GB – 8GB RAM.</small>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>ImmediatelyFast &amp; Better Block Entities (BBE)</h3>
+              <span class="mechanic-badge badge-info">Tăng Tốc Vẽ HUD &amp; Rương Đồ</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Tác dụng:</strong> ImmediatelyFast giúp việc vẽ chữ trên màn hình, khung chat và tooltip vật phẩm không bị drop FPS. BBE tối ưu hóa việc dựng hình các khối đặc biệt như rương, lò nung, biển báo ở các thị trấn đông đúc.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Entity Culling</h3>
+              <span class="mechanic-badge badge-warning">Ẩn Quái &amp; Dân Làng Sau Tường</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Tác dụng:</strong> Bình thường game luôn render toàn bộ mob kể cả khi chúng đứng sau bức tường đá. Mod này sẽ kiểm tra góc nhìn và tạm thời ẩn chúng đi, giải phóng GPU ngay lập tức khi bạn ở gần các chuồng trại chăn nuôi lớn.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Dynamic FPS &amp; Clumps</h3>
+              <span class="mechanic-badge badge-success">Mát Máy &amp; Gom Hạt Kinh Nghiệm</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Tác dụng:</strong> Dynamic FPS tự động giảm FPS xuống 1 khi bạn tab ra ngoài lướt web hoặc làm việc khác giúp quạt tản nhiệt không rú. Clumps gom toàn bộ các hạt kinh nghiệm (XP) rơi vãi lại thành 1 hạt lớn, tránh giật lag khi đào mỏ hoặc farm quái.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Tiện ích sinh tồn QoL siêu nhẹ -->
+        <section id="qol-mods">
+          <h2>3. Mod Tiện Ích Đời Sống (QoL) Siêu Nhẹ Cho Người Chơi</h2>
+          <p>
+            Những tiện ích hỗ trợ sinh tồn cực kỳ hữu ích, chạy thuần client và gần như không gây tốn tài nguyên máy tính:
+          </p>
+
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Tên Mod Khuyên Dùng</th>
+                  <th style="width: 50%;">Hỗ trợ người chơi như thế nào?</th>
+                  <th style="width: 25%;">Mức độ tiêu tốn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>AppleSkin</strong></td>
+                  <td>Hiển thị chính xác thanh đói, độ bão hòa (Saturation) và lượng máu sẽ hồi phục khi ăn một món ăn.</td>
+                  <td><span class="badge badge-success">0% Tài nguyên</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Jade</strong></td>
+                  <td>Nhìn vào bất kỳ khối block hay sinh vật nào sẽ hiện ngay tên, loại quái vật, lượng máu và đồ bên trong rương.</td>
+                  <td><span class="badge badge-success">Cực kỳ nhẹ</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Journeymap</strong></td>
+                  <td>Bản đồ mini góc màn hình, tự động vẽ địa hình và cho phép tạo đánh dấu (Waypoint) tọa độ nhà, hầm mỏ, cổng Nether.</td>
+                  <td><span class="badge badge-info">Nhẹ (tắt map web)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Shulker Box Tooltip</strong></td>
+                  <td>Chỉ cần rê chuột vào hộp Shulker trong túi đồ là xem được toàn bộ 27 ô vật phẩm bên trong mà không cần đặt ra đất.</td>
+                  <td><span class="badge badge-success">Rất tiện lợi</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Inventory Profiles Next</strong></td>
+                  <td>Tự động sắp xếp rương đồ và túi đồ ngăn nắp chỉ với một phím tắt hoặc nút bấm trên giao diện.</td>
+                  <td><span class="badge badge-success">Tiết kiệm thời gian</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Gamma Utils</strong></td>
+                  <td>Tăng độ sáng màn hình nhìn rõ hang động sâu và ban đêm mà không cần cắm hàng trăm cây đuốc làm lag game.</td>
+                  <td><span class="badge badge-success">0% Tài nguyên</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Trade Cycling</strong></td>
+                  <td>Thêm nút xoay vòng nghề dân làng, giúp bạn chọn được sách phép ưng ý nhanh chóng mà không cần đập bàn làm việc liên tục.</td>
+                  <td><span class="badge badge-success">Hỗ trợ sinh tồn</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Accurate Block Placement</strong></td>
+                  <td>Hỗ trợ đặt block siêu tốc, chính xác cao khi xây dựng công trình quy mô lớn.</td>
+                  <td><span class="badge badge-success">0% Tài nguyên</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Do a Barrel Roll</strong></td>
+                  <td>Tạo góc nghiêng lượn camera cực kỳ mượt mà phong cách máy bay khi bay cánh Elytra.</td>
+                  <td><span class="badge badge-success">Trải nghiệm thị giác</span></td>
+                </tr>
+                <tr>
+                  <td><strong>FastQuit &amp; ResourcePackCached</strong></td>
+                  <td>Thoát về menu chính tức thì khi game lưu ngầm; lưu cache gói tài nguyên server không phải tải lại.</td>
+                  <td><span class="badge badge-success">Tối ưu thời gian</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 4. Thiết lập Video Settings tối ưu -->
+        <section id="settings-guide">
+          <h2>4. Thiết Lập Video Settings Tối Ưu Trong Game (Tăng 20 – 30 FPS Tức Thì)</h2>
+          <p>
+            Sau khi vào game có Sodium, bạn hãy vào <strong>Options &rarr; Video Settings</strong> và chỉnh theo các thông số tiêu chuẩn này để đạt độ mượt tối đa:
+          </p>
+
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th style="width: 30%;">Tùy chọn cài đặt</th>
+                  <th style="width: 35%;">Mức thiết lập khuyên dùng</th>
+                  <th style="width: 35%;">Hiệu quả mang lại</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Render Distance (Khoảng cách nhìn)</strong></td>
+                  <td><strong>6 – 8 Chunks</strong></td>
+                  <td>Giảm tải lượng chunk phải dựng hình cùng lúc, chống tràn RAM.</td>
+                </tr>
+                <tr>
+                  <td><strong>Simulation Distance (Mô phỏng)</strong></td>
+                  <td><strong>4 – 6 Chunks</strong></td>
+                  <td>Đồng bộ nhẹ nhàng với phạm vi tính toán của server.</td>
+                </tr>
+                <tr>
+                  <td><strong>Max Framerate (Khung hình tối đa)</strong></td>
+                  <td><strong>60 FPS</strong> (hoặc bằng tần số quét màn hình)</td>
+                  <td>Không để GPU chạy 100% công suất vô nghĩa, giữ máy luôn mát.</td>
+                </tr>
+                <tr>
+                  <td><strong>Graphics (Chất lượng đồ họa)</strong></td>
+                  <td><strong>Fast (Nhanh)</strong></td>
+                  <td>Bỏ hiệu ứng xuyên thấu tán lá và đám mây phức tạp.</td>
+                </tr>
+                <tr>
+                  <td><strong>Smooth Lighting (Ánh sáng mượt)</strong></td>
+                  <td><strong>Low (Thấp) hoặc Off (Tắt)</strong></td>
+                  <td>Tăng đáng kể FPS khi đi hang hoặc ban đêm.</td>
+                </tr>
+                <tr>
+                  <td><strong>Particles (Hiệu ứng hạt)</strong></td>
+                  <td><strong>Decreased (Giảm) hoặc Minimal (Tối thiểu)</strong></td>
+                  <td>Giảm giật lag khi đứng gần đuốc, lửa trại hoặc đốm khói.</td>
+                </tr>
+                <tr>
+                  <td><strong>Entity Shadows (Bóng thực thể)</strong></td>
+                  <td><strong>Off (Tắt)</strong></td>
+                  <td>Bỏ bóng tròn dưới chân quái vật và người chơi, nhẹ GPU.</td>
+                </tr>
+                <tr>
+                  <td><strong>Clouds (Đám mây)</strong></td>
+                  <td><strong>Fast hoặc Off</strong></td>
+                  <td>Không phải render tầng mây 3D trên cao.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5. Nhận biết các mod nặng cần tránh -->
+        <section id="heavy-mods">
+          <h2>5. Nhận Biết &amp; Tránh Các Mod Nặng Gây Tụt FPS Máy Yếu</h2>
+          <p>
+            Nếu máy bạn đang bị chậm hoặc giật khung hình, hãy kiểm tra xem bạn có đang cài các mod thuộc danh sách sau đây hay không:
+          </p>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #f59e0b;">
+            <div class="deep-card-header">
+              <h3 style="color: #fbbf24;">Cảnh báo về Iris Shaders</h3>
+              <span class="mechanic-badge badge-warning">Cực kỳ ngốn GPU</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Cân nhắc sử dụng Iris Shader nếu máy bạn đủ mạnh.</strong><br>
+                Các gói Shader (dù là bản Lite) đều ép GPU phải tính toán ánh sáng và đổ bóng thể tích liên tục. Nếu bạn dùng máy văn phòng hoặc laptop dùng chip tích hợp (Intel HD Graphics, Iris Xe, AMD Vega), <strong>hãy tắt Shader hoặc không cài Iris</strong> để game luôn đạt 60 FPS mượt mà.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #ef4444;">
+            <div class="deep-card-header">
+              <h3 style="color: #f87171;">Chùm Mod Quá Tải Hạt (Particle Heavy)</h3>
+              <span class="mechanic-badge badge-danger">Gây tụt khung hình</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Các mod như <code>Particle Rain</code> (mưa hạt dày đặc), <code>Falling Leaves</code> / <code>Falling Leaves Plus</code> (lá rơi rụng trong rừng), <code>Inventory Particles</code> (hạt nổ khi di chuyển đồ), <code>Visuality</code>, <code>Subtle Effects</code> sẽ sản sinh hàng chục ngàn hạt cùng lúc khiến khung hình tụt từ 60 xuống dưới 20. Khuyên người chơi máy yếu nên gỡ bỏ.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #ef4444;">
+            <div class="deep-card-header">
+              <h3 style="color: #f87171;">Mod Âm Thanh Dung Lượng Lớn</h3>
+              <span class="mechanic-badge badge-danger">Ngốn RAM &amp; CPU</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Mod <code>AmbientSounds</code> có kích thước tới <strong>~81 MB</strong> dữ liệu âm thanh chạy ngầm. Khi kết hợp với <code>Sound Physics Remastered</code>, CPU phải liên tục tính toán phản xạ âm thanh qua từng khối block, dễ gây khựng máy khi di chuyển.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Bắt bệnh & Khắc phục sự cố (FAQ) -->
+        <section id="troubleshooting">
+          <h2>6. Cẩm Nang Bắt Bệnh &amp; Khắc Phục Sự Cố Thường Gặp (Troubleshooting)</h2>
+          <p>
+            Tổng hợp các lỗi phổ biến mà người chơi thường gặp phải khi cài đặt mod và giải pháp khắc phục nhanh chóng:
+          </p>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #ef4444;">
+            <div class="deep-card-header">
+              <h3 style="color: #f87171;">Lỗi 1: Vừa bấm Play thì game bị văng (Crash code 1)</h3>
+              <span class="mechanic-badge badge-danger">Lỗi Khởi Động</span>
+            </div>
+            <div class="deep-card-content">
+              <p><strong>Nguyên nhân thường gặp:</strong></p>
+              <ul>
+                <li><strong>Xung đột mod mạng:</strong> Cài đặt đồng thời cả <code>e4mc</code> và <code>e4all</code>. Hai mod này cùng chiếm quyền Socket LAN gây xung đột Fabric Loader &rarr; <em>Cách sửa: Xóa bỏ file e4all, chỉ giữ lại e4mc.</em></li>
+                <li><strong>Thiếu Fabric API:</strong> Quên chưa cài đặt file <code>fabric-api-*.jar</code> tương ứng với phiên bản game.</li>
+                <li><strong>Sai phiên bản Java:</strong> Máy tính đang dùng Java 8 hoặc Java 17 thay vì Java 21 LTS.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #f59e0b;">
+            <div class="deep-card-header">
+              <h3 style="color: #fbbf24;">Lỗi 2: Cầm đuốc hoặc đèn lồng trên tay bị tụt FPS mạnh</h3>
+              <span class="mechanic-badge badge-warning">Lỗi Ánh Sáng Động</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Nguyên nhân:</strong> Do đang cài đặt mod <code>Dynamic Lights</code> phiên bản cũ, hoặc cài cùng lúc cả <code>Dynamic Lights</code> lẫn <code>LambDynamicLights</code>.<br>
+                <strong>Cách sửa:</strong> Hãy xóa bỏ file <code>Dynamic Lights</code>, chỉ sử dụng <code>LambDynamicLights</code>. Nếu máy quá yếu, hãy vào cài đặt tắt tính năng Dynamic Lights hoặc dùng <code>Gamma Utils</code> để tăng sáng tĩnh thay thế.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #3b82f6;">
+            <div class="deep-card-header">
+              <h3 style="color: #60a5fa;">Lỗi 3: Đi vào thị trấn đông đúc hoặc Base lớn bị khựng hình</h3>
+              <span class="mechanic-badge badge-info">Quá Tải Block Entity</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Nguyên nhân:</strong> Các căn cứ lớn có hàng trăm rương đồ, lò nung, biển báo và dân làng khiến card đồ họa onboard bị quá tải số lượng đa giác cần vẽ.<br>
+                <strong>Cách sửa:</strong> Cài đặt ngay bộ đôi <code>Entity Culling</code> (ẩn sinh vật sau tường) và <code>Better Block Entities (BBE)</code> (tối ưu hóa render khối rương/lò nung cho Sodium).
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-left: 4px solid #34d399;">
+            <div class="deep-card-header">
+              <h3 style="color: #4ade80;">Lỗi 4: Chơi được khoảng 20 – 30 phút là game bắt đầu giật lag (Spike Lag)</h3>
+              <span class="mechanic-badge badge-success">Lỗi Tràn Bộ Nhớ / GC Pause</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                <strong>Nguyên nhân:</strong> Hiện tượng tràn bộ nhớ (Memory Leak) hoặc do bạn phân bổ quá nhiều RAM (&gt;6GB) khiến bộ thu gom rác Java phải mất 1-2 giây để dọn dẹp.<br>
+                <strong>Cách sửa:</strong> Cài đặt mod <code>ModernFix</code> và <code>FerriteCore</code>; đồng thời hạ mức phân bổ RAM trong launcher về đúng <strong>3.5 GB – 4 GB</strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Bảng tra cứu toàn bộ Mod -->
+        <section id="mod-directory">
+          <h2>7. Bảng Tra Cứu Toàn Bộ Mod Client &amp; Phân Loại Sử Dụng</h2>
+          <p>
+            Bảng tra cứu chi tiết hơn 60 mod phổ biến trong hệ sinh thái Minecraft Fabric 1.21.x giúp bạn dễ dàng xác định mod nào nên giữ, mod nào nên tắt:
+          </p>
+
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Tên Mod</th>
+                  <th style="width: 20%;">Phân loại chính</th>
+                  <th style="width: 25%;">Khuyến nghị sử dụng</th>
+                  <th style="width: 30%;">Tác động phần cứng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Sodium</strong></td>
+                  <td>Hiệu năng Đồ họa</td>
+                  <td><span class="badge badge-success">Bắt buộc cài</span></td>
+                  <td>Tăng 2x – 5x FPS, giảm micro-stutter</td>
+                </tr>
+                <tr>
+                  <td><strong>Lithium</strong></td>
+                  <td>Hiệu năng CPU / Vật lý</td>
+                  <td><span class="badge badge-success">Bắt buộc cài</span></td>
+                  <td>Giảm tải CPU, ổn định chuyển động</td>
+                </tr>
+                <tr>
+                  <td><strong>FerriteCore</strong></td>
+                  <td>Tối ưu RAM</td>
+                  <td><span class="badge badge-success">Khuyên dùng máy yếu</span></td>
+                  <td>Tiết kiệm 30% – 50% RAM tiêu thụ</td>
+                </tr>
+                <tr>
+                  <td><strong>ModernFix</strong></td>
+                  <td>Bộ nhớ &amp; Khởi động</td>
+                  <td><span class="badge badge-success">Khuyên dùng máy yếu</span></td>
+                  <td>Vào game nhanh, vá rò rỉ RAM</td>
+                </tr>
+                <tr>
+                  <td><strong>ImmediatelyFast</strong></td>
+                  <td>Giao diện &amp; Font</td>
+                  <td><span class="badge badge-success">Khuyên dùng máy yếu</span></td>
+                  <td>Tăng tốc vẽ text, HUD và tooltip</td>
+                </tr>
+                <tr>
+                  <td><strong>Entity Culling</strong></td>
+                  <td>Tối ưu GPU</td>
+                  <td><span class="badge badge-success">Khuyên dùng máy yếu</span></td>
+                  <td>Ẩn mob sau tường, nhẹ GPU ở base</td>
+                </tr>
+                <tr>
+                  <td><strong>Better Block Entities</strong></td>
+                  <td>Tối ưu Rương/Lò nung</td>
+                  <td><span class="badge badge-success">Khuyên dùng máy yếu</span></td>
+                  <td>Nhẹ máy khi qua thị trấn đông đúc</td>
+                </tr>
+                <tr>
+                  <td><strong>ScalableLux</strong></td>
+                  <td>Lighting Engine</td>
+                  <td><span class="badge badge-success">Khuyên dùng</span></td>
+                  <td>Viết lại engine ánh sáng, sửa lỗi lag</td>
+                </tr>
+                <tr>
+                  <td><strong>Fast Noise (zfastnoise)</strong></td>
+                  <td>Tối ưu Thế giới</td>
+                  <td><span class="badge badge-success">Khuyên dùng</span></td>
+                  <td>Tăng tốc độ sinh địa hình</td>
+                </tr>
+                <tr>
+                  <td><strong>Dynamic FPS</strong></td>
+                  <td>Tiết kiệm Pin &amp; Mát máy</td>
+                  <td><span class="badge badge-success">Khuyên dùng laptop</span></td>
+                  <td>Hạ FPS xuống 1 khi Alt+Tab</td>
+                </tr>
+                <tr>
+                  <td><strong>Clumps</strong></td>
+                  <td>Gom hạt kinh nghiệm</td>
+                  <td><span class="badge badge-success">Khuyên dùng</span></td>
+                  <td>Gom XP tránh lag khi farm quái</td>
+                </tr>
+                <tr>
+                  <td><strong>Ksyxis &amp; Lightspeed</strong></td>
+                  <td>Tăng tốc khởi động</td>
+                  <td><span class="badge badge-info">Khuyên dùng</span></td>
+                  <td>Vào game và tải map nhanh hơn</td>
+                </tr>
+                <tr>
+                  <td><strong>AppleSkin</strong></td>
+                  <td>QoL / HUD</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>Thuần HUD, 0% tốn tài nguyên</td>
+                </tr>
+                <tr>
+                  <td><strong>Jade</strong></td>
+                  <td>QoL / Thông tin</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>Cực nhẹ, hiển thị thông tin block</td>
+                </tr>
+                <tr>
+                  <td><strong>Journeymap</strong></td>
+                  <td>QoL / Bản đồ</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>Tiện lợi, hỗ trợ đánh dấu Waypoint</td>
+                </tr>
+                <tr>
+                  <td><strong>Shulker Box Tooltip</strong></td>
+                  <td>QoL / Túi đồ</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>Xem đồ shulker không cần đặt xuống</td>
+                </tr>
+                <tr>
+                  <td><strong>Inventory Profiles Next</strong></td>
+                  <td>QoL / Tự động xếp đồ</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>1-click xếp rương ngăn nắp</td>
+                </tr>
+                <tr>
+                  <td><strong>Gamma Utils</strong></td>
+                  <td>QoL / Độ sáng</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>Nhìn rõ hang sâu, thay thế cắm đuốc</td>
+                </tr>
+                <tr>
+                  <td><strong>Trade Cycling</strong></td>
+                  <td>QoL / Dân làng</td>
+                  <td><span class="badge badge-info">Rất nên cài</span></td>
+                  <td>Đổi nghề dân làng bằng nút bấm</td>
+                </tr>
+                <tr>
+                  <td><strong>Accurate Block Placement</strong></td>
+                  <td>QoL / Xây dựng</td>
+                  <td><span class="badge badge-info">Nên cài</span></td>
+                  <td>Hỗ trợ xây nhanh và chính xác</td>
+                </tr>
+                <tr>
+                  <td><strong>e4mc</strong></td>
+                  <td>Mở mạng LAN co-op</td>
+                  <td><span class="badge badge-info">Nên giữ e4mc</span></td>
+                  <td>Mở mạng LAN chơi cùng bạn bè an toàn</td>
+                </tr>
+                <tr>
+                  <td><strong>e4all</strong></td>
+                  <td>Mở mạng LAN</td>
+                  <td><span class="badge badge-danger">Xóa bỏ (Trùng e4mc)</span></td>
+                  <td>Gây xung đột Provider socket với e4mc</td>
+                </tr>
+                <tr>
+                  <td><strong>Dynamic Lights (cũ)</strong></td>
+                  <td>Ánh sáng động</td>
+                  <td><span class="badge badge-danger">Xóa bỏ</span></td>
+                  <td>Tụt FPS khi cầm đuốc, thay bằng LambDyn</td>
+                </tr>
+                <tr>
+                  <td><strong>LambDynamicLights</strong></td>
+                  <td>Ánh sáng động tối ưu</td>
+                  <td><span class="badge badge-warning">Tùy chọn</span></td>
+                  <td>Chỉ bật nếu máy đủ mạnh, để mức Fast</td>
+                </tr>
+                <tr>
+                  <td><strong>Falling Leaves / Plus</strong></td>
+                  <td>Hiệu ứng lá rơi</td>
+                  <td><span class="badge badge-warning">Tắt trên máy yếu</span></td>
+                  <td>Spawns nhiều hạt làm tụt khung hình rừng</td>
+                </tr>
+                <tr>
+                  <td><strong>Particle Rain &amp; Visuality</strong></td>
+                  <td>Hiệu ứng hạt thời tiết</td>
+                  <td><span class="badge badge-warning">Tắt trên máy yếu</span></td>
+                  <td>Bóp nghẹt GPU khi trời mưa</td>
+                </tr>
+                <tr>
+                  <td><strong>AmbientSounds (81 MB)</strong></td>
+                  <td>Âm thanh môi trường</td>
+                  <td><span class="badge badge-warning">Gỡ bỏ máy yếu</span></td>
+                  <td>Ngốn dung lượng RAM và CPU chạy nền</td>
+                </tr>
+                <tr>
+                  <td><strong>Iris Shaders</strong></td>
+                  <td>Gói đổ bóng đồ họa</td>
+                  <td><span class="badge badge-warning">Chỉ dùng máy có GPU</span></td>
+                  <td>Card onboard Intel/AMD không nên bật</td>
+                </tr>
+                <tr>
+                  <td><strong>ServerCore &amp; VMP</strong></td>
+                  <td>Tối ưu Dedicated Server</td>
+                  <td><span class="badge badge-danger">Gỡ khỏi Client</span></td>
+                  <td>Dư thừa trên client khi chơi multiplayer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 8. Kênh nhận hỗ trợ kỹ thuật 1-1 -->
+        <section id="support-channel">
+          <h2>8. Kênh Nhận Hỗ Trợ Kỹ Thuật Trực Tiếp 1-1</h2>
+          <div class="lunar-card" style="padding: 24px; text-align: center; background: radial-gradient(circle at center, rgba(104, 139, 248, 0.12) 0%, rgba(15, 23, 42, 0.6) 100%); border: 1px solid rgba(104, 139, 248, 0.35);">
+            <h3 style="color: var(--color-accent-orbit); margin-top: 0; font-size: 1.3rem;">Vẫn còn gặp khó khăn hoặc lỗi không vào được game?</h3>
+            <p style="color: var(--color-text-body); max-width: 620px; margin: 0 auto 20px auto; font-size: 0.98rem; line-height: 1.7;">
+              Đội ngũ Kỹ thuật viên và Admin của LunarChill luôn sẵn sàng hỗ trợ bạn kiểm tra file log, chẩn đoán nguyên nhân crash và tư vấn cấu hình profile mod mượt mà nhất cho từng dòng máy.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+              <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+                Hỏi tại Kênh #hỗ-trợ-kỹ-thuật Discord ↗
+              </a>
+              <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
+                Mở Ticket Riêng Tư (#tạo-ticket) ↗
+              </a>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 16px 0 0 0;">
+              ✨ Hoàn toàn miễn phí vì một cộng đồng sinh tồn thư thái, công bằng và gắn kết.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
+            <strong class="footer-brand-name">LunarChill</strong>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
+          </p>
+          <p class="mojang-disclaimer">
+            Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang</a></li>
+            <li><a href="advanced-guide.html">HD Chi tiết</a></li>
+            <li><a href="towns.html">Thị trấn (Towny)</a></li>
+            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
+            <li><a href="rules.html">Nội quy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Văn bản</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Điều khoản dịch vụ</a></li>
+            <li><a href="privacy.html">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord">Discord ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LunarChill Club.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

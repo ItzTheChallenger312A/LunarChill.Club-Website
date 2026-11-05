@@ -147,12 +147,12 @@
   - Cố tình phá hoại base hoặc giết người cướp đồ: Ban thẳng, không ngoại lệ.
 * **V. Giải quyết mâu thuẫn:**
   - Giải quyết nội bộ trong server, không mang drama lên Messenger hay các box trò chuyện bên ngoài; nếu không tự giải quyết được hãy inbox Admin.
-* **VI. Gây chiến và chia phe:**
-  - Nghiêm cấm gây war, lôi kéo bè phái, kích động đấu đá. Xử lý từ nhắc nhở, cảnh cáo đến Ban tùy mức độ.
+* **VI. Chống gây hấn và chia rẽ:**
+  - Nghiêm cấm gây hấn, lôi kéo bè phái, kích động đấu đá. Xử lý từ nhắc nhở, cảnh cáo đến Ban tùy mức độ.
 * **VII. Văn hóa ứng xử:**
-  - Không nói tục chửi bậy, không gửi ảnh 18+/phản cảm, không xúc phạm hay thiếu tôn trọng người khác. Vi phạm bị xử lý nghiêm theo quy định.
+  - Không nói tục chửi bậy, không gửi ảnh 18+/phản cảm, không xúc phạm hay thiếu tôn trọng người khác. Xử lý: Cảnh cáo, cấm phát ngôn (Mute từ 1 đến 72 giờ) hoặc đình chỉ tài khoản.
 * **VIII. Quy trình khiếu nại (Appeals Ticket):**
-  - Mọi sự cố tiếp nhận qua hệ thống Ticket trên Discord chính thức (`https://discord.gg/SM9cn8pQQH`), đối soát qua logs CoreProtect.
+  - Mọi sự cố tiếp nhận qua kênh `#tạo-ticket` trên Discord chính thức (`https://discord.gg/SM9cn8pQQH`), đối soát qua logs CoreProtect.
 
 ---
 

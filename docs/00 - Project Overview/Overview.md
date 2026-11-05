@@ -95,7 +95,7 @@ Dates are adjusted to match actual project pace while strictly maintaining the f
     
 - `03 - Development/` — [[Technical Plan]] and [[Acceptance Criteria]].
     
-- `04 - Meeting Notes/` — Decisions, feedback, and meeting records.
+- `04 - Feedbacks/` — [[Dev's Notes]], [[Feature Backlog & Future Improvements]], [[Player Feedback & Suggestions]].
 
 - `Core Guidelines:` — [[Quality Standards]] (Bộ quy chuẩn chung bất biến chống AI Slop).
 
