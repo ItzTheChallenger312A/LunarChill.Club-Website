@@ -344,6 +344,17 @@
   transform: none;
 }
 
+/* Stellarity Custom Mob Spawn Eggs: Crisp pixel art */
+.item-sprite-box img.spawn-egg-img {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated !important;
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: crisp-edges !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.75));
+  transform: scale(1.15);
+}
+
 .item-meta {
   display: flex;
   flex-direction: column;
