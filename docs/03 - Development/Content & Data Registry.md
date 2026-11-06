@@ -64,6 +64,7 @@
 - **Nullscape:** Datapack đại tu địa hình The End (độ cao 384 block, vách đá hư không).
 - **Stellarity & StellarityOptimizer:** Đại tu toàn bộ lối chơi The End (biome, đền đài, Boss mới, cổ vật). Có **Custom Crafting**.
 - Tuyệt đối **không thể đặt nước ở The End**.
+- **Hiệu ứng Infestation:** Dính hiệu ứng Infestation khi ở The End (có tỉ lệ sinh ra cá bạc khi nhận sát thương).
 
 ### 4.5. Thay đổi Rơi đồ Quái vật (Lootable Mobs)
 - **Iron Golem:** Không rơi sắt, chỉ rơi Bí ngô.

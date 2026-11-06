@@ -103,9 +103,10 @@ The End tại LunarChill không phải là một vùng hoang mạc đơn điệu
    - Thử thách Boss độc bản mới, trang bị và cổ vật thần thoại với cơ chế chiến đấu riêng biệt.
    - Hệ thống chế tạo đặc biệt (**Custom Crafting**).
    - Tối ưu hóa TPS máy chủ mượt mà thông qua `StellarityOptimizer`.
-3. **Quy tắc The End:**
+3. **Quy tắc & Cảnh báo The End:**
    - **Tuyệt đối KHÔNG THỂ đặt nước tại The End** (người chơi phải dùng kỹ năng nhảy, ngọc Ender hoặc elytra).
-   - Tiêu hao oxy 2% / 10s (bắt buộc mang Beacon đi cùng).
+   - **Hiệu ứng Infestation:** Khi ở dưới The End, người chơi dính hiệu ứng Infestation (có tỉ lệ sinh ra cá bạc - Silverfish khi nhận sát thương).
+   - **Tiêu hao oxy 2% / 10s:** Bắt buộc trang bị Beacon ở tay chính để hồi phục dưỡng khí cho cả đội.
 
 ---
 
