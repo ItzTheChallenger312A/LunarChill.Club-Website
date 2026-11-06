@@ -471,6 +471,19 @@
   transform: scale(1.15);
 }
 
+/* Placeholder for Entities without available in-game renders (Đang chờ ảnh) */
+.item-sprite-box img.placeholder-img {
+  width: 96px;
+  height: 96px;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  image-rendering: auto !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.65));
+  transform: none;
+}
+
 .item-meta {
   display: flex;
   flex-direction: column;
