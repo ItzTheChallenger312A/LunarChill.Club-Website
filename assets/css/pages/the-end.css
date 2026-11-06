@@ -301,23 +301,32 @@
 }
 
 /* Horizontal layout for compact item groups (End City Keys & Elytra Wings) */
-.keys-horizontal-list {
+.keys-horizontal-list,
+.wings-horizontal-list,
+.wings-horizontal-grid {
   display: flex !important;
   flex-direction: column !important;
-  gap: 14px !important;
+  gap: 16px !important;
   margin: 16px 0 !important;
+  column-count: initial !important;
 }
 
-.item-recipe-card.horizontal-card {
+.item-recipe-card.horizontal-card,
+.wings-horizontal-list .item-recipe-card,
+.wings-horizontal-grid .item-recipe-card {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   justify-content: space-between !important;
   gap: 20px !important;
   padding: 16px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-.item-recipe-card.horizontal-card .item-recipe-top {
+.item-recipe-card.horizontal-card .item-recipe-top,
+.wings-horizontal-list .item-recipe-card .item-recipe-top,
+.wings-horizontal-grid .item-recipe-card .item-recipe-top {
   flex: 1 1 auto !important;
   min-width: 0 !important;
   display: flex !important;
@@ -325,7 +334,9 @@
   gap: 16px !important;
 }
 
-.item-recipe-card.horizontal-card .item-sprite-box {
+.item-recipe-card.horizontal-card .item-sprite-box,
+.wings-horizontal-list .item-recipe-card .item-sprite-box,
+.wings-horizontal-grid .item-recipe-card .item-sprite-box {
   width: 92px !important;
   height: 92px !important;
   min-width: 92px !important;
@@ -333,7 +344,11 @@
 }
 
 .item-recipe-card.horizontal-card .recipe-frame-box,
-.item-recipe-card.horizontal-card .recipe-box {
+.item-recipe-card.horizontal-card .recipe-box,
+.wings-horizontal-list .item-recipe-card .recipe-frame-box,
+.wings-horizontal-list .item-recipe-card .recipe-box,
+.wings-horizontal-grid .item-recipe-card .recipe-frame-box,
+.wings-horizontal-grid .item-recipe-card .recipe-box {
   flex: 0 0 340px !important;
   max-width: 380px !important;
   width: 340px !important;
@@ -342,13 +357,19 @@
 }
 
 @media (max-width: 992px) {
-  .item-recipe-card.horizontal-card {
+  .item-recipe-card.horizontal-card,
+  .wings-horizontal-list .item-recipe-card,
+  .wings-horizontal-grid .item-recipe-card {
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 14px !important;
   }
   .item-recipe-card.horizontal-card .recipe-frame-box,
-  .item-recipe-card.horizontal-card .recipe-box {
+  .item-recipe-card.horizontal-card .recipe-box,
+  .wings-horizontal-list .item-recipe-card .recipe-frame-box,
+  .wings-horizontal-list .item-recipe-card .recipe-box,
+  .wings-horizontal-grid .item-recipe-card .recipe-frame-box,
+  .wings-horizontal-grid .item-recipe-card .recipe-box {
     flex: 1 1 auto !important;
     max-width: 100% !important;
     width: 100% !important;
@@ -363,25 +384,8 @@
   column-count: initial !important;
 }
 
-.wings-horizontal-grid {
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 16px !important;
-  margin: 16px 0 !important;
-  column-count: initial !important;
-}
-
-@media (max-width: 1100px) {
-  .wings-horizontal-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
 @media (max-width: 850px) {
   .keys-horizontal-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .wings-horizontal-grid {
     grid-template-columns: 1fr !important;
   }
 }
