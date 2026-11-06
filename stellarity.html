@@ -2773,20 +2773,34 @@
           </div>
         </section>
 
-        <!-- 8. Khung Vật phẩm & Công thức Chế tạo: Sách Phép & Vật phẩm Phụ trợ -->
+        <!-- 8. Khung Vật phẩm & Công thức Chế tạo: Sách Phép, Phụ Kiện & Câu Cá Hư Không -->
         <section id="recipe-spellbooks">
           <h2>
             <span>8. Khung Vật Phẩm &amp; Công Thức Chế Tạo: Sách Phép, Phụ Kiện &amp; Câu Cá Hư Không</span>
           </h2>
           <p>
-            Hình ảnh Sprite gốc trích xuất từ tài nguyên chính thức của <strong>Stellarity v6</strong> cho từng cuốn Sách Phép (Spellbooks), Phụ Kiện (Trinkets) và các loài cá đặc hữu câu được dưới vực sâu Void:
+            Hình ảnh Sprite gốc trích xuất từ tài nguyên chính thức của <strong>Stellarity v6</strong> cho toàn bộ Sách Phép (Spellbooks), Khiên Chiến Đấu 3D (Shields), Phụ Kiện &amp; Bảo Vật (Trinkets &amp; Relics) cùng các loài cá đặc hữu câu được dưới vực sâu Void:
           </p>
+
+          <!-- ==========================================
+               NHÓM 1: SÁCH PHÉP & CẨM NANG HUYỀN BÍ (8 MÓN)
+               ========================================== -->
+          <div style="margin: 28px 0 16px 0;">
+            <h3 style="font-size: 1.2rem; color: #c084fc; display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 10px; height: 10px; background: #c084fc; border-radius: 50%;"></span>
+              <span>Nhóm 1: Sách Phép Cổ Xưa &amp; Cẩm Nang Tế Đàn (Spellbooks &amp; Manuals)</span>
+              <span class="mechanic-badge badge-void" style="margin-left: auto; font-size: 0.72rem;">8 Cổ Thư Ma Thuật</span>
+            </h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.88rem; color: #94a3b8;">
+              Các cuốn sách phép cổ truyền trao cho người chơi các phép thuật khống chế, dịch chuyển và nguyền rủa kẻ thù, cùng 2 cuốn cẩm nang tra cứu công thức của Tế đàn Accursed và Vạc Nấu Hơi Thở Rồng:
+            </p>
+          </div>
 
           <div class="item-recipe-grid">
             <!-- Trinket 1: Endonomicon -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Endonomicon">
                   <img src="assets/images/spellbooks/endonomicon.png" alt="Sách Endonomicon" loading="lazy">
                 </div>
                 <div class="item-meta">
@@ -2814,7 +2828,7 @@
             <!-- Trinket 2: Flavors of The Void (MỚI v6.0.0) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Flavors of The Void">
                   <img src="assets/images/spellbooks/flavors_of_the_void.png" alt="Sách Flavors of The Void" loading="lazy">
                 </div>
                 <div class="item-meta">
@@ -2842,7 +2856,7 @@
             <!-- Trinket 3: Book of Conveyance -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Book of Conveyance">
                   <img src="assets/images/spellbooks/book_of_conveyance.png" alt="Book of Conveyance" loading="lazy">
                 </div>
                 <div class="item-meta">
@@ -2850,9 +2864,9 @@
                     <h3 class="item-meta-title">Book of Conveyance</h3>
                     <span class="mechanic-badge badge-ender">Dịch Chuyển Tức Thời</span>
                   </div>
-                  <div class="item-stats-line">Hồi chiêu 20s · Điều hướng bằng tầm nhìn · Bay xa không giới hạn</div>
+                  <div class="item-stats-line">Hồi chiêu: 2.5 giây · Phạm vi dịch chuyển: 16 khối · Đổi chỗ với mục tiêu</div>
                   <p class="item-desc">
-                    Phóng ra một tia sáng ma thuật dẫn đường. Người chơi có thể <strong>nghiêng đầu điều chỉnh hướng bay</strong> của tia sáng; ngay khi tia sáng va chạm khối block đầu tiên, bạn sẽ được dịch chuyển tức khắc đến tọa độ đó!
+                    Sách phép ma thuật không gian. Khi nhấp chuột phải, dịch chuyển tức thời bạn về phía trước 16 khối theo hướng nhìn. Nếu nhắm trúng một thực thể, bạn và mục tiêu sẽ <strong>hoán đổi vị trí lập tức cho nhau</strong>!
                   </p>
                 </div>
               </div>
@@ -2861,112 +2875,112 @@
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Book"><img src="assets/images/ingredients/book.png" alt="Book"></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Ender Pearl"><img src="assets/images/ingredients/ender_pearl.png" alt="Ender Pearl"><span class="mc-count">16</span></div>
+                  <div class="mc-slot" data-mc-tooltip="Ender Pearl"><img src="assets/images/ingredients/ender_pearl.png" alt="Ender Pearl"><span class="mc-count">4</span></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"><span class="mc-count">32</span></div>
+                  <div class="mc-slot" data-mc-tooltip="Chorus Fruit"><img src="assets/images/ingredients/chorus_fruit.png" alt="Chorus Fruit"><span class="mc-count">2</span></div>
                 </div>
-                <p class="recipe-note">Tuyệt phẩm di chuyển tầm xa vượt địa hình mà không gây sát thương nghẹt thở.</p>
+                <p class="recipe-note">Công cụ cơ động vượt địa hình và thoát hiểm hoàn hảo trong các trận hỗn chiến.</p>
               </div>
             </article>
 
             <!-- Trinket 4: Book of Updraft -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Book of Updraft">
                   <img src="assets/images/spellbooks/book_of_updraft.png" alt="Book of Updraft" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Book of Updraft</h3>
-                    <span class="mechanic-badge badge-stellar">Bốc Lên &amp; Lướt Gió</span>
+                    <span class="mechanic-badge badge-stellar">Luồng Gió Thăng Thiên</span>
                   </div>
-                  <div class="item-stats-line">Bốc cao 25 blocks · Cho phép lướt gió tự do · Hồi chiêu tính sau khi chạm đất</div>
+                  <div class="item-stats-line">Hồi chiêu: 4.0 giây · Tạo cột gió bão · Hất tung thực thể lên 18 khối</div>
                   <p class="item-desc">
-                    Tạo ra luồng gió cực mạnh đẩy bổng người chơi lên không trung rồi kích hoạt trạng thái lướt gió an toàn. Thời gian hồi chiêu chỉ bắt đầu đếm sau khi bạn tiếp đất.
+                    Triệu hồi một luồng gió xoáy cực mạnh tại vị trí chỉ định. Hất văng người chơi và toàn bộ sinh vật xung quanh lên cao, tạo thời cơ tung cánh Elytra hoặc né tránh các đòn cận chiến hiểm độc.
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: RƯƠNG THÁP END CITY HOẶC VAULT</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Purpur Key"><img src="assets/images/keys/purpur_key.png" alt="Purpur Key"></div>
+                  <div class="mc-slot" data-mc-tooltip="End City Chest"><img src="assets/images/ingredients/purpur_block.png" alt="Purpur Block"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Mở Vault End City"><img src="assets/images/spellbooks/book_of_updraft.png" alt="Book of Updraft"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ tìm thấy 12%"><img src="assets/images/spellbooks/book_of_updraft.png" alt="Book of Updraft"></div>
                 </div>
-                <p class="recipe-note">Cứu nguy tức thì khi bị trượt chân rơi khỏi vách đá hoặc bờ vực Void.</p>
+                <p class="recipe-note">Kích hoạt hoàn hảo trước khi bung cánh Elytra để cất cánh không cần pháo hoa.</p>
               </div>
             </article>
 
             <!-- Trinket 5: Book of Light -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Book of Light">
                   <img src="assets/images/spellbooks/book_of_light.png" alt="Book of Light" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Book of Light</h3>
-                    <span class="mechanic-badge badge-hallow">Vùng Ánh Sáng Trị Liệu</span>
+                    <span class="mechanic-badge badge-hallow">Hào Quang Thiêu Đốt</span>
                   </div>
-                  <div class="item-stats-line">Bán kính 8m · Hồi máu liên tục · Giảm sát thương nhận vào</div>
+                  <div class="item-stats-line">Hồi chiêu: 3.0 giây · Bán kính chiếu sáng: 12 khối · Thiêu đốt quái bóng tối</div>
                   <p class="item-desc">
-                    Triệu hồi một vầng hào quang ánh sáng rực rỡ bảo hộ. Tất cả đồng minh đứng trong vầng sáng được hồi phục sinh lực liên tục và giảm thiểu sát thương gánh chịu.
+                    Giải phóng một quả cầu thánh quang bừng sáng rực rỡ, áp đặt hiệu ứng Phát Sáng (Glowing) lên toàn bộ thực thể trong 10 giây và liên tục thiêu đốt quái vật hệ Undead và Void.
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: RƠI TỪ EMPRESS OF LIGHT / CHAPEL OF LIGHT</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Empress of Light"><img src="assets/images/entities/empress_of_light.png" alt="Empress of Light"></div>
+                  <div class="mc-slot" data-mc-tooltip="Empress of Light"><img src="assets/images/entities/empress_of_light_night.png" alt="Empress of Light"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 25%"><img src="assets/images/spellbooks/book_of_light.png" alt="Book of Light"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 35%"><img src="assets/images/spellbooks/book_of_light.png" alt="Book of Light"></div>
                 </div>
-                <p class="recipe-note">Công cụ hỗ trợ đồng đội mạnh mẽ nhất trong các trận chiến tổ đội săn Boss.</p>
+                <p class="recipe-note">Khắc chế cực mạnh các quái vật ẩn nấp trong bóng tối của The Hallow.</p>
               </div>
             </article>
 
             <!-- Trinket 6: Book of Obstruct -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Book of Obstruct">
                   <img src="assets/images/spellbooks/book_of_obstruct.png" alt="Book of Obstruct" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Book of Obstruct</h3>
-                    <span class="mechanic-badge badge-void">Dựng Tường Vỏ Shulker</span>
+                    <span class="mechanic-badge badge-void">Bức Tường Chặn Đạn</span>
                   </div>
-                  <div class="item-stats-line">Dựng tường chắn kiên cố · Chặn đường truy đuổi · Bảo vệ thoát hiểm</div>
+                  <div class="item-stats-line">Hồi chiêu: 6.0 giây · Tạo khiên chắn hư không trong 4 giây · Chặn mọi loại đạn</div>
                   <p class="item-desc">
-                    Triệu hồi tức thì một bức tường vỏ Shulker cứng cáp trồi lên từ mặt đất, chặn đứng mọi đòn đánh tầm xa hoặc đường truy kích của quái vật để tạo đường tẩu thoát an toàn.
+                    Dựng lên một tấm màn bảo hộ hư không ngay trước mặt. Hấp thụ và làm tan biến 100% các mũi tên, đạn Shulker, tia laser và cầu lửa của quái vật nhắm vào người chơi.
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: RƯƠNG VAULT HOẶC HẠ SHULKING</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Gilded Purpur Key"><img src="assets/images/keys/gilded_purpur_key.png" alt="Gilded Purpur Key"></div>
+                  <div class="mc-slot" data-mc-tooltip="Shulking Boss"><img src="assets/images/entities/shulker.png" alt="Shulker Bullet"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Ominous Vault End Ship"><img src="assets/images/spellbooks/book_of_obstruct.png" alt="Book of Obstruct"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 25%"><img src="assets/images/spellbooks/book_of_obstruct.png" alt="Book of Obstruct"></div>
                 </div>
-                <p class="recipe-note">Cực kỳ hữu dụng khi cần chặn đường đàn quái vật End City áp sát.</p>
+                <p class="recipe-note">Công cụ phòng ngự số 1 khi đột kích các pháo đài End City dày đặc Shulker.</p>
               </div>
             </article>
 
-            <!-- Trinket 8: Book of Jinx -->
+            <!-- Trinket 7: Book of Jinx -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Book of Jinx">
                   <img src="assets/images/spellbooks/book_of_jinx.png" alt="Book of Jinx" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Book of Jinx</h3>
-                    <span class="mechanic-badge badge-void">Mây Nguyền Rủa Giảm Giáp</span>
+                    <span class="mechanic-badge badge-void">Nguyền Rủa Xuyên Giáp</span>
                   </div>
-                  <div class="item-stats-line">Bán kính 12m · Giảm phòng ngự kẻ địch · Đám mây lan tỏa</div>
+                  <div class="item-stats-line">Hồi chiêu: 5.0 giây · Áp đặt Jinx trong 8 giây · Giảm 40% Giáp mục tiêu</div>
                   <p class="item-desc">
-                    Bắn ra một đám mây nguyền rủa đen tối lan rộng, làm suy yếu nghiêm trọng và giảm mạnh chỉ số phòng ngự của toàn bộ sinh vật bên trong phạm vi ảnh hưởng.
+                    Bắn ra luồng năng lượng nguyền rủa đen đặc ghim vào đối thủ. Giảm trực tiếp <strong>40% chỉ số Giáp và Độ cứng giáp</strong> của mục tiêu, khiến chúng nhận thêm lượng sát thương khổng lồ.
                   </p>
                 </div>
               </div>
@@ -2975,187 +2989,72 @@
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Book"><img src="assets/images/ingredients/book.png" alt="Book"></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Chorus Plating"><img src="assets/images/ingredients/chorus_plating.png" alt="Chorus Plating"><span class="mc-count">8</span></div>
+                  <div class="mc-slot" data-mc-tooltip="Wither Skeleton Skull"><img src="assets/images/ingredients/wither_skeleton_skull.png" alt="Wither Skeleton Skull"></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"><span class="mc-count">10</span></div>
+                  <div class="mc-slot" data-mc-tooltip="Wither Rose"><img src="assets/images/ingredients/wither_rose.png" alt="Wither Rose"><span class="mc-count">2</span></div>
                 </div>
-                <p class="recipe-note">Mở giao tranh hoàn hảo giúp vũ khí đồng đội gây sát thương tối đa.</p>
+                <p class="recipe-note">Hiệu ứng nguyền rủa cộng hưởng hoàn hảo với bùa Void Strike và vũ khí tốc đánh cao.</p>
               </div>
             </article>
 
-            <!-- Trinket 9: Book of Return -->
+            <!-- Trinket 8: Book of Return -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Book of Return">
                   <img src="assets/images/spellbooks/book_of_return.png" alt="Book of Return" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Book of Return</h3>
-                    <span class="mechanic-badge badge-ender">Hồi Thành Điểm Hồi Sinh</span>
+                    <span class="mechanic-badge badge-ender">Dịch Chuyển Hồi Hương</span>
                   </div>
-                  <div class="item-stats-line">Về điểm Spawn · Không giới hạn chiều không gian · Niệm chú an toàn</div>
+                  <div class="item-stats-line">Vận niệm: 3.0 giây · Hồi chiêu: 60 giây · Dịch chuyển về điểm hồi sinh</div>
                   <p class="item-desc">
-                    Sau một khoảng thời gian niệm chú ngắn, dịch chuyển người dùng về chính xác điểm hồi sinh (giường hoặc mỏ neo hồi sinh) bất kể bạn đang ở bất kỳ chiều không gian nào.
+                    Khi giữ chuột phải vận niệm trong 3 giây không bị gián đoạn, cuốn sách sẽ dịch chuyển tức thời người chơi quay về Giường nằm hoặc Khối Neo Hồi Sinh (Respawn Anchor) gần nhất.
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: RƯƠNG TÀU BAY END SHIP / OMINOUS VAULT</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Gilded Purpur Key"><img src="assets/images/keys/gilded_purpur_key.png" alt="Gilded Purpur Key"></div>
+                  <div class="mc-slot" data-mc-tooltip="Ominous Vault"><img src="assets/images/keys/gilded_purpur_key.png" alt="Gilded Purpur Key"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rương End Ship"><img src="assets/images/spellbooks/book_of_return.png" alt="Book of Return"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 15%"><img src="assets/images/spellbooks/book_of_return.png" alt="Book of Return"></div>
                 </div>
-                <p class="recipe-note">Bảo hiểm tính mạng tuyệt đối sau các chuyến thám hiểm xa xôi ngoài Outer End.</p>
+                <p class="recipe-note">Cứu cánh sinh mệnh tối thượng khi bị lạc sâu ngoài không gian The End.</p>
               </div>
             </article>
+          </div>
 
-            <!-- Trinket 10: Void Pendant -->
-            <article class="item-recipe-card">
-              <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/trinkets/void_pendant/void_pendant.png" alt="Dây Chuyền Hư Không (Void Pendant)" loading="lazy">
-                </div>
-                <div class="item-meta">
-                  <div class="item-meta-header">
-                    <h3 class="item-meta-title">Void Pendant (Dây Chuyền Hư Không)</h3>
-                    <span class="mechanic-badge badge-void">Hiệu Lực Mọi Ô (Any Slot v6.0+)</span>
-                  </div>
-                  <div class="item-stats-line">Post-Dragon · Tác dụng ở mọi ô túi đồ · 9 loại ngọc khảm nguyền rủa</div>
-                  <p class="item-desc">
-                    Trang bị phụ kiện cổ đại sau Rồng Ender. Từ bản <strong>v6.0.0+</strong>, thuộc tính của dây chuyền <strong>tự động phát huy tác dụng ở bất kỳ ô nào trong túi đồ</strong>. Khảm tại Tế đàn kết hợp 1 Mảnh Enderite + 1 trong 9 loại ngọc/khoáng sản:
-                  </p>
-                  <ul class="item-bonus-list">
-                    <li><strong>Amethyst (Vision):</strong> Nhìn đêm vĩnh viễn, ngồi rón rén khiến quái xung quanh phát sáng dạ quang.</li>
-                    <li><strong>Copper (Power):</strong> Đòn đánh phóng tia sét điện giật phụ trội gây thêm sát thương.</li>
-                    <li><strong>Diamond (Furor):</strong> +6% Tốc độ đánh nhân bội.</li>
-                    <li><strong>Emerald (Fortune):</strong> +1 Điểm may mắn Luck.</li>
-                    <li><strong>Gold (Spelunking):</strong> +15% Tốc độ đào &amp; +5% Hiệu suất đào mỏ.</li>
-                    <li><strong>Iron (Fortitude):</strong> +1 Độ cứng giáp Armor Toughness.</li>
-                    <li><strong>Lapis (Wisdom):</strong> 5% tỉ lệ rơi hạt EXP khi nhận sát thương từ thực thể.</li>
-                    <li><strong>Netherite (Rage):</strong> +2 Sát thương cận chiến &amp; +35% Tỉ lệ chém quét.</li>
-                    <li><strong>Quartz (Agility):</strong> +4% Tốc chạy, +4% Sức nhảy &amp; +40% Hiệu quả di chuyển.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="recipe-box">
-                <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
-                <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Void Pendant"><img src="assets/images/trinkets/void_pendant/void_pendant.png" alt="Void Pendant"></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Khoáng sản/Ngọc khảm"><img src="assets/images/ingredients/diamond.png" alt="Gem"></div>
-                </div>
-                <p class="recipe-note">Dây chuyền cơ bản tìm thấy trong rương Khảo cổ xác tàu đắm (Shipwreck Archaeology).</p>
-              </div>
-            </article>
+          <!-- ==========================================
+               NHÓM 2: 3 MẪU KHIÊN CHIẾN ĐẤU ĐẶC CHẾ (3D SHIELDS)
+               ========================================== -->
+          <div style="margin: 36px 0 16px 0;">
+            <h3 style="font-size: 1.2rem; color: #38bdf8; display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 10px; height: 10px; background: #38bdf8; border-radius: 50%;"></span>
+              <span>Nhóm 2: 3 Mẫu Khiên Chiến Đấu Đặc Chế (Custom Shields)</span>
+              <span class="mechanic-badge badge-stellar" style="margin-left: auto; font-size: 0.72rem;">Mô Hình Voxel 3D Isometric</span>
+            </h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.88rem; color: #94a3b8;">
+              Bộ 3 mẫu khiên phòng thủ và phản kích tối thượng của The End, sở hữu cơ chế lướt điện bọc đồng, phản đòn AoE khắc chế rìu và triệu hồi mưa sao băng quang phổ:
+            </p>
+          </div>
 
-            <!-- Trinket 11: Satchel of Voids -->
-            <article class="item-recipe-card">
-              <div class="item-recipe-top">
-                <div class="item-sprite-box" data-mc-tooltip="Satchel of Voids">
-                  <img src="assets/images/trinkets/satchel_of_voids.png" alt="Satchel of Voids" loading="lazy">
-                </div>
-                <div class="item-meta">
-                  <div class="item-meta-header">
-                    <h3 class="item-meta-title">Satchel of Voids</h3>
-                    <span class="mechanic-badge badge-void">Bệ Thờ Altar Di Động</span>
-                  </div>
-                  <div class="item-stats-line">Triệu hồi Altar di động 32.5s (Hồi chiêu 30s) · Gắn lên Crying Obsidian tạo Altar vĩnh viễn</div>
-                  <p class="item-desc">
-                    Túi phép thuật cho phép truy cập Bệ thờ <strong>Altar of The Accursed</strong> từ bất kỳ đâu trên thế giới. Nhấp chuột phải lên mặt đất để vẽ ấn chú triệu hồi một bệ thờ Altar di động tồn tại trong 32.55 giây (có thể triệu hồi lại sau 30 giây). Đặc biệt: Đặt túi vào Khung Vật Phẩm gắn bên cạnh một khối Crying Obsidian (Hắc Diện Thạch Khóc) sẽ biến khối đá thành một Bệ Thờ Altar of The Accursed vĩnh viễn tại căn cứ của bạn (có thể đập ra để thu hồi cả túi và khối đá bất kỳ lúc nào).
-                  </p>
-                </div>
-              </div>
-              <div class="recipe-box">
-                <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
-                <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Bundle"><img src="assets/images/ingredients/bundle.png" alt="Bundle"></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Starlight Soot"><img src="assets/images/ingredients/starlight_soot.png" alt="Starlight Soot"><span class="mc-count">64</span></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"><span class="mc-count">64</span></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Netherite Ingot"><img src="assets/images/ingredients/netherite_ingot.png" alt="Netherite Ingot"><span class="mc-count">4</span></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Nether Star"><img src="assets/images/ingredients/nether_star.png" alt="Nether Star"><span class="mc-count">2</span></div>
-                </div>
-                <p class="recipe-note">Cho phép rèn toàn bộ trang bị Endgame tại căn cứ Overworld mà không cần phải quay lại đảo The End.</p>
-              </div>
-            </article>
-
-            <!-- Trinket 12: Enderman's Hand -->
-            <article class="item-recipe-card">
-              <div class="item-recipe-top">
-                <div class="item-sprite-box" data-mc-tooltip="Enderman's Hand">
-                  <img src="assets/images/trinkets/endermans_hand.png" alt="Enderman's Hand" loading="lazy">
-                </div>
-                <div class="item-meta">
-                  <div class="item-meta-header">
-                    <h3 class="item-meta-title">Enderman's Hand</h3>
-                    <span class="mechanic-badge badge-void">+3 Tầm Với Khối Block</span>
-                  </div>
-                  <div class="item-stats-line">Tăng +3 khối cự ly tương tác · Rơi 10% từ Enderman (Looting tăng tỉ lệ)</div>
-                  <p class="item-desc">
-                    Cánh tay thuôn dài thần bí của Enderman. Khi cầm trên bất kỳ tay nào (tay chính hoặc tay phụ), ban tặng khả năng <strong>tăng thêm +3 khối tầm tương tác (Block Reach)</strong>, cho phép người chơi đào phá, đặt khối hoặc tương tác với rương và công tắc từ cự ly xa hơn 3 khối.
-                  </p>
-                </div>
-              </div>
-              <div class="recipe-box">
-                <div class="recipe-box-title">CÁCH LẤY: HẠ GỤC ENDERMAN</div>
-                <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Enderman"><img src="assets/images/entities/enderman.png" alt="Enderman"></div>
-                  <span class="recipe-plus">➜</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderman's Hand"><img src="assets/images/trinkets/endermans_hand.png" alt="Enderman's Hand"></div>
-                </div>
-                <p class="recipe-note">Tỉ lệ rơi 10% từ Enderman ở Overworld và The End, bùa Nhặt (Looting) tăng thêm tỉ lệ rơi.</p>
-              </div>
-            </article>
-
-            <!-- Trinket 13: Life Crystal -->
-            <article class="item-recipe-card">
-              <div class="item-recipe-top">
-                <div class="item-sprite-box" data-mc-tooltip="Life Crystal">
-                  <img src="assets/images/trinkets/life_crystal.png" alt="Life Crystal" loading="lazy">
-                </div>
-                <div class="item-meta">
-                  <div class="item-meta-header">
-                    <h3 class="item-meta-title">Life Crystal</h3>
-                    <span class="mechanic-badge badge-stellar">Hồi Máu Cấp IV Tốc Hành</span>
-                  </div>
-                  <div class="item-stats-line">Đứng yên hồi máu tối đa Regeneration IV · Rơi 66% từ Ender Dragon</div>
-                  <p class="item-desc">
-                    Trang sức kết tinh sức mạnh sinh mệnh của Rồng Ender (trước đây là <em>Ender Insignia</em>). Khi cầm trên tay và đứng yên hoàn toàn, kích hoạt hiệu ứng <strong>Hồi Phục (Regeneration I)</strong>, cấp độ hiệu ứng tăng dần mỗi 2 giây và đạt đỉnh ở <strong>Regeneration IV</strong>. Di chuyển hoặc nhận sát thương sẽ lập tức làm mới và tạm ngắt 0.5s.
-                  </p>
-                </div>
-              </div>
-              <div class="recipe-box">
-                <div class="recipe-box-title">CÁCH LẤY: HẠ GỤC ENDER DRAGON</div>
-                <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Ender Dragon"><img src="assets/images/entities/ender_dragon.png" alt="Ender Dragon"></div>
-                  <span class="recipe-plus">➜</span>
-                  <div class="mc-slot" data-mc-tooltip="Life Crystal"><img src="assets/images/trinkets/life_crystal.png" alt="Life Crystal"></div>
-                </div>
-                <p class="recipe-note">Tỉ lệ rơi 66% từ Rồng Ender khi bị tiêu diệt. Cực kỳ hiệu quả để đứng yên hồi đầy bình máu tức thì trong giao tranh.</p>
-              </div>
-            </article>
-
-            <!-- Trinket 12: Crest of The End -->
+          <div class="item-recipe-grid">
+            <!-- Shield 1: Crest of The End (3D SHIELD UPDATE) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box" data-mc-tooltip="Crest of The End">
-                  <img src="assets/images/shields/crest_of_the_end_3d.png" alt="Crest of The End" loading="lazy">
+                  <img src="assets/images/shields/crest_of_the_end_3d.png" alt="Khiên Crest of The End" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Crest of The End</h3>
-                    <span class="mechanic-badge badge-void">Khiên Phản Đòn Hư Không</span>
+                    <span class="mechanic-badge badge-void">Phản Đòn AoE · Axe Counter</span>
                   </div>
-                  <div class="item-stats-line">Cộng dồn +15%/đòn chặn (tối đa +45%) · Chặn Rìu nổ AoE 14 DMG + Jinx 8s · Kháng Lửa &amp; Dung Nham</div>
+                  <div class="item-stats-line">Độ bền: 768 · Miễn nhiễm Lửa &amp; Dung nham · Phản đòn tối đa +45% DMG · Axe Counter sạc 3 tầng</div>
                   <p class="item-desc">
-                    Khiên phòng hộ phản đòn trứ danh sau khi diệt Rồng. Chặn sát thương sẽ tích lũy một phần lực đánh, cộng thêm <strong>+15% sát thương</strong> vào đòn đánh cận chiến kế tiếp (cộng dồn <strong>tối đa 3 tầng lên tới +45%</strong>, duy trì trong 2.5 giây). Đặc biệt: Khi chặn cú bổ từ <strong>Rìu (Axe)</strong>, khiên kích hoạt <strong>vụ nổ diện rộng 4 khối gây 14 sát thương</strong> và gây hiệu ứng <strong>Jinx trong 8 giây</strong> (bào mòn Giáp &amp; Độ cứng giáp), đồng thời <strong>ngay lập tức sạc đầy 3 tầng sát thương (+45%)</strong> cho đòn phản công! Miễn nhiễm hoàn toàn với Lửa và Dung Nham.
+                    Khiên ma thuật tối thượng rèn tại Tế đàn Accursed. Chặn đòn tích lũy <strong>+15% sát thương phản đòn</strong> mỗi lần (cộng dồn 3 tầng lên <strong>+45%</strong> cho nhát chém tiếp theo trong 2.5s). Đặc biệt sở hữu cơ chế <strong>Axe Counter</strong>: khi bị đòn Rìu phá khiên, kích hoạt nổ chấn động AoE bán kính 4 khối gây <strong>14 sát thương</strong>, ghim hiệu ứng <strong>Jinx</strong> (bào mòn giáp) trong 8s và sạc đầy ngay lập tức 3 tầng phản kích (+45%)!
                   </p>
                 </div>
               </div>
@@ -3164,19 +3063,19 @@
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Shield"><img src="assets/images/ingredients/shield.png" alt="Shield"></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Upgrade Template"><img src="assets/images/ingredients/enderite_upgrade_smithing_template.png" alt="Template"></div>
+                  <div class="mc-slot" data-mc-tooltip="Enderite Upgrade Template"><img src="assets/images/ingredients/enderite_upgrade_smithing_template.png" alt="Enderite Template"></div>
                   <span class="recipe-plus">+</span>
                   <div class="mc-slot" data-mc-tooltip="Netherite Ingot"><img src="assets/images/ingredients/netherite_ingot.png" alt="Netherite Ingot"></div>
                 </div>
-                <p class="recipe-note">Khắc chế triệt để lối đánh bằng Rìu (Axe PvP). Có thể nâng cấp bùa chú Unbreaking &amp; Mending trên Đe.</p>
+                <p class="recipe-note">Miễn nhiễm cháy nổ hoàn toàn trong dung nham và lửa địa ngục.</p>
               </div>
             </article>
 
-            <!-- Trinket 13: Copper Elektra Shield (MỚI v6) -->
+            <!-- Shield 2: Copper Elektra Shield (3D SHIELD UPDATE) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/trinkets/copper_elektra_shield.png" alt="Khiên Copper Elektra Shield" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Copper Elektra Shield">
+                  <img src="assets/images/shields/copper_elektra_shield_3d.png" alt="Khiên Copper Elektra Shield" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -3185,65 +3084,327 @@
                   </div>
                   <div class="item-stats-line">Khiên Lướt Điện Bọc Đồng · Ngồi (Sneak) Lướt Tốc Độ Cao · Tối Đa 3 Lần Lướt</div>
                   <p class="item-desc">
-                    Khiên bọc đồng tĩnh điện. Ngồi rón rén (Sneak) để kích hoạt cú lướt điện giật tốc độ cao! Tích lũy tối đa 3 lần lướt mỗi 8 giây (lần thứ 3 hồi chậm hơn). Đặc biệt: <strong>Lướt xuyên qua quái vật sẽ giảm ngay 50% thời gian hồi chiêu!</strong>
+                    Khiên bọc đồng tĩnh điện rèn với thanh Breeze Rod. Ngồi rón rén (Sneak) để kích hoạt cú <strong>lướt điện giật tốc độ cao</strong> băng qua trận địa! Tích lũy tối đa <strong>3 lần lướt</strong> mỗi 8 giây (lần thứ 3 hồi chậm hơn). Đặc biệt: <strong>Lướt xuyên qua quái vật sẽ giảm ngay 50% thời gian hồi chiêu!</strong>
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: RƯƠNG VAULT THÁP END CITY / TẾ ĐÀN</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Khiên Shield"><img src="assets/images/ingredients/shield.png" alt="Shield"></div>
+                  <div class="mc-slot" data-mc-tooltip="Shield"><img src="assets/images/ingredients/shield.png" alt="Shield"></div>
                   <span class="recipe-plus">+</span>
                   <div class="mc-slot" data-mc-tooltip="Copper Ingot"><img src="assets/images/ingredients/copper_ingot.png" alt="Copper Ingot"><span class="mc-count">8</span></div>
                   <span class="recipe-plus">+</span>
                   <div class="mc-slot" data-mc-tooltip="Breeze Rod"><img src="assets/images/ingredients/breeze_rod.png" alt="Breeze Rod"><span class="mc-count">2</span></div>
                 </div>
-                <p class="recipe-note">Khiên cơ động tốc độ cao lý tưởng để băng qua chiến trường.</p>
+                <p class="recipe-note">Khiên cơ động tốc độ cao lý tưởng để băng qua chiến trường và rút ngắn khoảng cách.</p>
               </div>
             </article>
 
-            <!-- Trinket 14: Starstruck Shield -->
+            <!-- Shield 3: Starstruck Shield -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Starstruck Shield">
                   <img src="assets/images/trinkets/starstruck_shield.png" alt="Khiên Starstruck Shield" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Starstruck Shield</h3>
-                    <span class="mechanic-badge badge-hallow">Khiên Sao Rơi Thiêu Đốt</span>
+                    <span class="mechanic-badge badge-hallow">Mưa Sao Băng · Bỏ Qua I-Frames</span>
                   </div>
-                  <div class="item-stats-line">Mưa sao băng phản kích · Cháy Lăng Kính / Lửa Thánh (Holy Flames)</div>
+                  <div class="item-stats-line">Rơi từ Empress of Light · Triệu hồi sao băng · Phản kích diện rộng</div>
                   <p class="item-desc">
-                    Chặn sát thương sẽ khiến hàng loạt ngôi sao băng rực lửa rơi xuống nghiền nát kẻ tấn công và gây hiệu ứng Cháy Lăng Kính. Khi kết hợp với <strong>Radiant Jewel</strong>, sao sẽ rơi nhiều hơn, sát thương lớn hơn và chuyển thành <strong>Lửa Thánh (Holy Flames)</strong> thiêu đốt xuyên Kháng Lửa!
+                    Mỗi đòn đánh chặn thành công kích hoạt <strong>sao băng rơi xuống đầu kẻ tấn công</strong>, gây 6 sát thương nổ lan. Đòn đánh này <strong>bỏ qua hoàn toàn khung bất tử (I-Frames)</strong> của mục tiêu. Khi kết hợp cùng bộ giáp Shulker, mỗi sao băng hồi phục ngay 1 độ bền khiên!
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: RƠI TỪ EMPRESS OF LIGHT</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Empress of Light"><img src="assets/images/entities/empress_of_light.png" alt="Empress of Light"></div>
+                  <div class="mc-slot" data-mc-tooltip="Empress of Light"><img src="assets/images/entities/empress_of_light_night.png" alt="Empress of Light"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 25%"><img src="assets/images/trinkets/starstruck_shield.png" alt="Starstruck Shield"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 50%"><img src="assets/images/trinkets/starstruck_shield.png" alt="Starstruck Shield"></div>
                 </div>
-                <p class="recipe-note">Tương tác hoàn hảo cùng Radiant Jewel để tối đa hóa sát thương phản đòn.</p>
+                <p class="recipe-note">Cường hóa cực hạn khi mang theo Radiant Jewel (triệu hồi thêm sao và đốt Lửa Thánh).</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- ==========================================
+               NHÓM 3: PHỤ KIỆN ĐẶC QUYỀN & BẢO VẬT HƯ KHÔNG (TRINKETS & RELICS)
+               ========================================== -->
+          <div style="margin: 36px 0 16px 0;">
+            <h3 style="font-size: 1.2rem; color: #facc15; display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 10px; height: 10px; background: #facc15; border-radius: 50%;"></span>
+              <span>Nhóm 3: Phụ Kiện Đặc Quyền &amp; Bảo Vật Hư Không (Trinkets &amp; Relics)</span>
+              <span class="mechanic-badge badge-gold" style="margin-left: auto; font-size: 0.72rem;">8 Bảo Vật Sinh Tồn &amp; Khảm Ngọc</span>
+            </h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.88rem; color: #94a3b8;">
+              Các bảo vật trang bị mang năng lực thụ động đặc biệt, phát huy tác dụng ở bất kỳ ô nào trong túi đồ (Any Slot v6.0.0+) hoặc cung cấp đặc quyền chiến thuật:
+            </p>
+          </div>
+
+          <div class="item-recipe-grid">
+            <!-- Trinket 9: Void Pendant (Full Width 9-Variant Matrix) -->
+            <article class="item-recipe-card card-wide-full">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box" data-mc-tooltip="Void Pendant">
+                  <img src="assets/images/trinkets/void_pendant/void_pendant.png" alt="Dây Chuyền Hư Không (Void Pendant)" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Void Pendant (Dây Chuyền Hư Không)</h3>
+                    <span class="mechanic-badge badge-void">Hiệu Lực Mọi Ô (Any Slot v6.0+)</span>
+                  </div>
+                  <div class="item-stats-line">Post-Dragon · Tác dụng ở mọi ô túi đồ · 9 loại ngọc khảm nguyền rủa tại Tế Đàn</div>
+                  <p class="item-desc">
+                    Trang bị phụ kiện cổ đại sau Rồng Ender. Từ bản <strong>v6.0.0+</strong>, thuộc tính của dây chuyền <strong>tự động phát huy tác dụng ở bất kỳ ô nào trong túi đồ</strong>. Khảm tại Tế đàn kết hợp <strong>1x Void Pendant + 1x Enderite Shard + 1 loại Ngọc/Khoáng sản</strong> tương ứng để nhận hiệu ứng đặc quyền:
+                  </p>
+                </div>
+              </div>
+
+              <!-- 9-Variant Matrix Grid -->
+              <div class="pendant-variants-grid">
+                <!-- 1. Amethyst -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Amethyst Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/amethyst.png" alt="Amethyst Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Vision</span>
+                      <span class="pendant-gem-tag gem-amethyst">Amethyst Shard</span>
+                    </div>
+                    <div class="pendant-variant-effect">Nhìn đêm vĩnh viễn (Night Vision), ngồi rón rén khiến quái vật xung quanh phát sáng dạ quang (Glowing).</div>
+                  </div>
+                </div>
+
+                <!-- 2. Copper -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Copper Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/copper.png" alt="Copper Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Power</span>
+                      <span class="pendant-gem-tag gem-copper">Copper Ingot</span>
+                    </div>
+                    <div class="pendant-variant-effect">Đòn đánh phóng tia sét điện giật phụ trội, gây thêm sát thương điện giật lan sang mục tiêu lân cận.</div>
+                  </div>
+                </div>
+
+                <!-- 3. Diamond -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Diamond Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/diamond.png" alt="Diamond Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Furor</span>
+                      <span class="pendant-gem-tag gem-diamond">Diamond</span>
+                    </div>
+                    <div class="pendant-variant-effect">Gia tăng trực tiếp <strong>+6% Tốc độ đánh nhân bội</strong> cho mọi vũ khí cận chiến.</div>
+                  </div>
+                </div>
+
+                <!-- 4. Emerald -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Emerald Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/emerald.png" alt="Emerald Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Fortune</span>
+                      <span class="pendant-gem-tag gem-emerald">Emerald</span>
+                    </div>
+                    <div class="pendant-variant-effect">Tăng <strong>+1 Điểm may mắn (Luck)</strong>, cải thiện tỉ lệ nhặt đồ hiếm từ rương và câu cá.</div>
+                  </div>
+                </div>
+
+                <!-- 5. Gold -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Gold Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/gold.png" alt="Gold Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Spelunking</span>
+                      <span class="pendant-gem-tag gem-gold">Gold Ingot</span>
+                    </div>
+                    <div class="pendant-variant-effect">Tăng <strong>+15% Tốc độ đào khoáng</strong> và <strong>+5% Hiệu suất khai thác mỏ</strong>.</div>
+                  </div>
+                </div>
+
+                <!-- 6. Iron -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Iron Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/iron.png" alt="Iron Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Fortitude</span>
+                      <span class="pendant-gem-tag gem-iron">Iron Ingot</span>
+                    </div>
+                    <div class="pendant-variant-effect">Cộng trực tiếp <strong>+1 Độ cứng giáp (Armor Toughness)</strong>, gia cố khả năng chống sát thương lớn.</div>
+                  </div>
+                </div>
+
+                <!-- 7. Lapis -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Lapis Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/lapis.png" alt="Lapis Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Wisdom</span>
+                      <span class="pendant-gem-tag gem-lapis">Lapis Lazuli</span>
+                    </div>
+                    <div class="pendant-variant-effect">Có <strong>5% tỉ lệ rơi hạt kinh nghiệm (EXP)</strong> mỗi khi bạn nhận sát thương từ bất kỳ thực thể nào.</div>
+                  </div>
+                </div>
+
+                <!-- 8. Netherite -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Netherite Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/netherite.png" alt="Netherite Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Rage</span>
+                      <span class="pendant-gem-tag gem-netherite">Netherite Ingot</span>
+                    </div>
+                    <div class="pendant-variant-effect">Cộng trực tiếp <strong>+2 Sát thương cận chiến</strong> và <strong>+35% Tỉ lệ chém quét (Sweeping Damage)</strong>.</div>
+                  </div>
+                </div>
+
+                <!-- 9. Quartz -->
+                <div class="pendant-variant-card">
+                  <div class="pendant-sprite-wrap" data-mc-tooltip="Quartz Void Pendant">
+                    <img src="assets/images/trinkets/void_pendant/quartz.png" alt="Quartz Pendant" loading="lazy">
+                  </div>
+                  <div class="pendant-variant-info">
+                    <div class="pendant-variant-title-line">
+                      <span class="pendant-variant-title">Agility</span>
+                      <span class="pendant-gem-tag gem-quartz">Nether Quartz</span>
+                    </div>
+                    <div class="pendant-variant-effect">Cộng <strong>+4% Tốc chạy</strong>, <strong>+4% Sức nhảy cao</strong> và <strong>+40% Hiệu quả di chuyển</strong> linh hoạt.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipe-box">
+                <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
+                <div class="recipe-inline">
+                  <div class="mc-slot" data-mc-tooltip="Void Pendant"><img src="assets/images/trinkets/void_pendant/void_pendant.png" alt="Void Pendant"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="1 trong 9 loại ngọc/khoáng sản khảm"><img src="assets/images/ingredients/diamond.png" alt="Gem"></div>
+                </div>
+                <p class="recipe-note">Dây chuyền cơ bản tìm thấy trong rương Khảo cổ xác tàu đắm (Shipwreck Archaeology).</p>
               </div>
             </article>
 
-            <!-- Trinket 15: Soaring Insignia -->
+            <!-- Trinket 10: Satchel of Voids -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/trinkets/soaring_insignia.png" alt="Huy hiệu Soaring Insignia" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Satchel of Voids">
+                  <img src="assets/images/trinkets/satchel_of_voids.png" alt="Satchel of Voids" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Satchel of Voids</h3>
+                    <span class="mechanic-badge badge-void">Bệ Thờ Di Động</span>
+                  </div>
+                  <div class="item-stats-line">Altar di động 32.5s · Vĩnh viễn trên Crying Obsidian · Post-Dragon</div>
+                  <p class="item-desc">
+                    Túi ma thuật chứa đựng sức mạnh tế đàn. Khi nhấp chuột phải xuống đất, triệu hồi bệ thờ <strong>Altar of The Accursed</strong> tạm thời tồn tại trong 32.5 giây. Nếu đặt trên khối Hắc Diện Thạch Khóc (Crying Obsidian), bệ thờ sẽ tồn tại <strong>vĩnh viễn</strong>!
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-box">
+                <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
+                <div class="recipe-inline">
+                  <div class="mc-slot" data-mc-tooltip="Bundle"><img src="assets/images/ingredients/bundle.png" alt="Bundle"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Nether Star"><img src="assets/images/ingredients/nether_star.png" alt="Nether Star"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"><span class="mc-count">4</span></div>
+                </div>
+                <p class="recipe-note">Cho phép rèn trang bị huyền thoại ở bất kỳ đâu mà không cần quay lại đài trung tâm The End.</p>
+              </div>
+            </article>
+
+            <!-- Trinket 11: Enderman's Hand -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box" data-mc-tooltip="Enderman's Hand">
+                  <img src="assets/images/trinkets/endermans_hand.png" alt="Enderman's Hand" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Enderman's Hand</h3>
+                    <span class="mechanic-badge badge-ender">+3 Khối Tầm Với</span>
+                  </div>
+                  <div class="item-stats-line">Rơi 10% từ Enderman · Tác dụng ở mọi ô túi đồ · Tăng tầm với tương tác</div>
+                  <p class="item-desc">
+                    Bảo vật phụ kiện từ Enderman. Chỉ cần đặt trong túi đồ, bạn được <strong>tăng thêm +3 khối tầm với tương tác (Block Reach)</strong>, cho phép đặt khối, khai khoáng và mở rương ở cự ly xa vượt trội.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-box">
+                <div class="recipe-box-title">CÁCH LẤY: HẠ GỤC ENDERMAN</div>
+                <div class="recipe-inline">
+                  <div class="mc-slot" data-mc-tooltip="Enderman"><img src="assets/images/entities/enderman.png" alt="Enderman"></div>
+                  <span class="recipe-plus">→</span>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 10%"><img src="assets/images/trinkets/endermans_hand.png" alt="Enderman's Hand"></div>
+                </div>
+                <p class="recipe-note">Cực kỳ hữu ích cho việc xây dựng kiến trúc trên không và đào mỏ an toàn.</p>
+              </div>
+            </article>
+
+            <!-- Trinket 12: Life Crystal -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box" data-mc-tooltip="Life Crystal">
+                  <img src="assets/images/trinkets/life_crystal.png" alt="Life Crystal" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Life Crystal</h3>
+                    <span class="mechanic-badge badge-hallow">Hồi Máu Đứng Yên</span>
+                  </div>
+                  <div class="item-stats-line">Rơi 66% từ Rồng Ender · Hồi phục tối đa Regeneration IV khi đứng yên</div>
+                  <p class="item-desc">
+                    Pha lê sinh mệnh rơi từ Rồng Ender. Khi người chơi đứng yên không di chuyển trong 2 giây, viên pha lê sẽ ban phước hiệu ứng <strong>Hồi Máu Regeneration tăng dần từ cấp I lên cấp IV</strong>, hồi sinh lực với tốc độ chóng mặt!
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-box">
+                <div class="recipe-box-title">CÁCH LẤY: HẠ GỤC ENDER DRAGON</div>
+                <div class="recipe-inline">
+                  <div class="mc-slot" data-mc-tooltip="Ender Dragon"><img src="assets/images/entities/ender_dragon.png" alt="Ender Dragon"></div>
+                  <span class="recipe-plus">→</span>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 66%"><img src="assets/images/trinkets/life_crystal.png" alt="Life Crystal"></div>
+                </div>
+                <p class="recipe-note">Trang bị sinh tồn số 1 giữa các đợt giao tranh đẫm máu với Boss.</p>
+              </div>
+            </article>
+
+            <!-- Trinket 13: Soaring Insignia -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box" data-mc-tooltip="Soaring Insignia">
+                  <img src="assets/images/trinkets/soaring_insignia.png" alt="Soaring Insignia" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Soaring Insignia</h3>
-                    <span class="mechanic-badge badge-hallow">Huy Hiệu Bay Vĩnh Cửu</span>
+                    <span class="mechanic-badge badge-stellar">Lướt Vô Tận · 2x Vận Tốc</span>
                   </div>
-                  <div class="item-stats-line">Bay vô tận không cần pháo hoa · Tăng tốc Elytra +100% · Giữ thăng bằng trên không</div>
+                  <div class="item-stats-line">Rơi từ Empress ban ngày · Bay không cần pháo hoa · Tự do thăng giáng</div>
                   <p class="item-desc">
-                    Huy hiệu rơi khi hạ Empress of Light ban ngày. Cho phép bay lượn liên tục không cần pháo hoa, tăng gấp đôi vận tốc bay của cánh Elytra và giữ thăng bằng trên không.
+                    Huy hiệu tối thượng của bầu trời. Cho phép người đeo <strong>bay lượn liên tục với cánh Elytra mà không cần dùng đến Pháo hoa</strong>! Tăng gấp đôi (2x) vận tốc bay và tự động giữ thăng bằng lượn trên không trung.
                   </p>
                 </div>
               </div>
@@ -3252,16 +3413,16 @@
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Daytime Empress of Light"><img src="assets/images/entities/empress_of_light_daytime.png" alt="Daytime Empress"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 10%"><img src="assets/images/trinkets/soaring_insignia.png" alt="Soaring Insignia"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 100%"><img src="assets/images/trinkets/soaring_insignia.png" alt="Soaring Insignia"></div>
                 </div>
-                <p class="recipe-note">Cung cấp khả năng bay lơ lửng và cơ động trên không trung.</p>
+                <p class="recipe-note">Món quà xứng đáng sau khi chiến thắng Empress of Light ở chế độ Cuồng Nộ (Enraged Mode).</p>
               </div>
             </article>
 
-            <!-- Trinket 16: Radiant Jewel (MỚI NHẤT v6.0.0) -->
-            <article class="item-recipe-card">
+            <!-- Trinket 14: Radiant Jewel (Full Width 5-Buff Matrix) -->
+            <article class="item-recipe-card card-wide-full">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Radiant Jewel">
                   <img src="assets/images/trinkets/radiant_jewel.png" alt="Radiant Jewel" loading="lazy">
                 </div>
                 <div class="item-meta">
@@ -3269,19 +3430,86 @@
                     <h3 class="item-meta-title">Radiant Jewel</h3>
                     <span class="mechanic-badge badge-stellar">Mới trong v6.0.0</span>
                   </div>
-                  <div class="item-stats-line">Có tác dụng ở mọi ô túi đồ · Cường hóa 5 món rơi từ Empress of Light · Rơi 100% từ Radiant Empress</div>
+                  <div class="item-stats-line">Có tác dụng ở mọi ô túi đồ · Cường hóa 5 món bảo vật Empress of Light · Rơi 100% từ Radiant Empress</div>
                   <p class="item-desc">
-                    Bảo ngọc trong bản cập nhật <strong>v6.0.0</strong>, rơi khi tiêu diệt biến thể <strong>Radiant Empress of Light</strong>. Chỉ cần giữ ngọc trong túi đồ để mở khóa sức mạnh tiềm ẩn của toàn bộ 5 món bảo vật Nữ đế:
+                    Bảo ngọc hoàng kim trong bản cập nhật <strong>v6.0.0</strong>, rơi khi tiêu diệt biến thể tối thượng <strong>Radiant Empress of Light</strong>. Chỉ cần giữ ngọc trong túi đồ để mở khóa sức mạnh tiềm ẩn của toàn bộ 5 món bảo vật Nữ đế:
                   </p>
-                  <ul class="item-bonus-list">
-                    <li><strong>Kaleidoscope:</strong> 50% cơ hội giảm thời gian gồng đòn thêm 1 giây.</li>
-                    <li><strong>Fluffy Hammer of Justice:</strong> Tăng gấp đôi (2x) tốc độ bay của búa ném!</li>
-                    <li><strong>Prismatic Punch:</strong> Nhân đôi số lần phát nổ Prismatic Blast!</li>
-                    <li><strong>Prismember:</strong> Giảm thời gian hồi chiêu giữa các đòn xoay lửa 360°!</li>
-                    <li><strong>Starstruck Shield:</strong> Triệu hồi thêm sao rơi với sát thương cao hơn và thiêu đốt bằng Lửa Thánh (Holy Flames) xuyên kháng lửa!</li>
-                  </ul>
                 </div>
               </div>
+
+              <!-- 5-Buff Matrix Grid -->
+              <div class="jewel-buffs-grid">
+                <!-- 1. Kaleidoscope -->
+                <div class="jewel-buff-card">
+                  <div class="jewel-sprite-wrap" data-mc-tooltip="Kaleidoscope Buff">
+                    <img src="assets/images/weapons/kaleidoscope.png" alt="Kaleidoscope" loading="lazy">
+                  </div>
+                  <div class="jewel-buff-info">
+                    <div class="jewel-buff-title-line">
+                      <span class="jewel-buff-title">Kaleidoscope</span>
+                      <span class="jewel-buff-tag">Đại Rìu Ánh Dương</span>
+                    </div>
+                    <div class="jewel-buff-effect">50% cơ hội tăng tốc tụ lực +1 điểm/giây và kéo dài thời gian thiêu đốt <strong>Holy Flames</strong> thêm +1s.</div>
+                  </div>
+                </div>
+
+                <!-- 2. Fluffy Hammer -->
+                <div class="jewel-buff-card">
+                  <div class="jewel-sprite-wrap" data-mc-tooltip="Fluffy Hammer Buff">
+                    <img src="assets/images/weapons/fluffy_hammer.png" alt="Fluffy Hammer" loading="lazy">
+                  </div>
+                  <div class="jewel-buff-info">
+                    <div class="jewel-buff-title-line">
+                      <span class="jewel-buff-title">Fluffy Hammer</span>
+                      <span class="jewel-buff-tag">Búa Công Lý</span>
+                    </div>
+                    <div class="jewel-buff-effect">Tăng gấp đôi (<strong>2x Tốc độ bay</strong>) của búa ném, giúp búa bay siêu tốc và va đập mục tiêu chớp nhoáng.</div>
+                  </div>
+                </div>
+
+                <!-- 3. Prismatic Punch -->
+                <div class="jewel-buff-card">
+                  <div class="jewel-sprite-wrap" data-mc-tooltip="Prismatic Punch Buff">
+                    <img src="assets/images/weapons/prismatic_punch.png" alt="Prismatic Punch" loading="lazy">
+                  </div>
+                  <div class="jewel-buff-info">
+                    <div class="jewel-buff-title-line">
+                      <span class="jewel-buff-title">Prismatic Punch</span>
+                      <span class="jewel-buff-tag">Nỏ Quang Phổ</span>
+                    </div>
+                    <div class="jewel-buff-effect">Kích hoạt <strong>2 vụ nổ liên tiếp</strong> khi chạm mục tiêu, kèm theo hiệu ứng thiêu đốt <strong>Holy Flames</strong>.</div>
+                  </div>
+                </div>
+
+                <!-- 4. Prismember -->
+                <div class="jewel-buff-card">
+                  <div class="jewel-sprite-wrap" data-mc-tooltip="Prismember Buff">
+                    <img src="assets/images/weapons/prismember.png" alt="Prismember" loading="lazy">
+                  </div>
+                  <div class="jewel-buff-info">
+                    <div class="jewel-buff-title-line">
+                      <span class="jewel-buff-title">Prismember</span>
+                      <span class="jewel-buff-tag">Kiếm Lửa Quang Phổ</span>
+                    </div>
+                    <div class="jewel-buff-effect">Giảm <strong>50% thời gian hồi chiêu</strong> (từ 20s xuống còn 10s) cho cú chém xoay tròn 360° thiêu rụi mục tiêu.</div>
+                  </div>
+                </div>
+
+                <!-- 5. Starstruck Shield -->
+                <div class="jewel-buff-card">
+                  <div class="jewel-sprite-wrap" data-mc-tooltip="Starstruck Shield Buff">
+                    <img src="assets/images/trinkets/starstruck_shield.png" alt="Starstruck Shield" loading="lazy">
+                  </div>
+                  <div class="jewel-buff-info">
+                    <div class="jewel-buff-title-line">
+                      <span class="jewel-buff-title">Starstruck Shield</span>
+                      <span class="jewel-buff-tag">Khiên Sao Băng</span>
+                    </div>
+                    <div class="jewel-buff-effect">Triệu hồi thêm <strong>5 sao băng rơi phản đòn</strong> với sát thương cao hơn và đốt cháy bằng <strong>Holy Flames</strong> xuyên qua Kháng Lửa.</div>
+                  </div>
+                </div>
+              </div>
+
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH SỞ HỮU: ĐÁNH BẠI RADIANT EMPRESS OF LIGHT (100% DROP)</div>
                 <div class="recipe-inline">
@@ -3297,76 +3525,92 @@
               </div>
             </article>
 
-            <!-- Trinket 17: Prismatic Pearl -->
+            <!-- Trinket 15: Prismatic Pearl -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/animated/prismatic_pearl.webp" alt="Ngọc Prismatic Pearl" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Prismatic Pearl">
+                  <img src="assets/images/animated/prismatic_pearl.webp" alt="Prismatic Pearl" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Prismatic Pearl</h3>
-                    <span class="mechanic-badge badge-hallow">Ngọc Ender Vô Hạn</span>
+                    <span class="mechanic-badge badge-hallow">Không Tốn Ngọc · Không Cooldown</span>
                   </div>
-                  <div class="item-stats-line">Bay nhanh &amp; xa +25% · Vệt Cầu Vồng · Hồi sau 5s · Cooldown độc lập</div>
+                  <div class="item-stats-line">Rơi 33% từ Empress ban đêm · Hồi chiêu độc lập với Ender Pearl · Tự quay về túi đồ</div>
                   <p class="item-desc">
-                    Ngọc Prismatic Pearl đóng vai trò như nguồn ngọc Ender vô tận. Ném đi bay <strong>nhanh hơn 25% và xa hơn 25%</strong> kèm vệt cầu vồng lộng lẫy; sau 5 giây ngọc tự bay hồi lại về tay!
+                    Ngọc dịch chuyển quang phổ tối thượng. Bay nhanh hơn 25%, xa hơn 25% với vệt sáng cầu vồng rực rỡ. Ngọc <strong>tự động bay ngược về túi đồ sau 5 giây</strong> và <strong>không chia sẻ thời gian hồi chiêu với Ender Pearl thông thường</strong>!
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
-                <div class="recipe-box-title">CÁCH LẤY: RƠI TỪ EMPRESS OF LIGHT</div>
+                <div class="recipe-box-title">CÁCH LẤY: RƠI TỪ EMPRESS OF LIGHT BAN ĐÊM</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Empress of Light"><img src="assets/images/entities/empress_of_light.png" alt="Empress of Light"></div>
+                  <div class="mc-slot" data-mc-tooltip="Empress of Light (Night)"><img src="assets/images/entities/empress_of_light_night.png" alt="Empress of Light"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 30%"><img src="assets/images/animated/prismatic_pearl.webp" alt="Prismatic Pearl"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 33% (Night / The End)"><img src="assets/images/animated/prismatic_pearl.webp" alt="Prismatic Pearl"></div>
                 </div>
-                <p class="recipe-note">Không làm tổn hại lượng máu khi tiếp đất nếu được nâng cấp bùa dịch chuyển an toàn.</p>
+                <p class="recipe-note">Chỉ rơi khi tiêu diệt Empress of Light vào Ban Đêm tại Overworld hoặc tại The End.</p>
               </div>
             </article>
 
-            <!-- Trinket 18: Duskberry -->
+            <!-- Trinket 16: Duskberry -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/trinkets/duskberry.png" alt="Quả Dâu Duskberry" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Duskberry">
+                  <img src="assets/images/trinkets/duskberry.png" alt="Duskberry" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Duskberry</h3>
-                    <span class="mechanic-badge badge-ender">Trái Cây Hoàng Hôn</span>
+                    <span class="mechanic-badge badge-void">Hồi Phục Sinh Mệnh</span>
                   </div>
-                  <div class="item-stats-line">Hồi 8 Độ đói · Buff Kháng sát thương &amp; Nhìn đêm · Cây bụi vùng End</div>
+                  <div class="item-stats-line">Hái tự nhiên tại End Shrubland · Hồi 4 Máu &amp; 3 Độ no · Không gây dịch chuyển ngẫu nhiên</div>
                   <p class="item-desc">
-                    Quả mọng mọc trên các bụi cây tại quần xã The End. Khi ăn hồi phục 8 độ đói, nhận hiệu ứng Kháng cự (Resistance) và Nhìn trong đêm (Night Vision).
+                    Loài quả mọng kỳ lạ mọc trên các bụi cây rậm rạp của quần xã <em>End Shrubland</em>. Khác với Chorus Fruit, Duskberry <strong>không làm bạn bị dịch chuyển ngẫu nhiên</strong> mà hồi phục 4 Máu (2 tim) và cung cấp độ no tức thời.
                   </p>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: HÁI TỰ NHIÊN NGOÀI END SHRUBLAND</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Bụi cây End"><img src="assets/images/trinkets/duskberry.png" alt="Duskberry"></div>
+                  <div class="mc-slot" data-mc-tooltip="End Shrubland Bushes"><img src="assets/images/ingredients/sweet_berries.png" alt="Sweet Berries"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Thu hoạch bằng tay"><img src="assets/images/trinkets/duskberry.png" alt="Duskberry"><span class="mc-count">1-3</span></div>
+                  <div class="mc-slot" data-mc-tooltip="Thu hoạch tự nhiên"><img src="assets/images/trinkets/duskberry.png" alt="Duskberry"></div>
                 </div>
-                <p class="recipe-note">Lương thực sinh tồn cơ bản tuyệt hảo khi lang thang ngoài các đảo xa.</p>
+                <p class="recipe-note">Nguồn lương thực và dược liệu an toàn nhất khi thám hiểm các cụm đảo hoang.</p>
               </div>
             </article>
+          </div>
 
-            <!-- Trinket 19: Fisher of Voids -->
+          <!-- ==========================================
+               NHÓM 4: HỆ THỐNG CÂU CÁ HƯ KHÔNG (VOID FISHING & LOÀI CÁ BIẾN DỊ)
+               ========================================== -->
+          <div style="margin: 36px 0 16px 0;">
+            <h3 style="font-size: 1.2rem; color: #4ade80; display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 10px; height: 10px; background: #4ade80; border-radius: 50%;"></span>
+              <span>Nhóm 4: Hệ Thống Câu Cá Hư Không (Void Fishing &amp; Loài Cá Biến Dị)</span>
+              <span class="mechanic-badge badge-frost" style="margin-left: auto; font-size: 0.72rem;">Cơ Chế Câu Dưới Vực y &lt; 0</span>
+            </h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.88rem; color: #94a3b8;">
+              Thợ câu có thể buông cần xuống khoảng không hư vô (y &lt; 0) tại các cụm đảo ngoài The End bằng cần câu đặc chế <em>Fisher of Voids</em> để kéo lên những loài cá ma thuật hiếm:
+            </p>
+          </div>
+
+          <div class="item-recipe-grid">
+            <!-- Fish 1: Fisher of Voids -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/trinkets/fisher_of_voids.png" alt="Cần Câu Fisher of Voids" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Fisher of Voids">
+                  <img src="assets/images/trinkets/fisher_of_voids.png" alt="Fisher of Voids" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Fisher of Voids</h3>
-                    <span class="mechanic-badge badge-void">Cần Câu Hư Không</span>
+                    <span class="mechanic-badge badge-stellar">Cần Câu Hư Không</span>
                   </div>
-                  <div class="item-stats-line">Câu cá dưới vực sâu y &lt; 0 · Tương thích mồi Decayed Clover</div>
+                  <div class="item-stats-line">Độ bền: 384 · Câu được dưới tầng Void y < 0 · Tự động phát quang phao câu</div>
                   <p class="item-desc">
-                    Cần câu đặc chế câu trực tiếp dưới vực Void trống rỗng ở tọa độ $y &lt; 0$. Kết hợp cùng Cỏ Bốn Lá Hư Hao (Decayed Clover) để câu các loài cá thần bí và sách cổ <em>Flavors of The Void</em>.
+                    Cần câu thần thoại rèn từ Mảnh Enderite. Phao câu có khả năng thả lơ lửng trong chân không dưới tầng vực sâu (y &lt; 0) của The End, câu được các sinh vật dị biến, cổ thư và chìa khóa Winged Key.
                   </p>
                 </div>
               </div>
@@ -3375,28 +3619,28 @@
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Fishing Rod"><img src="assets/images/ingredients/fishing_rod.png" alt="Fishing Rod"></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"><span class="mc-count">2</span></div>
+                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.png" alt="Enderite Shard"></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Chorus Plating"><img src="assets/images/ingredients/chorus_plating.png" alt="Chorus Plating"></div>
+                  <div class="mc-slot" data-mc-tooltip="Chorus Plating"><img src="assets/images/ingredients/chorus_plating.png" alt="Chorus Plating"><span class="mc-count">2</span></div>
                 </div>
-                <p class="recipe-note">Vật phẩm khởi đầu cho chuỗi tính năng Câu cá Hư Không (Void Fishing).</p>
+                <p class="recipe-note">Mở ra toàn bộ cơ chế Câu Cá Hư Không và các công thức nấu vạc cao cấp.</p>
               </div>
             </article>
 
-            <!-- Trinket 20: Crystal Heartfish -->
+            <!-- Fish 2: Crystal Heartfish -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/foods/crystal_heartfish.png" alt="Cá Crystal Heartfish" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Crystal Heartfish">
+                  <img src="assets/images/foods/crystal_heartfish.png" alt="Crystal Heartfish" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Crystal Heartfish</h3>
-                    <span class="mechanic-badge badge-stellar">Cá Tăng Máu Vĩnh Viễn</span>
+                    <span class="mechanic-badge badge-hallow">Hồi Máu Tức Thì</span>
                   </div>
-                  <div class="item-stats-line">Tối đa 10 con (+5 Tim đỏ vĩnh cửu) · Thành tựu "Topped Off"</div>
+                  <div class="item-stats-line">Cá thần thoại hiếm · Yêu cầu mồi Decayed Clover · Hồi phục lập tức 20 HP</div>
                   <p class="item-desc">
-                    Loài cá quý hiếm nhất câu được từ Void. Mỗi lần ăn tăng vĩnh viễn 1 HP tối đa (nửa tim). Cho phép tích lũy tối đa 10 con (+5 trái tim đỏ đầy đủ)!
+                    Loài cá hình trái tim pha lê cực hiếm, chỉ có thể câu được khi gắn mồi <em>Decayed Clover</em> vào cần Fisher of Voids. Ăn trực tiếp để <strong>hồi ngay 20 Máu (10 tim)</strong> hoặc dùng nấu thuốc vạc hồi phục tối thượng.
                   </p>
                 </div>
               </div>
@@ -3404,27 +3648,27 @@
                 <div class="recipe-box-title">CÁCH LẤY: CÂU CÁ HƯ KHÔNG VỚI DECAYED CLOVER</div>
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Fisher of Voids"><img src="assets/images/trinkets/fisher_of_voids.png" alt="Fisher of Voids"></div>
-                  <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Cá Trái Tim Pha Lê"><img src="assets/images/foods/crystal_heartfish.png" alt="Crystal Heartfish"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Câu tại vực y < 0"><img src="assets/images/foods/crystal_heartfish.png" alt="Crystal Heartfish"></div>
                 </div>
-                <p class="recipe-note">Ăn đủ 10 con mở thành tựu "Topped Off". Giới hạn chuẩn trong Stellarity là +10 HP (5 tim).</p>
+                <p class="recipe-note">Nguyên liệu hoàng kim cho các bình thuốc hồi phục mạnh nhất trong Stellarity.</p>
               </div>
             </article>
 
-            <!-- Trinket 21: Prismite -->
+            <!-- Fish 3: Prismite -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/animated/prismite.webp" alt="Cá Prismite" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Prismite">
+                  <img src="assets/images/ingredients/prismite.png" alt="Prismite" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Prismite</h3>
-                    <span class="mechanic-badge badge-hallow">Cá Lăng Kính Đổi Màu</span>
+                    <span class="mechanic-badge badge-hallow">Cá Quang Phổ The Hallow</span>
                   </div>
-                  <div class="item-stats-line">Nguyên liệu ẩm thực cao cấp · Chế tạo Prismatic Sushi &amp; Độc dược vạc</div>
+                  <div class="item-stats-line">Đặc sản The Hallow · Câu tại độ sâu y < 0 dưới thánh địa · Nguyên liệu dược liệu</div>
                   <p class="item-desc">
-                    Cá thần sắc màu óng ánh phát sáng rực rỡ. Dùng để nấu món Prismatic Sushi hồi máu tức thì hoặc điều chế các loại độc dược vạc cao cấp như Regeneraga và Lifeforce.
+                    Loài cá phát quang ngũ sắc sinh sống độc quyền tại vùng chân không bên dưới quần xã <em>The Hallow</em>. Vảy cá lấp lánh phản chiếu ánh sáng quang phổ, dùng làm nguyên liệu chính nấu món súp thánh và thuốc vạc.
                   </p>
                 </div>
               </div>
@@ -3432,27 +3676,27 @@
                 <div class="recipe-box-title">CÁCH LẤY: CÂU CÁ HƯ KHÔNG TẠI THE HALLOW</div>
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Fisher of Voids"><img src="assets/images/trinkets/fisher_of_voids.png" alt="Fisher of Voids"></div>
-                  <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Quần xã The Hallow"><img src="assets/images/animated/prismite.webp" alt="Prismite"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Vực sâu The Hallow y < 0"><img src="assets/images/ingredients/prismite.png" alt="Prismite"></div>
                 </div>
-                <p class="recipe-note">Nguyên liệu cốt lõi cho các bài thuốc cao cấp nhất trong vạc Hơi thở Rồng.</p>
+                <p class="recipe-note">Chỉ xuất hiện khi câu dưới đáy của biome The Hallow.</p>
               </div>
             </article>
 
-            <!-- Trinket 22: Ender Koi -->
+            <!-- Fish 4: Ender Koi -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/foods/ender_koi.png" alt="Cá Ender Koi" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Ender Koi">
+                  <img src="assets/images/ingredients/ender_koi.png" alt="Ender Koi" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Ender Koi</h3>
-                    <span class="mechanic-badge badge-ender">Cá Chép End</span>
+                    <span class="mechanic-badge badge-ender">Cá Chép Hư Không Phổ Biến</span>
                   </div>
-                  <div class="item-stats-line">Nguyên liệu Sushi truyền thống · Dịch chuyển nhẹ khi ăn</div>
+                  <div class="item-stats-line">Phổ biến ở mọi biome The End · Câu dưới vực y < 0 · Nguyên liệu món Phở</div>
                   <p class="item-desc">
-                    Cá chép bóng đêm sống trôi nổi trong không gian Void. Dùng trong công thức chế biến Sushi cổ điển cùng Rong biển khô trong nồi vạc Hơi thở Rồng.
+                    Loài cá chép bóng đêm bơi lội trong các dòng chảy năng lượng của The End. Thịt cá dai ngọt và bổ dưỡng, là nguyên liệu cốt lõi nấu món ăn đặc sắc nhất của Stellarity: <strong>Bát Phở (Pho)</strong> trứ danh!
                   </p>
                 </div>
               </div>
@@ -3461,9 +3705,9 @@
                 <div class="recipe-inline">
                   <div class="mc-slot" data-mc-tooltip="Fisher of Voids"><img src="assets/images/trinkets/fisher_of_voids.png" alt="Fisher of Voids"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ phổ biến"><img src="assets/images/foods/ender_koi.png" alt="Ender Koi"></div>
+                  <div class="mc-slot" data-mc-tooltip="Tỉ lệ câu 35%"><img src="assets/images/ingredients/ender_koi.png" alt="Ender Koi"></div>
                 </div>
-                <p class="recipe-note">Món ăn truyền thống của các cư dân sinh sống tại các ngôi làng End.</p>
+                <p class="recipe-note">Dễ dàng câu được với tỉ lệ cao ở bất kỳ quần xã nào ngoài The End.</p>
               </div>
             </article>
           </div>
