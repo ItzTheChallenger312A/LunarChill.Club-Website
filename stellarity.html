@@ -644,7 +644,7 @@
                 <li><strong>Cách rèn đồ:</strong> Bệ thờ không có giao diện GUI. Bạn đứng gần và <strong>ném (phím Q) đúng số lượng nguyên liệu</strong> lên mặt bệ đá (bán kính 1.5 block). Bệ thờ sẽ tự gom nguyên liệu và trả lại vật phẩm hoàn chỉnh.</li>
                 <li><strong>Giữ nguyên bùa Enchant:</strong> Khi nâng cấp từ đồ gốc (Giáp Netherite, Kiếm Netherite, Cung, Khiên, Đinh Ba), toàn bộ dòng Enchantment trên món đồ cũ được giữ nguyên sang món đồ mới.</li>
                 <li><strong>Nhuộm vệt sáng Elytra (Elytra Trail Dyeing):</strong> Ném <code>1x Elytra</code> + <code>1x Thuốc nhuộm bất kỳ (16 màu)</code> hoặc <code>1x Pháo Hoa / Ngôi Sao</code> lên bệ thờ để gắn hiệu ứng hạt màu bay theo sau lưng khi lượn Elytra.</li>
-                <li><strong>Mở từ xa bằng Satchel of Voids:</strong> Khi rèn được túi <em>Satchel of Voids</em>, bạn có thể dùng chức năng của bệ thờ ngay trong túi đồ mà không cần quay về Đảo Chính.</li>
+                <li><strong>Tế đàn di động Satchel of Voids:</strong> Khi rèn được túi <em>Satchel of Voids</em> (1 Bundle, 2 Nether Stars, 4 Netherite Ingots, 64 Enderite Shards, 64 Starlight Soot), nhấp chuột phải vào khối bất kỳ để triệu hồi Altar di động tại chỗ (tồn tại 32.55s, hồi chiêu 30s) hoặc gắn túi vào Khung Vật Phẩm bên hông khối Crying Obsidian để tạo Altar of The Accursed vĩnh viễn.</li>
               </ul>
             </div>
           </div>
@@ -3334,24 +3334,32 @@
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Satchel of Voids</h3>
-                    <span class="mechanic-badge badge-void">Bệ Thờ Di Động</span>
+                    <span class="mechanic-badge badge-void">Tế Đàn Di Động · Altar of The Accursed</span>
                   </div>
-                  <div class="item-stats-line">Altar di động 32.5s · Vĩnh viễn trên Crying Obsidian · Post-Dragon</div>
+                  <div class="item-stats-line">Altar di động tồn tại 32.55s · Hồi chiêu 30s · Biến Crying Obsidian thành Altar vĩnh viễn</div>
                   <p class="item-desc">
-                    Túi ma thuật chứa đựng sức mạnh tế đàn. Khi nhấp chuột phải xuống đất, triệu hồi bệ thờ <strong>Altar of The Accursed</strong> tạm thời tồn tại trong 32.5 giây. Nếu đặt trên khối Hắc Diện Thạch Khóc (Crying Obsidian), bệ thờ sẽ tồn tại <strong>vĩnh viễn</strong>!
+                    Túi ma thuật chứa đựng toàn bộ năng lượng chế tác của <strong>Altar of The Accursed</strong>:
                   </p>
+                  <ul class="item-mechanic-list" style="margin: 6px 0 0 16px; padding: 0; font-size: 0.9rem; line-height: 1.5; color: var(--color-text-body);">
+                    <li><strong>Triệu hồi Di động (Portable Altar):</strong> Nhấp chuột phải vào một khối block bất kỳ để triệu hồi bệ thờ Altar of The Accursed tạm thời. Bệ thờ tự động biến mất sau <strong>32.55 giây</strong> và có thể triệu hồi lại mỗi <strong>30 giây</strong> bằng túi Satchel.</li>
+                    <li><strong>Thiết lập Vĩnh viễn (Permanent Altar):</strong> Đặt túi Satchel vào một <strong>Khung Vật Phẩm (Item Frame)</strong> gắn ở mặt bên khối <strong>Hắc Diện Thạch Khóc (Crying Obsidian)</strong> sẽ biến khối đá thành một bệ thờ Altar of The Accursed <strong>vĩnh viễn</strong>. Đập vỡ bệ thờ bất kỳ lúc nào để thu hồi lại cả Crying Obsidian và túi Satchel.</li>
+                  </ul>
                 </div>
               </div>
               <div class="recipe-box">
                 <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Bundle"><img src="assets/images/ingredients/bundle.png" alt="Bundle"></div>
+                  <div class="mc-slot" data-mc-tooltip="1x Bundle"><img src="assets/images/ingredients/bundle.png" alt="Bundle"><span class="mc-count">1</span></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Nether Star"><img src="assets/images/ingredients/nether_star.png" alt="Nether Star"></div>
+                  <div class="mc-slot" data-mc-tooltip="2x Nether Star"><img src="assets/images/ingredients/nether_star.png" alt="Nether Star"><span class="mc-count">2</span></div>
                   <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Shard"><img src="assets/images/ingredients/enderite_shard.gif" alt="Enderite Shard"><span class="mc-count">4</span></div>
+                  <div class="mc-slot" data-mc-tooltip="4x Netherite Ingot"><img src="assets/images/ingredients/netherite_ingot.png" alt="Netherite Ingot"><span class="mc-count">4</span></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="64x Enderite Shard"><img src="assets/images/ingredients/enderite_shard.gif" alt="Enderite Shard"><span class="mc-count">64</span></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="64x Starlight Soot"><img src="assets/images/ingredients/starlight_soot.png" alt="Starlight Soot"><span class="mc-count">64</span></div>
                 </div>
-                <p class="recipe-note">Cho phép rèn trang bị huyền thoại ở bất kỳ đâu mà không cần quay lại đài trung tâm The End.</p>
+                <p class="recipe-note">Ném đúng 5 nguyên liệu trên lên bệ Altar of The Accursed ở Đảo Chính để rèn túi Satchel of Voids.</p>
               </div>
             </article>
 
