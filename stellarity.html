@@ -118,12 +118,12 @@
             <li><a href="#biomes-23" class="toc-link">2. Danh sách 23 Quần xã</a></li>
             <li><a href="#structures" class="toc-link">3. Công trình &amp; Trial End City</a></li>
             <li><a href="#core-mechanics" class="toc-link">4. Cơ chế Chế tạo &amp; Câu cá</a></li>
-            <li><a href="#bosses" class="toc-link">5. Boss Rồng Jean &amp; Empress</a></li>
+            <li><a href="#bosses" class="toc-link">5. Hệ Thống Boss &amp; Mobs</a></li>
             <li><a href="#recipe-armors" class="toc-link">6. Công thức Giáp &amp; Phôi rèn</a></li>
             <li><a href="#recipe-weapons" class="toc-link">7. Công thức Vũ khí &amp; Cung Nỏ</a></li>
             <li><a href="#recipe-spellbooks" class="toc-link">8. Sách Phép &amp; Vật phẩm Phụ trợ</a></li>
             <li><a href="#recipe-cauldron-food" class="toc-link">9. Nấu Vạc: Ẩm Thực Sinh Tồn</a></li>
-            <li><a href="#recipe-cauldron-potions" class="toc-link">10. Đun Thuốc: Thần Dược &amp; Độc Dược</a></li>
+            <li><a href="#recipe-cauldron-potions" class="toc-link">10. Đun Thuốc: Thuốc Vạc &amp; Độc Dược Đặc Chế</a></li>
             <li><a href="#attribution" class="toc-link">11. Bản Quyền &amp; Nguồn Dữ Liệu</a></li>
           </ul>
         </div>
@@ -677,8 +677,9 @@
                 <table class="mechanics-table">
                   <thead>
                     <tr>
-                      <th>Tên Cá / Hòm</th>
+                      <th>Tên Cá / Vật Phẩm</th>
                       <th>Quần Xã Câu (Biome)</th>
+                      <th style="width: 140px;">Tỷ Lệ Giật Trúng (Drop Rate)</th>
                       <th>Công dụng &amp; Hiệu ứng</th>
                     </tr>
                   </thead>
@@ -686,32 +687,44 @@
                     <tr>
                       <td><strong style="color: #f472b6;">Crystal Heartfish</strong></td>
                       <td>The Hallow / Crystal Crags</td>
-                      <td>Mỗi con ăn vào <strong>tăng vĩnh viễn +1 Máu tối đa (+0.5 Tim)</strong>. Ăn tối đa 10 con để cộng thêm <strong>+10 Máu (+5 Tim vĩnh viễn)</strong>.</td>
+                      <td><span class="mechanic-badge badge-hallow">~14.5%</span> <small>(Fish Pool)</small></td>
+                      <td>Mỗi con ăn vào <strong>tăng vĩnh viễn +1 Máu tối đa (+<img src="assets/images/ui/heart_half.png" alt="Half Heart" class="mc-heart">)</strong>. Ăn tối đa 10 con để cộng thêm <strong>+10 Máu (+5 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart"> vĩnh viễn)</strong>.</td>
                     </tr>
                     <tr>
                       <td><strong style="color: #c084fc;">Ender Koi &amp; Prismite</strong></td>
                       <td>Mọi quần xã / The Hallow</td>
+                      <td><span class="mechanic-badge badge-purple">18% – 25%</span></td>
                       <td>Nguyên liệu nấu <em>Sushi</em>, <em>Prismatic Sushi</em> và pha thuốc <em>Lifeforce Potion</em> (+20% Máu tối đa), <em>Regeneraga</em>.</td>
                     </tr>
                     <tr>
                       <td><strong style="color: #38bdf8;">Frost Minnow &amp; Bubblefish</strong></td>
                       <td>Đới Băng Giá / Prismarine Forest</td>
+                      <td><span class="mechanic-badge badge-frost">10% – 15%</span></td>
                       <td>Nguyên liệu pha thuốc <em>Frost Cloud Potion</em> và <em>Poseidon's Nectar</em>.</td>
                     </tr>
                     <tr>
                       <td><strong style="color: #f59e0b;">Flarefin Koi, Fleshy Piranha &amp; Crimson Tigerfish</strong></td>
                       <td>Fiery Hills / Flesh Tundra</td>
+                      <td><span class="mechanic-badge badge-amber">12% – 16%</span></td>
                       <td>Nguyên liệu pha thuốc <em>Hellfire Treader</em> (đi trên Lava), <em>Blind Rage</em> (tăng sát thương cận chiến) và <em>Regeneraga</em>.</td>
                     </tr>
                     <tr>
                       <td><strong style="color: #4ade80;">Overgrown Cod, Amethyst Budfish &amp; Potassifish</strong></td>
                       <td>End Wilds / Amethyst Forest</td>
-                      <td>Nguyên liệu pha thuốc giữ chân <em>Entanglement Potion</em> và thức ăn hồi máu.</td>
+                      <td><span class="mechanic-badge badge-stellar">15% – 20%</span></td>
+                      <td>Nguyên liệu pha thuốc giữ chân <em>Entanglement Potion</em> và thức ăn hồi phục sinh lực.</td>
                     </tr>
                     <tr>
                       <td><strong>End Crate / Hallowed Crate / Frozen Crate</strong></td>
                       <td>Toàn End / The Hallow / Đới Lạnh</td>
-                      <td>Mở ra <em>Enderite Shard, Ancient Plating, Hallowed Ingot, Duskberry, Frigid Harvester (10% ở Frozen Crate)</em> và <em>Treasure Heads</em>.</td>
+                      <td><span class="mechanic-badge badge-void">4.5% – 8.5%</span> <small>(Treasure Pool)</small></td>
+                      <td>Hòm báu vật rơi theo cấp bùa Luck of the Sea. Mở ra <em>Enderite Shard, Ancient Plating, Hallowed Ingot, Duskberry, Frigid Harvester (10% mở từ Frozen Crate)</em> và <em>Treasure Heads</em>.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #38bdf8;">Cần câu Fisher of Voids &amp; Cá Nóc Pufferfish</strong></td>
+                      <td>Toàn bộ vực Void The End</td>
+                      <td><span class="mechanic-badge badge-info">3.0% Cần · 1.0% Cá Nóc</span></td>
+                      <td>Cơ hội đặc biệt rơi thẳng cần câu <strong>Fisher of Voids</strong> mới toanh (3.0%) hoặc cá nóc sưu tầm <strong>Pufferfish</strong> (1.0%).</td>
                     </tr>
                   </tbody>
                 </table>
@@ -737,41 +750,444 @@
           </div>
         </section>
 
-        <!-- 5. Bosses: Ender Dragon & Empress of Light -->
+                <!-- 5. Hệ Thống Boss & Sinh Vật: Rồng Ender, Empress of Light & Mobs The End -->
         <section id="bosses">
           <h2>
-            <span>5. Hai Boss Lớn: Rồng Ender (Jean) &amp; Empress of Light</span>
+            <span>5. Hệ Thống Boss &amp; Sinh Vật: Cơ Chế Rồng Ender &amp; Mobs The End</span>
           </h2>
+          <p>
+            Phân tích toàn diện cơ chế giao tranh của Boss Rồng Ender (Jean Rework), Nữ hoàng Ánh sáng (Empress of Light) cùng hệ thống quái vật biến dị và sinh vật đồng hành bản địa trong Stellarity:
+          </p>
 
-          <div class="lunar-card deep-card" style="border-color: rgba(168, 85, 247, 0.35);">
-            <div class="deep-card-header">
-              <h3>Boss 1: Rồng Ender (Jean Rework)</h3>
-              <span class="mechanic-badge badge-void">Đảo Trung Tâm</span>
+          <!-- Đại Boss 1: Rồng Ender (Jean Rework) -->
+          <article class="item-recipe-card" style="margin-bottom: 24px; border-color: rgba(168, 85, 247, 0.4);">
+            <div class="item-recipe-top">
+              <div class="item-sprite-box" style="width: 120px; height: 120px;">
+                <img src="assets/images/entities/ender_dragon.png" alt="Rồng Ender Jean Rework" loading="lazy" style="width: 100px; height: 100px; transform: scale(1.15);">
+              </div>
+              <div class="item-meta">
+                <div class="item-meta-header">
+                  <h3 class="item-meta-title" style="font-size: 1.25rem;">Rồng Ender — Jean Rework (Đại Boss The End)</h3>
+                  <span class="mechanic-badge badge-void">300 HP · Giáp Nội Tại · Anti-Bed Cheese</span>
+                </div>
+                <div class="item-stats-line">Máu: 300 HP · Giáp: 12 Armor · Kháng Nổ Giường · Khiên Tinh Thể Miễn Nhiễm Sát Thương</div>
+                <p class="item-effect-desc">
+                  Trận quyết chiến với Rồng Ender được đại tu hoàn toàn thành cuộc săn Boss đa tầng kịch tính. Rồng sở hữu <strong>giáp nội tại giảm mạnh sát thương nhận vào</strong> và được bảo hộ bởi khiên tinh thể năng lượng. Rồng bay lượn linh hoạt, liên tục sử dụng các kỹ năng ma thuật tầm xa và chỉ hạ cánh khi đã kiệt sức.
+                </p>
+              </div>
             </div>
-            <div class="deep-card-content">
-              <ul>
-                <li><strong>Khiên Tinh Thể Bất Tử:</strong> Các trụ End Crystal không hồi máu cho Rồng như bản gốc mà tạo <strong>khiên miễn nhiễm 100% sát thương</strong>. Phải bắn nổ hết toàn bộ End Crystal mới có thể bắt đầu trừ máu Rồng.</li>
-                <li><strong>Kháng nổ giường (Anti-Bed Cheese):</strong> Rồng có giáp nội tại cao và kháng sát thương nổ giường. Trong lúc bay, Rồng thả cầu axit tím, tạo sóng chấn động và gọi quái phụ trợ.</li>
-                <li><strong>Đòn chém kết liễu ở mốc 1 HP:</strong> Khi máu tụt xuống còn đúng <strong>1 HP</strong>, Rồng sẽ đáp xuống đài cổng trung tâm và đứng yên chờ người chơi lại gần chém nhát cuối cùng.</li>
-                <li><strong>Phần thưởng:</strong> Mở khóa bệ thờ <em>Altar of The Accursed</em>, xuất hiện thanh kiếm <strong>Dragonblade</strong> (chỉ 1 thanh duy nhất trên toàn server ở lần diệt đầu tiên), và có <strong>66% tỉ lệ rơi 2 món</strong> trong bộ <strong>Tamaris</strong>, <strong>Crest of The End</strong> hoặc <strong>Ender Insignia</strong>.</li>
-              </ul>
+
+            <!-- Detailed 3-Phase Breakdown -->
+            <div class="harvester-specs-grid" style="margin: 12px 0;">
+              <div class="specs-block">
+                <span class="specs-header">Các Pha Giao Tranh (Fight Phases)</span>
+                <div class="specs-row highlight-frost">
+                  <span>Pha 1: Khiên Tinh Thể</span>
+                  <strong>Miễn nhiễm 100% sát thương khi còn End Crystal</strong>
+                </div>
+                <div class="specs-row">
+                  <span>Pha 2: Không Chiến</span>
+                  <strong>Bắn cầu hủy diệt, laser 360°, xả đạn Shulker</strong>
+                </div>
+                <div class="specs-row highlight-max">
+                  <span>Pha 3: Nhát Chém 1 HP</span>
+                  <strong>Đáp xuống Exit Portal chờ đòn kết liễu</strong>
+                </div>
+              </div>
+              <div class="specs-block">
+                <span class="specs-header">Kho Chiêu Thức Đặc Biệt (Spell Attacks)</span>
+                <div class="specs-skill-item"><strong>Ball of Blight:</strong> Chùm cầu axít tím vận tốc cao phát nổ diện rộng</div>
+                <div class="specs-skill-item"><strong>Beam Thingy (Laser 360°):</strong> Quét tia năng lượng xoay quanh đảo trung tâm</div>
+                <div class="specs-skill-item"><strong>Shulker Hell:</strong> Triệu hồi đàn đạn Shulker bọc lót đẩy bay lơ lửng</div>
+                <div class="specs-skill-item"><strong>Chainfire &amp; Roar:</strong> Tiếng gầm hơi thở rồng kèm chuỗi lửa thiêu đốt mặt đất</div>
+              </div>
             </div>
+
+            <div class="recipe-frame-box drop-recipe">
+              <div class="recipe-station-header">
+                <span>Chiến lợi phẩm &amp; Tiến trình mở khóa (Post-Dragon Progression)</span>
+                <span>Tỉ lệ rơi 100%</span>
+              </div>
+              <div class="recipe-ingredients">
+                <span class="recipe-ing">
+                  <img src="assets/images/ingredients/dragons_breath.png" alt="Dragonblade" class="recipe-ing-icon">
+                  <span>Dragonblade (Kiếm độc bản 1 thanh duy nhất / Server)</span>
+                </span>
+                <span class="recipe-plus">+</span>
+                <span class="recipe-ing">
+                  <img src="assets/images/shields/crest_of_the_end_3d.png" alt="66% Bảo vật" class="recipe-ing-icon">
+                  <span>66% rơi 2 món: Tamaris, Crest of The End hoặc Ender Insignia</span>
+                </span>
+              </div>
+              <p class="recipe-note">Tiêu diệt Rồng kích hoạt vĩnh viễn bệ thờ <strong>Altar of The Accursed</strong> tại đài trung tâm và mở cổng Gateway Portal dịch chuyển ra các cụm đảo ngoài.</p>
+            </div>
+          </article>
+
+          <!-- Đại Boss 2: Empress of Light -->
+          <article class="item-recipe-card" style="margin-bottom: 24px; border-color: rgba(244, 114, 182, 0.4);">
+            <div class="item-recipe-top">
+              <div class="item-sprite-box" style="width: 120px; height: 120px;">
+                <img src="assets/images/entities/empress_of_light.png" alt="Nữ Hoàng Ánh Sáng Empress of Light" loading="lazy" style="width: 100px; height: 100px; transform: scale(1.15);">
+              </div>
+              <div class="item-meta">
+                <div class="item-meta-header">
+                  <h3 class="item-meta-title" style="font-size: 1.25rem;">Empress of Light (Nữ Hoàng Ánh Sáng)</h3>
+                  <span class="mechanic-badge badge-hallow">Đền Chapel of Light · Quần xã The Hallow</span>
+                </div>
+                <div class="item-stats-line">Triệu hồi: Thả Starlight Soot lên Altar of The Sacred · Chế độ Ngày &amp; Đêm</div>
+                <p class="item-effect-desc">
+                  Boss ánh sáng lấy cảm hứng từ Terraria. Xuất hiện tại thánh đường <em>Chapel of Light</em>. Sở hữu bộ kỹ năng đa dạng gồm mưa sao băng, phi kiếm ánh sáng <em>Ethereal Lance</em>, đạn năng lượng quang phổ và những cú lướt nhanh xuyên không gian.
+                </p>
+              </div>
+            </div>
+
+            <div class="harvester-specs-grid" style="margin: 12px 0;">
+              <div class="specs-block">
+                <span class="specs-header">Đánh Ban Đêm / Tại The End (Chế Độ Chuẩn)</span>
+                <div class="specs-row"><span>Mưa Sao Băng</span><strong>Đạn ánh sáng truy kích rải đều</strong></div>
+                <div class="specs-row"><span>Ethereal Lance</span><strong>Kiếm ánh sáng phóng theo đường thẳng</strong></div>
+                <div class="specs-row highlight-frost"><span>Phần thưởng</span><strong>Prismatic Punch + 33% Stella / Pearl / Carcanet</strong></div>
+              </div>
+              <div class="specs-block">
+                <span class="specs-header">Đánh Ban Ngày (Chế Độ Enraged Cuồng Nộ)</span>
+                <div class="specs-row highlight-max"><span>Sát thương One-Shot</span><strong>Mọi đòn đánh gây 9999 sát thương chết ngay</strong></div>
+                <div class="specs-row"><span>Tốc độ x2</span><strong>Lướt Dash và tung kỹ năng dồn dập không ngừng</strong></div>
+                <div class="specs-row highlight-max"><span>100% Rơi Kiếm</span><strong>Kiếm Kaleidoscope (Sát thương tích điện 30 DMG)</strong></div>
+              </div>
+            </div>
+
+            <div class="recipe-frame-box drop-recipe">
+              <div class="recipe-station-header">
+                <span>Cách triệu hồi: Đền Chapel of Light (The Hallow)</span>
+                <span>Triệu Hồi Thần Linh</span>
+              </div>
+              <div class="recipe-ingredients">
+                <span class="recipe-ing">
+                  <img src="assets/images/ingredients/starlight_soot.png" alt="Starlight Soot" class="recipe-ing-icon">
+                  <span>1x Starlight Soot (Bột Tinh Tú) thả lên Altar of The Sacred</span>
+                </span>
+              </div>
+              <p class="recipe-note">Hạ gục vào ban đêm rơi thêm bảo vật <strong>Soaring Insignia</strong> (20% tỉ lệ, bay Elytra không giới hạn).</p>
+            </div>
+          </article>
+
+          <!-- 3. Quái Vật Biến Dị & Kẻ Địch The End (Hostile & Voided Mobs) -->
+          <h3 style="font-size: 1.15rem; color: #c084fc; margin: 24px 0 12px;">Quái Vật Biến Dị &amp; Kẻ Địch Nguy Hiểm Tại The End</h3>
+          <div class="item-recipe-grid">
+
+            <!-- Mob 1: Enderman Rework -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/enderman.png" alt="Enderman Rework" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Enderman (Đại Tu Cơ Chế)</h3>
+                    <span class="mechanic-badge badge-void">Xuyên Giáp Khi Không Khiên</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 40 HP · Sát thương: 7–10 · Tốc độ dịch chuyển x1.5</div>
+                  <p class="item-effect-desc">
+                    Enderman trong Stellarity di chuyển và dịch chuyển tức thời nhanh hơn nhiều lần. Đặc biệt, nếu người chơi <strong>không cầm khiên chắn</strong>, nhát cào của Enderman sẽ kích hoạt thuộc tính <strong>xuyên thấu giáp</strong> gây sát thương trực tiếp vào thanh máu (<img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart">). Rơi thịt <em>Enderman Flesh</em> (nguyên liệu nấu nướng).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Khắp các quần xã The End</span>
+                  <span>Quái Phổ Biến</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Ender Pearl (Ngọc Ender)</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">Enderman Flesh (Thịt Enderman)</span>
+                </div>
+                <p class="recipe-note">Có thể đem thịt nướng với Bột Quỷ Lửa Blaze Powder để chế biến món ăn trong Vạc.</p>
+              </div>
+            </article>
+
+            <!-- Mob 2: Shulker & Bullet Hell -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/shulker.png" alt="Shulker End City" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Shulker (Quái Vỏ Cứng End City)</h3>
+                    <span class="mechanic-badge badge-stellar">Đạn Bay Lơ Lửng Dày Đặc</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 30 HP · Giáp: 20 (khi đóng vỏ) · Hiệu ứng: Levitation</div>
+                  <p class="item-effect-desc">
+                    Trấn giữ các tháp Trial End City. Shulker bắn các chùm đạn xoắn ốc truy kích dày đặc. Bị trúng đạn khiến người chơi bay lơ lửng lên không trung (rất nguy hiểm khi ở gần mép vực Void). Khi bị tiêu diệt bằng vũ khí có bùa <strong>Looting</strong>, Shulker có cơ hội rơi <strong>Shulker Body</strong> (dùng nấu Shepherd's Pie).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: End City &amp; Trial Tower</span>
+                  <span>Vật Liệu Chế Tạo</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Shulker Shell (Vỏ Shulker)</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">Shulker Body (Thân Shulker - Looting)</span>
+                </div>
+                <p class="recipe-note">Dùng Shulker Shell để chế tạo Shulker Box và rèn bộ giáp Shulker Armor.</p>
+              </div>
+            </article>
+
+            <!-- Mob 3: Frosted Stray & Harvester Mini-Boss -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/stray.png" alt="Frosted Stray &amp; Harvester Mini-Boss" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Frosted Stray &amp; Harvester</h3>
+                    <span class="mechanic-badge badge-frost">Rơi Đao Frigid Harvester 3%</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 20–80 HP · Sát thương: Băng giá làm chậm · Cầm đao Harvester</div>
+                  <p class="item-effect-desc">
+                    Xuất hiện tại các dải đồi tuyết <em>Frosted Hills</em> và <em>Frozen Spikes</em>. Quái Stray đội mũ Kim Cương có <strong>3% tỉ lệ cầm đao Frigid Harvester</strong> (khi hạ gục chắc chắn rơi đao). Ngoài ra tại các đới băng giá sâu thẳm còn xuất hiện <strong>Harvester Mini-Boss</strong> to lớn với hào quang tuyết làm chậm diện rộng.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Frosted Hills &amp; Frozen Spikes</span>
+                  <span>Mini-Boss / Rơi Hiếm</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Mũ Kim Cương (Bảo vệ IV)</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">3% Đao Frigid Harvester</span>
+                </div>
+                <p class="recipe-note">Hạ gục Harvester Mini-Boss tăng +78 điểm linh hồn trực tiếp cho đao Harvester.</p>
+              </div>
+            </article>
+
+            <!-- Mob 4: Voided Zombie & Biến Dị -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/voided_zombie.png" alt="Voided Zombie" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Voided Zombie &amp; Skeleton</h3>
+                    <span class="mechanic-badge badge-danger">Nhiễm Xạ Void &amp; Giảm Giáp</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 30 HP · Hiệu ứng: Jinx (Giảm Giáp) &amp; Voided Decay</div>
+                  <p class="item-effect-desc">
+                    Xác sống và bộ xương bị hư không The End biến dị phóng xạ. Tốc độ di chuyển và tầm đuổi bắt xa hơn quái thường ở Overworld. Nhát cắn gây hiệu ứng <strong>Jinx</strong> (phá vỡ chỉ số giáp và độ cứng giáp của nạn nhân) và rút máu liên tục. Thường đi theo bầy canh giữ các tàn tích phế tích cổ.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Đảo Ngoài The End &amp; Tàn Tích</span>
+                  <span>Quái Đột Biến</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Thịt Thối Nhiễm Xạ</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">Cung Tên Bắn Xuyên Hư Không</span>
+                </div>
+                <p class="recipe-note">Nên dùng vũ khí Smite hoặc kết liễu từ xa bằng Cung Sabrewing để tránh bị giảm giáp.</p>
+              </div>
+            </article>
+
+            <!-- Mob 5: Phantom Hư Không -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/phantom.png" alt="Phantom Hư Không" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Phantom (Bóng Ma Tuần Tra Void)</h3>
+                    <span class="mechanic-badge badge-void">Khắc Tinh Của Người Bay Elytra</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 20 HP · Tốc độ lượn: Cực nhanh · Sát thương hất văng</div>
+                  <p class="item-effect-desc">
+                    Tuần tra tại các tầng không gian cao phía trên quần xã <em>Shadowlands</em> và các hố sâu ranh giới Void. Lao xuống tấn công bất ngờ với tốc độ xé gió, hất văng người chơi đang lượn cánh Elytra làm mất thăng bằng rơi xuống vực thẳm. Rơi màng cánh Phantom Membrane để sửa Elytra.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Tầng Cao Không Gian Void &amp; Shadowlands</span>
+                  <span>Kẻ Đi Săn Bầu Trời</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Phantom Membrane (Màng Cánh Phantom)</span>
+                </div>
+                <p class="recipe-note">Mang theo Mèo End hoặc ép bùa gió để đẩy lùi đòn lao bổ nhào của Phantom.</p>
+              </div>
+            </article>
+
+            <!-- Mob 6: Voided Silverfish (Infestation) -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/silverfish.png" alt="Voided Silverfish" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Voided Silverfish (Cá Bạc End)</h3>
+                    <span class="mechanic-badge badge-ender">Cơ Chế Infestation · 0 EXP</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 8 HP · Kích thước: Siêu nhỏ · Bầy đàn đông đúc</div>
+                  <p class="item-effect-desc">
+                    Sinh vật khó chịu bậc nhất khi tác chiến tại The End. Khi người chơi hoặc quái vật dính hiệu ứng môi trường <strong>Infestation</strong>, mỗi đòn đánh trúng có tỉ lệ sinh ra từ 1 đến 3 con cá bạc ngay dưới chân. Cá bạc cắn phá liên hồi làm gián đoạn nhịp đánh và không rơi kinh nghiệm (0 EXP) để chống farm afk.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Đảo The End (Hiệu ứng Infestation)</span>
+                  <span>Côn Trùng Hư Không</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Không rơi kinh nghiệm (0 EXP)</span>
+                </div>
+                <p class="recipe-note">Sử dụng đòn quét diện rộng của Dragonblade hoặc lửa càn quét để tiêu diệt bầy cá bạc nhanh gọn.</p>
+              </div>
+            </article>
+
           </div>
 
-          <div class="lunar-card deep-card" style="border-color: rgba(244, 114, 182, 0.35); margin-top: 16px;">
-            <div class="deep-card-header">
-              <h3>Boss 2: Empress of Light (Nữ Hoàng Ánh Sáng)</h3>
-              <span class="mechanic-badge badge-hallow">Chapel of Light · The Hallow</span>
-            </div>
-            <div class="deep-card-content">
-              <p>
-                Được triệu hồi bằng cách thả <code>Starlight Soot</code> (hoặc <code>Pixie Dust</code>) lên bệ thờ <strong>Altar of The Sacred</strong> bên trong công trình <em>Chapel of Light</em> (quần xã The Hallow).
-              </p>
-              <ul>
-                <li><strong>Đánh tại The End hoặc Ban Đêm:</strong> Boss bắn kiếm ánh sáng tự tìm mục tiêu, tia laser cầu vồng và mưa sao băng. Vật phẩm rơi ra gồm: <strong>Prismatic Punch</strong>, <strong>Stella</strong> (33%), <strong>Prismatic Pearl</strong> (33%), <strong>Starstruck Carcanet</strong> (33%) và <strong>Soaring Insignia</strong> (20%).</li>
-                <li><strong>Đánh Ban Ngày tại Overworld (Enraged Daytime):</strong> Nếu triệu hồi và hạ gục Boss tại thế giới Overworld vào ban ngày khi Boss ở trạng thái Cuồng Nộ, bạn chắc chắn (100%) nhận được kiếm bất hoại <strong>Kaleidoscope</strong> và bùa bay <strong>Soaring Insignia</strong>.</li>
-              </ul>
-            </div>
+          <!-- 4. Động Vật Bản Địa & Tinh Linh The End (Ambient & Companions) -->
+          <h3 style="font-size: 1.15rem; color: #38bdf8; margin: 24px 0 12px;">Động Vật Đồng Hành &amp; Tinh Linh Thuần Hóa Tại The End</h3>
+          <div class="item-recipe-grid">
+
+            <!-- Entity 1: Pixie -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/pixie.png" alt="Tinh Linh Pixie" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Pixie (Tinh Linh Ánh Sáng)</h3>
+                    <span class="mechanic-badge badge-hallow">Rơi Bột Starlight Soot</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 10 HP · Quần xã: The Hallow · 5 Sắc tố phát quang</div>
+                  <p class="item-effect-desc">
+                    Tinh linh cổ tích phát sáng lấp lánh bay lượn trên thảm cỏ phấn hoa quần xã <em>The Hallow</em> (gồm các biến thể màu xanh lơ, xanh chanh, hồng thược dược, vàng kim và rực rỡ). Có thể bắt Pixie vào bình thủy tinh để tạo thành khối đèn trang trí <strong>Pixie in a Jar</strong> hoặc hạ gục để thu thập <strong>Starlight Soot</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Quần xã The Hallow</span>
+                  <span>Tinh Linh Cổ Tích</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/starlight_soot.png" alt="Starlight Soot" class="recipe-ing-icon">
+                    <span>Starlight Soot (Bột Tinh Tú Triệu Hồi Boss)</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Dùng bình thủy tinh rỗng nhấp chuột phải vào Pixie để đóng lọ làm đèn phát sáng trang trí căn cứ.</p>
+              </div>
+            </article>
+
+            <!-- Entity 2: Ender Wolf -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/ender_wolf.png" alt="Sói Ender Wolf" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Ender Wolf (Sói End Tím Thuần Hóa)</h3>
+                    <span class="mechanic-badge badge-stellar">Mắt Tím Phát Quang · Đồng Hành Trung Thành</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 40 HP (khi thuần hóa) · Sát thương: 8 · Kháng một phần sát thương Void</div>
+                  <p class="item-effect-desc">
+                    Loài sói bản địa thích nghi tuyệt hảo với bóng đêm The End. Sở hữu đôi mắt tím phát quang rực rỡ và bộ lông xám thạch anh. Có thể thuần hóa bằng Xương quái Void. Khi đã thuần hóa, Ender Wolf sẽ dũng cảm tấn công quái vật bảo vệ chủ nhân và không bị hoảng sợ trước tiếng gầm của Rồng.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Thuần hóa: Dùng Xương quái vật The End</span>
+                  <span>Thú Cưng Đồng Hành</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Thú Cưng Bảo Vệ Trung Thành</span>
+                </div>
+                <p class="recipe-note">Mắt của sói Ender Wolf tự phát sáng xuyên bóng tối, giúp phát hiện quái vật từ khoảng cách xa.</p>
+              </div>
+            </article>
+
+            <!-- Entity 3: Ender Cat -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/ender_cat.png" alt="Mèo Ender Cat" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Ender Cat (Mèo End Xua Đuổi Quái)</h3>
+                    <span class="mechanic-badge badge-hallow">Xua Đuổi Phantom &amp; Creeper</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 20 HP · Thuần hóa bằng cá Ender Koi hoặc Frost Minnow</div>
+                  <p class="item-effect-desc">
+                    Giống mèo quý tộc sinh sống quanh các làng bản End. Bộ lông đen tuyền ánh tím huyền bí. Tiếng kêu của mèo Ender Cat khiến <strong>Phantom và Creeper kinh hãi bỏ chạy</strong> trong phạm vi 16 blocks, là bạn đồng hành tuyệt vời giữ cho người chơi không bị tập kích khi đang xây cầu qua vực Void.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Thuần hóa: Dùng cá Ender Koi câu từ Void</span>
+                  <span>Hộ Vệ Xua Đuổi Quái</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/ender_koi.png" alt="Ender Koi" class="recipe-ing-icon">
+                    <span>Cá Ender Koi / Frost Minnow</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Đặt mèo Ender Cat ngồi tại các trạm dịch chuyển để ngăn chặn triệt để Phantom quấy rối.</p>
+              </div>
+            </article>
+
+            <!-- Entity 4: Flesh Piglin -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/entities/flesh_piglin.png" alt="Flesh Piglin" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Flesh Piglin (Piglin Lạc Lối)</h3>
+                    <span class="mechanic-badge badge-fire">Hậu Duệ Thám Hiểm Nether</span>
+                  </div>
+                  <div class="item-stats-line">Máu: 32 HP · Vũ khí: Kiếm vàng &amp; Nỏ · Rơi vàng End</div>
+                  <p class="item-effect-desc">
+                    Dấu tích của những đoàn thám hiểm Piglin từ Nether từng bước chân đến chiều không gian End từ thời cổ đại. Cơ thể bị biến dị thích nghi với không khí thiếu dưỡng khí. Xuất hiện tại các tiền đồn phế tích, có thể giao dịch đổi một số khoáng vật End hiếm lấy thỏi vàng nguyên chất.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Xuất hiện: Tiền đồn phế tích Nether cổ tại End</span>
+                  <span>Chiến Binh Lạc Lối</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/gold_ingot.png" alt="Gold Ingot" class="recipe-ing-icon">
+                    <span>Phôi Vàng &amp; Mảnh Kim Loại End</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Trang bị một món đồ vàng trên người sẽ giúp tránh bị Flesh Piglin chủ động tấn công.</p>
+              </div>
+            </article>
+
           </div>
         </section>
 
@@ -1003,7 +1419,7 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/enderite_upgrade_smithing_template.png" alt="Khuôn Enderite Upgrade Smithing Template" loading="lazy">
+                  <img src="assets/images/animated/enderite_upgrade.webp" alt="Khuôn Enderite Upgrade Smithing Template" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -1036,7 +1452,7 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/enderite_shard.png" alt="Mảnh Enderite Shard" loading="lazy">
+                  <img src="assets/images/animated/enderite_shard.webp" alt="Mảnh Enderite Shard" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -1088,7 +1504,7 @@
                   </div>
                   <div class="item-stats-line">Sát thương: 6 · Tốc đánh: 1.25 · Độ bền: Không hỏng (Unbreakable)</div>
                   <p class="item-effect-desc">
-                    Thanh kiếm thần thoại mang họa tiết lưỡi rồng sắc nhọn được cập nhật texture hoàn toàn mới tại <strong>Stellarity v6</strong>. Đòn chém thường tích lũy <em>Dragon Stacks</em> (tối đa 3 tầng). Khi tích đủ 3 tầng, nhấn <strong>Shift</strong> để tung cú đấm không gian hất văng mục tiêu 6.6 blocks, gây 7–24 sát thương nổ (lên đến <strong>32 sát thương nếu mục tiêu va đập vào vách tường</strong>), xuyên 60% giáp và làm choáng 2 giây.
+                    Thanh kiếm độc bản mang họa tiết lưỡi rồng được cập nhật texture hoàn toàn mới tại <strong>Stellarity v6</strong>. Đòn chém thường tích lũy <em>Dragon Stacks</em> (tối đa 3 tầng). Khi tích đủ 3 tầng, nhấn <strong>Shift</strong> để tung cú đấm không gian hất văng mục tiêu 6.6 blocks, gây 7–24 sát thương nổ (lên đến <strong>32 sát thương nếu mục tiêu va đập vào vách tường</strong>), xuyên 60% giáp và làm choáng 2 giây.
                   </p>
                 </div>
               </div>
@@ -1435,9 +1851,9 @@
                     <h3 class="item-meta-title">Prismatic Punch</h3>
                     <span class="mechanic-badge badge-hallow">Đạn Nổ Tự Tìm Quái</span>
                   </div>
-                  <div class="item-stats-line">Nỏ Bắn Đạn Cầu Cầu Vồng · 4 – 10 Sát thương nổ</div>
+                  <div class="item-stats-line">Nỏ Bắn Đạn Năng Lượng Prismatic · 4 – 10 Sát thương nổ</div>
                   <p class="item-effect-desc">
-                    Biến tên bắn ra thành quả cầu năng lượng cầu vồng tự uốn lượn tìm mục tiêu gần nhất và phát nổ khi chạm trán, hiệu quả cao khi diệt đám đông quái vật.
+                    Biến tên bắn ra thành quả cầu năng lượng quang phổ tự uốn lượn tìm mục tiêu gần nhất và phát nổ khi chạm trán, hiệu quả cao khi diệt đám đông quái vật.
                   </p>
                 </div>
               </div>
@@ -1464,7 +1880,7 @@
                     <h3 class="item-meta-title">Hallowed Repeater (Stella)</h3>
                     <span class="mechanic-badge badge-hallow">Lửa Prismatic Inferno</span>
                   </div>
-                  <div class="item-stats-line">Độ bền: 2031 · Đốt lửa cầu vồng cộng dồn 5 tầng</div>
+                  <div class="item-stats-line">Độ bền: 2031 · Đốt lửa quang phổ cộng dồn 5 tầng</div>
                   <p class="item-effect-desc">
                     Vũ khí thánh quang của The Hallow. Bắn ra luồng đạn ánh sáng thiêu đốt kẻ địch với hiệu ứng <em>Prismatic Inferno</em> rút máu nhanh chóng theo thời gian.
                   </p>
@@ -1497,7 +1913,7 @@
                   </div>
                   <div class="item-stats-line">Sát thương: 4 · Tốc đánh: 2.3 · Độ bền: 316</div>
                   <p class="item-effect-desc">
-                    Mỗi nhát chém gây từ 3 sát thương trở lên có <strong>18% tỉ lệ tạo ra Cầu Hồi Phục (Healing Orb)</strong> bay về phía người chơi đứng gần nhất và hồi <strong>4 Máu (2 Tim)</strong>.
+                    Mỗi nhát chém gây từ 3 sát thương trở lên có <strong>18% tỉ lệ tạo ra Cầu Hồi Phục (Healing Orb)</strong> bay về phía người chơi đứng gần nhất và hồi <strong>4 Máu (2 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart">)</strong>.
                   </p>
                 </div>
               </div>
@@ -1530,7 +1946,7 @@
                   </div>
                   <div class="item-stats-line">Sát thương: 5 · Tốc đánh: 1.9 · Cầm 2 tay để kích hoạt</div>
                   <p class="item-effect-desc">
-                    Khi cầm <strong>2 thanh Spirit Dagger ở cả 2 tay</strong>, đánh quái có 50% tỉ lệ gọi ra một Linh Hồn (Spirit). Nhìn vào Linh Hồn trong 0.35s để <strong>dịch chuyển tới vị trí đó (tối đa 70m)</strong>, chém diện rộng 4 sát thương xuyên 100% giáp và nhận +4 Máu Ảo, +2 Sát thương, +30% Tốc chạy trong 5 giây.
+                    Khi cầm <strong>2 thanh Spirit Dagger ở cả 2 tay</strong>, đánh quái có 50% tỉ lệ gọi ra một Linh Hồn (Spirit). Nhìn vào Linh Hồn trong 0.35s để <strong>dịch chuyển tới vị trí đó (tối đa 70m)</strong>, chém diện rộng 4 sát thương xuyên 100% giáp và nhận +4 Máu hấp thụ (Absorption), +2 Sát thương, +30% Tốc chạy trong 5 giây.
                   </p>
                 </div>
               </div>
@@ -1889,7 +2305,7 @@
                     <h3 class="item-meta-title">Crest of The End</h3>
                     <span class="mechanic-badge badge-void">Khiên Tích Lực Phản Đòn</span>
                   </div>
-                  <div class="item-stats-line">Độ bền: 442 · Tích tối đa +8 sát thương (4 Tim)</div>
+                  <div class="item-stats-line">Độ bền: 442 · Tích tối đa +8 sát thương (4 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart">)</div>
                   <p class="item-effect-desc">
                     Khiên chắn hấp thụ đòn đánh của kẻ địch để tích trữ năng lượng. Nhát chém cận chiến tiếp theo của bạn sẽ giải phóng toàn bộ năng lượng đó, gây thêm tới <strong>+8 sát thương</strong>.
                   </p>
@@ -1975,7 +2391,7 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/prismatic_pearl.png" alt="Ngọc Prismatic Pearl" loading="lazy">
+                  <img src="assets/images/animated/prismatic_pearl.webp" alt="Ngọc Prismatic Pearl" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -1984,7 +2400,7 @@
                   </div>
                   <div class="item-stats-line">Bay xa hơn 25% · Tự động hồi lại túi đồ sau 5 giây</div>
                   <p class="item-effect-desc">
-                    Viên ngọc cầu vồng không bao giờ mất. Ném đi xa hơn ngọc Ender thường 25%, và <strong>tự động bay ngược lại túi đồ của bạn sau 5 giây</strong>, cho phép dịch chuyển vô hạn lần.
+                    Ngọc Prismatic Pearl không bao giờ mất khi ném. Ném đi xa hơn ngọc Ender thường 25%, và <strong>tự động bay ngược lại túi đồ của bạn sau 5 giây</strong>, cho phép dịch chuyển vô hạn lần.
                   </p>
                 </div>
               </div>
@@ -2013,7 +2429,7 @@
                   </div>
                   <div class="item-stats-line">Gọi 3 sao băng nổ · Xuyên 50% giáp kẻ địch</div>
                   <p class="item-effect-desc">
-                    Vòng cổ ánh sao thần thoại. Mỗi khi bạn nhận sát thương, vòng cổ tự động gọi <strong>3 ngôi sao băng rơi từ trên trời xuống kẻ tấn công</strong>, gây 4 sát thương nổ xuyên nửa giáp.
+                    Vòng cổ Starstruck Carcanet. Mỗi khi bạn nhận sát thương, vòng cổ tự động gọi <strong>3 ngôi sao băng rơi từ trên trời xuống kẻ tấn công</strong>, gây 4 sát thương nổ xuyên nửa giáp.
                   </p>
                 </div>
               </div>
@@ -2102,11 +2518,11 @@
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Crystal Heartfish</h3>
-                    <span class="mechanic-badge badge-hallow">+5 Tim Máu Vĩnh Viễn</span>
+                    <span class="mechanic-badge badge-hallow">+5 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart"> Máu Vĩnh Viễn</span>
                   </div>
                   <div class="item-stats-line">Loài cá quý hiếm bậc nhất dưới vực Void</div>
                   <p class="item-effect-desc">
-                    Khi câu được và ăn loài cá này, nhân vật sẽ được <strong>tăng vĩnh viễn +1 Cột Máu (+2 Tim) mỗi con</strong>, cộng dồn tối đa lên tới <strong>+5 Cột Máu (+10 Máu tối đa vĩnh viễn)</strong>.
+                    Khi câu được và ăn loài cá này, nhân vật sẽ được <strong>tăng vĩnh viễn +1 Máu (+<img src="assets/images/ui/heart_half.png" alt="Half Heart" class="mc-heart">) mỗi con, cộng dồn tối đa 10 con (+5 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart"> / +10 Máu tối đa vĩnh viễn))</strong>.
                   </p>
                 </div>
               </div>
@@ -2126,14 +2542,14 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/fish/prismite.png" alt="Cá Prismite" loading="lazy">
+                  <img src="assets/images/animated/prismite.webp" alt="Cá Prismite" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Prismite</h3>
                     <span class="mechanic-badge badge-stellar">Cá Phát Sáng The Hallow</span>
                   </div>
-                  <div class="item-stats-line">Nguyên liệu nấu Sushi Cầu Vồng &amp; Thuốc Vạc</div>
+                  <div class="item-stats-line">Nguyên liệu nấu Prismatic Sushi &amp; Thuốc Vạc</div>
                   <p class="item-effect-desc">
                     Loài cá phát quang ngũ sắc sinh sống dưới đới nước The Hallow. Dùng để chế biến món <em>Prismatic Sushi</em> hoặc pha các loại độc dược tăng lực trong Vạc Hơi Thở Rồng.
                   </p>
@@ -2229,7 +2645,44 @@
               </div>
             </article>
 
-            <!-- Cauldron 2: Phở (Pho) -->
+            <!-- Cauldron 2: Grilled Enderman's Flesh -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/grilled_enderman_flesh.png" alt="Thịt Enderman Nướng" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Thịt Enderman Nướng (Grilled Enderman's Flesh)</h3>
+                    <span class="mechanic-badge badge-ender">Thực Phẩm Sinh Tồn</span>
+                  </div>
+                  <div class="item-stats-line">Nấu Lò / Vạc: 1 Dragon's Breath · Nguyên liệu nấu Phở</div>
+                  <p class="item-effect-desc">
+                    Thịt Enderman tươi sau khi nướng chín thơm ngậy, loại bỏ hoàn toàn độc tố và tác dụng phụ dịch chuyển lung tung. Cung cấp <strong>8 điểm thức ăn (4 đùi)</strong> và độ bão hòa ổn định. Là nguyên liệu cốt lõi để nấu món <strong>Phở (Pho)</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách chế biến: Lò Nướng / Vạc Nước</span>
+                  <span>1 Breath hoặc Lò Than</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/enderman_flesh.png" alt="Thịt Enderman Sống" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Enderman's Flesh (Thịt Enderman Sống)</span>
+                  </span>
+                  <span class="recipe-plus">nướng chín ➜</span>
+                  <span class="recipe-ing">
+                    <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/grilled_enderman_flesh.png" alt="Thịt Nướng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Grilled Enderman's Flesh</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Thịt Enderman sống rơi khi tiêu diệt Enderman tại mọi quần xã.</p>
+              </div>
+            </article>
+
+            <!-- Cauldron 3: Phở (Pho) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
@@ -2284,7 +2737,7 @@
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 5 Dragon's Breath · No lâu dài</div>
                   <p class="item-effect-desc">
-                    Món bánh nướng thịt chăn cừu dinh dưỡng. Cấp lượng máu ảo và giữ thanh thức ăn không bị tụt trong suốt thời gian dài thám hiểm đảo ngoài.
+                    Món bánh nướng thịt chăn cừu dinh dưỡng. Cấp lượng Máu hấp thụ (Absorption) và giữ thanh thức ăn không bị tụt trong suốt thời gian dài thám hiểm đảo ngoài.
                   </p>
                 </div>
               </div>
@@ -2360,7 +2813,7 @@
               </div>
             </article>
 
-            <!-- Cauldron 5: Chorus Pie -->
+            <!-- Cauldron 6: Chorus Pie -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
@@ -2402,7 +2855,7 @@
               </div>
             </article>
 
-            <!-- Cauldron 6: Sushi -->
+            <!-- Cauldron 7: Sushi -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
@@ -2439,20 +2892,20 @@
               </div>
             </article>
 
-            <!-- Cauldron 7: Prismatic Sushi -->
+            <!-- Cauldron 8: Prismatic Sushi -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/prismatic_sushi.png" alt="Món Prismatic Sushi" loading="lazy">
+                  <img src="assets/images/animated/prismatic_sushi.webp" alt="Món Prismatic Sushi" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Prismatic Sushi</h3>
-                    <span class="mechanic-badge badge-hallow">Sushi Lăng Kính Cầu Vồng</span>
+                    <span class="mechanic-badge badge-hallow">Sushi Cá Prismite</span>
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Hồi phục &amp; Phát quang</div>
                   <p class="item-effect-desc">
-                    Cuộn sushi làm từ cá lăng kính Prismite tại hồ The Hallow. Ăn vào cho hiệu ứng Glowing (phát quang xuyên tường) và tăng tốc độ di chuyển trong thời gian ngắn.
+                    Cuộn sushi làm từ cá Prismite tại hồ The Hallow. Ăn vào cho hiệu ứng Glowing (phát quang xuyên tường) và tăng tốc độ di chuyển trong thời gian ngắn.
                   </p>
                 </div>
               </div>
@@ -2483,7 +2936,7 @@
         <!-- 10. Khung Đun Thuốc & Độc Dược: Bình Thuốc Đặc Chủng Vạc Hơi Thở Rồng (Cauldron Potions & Elixirs) -->
         <section id="recipe-cauldron-potions">
           <h2>
-            <span>10. Khung Đun Thuốc: Thần Dược &amp; Độc Dược Vạc Hơi Thở Rồng</span>
+            <span>10. Khung Đun Thuốc: Thuốc Vạc &amp; Độc Dược Đặc Chế</span>
           </h2>
           <p>
             Hệ thống 12 dòng thuốc và độc dược đặc chế trong <strong>Vạc Hơi Thở Rồng (Breath Cauldron Crafting)</strong> từ tệp lệnh <code>checks.mcfunction</code> của Stellarity. Mỗi loại thuốc được tinh chế từ thủy sản Void, khoáng thạch End và dược liệu Nether, hiển thị đầy đủ công thức (văn bản kèm texture trực quan) và hiệu ứng chi tiết nhận được sau khi uống:
@@ -2691,7 +3144,7 @@
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Speed + Fire Resistance · Thời gian: 4:00</div>
                   <p class="item-effect-desc">
-                    Thần dược bước chân dung nham: Kích hoạt đồng thời hiệu ứng <strong>Kháng Lửa (Fire Resistance)</strong> và <strong>Tốc độ Chạy (Speed)</strong> liên tục trong 4 phút (4800 ticks). Cho phép người uống di chuyển tốc độ cao qua các hồ dung nham rực lửa ở Nether và pháo đài Piglin an toàn.
+                    Thuốc bước chân dung nham (Hellfire Treader): Kích hoạt đồng thời hiệu ứng <strong>Kháng Lửa (Fire Resistance)</strong> và <strong>Tốc độ Chạy (Speed)</strong> liên tục trong 4 phút (4800 ticks). Cho phép người uống di chuyển tốc độ cao qua các hồ dung nham rực lửa ở Nether và pháo đài Piglin an toàn.
                   </p>
                 </div>
               </div>
@@ -2734,7 +3187,7 @@
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Lifeforce Potion</h3>
-                    <span class="mechanic-badge badge-hallow">Tăng +2 Đến +4 Hàng Tim Đỏ</span>
+                    <span class="mechanic-badge badge-hallow">Tăng +10 Đến +20 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart"> (+20 Đến +40 HP)</span>
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 3 Dragon's Breath · Health Boost I / II · Thời gian: 3:00</div>
                   <p class="item-effect-desc">
@@ -2759,8 +3212,8 @@
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing">
-                    <img src="assets/images/ingredients/prismite.png" alt="1x Cá Lăng Kính Prismite" class="recipe-ing-icon" loading="lazy">
-                    <span>1x Cá Lăng Kính Prismite</span>
+                    <img src="assets/images/ingredients/prismite.png" alt="1x Cá Prismite" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Cá Prismite</span>
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing">
@@ -2870,7 +3323,7 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="assets/images/potions/poseidons_nectar_potion.png" alt="Bình thuốc Poseidon's Nectar" loading="lazy">
+                  <img src="assets/images/potions/poseidons_nectar.png" alt="Bình thuốc Poseidon's Nectar" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -2879,7 +3332,7 @@
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 6 Dragon's Breath · 3 Hiệu Ứng Thủy Sinh · Thời gian: 6:30</div>
                   <p class="item-effect-desc">
-                    Mật ngọt của thần biển Poseidon: Cấp đồng thời 3 quyền năng đại dương kéo dài 6 phút 30 giây: <strong>Sức mạnh Ống Dẫn (Conduit Power)</strong> (thở vĩnh viễn và nhìn xuyên làn nước sâu), <strong>Máu Ảo (Absorption)</strong> và <strong>Ân Huệ Cá Heo (Dolphin's Grace)</strong> (bơi lướt nhanh gấp 3 lần bình thường).
+                    Mật ngọt của thần biển Poseidon: Cấp đồng thời 3 quyền năng đại dương kéo dài 6 phút 30 giây: <strong>Sức mạnh Ống Dẫn (Conduit Power)</strong> (thở vĩnh viễn và nhìn xuyên làn nước sâu), <strong>Máu hấp thụ (Absorption)</strong> và <strong>Ân Huệ Cá Heo (Dolphin's Grace)</strong> (bơi lướt nhanh gấp 3 lần bình thường).
                   </p>
                 </div>
               </div>
@@ -2900,7 +3353,7 @@
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing">
-                    <img src="assets/images/ingredients/prismarine_shard.png" alt="1x Mảnh Lăng Kính Biển" class="recipe-ing-icon" loading="lazy">
+                    <img src="assets/images/ingredients/prismarine_shard.png" alt="1x Mảnh Lăng Trụ Biển (Prismarine Shard)" class="recipe-ing-icon" loading="lazy">
                     <span>1x Mảnh Lăng Kính Biển</span>
                   </span>
                   <span class="recipe-plus">+</span>
@@ -2914,7 +3367,7 @@
                     <span>1x Tảo Biển (Kelp)</span>
                   </span>
                 </div>
-                <p class="recipe-note">Thần dược chuyên dụng để công phá Đền thờ Đại Dương (Ocean Monument) và khám phá mạch nước ngầm.</p>
+                <p class="recipe-note">Thuốc chuyên dụng để thám hiểm Đền thờ Đại Dương (Ocean Monument) và khám phá mạch nước ngầm.</p>
               </div>
             </article>
 
@@ -2922,7 +3375,7 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="assets/images/potions/red_potion_potion.png" alt="Bình thuốc Red Potion" loading="lazy">
+                  <img src="assets/images/potions/red_potion.png" alt="Bình thuốc Red Potion" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -2979,16 +3432,16 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="assets/images/potions/regeneraga_potion.png" alt="Bình thuốc Regeneraga" loading="lazy">
+                  <img src="assets/images/potions/regeneraga.png" alt="Bình thuốc Regeneraga" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Regeneraga</h3>
-                    <span class="mechanic-badge badge-hallow">Hồi Máu Thần Tốc (Instant Health II)</span>
+                    <span class="mechanic-badge badge-hallow">Hồi Máu Ngay Lập Tức (Instant Health II)</span>
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 4 Dragon's Breath · Instant Health II + Regen III · Cấp Tốc Cứu Sinh</div>
                   <p class="item-effect-desc">
-                    Bình thuốc cứu tử trong gang tấc: Bơm đầy ngay lập tức <strong>8 Tim máu đỏ (Instant Health II)</strong> và tiếp tục kích hoạt hiệu ứng <strong>Hồi Phục III (Regeneration III)</strong> trong 7 giây. Nâng cấp lên Cấp II giúp kéo dài thời gian hồi phục, là vật phẩm sống còn khi đấu kiếm PvP sinh tử.
+                    Bình thuốc cứu tử trong gang tấc: Bơm đầy ngay lập tức <strong>4 <img src="assets/images/ui/heart_full.png" alt="Heart" class="mc-heart"> (Instant Health II)</strong> và tiếp tục kích hoạt hiệu ứng <strong>Hồi Phục III (Regeneration III)</strong> trong 7 giây. Nâng cấp lên Cấp II giúp kéo dài thời gian hồi phục, là vật phẩm sống còn khi đấu kiếm PvP sinh tử.
                   </p>
                 </div>
               </div>
@@ -3004,8 +3457,8 @@
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing">
-                    <img src="assets/images/ingredients/prismite.png" alt="1x Cá Lăng Kính Prismite" class="recipe-ing-icon" loading="lazy">
-                    <span>1x Cá Lăng Kính Prismite</span>
+                    <img src="assets/images/ingredients/prismite.png" alt="1x Cá Prismite" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Cá Prismite</span>
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing">
@@ -3032,20 +3485,20 @@
               </div>
             </article>
 
-            <!-- Potion 12: Royal Jelly (Sữa Ong Chúa) -->
+            <!-- Potion 12: Royal Jelly (Mật Ong Hoàng Gia) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="assets/images/potions/royal_jelly.png" alt="Bình thuốc Royal Jelly (Sữa Ong Chúa)" loading="lazy">
+                  <img src="assets/images/potions/royal_jelly.png" alt="Bình thuốc Royal Jelly (Mật Ong Hoàng Gia)" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
-                    <h3 class="item-meta-title">Royal Jelly (Sữa Ong Chúa)</h3>
+                    <h3 class="item-meta-title">Royal Jelly (Mật Ong Hoàng Gia)</h3>
                     <span class="mechanic-badge badge-ender">Thanh Tẩy Toàn Bộ 11 Hiệu Ứng Xấu</span>
                   </div>
                   <div class="item-stats-line">Chi phí Vạc: 5 Dragon's Breath · Tiêu thụ siêu tốc 1.5s · Giải Trừ Lời Nguyền</div>
                   <p class="item-effect-desc">
-                    Thánh dược thanh tẩy cao quý nhất The End: Uống siêu nhanh trong 1.5 giây, hồi 6 đùi thức ăn, cấp <strong>Máu Ảo (Absorption)</strong> trong 1 phút và <strong>XÓA SẠCH HOÀN TOÀN TẤT CẢ 11 HIỆU ỨNG BẤT LỢI</strong> trên cơ thể (Wither, Điềm Xấu, Độc tố, Mù lòa, Suy yếu, Chậm chạp, Buồn nôn, Khô héo). Khắc tinh số 1 của Boss Wither và Red Potion!
+                    Thánh dược thanh tẩy cao quý nhất The End: Uống siêu nhanh trong 1.5 giây, hồi 6 đùi thức ăn, cấp <strong>Máu hấp thụ (Absorption)</strong> trong 1 phút và <strong>XÓA SẠCH HOÀN TOÀN TẤT CẢ 11 HIỆU ỨNG BẤT LỢI</strong> trên cơ thể (Wither, Điềm Xấu, Độc tố, Mù lòa, Suy yếu, Chậm chạp, Buồn nôn, Khô héo). Khắc tinh số 1 của Boss Wither và Red Potion!
                   </p>
                 </div>
               </div>
