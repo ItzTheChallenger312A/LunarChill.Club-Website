@@ -966,16 +966,75 @@
               </div>
 
               <!-- Technical Enchantments & Custom Effects Note -->
-              <div style="margin-top: 18px; padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: var(--radius-sm);">
-                <h4 style="margin: 0 0 8px 0; font-size: 0.95rem; color: #f1f5f9; display: flex; align-items: center; gap: 6px;">
-                  <span>Hiệu ứng mới &amp; bùa kỹ thuật (Technical Enchantments)</span>
+              <div style="margin-top: 20px; padding: 16px 20px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: var(--radius-sm);">
+                <h4 style="margin: 0 0 10px 0; font-size: 1rem; color: #f1f5f9; display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-block; width: 8px; height: 8px; background: #c084fc; border-radius: 50%;"></span>
+                  <span>1. Các Hiệu Ứng Trạng Thái Độc Quyền (Status Effects)</span>
                 </h4>
-                <ul style="margin: 0 0 0 18px; padding: 0; font-size: 0.86rem; color: #cbd5e1; line-height: 1.55;">
-                  <li><strong>Hiệu ứng Voided (Nhiễm Hư Không):</strong> Áp đặt từ <em>Void Strike</em>, <em>Void Shot</em> và quái vật Void. Cắt giảm trực tiếp <strong>20% Máu tối đa</strong> của thực thể bị trúng đòn.</li>
-                  <li><strong>Hiệu ứng Prismatic Inferno (Lửa Quang Phổ):</strong> Thiêu đốt liên tục, không thể dập bằng nước thông thường và khóa chặt khả năng tự hồi phục sinh lực.</li>
-                  <li><strong>Hiệu ứng Holy Flames (Lửa Thánh - Mới trong v6.0.0):</strong> Biến thể thiêu đốt thần thánh cực kỳ nguy hiểm xuất hiện khi cường hóa Kaleidoscope hoặc kết hợp Starstruck Shield với Radiant Jewel. <strong>Có khả năng gây sát thương thiêu rụi xuyên qua cả hiệu ứng Kháng Lửa (Fire Resistance)!</strong></li>
-                  <li><strong>Bùa Kỹ Thuật Nội Bộ (Technical Enchantments):</strong> Stellarity sử dụng các bùa chú gán sẵn trên một số vũ khí để nhận diện cơ chế và chặn ép bùa xung đột: <em>Daybroken</em> (Kaleidoscope - chặn Fire Aspect), <em>Draconic</em> (Dragonblade - chặn Mending/Unbreaking), <em>Infernal Infusion</em> (Prismatic Punch/Prismember - chặn Fire Aspect/Flame), <em>Mighty Wind</em> (Sandstorm Trident - tích hợp sẵn Loyalty III), <em>Soul Harvest</em> (Harvester - ghi nhận điểm linh hồn).</li>
+                <ul style="margin: 0 0 16px 18px; padding: 0; font-size: 0.86rem; color: #cbd5e1; line-height: 1.6;">
+                  <li><strong>Hiệu ứng Voided (Nhiễm Hư Không):</strong> Áp đặt từ <em>Void Strike</em>, <em>Void Shot</em> và quái vật Hư Không. Cắt giảm trực tiếp <strong>20% Máu tối đa</strong> của thực thể bị trúng đòn trong thời gian hiệu lực.</li>
+                  <li><strong>Hiệu ứng Prismatic Inferno (Lửa Quang Phổ):</strong> Thiêu đốt liên tục, <strong>không thể dập tắt bằng nước</strong> thông thường và khóa chặt khả năng tự hồi phục sinh lực tự nhiên của mục tiêu.</li>
+                  <li><strong>Hiệu ứng Holy Flames (Lửa Thánh - Mới trong v6.0.0):</strong> Biến thể thiêu đốt thần thánh cực kỳ nguy hiểm xuất hiện khi cường hóa <em>Kaleidoscope</em> hoặc kết hợp <em>Starstruck Shield</em> với <em>Radiant Jewel</em>. <strong>Có khả năng gây sát thương thiêu rụi xuyên qua cả hiệu ứng Kháng Lửa (Fire Resistance)!</strong></li>
                 </ul>
+
+                <h4 style="margin: 18px 0 10px 0; font-size: 1rem; color: #f1f5f9; display: flex; align-items: center; gap: 8px; border-top: 1px solid rgba(148, 163, 184, 0.15); padding-top: 16px;">
+                  <span style="display: inline-block; width: 8px; height: 8px; background: #38bdf8; border-radius: 50%;"></span>
+                  <span>2. Hệ Thống Bùa Kỹ Thuật Nội Bộ (Technical Enchantments)</span>
+                  <span class="mechanic-badge badge-void" style="margin-left: auto; font-size: 0.72rem;">Logic Anchor Datapack</span>
+                </h4>
+                <p style="margin: 0 0 12px 0; font-size: 0.86rem; color: #cbd5e1; line-height: 1.6;">
+                  Trong cấu trúc của Stellarity (đặc biệt từ phiên bản Minecraft 1.21 với cơ chế Data-driven Enchantment), các <strong>Bùa Kỹ Thuật (Technical Enchantments)</strong> được lưu trữ tách biệt trong thư mục hệ thống <code>_technical/</code>. Nhóm bùa này <strong>hoàn toàn vô hình</strong> đối với Bàn Phù Phép (Enchanting Table) và không bao giờ xuất hiện trong các rương chiến lợi phẩm sinh tồn. Thay vào đó, chúng được <strong>gán mặc định (innate)</strong> lên các vũ khí huyền thoại lúc rơi từ Boss hoặc xuất hiện từ Bệ thờ để làm mỏ neo logic:
+                </p>
+                <ul style="margin: 0 0 14px 18px; padding: 0; font-size: 0.84rem; color: #94a3b8; line-height: 1.55;">
+                  <li><strong>Định danh vũ khí &amp; Kích hoạt cơ chế:</strong> Giúp hệ thống lệnh và hàm datapack nhận biết chính xác khi người chơi thực hiện thao tác đánh chém, tích lũy điểm combo hoặc phóng đạn.</li>
+                  <li><strong>Kiểm soát xung đột trên Đe (Anvil Conflict Tags):</strong> Ngăn chặn triệt để việc người chơi dùng đe ép thêm các bùa chú vanilla làm phá vỡ cân bằng hoặc gây lỗi logic với hiệu ứng đặc chế của vũ khí.</li>
+                  <li><strong>Tích hợp sẵn đặc quyền:</strong> Cung cấp năng lực nội tại trực tiếp cho vũ khí (như tự thu hồi, bất tử độ bền) mà không buộc người chơi phải tốn sách phù phép bổ sung.</li>
+                </ul>
+
+                <div class="table-responsive" style="margin-top: 10px;">
+                  <table class="mechanics-table" style="font-size: 0.84rem;">
+                    <thead>
+                      <tr>
+                        <th style="width: 18%;">Bùa Kỹ Thuật</th>
+                        <th style="width: 22%;">Vũ Khí Áp Dụng</th>
+                        <th style="width: 32%;">Mục Đích &amp; Cơ Chế Vận Hành</th>
+                        <th style="width: 28%;">Quy Tắc Chặn / Năng Lực Tích Hợp</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong style="color: #facc15;">Daybroken</strong><br><code style="font-size: 0.75rem; color: #94a3b8;">stellarity:daybroken</code></td>
+                        <td><strong>Kaleidoscope</strong><br><small style="color: #60a5fa;">Đại Rìu Empress of Light</small></td>
+                        <td>Đóng vai trò mỏ neo tích lũy năng lượng mặt trời (0 – 100). Khi đạt trên 33 điểm, đòn đánh kế tiếp giải phóng vụ nổ ánh sáng quang phổ diện rộng (30 DMG) và đốt cháy kẻ địch.</td>
+                        <td><span style="color: #f87171;">Chặn ép Fire Aspect:</span> Ngăn xung đột giữa hiệu ứng nổ quang phổ / Holy Flames và cơ chế bắt lửa thông thường của Minecraft vanilla.</td>
+                      </tr>
+                      <tr>
+                        <td><strong style="color: #c084fc;">Draconic</strong><br><code style="font-size: 0.75rem; color: #94a3b8;">stellarity:draconic</code></td>
+                        <td><strong>Dragonblade</strong><br><small style="color: #60a5fa;">Đại Kiếm Bệ Thờ Accursed</small></td>
+                        <td>Nhận diện và tính toán chuỗi đòn đánh liên hoàn. Đòn đánh thứ 3 liên tiếp tung ra <em>Otherworldly Punch</em> xuyên giáp cực mạnh, hất tung mục tiêu và làm choáng tạm thời.</td>
+                        <td><span style="color: #f87171;">Chặn Mending &amp; Unbreaking:</span> Dragonblade vốn mang thuộc tính <strong>Bất tử (Unbreakable: 1b)</strong>, chặn 2 bùa này giúp người chơi không lãng phí tài nguyên và sách vô ích.</td>
+                      </tr>
+                      <tr>
+                        <td><strong style="color: #fb923c;">Infernal Infusion</strong><br><code style="font-size: 0.75rem; color: #94a3b8;">stellarity:infernal_infusion</code></td>
+                        <td><strong>Prismatic Punch</strong> &amp; <strong>Prismember</strong><br><small style="color: #60a5fa;">Nỏ &amp; Kiếm Lửa Quang Phổ</small></td>
+                        <td>Biến đổi tên bắn thành luồng đạn <em>Prismatic Blast</em> siêu tốc (120 block/s, đường thẳng) và gán hiệu ứng thiêu đốt vĩnh cửu <strong>Prismatic Inferno</strong> (không thể dập bằng nước, khóa hồi máu).</td>
+                        <td><span style="color: #f87171;">Chặn Fire Aspect &amp; Flame:</span> Ép buộc toàn bộ đòn đánh phải gây sát thương ngọn lửa quang phổ độc quyền, không bị cơ chế vanilla ghi đè thành lửa cam thông thường.</td>
+                      </tr>
+                      <tr>
+                        <td><strong style="color: #38bdf8;">Mighty Wind</strong><br><code style="font-size: 0.75rem; color: #94a3b8;">stellarity:mighty_wind</code></td>
+                        <td><strong>Sandstorm Trident</strong><br><small style="color: #60a5fa;">Đinh Ba Bão Cát</small></td>
+                        <td>Kích hoạt cơ chế tạo đường hầm gió lốc xoáy (<em>Slipstream Wind Tunnel</em>) cuốn và đẩy mạnh các thực thể theo quỹ đạo bay của đinh ba để kiểm soát trận địa.</td>
+                        <td><strong style="color: #38bdf8;">Tích hợp sẵn Loyalty III:</strong> Đinh ba luôn tự động quay về tay người ném ngay lập tức sau khi chạm mục tiêu mà không cần tìm sách Loyalty để ép trên đe.</td>
+                      </tr>
+                      <tr>
+                        <td><strong style="color: #a78bfa;">Soul Harvest</strong><br><code style="font-size: 0.75rem; color: #94a3b8;">stellarity:soul_harvest</code></td>
+                        <td><strong>Harvester</strong><br><small style="color: #60a5fa;">Đại Đao Gặt Linh Hồn</small></td>
+                        <td>Động cơ theo dõi và tích lũy số mạng quái vật bị hạ gục (Soul Engine) để tiến hóa kiếm qua 5 cấp bậc (Tier 0 ➜ Tier 4, nâng sát thương từ 4 lên 16), đồng thời quản lý tối đa 3 Kỹ Năng Linh Hồn.</td>
+                        <td><span style="color: #f87171;">Chặn Sharpness &amp; Fire Aspect:</span> Đảm bảo sức mạnh của đao chỉ tăng trưởng độc quyền thông qua tiến trình gặt hái linh hồn, không thể ép dồn sát thương phá vỡ cân bằng.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
