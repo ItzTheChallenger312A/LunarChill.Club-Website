@@ -231,6 +231,45 @@
   }
 }
 
+/* Optimal multi-column masonry for all item recipe sections */
+#recipe-armors .item-recipe-grid,
+#recipe-weapons .item-recipe-grid,
+#recipe-spellbooks .item-recipe-grid,
+#recipe-cauldron-food .item-recipe-grid,
+#recipe-cauldron-potions .item-recipe-grid,
+.weapons-masonry-grid {
+  display: block;
+  column-count: 2;
+  column-gap: 20px;
+  margin: 20px 0;
+}
+
+#recipe-armors .item-recipe-grid .item-recipe-card,
+#recipe-weapons .item-recipe-grid .item-recipe-card,
+#recipe-spellbooks .item-recipe-grid .item-recipe-card,
+#recipe-cauldron-food .item-recipe-grid .item-recipe-card,
+#recipe-cauldron-potions .item-recipe-grid .item-recipe-card,
+.weapons-masonry-grid .item-recipe-card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  #recipe-armors .item-recipe-grid,
+  #recipe-weapons .item-recipe-grid,
+  #recipe-spellbooks .item-recipe-grid,
+  #recipe-cauldron-food .item-recipe-grid,
+  #recipe-cauldron-potions .item-recipe-grid,
+  .weapons-masonry-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+
 .item-recipe-card {
   background: var(--color-bg-surface);
   border: 1px solid rgba(104, 139, 248, 0.22);
