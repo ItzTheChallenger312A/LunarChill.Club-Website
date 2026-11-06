@@ -1887,8 +1887,8 @@
             <!-- Item 5: Chorus Plating -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/chorus_plating.png" alt="Phôi Chorus Plating" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Chorus Plating">
+                  <img src="assets/images/items/chorus_plating.png" alt="Phôi Chorus Plating" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -3763,8 +3763,8 @@
             <!-- Cauldron 1: Golden Chorus Fruit -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/golden_chorus_fruit.png" alt="Quả Golden Chorus Fruit" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Golden Chorus Fruit">
+                  <img src="assets/images/foods/golden_chorus_fruit.png" alt="Quả Golden Chorus Fruit" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -3795,55 +3795,59 @@
               </div>
             </article>
 
-            <!-- Cauldron 2: Grilled Enderman's Flesh -->
+            <!-- Cauldron 2: Grilled Enderman Flesh -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/grilled_enderman_flesh.png" alt="Thịt Enderman Nướng" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Grilled Enderman Flesh">
+                  <img src="assets/images/foods/grilled_enderman_flesh.png" alt="Thịt Enderman Nướng" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
-                    <h3 class="item-meta-title">Thịt Enderman Nướng (Grilled Enderman's Flesh)</h3>
+                    <h3 class="item-meta-title">Thịt Enderman Nướng (Grilled Enderman Flesh)</h3>
                     <span class="mechanic-badge badge-ender">Thực Phẩm Sinh Tồn</span>
                   </div>
-                  <div class="item-stats-line">Nấu Lò / Vạc: 1 Dragon's Breath · Nguyên liệu nấu Phở</div>
+                  <div class="item-stats-line">Chi phí Vạc: 1 Dragon's Breath · Hồi 6 thức ăn (3 đùi) & 9.6 Saturation · Nguyên liệu nấu Phở</div>
                   <p class="item-effect-desc">
-                    Thịt Enderman tươi sau khi nướng chín thơm ngậy, loại bỏ hoàn toàn độc tố và tác dụng phụ dịch chuyển lung tung. Cung cấp <strong>8 điểm thức ăn (4 đùi)</strong> và độ bão hòa ổn định. Là nguyên liệu cốt lõi để nấu món <strong>Phở (Pho)</strong>.
+                    Thịt Enderman tươi sau khi nướng chín trong vạc bằng hơi thở rồng và bột quỷ lửa, loại bỏ hoàn toàn độc tố và tác dụng phụ dịch chuyển lung tung. Cung cấp <strong>6 điểm thức ăn (3 đùi)</strong> và <strong>9.6 điểm bão hòa</strong>. Là nguyên liệu cốt lõi để nấu món <strong>Phở (Pho)</strong>.
                   </p>
                 </div>
               </div>
               <div class="recipe-frame-box cauldron-recipe">
                 <div class="recipe-station-header">
-                  <span>Cách chế biến: Lò Nướng / Vạc Nước</span>
-                  <span>1 Breath hoặc Lò Than</span>
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 1 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing mc-slot" data-mc-tooltip="Enderman's Flesh">
-                    <img src="assets/images/ingredients/enderman_flesh.png" alt="Enderman's Flesh" class="recipe-ing-icon" loading="lazy">
+                  <span class="recipe-ing mc-slot" data-mc-tooltip="Enderman Flesh">
+                    <img src="assets/images/ingredients/enderman_flesh.png" alt="Enderman Flesh" class="recipe-ing-icon" loading="lazy">
                   </span>
-                  <span class="recipe-plus">nướng chín ➜</span>
-                  <span class="recipe-ing mc-slot" data-mc-tooltip="Grilled Enderman's Flesh">
-                    <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/grilled_enderman_flesh.png" alt="Grilled Enderman's Flesh" class="recipe-ing-icon" loading="lazy">
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing mc-slot" data-mc-tooltip="Blaze Powder">
+                    <img src="assets/images/ingredients/blaze_powder.png" alt="Blaze Powder" class="recipe-ing-icon" loading="lazy">
+                  </span>
+                  <span class="recipe-arrow">➜</span>
+                  <span class="recipe-ing mc-slot" data-mc-tooltip="Grilled Enderman Flesh">
+                    <img src="assets/images/foods/grilled_enderman_flesh.png" alt="Grilled Enderman Flesh" class="recipe-ing-icon" loading="lazy">
                   </span>
                 </div>
-                <p class="recipe-note">Thịt Enderman sống rơi khi tiêu diệt Enderman tại mọi quần xã.</p>
+                <p class="recipe-note">Thịt Enderman sống (Enderman Flesh) rơi từ Enderman (0-2 miếng/con). Nấu trong vạc cùng Bột Quỷ Lửa (Blaze Powder) để khử độc và nướng chín.</p>
               </div>
             </article>
 
             <!-- Cauldron 3: Phở (Pho) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/pho.png" alt="Món Phở Pho" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Pho">
+                  <img src="assets/images/foods/pho.png" alt="Món Phở Pho" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Phở (Pho)</h3>
                     <span class="mechanic-badge badge-hallow">Thức Ăn Hồi Phục Đỉnh</span>
                   </div>
-                  <div class="item-stats-line">Chi phí Vạc: 4 Dragon's Breath · Hồi trọn vẹn thức ăn</div>
+                  <div class="item-stats-line">Chi phí Vạc: 4 Dragon's Breath · Hồi 13 thức ăn & 20 Saturation · Ăn khi no</div>
                   <p class="item-effect-desc">
-                    Tô phở ấm nóng nấu trực tiếp trong Vạc Hơi Thở Rồng. Hồi phục 10 đùi thức ăn, cấp độ bão hòa (Saturation) cực cao và hiệu ứng hỗ trợ thể lực trước khi đánh Boss.
+                    Tô phở ấm nóng nấu trực tiếp trong Vạc Hơi Thở Rồng. Hồi phục 13 điểm thức ăn, 20 điểm bão hòa (Saturation) và lượng lớn Máu hấp thụ (Absorption). Có thể ăn ngay cả khi thanh thức ăn đã đầy.
                   </p>
                 </div>
               </div>
@@ -3854,7 +3858,7 @@
                 </div>
                 <div class="recipe-ingredients">
                   <span class="recipe-ing mc-slot" data-mc-tooltip="Golden Chorus Fruit">
-                    <img src="assets/images/ingredients/golden_chorus_fruit.png" alt="Golden Chorus Fruit" class="recipe-ing-icon" loading="lazy">
+                    <img src="assets/images/foods/golden_chorus_fruit.png" alt="Golden Chorus Fruit" class="recipe-ing-icon" loading="lazy">
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing mc-slot" data-mc-tooltip="Bowl">
@@ -3862,18 +3866,18 @@
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing mc-slot" data-mc-tooltip="Grilled Enderman Flesh">
-                    <img src="assets/images/ingredients/grilled_enderman_flesh.png" alt="Grilled Enderman Flesh" class="recipe-ing-icon" loading="lazy">
+                    <img src="assets/images/foods/grilled_enderman_flesh.png" alt="Grilled Enderman Flesh" class="recipe-ing-icon" loading="lazy">
                   </span>
                 </div>
-                <p class="recipe-note">Grilled Enderman Flesh (1 Breath) = 1x Enderman Flesh + 1x Blaze Powder.</p>
+                <p class="recipe-note">Món Phở truyền thống nấu từ Quả Chorus Vàng, Bát gỗ và Thịt Enderman Nướng (Grilled Enderman Flesh).</p>
               </div>
             </article>
 
             <!-- Cauldron 3: Shepherd's Pie -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/shepherd_pie.png" alt="Bánh Shepherd's Pie" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Shepherd's Pie">
+                  <img src="assets/images/foods/shepherd_pie.png" alt="Bánh Shepherd's Pie" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -3916,8 +3920,8 @@
             <!-- Cauldron 4: Chorus Stew -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/chorus_stew.png" alt="Súp Chorus Stew" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Chorus Stew">
+                  <img src="assets/images/foods/chorus_stew.png" alt="Súp Chorus Stew" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -3955,8 +3959,8 @@
             <!-- Cauldron 6: Chorus Pie -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/chorus_pie.png" alt="Bánh Chorus Pie" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Chorus Pie">
+                  <img src="assets/images/foods/chorus_pie.png" alt="Bánh Chorus Pie" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -3994,8 +3998,8 @@
             <!-- Cauldron 7: Sushi -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/food/sushi.png" alt="Món Sushi Ender Koi" loading="lazy">
+                <div class="item-sprite-box" data-mc-tooltip="Sushi (Ender Koi)">
+                  <img src="assets/images/foods/sushi.png" alt="Món Sushi Ender Koi" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -4139,7 +4143,7 @@
             <!-- Cauldron 11: Frozen Carpaccio -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
+                <div class="item-sprite-box" data-mc-tooltip="Frozen Carpaccio">
                   <img src="assets/images/foods/frozen_carpaccio.png" alt="Món Frozen Carpaccio" loading="lazy">
                 </div>
                 <div class="item-meta">
@@ -4160,7 +4164,7 @@
                 </div>
                 <div class="recipe-ingredients">
                   <span class="recipe-ing mc-slot" data-mc-tooltip="Enderman Flesh">
-                    <img src="assets/images/ingredients/grilled_enderman_flesh.png" alt="Enderman Flesh" class="recipe-ing-icon" loading="lazy">
+                    <img src="assets/images/ingredients/enderman_flesh.png" alt="Enderman Flesh" class="recipe-ing-icon" loading="lazy">
                   </span>
                   <span class="recipe-plus">+</span>
                   <span class="recipe-ing mc-slot" data-mc-tooltip="Ice">
