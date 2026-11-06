@@ -1081,12 +1081,20 @@
             <div class="harvester-specs-grid" style="margin: 14px 0; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
               <!-- Variant 1: Night -->
               <div class="specs-block">
-                <div class="specs-header" style="display: flex; align-items: center; gap: 6px;">
-                  <img src="assets/images/entities/eol_head_night.png" alt="Night EOL" style="width: 20px; height: 20px; image-rendering: pixelated;">
-                  <span>1. Dạng Ban Đêm / The End (Mặc định)</span>
+                <div class="specs-header" style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <img src="assets/images/entities/eol_head_night.png" alt="Night EOL" style="width: 20px; height: 20px; image-rendering: pixelated;">
+                    <span>1. Dạng Ban Đêm / The End</span>
+                  </div>
+                  <span class="badge" style="font-size: 0.75rem; background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); border-radius: 4px; padding: 2px 6px;">750 HP</span>
                 </div>
-                <div class="specs-row"><span>Máu tối đa</span><strong>750 HP</strong></div>
-                <div class="specs-row"><span>Cách triệu hồi</span><strong>Thả 1x Starlight Soot lên bệ Altar vào ban đêm</strong></div>
+                <div style="display: flex; justify-content: center; align-items: center; padding: 10px 0; background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%); margin: 6px 0;">
+                  <div class="item-sprite-box" data-mc-tooltip="Empress of Light" style="width: 100px; height: 100px; background: transparent; border: none; box-shadow: none;">
+                    <img src="assets/images/entities/empress_of_light_night.png" alt="Empress of Light (Night Form)" style="width: 96px; height: 96px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 4px 10px rgba(168, 85, 247, 0.5));">
+                  </div>
+                </div>
+                <div class="specs-row"><span>Máu tối đa</span><strong>750 HP (Mặc định)</strong></div>
+                <div class="specs-row"><span>Cách triệu hồi</span><strong>Thả 1x Starlight Soot lên Altar vào ban đêm / The End</strong></div>
                 <div class="specs-row"><span>Sát thương Dash</span><strong>26 Sát thương</strong></div>
                 <div class="specs-row"><span>Ethereal Lance</span><strong>14 Sát thương (xuyên 15% giáp)</strong></div>
                 <div class="specs-row"><span>Prismatic Bolts</span><strong>14 Sát thương (xuyên 10% giáp)</strong></div>
@@ -1095,13 +1103,21 @@
 
               <!-- Variant 2: Daytime -->
               <div class="specs-block">
-                <div class="specs-header" style="display: flex; align-items: center; gap: 6px;">
-                  <img src="assets/images/entities/eol_head_daytime.png" alt="Daytime EOL" style="width: 20px; height: 20px; image-rendering: pixelated;">
-                  <span>2. Dạng Ban Ngày (Tăng Tốc &amp; Khó)</span>
+                <div class="specs-header" style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <img src="assets/images/entities/eol_head_daytime.png" alt="Daytime EOL" style="width: 20px; height: 20px; image-rendering: pixelated;">
+                    <span style="color: #fb923c;">2. Dạng Ban Ngày (Cuồng Nộ)</span>
+                  </div>
+                  <span class="badge" style="font-size: 0.75rem; background: rgba(249, 115, 22, 0.2); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.4); border-radius: 4px; padding: 2px 6px;">800 HP</span>
                 </div>
-                <div class="specs-row"><span>Máu tối đa</span><strong>800 HP</strong></div>
+                <div style="display: flex; justify-content: center; align-items: center; padding: 10px 0; background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%); margin: 6px 0;">
+                  <div class="item-sprite-box" data-mc-tooltip="Empress of Light" style="width: 100px; height: 100px; background: transparent; border: none; box-shadow: none;">
+                    <img src="assets/images/entities/empress_of_light_daytime.png" alt="Empress of Light (Daytime Form)" style="width: 96px; height: 96px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 4px 10px rgba(249, 115, 22, 0.5));">
+                  </div>
+                </div>
+                <div class="specs-row"><span>Máu tối đa</span><strong>800 HP (Tăng tốc &amp; Khó)</strong></div>
                 <div class="specs-row"><span>Cách triệu hồi</span><strong>Thả 1x Starlight Soot tại Overworld vào ban ngày</strong></div>
-                <div class="specs-row highlight-max"><span>Sát thương Dash</span><strong>32 Sát thương</strong></div>
+                <div class="specs-row highlight-max"><span>Sát thương Dash</span><strong>32 Sát thương (Tăng tốc độ)</strong></div>
                 <div class="specs-row"><span>Ethereal Lance</span><strong>16 Sát thương (tốc độ bay 1.5 block/tick)</strong></div>
                 <div class="specs-row"><span>Prismatic Bolts</span><strong>16 Sát thương</strong></div>
                 <div class="specs-row highlight-max"><span>Phần thưởng Rơi</span><strong>100% Kaleidoscope, 100% Soaring Insignia, 50% Empress Wings, 30% Fluffy Hammer</strong></div>
@@ -1109,12 +1125,20 @@
 
               <!-- Variant 3: Radiant -->
               <div class="specs-block">
-                <div class="specs-header" style="display: flex; align-items: center; gap: 6px; color: #facc15;">
-                  <img src="assets/images/entities/eol_head_radiant.png" alt="Radiant EOL" style="width: 20px; height: 20px; image-rendering: pixelated;">
-                  <span>3. Radiant Empress (cầm Kaleidoscope khi triệu hồi)</span>
+                <div class="specs-header" style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <img src="assets/images/entities/eol_head_radiant.png" alt="Radiant EOL" style="width: 20px; height: 20px; image-rendering: pixelated;">
+                    <span style="color: #f472b6;">3. Radiant Empress (Hoàng Kim)</span>
+                  </div>
+                  <span class="badge" style="font-size: 0.75rem; background: rgba(244, 114, 182, 0.2); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.4); border-radius: 4px; padding: 2px 6px;">850 HP</span>
                 </div>
-                <div class="specs-row"><span>Máu tối đa</span><strong style="color: #facc15;">850 HP</strong></div>
-                <div class="specs-row"><span>Cách triệu hồi</span><strong>Cầm Kaleidoscope ở tay phụ (Offhand) + thả Starlight Soot ở tay chính</strong></div>
+                <div style="display: flex; justify-content: center; align-items: center; padding: 10px 0; background: radial-gradient(circle, rgba(244, 114, 182, 0.15) 0%, transparent 70%); margin: 6px 0;">
+                  <div class="item-sprite-box" data-mc-tooltip="Empress of Light" style="width: 100px; height: 100px; background: transparent; border: none; box-shadow: none;">
+                    <img src="assets/images/entities/empress_of_light_radiant.png" alt="Empress of Light (Radiant Form)" style="width: 96px; height: 96px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 4px 10px rgba(244, 114, 182, 0.5));">
+                  </div>
+                </div>
+                <div class="specs-row"><span>Máu tối đa</span><strong style="color: #facc15;">850 HP (Tối thượng)</strong></div>
+                <div class="specs-row"><span>Cách triệu hồi</span><strong>Cầm Kaleidoscope ở tay phụ + thả Starlight Soot lên Altar</strong></div>
                 <div class="specs-row highlight-max"><span>Sát thương Dash</span><strong>32 Sát thương (Xuyên 30% giáp, kèm Lance/Bolt)</strong></div>
                 <div class="specs-row"><span>Ethereal Lance</span><strong>22 Sát thương (triệu hồi thêm 10 kiếm, xuyên 33% giáp)</strong></div>
                 <div class="specs-row"><span>Prismatic Bolts</span><strong>17–18 Sát thương, kèm cháy Prismatic Inferno</strong></div>
@@ -1163,10 +1187,10 @@
                 </p>
                 <ul class="item-bonus-list">
                   <li><strong>Phá Hủy Khối Block (Block Breaking):</strong> Nghiền nát các khối gạch Purpur và End Stone xung quanh để triệt tiêu hoàn toàn chiến thuật dựng tường ẩn nấp của người chơi.</li>
-                  <li><strong>Chuyển Hướng Đạn (Redirect Bullets):** Cưỡng chế xoay toàn bộ đạn Shulker trong khu vực tập trung lao thẳng vào mục tiêu.</li>
-                  <li><strong>Gai Nhọn Trồi Đất (Shulking Spikes):** Phóng ra những hàng chông nhọn trồi từ mặt sàn đâm xuyên giáp.</li>
-                  <li><strong>Tia Quét Laser (Ray Beam):** Bắn chùm tia năng lượng hủy diệt tầm xa càn quét địa hình.</li>
-                  <li><strong>Triệu Hồi Tay Sai:** Triệu tập Shulker Cảm Tử (Explosive Shulker) phát nổ diện rộng và Shulkhead Skeleton (Bộ xương đội vỏ Shulker).</li>
+                  <li><strong>Chuyển Hướng Đạn (Redirect Bullets):</strong> Cưỡng chế xoay toàn bộ đạn Shulker trong khu vực tập trung lao thẳng vào mục tiêu.</li>
+                  <li><strong>Gai Nhọn Trồi Đất (Shulking Spikes):</strong> Phóng ra những hàng chông nhọn trồi từ mặt sàn đâm xuyên giáp.</li>
+                  <li><strong>Tia Quét Laser (Ray Beam):</strong> Bắn chùm tia năng lượng hủy diệt tầm xa càn quét địa hình.</li>
+                  <li><strong>Triệu Hồi Tay Sai:</strong> Triệu tập Shulker Cảm Tử (Explosive Shulker) phát nổ diện rộng và Shulkhead Skeleton (Bộ xương đội vỏ Shulker).</li>
                 </ul>
               </div>
             </div>
@@ -3131,7 +3155,7 @@
               <div class="recipe-box">
                 <div class="recipe-box-title">CÁCH LẤY: HẠ EMPRESS OF LIGHT BAN NGÀY</div>
                 <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Daytime Empress of Light"><img src="assets/images/entities/empress_of_light.png" alt="Daytime Empress"></div>
+                  <div class="mc-slot" data-mc-tooltip="Daytime Empress of Light"><img src="assets/images/entities/empress_of_light_daytime.png" alt="Daytime Empress"></div>
                   <span class="recipe-plus">→</span>
                   <div class="mc-slot" data-mc-tooltip="Tỉ lệ rơi 10%"><img src="assets/images/trinkets/soaring_insignia.png" alt="Soaring Insignia"></div>
                 </div>
@@ -3170,7 +3194,9 @@
                   <span class="recipe-plus">+</span>
                   <div class="mc-slot" data-mc-tooltip="Starlight Soot (Mainhand)"><img src="assets/images/ingredients/starlight_soot.png" alt="Starlight Soot"></div>
                   <span class="recipe-plus">→</span>
-                  <div class="mc-slot" data-mc-tooltip="Radiant Jewel"><img src="assets/images/trinkets/radiant_jewel.png" alt="Radiant Jewel"></div>
+                  <div class="mc-slot" data-mc-tooltip="Radiant Empress of Light (850 HP)"><img src="assets/images/entities/empress_of_light_radiant.png" alt="Radiant Empress"></div>
+                  <span class="recipe-plus">→</span>
+                  <div class="mc-slot" data-mc-tooltip="Radiant Jewel (100% Drop)"><img src="assets/images/trinkets/radiant_jewel.png" alt="Radiant Jewel"></div>
                 </div>
                 <p class="recipe-note">Rơi 100% từ biến thể Radiant Empress of Light (850 HP) triệu hồi bằng nghi lễ đặc biệt.</p>
               </div>
