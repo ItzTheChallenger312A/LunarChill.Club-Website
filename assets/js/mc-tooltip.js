@@ -1,6 +1,7 @@
 /**
  * LunarChill - Minecraft Inventory & Recipe Tooltip Engine
  * Faithful recreation of Minecraft in-game GUI tooltip & slot hover behavior.
+ * Clean white slot highlight on item texture/slot only; no tooltip on pure text.
  * Zero external dependencies. High performance event delegation.
  */
 (function() {
@@ -46,7 +47,12 @@
   function resolveItemName(el) {
     if (!el) return '';
 
-    // Direct data attribute override
+    // Ignore text steps, condition chips, or general paragraph text
+    if (el.classList.contains('recipe-step-text') || el.closest('.recipe-step-text')) {
+      return '';
+    }
+
+    // Direct data attribute override (only if explicitly set on the element)
     if (el.dataset && el.dataset.mcTooltip) {
       return el.dataset.mcTooltip.trim();
     }
@@ -54,6 +60,9 @@
     // Finished crafted item box (.item-sprite-box)
     if (el.classList.contains('item-sprite-box') || el.closest('.item-sprite-box')) {
       const box = el.classList.contains('item-sprite-box') ? el : el.closest('.item-sprite-box');
+      if (box.dataset && box.dataset.mcTooltip) {
+        return box.dataset.mcTooltip.trim();
+      }
       const card = box.closest('.item-recipe-card');
       if (card) {
         const titleEl = card.querySelector('.item-meta-title');
@@ -65,37 +74,33 @@
       if (img && img.alt) {
         return cleanItemName(img.alt);
       }
+      return '';
     }
 
     // Recipe ingredient (.recipe-ing)
     if (el.classList.contains('recipe-ing') || el.closest('.recipe-ing')) {
       const ing = el.classList.contains('recipe-ing') ? el : el.closest('.recipe-ing');
-      
+
+      // Rule: Do NOT show tooltip for pure text ingredients/steps without icon
+      const img = ing.querySelector('img');
+      if (!img && (!ing.dataset || !ing.dataset.mcTooltip)) {
+        return '';
+      }
+
       // Check explicit data attribute on ing
       if (ing.dataset && ing.dataset.mcTooltip) {
         return ing.dataset.mcTooltip.trim();
       }
 
       // Check img alt inside ingredient
-      const img = ing.querySelector('img');
       if (img && img.alt) {
         const altClean = cleanItemName(img.alt);
-        // If alt is generic like "Thịt Nướng" or "Heart", check text
-        if (altClean && altClean.length > 2 && !altClean.includes('Heart')) {
+        if (altClean && altClean.length >= 2 && !altClean.includes('Heart')) {
           return altClean;
         }
       }
 
-      // Extract text content inside recipe-ing
-      const text = ing.textContent.trim();
-      // Skip action text like "Hạ Trial Spawner", "nướng chín ➜", "thả xuống nước"
-      if (/^(Hạ |Kích hoạt|Thánh hóa|Mở |nướng|thả|\d+%)/i.test(text)) {
-        // Look for item names mentioned in the text if any
-        const match = text.match(/\b(Gilded Purpur Key|Purpur Key|Winged Key|Enderite Upgrade Template|Dragon Wings|Tamaris|Crest of The End|Ender Insignia|Ender Pearl|Shulker Shell|Shulker Body|Harvester|Dragonblade)\b/i);
-        if (match) return match[1];
-        return cleanItemName(text);
-      }
-      return cleanItemName(text);
+      return '';
     }
 
     // Void Pendant 9-Variant Card
@@ -113,7 +118,7 @@
     }
 
     // Direct Image in recipe area with alt
-    if (el.tagName === 'IMG' && el.alt) {
+    if (el.tagName === 'IMG' && el.alt && el.closest('.recipe-frame-box, .item-recipe-card')) {
       return cleanItemName(el.alt);
     }
 
@@ -155,10 +160,38 @@
     tooltip.style.top = Math.round(y) + 'px';
   }
 
+  // Mark ingredient elements that have item icons with class 'has-icon'
+  function markIconIngredients() {
+    document.querySelectorAll('.recipe-ing').forEach(function(el) {
+      if (el.querySelector('img')) {
+        el.classList.add('has-icon');
+      } else {
+        el.classList.remove('has-icon');
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', markIconIngredients);
+  } else {
+    markIconIngredients();
+  }
+
   // 5. Global event delegation
   document.addEventListener('mouseover', function(e) {
-    const target = e.target.closest('.item-sprite-box, .recipe-ing, .pendant-variant-card, .jewel-buff-card, [data-mc-tooltip]');
+    // Immediately ignore text steps, condition chips, headers, notes, item meta text
+    if (e.target.closest('.recipe-step-text, .recipe-note, .recipe-station-header, .item-meta')) {
+      return;
+    }
+
+    // Only inspect genuine item slot targets
+    const target = e.target.closest('.item-sprite-box, .recipe-ing.mc-slot, .recipe-ing.has-icon, .pendant-variant-card, .jewel-buff-card, [data-mc-tooltip]');
     if (!target) return;
+
+    // Strictly reject text-only elements (must have an image icon or explicit data-mc-tooltip)
+    if (!target.querySelector('img') && (!target.dataset || !target.dataset.mcTooltip)) {
+      return;
+    }
 
     const itemName = resolveItemName(target);
     if (!itemName) return;

@@ -101,7 +101,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--color-border-hover);
-  box-shadow: 0 0 32px rgba(104, 139, 248, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 .hero-title {
