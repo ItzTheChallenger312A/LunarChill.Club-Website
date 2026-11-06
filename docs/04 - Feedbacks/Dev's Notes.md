@@ -149,6 +149,7 @@ Giao diện đầu trang được thiết kế theo cấu trúc **2 tầng chuy�
    - Cập nhật chuẩn wiki cơ chế Phong Tỏa (Creative Shock) tại các tháp End City.
    - Thay thế toàn bộ hình ảnh Rồng Ender Dragon và 10 mob/boss The End từ trứng sinh (Spawn Egg) sang mô hình 3D isometric chuẩn render in-game độ phân giải cao.
    - Quét và xử lý toàn diện dự án theo 2 bộ quy tắc `anti-slop-writing` & `anti-slop-design`: xóa bỏ toàn bộ từ đệm sáo rỗng, trạng từ cực đoan, emoji tiêu đề và hiệu ứng glow màu nhân tạo trên toàn bộ 14 tệp HTML và CSS.
+   - Sắp xếp dàn ngang dạng lưới (.keys-horizontal-grid & .wings-horizontal-grid) cho cụm 3 chìa khóa End City và cụm cánh Elytra; bổ sung cánh Elytra tiêu chuẩn kèm cơ chế mở Elytra Vault bằng Winged Key trên tàu End Ship.
 4. [ ] **Công đoạn liên tục cải thiện trang web:**
    - [ ] Tinh chỉnh và bổ sung thêm các tương tác animation tĩnh nhẹ nhàng khi cuộn trang (Intersection Observer).
    - [ ] Hoàn thiện thư viện ảnh in-game thực tế (`gallery.html` & `assets/images/showcase/`).

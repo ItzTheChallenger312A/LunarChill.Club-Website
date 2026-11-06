@@ -490,11 +490,11 @@
                 </li>
               </ul>
 
-              <div class="item-recipe-grid" style="margin-top: 16px;">
+              <div class="item-recipe-grid keys-horizontal-grid" style="margin-top: 16px;">
                 <!-- Purpur Key -->
                 <article class="item-recipe-card">
                   <div class="item-recipe-top">
-                    <div class="item-sprite-box">
+                    <div class="item-sprite-box" data-mc-tooltip="Purpur Key">
                       <img src="assets/images/keys/purpur_key.png" alt="Chìa khóa Purpur Key" loading="lazy" style="width: 48px; height: 48px; image-rendering: pixelated;">
                     </div>
                     <div class="item-meta">
@@ -524,7 +524,7 @@
                 <!-- Gilded Purpur Key -->
                 <article class="item-recipe-card">
                   <div class="item-recipe-top">
-                    <div class="item-sprite-box">
+                    <div class="item-sprite-box" data-mc-tooltip="Gilded Purpur Key">
                       <img src="assets/images/keys/gilded_purpur_key.png" alt="Chìa khóa Gilded Purpur Key" loading="lazy" style="width: 48px; height: 48px; image-rendering: pixelated;">
                     </div>
                     <div class="item-meta">
@@ -554,7 +554,7 @@
                 <!-- Winged Key -->
                 <article class="item-recipe-card">
                   <div class="item-recipe-top">
-                    <div class="item-sprite-box">
+                    <div class="item-sprite-box" data-mc-tooltip="Winged Key">
                       <img src="assets/images/keys/winged_key.png" alt="Chìa khóa Winged Key" loading="lazy" style="width: 48px; height: 48px; image-rendering: pixelated;">
                     </div>
                     <div class="item-meta">
@@ -1599,9 +1599,9 @@
           <!-- 6.1 Nhóm Bộ Giáp Chiến Đấu -->
           <div style="margin-top: 24px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--color-text-heading); margin: 0; display: flex; align-items: center; gap: 8px;">
-              <span>Nhóm 1: 4 bộ giáp (Armor Sets)</span>
+              <span>Nhóm 1: 4 bộ giáp &amp; Giáp chiến mã (Armor Sets)</span>
             </h3>
-            <span class="mechanic-badge badge-hallow">Hallowed · Shulker · Champion · Floral</span>
+            <span class="mechanic-badge badge-hallow">Hallowed · Shulker · Champion · Floral · Reinforced Horse</span>
           </div>
 
           <div class="item-recipe-grid">
@@ -1762,6 +1762,36 @@
                   </span>
                 </div>
                 <p class="recipe-note">Mỗi món rèn độc lập và bảo lưu 100% bùa phù phép bảo vệ gốc.</p>
+              </div>
+            </article>
+
+            <!-- Armor Extra: Reinforced Horse Armor -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box" data-mc-tooltip="Reinforced Horse Armor">
+                  <img src="assets/images/armor/reinforced_horse_armor.png" alt="Giáp Ngựa Gia Cố (Reinforced Horse Armor)" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Reinforced Horse Armor</h3>
+                    <span class="mechanic-badge badge-ender">Bảo Hộ Chiến Mã</span>
+                  </div>
+                  <div class="item-stats-line">Giáp chiến mã siêu cấp · Chống chịu va đập · Kháng sát thương The End</div>
+                  <p class="item-effect-desc">
+                    Bộ giáp ngựa kiên cố được gia cố bằng hợp kim Chorus và vảy rồng The End. Cung cấp chỉ số phòng thủ cao, giúp chiến mã sống sót trước các đòn tấn công của quái vật Outer End.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-box">
+                <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
+                <div class="recipe-inline">
+                  <div class="mc-slot" data-mc-tooltip="Diamond Horse Armor"><img src="assets/images/ingredients/diamond.png" alt="Diamond Horse Armor"></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Chorus Plating"><img src="assets/images/ingredients/chorus_plating.png" alt="Chorus Plating"><span class="mc-count">4</span></div>
+                  <span class="recipe-plus">+</span>
+                  <div class="mc-slot" data-mc-tooltip="Enderite Upgrade Template"><img src="assets/images/ingredients/enderite_upgrade_smithing_template.png" alt="Template"></div>
+                </div>
+                <p class="recipe-note">Bảo hộ tối đa cho chiến mã khi đồng hành trong các cuộc viễn chinh The End.</p>
               </div>
             </article>
           </div>
@@ -1987,19 +2017,54 @@
             </article>
           </div>
 
-          <!-- 6.3 Nhóm 3 Mẫu Cánh Elytra Tùy Biến -->
+          <!-- 6.3 Nhóm 3: Cánh Elytra Tiêu Chuẩn & 3 Mẫu Cánh Tùy Biến -->
           <div style="margin-top: 36px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--color-text-heading); margin: 0; display: flex; align-items: center; gap: 8px;">
-              <span>Nhóm 3: 3 mẫu cánh Elytra (Custom Wings)</span>
+              <span>Nhóm 3: Cánh Elytra Tiêu Chuẩn &amp; 3 Mẫu Cánh Tùy Biến (Custom Wings)</span>
             </h3>
-            <span class="mechanic-badge badge-stellar">Phantom · Dragon · Empress</span>
+            <span class="mechanic-badge badge-stellar">Vanilla · Phantom · Dragon · Empress</span>
           </div>
 
-          <div class="item-recipe-grid">
-            <!-- Wing 1: Phantom Wings -->
+          <div class="item-recipe-grid wings-horizontal-grid">
+            <!-- Wing 1: Elytra (Tiêu chuẩn) -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box" style="width: 100px; height: 100px;">
+                <div class="item-sprite-box" data-mc-tooltip="Elytra" style="width: 100px; height: 100px;">
+                  <img src="assets/images/wings/elytra.png" alt="Cánh Elytra Tiêu Chuẩn" loading="lazy" style="width: 64px; height: 64px; image-rendering: pixelated;">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Elytra</h3>
+                    <span class="mechanic-badge badge-ender">Cánh Cứng Tiêu Chuẩn</span>
+                  </div>
+                  <div class="item-stats-line">Tốc độ: 1.0x chuẩn · Trọng lực: 1.0x chuẩn · Độ bền: 432 · Sửa bằng Phantom Membrane</div>
+                  <p class="item-effect-desc">
+                    Cánh lượn tiêu chuẩn của thế giới Minecraft. Cung cấp khả năng lướt tự do trên không trung khi kết hợp cùng Pháo hoa (Firework Rockets). Có thể phù phép Unbreaking, Mending cùng các bùa bay độc quyền của Stellarity (*Soaring, Plating*).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Elytra Vault (Tàu End Ship)</span>
+                  <span>Tỉ lệ rơi 100%</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing mc-slot" data-mc-tooltip="Winged Key">
+                    <img src="assets/images/keys/winged_key.png" alt="Winged Key" class="recipe-ing-icon">
+                  </span>
+                  <span class="recipe-arrow">➜</span>
+                  <span class="recipe-ing mc-slot" data-mc-tooltip="Elytra">
+                    <img src="assets/images/wings/elytra.png" alt="Elytra" class="recipe-ing-icon">
+                  </span>
+                </div>
+                <p class="recipe-note">Mở Elytra Vault trong buồng lái tàu End Ship bằng Winged Key (rơi từ Trial Spawner tàu hoặc câu cá Void 1.77%). Khối Vault cá nhân hóa, 100% người tham gia đều mở được cánh mà không sợ bị cướp mất.</p>
+              </div>
+            </article>
+
+            <!-- Wing 2: Phantom Wings -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box" data-mc-tooltip="Phantom Wings" style="width: 100px; height: 100px;">
                   <img src="assets/images/wings/phantom_wings.png" alt="Cánh Phantom Wings" loading="lazy" style="width: 64px; height: 64px; image-rendering: pixelated;">
                 </div>
                 <div class="item-meta">
@@ -2028,10 +2093,10 @@
               </div>
             </article>
 
-            <!-- Wing 2: Dragon Wings -->
+            <!-- Wing 3: Dragon Wings -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box" style="width: 100px; height: 100px;">
+                <div class="item-sprite-box" data-mc-tooltip="Dragon Wings" style="width: 100px; height: 100px;">
                   <img src="assets/images/wings/dragon_wings.png" alt="Cánh Dragon Wings" loading="lazy" style="width: 64px; height: 64px; image-rendering: pixelated;">
                 </div>
                 <div class="item-meta">
@@ -2060,10 +2125,10 @@
               </div>
             </article>
 
-            <!-- Wing 3: Empress Wings -->
+            <!-- Wing 4: Empress Wings -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box" style="width: 100px; height: 100px; background: radial-gradient(circle at center, rgba(244, 114, 182, 0.25) 0%, #070b19 80%);">
+                <div class="item-sprite-box" data-mc-tooltip="Empress Wings" style="width: 100px; height: 100px; background: radial-gradient(circle at center, rgba(244, 114, 182, 0.25) 0%, #070b19 80%);">
                   <img src="assets/images/wings/empress_wings.png" alt="Cánh Empress Wings" loading="lazy" style="width: 64px; height: 64px; image-rendering: pixelated;">
                 </div>
                 <div class="item-meta">
@@ -2089,36 +2154,6 @@
                   </span>
                 </div>
                 <p class="recipe-note">Tooltip: "Delicate wings provide excellent flight speed and agility... Yes, their flight trail is rainbow".</p>
-              </div>
-            </article>
-
-            <!-- Armor Extra: Reinforced Horse Armor -->
-            <article class="item-recipe-card">
-              <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="assets/images/armor/reinforced_horse_armor.png" alt="Giáp Ngựa Gia Cố (Reinforced Horse Armor)" loading="lazy">
-                </div>
-                <div class="item-meta">
-                  <div class="item-meta-header">
-                    <h3 class="item-meta-title">Reinforced Horse Armor</h3>
-                    <span class="mechanic-badge badge-ender">Bảo Hộ Chiến Mã</span>
-                  </div>
-                  <div class="item-stats-line">Giáp chiến mã siêu cấp · Chống chịu va đập · Kháng sát thương The End</div>
-                  <p class="item-effect-desc">
-                    Bộ giáp ngựa kiên cố được gia cố bằng hợp kim Chorus và vảy rồng The End. Cung cấp chỉ số phòng thủ cao, giúp chiến mã sống sót trước các đòn tấn công của quái vật Outer End.
-                  </p>
-                </div>
-              </div>
-              <div class="recipe-box">
-                <div class="recipe-box-title">NƠI RÈN: ALTAR OF THE ACCURSED</div>
-                <div class="recipe-inline">
-                  <div class="mc-slot" data-mc-tooltip="Diamond Horse Armor"><img src="assets/images/ingredients/diamond.png" alt="Diamond Horse Armor"></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Chorus Plating"><img src="assets/images/ingredients/chorus_plating.png" alt="Chorus Plating"><span class="mc-count">4</span></div>
-                  <span class="recipe-plus">+</span>
-                  <div class="mc-slot" data-mc-tooltip="Enderite Upgrade Template"><img src="assets/images/ingredients/enderite_upgrade_smithing_template.png" alt="Template"></div>
-                </div>
-                <p class="recipe-note">Bảo hộ tối đa cho chiến mã khi đồng hành trong các cuộc viễn chinh The End.</p>
               </div>
             </article>
           </div>

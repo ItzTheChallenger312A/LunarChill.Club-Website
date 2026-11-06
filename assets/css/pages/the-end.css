@@ -270,6 +270,38 @@
   }
 }
 
+/* Horizontal layout for compact item groups (End City Keys & Elytra Wings) */
+.keys-horizontal-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin: 16px 0 !important;
+  column-count: initial !important;
+}
+
+.wings-horizontal-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin: 16px 0 !important;
+  column-count: initial !important;
+}
+
+@media (max-width: 1100px) {
+  .wings-horizontal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .keys-horizontal-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .wings-horizontal-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .item-recipe-card {
   background: var(--color-bg-surface);
   border: 1px solid rgba(104, 139, 248, 0.22);
