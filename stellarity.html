@@ -122,8 +122,9 @@
             <li><a href="#recipe-armors" class="toc-link">6. Công thức Giáp &amp; Phôi rèn</a></li>
             <li><a href="#recipe-weapons" class="toc-link">7. Công thức Vũ khí &amp; Cung Nỏ</a></li>
             <li><a href="#recipe-spellbooks" class="toc-link">8. Sách Phép &amp; Vật phẩm Phụ trợ</a></li>
-            <li><a href="#recipe-cauldron" class="toc-link">9. Nấu Vạc: Thức ăn &amp; Thuốc</a></li>
-            <li><a href="#attribution" class="toc-link">10. Bản quyền &amp; Nguồn dữ liệu</a></li>
+            <li><a href="#recipe-cauldron-food" class="toc-link">9. Nấu Vạc: Ẩm Thực Sinh Tồn</a></li>
+            <li><a href="#recipe-cauldron-potions" class="toc-link">10. Đun Thuốc: Thần Dược &amp; Độc Dược</a></li>
+            <li><a href="#attribution" class="toc-link">11. Bản Quyền &amp; Nguồn Dữ Liệu</a></li>
           </ul>
         </div>
       </aside>
@@ -894,17 +895,17 @@
             <!-- Item 4: Floral Armor -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
-                <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/floral_chestplate.png" alt="Áo Giáp Floral Chestplate" loading="lazy">
+                <div class="item-sprite-box armor-sprite-box">
+                  <img src="assets/images/armor/floral_full.png" alt="Bộ Giáp Floral Armor" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
                     <h3 class="item-meta-title">Floral Armor</h3>
-                    <span class="mechanic-badge badge-hallow">Hồi Máu &amp; Tốc Chạy</span>
+                    <span class="mechanic-badge badge-hallow">Chuyên Xạ Thủ &amp; Tốc Chạy</span>
                   </div>
-                  <div class="item-stats-line">Rèn từ Lá Anh Đào (Cherry Leaves) · Kháng độc &amp; Khô héo</div>
+                  <div class="item-stats-line">Giáp: 20 · Độ cứng: 12 · Tăng tốc độ tên &amp; Sát thương tầm xa</div>
                   <p class="item-effect-desc">
-                    Bộ giáp tự nhiên chế tác từ Lá Anh Đào gồm 4 món (Mũ, Áo, Quần, Giày). Giúp người mặc di chuyển linh hoạt, kháng các hiệu ứng rút máu độc hại (Poison, Wither) và hồi phục thể lực liên tục.
+                    <strong>Set Bonus (Floral Bloom):</strong> Bộ giáp tối thượng dành cho xạ thủ rèn từ Gỗ và Lá Anh Đào. Gia tăng mạnh <strong>sức sát thương và vận tốc của cung nỏ</strong>, tạo hiệu ứng hoa nở <em>Bloom</em> bùng nổ khi bắn trúng quái, để lại vệt hoa đào khi chạy và ngụy trang tàng hình trong các khối hoa lá.
                   </p>
                 </div>
               </div>
@@ -1881,7 +1882,7 @@
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/crest_of_the_end.png" alt="Khiên Crest of The End" loading="lazy">
+                  <img src="assets/images/shields/crest_of_the_end_3d.png" alt="Khiên 3D Crest of The End" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
@@ -2181,10 +2182,10 @@
           </div>
         </section>
 
-        <!-- 9. Khung Vật phẩm & Công thức Chế tạo: Thực phẩm & Thuốc (Cauldron Crafting) -->
-        <section id="recipe-cauldron">
+        <!-- 9. Khung Nấu Vạc: Thực phẩm & Ẩm thực Sinh tồn (Cauldron Crafting) -->
+        <section id="recipe-cauldron-food">
           <h2>
-            <span>9. Khung Vật Phẩm &amp; Công Thức Nấu Vạc: Thức Ăn &amp; Thuốc</span>
+            <span>9. Khung Nấu Vạc: Thực Phẩm &amp; Ẩm Thực Sinh Tồn</span>
           </h2>
           <p>
             Hình ảnh Sprite phóng to và công thức từng món nấu từ tệp <code>checks.mcfunction</code> của Stellarity. Đổ bình <strong>Dragon's Breath</strong> vào Vạc Nước rồi thả nguyên liệu theo đúng số lượng:
@@ -2214,9 +2215,15 @@
                   <span>Tốn 3 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Chorus Fruit</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/chorus_fruit.png" alt="Chorus Fruit" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chorus Fruit</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Gold Block (Khối Vàng)</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/gold_block.png" alt="Khối Vàng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Gold Block (Khối Vàng)</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Cũng có 14% tỉ lệ mở ra từ rương End City.</p>
               </div>
@@ -2245,11 +2252,20 @@
                   <span>Tốn 4 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Golden Chorus Fruit</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/golden_chorus_fruit.png" alt="Golden Chorus Fruit" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Golden Chorus Fruit</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Bowl (Bát gỗ)</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/bowl.png" alt="Bát Gỗ" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Bowl (Bát gỗ)</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Grilled Enderman Flesh</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/grilled_enderman_flesh.png" alt="Grilled Enderman Flesh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Grilled Enderman Flesh</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Grilled Enderman Flesh (1 Breath) = 1x Enderman Flesh + 1x Blaze Powder.</p>
               </div>
@@ -2278,13 +2294,25 @@
                   <span>Tốn 5 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Shulker Body</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/shulker_body.png" alt="Shulker Body" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Shulker Body</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Golden Carrot</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/golden_carrot.png" alt="Cà Rốt Vàng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Golden Carrot</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Baked Potato</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/baked_potato.png" alt="Khoai Nướng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Baked Potato</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">2x Chorus Fruit</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/chorus_fruit.png" alt="Chorus Fruit" class="recipe-ing-icon" loading="lazy">
+                    <span>2x Chorus Fruit</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Shulker Body thu được khi hạ Shulker bằng vũ khí Looting.</p>
               </div>
@@ -2313,11 +2341,20 @@
                   <span>Tốn 2 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Chorus Fruit</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/chorus_fruit.png" alt="Chorus Fruit" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chorus Fruit</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Chorus Flower</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/chorus_flower.png" alt="Hoa Chorus" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chorus Flower</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Bowl (Bát gỗ)</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/bowl.png" alt="Bát Gỗ" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Bowl (Bát gỗ)</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Hồi phục 6 đùi thức ăn và bổ sung nước cho nhân vật.</p>
               </div>
@@ -2346,11 +2383,20 @@
                   <span>Tốn 2 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Chorus Fruit</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/chorus_fruit.png" alt="Chorus Fruit" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chorus Fruit</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Sugar (Đường)</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/sugar.png" alt="Đường" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Sugar (Đường)</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Ender Egg</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/ender_egg.png" alt="Trứng Ender" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Ender Egg</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Ender Egg có thể kiếm từ cấu trúc tổ quái The Nest.</p>
               </div>
@@ -2379,9 +2425,15 @@
                   <span>1 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Ender Koi</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/ender_koi.png" alt="Ender Koi" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Ender Koi</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Dried Kelp</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/dried_kelp.png" alt="Tảo Khô" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Dried Kelp</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Món ăn chế biến nhanh nhất từ cá câu được tại The End.</p>
               </div>
@@ -2410,58 +2462,625 @@
                   <span>2 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">1x Prismite</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/prismite.png" alt="Prismite" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Prismite</span>
+                  </span>
                   <span class="recipe-plus">+</span>
-                  <span class="recipe-ing">1x Dried Kelp</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/dried_kelp.png" alt="Tảo Khô" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Dried Kelp</span>
+                  </span>
                 </div>
                 <p class="recipe-note">Món ăn cao cấp cho người câu cá tại quần xã The Hallow.</p>
               </div>
             </article>
 
-            <!-- Cauldron 7: Combat & Survival Potions -->
+
+          </div>
+        </section>
+
+        <!-- 10. Khung Đun Thuốc & Độc Dược: Bình Thuốc Đặc Chủng Vạc Hơi Thở Rồng (Cauldron Potions & Elixirs) -->
+        <section id="recipe-cauldron-potions">
+          <h2>
+            <span>10. Khung Đun Thuốc: Thần Dược &amp; Độc Dược Vạc Hơi Thở Rồng</span>
+          </h2>
+          <p>
+            Hệ thống 12 dòng thuốc và độc dược đặc chế trong <strong>Vạc Hơi Thở Rồng (Breath Cauldron Crafting)</strong> từ tệp lệnh <code>checks.mcfunction</code> của Stellarity. Mỗi loại thuốc được tinh chế từ thủy sản Void, khoáng thạch End và dược liệu Nether, hiển thị đầy đủ công thức (văn bản kèm texture trực quan) và hiệu ứng chi tiết nhận được sau khi uống:
+          </p>
+
+          <div class="item-recipe-grid">
+            <!-- Potion 1: Blind Rage Potion -->
             <article class="item-recipe-card">
               <div class="item-recipe-top">
                 <div class="item-sprite-box">
-                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/pixie_dust.png" alt="Thuốc Cauldron Potions" loading="lazy">
+                  <img src="assets/images/potions/blind_rage_potion.png" alt="Bình thuốc Blind Rage Potion" loading="lazy">
                 </div>
                 <div class="item-meta">
                   <div class="item-meta-header">
-                    <h3 class="item-meta-title">Thuốc Pha Vạc (Cauldron Potions)</h3>
-                    <span class="mechanic-badge badge-void">9 Loại Thuốc Độc Quyền</span>
+                    <h3 class="item-meta-title">Blind Rage Potion</h3>
+                    <span class="mechanic-badge badge-danger">Sức Mạnh III &amp; Bóng Tối</span>
                   </div>
-                  <div class="item-stats-line">Pha trực tiếp trong Vạc Nước Hơi Thở Rồng</div>
+                  <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Cấp độ: Sức Mạnh III · Thời gian: 15 giây</div>
                   <p class="item-effect-desc">
-                    9 dòng thuốc đặc biệt: tăng máu tối đa (<em>Lifeforce</em>), giảm sát thương nhận vào (<em>Endurance</em>), hồi máu tức thì (<em>Regeneraga / Royal Jelly</em>) và soi sáng mạch quặng (<em>Spelunker</em>).
+                    Cường hóa cơn cuồng nộ tột độ trong chiến trận: Tăng thêm <strong>+9 sát thương cận chiến (Strength III)</strong> nhưng đồng thời áp đặt hiệu ứng <strong>Bóng Tối (Darkness)</strong> làm co hẹp tầm nhìn trong 15 giây. Thích hợp dồn sát thương kết liễu quái vật lớn trong tích tắc.
                   </p>
                 </div>
               </div>
               <div class="recipe-frame-box cauldron-recipe">
                 <div class="recipe-station-header">
                   <span>Nơi nấu: Breath Cauldron</span>
-                  <span>Kèm 1x Chai Thủy Tinh</span>
+                  <span>Tốn 2 Breath</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-ing">Endurance (2B): Nether Wart + Iron Ingot + Popped Chorus Fruit</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/fleshy_piranha.png" alt="1x Fleshy Piranha" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Fleshy Piranha</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glowstone_dust.png" alt="1x Glowstone Dust" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Glowstone Dust</span>
+                  </span>
                 </div>
-                <div class="recipe-ingredients" style="margin-top: 4px;">
-                  <span class="recipe-ing">Lifeforce (3B): Nether Wart + Prismite + Starlight Soot</span>
-                </div>
-                <div class="recipe-ingredients" style="margin-top: 4px;">
-                  <span class="recipe-ing">Regeneraga (4B): Nether Wart + Crimson Tigerfish + Glistering Melon</span>
-                </div>
-                <div class="recipe-ingredients" style="margin-top: 4px;">
-                  <span class="recipe-ing">Spelunker (2B): Nether Wart + Gold Ingot + Mushroom</span>
-                </div>
-                <p class="recipe-note">Có thể nâng cấp lên cấp II bằng Glowstone hoặc bột Starlight Soot.</p>
+                <p class="recipe-note">Nâng cấp dạng kéo dài (Ext): Đun tiếp với 1x Redstone (tốn thêm 1 Dragon's Breath).</p>
               </div>
             </article>
+
+            <!-- Potion 2: Endurance Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/endurance_potion.png" alt="Bình thuốc Endurance Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Endurance Potion</h3>
+                    <span class="mechanic-badge badge-stellar">Giảm Sát Thương 20% – 40%</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Kháng Cự I / II · Thời gian: 2:00</div>
+                  <p class="item-effect-desc">
+                    Tạo lớp giáp sinh lực vô hình bao bọc cơ thể: Cung cấp hiệu ứng <strong>Kháng cự (Resistance I)</strong> trong 2 phút, giảm trực tiếp <strong>20% mọi sát thương nhận vào</strong> từ quái vật, dung nham và va chạm. Uống trước khi đối đầu Boss để tránh bị sốc sát thương chết bất đắc kỳ tử.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 2 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/iron_ingot.png" alt="1x Phôi Sắt" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Phôi Sắt</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/popped_chorus_fruit.png" alt="1x Quả Chorus Nở" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Quả Chorus Nở</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Đun với Redstone để kéo dài thời gian (Ext, 3B) hoặc với Glowstone Dust để nâng lên Resistance II giảm 40% sát thương (3B).</p>
+              </div>
+            </article>
+
+            <!-- Potion 3: Entanglement Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/entanglement_potion.png" alt="Bình thuốc Entanglement Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Entanglement Potion</h3>
+                    <span class="mechanic-badge badge-void">Trói Chân &amp; Làm Chậm V (Splash)</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Dạng Ném (Splash Potion) · Thời gian: 11 giây</div>
+                  <p class="item-effect-desc">
+                    Bình thuốc ném khống chế diện rộng: Khi va chạm mặt đất sẽ giải phóng năng lượng dây leo gai góc, làm quái vật và kẻ địch dính <strong>Làm chậm V (Slowness V)</strong> trong 11 giây. Giảm <strong>75% tốc độ chạy</strong> khiến mục tiêu gần như tê liệt tại chỗ, giúp bạn an toàn bắn tỉa từ xa.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 2 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/overgrown_cod.png" alt="1x Overgrown Cod" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Overgrown Cod</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/gunpowder.png" alt="1x Thuốc Súng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Thuốc Súng</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Có thể đun thêm Redstone (kéo dài thời gian) hoặc Glowstone Dust (tăng cường độ làm chậm) với chi phí 3 Dragon's Breath.</p>
+              </div>
+            </article>
+
+            <!-- Potion 4: Frost Cloud Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/frost_cloud_potion.png" alt="Bình thuốc Frost Cloud Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Frost Cloud Potion</h3>
+                    <span class="mechanic-badge badge-frost">Mây Băng Đóng Băng Khu Vực (Lingering)</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 4 Dragon's Breath · Dạng Mây Tồn Lưu (Lingering) · Slowness Cấp 100</div>
+                  <p class="item-effect-desc">
+                    Vũ khí khống chế nhiệt độ âm tuyệt đối: Ném ra tạo đám mây sương tuyết cuộn xoáy tồn lưu trong 6 giây. Bất kỳ thực thể nào bước vào sẽ phải chịu <strong>Làm chậm Cấp 100</strong>, hoàn toàn bị đóng băng bất động tại chỗ trong thời gian hiệu lực.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 4 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/frost_minnow.png" alt="1x Frost Minnow" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Frost Minnow</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/packed_ice.png" alt="2x Băng Nén (Packed Ice)" class="recipe-ing-icon" loading="lazy">
+                    <span>2x Băng Nén (Packed Ice)</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Chế tạo từ loài cá Frost Minnow độc hữu câu được tại các đới tuyết Frosted Hills The End.</p>
+              </div>
+            </article>
+
+            <!-- Potion 5: Hellfire Treader Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/hellfire_treader_potion.png" alt="Bình thuốc Hellfire Treader Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Hellfire Treader Potion</h3>
+                    <span class="mechanic-badge badge-fire">Kháng Lửa &amp; Tốc Chạy 4 Phút</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Speed + Fire Resistance · Thời gian: 4:00</div>
+                  <p class="item-effect-desc">
+                    Thần dược bước chân dung nham: Kích hoạt đồng thời hiệu ứng <strong>Kháng Lửa (Fire Resistance)</strong> và <strong>Tốc độ Chạy (Speed)</strong> liên tục trong 4 phút (4800 ticks). Cho phép người uống di chuyển tốc độ cao qua các hồ dung nham rực lửa ở Nether và pháo đài Piglin an toàn.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 2 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/flarefin_koi.png" alt="1x Flarefin Koi" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Flarefin Koi</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/sugar.png" alt="1x Đường (Sugar)" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Đường (Sugar)</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Có thể nâng cấp kéo dài thời gian với Redstone (3B) hoặc nâng lên Speed II với Glowstone Dust (3B).</p>
+              </div>
+            </article>
+
+            <!-- Potion 6: Lifeforce Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/lifeforce_potion.png" alt="Bình thuốc Lifeforce Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Lifeforce Potion</h3>
+                    <span class="mechanic-badge badge-hallow">Tăng +2 Đến +4 Hàng Tim Đỏ</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 3 Dragon's Breath · Health Boost I / II · Thời gian: 3:00</div>
+                  <p class="item-effect-desc">
+                    Dược phẩm gia tăng lượng sinh mệnh cốt lõi: Cung cấp hiệu ứng <strong>Gia Tăng Máu Tối Đa (Health Boost)</strong> trong 3 phút. Cấp I bổ sung ngay <strong>2 hàng tim đỏ (+20 HP)</strong>; Cấp II bổ sung <strong>4 hàng tim đỏ (+40 HP)</strong>, biến nhân vật thành pháo đài sống trước đòn quét của Boss Jean.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 3 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/prismite.png" alt="1x Cá Lăng Kính Prismite" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Cá Lăng Kính Prismite</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/starlight_soot.png" alt="1x Muội Tinh Tú (Starlight Soot)" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Muội Tinh Tú (Starlight Soot)</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Đun tiếp với Glowstone Dust (tốn 3 Dragon's Breath) để đạt cấp độ Health Boost II tối đa.</p>
+              </div>
+            </article>
+
+            <!-- Potion 7: Spelunker Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/spelunker_potion.png" alt="Bình thuốc Spelunker Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Spelunker Potion</h3>
+                    <span class="mechanic-badge badge-gold">Tầm Nhìn Đêm &amp; Đào Siêu Tốc</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 2 Dragon's Breath · Night Vision + Haste · Thời gian: 3:00</div>
+                  <p class="item-effect-desc">
+                    Bình thuốc thiết yếu cho mọi thợ mỏ và nhà thám hiểm địa đạo: Cho người uống khả năng <strong>Tầm nhìn Đêm (Night Vision)</strong> soi tỏ bóng tối sâu dưới lòng đất kết hợp hiệu ứng <strong>Vội Vã (Haste)</strong> gia tăng tốc độ vung cuốc đào xới quặng kim cương và thạch anh nhanh vượt trội.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 2 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/brown_mushroom.png" alt="1x Nấm Nâu hoặc Đỏ" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nấm Nâu hoặc Đỏ</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/gold_ingot.png" alt="1x Phôi Vàng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Phôi Vàng</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Có thể dùng Nấm Nâu hoặc Nấm Đỏ. Đun với Redstone để kéo dài hoặc Glowstone để lên Haste II.</p>
+              </div>
+            </article>
+
+            <!-- Potion 8: Luck Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/luck_potion.png" alt="Bình thuốc Luck Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Luck Potion</h3>
+                    <span class="mechanic-badge badge-stellar">Tăng Tỉ Lệ Rơi Đồ Hiếm</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 5 Dragon's Breath · Thuộc tính May Mắn · Thời gian: 5:00</div>
+                  <p class="item-effect-desc">
+                    Ban phúc khí cát tường cho người sở hữu: Cung cấp chỉ số <strong>May Mắn (Luck +1)</strong> trong 5 phút. Tăng vọt xác suất câu trúng bảo vật quý hiếm ở The Void, cải thiện phẩm cấp đồ khi mở Purpur Vault tại End City và gia tăng tỉ lệ rơi ngọc/vũ khí từ quái vật.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 5 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/short_grass.png" alt="2x Cỏ Ngắn (Short Grass)" class="recipe-ing-icon" loading="lazy">
+                    <span>2x Cỏ Ngắn (Short Grass)</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/diamond.png" alt="1x Kim Cương" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Kim Cương</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Dược phẩm cao cấp yêu cầu 1 viên Kim Cương và 5 bình Dragon's Breath để hoàn tất quy trình.</p>
+              </div>
+            </article>
+
+            <!-- Potion 9: Poseidon's Nectar -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/poseidons_nectar_potion.png" alt="Bình thuốc Poseidon's Nectar" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Poseidon's Nectar</h3>
+                    <span class="mechanic-badge badge-void">Bá Chủ Thủy Cung 6 Phút 30 Giây</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 6 Dragon's Breath · 3 Hiệu Ứng Thủy Sinh · Thời gian: 6:30</div>
+                  <p class="item-effect-desc">
+                    Mật ngọt của thần biển Poseidon: Cấp đồng thời 3 quyền năng đại dương kéo dài 6 phút 30 giây: <strong>Sức mạnh Ống Dẫn (Conduit Power)</strong> (thở vĩnh viễn và nhìn xuyên làn nước sâu), <strong>Máu Ảo (Absorption)</strong> và <strong>Ân Huệ Cá Heo (Dolphin's Grace)</strong> (bơi lướt nhanh gấp 3 lần bình thường).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 6 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/bubblefish.png" alt="1x Bubblefish" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Bubblefish</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nautilus_shell.png" alt="1x Vỏ Ốc Nautilus" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Vỏ Ốc Nautilus</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/prismarine_shard.png" alt="1x Mảnh Lăng Kính Biển" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Mảnh Lăng Kính Biển</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/honey_bottle.png" alt="1x Chai Mật Ong" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Mật Ong</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/kelp.png" alt="1x Tảo Biển (Kelp)" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Tảo Biển (Kelp)</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Thần dược chuyên dụng để công phá Đền thờ Đại Dương (Ocean Monument) và khám phá mạch nước ngầm.</p>
+              </div>
+            </article>
+
+            <!-- Potion 10: Red Potion -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/red_potion_potion.png" alt="Bình thuốc Red Potion" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Red Potion</h3>
+                    <span class="mechanic-badge badge-danger">Độc Dược 12 Hiệu Ứng Bất Lợi</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 7 Dragon's Breath · Cảnh báo: Nguy hiểm tính mạng · Thời gian: Vĩnh viễn</div>
+                  <p class="item-effect-desc">
+                    Bình thuốc đỏ hắc ám với lời nhắn <em>'Cứ uống đi, làm sao mà chết được?'</em>: Áp đặt lập tức <strong>12 hiệu ứng bất lợi Cấp 10</strong> vĩnh viễn (Bóng tối, Chậm chạp, Đào chậm, Chóng mặt, Mù lòa, Đói khát, Yếu ớt, Trúng độc, Khô héo Wither, Phát quang, Xui xẻo) kèm <strong>Điềm Xấu (Bad Omen)</strong>! Chỉ có thể giải bằng Sữa Bò hoặc Royal Jelly.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 7 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/wither_rose.png" alt="1x Hoa Wither Rose" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Hoa Wither Rose</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/wither_skeleton_skull.png" alt="1x Đầu Wither Skeleton" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Đầu Wither Skeleton</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/red_dye.png" alt="1x Thuốc Nhuộm Đỏ" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Thuốc Nhuộm Đỏ</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/sweet_berries.png" alt="1x Quả Mọng" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Quả Mọng</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart_block.png" alt="1x Khối Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Khối Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Thuốc độc thử thách độ bền bỉ hoặc dùng trong các minigame bẫy sinh tồn của máy chủ.</p>
+              </div>
+            </article>
+
+            <!-- Potion 11: Regeneraga -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/regeneraga_potion.png" alt="Bình thuốc Regeneraga" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Regeneraga</h3>
+                    <span class="mechanic-badge badge-hallow">Hồi Máu Thần Tốc (Instant Health II)</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 4 Dragon's Breath · Instant Health II + Regen III · Cấp Tốc Cứu Sinh</div>
+                  <p class="item-effect-desc">
+                    Bình thuốc cứu tử trong gang tấc: Bơm đầy ngay lập tức <strong>8 Tim máu đỏ (Instant Health II)</strong> và tiếp tục kích hoạt hiệu ứng <strong>Hồi Phục III (Regeneration III)</strong> trong 7 giây. Nâng cấp lên Cấp II giúp kéo dài thời gian hồi phục, là vật phẩm sống còn khi đấu kiếm PvP sinh tử.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 4 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/crimson_tigerfish.png" alt="1x Crimson Tigerfish" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Crimson Tigerfish</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/prismite.png" alt="1x Cá Lăng Kính Prismite" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Cá Lăng Kính Prismite</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glistering_melon_slice.png" alt="1x Dưa Hấu Lấp Lánh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Dưa Hấu Lấp Lánh</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/ghast_tear.png" alt="1x Nước Mắt Ghast" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nước Mắt Ghast</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/nether_wart.png" alt="1x Nether Wart" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Nether Wart</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/glass_bottle.png" alt="1x Chai Thủy Tinh" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Thủy Tinh</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Đun tiếp với 1x Muội Tinh Tú (Starlight Soot) để nâng cấp lên Regeneraga II (tốn thêm 4 Dragon's Breath).</p>
+              </div>
+            </article>
+
+            <!-- Potion 12: Royal Jelly (Sữa Ong Chúa) -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="assets/images/potions/royal_jelly.png" alt="Bình thuốc Royal Jelly (Sữa Ong Chúa)" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Royal Jelly (Sữa Ong Chúa)</h3>
+                    <span class="mechanic-badge badge-ender">Thanh Tẩy Toàn Bộ 11 Hiệu Ứng Xấu</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 5 Dragon's Breath · Tiêu thụ siêu tốc 1.5s · Giải Trừ Lời Nguyền</div>
+                  <p class="item-effect-desc">
+                    Thánh dược thanh tẩy cao quý nhất The End: Uống siêu nhanh trong 1.5 giây, hồi 6 đùi thức ăn, cấp <strong>Máu Ảo (Absorption)</strong> trong 1 phút và <strong>XÓA SẠCH HOÀN TOÀN TẤT CẢ 11 HIỆU ỨNG BẤT LỢI</strong> trên cơ thể (Wither, Điềm Xấu, Độc tố, Mù lòa, Suy yếu, Chậm chạp, Buồn nôn, Khô héo). Khắc tinh số 1 của Boss Wither và Red Potion!
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Tốn 5 Breath</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/honey_bottle.png" alt="1x Chai Mật Ong" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Chai Mật Ong</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/starlight_soot.png" alt="1x Muội Tinh Tú (Starlight Soot)" class="recipe-ing-icon" loading="lazy">
+                    <span>1x Muội Tinh Tú (Starlight Soot)</span>
+                  </span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">
+                    <img src="assets/images/ingredients/amethyst_shard.png" alt="2x Mảnh Thạch Anh Tím" class="recipe-ing-icon" loading="lazy">
+                    <span>2x Mảnh Thạch Anh Tím</span>
+                  </span>
+                </div>
+                <p class="recipe-note">Đun tiếp với Muội Tinh Tú (tốn 3 Dragon's Breath) để nâng cấp lên Royal Jelly II duy trì lớp bảo hộ dài hơn.</p>
+              </div>
+            </article>
+
           </div>
         </section>
 
-        <!-- 10. Bản quyền & Nguồn dữ liệu -->
+        <!-- 11. Bản quyền & Nguồn dữ liệu -->
         <section id="attribution">
           <h2>
-            <span>10. Bản quyền Tác giả &amp; Nguồn Dữ liệu Chính thức</span>
+            <span>11. Bản Quyền Tác Giả &amp; Nguồn Dữ Liệu Chính Thức</span>
           </h2>
           <p>
             Thông số trang bị, công thức tệp lệnh <code>.mcfunction</code> và hình ảnh minh họa trên trang này thuộc về dự án <strong>Stellarity</strong>:

@@ -398,6 +398,9 @@
 }
 
 .recipe-ing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   padding: 4px 8px;
@@ -411,6 +414,15 @@
   overflow-wrap: anywhere;
   word-break: break-word;
   line-height: 1.45;
+}
+
+.recipe-ing-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  flex-shrink: 0;
 }
 
 .recipe-plus {
