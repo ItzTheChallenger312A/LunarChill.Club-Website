@@ -332,7 +332,8 @@
   flex-shrink: 0 !important;
 }
 
-.item-recipe-card.horizontal-card .recipe-frame-box {
+.item-recipe-card.horizontal-card .recipe-frame-box,
+.item-recipe-card.horizontal-card .recipe-box {
   flex: 0 0 340px !important;
   max-width: 380px !important;
   width: 340px !important;
@@ -346,7 +347,8 @@
     align-items: stretch !important;
     gap: 14px !important;
   }
-  .item-recipe-card.horizontal-card .recipe-frame-box {
+  .item-recipe-card.horizontal-card .recipe-frame-box,
+  .item-recipe-card.horizontal-card .recipe-box {
     flex: 1 1 auto !important;
     max-width: 100% !important;
     width: 100% !important;
@@ -516,7 +518,8 @@
 }
 
 /* Khung Công thức chế tạo bên trong thẻ Item (radius 6px < card radius 8px) */
-.recipe-frame-box {
+.recipe-frame-box,
+.recipe-box {
   background: rgba(6, 9, 24, 0.78);
   border: 1px solid rgba(168, 85, 247, 0.28);
   border-radius: var(--radius-btn);
@@ -538,7 +541,8 @@
   border-color: rgba(245, 158, 11, 0.3);
 }
 
-.recipe-station-header {
+.recipe-station-header,
+.recipe-box-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -565,7 +569,8 @@
   border-bottom-color: rgba(245, 158, 11, 0.16);
 }
 
-.recipe-ingredients {
+.recipe-ingredients,
+.recipe-inline {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -1111,7 +1116,11 @@
 }
 
 /* Authentic Minecraft Inventory / Crafting Slot (.mc-slot) */
-.recipe-ing.mc-slot {
+.recipe-ing.mc-slot,
+.recipe-inline .mc-slot,
+.recipe-ingredients .mc-slot,
+.mc-slot {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1132,7 +1141,8 @@
   transition: background-color 0.1s ease, border-color 0.1s ease;
 }
 
-.recipe-ing.mc-slot .recipe-ing-icon {
+.recipe-ing.mc-slot .recipe-ing-icon,
+.mc-slot img {
   width: 32px;
   height: 32px;
   object-fit: contain;
@@ -1142,7 +1152,9 @@
   pointer-events: none;
 }
 
-.recipe-ing-count {
+.recipe-ing-count,
+.mc-slot .mc-count,
+.mc-count {
   position: absolute;
   bottom: 2px;
   right: 4px;
@@ -1159,6 +1171,8 @@
 /* White Slot Hover Highlight (matches authentic Minecraft GUI inventory slot hover) */
 .recipe-ing.mc-slot:hover,
 .recipe-ing.mc-slot.mc-slot-hover,
+.mc-slot:hover,
+.mc-slot.mc-slot-hover,
 .recipe-ing:has(img):hover,
 .recipe-ing:has(img).mc-slot-hover,
 .recipe-ing.has-icon:hover,

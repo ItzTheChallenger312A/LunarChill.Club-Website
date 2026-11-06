@@ -1230,39 +1230,59 @@
           </article>
 
           <!-- Đại Boss 3: Shulking (Vua Shulk) -->
-          <article class="item-recipe-card" style="margin-bottom: 24px;">
+          <article class="item-recipe-card" style="margin-bottom: 24px; border-color: rgba(192, 132, 252, 0.45);">
             <div class="item-recipe-top">
-              <div class="item-sprite-box">
-                <img src="assets/images/entities/shulker.png" alt="Boss Shulking (Vua Shulk)" loading="lazy">
+              <div class="item-sprite-box" data-mc-tooltip="Shulking" style="width: 120px; height: 120px; background: radial-gradient(circle at center, rgba(192, 132, 252, 0.22) 0%, #070b19 80%);">
+                <img src="assets/images/entities/shulker.png" alt="Boss Shulking (Vua Shulk)" class="mob-render-img" loading="lazy" style="width: 104px; height: 104px; object-fit: contain;">
               </div>
               <div class="item-meta">
                 <div class="item-meta-header">
                   <h3 class="item-meta-title" style="font-size: 1.25rem;">Shulking (Vua Shulk)</h3>
                   <span class="mechanic-badge badge-void">Boss Pháo Đài End City · Bossbar Riêng</span>
                 </div>
-                <div class="item-stats-line">Máu cấu hình (Configurable) · Triệu hồi tại Altar of The Sacred hoặc End Ship · Khả năng phá hủy khối block</div>
+                <div class="item-stats-line">Máu cấu hình (Configurable) · Triệu hồi tại Altar of The Sacred hoặc End Ship · Phá vỡ địa hình Purpur</div>
                 <p class="item-effect-desc">
                   Chúa tể Shulker tối cao ngự trị tại đỉnh các pháo đài End City hoặc được triệu hồi trực tiếp qua tế đàn <strong>Altar of The Sacred</strong>. Sở hữu thanh máu Bossbar chuyên biệt và bộ chiêu thức kiểm soát không gian cực kỳ hiểm ác:
                 </p>
-                <ul class="item-bonus-list">
-                  <li><strong>Phá Hủy Khối Block (Block Breaking):</strong> Nghiền nát các khối gạch Purpur và End Stone xung quanh để triệt tiêu hoàn toàn chiến thuật dựng tường ẩn nấp của người chơi.</li>
-                  <li><strong>Chuyển Hướng Đạn (Redirect Bullets):</strong> Cưỡng chế xoay toàn bộ đạn Shulker trong khu vực tập trung lao thẳng vào mục tiêu.</li>
-                  <li><strong>Gai Nhọn Trồi Đất (Shulking Spikes):</strong> Phóng ra những hàng chông nhọn trồi từ mặt sàn đâm xuyên giáp.</li>
-                  <li><strong>Tia Quét Laser (Ray Beam):</strong> Bắn chùm tia năng lượng hủy diệt tầm xa càn quét địa hình.</li>
-                  <li><strong>Triệu Hồi Tay Sai:</strong> Triệu tập Shulker Cảm Tử (Explosive Shulker) phát nổ diện rộng và Shulkhead Skeleton (Bộ xương đội vỏ Shulker).</li>
-                </ul>
               </div>
             </div>
-            <div class="recipe-box">
-              <div class="recipe-box-title">PHẦN THƯỞNG CHIẾN THẮNG</div>
-              <div class="recipe-inline">
-                <div class="mc-slot" data-mc-tooltip="Shulker Shell"><img src="assets/images/ingredients/shulker_shell.png" alt="Shulker Shell"><span class="mc-count">8-16</span></div>
-                <span class="recipe-plus">+</span>
-                <div class="mc-slot" data-mc-tooltip="Shulker Body"><img src="assets/images/ingredients/shulker_body.png" alt="Shulker Body"></div>
-                <span class="recipe-plus">+</span>
-                <div class="mc-slot" data-mc-tooltip="Book of Obstruct"><img src="assets/images/spellbooks/book_of_obstruct.png" alt="Book of Obstruct"></div>
+
+            <!-- Two-column Specs Grid for Boss Skills -->
+            <div class="harvester-specs-grid" style="margin: 14px 0;">
+              <div class="specs-block">
+                <span class="specs-header">Cơ Chế Khống Chế &amp; Phá Địa Hình</span>
+                <div class="specs-skill-item"><strong>Phá Hủy Khối Block (Block Breaking):</strong> Nghiền nát gạch Purpur và End Stone xung quanh, triệt tiêu hoàn toàn chiến thuật dựng tường ẩn nấp.</div>
+                <div class="specs-skill-item"><strong>Chuyển Hướng Đạn (Redirect Bullets):</strong> Cưỡng chế xoay toàn bộ đạn Shulker trong khu vực tập trung lao thẳng vào mục tiêu.</div>
+                <div class="specs-skill-item"><strong>Gai Nhọn Trồi Đất (Shulking Spikes):</strong> Phóng ra những hàng chông nhọn trồi từ mặt sàn đâm xuyên giáp người chơi.</div>
               </div>
-              <p class="recipe-note">Cung cấp nguyên liệu chế tạo Bộ Giáp Shulker, Công cụ Shulker và món bánh mặn Shepherd's Pie.</p>
+              <div class="specs-block">
+                <span class="specs-header">Hỏa Lực Hủy Diệt &amp; Triệu Hồi Tay Sai</span>
+                <div class="specs-skill-item"><strong>Tia Quét Laser (Ray Beam):</strong> Bắn chùm tia năng lượng hủy diệt tầm xa càn quét mặt trận.</div>
+                <div class="specs-skill-item"><strong>Shulker Cảm Tử (Explosive Shulker):</strong> Triệu tập các Shulker phát nổ diện rộng khi áp sát mục tiêu.</div>
+                <div class="specs-skill-item"><strong>Shulkhead Skeleton:</strong> Bộ xương đội vỏ Shulker trang bị cung tên truy kích hỗ trợ boss.</div>
+              </div>
+            </div>
+
+            <div class="recipe-frame-box drop-recipe">
+              <div class="recipe-station-header">
+                <span>PHẦN THƯỞNG CHIẾN THẮNG</span>
+                <span>Rơi từ Boss Shulking</span>
+              </div>
+              <div class="recipe-ingredients">
+                <span class="recipe-ing mc-slot" data-mc-tooltip="Shulker Shell">
+                  <img src="assets/images/ingredients/shulker_shell.png" alt="Shulker Shell" class="recipe-ing-icon" loading="lazy">
+                  <span class="recipe-ing-count">8–16</span>
+                </span>
+                <span class="recipe-plus">+</span>
+                <span class="recipe-ing mc-slot" data-mc-tooltip="Shulker Body">
+                  <img src="assets/images/ingredients/shulker_body.png" alt="Shulker Body" class="recipe-ing-icon" loading="lazy">
+                </span>
+                <span class="recipe-plus">+</span>
+                <span class="recipe-ing mc-slot" data-mc-tooltip="Book of Obstruct">
+                  <img src="assets/images/spellbooks/book_of_obstruct.png" alt="Book of Obstruct" class="recipe-ing-icon" loading="lazy">
+                </span>
+              </div>
+              <p class="recipe-note">Cung cấp nguồn nguyên liệu Shulker dồi dào để chế tạo Bộ Giáp Shulker Armor, Bộ Công Cụ Shulker Haste I và món bánh mặn phục hồi Shepherd's Pie.</p>
             </div>
           </article>
 
