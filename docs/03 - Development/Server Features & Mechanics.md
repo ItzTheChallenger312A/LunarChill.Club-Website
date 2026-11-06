@@ -94,19 +94,25 @@ Chính thức kích hoạt cơ chế tự cân bằng giá mua/bán theo cung - 
 ## 2. Đại tu Chiều không gian The End & The Nether
 
 ### 2.1. The End: Bộ đôi Nullscape & Stellarity
-The End tại LunarChill không phải là một vùng hoang mạc đơn điệu, mà là tâm điểm của gameplay đỉnh cao:
-1. **Nullscape (Datapack Đại tu Địa hình The End):**
-   - Mở rộng chiều cao The End lên tới 384 block.
-   - Kiến tạo những hòn đảo hư không lơ lửng khổng lồ, các vết nứt không gian, vực thẳm và địa hình hiểm trở ngoạn mục.
-2. **Stellarity & StellarityOptimizer (Datapack Đại tu Toàn diện Lối chơi The End):**
-   - Đem đến hệ thống biome huyền ảo, đền đài bí ẩn ngoài không gian.
-   - Thử thách Boss độc bản mới, trang bị và cổ vật thần thoại với cơ chế chiến đấu riêng biệt.
-   - Hệ thống chế tạo đặc biệt (**Custom Crafting**).
+The End tại LunarChill không phải là một vùng hoang mạc đơn điệu, mà là tâm điểm của gameplay Endgame:
+1. **Nullscape 2.0 (Datapack Đại tu Địa hình The End — bởi Starmute & Stardust Labs):**
+   - Mở rộng chiều cao The End lên tới 384 blocks ($Y = -64$ đến $Y = 320$) với 5 dạng địa hình Fractal (đảo xốp tổ ong, đảo tròn xếp tầng, thung lũng trôi nổi, vành đai vỡ vụn).
+   - Thiết kế lại Đảo Chính thành hình xoáy **Hố Giun (Wormhole)**, biến Small End Islands thành **Trường Thiên Thạch & Hốc Khoáng Sản (Meteor Geodes)**, bổ sung tiểu quần xã sét đánh **Voltaic Heaps** (chứa nhánh Glowstone).
+   - Bổ sung 4 quần xã đặc hữu: **Crystal Peaks** (tỉ lệ rơi khối Amethyst 1/8), **Shadowlands** (San hô chết, Hài cốt Rồng lơ lửng, sinh sản Phantom tự nhiên), **Void Barrens** (không có quái vật sinh sản tự nhiên) và **The Infestation** (khối Sculk 0 EXP, Endermite và công trình **Crashed End Ship**).
+2. **Stellarity & StellarityOptimizer (Datapack Đại tu Toàn diện Lối chơi The End — bởi kohara & Prismatic Shards):**
+   - Bổ sung và đại tu **23 quần xã** chia theo 4 đới khí hậu, nổi bật với **The Hallow** (cây cầu vồng, dòng nước hồng tím thanh tẩy Khối Sắt thành 2 *Hallowed Ingot*, chỉ sinh ra Pixie & Allay).
+   - Đại tu **Stronghold** (lớn gấp 5 lần, canh giữ bởi Illager rơi *Sharanga, Clockwork Crossbow, Book of Conveyance/Light/Updraft*), **End Cities** theo cơ chế Trial Chambers (Tinh thể bảo hộ gây hiệu ứng *Creative Shock* cấm đập/đặt khối, mở Vault bằng *Purpur Key, Gilded Purpur Key, Winged Key*), **End Villages** (có *Return Gateway*) và **Chapel of Light**.
+   - 4 Hệ thống chế tạo & thu thập đặc biệt: **Altar of The Accursed** (ném nguyên liệu rèn giáp *Hallowed, Shulker, Champion, Floral*, vũ khí *Tamaris, Sabrewing, Spectral Fury, Sandstorm Trident*, khảm 9 loại ngọc vào *Void Pendant*, nhuộm vệt sáng Elytra), **Breath Cauldron Crafting** (pha loãng Hơi Thở Rồng nấu *Phở, Shepherd's Pie, Sushi* và 9 loại độc dược), **Hallow Consecration** và **Void Fishing** (12 loài cá bao gồm *Crystal Heartfish* tăng vĩnh viễn tới +5 Tim máu).
+   - 2 Đại Boss: **Ender Dragon (Jean)** (bất tử khi còn trụ Crystal, kháng nổ giường, rơi *Dragonblade* độc bản và *Tamaris*) và **Empress of Light** (rơi *Kaleidoscope, Soaring Insignia, Prismatic Pearl, Stella, Prismatic Punch*).
    - Tối ưu hóa TPS máy chủ mượt mà thông qua `StellarityOptimizer`.
 3. **Quy tắc & Cảnh báo The End:**
-   - **Tuyệt đối KHÔNG THỂ đặt nước tại The End** (người chơi phải dùng kỹ năng nhảy, ngọc Ender hoặc elytra).
-   - **Hiệu ứng Infestation:** Khi ở dưới The End, người chơi dính hiệu ứng Infestation (có tỉ lệ sinh ra cá bạc - Silverfish khi nhận sát thương).
+   - **Tuyệt đối KHÔNG THỂ đặt nước tại The End** (người chơi phải dùng Thuốc Rơi Chậm, Book of Updraft, Ngọc Ender, Khối Nhầy hoặc Elytra).
+   - **Hiệu ứng Infestation:** Khi ở dưới The End, người chơi dính hiệu ứng Infestation (có tỉ lệ sinh ra cá bạc - Silverfish khi nhận sát thương, 0 EXP).
    - **Tiêu hao oxy 2% / 10s:** Bắt buộc trang bị Beacon ở tay chính để hồi phục dưỡng khí cho cả đội.
+   - **Hệ thống 3 Chuyên trang Cẩm nang riêng biệt:**
+     - [`the-end.html`](../../the-end.html): Tổng quan & Luật Sinh Tồn LunarChill.
+     - [`stellarity.html`](../../stellarity.html): Chuyên đề Stellarity (23 Quần xã, Cơ chế, Boss & Khung công thức chế tạo).
+     - [`nullscape.html`](../../nullscape.html): Chuyên đề Nullscape (Địa hình 384 blocks, Đảo Wormhole & 4 Quần xã).
 
 ---
 

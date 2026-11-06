@@ -11,7 +11,7 @@
     
 - **Deadline:** 2026-11-20
     
-- **Current phase:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
+- **Current phase:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web (hoàn thành 13 trang HTML, bao gồm bộ 3 chuyên đề The End: Stellarity & Nullscape).
     
 - **Tech stack:** Vanilla HTML5, Modern CSS3 (GPU-accelerated, Pixel Stepped Voxel UI), Vanilla JavaScript (ES6+ Modules)
     

@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellarity Wiki: 23 Quần xã, Cơ chế, Boss &amp; Công thức Chế tạo | LunarChill 🌙</title>
+  <meta name="description" content="Tra cứu Datapack Stellarity tại LunarChill: 23 quần xã The End, bệ thờ Altar of The Accursed, nấu Vạc Hơi Thở Rồng, Câu Cá Hư Không, Boss Empress of Light và công thức chế tạo vũ khí, giáp, sách phép.">
+  <link rel="canonical" href="https://LunarChill.club/stellarity">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://LunarChill.club/stellarity">
+  <meta property="og:title" content="Stellarity Wiki: 23 Quần xã, Cơ chế, Boss &amp; Công thức Chế tạo - LunarChill">
+  <meta property="og:description" content="Thông số 23 quần xã Stellarity, bệ thờ Altar of The Accursed, pha loãng Hơi Thở Rồng trong vạc, câu cá Void Fishing và 32 thẻ công thức chế tạo trang bị.">
+  <meta property="og:image" content="https://cdn.modrinth.com/data/bZgeDzN8/images/e352acc6e3ae3b8259b5c27553e00400c2c17b94.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hướng dẫn Stellarity The End tại LunarChill">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/the-end.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="advanced-guide.html" class="nav-link">HD Chi tiết</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="advanced-guide.html" class="mobile-nav-link">Hướng dẫn chi tiết (Nâng cao)</a>
+    <a href="the-end.html" class="mobile-nav-link">Tổng quan The End &amp; Luật Sinh Tồn</a>
+    <a href="stellarity.html" class="mobile-nav-link active" aria-current="page">Chuyên đề Stellarity (Wiki &amp; Chế tạo)</a>
+    <a href="nullscape.html" class="mobile-nav-link">Chuyên đề Nullscape (Địa hình 384 Blocks)</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
+        Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pe">
+        Sao chép Host PE (Điện thoại): <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span>)
+      </button>
+      <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <div class="page-hero">
+      <div class="container">
+        <div style="display: inline-block; margin-bottom: 12px;">
+          <span class="mechanic-badge badge-void">Prismatic Shards &amp; kohara · Datapack Wiki</span>
+        </div>
+        <h1>Stellarity: 23 Quần xã, Cơ chế, Boss &amp; Công thức Chế tạo</h1>
+        <p>
+          Tài liệu tra cứu về <strong>Stellarity</strong> (trước đây là <em>FokaStudio's Ender Expansion</em>) tại LunarChill: 23 quần xã sinh vật, công trình Trial End City, bệ thờ Altar of The Accursed, nấu Vạc Hơi Thở Rồng, Câu Cá Hư Không và 32 thẻ công thức chế tạo vũ khí, giáp, sách phép.
+        </p>
+      </div>
+    </div>
+
+    <div class="container guide-layout">
+      <!-- Sidebar TOC (Sticky) -->
+      <aside class="guide-sidebar" aria-label="Mục lục chuyên đề Stellarity">
+        <div class="lunar-card toc-card">
+          <h3>Mục lục Stellarity</h3>
+          <ul class="toc-list">
+            <li><a href="#scenery-gallery" class="toc-link">1. Ảnh chụp Khung cảnh</a></li>
+            <li><a href="#biomes-23" class="toc-link">2. Danh sách 23 Quần xã</a></li>
+            <li><a href="#structures" class="toc-link">3. Công trình &amp; Trial End City</a></li>
+            <li><a href="#core-mechanics" class="toc-link">4. Cơ chế Chế tạo &amp; Câu cá</a></li>
+            <li><a href="#bosses" class="toc-link">5. Boss Rồng Jean &amp; Empress</a></li>
+            <li><a href="#recipe-armors" class="toc-link">6. Công thức Giáp &amp; Phôi rèn</a></li>
+            <li><a href="#recipe-weapons" class="toc-link">7. Công thức Vũ khí &amp; Cung Nỏ</a></li>
+            <li><a href="#recipe-spellbooks" class="toc-link">8. Sách Phép &amp; Vật phẩm Phụ trợ</a></li>
+            <li><a href="#recipe-cauldron" class="toc-link">9. Nấu Vạc: Thức ăn &amp; Thuốc</a></li>
+            <li><a href="#attribution" class="toc-link">10. Bản quyền &amp; Nguồn dữ liệu</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="guide-content">
+
+        <!-- Sub-navigation Switcher between the 3 End pages -->
+        <nav class="end-subnav" aria-label="Chuyển đổi trang chuyên đề The End">
+          <a href="the-end.html" class="end-subnav-card">
+            <span class="end-subnav-label">Trang 1 · Trung tâm</span>
+            <span class="end-subnav-title">Tổng quan &amp; Luật LunarChill</span>
+            <span class="end-subnav-desc">Cấm đặt nước, Oxy 2%/10s, Beacon hồi Oxy, Infestation &amp; Đồ cần mang đi End.</span>
+          </a>
+          <a href="stellarity.html" class="end-subnav-card active" aria-current="page">
+            <span class="end-subnav-label">Trang 2 · Đang xem</span>
+            <span class="end-subnav-title">Chuyên đề Stellarity</span>
+            <span class="end-subnav-desc">23 Quần xã, Bệ thờ Altar, Vạc Hơi Thở Rồng, Boss &amp; Khung công thức chế tạo.</span>
+          </a>
+          <a href="nullscape.html" class="end-subnav-card">
+            <span class="end-subnav-label">Trang 3 · Địa hình</span>
+            <span class="end-subnav-title">Chuyên đề Nullscape</span>
+            <span class="end-subnav-desc">Địa hình 384 blocks (Y=-64 đến 320), Đảo Wormhole, 4 Quần xã &amp; Thiên thạch.</span>
+          </a>
+        </nav>
+
+        <!-- 1. Ảnh chụp Khung cảnh (Framed Landscape Showcase) -->
+        <section id="scenery-gallery">
+          <h2>
+            <span>1. Ảnh chụp Khung cảnh và Công trình trong Stellarity</span>
+          </h2>
+          <p>
+            Các bức ảnh chụp màn hình từ dự án <strong>Stellarity</strong> (do <em>Dat1Mexican, Opliz, kohara, BananaKingXO</em> thực hiện) cho thấy bố cục Đảo Chính, các công trình mới và những vùng địa hình sẽ xuất hiện trong The End:
+          </p>
+
+          <div class="scenery-grid">
+            <!-- Frame 1: Central Island -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/73e6ddfb146d4b2089ce2b9a692c5f85ebf82543.png" alt="Đảo Trung Tâm Dragon's Den trong Stellarity" loading="lazy">
+                <span class="scenery-tag">Dragon's Den · Đảo Chính</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Đảo Trung Tâm (Dragon's Den)</h3>
+                  <span class="scenery-credit">Ảnh: Dat1Mexican</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Đảo chính được sửa lại các cột trụ Obsidian, bổ sung cây cỏ tím và đặt bệ thờ Altar of The Accursed ngay gần cổng thoát về Overworld.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 2: Ender Dragon Bossfight -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/747e179b6f0c34961c9a7908e96bbbc1c93d272c.png" alt="Trận chiến Boss Rồng Ender trong Stellarity" loading="lazy">
+                <span class="scenery-tag">Bossfight · Jean Rework</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Trận đánh Rồng Ender (Jean)</h3>
+                  <span class="scenery-credit">Ảnh: Dat1Mexican</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Các trụ End Crystal tạo khiên bất tử bảo vệ Rồng thay vì hồi máu. Rồng được tăng máu, có giáp nội tại và biết gọi thêm quái phụ trợ.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 3: Altar of The Accursed -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/0e008f59d73bc8fbfaff5599ca6562bd0746b21e.png" alt="Bệ thờ Altar of The Accursed" loading="lazy">
+                <span class="scenery-tag">Cơ chế · Bệ Thờ Rèn Đồ</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Altar of The Accursed</h3>
+                  <span class="scenery-credit">Ảnh: Dat1Mexican</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Mở khóa sau khi diệt Rồng Ender lần đầu. Người chơi ném nguyên liệu lên mặt bệ đá để rèn giáp Hallowed, Shulker, Champion và nâng cấp vũ khí.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 4: The Hallow -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/e352acc6e3ae3b8259b5c27553e00400c2c17b94.png" alt="Quần xã The Hallow trong Stellarity" loading="lazy">
+                <span class="scenery-tag">Quần xã · The Hallow</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Quần xã The Hallow</h3>
+                  <span class="scenery-credit">Ảnh: Opliz</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Quần xã an toàn chỉ sinh ra Pixie và Allay. Nền đảo làm bằng đá Diorite và Calcite trắng, cây nhiều màu và hồ nước màu hồng tím dùng để chuyển hóa vật phẩm.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 5: End Cities Rework -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/c8b0e739d4325a761b53a82c0129b411cc7c2541.png" alt="End City làm lại theo cơ chế Trial Chambers" loading="lazy">
+                <span class="scenery-tag">Công trình · End City</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">End Cities (Cơ chế Trial Chambers)</h3>
+                  <span class="scenery-credit">Ảnh: Opliz</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Tinh thể bảo hộ quanh tháp gây hiệu ứng Creative Shock (cấm đập và đặt khối). Bên trong đặt các lồng Trial Spawner sinh quái Voided và rương Vault mở bằng chìa khóa Purpur.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 6: End Village & Return Gateway -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/2c6658f86b2cd204e1dd9eb5b8b601295d70f822.png" alt="Làng End Village và Cổng Return Gateway" loading="lazy">
+                <span class="scenery-tag">Công trình · End Village</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">End Village &amp; Return Gateway</h3>
+                  <span class="scenery-credit">Ảnh: Dat1Mexican</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Ngôi làng có cổng Return Gateway ở giữa để dịch chuyển thẳng về Đảo Chính. Dân làng tại đây bán phôi Hallowed Ingot, Ancient Plating và đổi sách phép.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 7: Strongholds Overworld -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/b5dec8f98df7200694e90ff3e6922239308d9940.png" alt="Stronghold mở rộng gấp 5 lần tại Overworld" loading="lazy">
+                <span class="scenery-tag">Overworld · Stronghold</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Stronghold tại Overworld (Mở rộng 5x)</h3>
+                  <span class="scenery-credit">Ảnh: Dat1Mexican</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Stronghold dưới lòng đất Overworld rộng gấp 5 lần bản gốc. Các phòng hành lang có Pillager, Illusioner và Evoker canh giữ, hạ gục sẽ có tỉ lệ rơi cung Sharanga và nỏ Clockwork Crossbow.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 8: Sculk Lab in Stronghold -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/b4b215d7318e9a070a8fbddf2ab8655ebb201e05.png" alt="Phòng Sculk Lab bên trong Stronghold" loading="lazy">
+                <span class="scenery-tag">Stronghold · Sculk Lab</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Phòng Sculk Lab (Stronghold)</h3>
+                  <span class="scenery-credit">Ảnh: Dat1Mexican</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Căn phòng ẩn bên trong Stronghold chứa khối Sculk và các rương nguyên liệu của nhóm Illager.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 9: Frozen Spikes & Climate Zones -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/97fc666fdf09e8dd360de20066937b7b62e030f8.png" alt="Quần xã băng giá Frozen Spikes trong Stellarity" loading="lazy">
+                <span class="scenery-tag">Đới Lạnh · Frozen Spikes</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Quần xã Frozen Spikes</h3>
+                  <span class="scenery-credit">Ảnh: Opliz</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Vùng băng tuyết nơi Stray đội mũ Kim Cương có 3% tỉ lệ cầm đao Frigid Harvester và nơi câu được hòm Frozen Crate.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 10: Diverse Biomes Showcase -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/b77957d0f75bfb1484e0f5d27fa01ade76217d45.png" alt="Các quần xã giao nhau trong Stellarity" loading="lazy">
+                <span class="scenery-tag">Sinh thái · Phân Đới Nhiệt Độ</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Phân bổ Quần xã theo Nhiệt độ</h3>
+                  <span class="scenery-credit">Ảnh: Opliz</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Các quần xã cùng dải nhiệt độ nằm cạnh nhau, tách biệt vùng băng giá với vùng núi lửa và sa mạc.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 11: Crystal Crags, The Nest & End Midlands -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/dfcfc49b3175e2caf0cf164e19c85394b0bf9353.png" alt="Crystal Crags, The Nest và End Midlands không dùng Shader" loading="lazy">
+                <span class="scenery-tag">Không Shader · Crystal Crags &amp; The Nest</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Crystal Crags, The Nest &amp; End Midlands</h3>
+                  <span class="scenery-credit">Ảnh: kohara (Vanilla)</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Hình ảnh chụp ở chế độ đồ họa mặc định (không bật Shader) của vách đá thạch anh tím Crystal Crags, tổ ong The Nest và thảo nguyên End Midlands.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 12: Breath Cauldron Crafting -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/e24c7e81fbfb30ea442596fd98b6207e5031d4a9.png" alt="Pha loãng Hơi Thở Rồng trong Vạc Nước Cauldron Crafting" loading="lazy">
+                <span class="scenery-tag">Cơ chế · Breath Cauldron Crafting</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Nấu Vạc Hơi Thở Rồng (Cauldron Crafting)</h3>
+                  <span class="scenery-credit">Ảnh: BananaKingXO</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Đổ bình Dragon's Breath vào Vạc Nước rồi thả nguyên liệu vào để nấu thức ăn (Phở, Shepherd's Pie, Sushi) và pha chế thuốc.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 2. Danh sách 23 Quần xã Sinh vật (23 Biomes of Stellarity) -->
+        <section id="biomes-23">
+          <h2>
+            <span>2. Danh sách 23 Quần xã Sinh vật (Chia theo 4 Đới Khí hậu)</span>
+          </h2>
+          <p>
+            Stellarity có tổng cộng <strong>23 quần xã (Biomes)</strong> tại The End, chia vào 4 nhóm nhiệt độ và địa hình:
+          </p>
+
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th>Nhóm Khí Hậu / Địa Hình</th>
+                  <th>Danh sách Quần xã (Biome ID)</th>
+                  <th>Khối Đặc Trưng, Sinh Vật &amp; Tài Nguyên</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="color: #f472b6;">1. Lush &amp; Fields (Thảo Nguyên &amp; The Hallow)</strong></td>
+                  <td>
+                    <code>stellarity:the_hallow</code><br>
+                    <code>stellarity:end_wilds</code><br>
+                    <code>stellarity:end_shrubland</code><br>
+                    <code>minecraft:end_highlands</code><br>
+                    <code>minecraft:end_midlands</code>
+                  </td>
+                  <td>
+                    <strong>The Hallow</strong> có nền đá Diorite &amp; Calcite, cỏ xanh lam (<code>#4EC1E3</code>), nước hồng tím (<code>#F937ED</code>), cây nhiều màu, chỉ sinh ra <strong>Pixie</strong> (rơi <em>Pixie Dust</em>) và <strong>Allay</strong>. <strong>End Wilds</strong> và <strong>Highlands</strong> có cỏ Ender tím, hoa Chorus và công trình làng End.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #4ade80;">2. Forests &amp; Marshes (Rừng &amp; Đầm Lầy)</strong></td>
+                  <td>
+                    <code>stellarity:amethyst_forest</code><br>
+                    <code>stellarity:prismarine_forest</code><br>
+                    <code>stellarity:warped_marsh</code><br>
+                    <code>stellarity:the_nest</code>
+                  </td>
+                  <td>
+                    <strong>Amethyst Forest</strong> và <strong>Crystal Crags</strong> có nhiều mỏm Thạch anh tím. <strong>Prismarine Forest</strong> chứa khối Prismarine, đèn Sea Lantern và câu được cá <em>Bubblefish</em>. <strong>The Nest</strong> có cấu trúc tổ ong và quái vật ký sinh.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #f59e0b;">3. Barrens &amp; Dunes (Hoang Mạc &amp; Núi Lửa)</strong></td>
+                  <td>
+                    <code>stellarity:ashfall_deltas</code><br>
+                    <code>stellarity:fiery_hills</code><br>
+                    <code>stellarity:endless_dunes</code><br>
+                    <code>stellarity:prismatic_dunes</code><br>
+                    <code>stellarity:ender_wastes</code><br>
+                    <code>stellarity:crystal_crags</code><br>
+                    <code>stellarity:flesh_tundra</code>
+                  </td>
+                  <td>
+                    <strong>Ashfall Deltas</strong> và <strong>Fiery Hills</strong> có hồ dung nham, đá Basalt và Magma, câu được cá <em>Flarefin Koi</em>. <strong>Endless Dunes</strong> và <strong>Prismatic Dunes</strong> là vùng đồi cát nơi tìm thấy <em>Sand Rune</em> (nguyên liệu rèn <em>Sandstorm Trident</em>). <strong>Flesh Tundra</strong> phủ khối thịt đỏ, câu được <em>Fleshy Piranha</em> và <em>Crimson Tigerfish</em>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #38bdf8;">4. Frozen Zone (Đới Băng Giá)</strong></td>
+                  <td>
+                    <code>stellarity:frozen_spikes</code><br>
+                    <code>stellarity:frosted_valley</code> (Frosted Hills)<br>
+                    <code>stellarity:frozen_marsh</code><br>
+                    <code>stellarity:frozen_shrubland</code><br>
+                    <code>stellarity:hallowed_tundra</code>
+                  </td>
+                  <td>
+                    Phủ băng Packed Ice, Blue Ice và tuyết. Tại <strong>Frosted Hills</strong>, quái <strong>Stray</strong> đội mũ Kim Cương có <strong>3% tỉ lệ cầm đao Frigid Harvester</strong> (giết sẽ rơi đao). Câu cá tại đới lạnh có tỉ lệ vớt được <strong>Frozen Crate</strong> và cá <em>Frost Minnow</em>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #c084fc;">5. Core &amp; Void (Đảo Chính &amp; Hư Không)</strong></td>
+                  <td>
+                    <code>stellarity:dragons_den</code><br>
+                    <code>stellarity:the_void</code>
+                  </td>
+                  <td>
+                    <strong>Dragon's Den</strong> là khu vực Đảo Chính nơi đánh Rồng Ender và đặt bệ thờ Altar of The Accursed. <strong>The Void</strong> là khoảng không giữa các đảo.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 3. Công trình & Trial End City -->
+        <section id="structures">
+          <h2>
+            <span>3. Công trình: Stronghold, Trial End City, Làng End &amp; Chapel of Light</span>
+          </h2>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>End Cities Rework: Cơ chế Trial Chambers &amp; Creative Shock</h3>
+              <span class="mechanic-badge badge-void">Cấm Đập/Đặt Khối</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Hiệu ứng Creative Shock:</strong> Xung quanh mỗi End City có các trụ <strong>Protective End Crystals</strong>. Khi chưa phá hết toàn bộ số tinh thể này, người chơi đứng trong phạm vi thành phố sẽ dính hiệu ứng <em>Creative Shock</em> (<strong>không thể đặt hoặc phá bất kỳ khối nào</strong>).</li>
+                <li><strong>Trial Spawners &amp; Quái Voided:</strong> Các phòng trong tháp đặt lồng Trial Spawner sinh ra quái vật Overworld nhiễm năng lượng Void cùng với Shulker.</li>
+                <li><strong>3 Loại Chìa Khóa Mở Rương Vault:</strong>
+                  <ul>
+                    <li><strong>Purpur Key:</strong> Mở rương Vault thường trong thành phố để lấy trang bị, <em>Enderite Shard</em> và <em>Chorus Plating</em>.</li>
+                    <li><strong>Gilded Purpur Key:</strong> Mở Ominous Vault để lấy khuôn rèn <em>Enderite Upgrade Smithing Template</em> và vũ khí hiếm.</li>
+                    <li><strong>Winged Key:</strong> Dùng trên Tàu Bay (End Ship) để mở khoang chứa <strong>Cánh Cứng Elytra</strong>.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="biome-grid" style="margin-top: 18px;">
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Stronghold (Overworld)</h4>
+                <span class="mechanic-badge badge-info">Rộng Gấp 5 Lần</span>
+              </div>
+              <div class="biome-card-content">
+                Stronghold ở Overworld rộng gấp 5 lần bản gốc, có thêm phòng <strong>Sculk Lab</strong>. Bên trong có <strong>Pillager</strong> (rơi <em>Clockwork Crossbow</em> tỉ lệ 7%–13%), <strong>Illusioner</strong> (rơi cung <em>Sharanga</em> tỉ lệ 9%–18%) và <strong>Evoker</strong> (rơi 3 sách phép <em>Book of Conveyance, Light, Updraft</em> tỉ lệ 15%–21%).
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>End Villages &amp; Return Gateways</h4>
+                <span class="mechanic-badge badge-stellar">Làng Cư Dân End</span>
+              </div>
+              <div class="biome-card-content">
+                Xuất hiện tại các vùng thảo nguyên và <em>The Hallow</em>. Giữa làng có <strong>Return Gateway</strong> giúp dịch chuyển một chiều quay về Đảo Chính. Dân làng End (Fletcher, Librarian, Armorer) bán <em>Ancient Plating, Hallowed Ingot</em> và đổi cung, nỏ, sách phép bằng Emerald hoặc Chồi Cây Sồi (Oak Sapling).
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Chapel of Light</h4>
+                <span class="mechanic-badge badge-hallow">Bệ Thờ Thánh</span>
+              </div>
+              <div class="biome-card-content">
+                Nằm trong quần xã <em>The Hallow</em>, bên trong đặt bệ thờ <strong>Altar of The Sacred</strong>. Người chơi có thể thả khoáng sản lên bệ thờ để nhận hiệu ứng buff, hoặc thả <em>Starlight Soot / Pixie Dust</em> để gọi Boss <strong>Empress of Light</strong>.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Cơ chế Chế tạo & Câu cá Hư Không -->
+        <section id="core-mechanics">
+          <h2>
+            <span>4. Bốn Cơ chế Chế tạo &amp; Câu cá Hư Không</span>
+          </h2>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>1. Bệ thờ Altar of The Accursed</h3>
+              <span class="mechanic-badge badge-void">Ném Nguyên Liệu Trực Tiếp</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Đặt tại trung tâm <strong>Dragon's Den</strong>, bệ thờ này mở khóa sau khi Rồng Ender bị tiêu diệt lần đầu (lúc này thanh kiếm <strong>Dragonblade</strong> cũng xuất hiện cắm sẵn trên bệ thờ cho người đầu tiên nhấp chuột phải rút ra).
+              </p>
+              <ul>
+                <li><strong>Cách rèn đồ:</strong> Bệ thờ không có giao diện GUI. Bạn đứng gần và <strong>ném (phím Q) đúng số lượng nguyên liệu</strong> lên mặt bệ đá (bán kính 1.5 block). Bệ thờ sẽ tự gom nguyên liệu và trả lại vật phẩm hoàn chỉnh.</li>
+                <li><strong>Giữ nguyên bùa Enchant:</strong> Khi nâng cấp từ đồ gốc (Giáp Netherite, Kiếm Netherite, Cung, Khiên, Đinh Ba), toàn bộ dòng Enchantment trên món đồ cũ được giữ nguyên sang món đồ mới.</li>
+                <li><strong>Nhuộm vệt sáng Elytra (Elytra Trail Dyeing):</strong> Ném <code>1x Elytra</code> + <code>1x Thuốc nhuộm bất kỳ (16 màu)</code> hoặc <code>1x Pháo Hoa / Ngôi Sao</code> lên bệ thờ để gắn hiệu ứng hạt màu bay theo sau lưng khi lượn Elytra.</li>
+                <li><strong>Mở từ xa bằng Satchel of Voids:</strong> Khi rèn được túi <em>Satchel of Voids</em>, bạn có thể dùng chức năng của bệ thờ ngay trong túi đồ mà không cần quay về Đảo Chính.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>2. Pha Loãng Hơi Thở Rồng (Breath Cauldron Crafting)</h3>
+              <span class="mechanic-badge badge-stellar">Nấu Ăn &amp; Pha Thuốc Trong Vạc</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Cách dùng <strong>Vạc (Cauldron) chứa đầy nước</strong> để nấu thức ăn và pha thuốc của Stellarity:
+              </p>
+              <ol>
+                <li><strong>Bước 1 (Tích điểm Breath):</strong> Ném bình <strong>Dragon's Breath (Hơi Thở Rồng)</strong> vào Vạc Nước để nạp điểm năng lượng Breath vào vạc (mỗi công thức tốn từ 1 đến 7 Breath).</li>
+                <li><strong>Bước 2 (Thả nguyên liệu):</strong> Ném đủ các nguyên liệu của món ăn, thuốc hoặc khối đất End vào trong vạc.</li>
+                <li><strong>Bước 3 (Nhận đồ):</strong> Vạc sẽ trừ điểm Breath và nảy vật phẩm hoàn chỉnh lên trên.</li>
+              </ol>
+              <p style="margin-top: 8px; margin-bottom: 0;">
+                <em>Các khối đổi nhanh trong vạc:</em> <code>1x End Stone + 1x Dirt = Ender Dirt (2 Breath)</code>; <code>1x End Stone + 1x Grass Block = Ender Grass Block (2 Breath)</code>; <code>1x Glass Bottle + 2x Lapis Lazuli = Experience Bottle (1 Breath)</code>.
+              </p>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>3. Chuyển Hóa Dưới Nước The Hallow (Consecration)</h3>
+              <span class="mechanic-badge badge-hallow">Đổi Phôi Hallowed Ingot</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Nước ở quần xã <strong>The Hallow</strong> có màu hồng tím (<code>#F937ED</code>). Bạn cũng có thể tạo loại nước này ở nơi khác bằng cách thả bột <code>Starlight Soot</code> vào Vạc Nước:
+              </p>
+              <ul>
+                <li><strong>Chế tạo Hallowed Ingot:</strong> Ném <code>1x Khối Sắt (Iron Block)</code> xuống nước The Hallow $\rightarrow$ nhận lại <code>2x Hallowed Ingot</code>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>4. Câu Cá Hư Không (Void Fishing) &amp; 12 Loài Cá</h3>
+              <span class="mechanic-badge badge-purple">Tăng Máu Tối Đa</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Dùng cần câu <strong>Fisher of Voids</strong> quăng phao xuống <strong>vực Hư Không (Void)</strong>. Tùy theo quần xã bạn đang đứng, bạn sẽ câu được 3 loại hòm (<strong>End Crate, Hallowed Crate, Frozen Crate</strong>) và 12 loài cá:
+              </p>
+              <div class="table-responsive" style="margin-top: 12px;">
+                <table class="mechanics-table">
+                  <thead>
+                    <tr>
+                      <th>Tên Cá / Hòm</th>
+                      <th>Quần Xã Câu (Biome)</th>
+                      <th>Công dụng &amp; Hiệu ứng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong style="color: #f472b6;">Crystal Heartfish</strong></td>
+                      <td>The Hallow / Crystal Crags</td>
+                      <td>Mỗi con ăn vào <strong>tăng vĩnh viễn +1 Máu tối đa (+0.5 Tim)</strong>. Ăn tối đa 10 con để cộng thêm <strong>+10 Máu (+5 Tim vĩnh viễn)</strong>.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #c084fc;">Ender Koi &amp; Prismite</strong></td>
+                      <td>Mọi quần xã / The Hallow</td>
+                      <td>Nguyên liệu nấu <em>Sushi</em>, <em>Prismatic Sushi</em> và pha thuốc <em>Lifeforce Potion</em> (+20% Máu tối đa), <em>Regeneraga</em>.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #38bdf8;">Frost Minnow &amp; Bubblefish</strong></td>
+                      <td>Đới Băng Giá / Prismarine Forest</td>
+                      <td>Nguyên liệu pha thuốc <em>Frost Cloud Potion</em> và <em>Poseidon's Nectar</em>.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #f59e0b;">Flarefin Koi, Fleshy Piranha &amp; Crimson Tigerfish</strong></td>
+                      <td>Fiery Hills / Flesh Tundra</td>
+                      <td>Nguyên liệu pha thuốc <em>Hellfire Treader</em> (đi trên Lava), <em>Blind Rage</em> (tăng sát thương cận chiến) và <em>Regeneraga</em>.</td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color: #4ade80;">Overgrown Cod, Amethyst Budfish &amp; Potassifish</strong></td>
+                      <td>End Wilds / Amethyst Forest</td>
+                      <td>Nguyên liệu pha thuốc giữ chân <em>Entanglement Potion</em> và thức ăn hồi máu.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>End Crate / Hallowed Crate / Frozen Crate</strong></td>
+                      <td>Toàn End / The Hallow / Đới Lạnh</td>
+                      <td>Mở ra <em>Enderite Shard, Ancient Plating, Hallowed Ingot, Duskberry, Frigid Harvester (10% ở Frozen Crate)</em> và <em>Treasure Heads</em>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>5. Các Tiện ích Sinh tồn (QoL) Khác của Stellarity</h3>
+              <span class="mechanic-badge badge-info">Cơ chế Phụ trợ</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Totem of Undying cứu rơi Void:</strong> Cầm Totem trên tay khi rơi xuống đáy Void sẽ kích hoạt Totem, <strong>dịch chuyển bạn lên cao 200 blocks</strong> kèm hiệu ứng Rơi Chậm (Slow Falling) và Levitation ngắn để kịp bay vào đảo.</li>
+                <li><strong>Đinh Ba Loyalty tự quay về từ Void:</strong> Đinh ba có bùa <em>Loyalty</em> khi ném xuống Void sẽ tự bay ngược về tay người ném.</li>
+                <li><strong>Nhặt lại End Crystal:</strong> Đập chuột trái bình thường vào End Crystal sẽ làm nó <strong>rơi ra thành item</strong>. Muốn kích nổ thì phải giữ <strong>Shift + Chuột trái</strong>.</li>
+                <li><strong>Eye of Ender tìm cổng Gateway:</strong> Ném <em>Eye of Ender</em> trong The End sẽ chỉ hướng tới cổng <strong>End Gateway</strong> gần nhất.</li>
+                <li><strong>Respawn Anchor dùng được ở End:</strong> Có thể nạp Glowstone vào Respawn Anchor để đặt điểm hồi sinh ngay trong The End mà không nổ.</li>
+                <li><strong>55 Đầu sưu tầm (Treasure Heads):</strong> Có 55 mẫu đầu người chơi/dev nằm trong rương End City (25%–66%) và Hòm Câu Cá.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Bosses: Ender Dragon & Empress of Light -->
+        <section id="bosses">
+          <h2>
+            <span>5. Hai Boss Lớn: Rồng Ender (Jean) &amp; Empress of Light</span>
+          </h2>
+
+          <div class="lunar-card deep-card" style="border-color: rgba(168, 85, 247, 0.35);">
+            <div class="deep-card-header">
+              <h3>Boss 1: Rồng Ender (Jean Rework)</h3>
+              <span class="mechanic-badge badge-void">Đảo Trung Tâm</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Khiên Tinh Thể Bất Tử:</strong> Các trụ End Crystal không hồi máu cho Rồng như bản gốc mà tạo <strong>khiên miễn nhiễm 100% sát thương</strong>. Phải bắn nổ hết toàn bộ End Crystal mới có thể bắt đầu trừ máu Rồng.</li>
+                <li><strong>Kháng nổ giường (Anti-Bed Cheese):</strong> Rồng có giáp nội tại cao và kháng sát thương nổ giường. Trong lúc bay, Rồng thả cầu axit tím, tạo sóng chấn động và gọi quái phụ trợ.</li>
+                <li><strong>Đòn chém kết liễu ở mốc 1 HP:</strong> Khi máu tụt xuống còn đúng <strong>1 HP</strong>, Rồng sẽ đáp xuống đài cổng trung tâm và đứng yên chờ người chơi lại gần chém nhát cuối cùng.</li>
+                <li><strong>Phần thưởng:</strong> Mở khóa bệ thờ <em>Altar of The Accursed</em>, xuất hiện thanh kiếm <strong>Dragonblade</strong> (chỉ 1 thanh duy nhất trên toàn server ở lần diệt đầu tiên), và có <strong>66% tỉ lệ rơi 2 món</strong> trong bộ <strong>Tamaris</strong>, <strong>Crest of The End</strong> hoặc <strong>Ender Insignia</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-color: rgba(244, 114, 182, 0.35); margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>Boss 2: Empress of Light (Nữ Hoàng Ánh Sáng)</h3>
+              <span class="mechanic-badge badge-hallow">Chapel of Light · The Hallow</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Được triệu hồi bằng cách thả <code>Starlight Soot</code> (hoặc <code>Pixie Dust</code>) lên bệ thờ <strong>Altar of The Sacred</strong> bên trong công trình <em>Chapel of Light</em> (quần xã The Hallow).
+              </p>
+              <ul>
+                <li><strong>Đánh tại The End hoặc Ban Đêm:</strong> Boss bắn kiếm ánh sáng tự tìm mục tiêu, tia laser cầu vồng và mưa sao băng. Vật phẩm rơi ra gồm: <strong>Prismatic Punch</strong>, <strong>Stella</strong> (33%), <strong>Prismatic Pearl</strong> (33%), <strong>Starstruck Carcanet</strong> (33%) và <strong>Soaring Insignia</strong> (20%).</li>
+                <li><strong>Đánh Ban Ngày tại Overworld (Enraged Daytime):</strong> Nếu triệu hồi và hạ gục Boss tại thế giới Overworld vào ban ngày khi Boss ở trạng thái Cuồng Nộ, bạn chắc chắn (100%) nhận được kiếm bất hoại <strong>Kaleidoscope</strong> và bùa bay <strong>Soaring Insignia</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Khung Vật phẩm & Công thức Chế tạo: Giáp & Phôi Rèn -->
+        <section id="recipe-armors">
+          <h2>
+            <span>6. Khung Vật Phẩm &amp; Công Thức Chế Tạo: Giáp &amp; Phôi Rèn</span>
+          </h2>
+          <p>
+            Hình ảnh Sprite gốc, chỉ số thuộc tính và công thức rèn tại <em>Altar of The Accursed</em> cho các bộ giáp và phôi nâng cấp:
+          </p>
+
+          <div class="item-recipe-grid">
+            <!-- Item 1: Hallowed Armor -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box armor-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/armor/hallowed/full.png" alt="Bộ Giáp Hallowed Armor" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Hallowed Armor</h3>
+                    <span class="mechanic-badge badge-hallow">Né Đòn Bất Tử</span>
+                  </div>
+                  <div class="item-stats-line">Giáp: 20 · Độ cứng: 12 · +10% Tốc chạy · +20% Kháng đẩy lùi</div>
+                  <p class="item-effect-desc">
+                    <strong>Set Bonus (Holy Protection):</strong> Sau 20s tích tụ, đòn sát thương tiếp theo đánh trúng bạn sẽ bị <strong>hủy hoàn toàn về 0</strong>, đồng thời bạn miễn nhiễm sát thương và đẩy lùi trong 5 giây kế tiếp (Hồi chiêu 16–22s).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed (Từng món)</span>
+                  <span>Giữ nguyên Enchant</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Giáp Netherite tương ứng</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Upgrade Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">4x Hallowed Ingot</span>
+                </div>
+                <p class="recipe-note">Ở bản v5: Ném 5 / 8 / 7 / 4 Hallowed Ingot lên bệ thờ cho Mũ / Áo / Quần / Giày.</p>
+              </div>
+            </article>
+
+            <!-- Item 2: Shulker Armor -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box armor-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/armor/shulker/full.png" alt="Bộ Giáp Shulker Armor" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Shulker Armor</h3>
+                    <span class="mechanic-badge badge-void">Giáp Phòng Thủ</span>
+                  </div>
+                  <div class="item-stats-line">Giáp: 24 · Độ cứng: 16 · +80% Kháng đẩy lùi · -10% Tốc chạy/đánh</div>
+                  <p class="item-effect-desc">
+                    <strong>Set Bonus:</strong> Giảm <strong>20% mọi sát thương nhận vào (Resistance I vĩnh viễn)</strong>, <strong>miễn nhiễm hiệu ứng Bay Lơ Lửng (Levitation) và Khô Héo (Wither)</strong>. Khi bị đánh có 33% tỉ lệ bắn 3 viên đạn Shulker đuổi theo kẻ tấn công.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed (Từng món)</span>
+                  <span>Giữ nguyên Enchant</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Giáp Netherite tương ứng</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Upgrade Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">4x Shulker Shell (hoặc 8x ở bản v5)</span>
+                </div>
+                <p class="recipe-note">Công thức này cũng dùng để nâng cấp Cúp, Rìu, Xẻng, Cuốc, Kiếm và Giáo Shulker.</p>
+              </div>
+            </article>
+
+            <!-- Item 3: Ancient / Champion Armor -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box armor-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/armor/ancient/full.png" alt="Bộ Giáp Ancient / Champion Armor" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Champion / Ancient Armor</h3>
+                    <span class="mechanic-badge badge-danger-alt">Cộng Dồn Sát Thương</span>
+                  </div>
+                  <div class="item-stats-line">Giáp: 20 · Độ cứng: 12 · +15% Tốc đánh · +10% Sát thương</div>
+                  <p class="item-effect-desc">
+                    <strong>Set Bonus (Wrath of The Ancients):</strong> Mỗi đòn chém trúng đích tăng <strong>+5% sát thương cho đòn tiếp theo</strong>, cộng dồn tối đa 5 lần (+25% sát thương, cộng với 10% sẵn có của giáp là <strong>+35% sát thương</strong>).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed (Từng món)</span>
+                  <span>Giữ nguyên Enchant</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Giáp Netherite tương ứng</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Upgrade Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">4x Chorus Plating (hoặc Ancient Plating)</span>
+                </div>
+                <p class="recipe-note">Cộng dồn trực tiếp với chỉ số +12% sát thương của quả Duskberry.</p>
+              </div>
+            </article>
+
+            <!-- Item 4: Floral Armor & Chorus Plating -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/chorus_plating.png" alt="Chorus Plating &amp; Floral Armor" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Chorus Plating &amp; Floral Armor</h3>
+                    <span class="mechanic-badge badge-stellar">Phôi Rèn &amp; Giáp Lá Anh Đào</span>
+                  </div>
+                  <div class="item-stats-line">Nguyên liệu rèn tại Altar of The Accursed</div>
+                  <p class="item-effect-desc">
+                    <strong>Chorus Plating</strong> dùng để rèn Giáp Champion và sách phép Book of Jinx. Bên cạnh đó, người chơi có thể rèn bộ <strong>Floral Armor</strong> bằng Lá Anh Đào (Cherry Leaves).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Công thức Phôi &amp; Giáp</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Chorus Plating = 1x Iron Ingot + 2x Popped Chorus Fruit</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Floral Armor = 1x Giáp Netherite + 1x Enderite Template + 8x Cherry Leaves</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 5: Hallowed Ingot -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/hallowed_ingot.png" alt="Phôi Hallowed Ingot" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Hallowed Ingot</h3>
+                    <span class="mechanic-badge badge-hallow">Đổi Dưới Nước The Hallow</span>
+                  </div>
+                  <div class="item-stats-line">Nguyên liệu rèn bộ giáp Hallowed Armor</div>
+                  <p class="item-effect-desc">
+                    Tìm thấy trong Hòm Câu Cá (Void Crates), rương End City, mua từ dân làng Armorer/Weaponsmith tại làng End (12 Emerald = 4 phôi) hoặc đổi trực tiếp từ Khối Sắt dưới nước.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách đổi: Nước Hồng Tím tại The Hallow</span>
+                  <span>Tỉ lệ 1 đổi 2</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Ném 1x Khối Sắt (Iron Block) xuống nước The Hallow</span>
+                  <span class="recipe-plus">→</span>
+                  <span class="recipe-ing">2x Hallowed Ingot</span>
+                </div>
+                <p class="recipe-note">Hoặc thả vào Vạc Nước đã pha bột Starlight Soot.</p>
+              </div>
+            </article>
+
+            <!-- Item 6: Enderite Shard & Upgrade Template -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/enderite_upgrade_smithing_template.png" alt="Khuôn Rèn Enderite Upgrade Smithing Template" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Enderite Template &amp; Enderite Shard</h3>
+                    <span class="mechanic-badge badge-void">Khuôn Nâng Cấp Đồ End</span>
+                  </div>
+                  <div class="item-stats-line">Nguyên liệu bắt buộc để nhân bản và nâng cấp đồ</div>
+                  <p class="item-effect-desc">
+                    Mở từ rương Vault trong <strong>End City</strong>. Khi tìm được khuôn mẫu đầu tiên, hãy đem về bệ thờ Altar of The Accursed để nhân bản thành 2 khuôn trước khi rèn giáp hoặc vũ khí.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed (Nhân bản 1 thành 2)</span>
+                  <span>Duplication Recipe</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Enderite Upgrade Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">9x Purpur Block</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">5x Enderite Shard</span>
+                </div>
+                <p class="recipe-note">Luôn chừa lại ít nhất 1 khuôn mẫu trong rương để nhân bản cho các lần sau.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 7. Khung Vật phẩm & Công thức Chế tạo: Vũ khí Cận chiến & Tầm xa -->
+        <section id="recipe-weapons">
+          <h2>
+            <span>7. Khung Vật Phẩm &amp; Công Thức Chế Tạo: Vũ Khí &amp; Cung Nỏ</span>
+          </h2>
+          <p>
+            Thông số sát thương, tốc độ đánh và cách chế tạo / săn tìm của 12 vũ khí cận chiến và tầm xa trong Stellarity:
+          </p>
+
+          <div class="item-recipe-grid">
+            <!-- Weapon 1: Dragonblade -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/dragonblade.png" alt="Kiếm Dragonblade" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Dragonblade</h3>
+                    <span class="mechanic-badge badge-void">1 Thanh Duy Nhất / Server</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 6 · Tốc đánh: 1.25 · Độ bền: Không hỏng (Unbreakable)</div>
+                  <p class="item-effect-desc">
+                    Chém trúng 3 phát tích đủ 3 <em>Dragon Stacks</em>, sau đó nhấn <strong>Shift</strong> để đấm văng mục tiêu đi 6.6 blocks, gây 7–24 sát thương nổ (lên tới <strong>32 sát thương nếu mục tiêu đập vào tường</strong> khi có Knockback II), xuyên 60% giáp và làm choáng 2 giây.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Bệ thờ Altar of The Accursed</span>
+                  <span>One-Per-World</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Cắm trên Altar of The Accursed sau khi Rồng Ender bị tiêu diệt lần đầu tiên</span>
+                </div>
+                <p class="recipe-note">Đặt vào Đe (Anvil) ghép với Kiếm Netherite để chuyển bùa Enchant sang Dragonblade.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 2: Tamaris -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/tamaris.png" alt="Kiếm Tamaris" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Tamaris</h3>
+                    <span class="mechanic-badge badge-danger-alt">Kết Liễu Dưới 25% HP</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 6 · Tốc đánh: 1.4 · Độ bền: 1562</div>
+                  <p class="item-effect-desc">
+                    Đòn đánh thường gây rút máu <em>Dark Decay</em> (xuyên 80% giáp, nhân đôi sát thương nếu ép bùa Curse of Vanishing). Khi quái còn dưới <strong>25% HP</strong> (Boss/Warden dưới <strong>10% HP</strong>), giữ <strong>Shift</strong> để dịch chuyển tới mục tiêu trong bán kính 16m và <strong>hạ gục tức thì (999 sát thương xuyên giáp)</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed / Boss Drop</span>
+                  <span>Giữ nguyên Enchant</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Netherite Sword</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">8x Enderite Shard</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Wither Skeleton Skull</span>
+                </div>
+                <p class="recipe-note">Ở bản v5, Tamaris cũng có 66% tỉ lệ rơi ra khi giết Boss Rồng Ender.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 3: Frigid Harvester -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/frigid_harvester.png" alt="Đao Frigid Harvester" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Frigid Harvester</h3>
+                    <span class="mechanic-badge badge-stellar">Cộng Sát Thương Vĩnh Viễn</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương gốc: 5 (+Tăng dần khi diệt quái) · Tốc đánh: 0.9</div>
+                  <p class="item-effect-desc">
+                    Mỗi con quái bị giết sẽ <strong>cộng thêm sát thương vĩnh viễn</strong> cho thanh đao và đổi hình dạng qua 4 mốc (+3 mở khóa <em>Chill</em> làm chậm, +6 mở khóa <em>Frostburn</em> đốt máu, +9 mở khóa <em>Chill II &amp; Frostburn II</em>).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Đới Băng Giá (Frozen Zone)</span>
+                  <span>Void Fishing / Mob Drop</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">10% mở từ Frozen Crate (Câu cá Void)</span>
+                  <span class="recipe-plus">hoặc</span>
+                  <span class="recipe-ing">3% rơi từ Stray đội mũ Kim Cương tại Frosted Hills</span>
+                </div>
+                <p class="recipe-note">Giết Wither hoặc Warden cộng +1.22 sát thương/con để lên mốc +9 nhanh hơn.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 4: Kaleidoscope -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/kaleidoscope.png" alt="Kiếm Kaleidoscope" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Kaleidoscope</h3>
+                    <span class="mechanic-badge badge-hallow">Sát Thương Tích Điện</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 7 – 30 · Tốc đánh: 1.2 · Độ bền: Không hỏng</div>
+                  <p class="item-effect-desc">
+                    Tự động nạp điểm Charge từ 0 lên 100 khi cầm trên tay chính. Ở mức 100 Charge, nhát chém tiếp theo tạo vụ nổ rộng 4.2m gây <strong>30 sát thương (7 gốc + 23 nổ xuyên 20% giáp)</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Boss Empress of Light (Ban Ngày)</span>
+                  <span>Tỉ lệ rơi 100%</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Hạ gục Empress of Light tại Overworld vào Ban Ngày (Daytime Enraged)</span>
+                </div>
+                <p class="recipe-note">Vũ khí có thuộc tính Unbreakable (không bao giờ gãy).</p>
+              </div>
+            </article>
+
+            <!-- Weapon 5: Sabrewing -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/sabrewing.png" alt="Cung Sabrewing" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Sabrewing</h3>
+                    <span class="mechanic-badge badge-stellar">Cung Bắn Xuyên Mục Tiêu</span>
+                  </div>
+                  <div class="item-stats-line">Loại: Cung (Bow) · Độ bền: 504 · Giữ cung 3 giây</div>
+                  <p class="item-effect-desc">
+                    Giữ dây cung đủ 3 giây để kích hoạt <em>Supercharge</em>: tăng <strong>+60% tốc độ bay và +60% sát thương mũi tên</strong>, đồng thời mũi tên xuyên qua mục tiêu đầu tiên để trúng con đứng sau.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Giữ nguyên Enchant Cung</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Bow</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">10x Feather</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">12x Gold Ingot</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Netherite Ingot</span>
+                </div>
+                <p class="recipe-note">Thích hợp để bắn tỉa Shulker từ xa.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 6: Sharanga & Spectral Fury -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/sharanga.png" alt="Cung Sharanga &amp; Spectral Fury" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Sharanga &amp; Spectral Fury</h3>
+                    <span class="mechanic-badge badge-void">Bắn Tia Thẳng Không Trọng Lực</span>
+                  </div>
+                  <div class="item-stats-line">Dùng đạn Spectral Arrow · Độ bền: 424</div>
+                  <p class="item-effect-desc">
+                    Đổi Mũi Tên Phát Sáng (Spectral Arrow) thành tia <em>Spectral Bolt</em> bay thẳng không bị rơi theo trọng lực, xuyên qua mọi kẻ địch trên đường bay (+20% sát thương) và phát nổ. Có 25%–50% tỉ lệ không tốn tên (với Infinity). Có thể nâng cấp lên <strong>Spectral Fury</strong> tại bệ thờ.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Cách lấy &amp; Nâng cấp lên Spectral Fury</span>
+                  <span>Stronghold / Bệ Thờ</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Sharanga: Rơi từ Illusioner (Stronghold 9%–18%) hoặc đổi 64 Emerald ở Fletcher End</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Spectral Fury = 1x Sharanga + 1x Enderite Template + 3x Diamond + 8x Phantom Membrane</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Weapon 7: Sandstorm Trident -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/sandstorm_trident.png" alt="Đinh ba Sandstorm Trident" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Sandstorm Trident</h3>
+                    <span class="mechanic-badge badge-stellar">Đinh Ba Bão Cát</span>
+                  </div>
+                  <div class="item-stats-line">Nâng cấp từ Đinh Ba (Trident)</div>
+                  <p class="item-effect-desc">
+                    Đinh ba nâng cấp bằng <em>Breeze Rod</em> và <em>Sand Rune</em>, tạo lốc cát gây sát thương diện rộng và dùng được ngay trong môi trường không có nước của The End.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Giữ nguyên Enchant Đinh Ba</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Trident</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Upgrade Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Sand Rune</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">2x Breeze Rod</span>
+                </div>
+                <p class="recipe-note">Nên ép kèm bùa Loyalty để đinh ba tự bay về nếu lỡ ném xuống Void.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 8: Clockwork Crossbow -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/clockwork_crossbow.png" alt="Nỏ Clockwork Crossbow" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Clockwork Crossbow</h3>
+                    <span class="mechanic-badge badge-info">Nỏ Tự Nạp Đạn</span>
+                  </div>
+                  <div class="item-stats-line">Tốc bắn: 3.33 tên/giây (6 ticks) · Độ bền: 365</div>
+                  <p class="item-effect-desc">
+                    Tự động nạp tên mỗi 0.3 giây khi cầm trên tay, bắn ngay khi bấm chuột phải và <strong>bỏ qua thời gian miễn nhiễm sát thương (i-frames)</strong> của quái. Bùa <em>Quick Charge III</em> giúp có <strong>54% tỉ lệ không tốn tên</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Stronghold / Làng End</span>
+                  <span>Pre-Dragon Weapon</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Rơi từ Pillager trong Stronghold (7% – 13% với Looting III)</span>
+                  <span class="recipe-plus">hoặc</span>
+                  <span class="recipe-ing">Đổi 1x Crossbow + 64x Emerald tại Fletcher (End Village)</span>
+                </div>
+                <p class="recipe-note">Khi ép bùa Multishot, cả 3 mũi tên đều gây sát thương cùng lúc khi bắn tầm gần.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 9: Prismatic Punch & Stella -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/prismatic_punch.png" alt="Nỏ Prismatic Punch" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Prismatic Punch &amp; Kiếm Stella</h3>
+                    <span class="mechanic-badge badge-hallow">Đốt Lửa Prismatic Inferno</span>
+                  </div>
+                  <div class="item-stats-line">Đạn nổ tự tìm mục tiêu &amp; Cộng dồn 5 tầng lửa</div>
+                  <p class="item-effect-desc">
+                    <strong>Prismatic Punch</strong> biến tên thường thành cầu năng lượng tự tìm mục tiêu và phát nổ (4–10 sát thương). <strong>Kiếm Stella</strong> (độ bền 2031) cộng dồn tới 5 tầng lửa <em>Prismatic Inferno</em> đốt máu theo thời gian.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Boss Empress of Light (Ban Đêm)</span>
+                  <span>Tỉ lệ rơi 33%</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Hạ gục Empress of Light tại The End hoặc vào Ban Đêm</span>
+                </div>
+                <p class="recipe-note">Ở bản cũ, Prismatic Punch rèn từ 1x Crossbow + 24x Pixie Dust + 6x Diamond.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 10: Sariel -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/sariel.png" alt="Dao găm Sariel" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Sariel</h3>
+                    <span class="mechanic-badge badge-hallow">Dao Găm Hồi Máu</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 4 · Tốc đánh: 2.3 · Độ bền: 316</div>
+                  <p class="item-effect-desc">
+                    Mỗi nhát chém gây từ 3 sát thương trở lên có <strong>18% tỉ lệ tạo ra Cầu Hồi Phục (Healing Orb)</strong> bay về phía người chơi đứng gần nhất và hồi <strong>4 Máu (2 Tim)</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Vũ khí Phụ trợ</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Iron Sword</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">5x Gold Ingot</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">10x Pixie Dust (Săn Pixie ở The Hallow)</span>
+                </div>
+                <p class="recipe-note">Sửa độ bền trên Đe bằng Phôi Sắt (Iron Ingot).</p>
+              </div>
+            </article>
+
+            <!-- Weapon 11: Spirit Dagger -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/spirit_dagger.png" alt="Dao găm Spirit Dagger" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Spirit Dagger</h3>
+                    <span class="mechanic-badge badge-void">Dịch Chuyển Tầm Xa 70m</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 5 · Tốc đánh: 1.9 · Cầm 2 tay để kích hoạt</div>
+                  <p class="item-effect-desc">
+                    Khi cầm <strong>2 thanh Spirit Dagger ở cả 2 tay</strong>, đánh quái có 50% tỉ lệ gọi ra một Linh Hồn (Spirit). Nhìn vào Linh Hồn trong 0.35s để <strong>dịch chuyển tới vị trí đó (tối đa 70m)</strong>, chém diện rộng 4 sát thương xuyên 100% giáp và nhận +4 Máu Ảo, +2 Sát thương, +30% Tốc chạy trong 5 giây.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Săn Phantom tại The End</span>
+                  <span>Cần đủ 2 thanh</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Rơi từ Phantom sinh ra trong The End (9% gốc – 12% với Looting III)</span>
+                </div>
+                <p class="recipe-note">Cấp bùa Enchant (Sweeping Edge, Fire Aspect, Knockback) trên cả 2 thanh sẽ cộng gộp lại với nhau.</p>
+              </div>
+            </article>
+
+            <!-- Weapon 12: Zephyr -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/zephyr.png" alt="Kiếm ngắn Zephyr" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Zephyr</h3>
+                    <span class="mechanic-badge badge-stellar">+27.5% Tốc Độ Chạy</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 7 · Tốc đánh: 1.6 · Độ bền: 412</div>
+                  <p class="item-effect-desc">
+                    Cầm ở tay chính tăng sẵn <strong>+7.5% tốc chạy</strong>. Mỗi khi giết 1 con quái sẽ nhận thêm <strong>Speed I (+20% tốc chạy, tổng cộng +27.5%)</strong> trong 25 giây, cộng dồn thời gian tối đa lên 2 phút 45 giây.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Rương Đỉnh Tháp End City</span>
+                  <span>Top Tower Chest</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Mở từ Rương Đỉnh Tháp (Top Tower Chests) tại End City (14% – 35%)</span>
+                </div>
+                <p class="recipe-note">Sửa độ bền trên Đe bằng Phôi Sắt (Iron Ingot).</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 8. Khung Vật phẩm & Công thức Chế tạo: Sách Phép & Vật phẩm Phụ trợ -->
+        <section id="recipe-spellbooks">
+          <h2>
+            <span>8. Khung Vật Phẩm &amp; Công Thức Chế Tạo: Sách Phép &amp; Vật Phẩm Phụ Trợ</span>
+          </h2>
+          <p>
+            Danh sách các cuốn Sách Phép (Spellbooks) và Vật phẩm cầm tay (Trinkets) dùng để di chuyển, hồi máu và khảm khoáng sản:
+          </p>
+
+          <div class="item-recipe-grid">
+            <!-- Trinket 1: Cursed Tome / Endonomicon -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/cursed_tome.png" alt="Sách Cursed Tome / Endonomicon" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Cursed Tome / Endonomicon</h3>
+                    <span class="mechanic-badge badge-void">Sách Tra Cứu Trong Game</span>
+                  </div>
+                  <div class="item-stats-line">Tự động hiện thêm trang mới khi bạn nhặt nguyên liệu mới</div>
+                  <p class="item-effect-desc">
+                    Cuốn sách hướng dẫn trong game của Stellarity. Ban đầu các trang sẽ để trống và mở khóa dần theo tiến trình khám phá của từng người chơi.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Món đồ mở đầu</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Ném 1x Sách Phù Phép bất kỳ (Enchanted Book) lên bệ thờ Altar of The Accursed</span>
+                </div>
+                <p class="recipe-note">Mở khóa thành tựu "An Introduction to Dark Magic".</p>
+              </div>
+            </article>
+
+            <!-- Trinket 2: Book of Conveyance -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/book_of_conveyance.png" alt="Sách phép Book of Conveyance" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Book of Conveyance</h3>
+                    <span class="mechanic-badge badge-stellar">Dịch Chuyển Điều Hướng</span>
+                  </div>
+                  <div class="item-stats-line">Hồi chiêu: 16 giây · Không tốn Ngọc Ender</div>
+                  <p class="item-effect-desc">
+                    Chuột phải bắn ra một tia sáng bay theo hướng bạn nhìn trong 3 giây. Khi tia sáng chạm vào khối bất kỳ, bạn sẽ được <strong>dịch chuyển ngay tới đó mà không bị trừ máu</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar / Stronghold / Làng End</span>
+                  <span>3 Cách Lấy</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Bệ thờ Altar: 1x Book + 16x Ender Pearl + 32x Enderite Shard</span>
+                </div>
+                <p class="recipe-note">Hoặc rơi từ Evoker trong Stronghold (5%–7%) / đổi 64 Emerald tại Librarian làng End.</p>
+              </div>
+            </article>
+
+            <!-- Trinket 3: Book of Updraft & Book of Light -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/book_of_updraft.png" alt="Sách phép Book of Updraft" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Book of Updraft &amp; Book of Light</h3>
+                    <span class="mechanic-badge badge-info">Đẩy Lên 22.5m &amp; Vòng Hồi Máu</span>
+                  </div>
+                  <div class="item-stats-line">Hồi chiêu: 16s (Updraft) / 31s thực tế (Light)</div>
+                  <p class="item-effect-desc">
+                    <strong>Book of Updraft:</strong> Đẩy người chơi vọt lên cao <strong>22.5 blocks</strong> (cao hơn 50% nếu đang bay Elytra), cho lượn 7s rồi cấp <em>Slow Falling</em> tới lúc chạm đất. <strong>Book of Light:</strong> Tạo vòng sáng bán kính 5.5m trong 17s cấp <strong>Regeneration II, Resistance I</strong> và xóa hiệu ứng Suy Yếu/Làm Chậm.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Stronghold / Làng End</span>
+                  <span>Hỗ trợ Di chuyển &amp; Tổ đội</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Rơi từ Evoker trong Stronghold (15%–21% tổng tỉ lệ rơi sách)</span>
+                  <span class="recipe-plus">hoặc</span>
+                  <span class="recipe-ing">Đổi 1x Enchanted Book + 64x Emerald tại Librarian (End Village)</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trinket 4: Book of Jinx & Nature's Wrath -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/natures_wrath.png" alt="Sách phép Nature's Wrath" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Nature's Wrath &amp; Book of Jinx</h3>
+                    <span class="mechanic-badge badge-purple">Gọi Sói Tinh Linh</span>
+                  </div>
+                  <div class="item-stats-line">Mở khóa 9 hệ đạn khi cầm sách đi qua các quần xã</div>
+                  <p class="item-effect-desc">
+                    <strong>Nature's Wrath:</strong> Chuột phải bắn đạn Tinh Linh tự tìm quái; giữ <strong>Shift + Chuột phải</strong> gọi ra tối đa <strong>5 con Sói Tinh Linh (Spirit Wolves)</strong> đánh phụ trong 20s. Cầm sách trên tay khi đi qua Rừng, Nether, Biển, Núi, Tuyết, Đầm Lầy, Deep Dark và The Hallow để mở khóa 9 hệ đạn.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Cách lấy &amp; Công thức Bệ Thờ</span>
+                  <span>Spellbooks</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Nature's Wrath: Đổi 1x Enchanted Book + 12x Oak Sapling tại Librarian (Làng End)</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Book of Jinx (Bệ thờ Altar) = 1x Book + 8x Chorus Plating + 10x Enderite Shard</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trinket 5: Void Pendant -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/void_pendant.png" alt="Dây chuyền Void Pendant" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Void Pendant</h3>
+                    <span class="mechanic-badge badge-void">Khảm 9 Loại Khoáng Sản</span>
+                  </div>
+                  <div class="item-stats-line">Khảm ngọc tại Altar of The Accursed</div>
+                  <p class="item-effect-desc">
+                    Dây chuyền phụ trợ cho phép khảm 1 trong <strong>9 loại khoáng sản</strong> để cộng thêm chỉ số riêng (Kim cương, Netherite, Ngọc lục bảo, Vàng, Sắt, Đồng, Lapis, Thạch anh tím, Thạch anh Nether).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed (Khảm ngọc)</span>
+                  <span>9 Biến Thể</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Void Pendant</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Shard</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Khoáng sản (Diamond / Netherite Ingot / Emerald / Gold / Iron / Copper / Lapis / Amethyst / Quartz)</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trinket 6: Satchel of Voids -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/satchel_of_voids.png" alt="Túi Satchel of Voids" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Satchel of Voids</h3>
+                    <span class="mechanic-badge badge-void">Dùng Bệ Thờ Từ Xa</span>
+                  </div>
+                  <div class="item-stats-line">Mở tính năng Altar of The Accursed mọi nơi</div>
+                  <p class="item-effect-desc">
+                    Túi phụ trợ kết nối với <em>Altar of The Accursed</em>, giúp bạn rèn đồ ngay tại chỗ mà không cần chạy về Đảo Chính.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed (5 Nguyên liệu)</span>
+                  <span>Utility Trinket</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Bundle</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">64x Starlight Soot</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">64x Enderite Shard</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">4x Netherite Ingot</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">2x Nether Star</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trinket 7: Crest of The End & Ender Insignia -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/ender_insignia.png" alt="Ender Insignia &amp; Khiên Crest of The End" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Crest of The End &amp; Ender Insignia</h3>
+                    <span class="mechanic-badge badge-void">Khiên Tích Lực &amp; Hồi Máu Khi Ngồi</span>
+                  </div>
+                  <div class="item-stats-line">Độ bền Khiên: 442 · Hồi máu tới Regeneration IV</div>
+                  <p class="item-effect-desc">
+                    <strong>Crest of The End:</strong> Khiên chắn tích lại sát thương đỡ được để cộng tối đa <strong>+8 sát thương (4 Tim)</strong> vào nhát chém cận chiến kế tiếp. <strong>Ender Insignia:</strong> Giữ <strong>Shift</strong> khi cầm trên tay sẽ kích hoạt <em>Regeneration I $\rightarrow$ IV</em> (hồi tới 3.33 máu/giây).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed / Rồng Drop</span>
+                  <span>Giữ nguyên Enchant Khiên</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Crest of The End (Bệ thờ) = 1x Shield + 1x Enderite Template + 1x Netherite Ingot</span>
+                </div>
+                <p class="recipe-note">Cả hai món đều có 66% tỉ lệ rơi ra khi diệt Rồng Ender.</p>
+              </div>
+            </article>
+
+            <!-- Trinket 8: Duskberry -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/duskberry.png" alt="Quả Duskberry" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Duskberry</h3>
+                    <span class="mechanic-badge badge-hallow">Vật Phẩm Cầm Tay Phụ</span>
+                  </div>
+                  <div class="item-stats-line">+12% Sát thương · +10% Tốc chạy · +4% Tốc đánh · Night Vision</div>
+                  <p class="item-effect-desc">
+                    Cầm ở <strong>tay phụ (Offhand)</strong> hoặc tay chính sẽ nhận <strong>+12% Sát thương, +10% Tốc chạy, +4% Tốc đánh và Nhìn Đêm (Night Vision)</strong>. <em>(Lưu ý: Ăn trực tiếp sẽ bị dính 5 hiệu ứng debuff trong 36 giây, chỉ nên ăn khi cần làm thành tựu How Did We Get Here).</em>
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Tàu End Ship tại The Hallow</span>
+                  <span>Tỉ lệ 57.14%</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Rương trên Tàu End Ship thuộc quần xã The Hallow (57.14%)</span>
+                  <span class="recipe-plus">hoặc</span>
+                  <span class="recipe-ing">Mở từ Hallowed Crate (Câu cá Void)</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trinket 9: Soaring Insignia, Prismatic Pearl & Starstruck Carcanet -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/soaring_insignia.png" alt="Soaring Insignia" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Soaring Insignia, Prismatic Pearl &amp; Carcanet</h3>
+                    <span class="mechanic-badge badge-hallow">Đồ Rơi Từ Empress of Light</span>
+                  </div>
+                  <div class="item-stats-line">Bay lơ lửng · Ngọc Ender tự hồi (5s) · Sao rơi phản đòn</div>
+                  <p class="item-effect-desc">
+                    <strong>Soaring Insignia:</strong> Cầm trên tay và giữ Shift + nhìn lên/xuống để <strong>bay lơ lửng trên không</strong>. <strong>Prismatic Pearl:</strong> Ngọc Ender bay xa hơn 25% và <strong>tự trả về túi đồ sau 5 giây</strong> (dùng không giới hạn). <strong>Starstruck Carcanet:</strong> Khi bị đánh sẽ gọi 3 ngôi sao rơi xuống gây 4 sát thương nổ xuyên 50% giáp.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Boss Empress of Light</span>
+                  <span>Boss Drops</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Prismatic Pearl &amp; Starstruck Carcanet: 33% rơi vào Ban Đêm / Tại End</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Soaring Insignia: 20% vào Ban Đêm (100% nếu diệt vào Ban Ngày ở Overworld)</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trinket 10: Fisher of Voids -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/fisher_of_voids.png" alt="Cần câu Fisher of Voids" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Fisher of Voids</h3>
+                    <span class="mechanic-badge badge-purple">Cần Câu Hư Không</span>
+                  </div>
+                  <div class="item-stats-line">Dùng để câu cá và vớt hòm dưới vực Void</div>
+                  <p class="item-effect-desc">
+                    Cần câu chuyên dùng để thả phao xuống khoảng không Void, câu cá tăng máu <em>Crystal Heartfish</em> và vớt 3 loại hòm <em>End Crate, Hallowed Crate, Frozen Crate</em>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box drop-recipe">
+                <div class="recipe-station-header">
+                  <span>Cách lấy: Bệ thờ Altar / Rương End City</span>
+                  <span>Void Fishing Tool</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Rèn từ Cần câu (Fishing Rod) tại Altar of The Accursed hoặc mở rương End City</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 9. Khung Vật phẩm & Công thức Chế tạo: Thực phẩm & Thuốc (Cauldron Crafting) -->
+        <section id="recipe-cauldron">
+          <h2>
+            <span>9. Khung Vật Phẩm &amp; Công Thức Nấu Vạc: Thức Ăn &amp; Thuốc</span>
+          </h2>
+          <p>
+            Công thức lấy trực tiếp từ tệp <code>cauldron_crafting/crafting/checks.mcfunction</code> của Stellarity. Đổ bình <strong>Dragon's Breath</strong> vào Vạc Nước rồi thả nguyên liệu theo đúng số lượng:
+          </p>
+
+          <div class="item-recipe-grid">
+            <!-- Cauldron 1: Golden Chorus Fruit -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/golden_chorus_fruit.png" alt="Quả Golden Chorus Fruit" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Golden Chorus Fruit</h3>
+                    <span class="mechanic-badge badge-stellar">Dịch Chuyển Ngẫu Nhiên 2500m</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 3 Dragon's Breath · Nguyên liệu nấu Phở</div>
+                  <p class="item-effect-desc">
+                    Ăn vào sẽ dịch chuyển ngẫu nhiên người chơi tới một mặt đất an toàn trong bán kính <strong>2500 blocks</strong>. Món này cũng là nguyên liệu bắt buộc để nấu <strong>Phở (Pho)</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron (Tốn 3 Breath)</span>
+                  <span>Hoặc 14% ở Rương End City</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Chorus Fruit</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Khối Vàng (Gold Block)</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cauldron 2: Pho & Shepherd's Pie -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/pho.png" onerror="this.src='https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/golden_chorus_fruit.png'" alt="Phở &amp; Bánh Shepherd's Pie" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Phở (Pho) &amp; Shepherd's Pie</h3>
+                    <span class="mechanic-badge badge-hallow">Thức Ăn Hồi Phục Cao</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 4 Breath (Phở) / 5 Breath (Shepherd's Pie)</div>
+                  <p class="item-effect-desc">
+                    Hai món ăn hồi nhiều thanh thức ăn (Hunger), điểm bão hòa (Saturation) cao và cấp thêm hiệu ứng hỗ trợ trước khi đánh Boss.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>2 Công thức Món Chính</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Phở (4 Breath) = 1x Golden Chorus Fruit + 1x Bowl + 1x Grilled Enderman Flesh</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Shepherd's Pie (5 Breath) = 1x Shulker Body + 1x Golden Carrot + 1x Baked Potato + 2x Chorus Fruit</span>
+                </div>
+                <p class="recipe-note">Grilled Enderman Flesh (1 Breath) = 1x Enderman Flesh + 1x Blaze Powder.</p>
+              </div>
+            </article>
+
+            <!-- Cauldron 3: Chorus Stew, Pie, Sushi & Prismatic Sushi -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Prismatic-Shards/Stellarity/v6/resource_pack/assets/stellarity/textures/item/chorus_stew.png" onerror="this.src='https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/pixie_dust.png'" alt="Chorus Stew &amp; Sushi" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Chorus Stew, Chorus Pie &amp; Sushi</h3>
+                    <span class="mechanic-badge badge-stellar">Đồ Ăn Đi Đường</span>
+                  </div>
+                  <div class="item-stats-line">Chi phí Vạc: 1 – 2 Dragon's Breath</div>
+                  <p class="item-effect-desc">
+                    Chế biến Quả Chorus và cá câu được tại The End thành đồ ăn hồi máu ổn định, không làm nhân vật bị dịch chuyển ngẫu nhiên như khi ăn quả Chorus sống.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron (1 – 2 Breath)</span>
+                  <span>4 Công thức Nhanh</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Chorus Stew (2 Breath) = 1x Chorus Fruit + 1x Chorus Flower + 1x Bowl</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Chorus Pie (2 Breath) = 1x Chorus Fruit + 1x Sugar + 1x Ender Egg</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Sushi (1B) = 1x Ender Koi + 1x Dried Kelp | Prismatic Sushi (2B) = 1x Prismite + 1x Dried Kelp</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cauldron 4: Combat & Survival Potions -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/pixie_dust.png" alt="Thuốc Cauldron Potions" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Thuốc Pha Vạc (Cauldron Potions)</h3>
+                    <span class="mechanic-badge badge-void">9 Loại Thuốc Mới</span>
+                  </div>
+                  <div class="item-stats-line">Tăng thời gian bằng Redstone hoặc lên cấp II bằng Glowstone/Starlight Soot</div>
+                  <p class="item-effect-desc">
+                    Pha trực tiếp trong Vạc Hơi Thở Rồng: tăng máu tối đa (<em>Lifeforce</em>), giảm sát thương nhận vào (<em>Endurance</em>), hồi máu nhanh (<em>Regeneraga / Royal Jelly</em>) và làm sáng mạch quặng (<em>Spelunker</em>).
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box cauldron-recipe">
+                <div class="recipe-station-header">
+                  <span>Nơi nấu: Breath Cauldron</span>
+                  <span>Kèm 1x Glass Bottle</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">Endurance (2B): Nether Wart + Iron Ingot + Popped Chorus Fruit</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Lifeforce (3B): Nether Wart + Prismite + Starlight Soot</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Regeneraga (4B): Nether Wart + Crimson Tigerfish + Prismite + Glistering Melon + Ghast Tear</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Royal Jelly (5B): Honey Bottle + Starlight Soot + 2x Amethyst Shard</span>
+                </div>
+                <div class="recipe-ingredients" style="margin-top: 4px;">
+                  <span class="recipe-ing">Spelunker (2B): Nether Wart + Gold Ingot + Mushroom | Luck (5B): Nether Wart + Diamond + 2x Short Grass</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 10. Bản quyền & Nguồn dữ liệu -->
+        <section id="attribution">
+          <h2>
+            <span>10. Bản quyền Tác giả &amp; Nguồn Dữ liệu Chính thức</span>
+          </h2>
+          <p>
+            Thông số trang bị, công thức tệp lệnh <code>.mcfunction</code> và hình ảnh minh họa trên trang này thuộc về dự án <strong>Stellarity</strong>:
+          </p>
+
+          <div class="attribution-card">
+            <h3>Thông tin Bản quyền Stellarity (Copyright &amp; Attribution)</h3>
+            <ul>
+              <li><strong>Tác giả &amp; Nhóm phát triển:</strong> Phát triển chính bởi <strong>kohara</strong> (trước đây là <em>FokaStudio's Ender Expansion</em>, bắt đầu từ bản port của <em>Far End</em> do <em>Hex</em> tạo), hiện được duy trì bởi nhóm <strong>Prismatic Shards / Void Realms</strong>.</li>
+              <li><strong>Bản quyền Hình ảnh &amp; Texture:</strong> Ảnh chụp khung cảnh in-game thuộc bản quyền của <strong>Dat1Mexican</strong>, <strong>Opliz</strong>, <strong>kohara</strong> và <strong>BananaKingXO</strong>. Icon dự án bởi <strong>MidasDaEpik</strong>; họa sĩ vẽ Sprite vật phẩm gồm <strong>kohara</strong> và <strong>YaGirlGiulles</strong>.</li>
+              <li><strong>Giấy phép sử dụng (License):</strong> Phát hành công khai trên Modrinth và GitHub, cho phép sử dụng trên máy chủ Minecraft kèm ghi nhận tác giả.</li>
+            </ul>
+
+            <div class="attribution-links">
+              <a href="https://modrinth.com/datapack/stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                Stellarity trên Modrinth
+              </a>
+              <a href="https://github.com/Void-Realms/Stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                GitHub (Void-Realms/Stellarity)
+              </a>
+              <a href="https://github.com/Prismatic-Shards/Stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                GitHub (Prismatic-Shards v6)
+              </a>
+              <a href="https://prismaticshards.wiki.gg/wiki/Stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                Wiki Chính Thức (prismaticshards.wiki.gg)
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-link">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="32" height="32">
+            <span class="brand-name">LunarChill</span>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và gắn kết dành cho cộng đồng người chơi Việt Nam.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Điều hướng</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang Tân thủ</a></li>
+            <li><a href="advanced-guide.html">Hướng dẫn Chi tiết</a></li>
+            <li><a href="the-end.html">Tổng quan The End</a></li>
+            <li><a href="stellarity.html">Chuyên đề Stellarity</a></li>
+            <li><a href="nullscape.html">Chuyên đề Nullscape</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord">Máy chủ Discord</a></li>
+            <li><a href="towns.html">Danh sách Thị trấn</a></li>
+            <li><a href="gallery.html">Triển lãm Ảnh</a></li>
+            <li><a href="rules.html">Nội quy Server</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2024 - 2026 <strong>LunarChill.Club</strong>. Không trực thuộc Mojang AB hay Microsoft. Stellarity thuộc bản quyền của kohara &amp; Prismatic Shards.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -21,6 +21,14 @@ Toàn bộ mã nguồn trang web được bố trí trực tiếp tại thư m�
 LunarChill.Club-Website/
 ├── index.html                 # Trang chủ (Homepage: Hero, Status, Quick Join, Features, Community)
 ├── guide.html                 # Cẩm nang tân thủ & Bảng tra cứu lệnh in-game (/guide)
+├── advanced-guide.html        # Hướng dẫn chi tiết & cơ chế sâu (/advanced-guide)
+├── the-end.html               # Tổng quan The End & Luật Sinh Tồn (/the-end)
+├── stellarity.html            # Chuyên đề Stellarity: 23 Quần xã & Chế tạo (/stellarity)
+├── nullscape.html             # Chuyên đề Nullscape: Địa hình 384 Blocks (/nullscape)
+├── mods.html                  # Cẩm nang Mod Client & Tối ưu hiệu năng (/mods)
+├── low-end-mods.html          # Trang tối ưu máy yếu độc lập (/low-end-mods)
+├── towns.html                 # Thị trấn Towny & danh bạ lãnh thổ (/towns)
+├── gallery.html               # Triển lãm ảnh in-game cộng đồng (/gallery)
 ├── rules.html                 # Nội quy máy chủ & Hướng dẫn mở Ticket khiếu nại (/rules)
 ├── terms.html                 # Điều khoản dịch vụ phi thương mại (/terms)
 ├── privacy.html               # Chính sách bảo mật tuân thủ Luật 91/2025 & NĐ 356/2025 (/privacy)
@@ -32,22 +40,30 @@ LunarChill.Club-Website/
 │   │   ├── base.css           # Reset CSS, typography cơ bản, utility classes
 │   │   ├── components.css     # Nút bấm, cards kính mờ, badge trạng thái, toast notification
 │   │   ├── layout.css         # Header navbar, mobile drawer, footer, container grid
-│   │   └── pages/             # Style đặc thù cho từng trang (home.css, guide.css, legal.css)
+│   │   └── pages/             # Style đặc thù cho từng trang
 │   │       ├── home.css
 │   │       ├── guide.css
+│   │       ├── advanced-guide.css
+│   │       ├── the-end.css    # CSS chuyên biệt cho 3 trang The End (Scenery & Recipe Frames)
+│   │       ├── mods.css
+│   │       ├── towns.css
+│   │       ├── gallery.css
 │   │       └── legal.css
 │   ├── js/
 │   │   ├── config.js          # Cấu hình địa chỉ IP server, port, link Discord, API endpoint
 │   │   ├── status-service.js  # Module quản lý trạng thái máy chủ (mcstatus.io, cache, 5 states)
 │   │   ├── clipboard.js       # Module 1-Click Copy IP và Toast notification phản hồi
-│   │   └── main.js            # Khởi tạo navigation, mobile drawer toggle, accordions
+│   │   └── main.js            # Khởi tạo navigation, mobile drawer toggle, accordions, gallery filter
 │   └── images/
-│       ├── Lunar_Logo.png     # Asset huy hiệu logo tròn chính thức
+│       ├── logo.png           # Asset huy hiệu logo tròn chính thức
+│       ├── logo.webp          # Logo WebP nén tối ưu
+│       ├── logo-small.webp    # Logo nhỏ cho header/footer
 │       ├── favicon.ico        # Icon tab trình duyệt
-│       └── screenshots/       # Thư mục ảnh chụp in-game / Community Showcase (định dạng WebP)
+│       ├── minecraft/         # Texture gốc 16x16 trích xuất từ Minecraft
+│       └── showcase/          # Thư mục ảnh chụp in-game / Community Showcase (định dạng WebP)
 │
 ├── docs/                      # Hệ thống tài liệu dự án (Obsidian Vault)
-└── vercel.json                # Cấu hình định tuyến sạch (Clean URLs: /guide, /rules, /terms)
+└── vercel.json                # Cấu hình định tuyến sạch (Clean URLs: /the-end, /stellarity, /nullscape, ...)
 ```
 
 ---

@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/04 - Feedbacks/Dev's Notes.md",
+                "file": "docs/03 - Development/Technical Plan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dev's Notes"
+              "title": "Technical Plan"
             }
           }
         ],
@@ -233,10 +233,15 @@
   },
   "active": "aedfe41b28c5a827",
   "lastOpenFiles": [
+    "docs/03 - Development/Test Matrix & Bug Tracking.md",
+    "docs/04 - Feedbacks/Feature Backlog & Future Improvements.md",
+    "nullscape.html",
+    "stellarity.html",
+    "docs/04 - Feedbacks/Dev's Notes.md",
+    "the-end.html",
+    "assets/css/pages/the-end.css",
     "mods.html",
     "docs/04 - Feedbacks/Player Feedback & Suggestions.md",
-    "docs/04 - Feedbacks/Feature Backlog & Future Improvements.md",
-    "docs/04 - Feedbacks/Dev's Notes.md",
     "docs/superpowers/specs/2026-11-05-homepage-looping-video-design.md",
     "low-end-mods.html",
     "docs/04 - Feedbacks",
@@ -244,11 +249,6 @@
     "assets/css/pages/advanced-guide.css",
     "assets/images/hero-video-poster.webp",
     "tools/part_main.mp4",
-    "tools/part_tail.mp4",
-    "assets/videos/hero-ambient-loop.mp4",
-    "tools/raw_clip.mp4",
-    "tools/raw_clip.mp4.part",
-    "scripts/process-hero-video.ps1",
     "docs/superpowers/plans/2026-11-05-homepage-looping-video.md",
     "docs/04 - Admin's Notes/Feature Backlog & Future Improvements.md",
     "assets/images/minecraft/oak_tree.png",
@@ -272,7 +272,6 @@
     "docs/03 - Development/Server Features & Mechanics.md",
     "docs/03 - Development/Technical Plan.md",
     "docs/03 - Development/Content & Data Registry.md",
-    "docs/03 - Development/Test Matrix & Bug Tracking.md",
     "docs/03 - Development/Deployment & Handover.md",
     "docs/02 - Design/Asset Inventory & Media Guidelines.md",
     "docs/02 - Design/Brand Guidelines.md",

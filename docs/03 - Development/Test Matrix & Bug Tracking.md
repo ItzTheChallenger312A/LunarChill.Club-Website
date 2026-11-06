@@ -41,6 +41,9 @@
 | **TC-10** | Animation lửa trại (The Campsite Horizon) | Sprite 8-frame chạy bập bùng bằng CSS `steps(8)` êm dịu, khói bay tự nhiên | ✅ Đạt |
 | **TC-11** | Cấu trúc Towns (`towns.html`) & Gallery (`gallery.html`) | Hiển thị trung thực khung chờ dữ liệu thật từ BQT (Anti-Slop) | ✅ Đạt |
 | **TC-12** | Deep QA Audit toàn bộ 8 trang HTML (Links, Assets, Drawer, Canonical, Clipboard) | 0 link hỏng, 0 asset thiếu, 0 lỗi thương hiệu cũ, clean URLs đồng bộ Vercel | ✅ Đạt |
+| **TC-13** | Điều hướng và hiển thị The End Hub (`the-end.html`) | Hiển thị 4 luật sinh tồn, bảng so sánh Stellarity vs Nullscape, subnav hoạt động mượt | ✅ Đạt |
+| **TC-14** | Tra cứu Stellarity (`stellarity.html`) | 12 khung cảnh, bảng 23 biome, 32 khung công thức chế tạo hiển thị ảnh sprite và nguyên liệu chuẩn | ✅ Đạt |
+| **TC-15** | Tra cứu Nullscape (`nullscape.html`) | 13 khung cảnh 384 blocks, 4 biome đặc hữu, thông số kỹ thuật và bản quyền Stardust Labs | ✅ Đạt |
 
 ---
 
@@ -74,3 +77,5 @@
 | **BUG-13** | P1 | Tên thương hiệu còn sót `LunarChillSMP` | Thay thế triệt để thành `LunarChill.Club` trên 100% tệp tin | 🟢 Đã sửa |
 | **BUG-14** | P1 | `towns.html` & `gallery.html` dùng thẻ canonical có đuôi `.html` và thiếu rewrite trong `vercel.json` | Đồng bộ canonical về clean URLs (`/towns`, `/gallery`) và thêm rewrite explicit trong `vercel.json` | 🟢 Đã sửa |
 | **BUG-15** | P0 | Cổng Bedrock khác cổng Java (19143 vs 25572) gây nhầm lẫn khi người chơi vào game | Đồng nhất port `25572` cho cả Java & Bedrock trên toàn bộ `config.js`, UI các thẻ kết nối và 8 trang HTML, kèm cơ chế fallback chuyển tiếp thông minh | 🟢 Đã sửa |
+| **BUG-16** | P2 | Ký tự tiếng Thái thừa (`เธอ`) trong đoạn mô tả Boss Empress of Light trên `stellarity.html` | Xóa ký tự thừa, tra soát lại toàn bộ văn bản | 🟢 Đã sửa |
+| **BUG-17** | P1 | Văn phong AI slop (từ ngữ sáo rỗng, tên Hán-Việt/kiếm hiệp tự chế, em-dash `—`, hover giả) trên các trang The End | Thực hiện rà soát Anti-Slop Writing & Design toàn diện: đổi tên vật phẩm/quần xã về chuẩn game, tắt hover giả trên static card, căn `tabular-nums` | 🟢 Đã sửa |

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The End: Nullscape, Stellarity &amp; Luật Sinh Tồn | LunarChill 🌙</title>
+  <meta name="description" content="Hướng dẫn đi The End tại LunarChill: Địa hình Nullscape cao 384 blocks, 23 biome và đồ chế tạo của Stellarity, luật cấm đặt nước, tụt Oxy 2%/10s, cầm Beacon hồi Oxy và hiệu ứng Infestation.">
+  <link rel="canonical" href="https://LunarChill.club/the-end">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://LunarChill.club/the-end">
+  <meta property="og:title" content="The End: Nullscape, Stellarity &amp; Luật Sinh Tồn - LunarChill">
+  <meta property="og:description" content="Hướng dẫn đi The End tại LunarChill: Địa hình Nullscape 384 blocks, 23 quần xã Stellarity, bệ thờ Altar of The Accursed, cấm đặt nước và hiệu ứng Infestation.">
+  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hướng dẫn The End Nullscape & Stellarity LunarChill">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/the-end.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="advanced-guide.html" class="nav-link">HD Chi tiết</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="advanced-guide.html" class="mobile-nav-link">Hướng dẫn chi tiết (Nâng cao)</a>
+    <a href="the-end.html" class="mobile-nav-link active" aria-current="page">Tổng quan The End &amp; Luật Sinh Tồn</a>
+    <a href="stellarity.html" class="mobile-nav-link">Chuyên đề Stellarity (Wiki &amp; Chế tạo)</a>
+    <a href="nullscape.html" class="mobile-nav-link">Chuyên đề Nullscape (Địa hình 384 Blocks)</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
+        Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pe">
+        Sao chép Host PE (Điện thoại): <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span>)
+      </button>
+      <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <div class="page-hero">
+      <div class="container">
+        <div style="display: inline-block; margin-bottom: 12px;">
+          <span class="mechanic-badge badge-void">The End · Tổng hợp Luật Chơi &amp; 2 Datapack</span>
+        </div>
+        <h1>The End: Stellarity, Nullscape &amp; Luật Sinh Tồn</h1>
+        <p>
+          Chiều không gian The End tại LunarChill chạy song song hai datapack <strong>Stellarity</strong> (23 biome, 2 Boss, hơn 35 vật phẩm rèn riêng) và <strong>Nullscape 2.0</strong> (địa hình cao 384 blocks từ $Y = -64$ đến $Y = 320$), đi kèm 4 luật sinh tồn riêng của máy chủ: cấm đặt nước, tụt Oxy 2% mỗi 10 giây, cầm Beacon hồi Oxy và hiệu ứng bọ bạc Infestation.
+        </p>
+      </div>
+    </div>
+
+    <div class="container guide-layout">
+      <!-- Sidebar TOC (Sticky) -->
+      <aside class="guide-sidebar" aria-label="Mục lục hướng dẫn The End">
+        <div class="lunar-card toc-card">
+          <h3>Mục lục The End</h3>
+          <ul class="toc-list">
+            <li><a href="#portal-pages" class="toc-link">1. Hai Chuyên trang Chi tiết</a></li>
+            <li><a href="#survival-rules" class="toc-link">2. 4 Luật Sinh tồn tại LunarChill</a></li>
+            <li><a href="#stellarity-summary" class="toc-link">3. Tóm tắt Datapack Stellarity</a></li>
+            <li><a href="#nullscape-summary" class="toc-link">4. Tóm tắt Địa hình Nullscape</a></li>
+            <li><a href="#featured-recipes" class="toc-link">5. Công thức Chế tạo Tiêu biểu</a></li>
+            <li><a href="#gear-checklist" class="toc-link">6. Đồ cần mang khi đi End</a></li>
+            <li><a href="#attribution" class="toc-link">7. Bản quyền &amp; Nguồn dữ liệu</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="guide-content">
+
+        <!-- Ribbon Switcher back to Advanced Guide -->
+        <div class="guide-switcher">
+          <div class="guide-switcher-text">
+            <strong>Cần tra cứu cơ chế Overworld và Nether?</strong> Khai khoáng tầng sâu $Y \le 0$, địa ngục Incendium, giá chợ biến động và Towny nằm ở trang Hướng dẫn Chi tiết.
+          </div>
+          <a href="advanced-guide.html#dimensions" class="btn btn-secondary guide-switcher-btn">← Về Hướng dẫn Chi tiết</a>
+        </div>
+
+        <!-- Sub-navigation Switcher between the 3 End pages -->
+        <nav class="end-subnav" aria-label="Chuyển đổi trang chuyên đề The End">
+          <a href="the-end.html" class="end-subnav-card active" aria-current="page">
+            <span class="end-subnav-label">Trang 1 · Đang xem</span>
+            <span class="end-subnav-title">Tổng quan &amp; Luật LunarChill</span>
+            <span class="end-subnav-desc">Cấm đặt nước, Oxy 2%/10s, Beacon hồi Oxy, Infestation &amp; Đồ cần mang đi End.</span>
+          </a>
+          <a href="stellarity.html" class="end-subnav-card">
+            <span class="end-subnav-label">Trang 2 · Cơ chế &amp; Đồ</span>
+            <span class="end-subnav-title">Chuyên đề Stellarity</span>
+            <span class="end-subnav-desc">23 Quần xã, Bệ thờ Altar, Vạc Hơi Thở Rồng, Boss &amp; Khung công thức chế tạo.</span>
+          </a>
+          <a href="nullscape.html" class="end-subnav-card">
+            <span class="end-subnav-label">Trang 3 · Địa hình</span>
+            <span class="end-subnav-title">Chuyên đề Nullscape</span>
+            <span class="end-subnav-desc">Địa hình 384 blocks (Y=-64 đến 320), Đảo Wormhole, 4 Quần xã &amp; Thiên thạch.</span>
+          </a>
+        </nav>
+
+        <!-- 1. Hai Chuyên trang Chi tiết -->
+        <section id="portal-pages">
+          <h2>
+            <span>1. Hai Chuyên trang Tra cứu Riêng: Stellarity &amp; Nullscape</span>
+          </h2>
+          <p>
+            Để tránh nhồi nhét toàn bộ thông số của 27 quần xã và hơn 35 công thức rèn đồ vào một trang duy nhất, tài liệu được tách thành 2 trang riêng kèm ảnh chụp gốc từ kho dữ liệu của tác giả:
+          </p>
+
+          <div class="scenery-grid">
+            <!-- Portal 1: Stellarity -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://cdn.modrinth.com/data/bZgeDzN8/images/e352acc6e3ae3b8259b5c27553e00400c2c17b94.png" alt="Chuyên đề Stellarity: 23 Quần xã, Boss và Công thức Chế tạo" loading="lazy">
+                <span class="scenery-tag">Chuyên Trang 1 · kohara &amp; Prismatic Shards</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Stellarity: 23 Quần xã, Boss &amp; Chế tạo</h3>
+                  <span class="mechanic-badge badge-void">32 Thẻ Công Thức</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Thông số 23 quần xã (<em>The Hallow, Prismarine Forest, Frozen Spikes...</em>), cơ chế Trial End City khóa đập/đặt khối (Creative Shock), bệ thờ Altar of The Accursed, nấu vạc Hơi Thở Rồng, câu cá Void, Boss Empress of Light và công thức rèn từng món giáp, vũ khí, sách phép.
+                </p>
+                <div style="margin-top: 10px;">
+                  <a href="stellarity.html" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">Xem Chuyên đề Stellarity &amp; Công thức Chế tạo →</a>
+                </div>
+              </figcaption>
+            </figure>
+
+            <!-- Portal 2: Nullscape -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/d/dd/Crystal_Peaks_%28Cero%29.png" alt="Chuyên đề Nullscape: Địa hình 384 Blocks và 4 Quần xã" loading="lazy">
+                <span class="scenery-tag">Chuyên Trang 2 · Starmute &amp; Stardust Labs</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Nullscape: Địa hình 384 Blocks &amp; 4 Quần xã</h3>
+                  <span class="mechanic-badge badge-stellar">Y = -64 đến 320</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Cấu trúc chiều cao 384 blocks, Đảo chính hình xoáy Hố giun (Wormhole), 4 quần xã riêng (<em>Crystal Peaks, Shadowlands, Void Barrens, The Infestation</em>), hốc thiên thạch chứa quặng (Meteor Geodes), gò sét Voltaic Heaps và xác tàu End Ship bị đắm.
+                </p>
+                <div style="margin-top: 10px;">
+                  <a href="nullscape.html" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">Xem Chuyên đề Địa hình Nullscape →</a>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 2. 4 Luật Sinh tồn tại LunarChill -->
+        <section id="survival-rules">
+          <h2>
+            <span>2. Bốn Luật Sinh tồn Riêng tại The End của LunarChill</span>
+          </h2>
+          <p>
+            Ngoài cơ chế gốc của hai datapack, máy chủ LunarChill áp dụng 4 quy tắc bắt buộc tại chiều không gian The End:
+          </p>
+
+          <div class="lunar-card deep-card" style="border-color: #ef4444;">
+            <div class="deep-card-header">
+              <h3>1. Cấm Đặt Nước tại The End (No Water Placing)</h3>
+              <span class="mechanic-badge badge-danger">Khóa Xô Nước</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Tại The End, xô nước bị khóa hoàn toàn. Người chơi không thể đổ nước xuống sàn để leo vách đá, xua đuổi Enderman hay đáp đất chống sát thương rơi (Water Bucket MLG).
+              </p>
+              <div class="lunar-callout callout-info" style="margin-top: 10px;">
+                <strong>Các cách chống sát thương rơi thay thế:</strong>
+                <ul style="margin: 6px 0 0 16px;">
+                  <li><strong>Thuốc Rơi Chậm (Potion of Slow Falling):</strong> Đặt sẵn ở thanh Hotbar khi đánh End City hoặc leo núi cao.</li>
+                  <li><strong>Sách phép Book of Updraft / Ngọc Ender / Prismatic Pearl:</strong> Dùng để hãm đà rơi hoặc dịch chuyển xuống mặt đảo trước khi chạm đất.</li>
+                  <li><strong>Khối Nhầy (Slime Block) / Khối Rơm (Hay Bale) / Tơ Nhện (Cobweb) / Bánh Gió (Wind Charge):</strong> Đặt hoặc bắn xuống chân ngay trước lúc tiếp đất.</li>
+                  <li><strong>Bộ Giáp Shulker Armor:</strong> Mặc đủ 4 món sẽ miễn nhiễm hoàn toàn hiệu ứng Bay Lơ Lửng (Levitation) từ đạn Shulker.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-color: #f59e0b; margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>2. Hiệu ứng Infestation (Sinh Cá Bạc khi Nhận Sát Thương)</h3>
+              <span class="mechanic-badge badge-warning">Ký Sinh Môi Trường</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Cách kích hoạt:</strong> Khi ở trong The End, nhân vật luôn chịu hiệu ứng <strong>Infestation</strong>. Mỗi lần bạn mất máu (do quái đánh, trúng đạn Shulker, ngã cao), có tỉ lệ sinh ra đàn <strong>Cá Bạc (Silverfish)</strong> ngay dưới chân.</li>
+                <li><strong>Nguy cơ rơi xuống Void:</strong> Cá bạc cắn liên tục gây đẩy lùi (knockback). Nếu bạn đang đứng sát mép đảo hoặc các rãnh xoáy Wormhole, cá bạc rất dễ hất bạn rơi thẳng xuống vực $Y &lt; -64$.</li>
+                <li><strong>Không rơi kinh nghiệm (0 EXP):</strong> Toàn bộ cá bạc sinh ra từ hiệu ứng Infestation và khối Sculk ở quần xã <em>nullscape:infestation</em> đều không rơi điểm EXP.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="border-color: #38bdf8; margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>3. Tụt Oxy (2% / 10 Giây) &amp; Cầm Beacon Hồi Dưỡng Khí</h3>
+              <span class="mechanic-badge badge-stellar">Cơ Chế Oxy</span>
+            </div>
+            <div class="deep-card-content">
+              <p>
+                Tại The End, thanh Oxy của nhân vật tự động giảm <strong>2% sau mỗi 10 giây</strong> (sau 8 phút 20 giây sẽ cạn sạch 100% và bắt đầu rút máu ngạt thở).
+              </p>
+              <div class="lunar-callout callout-stellar" style="margin-top: 10px;">
+                <strong>Cách nạp lại Oxy (Cầm Đèn Hiệu Beacon ở Tay Chính - Main Hand):</strong><br>
+                Khi cầm <strong>Beacon trên tay chính</strong>, lượng Oxy của bạn và những người chơi đứng gần sẽ được nạp đầy liên tục. Đi theo nhóm nên cử 1 người cầm Beacon hoặc dừng nghỉ tại quần xã không có quái (<strong>Void Barrens</strong>) để cầm Beacon hồi đầy Oxy.
+              </div>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>4. Rương Tử Nạn DeathChest 60 Phút, Totem Cứu Void &amp; Ngọc Rune</h3>
+              <span class="mechanic-badge badge-success">Giữ Đồ Khi Chết</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>DeathChest 60 Phút:</strong> Nếu chết trên mặt đảo, đồ đạc trong người được cất vào rương DeathChest trong <strong>60 phút</strong> kèm thông báo tọa độ trên khung chat.</li>
+                <li><strong>Totem of Undying Cứu Rơi Void (Cơ chế Stellarity):</strong> Nếu rơi xuống đáy Hư Không ($Y &lt; -64$) mà trên tay đang cầm <strong>Totem of Undying</strong>, Totem sẽ kích hoạt và dịch chuyển bạn ngược lên trên <strong>200 blocks</strong> kèm hiệu ứng Rơi Chậm.</li>
+                <li><strong>Ngọc Bảo Mệnh Rune:</strong> Để sẵn Ngọc Rune trong túi đồ sẽ giữ nguyên 100% vật phẩm và cấp độ EXP ngay cả khi rơi chết dưới Void mà không cầm Totem.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Tóm tắt Datapack Stellarity -->
+        <section id="stellarity-summary">
+          <h2>
+            <span>3. Tóm tắt Nội dung Datapack Stellarity</span>
+          </h2>
+          <p>
+            <strong>Stellarity</strong> (tác giả <em>kohara &amp; Prismatic Shards</em>) thay đổi cấu trúc công trình, Boss và hệ thống trang bị của The End (xem chi tiết tại <a href="stellarity.html">Chuyên đề Stellarity</a>):
+          </p>
+
+          <div class="biome-grid">
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>23 Quần Xã &amp; The Hallow</h4>
+                <span class="mechanic-badge badge-hallow">4 Đới Khí Hậu</span>
+              </div>
+              <div class="biome-card-content">
+                Chia thành 4 nhóm nhiệt độ từ vùng băng <em>Frozen Spikes</em>, đồi lửa <em>Fiery Hills</em>, rừng <em>Prismarine Forest</em> đến vùng đất <em>The Hallow</em> (chỉ sinh ra Pixie &amp; Allay; ném Khối Sắt xuống nước hồng tím tại đây sẽ đổi thành 2 phôi <em>Hallowed Ingot</em>).
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Trial End City &amp; Creative Shock</h4>
+                <span class="mechanic-badge badge-void">3 Chìa Khóa Vault</span>
+              </div>
+              <div class="biome-card-content">
+                Các trụ <em>Protective End Crystals</em> quanh End City áp hiệu ứng Creative Shock (khóa đập và đặt khối) cho tới khi bị phá hết. Người chơi diệt quái từ Trial Spawner để nhặt <strong>Purpur Key</strong>, <strong>Gilded Purpur Key</strong> và <strong>Winged Key</strong> (mở rương lấy Elytra trên tàu bay).
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Bệ Thờ Altar &amp; Vạc Hơi Thở Rồng</h4>
+                <span class="mechanic-badge badge-stellar">Custom Crafting</span>
+              </div>
+              <div class="biome-card-content">
+                Ném nguyên liệu lên <strong>Altar of The Accursed</strong> ở đảo chính để rèn giáp, vũ khí (giữ nguyên bùa Enchant gốc) và nhuộm vệt sáng cho Elytra. Đổ bình <em>Dragon's Breath</em> vào Vạc Nước để nấu <em>Phở, Shepherd's Pie, Sushi</em> và pha 9 loại thuốc mới.
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Câu Cá Void &amp; 2 Boss</h4>
+                <span class="mechanic-badge badge-danger-alt">Jean &amp; Empress</span>
+              </div>
+              <div class="biome-card-content">
+                Quăng cần câu xuống khoảng không Void để câu 12 loài cá (trong đó <strong>Crystal Heartfish</strong> ăn vào tăng vĩnh viễn tối đa <strong>+5 Tim máu</strong>) và 3 loại Hòm Báu. Đánh Rồng Ender (bất tử khi còn trụ Crystal) và Boss <strong>Empress of Light</strong> tại đền <em>Chapel of Light</em>.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Tóm tắt Địa hình Nullscape -->
+        <section id="nullscape-summary">
+          <h2>
+            <span>4. Tóm tắt Địa hình 384 Blocks của Nullscape</span>
+          </h2>
+          <p>
+            <strong>Nullscape 2.0</strong> (tác giả <em>Starmute &amp; Stardust Labs</em>) mở rộng giới hạn độ cao của The End từ $Y = -64$ lên tới $Y = 320$ (xem chi tiết tại <a href="nullscape.html">Chuyên đề Nullscape</a>):
+          </p>
+
+          <div class="biome-grid">
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Crystal Peaks</h4>
+                <span class="mechanic-badge badge-purple">Núi Thạch Anh Tím</span>
+              </div>
+              <div class="biome-card-content">
+                Dãy núi đá đen Blackstone, Smooth Basalt và Crying Obsidian xen lẫn các khối cầu <em>Block of Amethyst</em> (tỉ lệ rơi khối Amethyst khi đập là 1/8 = 12.5%).
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Shadowlands</h4>
+                <span class="mechanic-badge badge-info">Xương Rồng &amp; Phantom</span>
+              </div>
+              <div class="biome-card-content">
+                Vùng đất cấu tạo từ các khối San Hô Chết với những bộ <strong>Xương Rồng (Dragon Skeletons)</strong> bằng Bone Block trôi lơ lửng. Đây là nơi Phantom tự nhiên sinh sản.
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Void Barrens</h4>
+                <span class="mechanic-badge badge-stellar">Vùng 0 Quái Vật</span>
+              </div>
+              <div class="biome-card-content">
+                Vùng núi đá đen và Obsidian <strong>không có bất kỳ quái vật nào sinh sản tự nhiên</strong>, thích hợp để đứng nghỉ và cầm Beacon nạp lại Oxy.
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>The Infestation &amp; Meteor Geodes</h4>
+                <span class="mechanic-badge badge-warning">Sculk &amp; Tàu Đắm</span>
+              </div>
+              <div class="biome-card-content">
+                Quần xã phủ khối Sculk (đập không rơi EXP), gai Obsidian, bọ Endermite và xác <strong>Tàu End Đắm (Crashed Ship)</strong>, kèm các thiên thạch rỗng chứa khoáng sản ở rìa đảo nhỏ.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Công thức Chế tạo Tiêu biểu -->
+        <section id="featured-recipes">
+          <h2>
+            <span>5. Bốn Công thức Chế tạo Tiêu biểu tại Altar of The Accursed</span>
+          </h2>
+          <p>
+            Cách rèn đồ trên bệ thờ <strong>Altar of The Accursed</strong>: sau khi diệt Rồng Ender, bạn ném thẳng (phím Q) đúng số lượng nguyên liệu lên mặt bệ thờ ở Đảo Chính. Toàn bộ 32 thẻ công thức giáp, vũ khí, sách phép và nấu vạc nằm tại <a href="stellarity.html#recipe-armors">trang Chuyên đề Stellarity</a>.
+          </p>
+
+          <div class="item-recipe-grid">
+            <!-- Featured 1: Shulker Armor -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box armor-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/armor/shulker/full.png" alt="Bộ Giáp Shulker Armor" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Shulker Armor (Bộ Giáp Shulker)</h3>
+                    <span class="mechanic-badge badge-void">Kháng Bay Lơ Lửng</span>
+                  </div>
+                  <div class="item-stats-line">Giáp: 24 · Độ cứng: 16 · Giảm 20% sát thương</div>
+                  <p class="item-effect-desc">
+                    Mặc đủ 4 món sẽ <strong>miễn nhiễm hiệu ứng Levitation (Bay lơ lửng) và Wither</strong>, nhận Resistance I vĩnh viễn và có 33% tỉ lệ bắn 3 viên đạn Shulker đuổi theo kẻ đánh bạn.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Giữ nguyên Enchant</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Món Giáp Netherite</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">4x Shulker Shell</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Featured 2: Tamaris -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/tamaris.png" alt="Kiếm Tamaris" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Tamaris</h3>
+                    <span class="mechanic-badge badge-danger-alt">Kết Liễu Dưới 25% HP</span>
+                  </div>
+                  <div class="item-stats-line">Sát thương: 6 · Tốc đánh: 1.4 · Hiệu ứng Dark Decay</div>
+                  <p class="item-effect-desc">
+                    Đòn chém gây hiệu ứng rút máu <em>Dark Decay</em> xuyên 80% giáp. Giữ <strong>Shift</strong> để dịch chuyển tới mục tiêu dưới 25% máu (Boss/Warden dưới 10% máu) trong tầm 16m và hạ gục ngay lập tức.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed / Rồng Drop</span>
+                  <span>Giữ nguyên Enchant</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Netherite Sword</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Enderite Template</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">8x Enderite Shard</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Wither Skull</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Featured 3: Sabrewing -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/sabrewing.png" alt="Cung Sabrewing" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Sabrewing</h3>
+                    <span class="mechanic-badge badge-stellar">+60% Sát Thương &amp; Tốc Bay</span>
+                  </div>
+                  <div class="item-stats-line">Độ bền: 504 · Giữ dây cung 3 giây để nạp lực</div>
+                  <p class="item-effect-desc">
+                    Giữ căng dây cung đủ 3 giây giúp mũi tên bay nhanh hơn 60%, tăng 60% sát thương và xuyên qua 1 mục tiêu để trúng kẻ địch đứng sau.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar of The Accursed</span>
+                  <span>Giữ nguyên Enchant Cung</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Bow</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">10x Feather</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">12x Gold Ingot</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">1x Netherite Ingot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Featured 4: Book of Conveyance -->
+            <article class="item-recipe-card">
+              <div class="item-recipe-top">
+                <div class="item-sprite-box">
+                  <img src="https://raw.githubusercontent.com/Void-Realms/Stellarity/master/mkdocs/docs/assets/items/book_of_conveyance.png" alt="Sách phép Book of Conveyance" loading="lazy">
+                </div>
+                <div class="item-meta">
+                  <div class="item-meta-header">
+                    <h3 class="item-meta-title">Book of Conveyance</h3>
+                    <span class="mechanic-badge badge-info">Dịch Chuyển Không Tốn Ngọc</span>
+                  </div>
+                  <div class="item-stats-line">Hồi chiêu: 16 giây · Lái tia sáng bằng hướng nhìn</div>
+                  <p class="item-effect-desc">
+                    Chuột phải bắn ra một tia sáng bay theo hướng tâm ngắm trong 3 giây và dịch chuyển bạn tới khối đầu tiên nó chạm vào, không mất máu như Ngọc Ender.
+                  </p>
+                </div>
+              </div>
+              <div class="recipe-frame-box">
+                <div class="recipe-station-header">
+                  <span>Nơi rèn: Altar / Evoker Stronghold / Làng End</span>
+                  <span>Spellbook</span>
+                </div>
+                <div class="recipe-ingredients">
+                  <span class="recipe-ing">1x Book</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">16x Ender Pearl</span>
+                  <span class="recipe-plus">+</span>
+                  <span class="recipe-ing">32x Enderite Shard</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 6. Đồ cần mang khi đi End -->
+        <section id="gear-checklist">
+          <h2>
+            <span>6. Danh sách Đồ Cần Chuẩn bị Trước Khi Vào End</span>
+          </h2>
+          <p>
+            Kiểm tra đủ 8 món đồ dưới đây trước khi nhảy vào cổng End Portal:
+          </p>
+
+          <div class="checklist-grid">
+            <div class="checklist-item">
+              <strong>1. Đèn Hiệu (Beacon)</strong>
+              <p>Cầm ở tay chính (Main hand) để nạp lại thanh Oxy cho bản thân và đồng đội đứng gần, tránh bị ngạt thở do tụt 2% Oxy mỗi 10 giây.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>2. Thuốc Rơi Chậm &amp; Book of Updraft</strong>
+              <p>Mang 3–5 bình Slow Falling (4 phút) hoặc sách Book of Updraft để thay cho xô nước khi bị Shulker bắn bay lên cao.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>3. Ngọc Ender / Prismatic Pearl</strong>
+              <p>Chuẩn bị 16–32 viên Ngọc Ender để thoát hiểm khi trượt chân xuống khe nứt Đảo Wormhole hoặc di chuyển qua lại giữa các đảo.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>4. Totem of Undying &amp; Ngọc Rune</strong>
+              <p>Cầm Totem trên tay để được đẩy ngược lên cao 200 blocks nếu rơi xuống đáy Void. Để Ngọc Rune trong túi đồ để giữ 100% trang bị nếu tử nạn.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>5. Giáp Protection IV &amp; Giày Feather Falling IV</strong>
+              <p>Giảm sát thương va đập khi chưa có Elytra và dùng làm phôi gốc để nâng cấp lên giáp Hallowed, Shulker hoặc Champion tại bệ thờ.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>6. Cung Sharanga / Nỏ Clockwork Crossbow</strong>
+              <p>Đánh Illager trong Stronghold ở Overworld để kiếm cung Sharanga (bắn thẳng không rơi) hoặc nỏ tự nạp Clockwork Crossbow dùng phá trụ End Crystal.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>7. Vạc (Cauldron) &amp; Bình Thủy Tinh Rỗng</strong>
+              <p>Mang theo 16–32 bình thủy tinh (Glass Bottles) để hứng Hơi Thở Rồng trong trận đánh Boss, dùng cho việc nấu thức ăn và pha thuốc trong Vạc Nước.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>8. Đe (Anvil) &amp; Màng Phantom</strong>
+              <p>Do dân làng trên server không bán sách Mending, bạn cần săn Phantom ở quần xã Shadowlands lấy màng Phantom để sửa cánh Elytra trên Đe.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Bản quyền & Nguồn dữ liệu -->
+        <section id="attribution">
+          <h2>
+            <span>7. Bản quyền Tác giả &amp; Nguồn Dữ liệu Chính thức</span>
+          </h2>
+          <p>
+            Thông tin cơ chế, công thức chế tạo và hình ảnh trên hệ thống 3 trang The End được lấy từ kho mã nguồn và Wiki chính thức của hai dự án:
+          </p>
+
+          <div class="attribution-card">
+            <h3>1. Stellarity (kohara &amp; Prismatic Shards / Void Realms)</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-body); margin: 0;">
+              Tác giả chính: <strong>kohara</strong> cùng nhóm <strong>Prismatic Shards / Void Realms</strong>. Ảnh chụp khung cảnh bởi <strong>Dat1Mexican, Opliz, kohara, BananaKingXO</strong>; biểu tượng bởi <strong>MidasDaEpik</strong>.
+            </p>
+            <div class="attribution-links">
+              <a href="https://modrinth.com/datapack/stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">Modrinth Stellarity</a>
+              <a href="https://github.com/Void-Realms/Stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">GitHub Void-Realms</a>
+              <a href="https://prismaticshards.wiki.gg/wiki/Stellarity" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">Wiki Prismatic Shards</a>
+              <a href="stellarity.html" class="attribution-link-btn" style="border-color: #c084fc; color: #e9d5ff;">Mở Trang Chuyên đề Stellarity →</a>
+            </div>
+          </div>
+
+          <div class="attribution-card" style="margin-top: 16px;">
+            <h3>2. Nullscape (Starmute &amp; Stardust Labs)</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-body); margin: 0;">
+              Tác giả: <strong>Starmute</strong> thuộc nhóm <strong>Stardust Labs</strong>, phát hành theo giấy phép <em>Stardust Labs License</em>. Ảnh chụp địa hình bởi <strong>Stardust Labs, Cero, Tera</strong>.
+            </p>
+            <div class="attribution-links">
+              <a href="https://modrinth.com/datapack/nullscape" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">Modrinth Nullscape</a>
+              <a href="https://github.com/Stardust-Labs-MC/Nullscape" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">GitHub Stardust-Labs</a>
+              <a href="https://stardustlabs.miraheze.org/wiki/Nullscape" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">Wiki Stardust Labs</a>
+              <a href="nullscape.html" class="attribution-link-btn" style="border-color: #38bdf8; color: #bae6fd;">Mở Trang Chuyên đề Nullscape →</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-link">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="32" height="32">
+            <span class="brand-name">LunarChill</span>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và gắn kết dành cho cộng đồng người chơi Việt Nam.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Điều hướng</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang Tân thủ</a></li>
+            <li><a href="advanced-guide.html">Hướng dẫn Chi tiết</a></li>
+            <li><a href="the-end.html">Tổng quan The End</a></li>
+            <li><a href="stellarity.html">Chuyên đề Stellarity</a></li>
+            <li><a href="nullscape.html">Chuyên đề Nullscape</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord">Máy chủ Discord</a></li>
+            <li><a href="towns.html">Danh sách Thị trấn</a></li>
+            <li><a href="gallery.html">Triển lãm Ảnh</a></li>
+            <li><a href="rules.html">Nội quy Server</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2024 - 2026 <strong>LunarChill.Club</strong>. Không trực thuộc Mojang AB hay Microsoft. Stellarity &copy; kohara / Prismatic Shards; Nullscape &copy; Starmute / Stardust Labs.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

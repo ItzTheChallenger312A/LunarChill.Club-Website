@@ -86,6 +86,22 @@
 - [x] **AC-12.2 (Bộ lọc Danh mục & Hỗ trợ URL Hash):**
   - Hệ thống nút lọc 4 danh mục (`Tất cả`, `Thị trấn`, `Công trình`, `Khoảnh khắc`) đã có sẵn logic JavaScript xử lý `data-gallery-filter` và tự động kích hoạt bộ lọc khi truy cập qua URL hash (ví dụ: `gallery.html#filter-towns`).
 
+### AC-13: Hệ thống 3 Chuyên trang The End (`/the-end`, `/stellarity`, `/nullscape`)
+- [x] **AC-13.1 (Quy tắc sinh tồn & Cổng điều hướng tại `/the-end`):**
+  - Làm rõ 4 luật cốt lõi của The End tại LunarChill: Cấm đặt nước, Hút Oxy 2%/10s (hồi bằng Beacon tay chính), Hiệu ứng Infestation sinh cá bạc (0 EXP), DeathChest 60 phút và Totem cứu rơi Void.
+  - Tích hợp thanh điều hướng 3 chiều (`.end-subnav`) chuyển đổi linh hoạt giữa `/the-end`, `/stellarity` và `/nullscape`.
+- [x] **AC-13.2 (Chuyên đề Stellarity tại `/stellarity`):**
+  - Trưng bày 12 khung ảnh cảnh quan chính thức (`.scenery-frame`) chất lượng cao.
+  - Bảng tổng hợp 23 quần xã The End theo 4 đới khí hậu, Trial End City (Creative Shock & 3 loại chìa khóa), Đàn Tế Altar of The Accursed, Luyện Vạc Hơi Thở Rồng và Boss Jean / Empress of Light.
+  - 32 khung công thức chế tạo (`.item-recipe-card`) hiển thị sprite pixel-art và nguyên liệu trích xuất từ file `.mcfunction`.
+- [x] **AC-13.3 (Chuyên đề Nullscape tại `/nullscape`):**
+  - Trưng bày 13 khung ảnh địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và 5 dạng địa hình Fractal.
+  - Đảo Chính xoáy Hố giun (Wormhole), Meteor Geodes, Voltaic Heaps và 4 quần xã đặc hữu: Crystal Peaks (giảm tỉ lệ Amethyst 1/8), Shadowlands (Xương rồng lơ lửng & Phantom), Void Barrens (0 quái vật tự nhiên) và The Infestation (Sculk 0 EXP & Crashed Ship).
+- [x] **AC-13.4 (Tuân thủ Anti-Slop Writing & Design):**
+  - Loại bỏ toàn bộ từ ngữ sáo rỗng AI, bỏ các tên dịch Hán-Việt/kiếm hiệp tự chế, giữ nguyên danh pháp tiếng Anh chuẩn của game kèm mô tả công dụng trực diện.
+  - Tắt hiệu ứng hover giả trên các thẻ tĩnh, căn thẳng hàng số liệu (`tabular-nums`), tuân thủ tỷ lệ bo góc đồng tâm và loại bỏ emoji trang trí ở đầu tiêu đề/nút.
+  - Ghi nhận đầy đủ bản quyền tác giả (kohara, Starmute, Stardust Labs) và dẫn link chính thức tới GitHub, Modrinth, Wiki.gg và Miraheze Wiki.
+
 ---
 
 ## 3. Tiêu chí Nghiệm thu Pháp lý & Tuân thủ (Compliance & Legal Acceptance Criteria)

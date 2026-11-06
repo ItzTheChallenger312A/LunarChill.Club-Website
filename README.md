@@ -42,6 +42,7 @@
 2. **Hệ Thống Cẩm Nang Toàn Diện (Knowledge Hub):** 
    - *Cẩm nang tân thủ:* Hướng dẫn nhập môn, mã quà tặng `/redeem tanthu`, lệnh cơ bản và quy tắc khởi đầu.
    - *Hướng dẫn chuyên sâu:* Phân tích chi tiết cơ chế khai khoáng tầng sâu Y ≤ 0, thể trạng oxy & cơn khát, đại tu The Nether (Wither 900 HP) và The End (Nullscape, Stellarity, hiệu ứng Infestation), kinh tế thị trường Dynamic Pricing và ngọc bảo mệnh Rune.
+   - *Bộ 3 chuyên trang The End:* Tổng quan The End & luật sinh tồn (`/the-end`), Chuyên đề Stellarity (`/stellarity`) với 23 quần xã và 32 khung công thức chế tạo, Chuyên đề Nullscape (`/nullscape`) với cấu trúc địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và Đảo chính xoáy Hố giun (Wormhole).
    - *Cẩm nang Mod Client:* Gói mod tăng FPS cho máy yếu/laptop văn phòng (Sodium, Lithium, FerriteCore), hướng dẫn cài đặt Video Settings chuẩn và cẩm nang bắt bệnh sự cố.
 3. **Bộ mặt thương hiệu (Brand Identity):** Thiết kế theo phong cách *Cosmic Sanctuary* kết hợp Minecraft Voxel UI nguyên bản, phẳng sắc nét, đạt chuẩn 0 Slop theo bộ tiêu chí thiết kế con người.
 
@@ -63,6 +64,9 @@ LunarChill.Club-Website/
 ├── index.html                     # Trang chủ (Hero Horizon & Server Portal 3-Node)
 ├── guide.html                     # Cẩm nang tân thủ (/guide)
 ├── advanced-guide.html            # Hướng dẫn chi tiết & cơ chế sâu (/advanced-guide)
+├── the-end.html                   # Tổng quan The End & Luật Sinh Tồn (/the-end)
+├── stellarity.html                # Chuyên đề Stellarity: 23 Quần xã & Chế tạo (/stellarity)
+├── nullscape.html                 # Chuyên đề Nullscape: Địa hình 384 Blocks (/nullscape)
 ├── mods.html                      # Cẩm nang Mod Client & Tối ưu hiệu năng (/mods)
 ├── low-end-mods.html              # Trang tối ưu máy yếu độc lập (/low-end-mods)
 ├── towns.html                     # Thị trấn Towny & danh bạ lãnh thổ (/towns)
@@ -80,7 +84,7 @@ LunarChill.Club-Website/
 │   │   ├── base.css               # Reset chuẩn, typography phẳng sắc nét, WCAG AAA
 │   │   ├── components.css         # Lunar Cards, Buttons, Status Pill, Toast, Badges
 │   │   ├── layout.css             # Sticky Header, Drawer điều hướng Mobile, Footer
-│   │   └── pages/                 # CSS chuyên biệt từng trang (home, guide, advanced-guide)
+│   │   └── pages/                 # CSS chuyên biệt từng trang (home, guide, advanced-guide, the-end)
 │   ├── js/
 │   │   ├── config.js              # Hằng số cấu hình tập trung (SSOT: IP, Port, Discord link)
 │   │   ├── status-service.js      # Module kiểm tra trạng thái PC & PE + Dynamic Cache
@@ -116,7 +120,7 @@ LunarChill.Club-Website/
 | :--- | :--- | :--- |
 | **01. Research & Requirements** | Khảo sát nhu cầu, sitemap, ma trận tính năng và phân tích đối chuẩn | ✅ Hoàn thành |
 | **02. Brand & UI Architecture** | Bộ nhận diện Cosmic Sanctuary, hệ thống Pixel UI, bộ quy chuẩn 71 lỗi Anti-Slop | ✅ Hoàn thành |
-| **03. Development & Content** | Lập trình hoàn chỉnh 10 trang tĩnh HTML/CSS/JS, đồng bộ port 25572, API status | ✅ Hoàn thành |
+| **03. Development & Content** | Lập trình hoàn chỉnh 13 trang tĩnh HTML/CSS/JS (bao gồm bộ 3 chuyên trang The End), đồng bộ port 25572, API status | ✅ Hoàn thành |
 | **04. Vercel Deployment & Route** | Cấu hình clean URLs, rewrite `/mods`, `/advanced-guide`, nén ảnh WebP | ✅ Hoàn thành |
 | **05. Continuous Improvement** | Tiếp nhận góp ý từ cộng đồng, liên tục tối ưu hiệu năng và cập nhật cẩm nang | 🔄 **Đang tiến hành** |
 

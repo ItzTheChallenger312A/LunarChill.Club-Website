@@ -5,6 +5,9 @@
   "rewrites": [
     { "source": "/guide", "destination": "/guide.html" },
     { "source": "/advanced-guide", "destination": "/advanced-guide.html" },
+    { "source": "/the-end", "destination": "/the-end.html" },
+    { "source": "/stellarity", "destination": "/stellarity.html" },
+    { "source": "/nullscape", "destination": "/nullscape.html" },
     { "source": "/mods", "destination": "/mods.html" },
     { "source": "/low-end-mods", "destination": "/low-end-mods.html" },
     { "source": "/towns", "destination": "/towns.html" },

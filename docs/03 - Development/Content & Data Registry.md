@@ -61,10 +61,14 @@
 - **Vật phẩm cứu sinh:** Cầm **Beacon (Đèn hiệu)** ở tay chính (*Main hand*) giúp liên tục hồi phục oxy cho bản thân và đồng đội đứng gần.
 
 ### 4.4. Đại tu The End & Custom Crafting
-- **Nullscape:** Datapack đại tu địa hình The End (độ cao 384 block, vách đá hư không).
-- **Stellarity & StellarityOptimizer:** Đại tu toàn bộ lối chơi The End (biome, đền đài, Boss mới, cổ vật). Có **Custom Crafting**.
+- **Nullscape 2.0 (Starmute & Stardust Labs):** Datapack đại tu địa hình The End (độ cao 384 blocks từ $Y = -64$ đến $Y = 320$, Đảo chính xoáy Hố giun Wormhole, 4 quần xã *Crystal Peaks, Shadowlands, Void Barrens, The Infestation*, Thiên thạch rỗng *Meteor Geodes*, Gò sét *Voltaic Heaps*, Tàu đắm *Crashed Ship*).
+- **Stellarity & StellarityOptimizer (kohara & Prismatic Shards):** Đại tu toàn bộ lối chơi The End (23 quần xã 4 đới khí hậu, *The Hallow*, Trial End City với *Creative Shock*, 2 Đại Boss *Jean* & *Empress of Light*, 4 cơ chế *Altar of The Accursed, Breath Cauldron Crafting, Hallow Consecration, Void Fishing*).
 - Tuyệt đối **không thể đặt nước ở The End**.
-- **Hiệu ứng Infestation:** Dính hiệu ứng Infestation khi ở The End (có tỉ lệ sinh ra cá bạc khi nhận sát thương).
+- **Hiệu ứng Infestation:** Dính hiệu ứng Infestation khi ở The End (có tỉ lệ sinh ra cá bạc khi nhận sát thương, 0 EXP).
+- **Hệ thống 3 Trang chuyên đề độc lập:**
+  - [`the-end.html`](../../the-end.html) (rewrite `/the-end`): Tổng quan & Luật Sinh Tồn LunarChill.
+  - [`stellarity.html`](../../stellarity.html) (rewrite `/stellarity`): Chuyên đề Stellarity (Wiki 23 Quần xã, Cơ chế, Boss & Khung công thức chế tạo).
+  - [`nullscape.html`](../../nullscape.html) (rewrite `/nullscape`): Chuyên đề Nullscape (Địa hình 384 blocks, Đảo Wormhole & 4 Quần xã).
 
 ### 4.5. Thay đổi Rơi đồ Quái vật (Lootable Mobs)
 - **Iron Golem:** Không rơi sắt, chỉ rơi Bí ngô.

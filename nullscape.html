@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nullscape Wiki: Địa hình 384 Blocks, Đảo Wormhole &amp; 4 Quần xã | LunarChill 🌙</title>
+  <meta name="description" content="Hướng dẫn chi tiết về Datapack Nullscape (bởi Starmute &amp; Stardust Labs) tại LunarChill: Địa hình Fractal 384 blocks (Y=-64 đến Y=320), Đảo chính Wormhole, 4 quần xã Crystal Peaks, Shadowlands, Void Barrens, The Infestation và mẹo di chuyển.">
+  <link rel="canonical" href="https://LunarChill.club/nullscape">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://LunarChill.club/nullscape">
+  <meta property="og:title" content="Nullscape Wiki: Địa hình 384 Blocks, Đảo Wormhole &amp; 4 Quần xã - LunarChill">
+  <meta property="og:description" content="Tra cứu cấu trúc địa hình 384 blocks của Nullscape tại LunarChill: Đảo chính Wormhole, Crystal Peaks, Shadowlands, Void Barrens, The Infestation, Thiên thạch Geode và Tàu Đắm.">
+  <meta property="og:image" content="https://static.wikitide.net/stardustlabswiki/6/6f/Nullscape_banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cẩm nang Nullscape The End Worldgen tại LunarChill">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#688BF8">
+
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/the-end.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" title="LunarChill.Club Trang chủ">
+        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+        <span>LunarChill</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
+          <li><a href="advanced-guide.html" class="nav-link">HD Chi tiết</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="rules.html" class="nav-link">Nội quy</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
+          Sao chép IP Server
+        </button>
+        <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
+          Tham gia Discord
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
+    <a href="advanced-guide.html" class="mobile-nav-link">Hướng dẫn chi tiết (Nâng cao)</a>
+    <a href="the-end.html" class="mobile-nav-link">Tổng quan The End &amp; Luật Sinh Tồn</a>
+    <a href="stellarity.html" class="mobile-nav-link">Chuyên đề Stellarity (Wiki &amp; Chế tạo)</a>
+    <a href="nullscape.html" class="mobile-nav-link active" aria-current="page">Chuyên đề Nullscape (Địa hình 384 Blocks)</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
+    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <div class="mobile-drawer-actions">
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
+        Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+      </button>
+      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pe">
+        Sao chép Host PE (Điện thoại): <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span>)
+      </button>
+      <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+        Tham gia Discord
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <div class="page-hero">
+      <div class="container">
+        <div style="display: inline-block; margin-bottom: 12px;">
+          <span class="mechanic-badge badge-stellar">Stardust Labs &amp; Starmute · Official Worldgen Wiki</span>
+        </div>
+        <h1>Nullscape: Cấu trúc Địa hình 384 Blocks &amp; 4 Quần xã Mới</h1>
+        <p>
+          Tài liệu tra cứu về <strong>Nullscape 2.0</strong> (tác giả <em>Starmute &amp; Stardust Labs</em>) tại LunarChill: Thuật toán địa hình Fractal trải rộng 384 blocks từ $Y = -64$ đến $Y = 320$, Đảo chính dạng Hố giun (Wormhole), 4 quần xã riêng (<em>Crystal Peaks, Shadowlands, Void Barrens, The Infestation</em>), Thiên thạch rỗng và Tàu Đắm.
+        </p>
+      </div>
+    </div>
+
+    <div class="container guide-layout">
+      <!-- Sidebar TOC (Sticky) -->
+      <aside class="guide-sidebar" aria-label="Mục lục chuyên đề Nullscape">
+        <div class="lunar-card toc-card">
+          <h3>Mục lục Nullscape</h3>
+          <ul class="toc-list">
+            <li><a href="#scenery-gallery" class="toc-link">1. Khung cảnh Địa hình Thực tế</a></li>
+            <li><a href="#worldgen-384" class="toc-link">2. Cơ chế Sinh khối 384 Blocks</a></li>
+            <li><a href="#vanilla-overhaul" class="toc-link">3. Đảo Wormhole &amp; Tiểu quần xã</a></li>
+            <li><a href="#biomes-4" class="toc-link">4. 4 Quần xã Riêng của Nullscape</a></li>
+            <li><a href="#structures-resources" class="toc-link">5. Công trình &amp; Cơ chế Tài nguyên</a></li>
+            <li><a href="#traversal-strategy" class="toc-link">6. Kỹ thuật Vượt Địa hình</a></li>
+            <li><a href="#attribution" class="toc-link">7. Bản quyền &amp; Nguồn chính thức</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="guide-content">
+
+        <!-- Sub-navigation Switcher between the 3 End pages -->
+        <nav class="end-subnav" aria-label="Chuyển đổi trang chuyên đề The End">
+          <a href="the-end.html" class="end-subnav-card">
+            <span class="end-subnav-label">Trang 1 · Trung tâm</span>
+            <span class="end-subnav-title">Tổng quan &amp; Luật LunarChill</span>
+            <span class="end-subnav-desc">Quy tắc Cấm đặt nước, Oxy 2%/10s, Beacon hồi khí, Infestation &amp; Checklist đi End.</span>
+          </a>
+          <a href="stellarity.html" class="end-subnav-card">
+            <span class="end-subnav-label">Trang 2 · Gameplay &amp; Đồ</span>
+            <span class="end-subnav-title">Chuyên đề Stellarity</span>
+            <span class="end-subnav-desc">23 Quần xã, Đàn Tế Altar, Vạc Hơi Thở Rồng, Boss &amp; Khung công thức chế tạo.</span>
+          </a>
+          <a href="nullscape.html" class="end-subnav-card active" aria-current="page">
+            <span class="end-subnav-label">Trang 3 · Đang xem</span>
+            <span class="end-subnav-title">Chuyên đề Nullscape</span>
+            <span class="end-subnav-desc">Cấu trúc 384 blocks (Y=-64 đến 320), Đảo Wormhole, 4 Quần xã &amp; Thiên thạch.</span>
+          </a>
+        </nav>
+
+        <!-- 1. Khung cảnh Địa hình Thực tế (Framed Landscape Showcase) -->
+        <section id="scenery-gallery">
+          <h2>
+            <span>1. Ảnh chụp Địa hình Nullscape (Khung cảnh Chính thức)</span>
+          </h2>
+          <p>
+            Bộ ảnh chụp địa hình từ Wiki <strong>Stardust Labs</strong> (do <em>Starmute, Cero, Tera</em> thực hiện). Mỗi khung ảnh đi kèm tên quần xã và thông số cấu tạo tương ứng:
+          </p>
+
+          <!-- Full-width Banner Frame -->
+          <div class="scenery-grid-single">
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap" style="aspect-ratio: 21 / 9;">
+                <img src="https://static.wikitide.net/stardustlabswiki/6/6f/Nullscape_banner.png" alt="Toàn cảnh chiều không gian The End với địa hình Nullscape" loading="lazy">
+                <span class="scenery-tag">Nullscape 2.0 · 384-Block Fractal Terrain</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Hướng Thiết kế của Nullscape: Giữ chất Hoang Vu của The End</h3>
+                  <span class="scenery-credit">Bản quyền: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Nullscape giữ lại bầu không khí cô độc, lạnh lẽo của The End gốc nhưng mở rộng quy mô sinh khối địa hình lên trọn vẹn 384 blocks chiều cao.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="scenery-grid">
+            <!-- Frame 1: Main Island Wormhole Top View -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/a/ac/Nullscape_terrain_Tera_12.png" alt="Đảo chính Main End Island hình xoáy Hố giun Wormhole nhìn từ trên cao" loading="lazy">
+                <span class="scenery-tag">Main Island · Góc nhìn Đỉnh</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Đảo Chính Xoáy Hố Giun (Wormhole Island)</h3>
+                  <span class="scenery-credit">Ảnh: Tera / Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Đảo Trung Tâm được tái cấu trúc thành vòng xoáy Hố Giun (Wormhole) với các khe vực sâu cắt ngang mặt đảo, nhìn thẳng xuống đáy Void.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 2: Main Island Side View -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/a/a6/2022-07-24_19.00.15.png" alt="Góc nhìn ngang của Đảo chính trong Nullscape" loading="lazy">
+                <span class="scenery-tag">Main Island · Góc nhìn Ngang</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Độ Dốc Đảo Chính &amp; Trụ Hắc Diện Thạch</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Thân đảo chính được làm mỏng và uốn lượn theo phương ngang. Người chơi cần quan sát kỹ mặt đất khi di chuyển và giao chiến với Rồng Ender.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 3: Crystal Peaks 1 -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/d/dd/Crystal_Peaks_%28Cero%29.png" alt="Quần xã núi thạch anh tím Crystal Peaks trong Nullscape" loading="lazy">
+                <span class="scenery-tag">Biome · nullscape:crystal_peaks</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Quần xã Crystal Peaks (Núi Thạch Anh Tím)</h3>
+                  <span class="scenery-credit">Ảnh: Cero</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Những dãy núi cấu tạo từ Đá Đen (Blackstone), Basalt Mịn, Obsidian và Crying Obsidian, xen kẽ các khối cầu Thạch Anh Tím (Amethyst) lộ thiên.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 4: Crystal Peaks 2 -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/6/60/Crystal_Peaks_2_%28Cero%29.png" alt="Góc nhìn thứ hai của quần xã Crystal Peaks với các vòng đá pha lê" loading="lazy">
+                <span class="scenery-tag">Crystal Peaks · Vòng Tinh Thể</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Vòm Đá &amp; Khối Tinh Thể tại Crystal Peaks</h3>
+                  <span class="scenery-credit">Ảnh: Cero</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Các khối Amethyst tại đây được điều chỉnh chỉ có <strong>1/8 (12.5%) tỉ lệ rơi vật phẩm</strong> khi đào để cân bằng với số lượng mỏm thạch anh dày đặc.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 5: Shadowlands 1 -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/5/51/Shadowlands_%28Cero%29.png" alt="Quần xã nghĩa địa rồng Shadowlands trong Nullscape" loading="lazy">
+                <span class="scenery-tag">Biome · nullscape:shadowlands</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Quần xã Shadowlands (Nghĩa Địa Xương Rồng)</h3>
+                  <span class="scenery-credit">Ảnh: Cero</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Vùng đất khô cằn cấu tạo từ các khối San Hô Chết (Dead Coral Blocks) màu xám và những bộ xương rồng nằm rải rác khắp bề mặt.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 6: Shadowlands Floating Dragon Skeleton -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/2/29/2022-06-30_21.20.31.png" alt="Bộ xương rồng khổng lồ trôi lơ lửng tại Shadowlands" loading="lazy">
+                <span class="scenery-tag">Structure · nullscape:dragon_skeleton</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Bộ Xương Rồng Lơ Lửng (Dragon Skeletons)</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Hộp sọ, xương sườn và cánh rồng bằng Khối Xương (Bone Blocks) trôi nổi giữa không trung. Đây cũng là nơi Phantom tự nhiên xuất hiện theo đàn.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 7: Void Barrens -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/f/fb/Void_barrens.png" alt="Quần xã không có quái Void Barrens" loading="lazy">
+                <span class="scenery-tag">Biome · nullscape:void_barrens</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Quần xã Void Barrens (Vùng Đá Đen Tĩnh Lặng)</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Dãy núi đá đen Blackstone, Obsidian và Smooth Basalt hoàn toàn vắng bóng sinh vật: <strong>không có bất kỳ quái vật nào tự nhiên sinh sản</strong> tại đây (trừ Shulker trong End City).
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 8: The Infestation -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/e/e9/Infestation.png" alt="Quần xã nhiễm khuẩn Sculk The Infestation trong Nullscape 2.0" loading="lazy">
+                <span class="scenery-tag">Biome Mới 2.0 · nullscape:infestation</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Quần xã The Infestation (Vùng Nhiễm Sculk)</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Quần xã mới của Nullscape 2.0 phủ đầy khối Warped Wart và các khối Sculk (Sculk Vein, Sensor, Catalyst), gai nhọn Obsidian cùng đàn Endermite.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 9: Crashed End Ship in Infestation -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/3/31/Infestation_Ship.png" alt="Tàu End Ship bị đắm giữa vùng đất The Infestation" loading="lazy">
+                <span class="scenery-tag">Structure · Crashed End Ship</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Tàu End Ship Bị Đắm (Crashed Ship)</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Xác tàu End Ship rơi xuống mặt đảo và bị khối Sculk cùng gai Obsidian bao phủ. Bên trong thân tàu vẫn lưu giữ các rương chiến lợi phẩm giá trị.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 10: Meteor Fields & Geodes -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/f/f6/Nullscape_terrain_07.png" alt="Thiên thạch rỗng Meteor Geode chứa khoáng sản bên trong" loading="lazy">
+                <span class="scenery-tag">Small End Islands · Meteor Geode</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Vành Đai Thiên Thạch &amp; Hốc Khoáng Sản</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Quần xã Small End Islands được thiết kế lại thành các trường thiên thạch trôi nổi. Những thiên thạch lớn có lõi rỗng (Meteor Geodes) chứa quặng bên trong.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 11: Voltaic Heaps -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/6/64/Nullscape_terrain_05.png" alt="Tiểu quần xã sét đánh Voltaic Heaps với các tia Glowstone" loading="lazy">
+                <span class="scenery-tag">Sub-biome · Voltaic Heaps</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Tiểu quần xã Voltaic Heaps (Bãi Sét Glowstone)</h3>
+                  <span class="scenery-credit">Ảnh: Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Khu vực mang dấu vết sét đánh với các vòng đất cháy xém và những nhánh tia sét bằng Đá Phát Sáng (Glowstone) trồi lên khỏi mặt đảo.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Frame 12: Cracked & Wavy Islands -->
+            <figure class="scenery-frame">
+              <div class="scenery-img-wrap">
+                <img src="https://static.wikitide.net/stardustlabswiki/5/57/Nullscape_terrain_Tera_05.png" alt="Đảo nứt Cracked Islands và đảo lượn sóng Wavy Islands" loading="lazy">
+                <span class="scenery-tag">Outer Islands · Cracked &amp; Wavy</span>
+              </div>
+              <figcaption class="scenery-caption">
+                <div class="scenery-caption-header">
+                  <h3 class="scenery-caption-title">Đảo Rạn Nứt &amp; Thung Lũng Lượn Sóng</h3>
+                  <span class="scenery-credit">Ảnh: Tera / Stardust Labs</span>
+                </div>
+                <p class="scenery-caption-desc">
+                  Thuật toán Fractal tạo ra các hòn đảo rỗng như bọt biển (Porous Islands), các vành đai đá đứt gãy và những thung lũng xếp chồng ở nhiều độ cao.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 2. Cơ chế Sinh khối 384 Blocks -->
+        <section id="worldgen-384">
+          <h2>
+            <span>2. Cơ chế Sinh khối 384 Blocks &amp; Địa hình Fractal</span>
+          </h2>
+          <p>
+            Trong Minecraft gốc, địa hình The End chỉ sinh ra trong khoảng hẹp từ $Y = 40$ đến $Y = 70$. <strong>Nullscape</strong> mở rộng biên độ sinh địa hình ra toàn bộ chiều cao của thế giới:
+          </p>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Biên độ Độ cao Mở rộng: $Y = -64$ đến $Y = 320$ (384 Blocks)</h3>
+              <span class="mechanic-badge badge-stellar">Chiều Cao Tối Đa</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Đáy Hư Không hạ xuống $Y = -64$:</strong> Các rễ đảo, mảnh thiên thạch thấp và hẻm vực kéo dài sâu xuống vùng tọa độ âm. Nếu rơi khỏi các đỉnh núi cao, bạn có thêm vài giây trên không trung để uống Thuốc Rơi Chậm, ném Ngọc Ender hoặc bung cánh Elytra.</li>
+                <li><strong>Đỉnh núi vươn tới $Y = 320$:</strong> Các dãy núi <em>Crystal Peaks</em>, các tầng đảo xếp chồng (Stacked Rounded Islands) và bộ xương rồng lơ lửng đạt tới độ cao gần 300 blocks.</li>
+                <li><strong>5 Dạng Địa hình Fractal Chính:</strong>
+                  <ol style="margin-top: 6px;">
+                    <li><strong>Đảo Xốp Tổ Ong (Porous Sponge-like Islands):</strong> Những khối đảo lớn có ruột rỗng như bọt biển với mạng lưới hang động xuyên tâm đảo.</li>
+                    <li><strong>Dải Đảo Kéo Dài (Stretched Alien Landscapes):</strong> Các dải đá mảnh và dài uốn lượn như những cây cầu tự nhiên bắc qua Hư Không.</li>
+                    <li><strong>Đảo Tròn Xếp Tầng (Stacked Rounded Islands):</strong> Nhiều tầng đảo đĩa tròn xếp chồng lên nhau theo trục thẳng đứng.</li>
+                    <li><strong>Thung Lũng Trôi Nổi (Floating Valleys):</strong> Các lòng chảo rộng được bao bọc bởi sườn núi cao xung quanh.</li>
+                    <li><strong>Vành Đai Vỡ Vụn (Shattered Rings):</strong> Những vòng cung đá lớn bị đứt gãy lơ lửng giữa không trung.</li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Đảo Wormhole & Tiểu quần xã -->
+        <section id="vanilla-overhaul">
+          <h2>
+            <span>3. Làm lại Quần xã Gốc: Đảo Chính Wormhole, Thiên Thạch &amp; Bãi Sét</span>
+          </h2>
+          <p>
+            Bên cạnh các quần xã mới, Nullscape làm lại cả 5 vùng địa hình mặc định của The End:
+          </p>
+
+          <div class="biome-grid">
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Main End Island (Đảo Chính Wormhole)</h4>
+                <span class="mechanic-badge badge-void">Hình Xoáy Hố Giun</span>
+              </div>
+              <div class="biome-card-content">
+                Đảo Trung Tâm nơi đánh Rồng Ender được tạo hình lại thành một <strong>vòng xoáy Hố Giun (Wormhole)</strong> với bề mặt mỏng hơn và các khe nứt xoắn ốc nhìn thẳng xuống đáy Void. Khi di chuyển né chiêu của Rồng hoặc chạy tránh đàn cá bạc Infestation, người chơi phải chú ý bước chân để không rơi xuống các rãnh xoáy này.
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Small End Islands (Meteor Fields &amp; Geodes)</h4>
+                <span class="mechanic-badge badge-stellar">Trường Thiên Thạch</span>
+              </div>
+              <div class="biome-card-content">
+                Vùng đảo nhỏ ngoài rìa được biến thành <strong>Vành Đai Thiên Thạch (Meteor Fields)</strong>. Những khối thiên thạch cầu cỡ lớn có lõi rỗng bên trong gọi là <strong>Meteor Geodes</strong>, chứa nhiều mạch khoáng sản để người chơi khai thác.
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Voltaic Heaps (Bãi Sét Glowstone)</h4>
+                <span class="mechanic-badge badge-warning">Tiểu Quần Xã Sét Đánh</span>
+              </div>
+              <div class="biome-card-content">
+                Tiểu quần xã xuất hiện trên các đảo lớn với mặt đất cháy đen đồng tâm và những nhánh tia sét bằng <strong>Đá Phát Sáng (Glowstone)</strong> cắm từ mặt đất lên trời. Đây là nguồn cung Glowstone dồi dào để nạp <em>Respawn Anchor</em> ngay tại End.
+              </div>
+            </div>
+
+            <div class="biome-card">
+              <div class="biome-card-header">
+                <h4>Chorus Groves, Cracked &amp; Wavy Islands</h4>
+                <span class="mechanic-badge badge-info">Rừng Chorus &amp; Đảo Nứt</span>
+              </div>
+              <div class="biome-card-content">
+                Vùng <em>End Highlands</em> và <em>End Midlands</em> được chia thành các khu rừng <strong>Chorus Groves</strong> rậm rạp, các dãy núi cao (Mountainous), đảo nứt (Cracked Islands) và đồi lượn sóng (Wavy Islands).
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. 4 Quần xã Đặc hữu của Nullscape -->
+        <section id="biomes-4">
+          <h2>
+            <span>4. Chi tiết 4 Quần xã Riêng của Nullscape (Official Wiki Data)</span>
+          </h2>
+          <p>
+            Bảng thông số kỹ thuật từ Wiki Stardust Labs cho 4 quần xã thuộc namespace <code>nullscape:*</code>:
+          </p>
+
+          <div class="table-responsive">
+            <table class="mechanics-table">
+              <thead>
+                <tr>
+                  <th>Tên Quần Xã &amp; ID</th>
+                  <th>Cấu Tạo Khối Địa Chất</th>
+                  <th>Sinh Vật &amp; Công Trình</th>
+                  <th>Đặc Điểm &amp; Cơ Chế Riêng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong style="color: #c084fc;">1. Crystal Peaks</strong><br>
+                    <code>nullscape:crystal_peaks</code>
+                  </td>
+                  <td>
+                    Đá End, Đá Đen (Blackstone), Basalt Mịn (Smooth Basalt), Obsidian, Crying Obsidian và các khối cầu <strong>Block of Amethyst</strong>.
+                  </td>
+                  <td>
+                    <strong>Quái:</strong> Enderman<br>
+                    <strong>Công trình:</strong> End City
+                  </td>
+                  <td>
+                    Địa hình núi cao với các vòng cung đá đen và mỏm thạch anh tím cỡ lớn. <strong>Lưu ý:</strong> Khối Amethyst tại đây chỉ có <strong>1/8 (12.5%) tỉ lệ rơi ra block</strong> khi khai thác.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong style="color: #94a3b8;">2. Shadowlands</strong><br>
+                    <code>nullscape:shadowlands</code>
+                  </td>
+                  <td>
+                    Các loại <strong>Khối San Hô Chết (Dead Coral Blocks)</strong>, Đá End và <strong>Khối Xương (Bone Blocks)</strong>.
+                  </td>
+                  <td>
+                    <strong>Quái:</strong> Enderman (Weight 10, nhóm 4), <strong>Phantom (Weight 5, nhóm 1-2)</strong><br>
+                    <strong>Công trình:</strong> <code>nullscape:dragon_skeleton</code>
+                  </td>
+                  <td>
+                    Nghĩa địa rồng không một bóng cây. Rải rác khắp mặt đất và trôi lơ lửng trên không là các bộ xương rồng lớn. Đây là nơi thuận tiện để săn <strong>Phantom</strong> kiếm <em>Spirit Dagger</em> và màng Phantom sửa Elytra.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong style="color: #64748b;">3. Void Barrens</strong><br>
+                    <code>nullscape:void_barrens</code>
+                  </td>
+                  <td>
+                    Đá Đen (Blackstone), Hắc Diện Thạch (Obsidian), Basalt Mịn (Smooth Basalt) và Đá End.
+                  </td>
+                  <td>
+                    <strong>Quái:</strong> <em>Không có quái nào sinh sản tự nhiên!</em><br>
+                    <strong>Công trình:</strong> End City
+                  </td>
+                  <td>
+                    Vùng núi đá đen yên tĩnh. Vì <strong>không có Enderman hay Phantom sinh ra tự nhiên</strong>, đây là địa điểm an toàn để người chơi dừng chân nghỉ ngơi, hồi khí Oxy bằng Beacon hoặc dựng trạm trung chuyển.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong style="color: #2dd4bf;">4. The Infestation</strong><br>
+                    <code>nullscape:infestation</code><br>
+                    <em>(Mới trong Nullscape 2.0)</em>
+                  </td>
+                  <td>
+                    Khối <strong>Warped Wart Block</strong>, các khối <strong>Sculk</strong> (Sculk, Sculk Vein, Sculk Sensor, Sculk Catalyst), gai nhọn Obsidian và Crying Obsidian.
+                  </td>
+                  <td>
+                    <strong>Quái:</strong> <strong>Endermite (Weight 4, nhóm 2)</strong><br>
+                    <strong>Công trình:</strong> <strong>Crashed End Ship</strong> (<code>incendium:crashed_ship</code>)
+                  </td>
+                  <td>
+                    Vùng đất phủ đầy Sculk và đàn bọ Endermite. <strong>Lưu ý:</strong> Toàn bộ khối Sculk sinh ra tự nhiên trong quần xã này <strong>KHÔNG rơi điểm kinh nghiệm (0 EXP)</strong> khi đập vỡ.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5. Công trình & Cơ chế Tài nguyên -->
+        <section id="structures-resources">
+          <h2>
+            <span>5. Công trình Đặc biệt &amp; Quy tắc Cân bằng Tài nguyên</span>
+          </h2>
+
+          <div class="lunar-card deep-card">
+            <div class="deep-card-header">
+              <h3>Hai Công trình Riêng của Nullscape</h3>
+              <span class="mechanic-badge badge-void">Structures</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Bộ Xương Rồng (<code>nullscape:dragon_skeleton</code>):</strong> Chỉ xuất hiện tại quần xã <em>Shadowlands</em>. Bao gồm các cấu trúc hộp sọ rồng có sừng, khung xương sườn uốn cong và cánh rồng tạo thành từ hàng trăm <em>Bone Blocks</em> trôi nổi giữa không trung.</li>
+                <li><strong>Tàu End Ship Bị Đắm (<code>incendium:crashed_ship</code>):</strong> Bổ sung trong phiên bản Nullscape 2.0 tại quần xã <em>The Infestation</em>. Đây là những con tàu End Ship bị rơi và hư hại một phần trên mặt đảo, xung quanh mọc đầy gai Obsidian và cảm biến Sculk Sensor.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lunar-card deep-card" style="margin-top: 16px;">
+            <div class="deep-card-header">
+              <h3>Hai Quy tắc Cân bằng Khai thác Khối của Nullscape</h3>
+              <span class="mechanic-badge badge-warning">Resource Balance</span>
+            </div>
+            <div class="deep-card-content">
+              <ul>
+                <li><strong>Giảm tỉ lệ rơi Khối Thạch Anh Tím (1/8 Amethyst Drop Rate):</strong> Vì quần xã <em>Crystal Peaks</em> tạo ra hàng vạn khối Amethyst lộ thiên, Nullscape giới hạn tỉ lệ rơi vật phẩm khi đập <em>Block of Amethyst</em> xuống còn <strong>12.5% (1/8)</strong> để giữ giá trị cho các hốc thạch anh (Amethyst Geode) tại Overworld.</li>
+                <li><strong>Vô hiệu hóa EXP từ Khối Sculk tại The Infestation (0 EXP Sculk):</strong> Toàn bộ khối Sculk trong quần xã <em>The Infestation</em> được gắn thẻ dữ liệu không rơi EXP khi phá hủy để người chơi không thể dùng Cuốc (Hoe) đào Sculk cày hàng trăm cấp độ kinh nghiệm trong vài phút.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Kỹ thuật Vượt Địa hình tại LunarChill -->
+        <section id="traversal-strategy">
+          <h2>
+            <span>6. Mẹo Di chuyển qua Địa hình Nullscape tại LunarChill</span>
+          </h2>
+          <p>
+            Khi địa hình 384 blocks của Nullscape đi kèm với bộ quy tắc sinh tồn của LunarChill (<strong>Cấm đặt nước, Hút Oxy 2%/10s và Cá bạc Infestation</strong>), bạn có thể áp dụng 4 mẹo thực chiến sau:
+          </p>
+
+          <div class="checklist-grid">
+            <div class="checklist-item">
+              <strong>1. Tận dụng Chiều sâu Y = -64 Khi Rơi</strong>
+              <p>Nhờ đáy thế giới hạ xuống Y = -64, nếu bị Shulker hoặc cá bạc hất văng khỏi vách núi cao Y = 200+, bạn có từ 4 đến 6 giây rơi tự do để chuyển sang bình Thuốc Rơi Chậm, Sách phép Book of Updraft hoặc ném Ngọc Ender vào vách đá dưới chân đảo.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>2. Lập Trạm Nghỉ Hồi Khí tại Void Barrens</strong>
+              <p>Khi thanh Oxy tụt thấp và cần tập trung đội hình quanh người cầm Beacon (Main hand), hãy ưu tiên đáp xuống quần xã Void Barrens. Tại đây không có Enderman, Phantom hay Endermite quấy rối.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>3. Săn Màng Phantom &amp; Spirit Dagger ở Shadowlands</strong>
+              <p>Do server áp dụng cơ chế Mendingless, Màng Phantom (Phantom Membrane) là nguyên liệu cần thiết để sửa Cánh Cứng Elytra trên Đe và rèn cung Spectral Fury. Hãy đến Shadowlands để săn Phantom tự nhiên mọi lúc.</p>
+            </div>
+
+            <div class="checklist-item">
+              <strong>4. Khai thác Glowstone tại Voltaic Heaps</strong>
+              <p>Các tia sét bằng Glowstone tại tiểu quần xã Voltaic Heaps cung cấp nguồn nhiên liệu tại chỗ để bạn nạp đầy Respawn Anchor (Neo Hồi Sinh) ngay trong The End.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Bản quyền & Nguồn chính thức -->
+        <section id="attribution">
+          <h2>
+            <span>7. Bản quyền Tác giả &amp; Nguồn Tư liệu Chính thức</span>
+          </h2>
+          <p>
+            Thông tin cấu trúc địa hình, thông số quần xã và hình ảnh minh họa trên trang này được tổng hợp và dịch từ kho mã nguồn cùng Wiki chính thức của <strong>Stardust Labs</strong>:
+          </p>
+
+          <div class="attribution-card">
+            <h3>Thông tin Bản quyền Nullscape (Copyright &amp; Attribution)</h3>
+            <ul>
+              <li><strong>Tác giả &amp; Tổ chức phát triển:</strong> Thiết kế và lập trình bởi <strong>Starmute</strong>, thuộc đội ngũ <strong>Stardust Labs</strong> (cùng nhóm tác giả của <em>Terralith</em> và <em>Incendium</em>). Ra mắt lần đầu ngày 02/09/2021 và cập nhật lên phiên bản <strong>Nullscape 2.0</strong>.</li>
+              <li><strong>Bản quyền Hình ảnh (Screenshots):</strong> Ảnh chụp địa hình thuộc bản quyền của <strong>Stardust Labs</strong>, <strong>Cero</strong> và <strong>Tera</strong> (lưu trữ trên hệ thống Wiki <em>stardustlabs.miraheze.org</em>).</li>
+              <li><strong>Giấy phép Stardust Labs (Stardust Labs License):</strong> Cho phép sử dụng miễn phí trên các máy chủ Minecraft công cộng và tư nhân với điều kiện giữ nguyên thông tin ghi nhận tác quyền (Credit) và dẫn nguồn về trang dự án chính thức của Stardust Labs.</li>
+            </ul>
+
+            <div class="attribution-links">
+              <a href="https://modrinth.com/datapack/nullscape" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                Nullscape trên Modrinth
+              </a>
+              <a href="https://github.com/Stardust-Labs-MC/Nullscape" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                GitHub (Stardust-Labs-MC/Nullscape)
+              </a>
+              <a href="https://stardustlabs.miraheze.org/wiki/Nullscape" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                Wiki Chính Thức (stardustlabs.miraheze.org)
+              </a>
+              <a href="https://github.com/Stardust-Labs-MC/license/blob/main/license.txt" target="_blank" rel="noopener noreferrer" class="attribution-link-btn">
+                Giấy phép Stardust Labs License
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-link">
+            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="32" height="32">
+            <span class="brand-name">LunarChill</span>
+          </div>
+          <p class="footer-desc">
+            Máy chủ sinh tồn Minecraft thư thái, công bằng và gắn kết. Nơi lưu giữ những kỷ niệm đẹp của cộng đồng người chơi Việt Nam.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Điều hướng</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="guide.html">Cẩm nang Tân thủ</a></li>
+            <li><a href="advanced-guide.html">Hướng dẫn Chi tiết</a></li>
+            <li><a href="the-end.html">Tổng quan The End</a></li>
+            <li><a href="stellarity.html">Chuyên đề Stellarity</a></li>
+            <li><a href="nullscape.html">Chuyên đề Nullscape</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord">Máy chủ Discord</a></li>
+            <li><a href="towns.html">Danh sách Thị trấn</a></li>
+            <li><a href="gallery.html">Triển lãm Ảnh</a></li>
+            <li><a href="rules.html">Nội quy Server</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2024 - 2026 <strong>LunarChill.Club</strong>. Không trực thuộc Mojang AB hay Microsoft. Nullscape thuộc bản quyền của Starmute &amp; Stardust Labs.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -56,6 +56,15 @@
   - Trang báo lỗi 404 phong cách Minecraft (ví dụ: "Bạn đã lạc vào The End") với nút quay lại Trang chủ.
 * **P1-05: Player List / Avatars (Conditional - Có điều kiện phụ thuộc)**
   - *Lưu ý kỹ thuật:* Chỉ triển khai khi BQT máy chủ xác nhận đã bật tính năng Query (`enable-query=true`) trên server Minecraft và kiểm thử mcstatus.io trả về danh sách player ổn định. Nếu không có query, chỉ giữ bộ đếm P0 (`online / max`).
+* **P1-06: Hướng dẫn chuyên sâu (`/advanced-guide`) & Bộ 3 chuyên đề The End (`/the-end`, `/stellarity`, `/nullscape`)**
+  - Tài liệu chi tiết về cơ chế khai khoáng tầng sâu $Y \le 0$, Oxy, Cơn khát nước, Kinh tế thị trường Dynamic Pricing.
+  - Phân tích chi tiết quy tắc The End (Cấm đặt nước, Oxy $2\%/10\text{s}$, Infestation, Beacon tay chính cứu sinh).
+  - Khám phá 23 quần xã và 32 khung công thức chế tạo độc quyền của datapack Stellarity (`/stellarity`).
+  - Khảo sát cấu trúc địa hình 384 blocks ($Y = -64$ đến $320$), Đảo chính Wormhole và 4 quần xã của datapack Nullscape (`/nullscape`).
+* **P1-07: Cẩm nang Mod Client & Tối ưu máy yếu (`/mods` và `/low-end-mods`)**
+  - Gói mod tăng FPS, cấu hình Video Settings mẫu và giải pháp khắc phục crash/lag cho laptop văn phòng.
+* **P1-08: Danh bạ Thị trấn (`/towns`) & Triển lãm ảnh cộng đồng (`/gallery`)**
+  - Giới thiệu 4 giai đoạn phát triển thị trấn Towny và bộ lọc hình ảnh in-game theo URL hash.
 
 ---
 
@@ -75,9 +84,10 @@
 
 ```
 +--------------------------------------------------------------------------+
-| IN-SCOPE (Bản v1.0)                                                      |
+| IN-SCOPE (Bản v1.0 & Bản mở rộng The End)                                |
 | - Static site hiệu năng cao (HTML5, Vanilla CSS3, Vanilla JS).           |
-| - 5 trang: Home, Guide, Rules, Terms of Service, Privacy Policy.          |
+| - 13 trang tĩnh: Home, Guide, Advanced-Guide, The-End, Stellarity,       |
+|   Nullscape, Mods, Low-End-Mods, Towns, Gallery, Rules, Terms, Privacy.   |
 | - Tích hợp Client-side mcstatus.io qua Single Status Fetcher tập trung.  |
 | - Đọc cache động (expires_at) và xử lý 5 trạng thái server rõ ràng.      |
 | - Tuân thủ Luật 91/2025/QH15, NĐ 356/2025/NĐ-CP và Mojang EULA.          |

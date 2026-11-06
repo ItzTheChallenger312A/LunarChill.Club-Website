@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hướng dẫn Chi tiết &amp; Tính năng Chuyên sâu - LunarChill 🌙</title>
-  <meta name="description" content="Khám phá toàn diện các cơ chế sinh tồn chuyên sâu tại LunarChill: khai khoáng Y<=0, thanh oxy & nước, đại tu The End & Nether, kinh tế biến động, ngọc Rune và Towny GUI.">
+  <meta name="description" content="Hướng dẫn chi tiết các cơ chế sinh tồn tại LunarChill: khai khoáng Y<=0, thanh oxy & nước, đại tu The End & Nether, kinh tế biến động, ngọc Rune và Towny GUI.">
   <link rel="canonical" href="https://LunarChill.club/advanced-guide">
 
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -75,6 +75,7 @@
     <a href="index.html" class="mobile-nav-link">Trang chủ</a>
     <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
     <a href="advanced-guide.html" class="mobile-nav-link active" aria-current="page">Hướng dẫn chi tiết (Nâng cao)</a>
+    <a href="the-end.html" class="mobile-nav-link">The End: Stellarity &amp; Nullscape</a>
     <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
     <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
     <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
@@ -102,7 +103,7 @@
           Hướng dẫn Chi tiết &amp; Cơ chế Sâu
         </h1>
         <p style="color: var(--color-text-body); max-width: 720px; margin: 0 auto 24px auto; font-size: 1.05rem; line-height: 1.6;">
-          Phân tích toàn diện các cơ chế sinh tồn nguyên bản, đại tu thế giới ngầm và hư không, hệ thống kinh tế tự cân bằng, ngọc bảo mệnh Rune và quy tắc thế giới chống lạm phát.
+          Tổng hợp chi tiết các cơ chế sinh tồn của server: khai khoáng tầng sâu, làm lại Nether và The End, giá thị trường tự cân bằng, ngọc bảo mệnh Rune và quy tắc thế giới chống lạm phát.
         </p>
         <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
           <a href="guide.html" class="btn btn-secondary">
@@ -283,20 +284,43 @@
             </div>
             <div class="deep-card-content">
               <p>
-                Không còn là những bãi cát vàng đơn điệu, The End tại LunarChill là kỳ quan vũ trụ tráng lệ:
+                Chiều không gian The End tại LunarChill được làm lại địa hình và bổ sung nội dung nhờ sự kết hợp giữa hai datapack:
               </p>
               <ul>
-                <li><strong>Nullscape:</strong> Mở rộng trần thế giới The End lên tới 384 block, kiến tạo các vết nứt không gian kỳ vĩ, hố sâu thăm thẳm và những hòn đảo bay lơ lửng khổng lồ.</li>
-                <li><strong>Stellarity &amp; StellarityOptimizer:</strong> Bổ sung hệ thống quần xã sinh vật (biome) kỳ bí ngoài không gian, pháo đài vũ trụ, Boss độc bản mới, cổ vật thần thoại và công thức chế tạo đặc biệt (Custom Crafting).</li>
+                <li><strong>Nullscape:</strong> Mở rộng biên độ sinh khối The End lên tới 384 blocks ($Y = -64$ đến $Y = 320$), làm lại đảo chính dạng Hố giun (Wormhole) và bổ sung 4 quần xã địa hình mới.</li>
+                <li><strong>Stellarity &amp; StellarityOptimizer:</strong> Bổ sung 23 quần xã mới, cấu trúc Đàn Tế Nguyền Rủa, cơ chế Luyện Vạc Hơi Thở Rồng, Boss mới và các công thức chế tạo vũ khí, giáp, bùa chú riêng.</li>
                 <li><strong>Quy tắc &amp; Cảnh báo sinh tồn tại The End:</strong>
                   <div class="lunar-callout callout-warning" style="margin: 10px 0;">
-                    <strong>Tuyệt đối KHÔNG THỂ đặt nước tại The End:</strong> Bạn không thể dùng xô nước để tiếp đất chống ngã (water-bucket MLG). Hãy chuẩn bị kỹ năng ném Ngọc Ender (Ender Pearl), cánh cứng Elytra, giáp bảo hộ hoặc các khối block giảm sát thương rơi!
+                    <strong>CẤM ĐẶT NƯỚC tại The End:</strong> Bạn không thể dùng xô nước để tiếp đất chống ngã (water-bucket MLG). Hãy chuẩn bị Ngọc Ender (Ender Pearl), Thuốc Rơi Chậm, cánh cứng Elytra hoặc các khối giảm sát thương rơi.
                   </div>
                   <div class="lunar-callout callout-danger" style="margin: 10px 0;">
-                    <strong>Cảnh báo Hiệu ứng Infestation:</strong> Khi ở dưới The End, bạn sẽ dính hiệu ứng <strong>Infestation</strong> (tỉ lệ sinh ra cá bạc khi nhận sát thương). Hãy cẩn trọng khi giao tranh với quái vật hoặc khi nhận sát thương rơi, vì đàn cá bạc có thể tràn ra bất ngờ gây nguy hiểm!
+                    <strong>Cảnh báo Hiệu ứng Infestation:</strong> Khi ở dưới The End, bạn sẽ dính hiệu ứng <strong>Infestation</strong> (10% tỉ lệ sinh ra 1 đến 2 con cá bạc khi nhận sát thương). Hãy cẩn trọng khi giao tranh hoặc khi nhận sát thương rơi vì đàn cá bạc có thể đẩy bạn rơi xuống Void.
                   </div>
                 </li>
               </ul>
+
+              <div class="end-portal-box" style="margin-top: 20px; padding: 18px 20px; background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-card); display: flex; flex-direction: column; gap: 14px;">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+                    <span class="mechanic-badge badge-purple">Hệ thống 3 Trang Chuyên đề Riêng</span>
+                    <strong style="color: #c084fc; font-size: 1.05rem;">Cẩm nang Chi tiết: The End (Stellarity &amp; Nullscape)</strong>
+                  </div>
+                  <p style="margin: 0; font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.55;">
+                    Tra cứu hình ảnh khung cảnh thực tế, 23 quần xã Stellarity, Đàn Tế Nguyền Rủa (Altar of The Accursed), Luyện Vạc Hơi Thở Rồng, khung công thức chế tạo 32 trang bị và địa hình Fractal 384 blocks của Nullscape:
+                  </p>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                  <a href="the-end.html" class="btn btn-primary btn-sm">
+                    Tổng quan &amp; Luật Sinh Tồn End →
+                  </a>
+                  <a href="stellarity.html" class="btn btn-secondary btn-sm">
+                    Chuyên đề Stellarity (Wiki &amp; Chế tạo) →
+                  </a>
+                  <a href="nullscape.html" class="btn btn-secondary btn-sm">
+                    Chuyên đề Nullscape (Địa hình 384 Blocks) →
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -360,8 +384,8 @@
                 Server loại bỏ bùa chú Mending vô hạn nhằm hồi sinh giá trị chân chính của đe rèn, bàn rèn và kỹ nghệ sửa chữa trang bị thủ công. Để bảo vệ thành quả khám phá của người chơi trong các chuyến thám hiểm hiểm nguy:
               </p>
               <ul>
-                <li><strong>Ngọc Rune bảo mệnh:</strong> Vật phẩm phong ấn đặc biệt giúp bảo toàn nguyên vẹn trang bị và túi đồ của bạn khi chẳng may tử nạn tại The Nether hoặc The End.</li>
-                <li><strong>Bảo toàn tuyệt đối qua cập nhật:</strong> Dữ liệu Rune được bảo tồn 100% cả Cấp độ (Level) lẫn vật phẩm đính kèm qua mọi đợt bảo trì và nâng cấp phiên bản hệ thống.</li>
+                <li><strong>Ngọc Rune bảo mệnh:</strong> Vật phẩm phong ấn giúp giữ nguyên trang bị và túi đồ của bạn khi chẳng may tử nạn tại The Nether hoặc The End.</li>
+                <li><strong>Giữ nguyên qua cập nhật:</strong> Dữ liệu Rune được bảo lưu 100% cả Cấp độ (Level) lẫn vật phẩm đính kèm qua mọi đợt bảo trì và nâng cấp phiên bản.</li>
                 <li><strong>Chính sách hỗ trợ Ticket:</strong> Người chơi đã chuẩn bị sẵn nguyên liệu hoặc vật phẩm để mua Rune trước các đợt cập nhật có thể tạo Ticket tại kênh Discord LunarChill để được Ban Quản Trị đối soát và đền bù thỏa đáng.</li>
               </ul>
             </div>
@@ -488,10 +512,10 @@
         <!-- 7. Kỹ năng RPG & ItemEdit -->
         <section id="skills-custom">
           <h2>
-            <span>7. Tiến trình Kỹ năng RPG &amp; Tùy biến Vật phẩm Toàn diện</span>
+            <span>7. Tiến trình Kỹ năng RPG &amp; Tùy biến Vật phẩm</span>
           </h2>
           <p>
-            Phát triển chiều sâu nhân vật và tạo dấu ấn cá nhân độc bản trên từng món trang bị:
+            Nâng cấp chỉ số nhân vật theo quá trình sinh tồn và đặt dấu ấn cá nhân trên từng món trang bị:
           </p>
 
           <div class="lunar-card deep-card">
@@ -501,7 +525,7 @@
             </div>
             <div class="deep-card-content">
               <p>
-                Mọi hành động sinh tồn trong game đều tích lũy điểm kinh nghiệm cho các nhánh kỹ năng chuyên sâu:
+                Mọi hành động sinh tồn trong game đều tích lũy điểm kinh nghiệm cho các nhánh kỹ năng:
               </p>
               <ul>
                 <li><strong>11 Nhánh kỹ năng:</strong> Khai khoáng (Mining), Làm nông (Farming), Chiến đấu (Combat), Nhanh nhẹn (Agility), Khai quật (Excavation), Đốn gỗ (Foraging), Câu cá (Fishing), Bắn cung (Archery), Phòng ngự (Defense), Luyện kim (Forging), Luyện độc/thuốc (Alchemy).</li>
@@ -513,7 +537,7 @@
 
           <div class="lunar-card deep-card">
             <div class="deep-card-header">
-              <h3>Tùy biến Trang bị Toàn diện với ItemEdit</h3>
+              <h3>Tùy biến Trang bị với ItemEdit</h3>
               <span class="mechanic-badge badge-info">Sáng tạo Kỷ vật</span>
             </div>
             <div class="deep-card-content">
@@ -521,8 +545,8 @@
                 Cầm vật phẩm trên tay chính và gõ lệnh <button type="button" class="command-chip" data-action="copy-ip" data-ip="/itemedit">/itemedit</button> để mở giao diện chỉnh sửa tự do:
               </p>
               <ul>
-                <li><strong>Đổi tên độc bản:</strong> Đặt tên tùy ý cho thanh kiếm, cây cúp, bộ giáp hay món quà trao tay với hỗ trợ định dạng mã màu sinh động.</li>
-                <li><strong>Thêm dòng mô tả (Lore):</strong> Tự tay viết những câu chuyện truyền thuyết, ghi lại tọa độ chiến tích, dấu ấn ngày tham gia thị trấn hoặc những lời chúc ý nghĩa cho bạn bè.</li>
+                <li><strong>Đổi tên trang bị:</strong> Đặt tên tùy ý cho thanh kiếm, cây cúp, bộ giáp hay món quà trao tay với hỗ trợ định dạng mã màu.</li>
+                <li><strong>Thêm dòng mô tả (Lore):</strong> Tự tay viết dòng ghi chú, ghi lại tọa độ chiến tích, ngày tham gia thị trấn hoặc lời chúc cho bạn bè.</li>
               </ul>
             </div>
           </div>
@@ -537,7 +561,7 @@
                 <li><strong>AxShulkers (Mở balo tức thời):</strong> Giữ phím <code>Shift</code> + Nhấp chuột phải vào hộp Shulker trong túi đồ để mở trực tiếp giao diện lưu trữ mà không cần đặt hộp xuống đất (tiện lợi khi di chuyển, chống nguy cơ bị nhặt mất).</li>
                 <li><strong>Thú cưng MyPet:</strong> Gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/pet">/pet</button> để mở giao diện quản lý thú cưng, rèn luyện kỹ năng chiến đấu và gọi thú cưng tức thời với <button type="button" class="command-chip" data-action="copy-ip" data-ip="/petcall">/petcall</button>.</li>
                 <li><strong>GSit Ngồi đầu 2 người (We Bare Bears 🐻🐻):</strong> Nhấp chuột phải lên đầu người chơi khác để ngồi lên đầu họ (tối đa 2 người xếp chồng) hoặc gõ <button type="button" class="command-chip" data-action="copy-ip" data-ip="/sit">/sit</button> để ngồi thư giãn trên mọi khối block.</li>
-                <li><strong>Khoe trang bị lên chat:</strong> Gõ <code>[item]</code> hoặc <code>[i]</code> để hiển thị món đồ trên tay, hoặc <code>[inv]</code> để chia sẻ toàn bộ túi đồ cho cả máy chủ chiêm ngưỡng.</li>
+                <li><strong>Khoe trang bị lên chat:</strong> Gõ <code>[item]</code> hoặc <code>[i]</code> để hiển thị món đồ trên tay, hoặc <code>[inv]</code> để chia sẻ toàn bộ túi đồ lên khung chat.</li>
               </ul>
             </div>
           </div>
@@ -549,14 +573,14 @@
             <span>8. Danh sách Mod Client Được Khuyên Dùng &amp; Cảnh báo An toàn</span>
           </h2>
           <p>
-            Các mod hỗ trợ tối đa trải nghiệm âm thanh, bản đồ và hình ảnh được server tương thích chính thức:
+            Các mod hỗ trợ âm thanh, bản đồ và hình ảnh được server tương thích chính thức:
           </p>
 
           <div class="commands-grid">
             <div class="lunar-card command-card">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Simple Voice Chat</strong>
               <p class="command-desc" style="margin-top: 8px;">
-                Đàm thoại giọng nói 3D định hướng không gian chân thực trong game. Nghe tiếng bạn bè to nhỏ theo cự ly và hướng đứng khi cùng nhau đào hang.
+                Đàm thoại giọng nói 3D định hướng không gian trong game. Nghe tiếng bạn bè to nhỏ theo cự ly và hướng đứng khi cùng nhau đào hang.
               </p>
             </div>
 
@@ -570,19 +594,19 @@
             <div class="lunar-card command-card">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">ImageMap Client</strong>
               <p class="command-desc" style="margin-top: 8px;">
-                Hiển thị tranh ảnh nghệ thuật độ phân giải cao được BQT và các thị trấn treo lên khung tranh trong game qua plugin ImageFrame.
+                Hiển thị tranh ảnh độ phân giải cao được BQT và các thị trấn treo lên khung tranh trong game qua plugin ImageFrame.
               </p>
             </div>
 
             <div class="lunar-card command-card">
               <strong style="color: var(--color-text-heading); font-size: 1.05rem;">Sodium &amp; Iris Shaders</strong>
               <p class="command-desc" style="margin-top: 8px;">
-                Bộ đôi mod tối ưu hóa chỉ số khung hình FPS vượt trội trên Fabric và hỗ trợ các gói shader đêm trăng sao tuyệt đẹp.<br>
+                Bộ đôi mod cải thiện chỉ số khung hình FPS trên Fabric và hỗ trợ các gói shader đêm trăng sao.<br>
                 <span style="color: #fbbf24; font-size: 0.82rem; font-weight: 600; display: inline-block; margin-top: 6px;">⚠️ Cân nhắc sử dụng Iris Shader nếu máy bạn đủ mạnh.</span>
               </p>
               <div style="margin-top: 10px;">
                 <a href="low-end-mods.html" style="color: var(--color-accent-orbit); font-size: 0.84rem; font-weight: 600; text-decoration: underline;">
-                  ⚡ Máy yếu / Laptop? Xem danh sách mod tối ưu tăng FPS ↗
+                  ⚡ Máy yếu / Laptop? Xem danh sách mod tăng FPS ↗
                 </a>
               </div>
             </div>
@@ -590,7 +614,7 @@
 
           <div class="lunar-callout callout-danger" style="margin-top: 24px;">
             <strong style="color: #f87171; font-size: 1rem;">⚠️ CẢNH BÁO QUAN TRỌNG VỀ MOD LITEMATICA:</strong><br>
-            Tạm thời <strong>TUYỆT ĐỐI KHÔNG SỬ DỤNG</strong> mod Litematica khi tham gia máy chủ LunarChill. Hệ thống Anti-Cheat tự động của server có thể nhận diện nhầm các packet từ mod này và thực hiện auto-ban tài khoản. Ban Quản Trị sẽ có thông báo chính thức sau khi hoàn tất kiểm tra tính tương thích. Vui lòng tuân thủ để tránh gián đoạn trải nghiệm của bạn!
+            Tạm thời <strong>KHÔNG SỬ DỤNG</strong> mod Litematica khi tham gia máy chủ LunarChill. Hệ thống Anti-Cheat tự động của server có thể nhận diện nhầm các packet từ mod này và thực hiện auto-ban tài khoản. Ban Quản Trị sẽ có thông báo chính thức sau khi hoàn tất kiểm tra tính tương thích.
           </div>
         </section>
 
@@ -621,6 +645,7 @@
             <li><a href="index.html">Trang chủ</a></li>
             <li><a href="guide.html">Cẩm nang tân thủ</a></li>
             <li><a href="advanced-guide.html" aria-current="page">Hướng dẫn chi tiết</a></li>
+            <li><a href="the-end.html">The End (Stellarity)</a></li>
             <li><a href="towns.html">Thị trấn (Towny)</a></li>
             <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
             <li><a href="rules.html">Nội quy</a></li>

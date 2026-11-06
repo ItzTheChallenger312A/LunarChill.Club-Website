@@ -1,0 +1,488 @@
+/* ==========================================================================
+   LUNARCHILL THE END OVERHAUL STYLES (pages/the-end.css)
+   Cẩm nang The End: Stellarity & Nullscape
+   Tuân thủ anti-slop-design: radius <= 8px, không hover trên thẻ tĩnh, tabular-nums
+   ========================================================================== */
+
+@import url('advanced-guide.css');
+
+/* Badges phân loại */
+.badge-void {
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.badge-stellar {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.badge-hallow {
+  color: #f472b6;
+  background: rgba(244, 114, 182, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.35);
+}
+
+.badge-danger-alt {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+/* Thanh chuyển trang giữa 3 trang The End (Phần tử tương tác -> có hover/focus) */
+.end-subnav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .end-subnav {
+    grid-template-columns: 1fr;
+  }
+}
+
+.end-subnav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.end-subnav-card:hover,
+.end-subnav-card:focus-visible {
+  border-color: rgba(104, 139, 248, 0.45);
+  background: rgba(13, 20, 48, 0.72);
+}
+
+.end-subnav-card.active {
+  background: rgba(104, 139, 248, 0.12);
+  border-color: var(--color-brand-primary);
+}
+
+.end-subnav-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-brand-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.end-subnav-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.end-subnav-desc {
+  font-size: 0.84rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+/* Hộp liên kết tại advanced-guide.html */
+.end-portal-box {
+  margin-top: 18px;
+  padding: 18px 22px;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   1. KHUNG CẢNH QUAN / ĐỊA HÌNH (SCENERY SHOWCASE FRAME)
+   Thẻ tĩnh: không hiệu ứng phóng to hay đổi viền khi hover
+   ========================================================================== */
+.scenery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.scenery-grid-single {
+  grid-template-columns: 1fr;
+  margin: 20px 0;
+}
+
+.scenery-frame {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(104, 139, 248, 0.24);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.scenery-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #070b19;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(104, 139, 248, 0.18);
+}
+
+.scenery-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scenery-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 9px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fefdfd;
+  background: rgba(6, 9, 24, 0.84);
+  border: 1px solid rgba(104, 139, 248, 0.35);
+  border-radius: var(--radius-tag);
+}
+
+.scenery-caption {
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.scenery-caption-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scenery-caption-title {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+}
+
+.scenery-credit {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--color-text-secondary);
+}
+
+.scenery-caption-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-body);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   2. KHUNG VẬT PHẨM & CÔNG THỨC CHẾ TẠO (ITEM + CRAFTING RECIPE FRAME)
+   Thẻ tĩnh: giữ nguyên trạng thái, dùng tabular-nums cho chỉ số và nguyên liệu
+   ========================================================================== */
+.item-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.item-recipe-card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(104, 139, 248, 0.22);
+  border-radius: var(--radius-card);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.item-recipe-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.item-sprite-box {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  background: #070b19;
+  border: 1px solid rgba(104, 139, 248, 0.32);
+  border-radius: var(--radius-btn);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.item-sprite-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.item-sprite-box.armor-sprite-box {
+  width: 72px;
+  height: 80px;
+  min-width: 72px;
+}
+
+.item-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.item-meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.item-meta-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+}
+
+.item-stats-line {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #93c5fd;
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.item-effect-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-body);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Khung Công thức chế tạo bên trong thẻ Item (radius 6px < card radius 8px) */
+.recipe-frame-box {
+  background: rgba(6, 9, 24, 0.78);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+  border-radius: var(--radius-btn);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recipe-frame-box.cauldron-recipe {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.recipe-frame-box.drop-recipe {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.recipe-station-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #c084fc;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.16);
+  padding-bottom: 6px;
+}
+
+.recipe-frame-box.cauldron-recipe .recipe-station-header {
+  color: #38bdf8;
+  border-bottom-color: rgba(56, 189, 248, 0.16);
+}
+
+.recipe-frame-box.drop-recipe .recipe-station-header {
+  color: #fbbf24;
+  border-bottom-color: rgba(245, 158, 11, 0.16);
+}
+
+.recipe-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.recipe-ing {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 3px 8px;
+  background: rgba(104, 139, 248, 0.1);
+  border: 1px solid rgba(104, 139, 248, 0.24);
+  border-radius: var(--radius-tag);
+  color: var(--color-text-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.recipe-plus {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.recipe-note {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Lưới hiển thị Biome & Công trình (Thẻ tĩnh) */
+.biome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 18px;
+  margin: 18px 0;
+}
+
+.biome-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.biome-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.biome-card-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-text-heading);
+}
+
+.biome-card-content {
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* Checklist lưới hành trang */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.checklist-item {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+}
+
+.checklist-item strong {
+  display: block;
+  color: var(--color-text-heading);
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+}
+
+.checklist-item p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--color-text-body);
+  line-height: 1.55;
+}
+
+/* Callout màu xanh dương */
+.callout-stellar {
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* Khung Bản quyền & Nguồn tư liệu (Attribution Box) */
+.attribution-card {
+  background: rgba(6, 9, 24, 0.85);
+  border: 1px solid rgba(104, 139, 248, 0.28);
+  border-radius: var(--radius-card);
+  padding: 22px 24px;
+  margin-top: 24px;
+}
+
+.attribution-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-text-heading);
+  margin: 0 0 12px 0;
+}
+
+.attribution-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.attribution-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-heading);
+  background: rgba(104, 139, 248, 0.12);
+  border: 1px solid rgba(104, 139, 248, 0.32);
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.attribution-link-btn:hover,
+.attribution-link-btn:focus-visible {
+  background: rgba(104, 139, 248, 0.24);
+  border-color: var(--color-brand-primary);
+}
+
+.mechanics-table td,
+.mechanics-table th {
+  font-variant-numeric: tabular-nums;
+}
