@@ -103,17 +103,16 @@
       return '';
     }
 
-    // Void Pendant 9-Variant Card
-    if (el.classList.contains('pendant-variant-card') || el.closest('.pendant-variant-card')) {
-      const card = el.classList.contains('pendant-variant-card') ? el : el.closest('.pendant-variant-card');
-      const title = card.querySelector('.pendant-variant-title');
-      if (title) return cleanItemName(title.textContent);
-    }
-
-    // Radiant Jewel 5-Buff Card
-    if (el.classList.contains('jewel-buff-card') || el.closest('.jewel-buff-card')) {
-      const card = el.classList.contains('jewel-buff-card') ? el : el.closest('.jewel-buff-card');
-      const title = card.querySelector('.jewel-buff-title');
+    // Reusable Matrix Sub-Cards (.matrix-subcard) & Specific Cards (Pendant / Jewel)
+    if (el.classList.contains('matrix-subcard') || el.closest('.matrix-subcard') ||
+        el.classList.contains('pendant-variant-card') || el.closest('.pendant-variant-card') ||
+        el.classList.contains('jewel-buff-card') || el.closest('.jewel-buff-card')) {
+      const card = el.closest('.matrix-subcard, .pendant-variant-card, .jewel-buff-card');
+      const spriteWrap = card.querySelector('.matrix-sprite-wrap, .pendant-sprite-wrap, .jewel-sprite-wrap');
+      if (spriteWrap && spriteWrap.dataset && spriteWrap.dataset.mcTooltip) {
+        return spriteWrap.dataset.mcTooltip.trim();
+      }
+      const title = card.querySelector('.matrix-subcard-title, .pendant-variant-title, .jewel-buff-title');
       if (title) return cleanItemName(title.textContent);
     }
 
@@ -185,7 +184,7 @@
     }
 
     // Only inspect genuine item slot targets
-    const target = e.target.closest('.item-sprite-box, .recipe-ing.mc-slot, .recipe-ing.has-icon, .pendant-variant-card, .jewel-buff-card, [data-mc-tooltip]');
+    const target = e.target.closest('.item-sprite-box, .recipe-ing.mc-slot, .recipe-ing.has-icon, .matrix-subcard, .matrix-sprite-wrap, .pendant-variant-card, .jewel-buff-card, [data-mc-tooltip]');
     if (!target) return;
 
     // Strictly reject text-only elements (must have an image icon or explicit data-mc-tooltip)
