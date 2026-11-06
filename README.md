@@ -42,7 +42,7 @@
 2. **Hệ Thống Cẩm Nang Toàn Diện (Knowledge Hub):** 
    - *Cẩm nang tân thủ:* Hướng dẫn nhập môn, mã quà tặng `/redeem tanthu`, lệnh cơ bản và quy tắc khởi đầu.
    - *Hướng dẫn chuyên sâu:* Phân tích chi tiết cơ chế khai khoáng tầng sâu Y ≤ 0, thể trạng oxy & cơn khát, đại tu The Nether (Wither 900 HP) và The End (Nullscape, Stellarity, hiệu ứng Infestation), kinh tế thị trường Dynamic Pricing và ngọc bảo mệnh Rune.
-   - *Bộ 3 chuyên trang The End:* Tổng quan The End & luật sinh tồn (`/the-end`), Chuyên đề Stellarity (`/stellarity`) với 23 quần xã và 32 khung công thức chế tạo, Chuyên đề Nullscape (`/nullscape`) với cấu trúc địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và Đảo chính xoáy Hố giun (Wormhole).
+   - *Bộ 3 chuyên trang The End:* Tổng quan The End & luật sinh tồn (`/the-end`), Chuyên đề Stellarity (`/stellarity`) với 23 quần xã và 52 thẻ vật phẩm & công thức chế tạo, Chuyên đề Nullscape (`/nullscape`) với cấu trúc địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và Đảo chính xoáy Hố giun (Wormhole).
    - *Cẩm nang Mod Client:* Gói mod tăng FPS cho máy yếu/laptop văn phòng (Sodium, Lithium, FerriteCore), hướng dẫn cài đặt Video Settings chuẩn và cẩm nang bắt bệnh sự cố.
 3. **Bộ mặt thương hiệu (Brand Identity):** Thiết kế theo phong cách *Cosmic Sanctuary* kết hợp Minecraft Voxel UI nguyên bản, phẳng sắc nét, đạt chuẩn 0 Slop theo bộ tiêu chí thiết kế con người.
 

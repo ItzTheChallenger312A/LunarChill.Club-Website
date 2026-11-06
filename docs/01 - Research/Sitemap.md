@@ -129,7 +129,7 @@ graph TD
   - Cơ chế Trial End City (hiệu ứng Creative Shock cấm đập/đặt khối, 3 loại chìa khóa Purpur/Gilded/Winged mở Vault).
   - Đàn Tế Nguyền Rủa (Altar of The Accursed), Luyện Vạc Hơi Thở Rồng (Breath Cauldron Crafting) và Câu Cá Hư Không (12 loài cá, tăng tim vĩnh viễn).
   - Đại Boss Rồng Ender (Jean) và Empress of Light.
-  - 32 khung công thức chế tạo hiển thị ảnh sprite pixel-art và nguyên liệu chính xác từ mã nguồn `.mcfunction`.
+  - 52 thẻ vật phẩm & công thức chế tạo hiển thị ảnh sprite pixel-art phóng to và nguyên liệu chính xác từ mã nguồn `.mcfunction`.
 
 ### 3.11. Chuyên đề Nullscape: Cấu trúc Địa hình 384 Blocks (`/nullscape` hoặc `nullscape.html`)
 * **Mục tiêu:** Tài liệu tra cứu về datapack sinh địa hình Nullscape 2.0 (bởi Starmute & Stardust Labs) tại LunarChill.
@@ -155,7 +155,7 @@ graph TD
 | | **Discord** | `https://discord.gg/...` | Nút Button nổi bật (Primary CTA) |
 | **Mobile Drawer** | Menu chính + The End Hub + Mod Client | Toàn bộ 13 trang | Tối ưu hiển thị thao tác một tay |
 | **The End Subnav** | Trang 1 · Trung tâm | `/the-end` | Tổng quan & Luật sinh tồn End |
-| | Trang 2 · Stellarity | `/stellarity` | 23 Quần xã, Boss & 32 Chế tạo |
+| | Trang 2 · Stellarity | `/stellarity` | 23 Quần xã, Boss & 52 Vật phẩm/Chế tạo |
 | | Trang 3 · Nullscape | `/nullscape` | Cấu trúc 384 blocks & 4 Quần xã |
 | **Footer** | Cụm Bản quyền & Brand | Thông tin máy chủ & Phiên bản |
 | | Cụm Điều hướng | Trang chủ, Cẩm nang, HD Chi tiết, The End, Stellarity, Nullscape |

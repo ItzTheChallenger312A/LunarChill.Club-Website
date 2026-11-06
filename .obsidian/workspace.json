@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "Technical Plan"
             }
+          },
+          {
+            "id": "a55a77592c409fd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "file:C:/Users/The Challenger/Downloads/251021005260.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "251021005260"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -231,8 +245,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "aedfe41b28c5a827",
+  "active": "a55a77592c409fd1",
   "lastOpenFiles": [
+    "docs/03 - Development/Technical Plan.md",
     "docs/03 - Development/Test Matrix & Bug Tracking.md",
     "docs/04 - Feedbacks/Feature Backlog & Future Improvements.md",
     "nullscape.html",
@@ -270,7 +285,6 @@
     "docs/00 - Project Overview/Overview.md",
     "docs/Quality Standards.md",
     "docs/03 - Development/Server Features & Mechanics.md",
-    "docs/03 - Development/Technical Plan.md",
     "docs/03 - Development/Content & Data Registry.md",
     "docs/03 - Development/Deployment & Handover.md",
     "docs/02 - Design/Asset Inventory & Media Guidelines.md",

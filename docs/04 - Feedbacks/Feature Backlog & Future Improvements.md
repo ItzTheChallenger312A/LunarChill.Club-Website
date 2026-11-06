@@ -53,7 +53,7 @@
 
 | Mức độ | Tính năng / Hạng mục cải tiến | Mô tả chi tiết | Trạng thái |
 | :---: | :--- | :--- | :---: |
-| **P0** | **Bộ 3 Chuyên trang The End (Stellarity & Nullscape)** | Xuất bản cổng The End (`/the-end`), wiki Stellarity 23 biome & 32 công thức chế tạo (`/stellarity`), cấu trúc Nullscape 384 blocks (`/nullscape`). | ✅ Đã hoàn thành |
+| **P0** | **Bộ 3 Chuyên trang The End (Stellarity & Nullscape)** | Xuất bản cổng The End (`/the-end`), wiki Stellarity 23 biome & 52 vật phẩm/chế tạo (`/stellarity`), cấu trúc Nullscape 384 blocks (`/nullscape`). | ✅ Đã hoàn thành |
 | **P1** | **Thanh tìm kiếm lệnh nhanh (Instant Command Search)** | Cho phép gõ từ khóa (ví dụ: `/t new`, `/pet`, `/rtp`) để lọc tức thì các câu lệnh trong `guide.html`. | ⏳ Đang chờ |
 | **P2** | **Máy tính nạp oxy & độ sâu (Deepslate Mining Calculator)** | Công cụ nhỏ giúp người chơi tra cứu độ sâu nào cần đèn hiệu Beacon và cách nạp oxy an toàn. | 💡 Ý tưởng |
 

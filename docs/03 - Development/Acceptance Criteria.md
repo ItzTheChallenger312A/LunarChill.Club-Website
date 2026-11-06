@@ -93,7 +93,7 @@
 - [x] **AC-13.2 (Chuyên đề Stellarity tại `/stellarity`):**
   - Trưng bày 12 khung ảnh cảnh quan chính thức (`.scenery-frame`) chất lượng cao.
   - Bảng tổng hợp 23 quần xã The End theo 4 đới khí hậu, Trial End City (Creative Shock & 3 loại chìa khóa), Đàn Tế Altar of The Accursed, Luyện Vạc Hơi Thở Rồng và Boss Jean / Empress of Light.
-  - 32 khung công thức chế tạo (`.item-recipe-card`) hiển thị sprite pixel-art và nguyên liệu trích xuất từ file `.mcfunction`.
+  - 52 thẻ vật phẩm & công thức chế tạo (`.item-recipe-card`) hiển thị sprite pixel-art phóng to và nguyên liệu trích xuất từ file `.mcfunction`.
 - [x] **AC-13.3 (Chuyên đề Nullscape tại `/nullscape`):**
   - Trưng bày 13 khung ảnh địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và 5 dạng địa hình Fractal.
   - Đảo Chính xoáy Hố giun (Wormhole), Meteor Geodes, Voltaic Heaps và 4 quần xã đặc hữu: Crystal Peaks (giảm tỉ lệ Amethyst 1/8), Shadowlands (Xương rồng lơ lửng & Phantom), Void Barrens (0 quái vật tự nhiên) và The Infestation (Sculk 0 EXP & Crashed Ship).

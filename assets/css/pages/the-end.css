@@ -116,6 +116,7 @@
 }
 
 .scenery-grid-single {
+  display: grid;
   grid-template-columns: 1fr;
   margin: 20px 0;
 }
@@ -170,10 +171,11 @@
 
 .scenery-caption-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .scenery-caption-title {
@@ -182,12 +184,19 @@
   font-weight: 700;
   color: var(--color-text-heading);
   margin: 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1 1 200px;
+  line-height: 1.4;
 }
 
 .scenery-credit {
   font-family: var(--font-mono);
   font-size: 0.74rem;
   color: var(--color-text-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .scenery-caption-desc {
@@ -203,7 +212,7 @@
    ========================================================================== */
 .item-recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 18px;
   margin: 20px 0;
 }
@@ -217,47 +226,61 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 14px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .item-recipe-top {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 16px;
+  min-width: 0;
 }
 
 .item-sprite-box {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
-  background: #070b19;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  background: radial-gradient(circle at center, rgba(30, 41, 75, 0.6) 0%, #070b19 80%);
   border: 1px solid rgba(104, 139, 248, 0.32);
   border-radius: var(--radius-btn);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
 }
 
 .item-sprite-box img {
+  width: 72px;
+  height: 72px;
   max-width: 100%;
   max-height: 100%;
-  width: auto;
-  height: auto;
   object-fit: contain;
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
 }
 
 .item-sprite-box.armor-sprite-box {
-  width: 72px;
-  height: 80px;
-  min-width: 72px;
+  width: 96px;
+  height: 112px;
+  min-width: 96px;
+}
+
+.item-sprite-box.armor-sprite-box img {
+  width: 80px;
+  height: 96px;
 }
 
 .item-meta {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   flex: 1;
+  min-width: 0;
 }
 
 .item-meta-header {
@@ -270,10 +293,12 @@
 
 .item-meta-title {
   font-family: var(--font-display);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-text-heading);
   margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .item-stats-line {
@@ -282,6 +307,9 @@
   color: #93c5fd;
   margin-top: 2px;
   font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.45;
 }
 
 .item-effect-desc {
@@ -289,6 +317,8 @@
   color: var(--color-text-body);
   line-height: 1.55;
   margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Khung Công thức chế tạo bên trong thẻ Item (radius 6px < card radius 8px) */
@@ -300,6 +330,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .recipe-frame-box.cauldron-recipe {
@@ -315,6 +349,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  flex-wrap: wrap;
   font-family: var(--font-mono);
   font-size: 0.74rem;
   font-weight: 600;
@@ -323,6 +358,7 @@
   color: #c084fc;
   border-bottom: 1px solid rgba(168, 85, 247, 0.16);
   padding-bottom: 6px;
+  min-width: 0;
 }
 
 .recipe-frame-box.cauldron-recipe .recipe-station-header {
@@ -340,23 +376,31 @@
   flex-wrap: wrap;
   gap: 6px;
   align-items: center;
+  min-width: 0;
+  width: 100%;
 }
 
 .recipe-ing {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  padding: 3px 8px;
+  padding: 4px 8px;
   background: rgba(104, 139, 248, 0.1);
   border: 1px solid rgba(104, 139, 248, 0.24);
   border-radius: var(--radius-tag);
   color: var(--color-text-heading);
   font-variant-numeric: tabular-nums;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
 }
 
 .recipe-plus {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--color-text-secondary);
+  flex-shrink: 0;
 }
 
 .recipe-note {
@@ -364,6 +408,8 @@
   color: var(--color-text-secondary);
   line-height: 1.45;
   margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Lưới hiển thị Biome & Công trình (Thẻ tĩnh) */
@@ -382,25 +428,43 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .biome-card-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .biome-card-header h4 {
   margin: 0;
   font-size: 1.05rem;
+  font-weight: 700;
   color: var(--color-text-heading);
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1 1 180px;
+  line-height: 1.4;
+}
+
+.biome-card-header .mechanic-badge {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .biome-card-content {
   font-size: 0.92rem;
   color: var(--color-text-body);
   line-height: 1.6;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Checklist lưới hành trang */
@@ -416,6 +480,8 @@
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-card);
   padding: 16px 18px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .checklist-item strong {
@@ -423,6 +489,9 @@
   color: var(--color-text-heading);
   font-size: 0.98rem;
   margin-bottom: 6px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
 }
 
 .checklist-item p {
@@ -430,12 +499,15 @@
   font-size: 0.88rem;
   color: var(--color-text-body);
   line-height: 1.55;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Callout màu xanh dương */
 .callout-stellar {
   background-color: rgba(56, 189, 248, 0.08);
   border: 1px solid rgba(56, 189, 248, 0.35);
+  min-width: 0;
 }
 
 /* Khung Bản quyền & Nguồn tư liệu (Attribution Box) */
@@ -445,6 +517,8 @@
   border-radius: var(--radius-card);
   padding: 22px 24px;
   margin-top: 24px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .attribution-card h3 {
@@ -452,6 +526,9 @@
   font-size: 1.1rem;
   color: var(--color-text-heading);
   margin: 0 0 12px 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
 }
 
 .attribution-links {
@@ -485,4 +562,246 @@
 .mechanics-table td,
 .mechanics-table th {
   font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   HEADING & TYPOGRAPHY ROBUSTNESS
+   Chống tràn khung, ngắt dòng an toàn cho tiêu đề trên mọi kích thước màn hình
+   ========================================================================== */
+.page-hero h1 {
+  font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-text-heading);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.guide-content h2 {
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-weight: 700;
+  color: var(--color-text-heading);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.guide-content h2 span {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+.deep-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.deep-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  min-width: 0;
+}
+
+.deep-card-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1 1 240px;
+  line-height: 1.45;
+}
+
+.deep-card-header .mechanic-badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Harvester Forms Progression Showcase */
+.harvester-forms-wrapper {
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(10, 16, 32, 0.7);
+  border: 1px solid rgba(104, 139, 248, 0.25);
+  border-radius: var(--radius-btn);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.harvester-forms-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--color-cyan-glow);
+}
+
+.harvester-forms-title.molten-title {
+  color: #ff9800;
+}
+
+.harvester-forms-title .badge-tag {
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(75, 198, 255, 0.15);
+  color: #4bc6ff;
+  border: 1px solid rgba(75, 198, 255, 0.35);
+}
+
+.harvester-forms-title .badge-tag.badge-fire {
+  background: rgba(255, 112, 67, 0.18);
+  color: #ff7043;
+  border-color: rgba(255, 112, 67, 0.4);
+}
+
+.harvester-tier-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  background: rgba(4, 7, 18, 0.55);
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tier-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 52px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tier-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(104, 139, 248, 0.45);
+  background: rgba(104, 139, 248, 0.12);
+}
+
+.tier-item.active-tier {
+  border-color: rgba(75, 198, 255, 0.65);
+  background: rgba(75, 198, 255, 0.14);
+  box-shadow: 0 0 12px rgba(75, 198, 255, 0.25);
+}
+
+.molten-strip .tier-item.active-tier {
+  border-color: rgba(255, 120, 50, 0.7);
+  background: rgba(255, 100, 30, 0.16);
+  box-shadow: 0 0 12px rgba(255, 120, 50, 0.3);
+}
+
+.tier-item img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.tier-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+.tier-stat {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.tier-item.active-tier .tier-stat {
+  color: #4bc6ff;
+  font-weight: 600;
+}
+
+.molten-strip .tier-item.active-tier .tier-stat {
+  color: #ff9800;
+}
+
+.tier-arrow {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.75rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .item-sprite-box {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+  }
+  .item-sprite-box img {
+    width: 60px;
+    height: 60px;
+  }
+  .item-sprite-box.armor-sprite-box {
+    width: 80px;
+    height: 96px;
+    min-width: 80px;
+  }
+  .item-sprite-box.armor-sprite-box img {
+    width: 68px;
+    height: 84px;
+  }
+  .item-recipe-card {
+    padding: 14px;
+  }
+  .recipe-frame-box {
+    padding: 10px 12px;
+  }
+  .harvester-tier-strip {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+  .tier-item {
+    min-width: 44px;
+    padding: 3px 4px;
+  }
+  .tier-item img {
+    width: 26px;
+    height: 26px;
+  }
+  .tier-label {
+    font-size: 0.65rem;
+  }
+  .tier-stat {
+    font-size: 0.6rem;
+  }
 }
