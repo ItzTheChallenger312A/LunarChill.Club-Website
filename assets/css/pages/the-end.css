@@ -1467,41 +1467,31 @@
 
 
 /* Minecraft HUD Hearts (Pixel-perfect) */
-.mc-heart {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  vertical-align: -2px;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-  margin: 0 1px;
-}
-
-.mechanic-badge .mc-heart {
-  width: 12px;
-  height: 12px;
-  vertical-align: -1px;
-}
-
-/* Minecraft HUD & AppleSkin Visualizers (Hunger, Saturation & Exhaustion) */
+.mc-heart,
 .mc-food-icon,
 .mc-sat-icon,
 .mc-hunger-icon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  vertical-align: -2px;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-  margin: 0 1px;
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+  vertical-align: -2px !important;
+  image-rendering: pixelated !important;
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: crisp-edges !important;
+  margin: 0 1px !important;
   transition: transform 0.15s ease;
+}
+
+.mechanic-badge .mc-heart {
+  width: 12px !important;
+  height: 12px !important;
+  vertical-align: -1px !important;
 }
 
 .mc-food-icon:hover,
 .mc-sat-icon:hover,
-.mc-hunger-icon:hover {
+.mc-hunger-icon:hover,
+.mc-heart:hover {
   transform: scale(1.25);
 }
 
