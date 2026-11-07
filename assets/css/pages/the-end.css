@@ -931,6 +931,25 @@
   font-variant-numeric: tabular-nums;
 }
 
+.mechanics-table th {
+  white-space: normal;
+  word-break: normal;
+}
+
+/* Feature Tables Scrollbar Suppression (Khử triệt để scrollbar chói trên Windows/Mac) */
+.table-responsive,
+.no-scrollbar {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.table-responsive::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 /* ==========================================================================
    HEADING & TYPOGRAPHY ROBUSTNESS
    Chống tràn khung, ngắt dòng an toàn cho tiêu đề trên mọi kích thước màn hình

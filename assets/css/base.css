@@ -116,3 +116,41 @@ img, svg {
     scroll-behavior: auto !important;
   }
 }
+
+/* --- Sleek Dark Scrollbars & Hide Utilities (Khử thanh cuộn sáng chói mặc định) --- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(104, 139, 248, 0.3) rgba(10, 15, 30, 0.85);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 30, 0.85);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(104, 139, 248, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(104, 139, 248, 0.55);
+}
+
+/* Lớp tiện ích ẩn thanh cuộn nhưng vẫn hỗ trợ vuốt chạm/cuộn ngang mượt mà */
+.no-scrollbar,
+.table-responsive {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
