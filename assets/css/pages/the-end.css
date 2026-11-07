@@ -382,17 +382,9 @@
   background: rgba(15, 23, 42, 0.75) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: var(--radius-card, 8px) !important;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-sizing: border-box !important;
   min-width: 0 !important;
   position: relative !important;
-}
-
-.wing-subcard:hover,
-.wing-subcard.mc-slot-hover {
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  background: rgba(24, 33, 60, 0.9) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
 }
 
 .wing-subcard-header {
@@ -458,7 +450,7 @@
   padding: 8px 10px !important;
   background: rgba(0, 0, 0, 0.35) !important;
   border-radius: 4px !important;
-  border-left: 3px solid #60a5fa !important;
+  border: 1px solid rgba(96, 165, 250, 0.25) !important;
 }
 
 .wing-stats-line strong {
@@ -664,13 +656,22 @@
   line-height: 1.45;
 }
 
-.item-effect-desc {
+.item-effect-desc,
+.item-desc {
   font-size: 0.88rem;
   color: var(--color-text-body);
   line-height: 1.55;
   margin: 0;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+.item-mechanic-list {
+  margin: 6px 0 0 16px;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text-body);
 }
 
 /* Khung Công thức chế tạo bên trong thẻ Item (radius 6px < card radius 8px) */
@@ -763,7 +764,8 @@
   flex-shrink: 0;
 }
 
-.recipe-plus {
+.recipe-plus,
+.recipe-arrow {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--color-text-secondary);
@@ -1240,25 +1242,13 @@
   gap: 12px;
   background: rgba(10, 16, 32, 0.7);
   border: 1px solid rgba(104, 139, 248, 0.18);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 10px 12px;
-  transition: all 0.2s ease;
-}
-
-.harvester-tier-card:hover {
-  background: rgba(16, 26, 52, 0.85);
-  border-color: rgba(104, 139, 248, 0.4);
 }
 
 .harvester-tier-card.tier-max {
-  background: linear-gradient(135deg, rgba(28, 14, 48, 0.75) 0%, rgba(12, 18, 38, 0.85) 100%);
+  background: rgba(20, 14, 38, 0.82);
   border: 1px solid rgba(184, 107, 255, 0.45);
-  box-shadow: 0 0 16px rgba(184, 107, 255, 0.1);
-}
-
-.harvester-tier-card.tier-max:hover {
-  border-color: rgba(184, 107, 255, 0.75);
-  box-shadow: 0 0 20px rgba(184, 107, 255, 0.2);
 }
 
 .harvester-tier-sprite {
@@ -1378,15 +1368,15 @@
   color: #9cb3d8;
   line-height: 1.35;
   background: rgba(0, 0, 0, 0.25);
-  border-left: 2px solid rgba(104, 139, 248, 0.3);
+  border: 1px solid rgba(104, 139, 248, 0.22);
   padding: 4px 8px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   margin: 2px 0 0 0;
 }
 
 .harvester-tier-card.tier-max .harvester-tier-lore {
   color: #d8b4fe;
-  border-left-color: rgba(184, 107, 255, 0.5);
+  border-color: rgba(184, 107, 255, 0.35);
 }
 
 .harvester-tier-visual {
@@ -1498,20 +1488,12 @@
   image-rendering: -moz-crisp-edges !important;
   image-rendering: crisp-edges !important;
   margin: 0 1px !important;
-  transition: transform 0.15s ease;
 }
 
 .mechanic-badge .mc-heart {
   width: 12px !important;
   height: 12px !important;
   vertical-align: -1px !important;
-}
-
-.mc-food-icon:hover,
-.mc-sat-icon:hover,
-.mc-hunger-icon:hover,
-.mc-heart:hover {
-  transform: scale(1.25);
 }
 
 .mc-food-cluster {
@@ -1762,20 +1744,7 @@
   padding: 10px 14px;
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-sm);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.matrix-subcard:hover,
-.matrix-subcard.mc-slot-hover,
-.pendant-variant-card:hover,
-.pendant-variant-card.mc-slot-hover,
-.jewel-buff-card:hover,
-.jewel-buff-card.mc-slot-hover {
-  border-color: rgba(255, 255, 255, 0.35);
-  background: rgba(24, 33, 60, 0.85);
-  transform: none;
-  box-shadow: none;
+  border-radius: var(--radius-sm, 4px);
 }
 
 /* The Sprite Wrap (Minecraft item slot / frame) */
@@ -1905,12 +1874,6 @@
 .theme-stellar .matrix-subcard,
 .jewel-buff-card {
   border-color: rgba(250, 204, 21, 0.25);
-}
-.theme-stellar .matrix-subcard:hover,
-.theme-stellar .matrix-subcard.mc-slot-hover,
-.jewel-buff-card:hover,
-.jewel-buff-card.mc-slot-hover {
-  background: rgba(28, 38, 65, 0.85);
 }
 .theme-stellar .matrix-sprite-wrap,
 .jewel-sprite-wrap {
