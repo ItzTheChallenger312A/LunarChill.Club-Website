@@ -1167,16 +1167,18 @@
 .specs-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 0.71rem;
   color: var(--color-text-muted);
   font-variant-numeric: tabular-nums;
-  padding: 2px 0;
+  padding: 3px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .specs-row strong {
   color: var(--color-text-body);
+  text-align: right;
 }
 
 .specs-row.highlight-frost strong {
@@ -1419,35 +1421,14 @@
   .harvester-abilities-grid {
     grid-template-columns: 1fr;
   }
-  .harvester-tier-card {
-    flex-direction: column;
-    align-items: flex-start;
+  .item-recipe-card,
+  .keys-horizontal-list .item-recipe-card.horizontal-card,
+  .keys-horizontal-list .item-recipe-card {
+    padding: 14px !important;
+    gap: 12px !important;
   }
-}
-
-@media (max-width: 640px) {
-  .item-sprite-box {
-    width: 90px;
-    height: 90px;
-    min-width: 90px;
-  }
-  .item-sprite-box img {
-    width: 74px;
-    height: 74px;
-  }
-  .item-sprite-box.armor-sprite-box {
-    width: 90px;
-    height: 108px;
-    min-width: 90px;
-  }
-  .item-sprite-box.armor-sprite-box img {
-    width: 78px;
-    height: 96px;
-  }
-  .item-recipe-card {
-    padding: 14px;
-  }
-  .recipe-frame-box {
+  .recipe-frame-box,
+  .recipe-box {
     padding: 10px 12px;
   }
   .variant-3frame-box {
@@ -1468,7 +1449,7 @@
     font-size: 0.62rem;
   }
   .harvester-specs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 8px;
     padding: 8px 10px;
   }
@@ -1729,7 +1710,7 @@
 .pendant-variants-grid,
 .jewel-buffs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 12px;
   margin: 14px 0;
 }
@@ -1914,4 +1895,283 @@
 .theme-frost .matrix-subcard-desc strong {
   color: #38bdf8;
 }
+
+/* ==========================================================================
+   MOBILE LAYOUT OPTIMIZATION (<= 900px, <= 768px, <= 640px, <= 480px)
+   Tối ưu không gian đọc, lưới thẻ vật phẩm, bảng số liệu và thao tác cảm ứng
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .guide-layout {
+    padding: 24px 0 48px 0;
+    gap: 24px;
+  }
+
+  .toc-card {
+    padding: 16px;
+  }
+
+  .toc-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 10px;
+  }
+
+  .toc-link {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 32px 0 24px 0;
+  }
+
+  .end-subnav {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .end-subnav-card {
+    padding: 12px 14px;
+    gap: 4px;
+  }
+
+  .end-subnav-title {
+    font-size: 0.95rem;
+  }
+
+  .end-subnav-desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .mechanics-table {
+    min-width: 560px;
+    font-size: 0.84rem;
+  }
+
+  .mechanics-table th,
+  .mechanics-table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Chuyển phần đầu thẻ vật phẩm sang Grid 2 cột: Icon bên trái + Tiêu đề/Chỉ số bên phải,
+     Mô tả (.item-effect-desc) trải rộng 100% chiều ngang bên dưới */
+  .item-recipe-top,
+  .keys-horizontal-list .item-recipe-card .item-recipe-top {
+    display: grid !important;
+    grid-template-columns: 64px minmax(0, 1fr) !important;
+    gap: 4px 12px !important;
+    align-items: center !important;
+  }
+
+  .item-recipe-top .item-meta {
+    display: contents !important;
+  }
+
+  .item-recipe-top .item-sprite-box,
+  .keys-horizontal-list .item-recipe-card .item-sprite-box,
+  .item-recipe-top .item-sprite-box.boss-sprite-box {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    padding: 4px !important;
+    align-self: start;
+  }
+
+  .item-recipe-top .item-sprite-box img,
+  .item-recipe-top .item-sprite-box.boss-sprite-box img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .item-recipe-top .item-sprite-box[style*="gap: 4px"] img {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .item-recipe-top .item-sprite-box.armor-sprite-box {
+    width: 64px !important;
+    height: 76px !important;
+    min-width: 64px !important;
+  }
+
+  .item-recipe-top .item-sprite-box.armor-sprite-box img {
+    width: 54px !important;
+    height: 66px !important;
+  }
+
+  .item-recipe-top .item-meta-header {
+    grid-column: 2;
+    align-self: end;
+    gap: 4px 6px;
+  }
+
+  .item-recipe-top .item-meta-title {
+    font-size: 1rem !important;
+  }
+
+  .item-recipe-top .item-stats-line {
+    grid-column: 2;
+    align-self: start;
+    margin-top: 0;
+    font-size: 0.74rem;
+  }
+
+  .item-recipe-top .item-effect-desc,
+  .item-recipe-top .item-desc,
+  .item-recipe-top .item-mechanic-list {
+    grid-column: 1 / -1 !important;
+    margin-top: 6px !important;
+  }
+
+  .item-recipe-top .item-mechanic-list {
+    margin-left: 16px !important;
+  }
+
+  /* Thẻ tiến hóa Harvester 5 cấp độ: Icon đồng hàng với tên cấp & chỉ số */
+  .harvester-tier-card {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 4px 10px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .harvester-tier-details {
+    display: contents;
+  }
+
+  .harvester-tier-sprite {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    align-self: start;
+  }
+
+  .harvester-tier-sprite img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .harvester-tier-title-row {
+    grid-column: 2;
+    align-self: end;
+  }
+
+  .harvester-tier-stats {
+    grid-column: 2;
+    align-self: start;
+  }
+
+  .harvester-tier-lore,
+  .harvester-tier-visual {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+  }
+
+  /* Tiêu đề phụ có gắn badge không bị lệch lề phải khi xuống dòng */
+  .guide-content h3 .mechanic-badge,
+  .guide-content h4 .mechanic-badge {
+    margin-left: 0 !important;
+  }
+
+  .deep-card,
+  .biome-card,
+  .attribution-card {
+    padding: 16px;
+  }
+
+  .scenery-caption {
+    padding: 12px 14px;
+  }
+
+  /* Tooltip tự động ngắt dòng vừa màn hình điện thoại */
+  .mc-tooltip,
+  #mc-tooltip {
+    max-width: calc(100vw - 24px);
+    white-space: normal;
+    text-align: center;
+    font-size: 13.5px;
+    padding: 5px 10px 6px 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .specs-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 5px 0;
+  }
+
+  .specs-row strong {
+    text-align: left;
+  }
+
+  .toc-list {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Thu gọn ô nguyên liệu Minecraft để công thức 5-6 món không bị rớt lẻ dòng */
+  .recipe-ing.mc-slot,
+  .recipe-inline .mc-slot,
+  .recipe-ingredients .mc-slot,
+  .mc-slot {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .recipe-ing.mc-slot .recipe-ing-icon,
+  .mc-slot img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Chuyển khung 3 trạng thái (Harvester / Duskberry) sang hàng ngang rõ chữ trên màn hình nhỏ */
+  .variant-3frame-box {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .variant-frame-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .variant-frame-meta {
+    align-items: flex-start;
+  }
+
+  .variant-frame-title,
+  .variant-frame-desc {
+    white-space: normal;
+  }
+
+  .attribution-links {
+    flex-direction: column;
+  }
+
+  .attribution-link-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
