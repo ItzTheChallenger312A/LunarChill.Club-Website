@@ -2354,37 +2354,162 @@
               </div>
 
               <!-- Harvester 5-Tier Evolution Progression -->
-              <div class="specs-block" style="margin-top: 10px;">
-                <span class="specs-header">Tiến Trình 5 Cấp (Tier 0 ➜ Tier 4)</span>
-                <div class="specs-row"><span>Tier 0 (Khởi đầu)</span><strong>4 DMG · Tốc 1.0 · 0% Spd Penalty</strong></div>
-                <div class="specs-row"><span>Tier 1 (7 DMG)</span><strong>Tốc 0.95 · -5% Spd · Lưỡi ánh hồng nhẹ</strong></div>
-                <div class="specs-row highlight-frost"><span>Tier 2 (10 DMG)</span><strong>Tốc 0.9 · -10% Spd · Ánh hồng lan mũi kiếm</strong></div>
-                <div class="specs-row"><span>Tier 3 (13 DMG)</span><strong>Tốc 0.8 · -15% Spd · Chuôi bảo vệ hóa hồng</strong></div>
-                <div class="specs-row highlight-max"><span>Tier 4 (16 DMG Max)</span><strong>Tốc 0.75 · -20% Spd · Unbreakable (Bất tử)</strong></div>
+              <div class="harvester-evolution-section">
+                <div class="specs-header-banner">
+                  <span class="specs-header-title">Tiến Trình 5 Cấp Tiến Hóa (Tier 0 ➜ Tier 4)</span>
+                  <span class="specs-header-sub">Hấp thụ linh hồn quái vật để gia tăng kích thước, sát thương vĩnh viễn và tiến hóa ngoại hình</span>
+                </div>
+
+                <div class="harvester-tiers-list">
+                  <!-- Tier 0 -->
+                  <div class="harvester-tier-card">
+                    <div class="harvester-tier-sprite" data-mc-tooltip="Harvester - Tier 0 (Khởi Đầu)">
+                      <img src="assets/images/weapons/harvester_tier_0.png" alt="Harvester Tier 0" loading="lazy">
+                    </div>
+                    <div class="harvester-tier-details">
+                      <div class="harvester-tier-title-row">
+                        <span class="harvester-tier-badge">Tier 0</span>
+                        <strong class="harvester-tier-name">Khởi Đầu (Fresh Blade)</strong>
+                        <span class="harvester-tier-dmg dmg-tier-0">4 DMG</span>
+                      </div>
+                      <div class="harvester-tier-stats">
+                        <span>Sát thương: <strong>4 (2 tim)</strong></span>
+                        <span>Tốc đánh: <strong>1.0</strong></span>
+                        <span>Phạt tốc chạy: <strong>0%</strong></span>
+                        <span>Độ bền: <strong>1562</strong> (Sửa: Băng Xanh)</span>
+                      </div>
+                      <p class="harvester-tier-lore">
+                        &ldquo;Absorbs souls of slain mobs and permanently increases its size and damage. Certain souls imbue it with magical abilities.&rdquo;
+                      </p>
+                      <div class="harvester-tier-visual">Đại đao băng xám nguyên sơ, chưa hấp thụ linh hồn quái vật.</div>
+                    </div>
+                  </div>
+
+                  <!-- Tier 1 -->
+                  <div class="harvester-tier-card">
+                    <div class="harvester-tier-sprite" data-mc-tooltip="Harvester - Tier 1 (Bộc Lộ)">
+                      <img src="assets/images/weapons/harvester_tier_1.png" alt="Harvester Tier 1" loading="lazy">
+                    </div>
+                    <div class="harvester-tier-details">
+                      <div class="harvester-tier-title-row">
+                        <span class="harvester-tier-badge">Tier 1</span>
+                        <strong class="harvester-tier-name">Bộc Lộ (Awakening)</strong>
+                        <span class="harvester-tier-dmg dmg-tier-1">7 DMG (+3)</span>
+                      </div>
+                      <div class="harvester-tier-stats">
+                        <span>Sát thương: <strong>7 (3.5 tim)</strong></span>
+                        <span>Tốc đánh: <strong>0.95</strong></span>
+                        <span>Phạt tốc chạy: <strong class="stat-penalty">-5%</strong></span>
+                        <span>Độ bền: <strong>1562</strong></span>
+                      </div>
+                      <p class="harvester-tier-lore">
+                        &ldquo;I'm telling you, it DOES GET EXTRA DAMAGE. You really didn't need to check.&rdquo;
+                      </p>
+                      <div class="harvester-tier-visual">Lưỡi đao phình to nhẹ, xuất hiện vệt ánh hồng tím đầu tiên dọc sống đao.</div>
+                    </div>
+                  </div>
+
+                  <!-- Tier 2 -->
+                  <div class="harvester-tier-card">
+                    <div class="harvester-tier-sprite" data-mc-tooltip="Harvester - Tier 2 (Thì Thầm)">
+                      <img src="assets/images/weapons/harvester_tier_2.png" alt="Harvester Tier 2" loading="lazy">
+                    </div>
+                    <div class="harvester-tier-details">
+                      <div class="harvester-tier-title-row">
+                        <span class="harvester-tier-badge">Tier 2</span>
+                        <strong class="harvester-tier-name">Thì Thầm (Whispering)</strong>
+                        <span class="harvester-tier-dmg dmg-tier-2">10 DMG (+6)</span>
+                      </div>
+                      <div class="harvester-tier-stats">
+                        <span>Sát thương: <strong>10 (5 tim)</strong></span>
+                        <span>Tốc đánh: <strong>0.9</strong></span>
+                        <span>Phạt tốc chạy: <strong class="stat-penalty">-10%</strong></span>
+                        <span>Độ bền: <strong>1562</strong></span>
+                      </div>
+                      <p class="harvester-tier-lore">
+                        &ldquo;It's whispering to you... It wants more. It's getting heavier with every soul it absorbs.&rdquo;
+                      </p>
+                      <div class="harvester-tier-visual">Ánh sáng tím lan tỏa rộng lên mũi kiếm, thanh đao bắt đầu trĩu nặng trên tay.</div>
+                    </div>
+                  </div>
+
+                  <!-- Tier 3 -->
+                  <div class="harvester-tier-card">
+                    <div class="harvester-tier-sprite" data-mc-tooltip="Harvester - Tier 3 (Khát Vọng)">
+                      <img src="assets/images/weapons/harvester_tier_3.png" alt="Harvester Tier 3" loading="lazy">
+                    </div>
+                    <div class="harvester-tier-details">
+                      <div class="harvester-tier-title-row">
+                        <span class="harvester-tier-badge">Tier 3</span>
+                        <strong class="harvester-tier-name">Khát Vọng (Yearning)</strong>
+                        <span class="harvester-tier-dmg dmg-tier-3">13 DMG (+9)</span>
+                      </div>
+                      <div class="harvester-tier-stats">
+                        <span>Sát thương: <strong>13 (6.5 tim)</strong></span>
+                        <span>Tốc đánh: <strong>0.8</strong></span>
+                        <span>Phạt tốc chạy: <strong class="stat-penalty">-15%</strong></span>
+                        <span>Độ bền: <strong>1562</strong></span>
+                      </div>
+                      <p class="harvester-tier-lore">
+                        &ldquo;But it is still far from done doing so. It's getting really heavy, yet it is still yearning for more.&rdquo;
+                      </p>
+                      <div class="harvester-tier-visual">Đại đao to lớn hùng vĩ, chuôi kiếm và toàn bộ ngạnh bảo vệ hóa tinh thể tím rực sáng.</div>
+                    </div>
+                  </div>
+
+                  <!-- Tier 4 -->
+                  <div class="harvester-tier-card tier-max">
+                    <div class="harvester-tier-sprite" data-mc-tooltip="Harvester - Tier 4 (Cực Hạn)">
+                      <img src="assets/images/weapons/harvester_tier_4.png" alt="Harvester Tier 4" loading="lazy">
+                    </div>
+                    <div class="harvester-tier-details">
+                      <div class="harvester-tier-title-row">
+                        <span class="harvester-tier-badge badge-max-tier">Tier 4 · MAX</span>
+                        <strong class="harvester-tier-name highlight-purple">Cực Hạn (-273.15&deg;C)</strong>
+                        <span class="harvester-tier-dmg dmg-tier-4">16 DMG (+12)</span>
+                      </div>
+                      <div class="harvester-tier-stats">
+                        <span>Sát thương: <strong>16 (8 tim)</strong></span>
+                        <span>Tốc đánh: <strong>0.75</strong></span>
+                        <span>Phạt tốc chạy: <strong class="stat-penalty">-20%</strong></span>
+                        <span>Độ bền: <strong class="stat-unbreakable">Unbreakable (Bất tử)</strong></span>
+                      </div>
+                      <p class="harvester-tier-lore">
+                        &ldquo;-273.15&deg;C: It is done growing in power, but it still has a taste for... a few specific souls. Even the grim power of this ice sword has its limits...&rdquo;
+                      </p>
+                      <div class="harvester-tier-visual highlight-frost-text">Đạt độ không tuyệt đối (-273.15&deg;C). Kích thước khổng lồ cực đại, hào quang linh hồn tím rực bao phủ trọn vẹn, không bao giờ bị phá hủy.</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- 8 Soul Passive Abilities (Max 3 on 1 sword) -->
-              <div class="specs-block" style="margin-top: 10px;">
-                <span class="specs-header">8 Kỹ Năng Linh Hồn (Tối đa 3 kỹ năng/thanh đao)</span>
-                <div class="specs-skill-item"><strong>Frostburn (Blaze / Magma Cube):</strong> Lửa cực lạnh đốt cháy quái gây thêm sát thương lớn.</div>
-                <div class="specs-skill-item"><strong>Embrittlement (Wither Skeleton):</strong> Đòn đánh khiến quái giòn gãy, nhận thêm sát thương cóng lạnh từ mọi nguồn.</div>
-                <div class="specs-skill-item"><strong>Arctic Wind (Breeze):</strong> Hào quang giá buốt làm chậm quái xung quanh trong 9 block.</div>
-                <div class="specs-skill-item"><strong>Piercing Cold (Witch / Vindicator):</strong> 25% cơ hội phá giáp kẻ địch, cộng dồn nhiều tầng khi đánh liên tiếp.</div>
-                <div class="specs-skill-item"><strong>Frost Barrier (Iron Golem / Shulker / Piglin Brute):</strong> Nhận Kháng cự và Máu hấp thụ tạm thời sau khi diệt quái.</div>
-                <div class="specs-skill-item"><strong>Echo (Warden):</strong> Đòn chém tạo tiếng vang chém bồi sát thương chuẩn xuyên giáp sau một thoáng ngắn.</div>
-                <div class="specs-skill-item"><strong>Anima Conduit (Wither):</strong> Nghiền nát linh hồn thành nguồn năng lượng hồi máu và hồi thanh no đói.</div>
-                <div class="specs-skill-item"><strong>Cryonics (Ender Dragon):</strong> Totem kích hoạt tạo kén băng bất tử hồi phục cực nhanh + nổ 15 sát thương chuẩn (60s).</div>
+              <div class="harvester-abilities-block">
+                <div class="specs-header-banner">
+                  <span class="specs-header-title">8 Kỹ Năng Linh Hồn Đặc Thù (Tối đa 3 kỹ năng / thanh đao)</span>
+                  <span class="specs-header-sub">Hạ gục quái vật chỉ định để thức tỉnh kỹ năng tương ứng (kiếm rung chuyển khi hấp thụ)</span>
+                </div>
+                <div class="harvester-abilities-grid">
+                  <div class="specs-skill-item"><strong>Frostburn (Blaze / Magma Cube):</strong> Đòn đánh thiêu đốt quái bằng lửa cực lạnh gây sát thương lớn. Quái hệ lửa nhận thêm sát thương từ debuff.</div>
+                  <div class="specs-skill-item"><strong>Embrittlement (Wither Skeleton):</strong> Khiến mục tiêu giòn gãy, nhận thêm sát thương cóng lạnh từ mọi nguồn trong thời gian ngắn.</div>
+                  <div class="specs-skill-item"><strong>Arctic Wind (Breeze):</strong> Hào quang siêu lạnh làm chậm quái xung quanh trong 9 block, càng gần người chơi hiệu ứng làm chậm càng mạnh.</div>
+                  <div class="specs-skill-item"><strong>Piercing Cold (Witch / Vindicator):</strong> 25% cơ hội phá giáp kẻ địch, có thể cộng dồn nhiều tầng khi tấn công liên tiếp.</div>
+                  <div class="specs-skill-item"><strong>Frost Barrier (Iron Golem / Shulker / Piglin Brute):</strong> Tiêu diệt quái vật ban tặng Máu hấp thụ (Absorption) và Kháng cự giảm sát thương tạm thời.</div>
+                  <div class="specs-skill-item"><strong>Echo (Warden):</strong> Đòn chém tạo tiếng vang chém bồi sát thương chuẩn (unmitigated) xuyên giáp sau một thoáng ngắn.</div>
+                  <div class="specs-skill-item"><strong>Anima Conduit (Wither):</strong> Linh hồn hấp thụ được nghiền nát thành hồi máu và thanh no đói, kể cả khi kiếm đã đạt max cấp.</div>
+                  <div class="specs-skill-item"><strong>Cryonics (Ender Dragon):</strong> Khi kích hoạt Totem, tạo kén băng bất tử miễn nhiễm mọi sát thương và hồi máu cực nhanh, kết thúc bằng vụ nổ 15 sát thương chuẩn (hồi chiêu 60s).</div>
+                </div>
               </div>
 
               <div class="recipe-frame-box drop-recipe">
                 <div class="recipe-station-header">
-                  <span>Cách lấy: Đới Băng Tuyết The End</span>
+                  <span>Cách lấy: Bất kỳ quần xã băng tuyết The End</span>
                   <span>Tỉ lệ 1% từ Stray</span>
                 </div>
                 <div class="recipe-ingredients">
-                  <span class="recipe-step-text">Rơi 100% khi hạ gục Stray cầm Harvester (1% tỉ lệ xuất hiện ở các đới băng tuyết The End, trang bị giáp Kim Cương)</span>
+                  <span class="recipe-step-text">Rơi 100% khi hạ gục Stray cầm Harvester (1% tỉ lệ xuất hiện ở các quần xã băng giá The End, trang bị giáp Kim Cương và tăng chỉ số)</span>
                 </div>
-                <p class="recipe-note">Sửa độ bền trên Đe bằng Blue Ice (Băng Xanh) khi chưa đạt Tier 4.</p>
+                <p class="recipe-note">Sửa độ bền trên Đe bằng Blue Ice (Băng Xanh) khi chưa đạt Tier 4. Khi đạt Tier 4, đao trở thành Unbreakable (Bất tử vĩnh viễn).</p>
               </div>
             </article>
 

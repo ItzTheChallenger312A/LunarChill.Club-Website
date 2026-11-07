@@ -1176,6 +1176,246 @@
   color: #79a8ff;
 }
 
+/* Harvester 5-Tier Evolution & Abilities */
+.harvester-evolution-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(4, 7, 18, 0.6);
+  border: 1px solid rgba(104, 139, 248, 0.16);
+  border-radius: var(--radius-btn);
+  padding: 12px;
+  margin: 10px 0 6px 0;
+}
+
+.harvester-evolution-section .specs-header-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 6px;
+}
+
+.specs-header-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-cyan-glow);
+}
+
+.specs-header-sub {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.harvester-tiers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.harvester-tier-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(10, 16, 32, 0.7);
+  border: 1px solid rgba(104, 139, 248, 0.18);
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+}
+
+.harvester-tier-card:hover {
+  background: rgba(16, 26, 52, 0.85);
+  border-color: rgba(104, 139, 248, 0.4);
+}
+
+.harvester-tier-card.tier-max {
+  background: linear-gradient(135deg, rgba(28, 14, 48, 0.75) 0%, rgba(12, 18, 38, 0.85) 100%);
+  border: 1px solid rgba(184, 107, 255, 0.45);
+  box-shadow: 0 0 16px rgba(184, 107, 255, 0.1);
+}
+
+.harvester-tier-card.tier-max:hover {
+  border-color: rgba(184, 107, 255, 0.75);
+  box-shadow: 0 0 20px rgba(184, 107, 255, 0.2);
+}
+
+.harvester-tier-sprite {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  background: radial-gradient(circle at center, rgba(30, 41, 75, 0.85) 0%, #060914 85%);
+  border: 1px solid rgba(104, 139, 248, 0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.harvester-tier-card.tier-max .harvester-tier-sprite {
+  border-color: rgba(184, 107, 255, 0.6);
+  background: radial-gradient(circle at center, rgba(62, 25, 96, 0.9) 0%, #0c0818 85%);
+  box-shadow: inset 0 0 12px rgba(184, 107, 255, 0.3);
+}
+
+.harvester-tier-sprite img {
+  width: 44px;
+  height: 44px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.harvester-tier-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.harvester-tier-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.harvester-tier-badge {
+  font-family: var(--font-display);
+  font-size: 0.67rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(104, 139, 248, 0.14);
+  color: #8bb2ff;
+  border: 1px solid rgba(104, 139, 248, 0.3);
+}
+
+.harvester-tier-badge.badge-max-tier {
+  background: rgba(184, 107, 255, 0.22);
+  color: #e4b9ff;
+  border-color: rgba(184, 107, 255, 0.55);
+}
+
+.harvester-tier-name {
+  font-size: 0.82rem;
+  color: var(--color-text-title);
+  flex: 1;
+}
+
+.harvester-tier-name.highlight-purple {
+  color: #e4b9ff;
+}
+
+.harvester-tier-dmg {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dmg-tier-0 { color: #94a3b8; }
+.dmg-tier-1 { color: #60a5fa; }
+.dmg-tier-2 { color: #38bdf8; }
+.dmg-tier-3 { color: #c084fc; }
+.dmg-tier-4 { color: #f472b6; }
+
+.harvester-tier-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 0.71rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.harvester-tier-stats strong {
+  color: var(--color-text-body);
+}
+
+.stat-penalty {
+  color: #fb923c !important;
+}
+
+.stat-unbreakable {
+  color: #c084fc !important;
+}
+
+.harvester-tier-lore {
+  font-size: 0.69rem;
+  font-style: italic;
+  color: #9cb3d8;
+  line-height: 1.35;
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 2px solid rgba(104, 139, 248, 0.3);
+  padding: 4px 8px;
+  border-radius: 0 4px 4px 0;
+  margin: 2px 0 0 0;
+}
+
+.harvester-tier-card.tier-max .harvester-tier-lore {
+  color: #d8b4fe;
+  border-left-color: rgba(184, 107, 255, 0.5);
+}
+
+.harvester-tier-visual {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.harvester-tier-visual.highlight-frost-text {
+  color: #a5f3fc;
+}
+
+/* 8 Soul Abilities styling */
+.harvester-abilities-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(4, 7, 18, 0.6);
+  border: 1px solid rgba(104, 139, 248, 0.16);
+  border-radius: var(--radius-btn);
+  padding: 12px;
+  margin: 10px 0 6px 0;
+}
+
+.harvester-abilities-block .specs-header-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 6px;
+}
+
+.harvester-abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+
+@media (max-width: 640px) {
+  .harvester-abilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .harvester-tier-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 640px) {
   .item-sprite-box {
     width: 90px;
