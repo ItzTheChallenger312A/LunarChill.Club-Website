@@ -300,10 +300,8 @@
   }
 }
 
-/* Horizontal layout for compact item groups (End City Keys & Elytra Wings) */
-.keys-horizontal-list,
-.wings-horizontal-list,
-.wings-horizontal-grid {
+/* Horizontal layout for compact item groups (End City Keys) */
+.keys-horizontal-list {
   display: flex !important;
   flex-direction: column !important;
   gap: 16px !important;
@@ -311,9 +309,8 @@
   column-count: initial !important;
 }
 
-.item-recipe-card.horizontal-card,
-.wings-horizontal-list .item-recipe-card,
-.wings-horizontal-grid .item-recipe-card {
+.keys-horizontal-list .item-recipe-card.horizontal-card,
+.keys-horizontal-list .item-recipe-card {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -324,9 +321,7 @@
   box-sizing: border-box !important;
 }
 
-.item-recipe-card.horizontal-card .item-recipe-top,
-.wings-horizontal-list .item-recipe-card .item-recipe-top,
-.wings-horizontal-grid .item-recipe-card .item-recipe-top {
+.keys-horizontal-list .item-recipe-card .item-recipe-top {
   flex: 1 1 auto !important;
   min-width: 0 !important;
   display: flex !important;
@@ -334,21 +329,15 @@
   gap: 16px !important;
 }
 
-.item-recipe-card.horizontal-card .item-sprite-box,
-.wings-horizontal-list .item-recipe-card .item-sprite-box,
-.wings-horizontal-grid .item-recipe-card .item-sprite-box {
+.keys-horizontal-list .item-recipe-card .item-sprite-box {
   width: 92px !important;
   height: 92px !important;
   min-width: 92px !important;
   flex-shrink: 0 !important;
 }
 
-.item-recipe-card.horizontal-card .recipe-frame-box,
-.item-recipe-card.horizontal-card .recipe-box,
-.wings-horizontal-list .item-recipe-card .recipe-frame-box,
-.wings-horizontal-list .item-recipe-card .recipe-box,
-.wings-horizontal-grid .item-recipe-card .recipe-frame-box,
-.wings-horizontal-grid .item-recipe-card .recipe-box {
+.keys-horizontal-list .item-recipe-card .recipe-frame-box,
+.keys-horizontal-list .item-recipe-card .recipe-box {
   flex: 0 0 340px !important;
   max-width: 380px !important;
   width: 340px !important;
@@ -357,22 +346,172 @@
 }
 
 @media (max-width: 992px) {
-  .item-recipe-card.horizontal-card,
-  .wings-horizontal-list .item-recipe-card,
-  .wings-horizontal-grid .item-recipe-card {
+  .keys-horizontal-list .item-recipe-card.horizontal-card,
+  .keys-horizontal-list .item-recipe-card {
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 14px !important;
   }
-  .item-recipe-card.horizontal-card .recipe-frame-box,
-  .item-recipe-card.horizontal-card .recipe-box,
-  .wings-horizontal-list .item-recipe-card .recipe-frame-box,
-  .wings-horizontal-list .item-recipe-card .recipe-box,
-  .wings-horizontal-grid .item-recipe-card .recipe-frame-box,
-  .wings-horizontal-grid .item-recipe-card .recipe-box {
+  .keys-horizontal-list .item-recipe-card .recipe-frame-box,
+  .keys-horizontal-list .item-recipe-card .recipe-box {
     flex: 1 1 auto !important;
     max-width: 100% !important;
     width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   WINGS REUSABLE MATRIX FRAME (.wings-matrix-grid & .wing-subcard)
+   Master 4-variant layout for Elytra & Custom Wings with zero squishing
+   ========================================================================== */
+.item-variant-matrix-grid.wings-matrix-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin: 18px 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.wing-subcard {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 16px !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius-card, 8px) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  position: relative !important;
+}
+
+.wing-subcard:hover,
+.wing-subcard.mc-slot-hover {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(24, 33, 60, 0.9) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.wing-subcard-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+}
+
+.wing-sprite-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(7, 11, 25, 0.95) 75%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: border-color 0.1s ease, box-shadow 0.1s ease !important;
+}
+
+.wing-sprite-wrap:hover,
+.wing-sprite-wrap.mc-slot-hover {
+  border-color: #ffffff !important;
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.22) !important;
+}
+
+.wing-sprite-wrap img {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain !important;
+  image-rendering: pixelated !important;
+  image-rendering: crisp-edges !important;
+}
+
+.wing-title-block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  min-width: 0 !important;
+  flex: 1 !important;
+}
+
+.wing-subcard-title {
+  font-family: var(--font-display, inherit) !important;
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  color: #f8fafc !important;
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.wing-stats-line {
+  font-family: var(--font-mono, monospace) !important;
+  font-size: 0.74rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.45 !important;
+  padding: 8px 10px !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-radius: 4px !important;
+  border-left: 3px solid #60a5fa !important;
+}
+
+.wing-stats-line strong {
+  color: #e2e8f0 !important;
+}
+
+.wing-subcard-desc {
+  font-size: 0.83rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  flex-grow: 1 !important;
+}
+
+.wing-obtain-box {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 10px !important;
+  background: rgba(0, 0, 0, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px !important;
+  font-size: 0.78rem !important;
+  color: #e2e8f0 !important;
+  margin-top: 4px !important;
+  flex-wrap: wrap !important;
+}
+
+.wing-obtain-box .mc-slot {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  padding: 2px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.wing-obtain-box .mc-slot img {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 1200px) {
+  .item-variant-matrix-grid.wings-matrix-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .item-variant-matrix-grid.wings-matrix-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
