@@ -1,0 +1,12 @@
+﻿assets/stellarity/items/harvester.json
+assets/stellarity/items/harvester_molten.json
+assets/stellarity/models/item/harvester/molten_tier_0.json
+assets/stellarity/models/item/harvester/molten_tier_1.json
+assets/stellarity/models/item/harvester/molten_tier_2.json
+assets/stellarity/models/item/harvester/molten_tier_3.json
+assets/stellarity/models/item/harvester/molten_tier_4.json
+assets/stellarity/models/item/harvester/tier_0.json
+assets/stellarity/models/item/harvester/tier_1.json
+assets/stellarity/models/item/harvester/tier_2.json
+assets/stellarity/models/item/harvester/tier_3.json
+assets/stellarity/models/item/harvester/tier_4.json
