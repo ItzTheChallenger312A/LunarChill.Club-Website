@@ -403,65 +403,189 @@
   margin: 0 0 24px 0;
 }
 
-/* Row 3: Nodes / Gateways Section */
-.portal-nodes-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
+/* --- Row 3: Primary PC Connection Hero Card & PE Callout Note --- */
+.portal-pc-connection {
+  background: linear-gradient(135deg, rgba(16, 22, 60, 0.92) 0%, rgba(8, 12, 32, 0.96) 100%);
+  border: 1.5px solid rgba(104, 139, 248, 0.35);
+  clip-path: var(--clip-pixel-card);
+  padding: 24px 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  margin-bottom: 18px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.nodes-title {
+.portal-pc-connection:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 10px 36px rgba(104, 139, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.pc-conn-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pc-conn-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pc-conn-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-conn-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-accent-orbit);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 2px 8px;
+  clip-path: var(--clip-pixel-card);
+  display: inline-block;
+  margin-bottom: 4px;
+  width: fit-content;
+}
+
+.pc-conn-title {
   font-family: var(--font-sans);
-  font-size: 1.02rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-text-heading);
-  letter-spacing: normal;
-  word-spacing: normal;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.pc-conn-status-badge .node-status {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--status-online);
   margin: 0;
 }
 
-.nodes-hint {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-
-.nodes-hint strong {
-  color: var(--color-accent-orbit);
-  font-family: var(--font-mono);
-}
-
-.portal-nodes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.node-card {
-  background-color: #060814;
-  border: 1px solid var(--color-border-subtle);
+.pc-conn-address-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: rgba(5, 7, 18, 0.72);
+  border: 1px solid rgba(104, 139, 248, 0.2);
+  padding: 16px 20px;
   clip-path: var(--clip-pixel-card);
-  padding: 18px 20px;
+}
+
+.pc-conn-ip-group {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.55);
-  transition: border-color var(--transition-fast);
 }
 
-.node-card:hover {
-  border-color: var(--color-border-hover);
+.pc-conn-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.node-card-top {
-  display: flex;
-  justify-content: space-between;
+.pc-conn-ip-display {
+  font-family: var(--font-mono);
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  font-weight: 700;
+  color: var(--color-text-heading);
+  letter-spacing: 0.02em;
+}
+
+.pc-conn-ip-display .ip-domain {
+  color: #FEFDFD;
+}
+
+.pc-conn-ip-display .ip-separator {
+  color: var(--color-text-muted);
+  margin: 0 1px;
+}
+
+.pc-conn-ip-display .ip-port {
+  color: var(--color-accent-orbit);
+}
+
+.pc-conn-actions .btn-copy-pc {
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 8px;
+  box-shadow: 0 4px 18px rgba(104, 139, 248, 0.35);
+}
+
+/* --- Row 3.5: Phone / Bedrock PE Callout Note --- */
+.portal-pe-note {
+  background: rgba(10, 14, 42, 0.65);
+  border: 1px dashed rgba(104, 139, 248, 0.32);
+  clip-path: var(--clip-pixel-card);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.pe-note-icon-wrap {
+  width: 40px;
+  height: 40px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  clip-path: var(--clip-pixel-card);
+  flex-shrink: 0;
+}
+
+.pe-note-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.pe-note-title {
+  font-size: 0.88rem;
+  color: var(--color-text-subheading);
+  margin-bottom: 4px;
+}
+
+.pe-note-text {
+  font-size: 0.82rem;
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.pe-note-text code {
+  font-family: var(--font-mono);
+  color: var(--color-accent-orbit);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.82rem;
+}
+
+.pe-note-action {
+  flex-shrink: 0;
 }
 
 .node-icon-box {
@@ -496,24 +620,9 @@
   border-color: rgba(136, 153, 176, 0.28);
 }
 
-.node-name {
-  font-family: var(--font-sans);
-  font-size: 0.96rem;
-  font-weight: 700;
-  color: var(--color-text-heading);
-}
-
 .node-status {
   font-size: 0.82rem;
   color: var(--color-text-muted);
-  margin-bottom: 4px;
-}
-
-.node-value {
-  font-family: var(--font-mono);
-  font-size: 1.04rem;
-  font-weight: 700;
-  color: var(--status-online);
 }
 
 /* Row 4: Footer Meta & Timestamp */
@@ -681,10 +790,6 @@
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-  .portal-nodes-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
   .portal-card {
     padding: 28px 20px 22px 20px;
   }
@@ -702,6 +807,36 @@
   .showcase-update-notice {
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .portal-pc-connection {
+    padding: 20px 16px;
+  }
+  .pc-conn-address-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 16px;
+    padding: 16px 14px;
+  }
+  .pc-conn-actions .btn-copy-pc {
+    width: 100%;
+    justify-content: center;
+  }
+  .portal-pe-note {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 14px;
+  }
+  .pe-note-action {
+    width: 100%;
+  }
+  .pe-note-action .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -734,45 +869,10 @@
     align-items: flex-start;
     gap: 6px;
   }
-  .campsite-scenery {
+  .pc-conn-header {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
-  }
-  .pixel-spruce-tree {
-    width: 48px;
-    height: 80px;
-  }
-  .pixel-oak-tree {
-    width: 52px;
-    height: 65px;
-  }
-  .pixel-oak-log {
-    width: 36px;
-    height: 18px;
-  }
-  .prop-campfire {
-    width: 48px;
-    height: 44px;
-  }
-  .campfire-base {
-    width: 48px;
-    height: 38px;
-  }
-  .celestial-moon-wrap {
-    right: 12px;
-    top: 18px;
-    width: 48px;
-    height: 48px;
-  }
-  .pixel-moon {
-    width: 48px;
-    height: 48px;
-  }
-  .moonlight-halo {
-    width: 130px;
-    height: 130px;
-  }
-  .moonlight-beam {
-    display: none; /* Tránh che khuất nội dung & tiết kiệm tài nguyên di động */
   }
   .hero-cta-group {
     flex-direction: column;
@@ -785,19 +885,12 @@
 
 /* --- Accessibility: Respect Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
-  .celestial-moon-wrap,
-  .moonlight-halo,
-  .moonlight-beam,
-  .lunar-star,
-  .pixel-spruce-tree,
-  .pixel-oak-tree,
-  .campfire-glow,
-  .lantern-glow,
-  .smoke-particle {
-    animation: none !important;
-    transition: none !important;
+  .hero-video-element {
+    display: none;
   }
-  .campfire-sprite {
-    animation-duration: 4s; /* Giảm giật nếu người dùng nhạy cảm chuyển động */
+  .hero-video-backdrop {
+    background-image: url('../../images/hero-video-poster.webp');
+    background-size: cover;
+    background-position: center;
   }
 }
