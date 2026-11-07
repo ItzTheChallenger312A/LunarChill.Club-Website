@@ -196,50 +196,60 @@
 
           <hr class="portal-divider" aria-hidden="true">
 
-          <!-- Row 3: Nodes / Gateways Section -->
-          <div class="portal-nodes-header">
-            <h3 class="nodes-title">Trạng thái các cổng kết nối</h3>
-            <span class="nodes-hint">Dùng chung địa chỉ <strong data-config-text="SERVER_HOST">LunarChill.club</strong> và cổng <strong data-config-text="SERVER_PORT_JAVA">25572</strong> cho mọi thiết bị</span>
+          <!-- Row 3: Primary PC Connection Hero Card -->
+          <div class="portal-pc-connection" id="java-node-card">
+            <div class="pc-conn-main">
+              <div class="pc-conn-header">
+                <div class="node-icon-box checking" id="java-node-icon" aria-hidden="true">✦</div>
+                <div class="pc-conn-title-wrap">
+                  <span class="pc-conn-tag">MÁY CHỦ PC CHÍNH</span>
+                  <h3 class="pc-conn-title">Bản PC (Java &amp; Bedrock)</h3>
+                </div>
+                <div class="pc-conn-status-badge">
+                  <span class="node-status" id="java-node-status">Đang kiểm tra kết nối...</span>
+                </div>
+              </div>
+
+              <div class="pc-conn-address-row">
+                <div class="pc-conn-ip-group">
+                  <span class="pc-conn-label">ĐỊA CHỈ MÁY CHỦ:</span>
+                  <div class="pc-conn-ip-display">
+                    <span class="ip-domain" data-config-text="SERVER_HOST">LunarChill.club</span>
+                    <span class="ip-separator">:</span>
+                    <span class="ip-port" data-config-text="SERVER_PORT_JAVA">25572</span>
+                  </div>
+                </div>
+
+                <div class="pc-conn-actions">
+                  <button type="button" class="btn btn-primary btn-copy-pc" data-action="copy-ip" data-copy-target="pc" title="Sao chép IP máy chủ PC">
+                    <span class="btn-icon" aria-hidden="true">📋</span>
+                    <span>Sao chép IP PC</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="portal-nodes-grid">
-            <!-- Node 1: Địa chỉ chung (Host) -->
-            <div class="node-card node-host">
-              <div class="node-card-top">
-                <div class="node-icon-box online" aria-hidden="true">✦</div>
-                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="host">
-                  Sao chép Host
-                </button>
-              </div>
-              <strong class="node-name">Địa chỉ máy chủ</strong>
-              <span class="node-status">Tên miền chính thức</span>
-              <span class="node-value" data-config-text="SERVER_HOST">LunarChill.club</span>
+          <!-- Row 3.5: Phone / Bedrock PE Information Callout Note -->
+          <div class="portal-pe-note" role="note" aria-label="Thông tin kết nối cho người chơi điện thoại">
+            <div class="pe-note-icon-wrap" aria-hidden="true">
+              <span class="pe-note-icon">📱</span>
             </div>
-
-            <!-- Node 2: Bản PC (Java & Bedrock PC) -->
-            <div class="node-card node-java" id="java-node-card">
-              <div class="node-card-top">
-                <div class="node-icon-box checking" id="java-node-icon" aria-hidden="true">✦</div>
-                <button type="button" class="btn btn-primary btn-sm" data-action="copy-ip" data-copy-target="pc">
-                  Sao chép IP PC
-                </button>
+            <div class="pe-note-content">
+              <div class="pe-note-title">
+                <strong>Ghi chú cho người chơi Điện thoại (Minecraft PE / Bedrock):</strong>
               </div>
-              <strong class="node-name">Bản PC (Java &amp; Bedrock)</strong>
-              <span class="node-status" id="java-node-status">Đang kiểm tra kết nối...</span>
-              <span class="node-value">Port: <span data-config-text="SERVER_PORT_JAVA">25572</span></span>
+              <p class="pe-note-text">
+                Nhập <strong>Server Name:</strong> <code>LunarChill</code> &middot; 
+                <strong>Server Address:</strong> <code data-config-text="SERVER_HOST">LunarChill.club</code> &middot; 
+                <strong>Port:</strong> <code data-config-text="SERVER_PORT_BEDROCK">25572</code>. 
+                Hệ thống hỗ trợ chơi chung thế giới trực tiếp với người chơi PC.
+              </p>
             </div>
-
-            <!-- Node 3: Bản PE riêng (Điện thoại) -->
-            <div class="node-card node-bedrock" id="bedrock-node-card">
-              <div class="node-card-top">
-                <div class="node-icon-box checking" id="bedrock-node-icon" aria-hidden="true">✦</div>
-                <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="pe">
-                  Sao chép Host PE
-                </button>
-              </div>
-              <strong class="node-name">Bản PE riêng (Điện thoại)</strong>
-              <span class="node-status" id="bedrock-node-status">Đang kiểm tra kết nối...</span>
-              <span class="node-value">Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span></span>
+            <div class="pe-note-action">
+              <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="pe" title="Sao chép Host PE">
+                Sao chép Host PE
+              </button>
             </div>
           </div>
 
