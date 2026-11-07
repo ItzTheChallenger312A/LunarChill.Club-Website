@@ -405,12 +405,15 @@
 
 /* --- Row 3: Primary PC Connection Hero Card & PE Callout Note --- */
 .portal-pc-connection {
-  background: linear-gradient(135deg, rgba(16, 22, 60, 0.92) 0%, rgba(8, 12, 32, 0.96) 100%);
+  background: #080C24;
   border: 1.5px solid rgba(104, 139, 248, 0.35);
   clip-path: var(--clip-pixel-card);
   padding: 24px 28px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   margin-bottom: 18px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -428,6 +431,7 @@
   flex-wrap: wrap;
 }
 
+.pc-conn-title-group,
 .pc-conn-header > div:first-child {
   display: flex;
   align-items: center;
@@ -457,7 +461,7 @@
 
 .pc-conn-title {
   font-family: var(--font-sans);
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--color-text-heading);
   margin: 0;
@@ -467,9 +471,14 @@
 .pc-conn-status-badge .node-status {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--status-online);
   margin: 0;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 4px 12px;
+  clip-path: var(--clip-pixel-card);
+  display: inline-block;
 }
 
 .pc-conn-address-row {
@@ -478,10 +487,11 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  background: rgba(5, 7, 18, 0.72);
+  background: #040614;
   border: 1px solid rgba(104, 139, 248, 0.2);
   padding: 16px 20px;
   clip-path: var(--clip-pixel-card);
+  box-sizing: border-box;
 }
 
 .pc-conn-ip-group {
@@ -532,8 +542,8 @@
 
 /* --- Row 3.5: Phone / Bedrock PE Callout Note --- */
 .portal-pe-note {
-  background: rgba(10, 14, 42, 0.65);
-  border: 1px dashed rgba(104, 139, 248, 0.32);
+  background: rgba(10, 14, 42, 0.75);
+  border: 1px dashed rgba(104, 139, 248, 0.35);
   clip-path: var(--clip-pixel-card);
   padding: 16px 20px;
   display: flex;
@@ -542,6 +552,15 @@
   gap: 16px;
   margin-bottom: 24px;
   flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.pe-note-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 260px;
 }
 
 .pe-note-icon-wrap {
@@ -559,7 +578,6 @@
 
 .pe-note-content {
   flex: 1;
-  min-width: 260px;
 }
 
 .pe-note-title {
@@ -578,10 +596,11 @@
 .pe-note-text code {
   font-family: var(--font-mono);
   color: var(--color-accent-orbit);
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(56, 189, 248, 0.12);
   padding: 2px 6px;
   border-radius: 2px;
   font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .pe-note-action {

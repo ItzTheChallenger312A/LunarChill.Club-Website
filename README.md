@@ -1,7 +1,7 @@
 # LunarChill.Club - Official Website
 
 <div align="center">
-  <img src="assets/images/logo.png" alt="LunarChill Logo" width="180" height="180" style="border-radius: 50%;" />
+  <img src="assets/images/logo.webp" alt="LunarChill Logo" width="180" height="180" style="border-radius: 50%;" />
   <h3>🌙 "Chill thôi, đừng có vội."</h3>
   <p><em>Just chill, don't rush.</em></p>
   <p>Website chính thức của máy chủ Minecraft <strong>LunarChill.Club</strong> - Cổng thông tin, cẩm nang sinh tồn, hướng dẫn tối ưu và kết nối cộng đồng.</p>
@@ -91,8 +91,7 @@ LunarChill.Club-Website/
 │   │   ├── clipboard.js           # Xử lý sao chép 1-click có phản hồi Toast trực quan
 │   │   └── main.js                # Bootstrap ứng dụng, Drawer tương tác & Bộ lọc ảnh
 │   └── images/
-│       ├── logo.png               # Huy hiệu nhận diện Master
-│       ├── logo.webp              # Huy hiệu WebP nén tối ưu
+│       ├── logo.webp              # Huy hiệu nhận diện WebP nén tối ưu
 │       ├── logo-small.webp        # Logo nhỏ cho Header và Footer (64x64)
 │       ├── minecraft/             # Texture gốc 16x16 trích xuất từ Minecraft
 │       ├── favicon.ico            # Favicon đa kích thước chuẩn

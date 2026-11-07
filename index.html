@@ -30,11 +30,11 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheets (Zero Slop) -->
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/pages/home.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=20261107-2">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261107-2">
+  <link rel="stylesheet" href="assets/css/components.css?v=20261107-2">
+  <link rel="stylesheet" href="assets/css/layout.css?v=20261107-2">
+  <link rel="stylesheet" href="assets/css/pages/home.css?v=20261107-2">
 </head>
 <body>
 
@@ -198,53 +198,55 @@
 
           <!-- Row 3: Primary PC Connection Hero Card -->
           <div class="portal-pc-connection" id="java-node-card">
-            <div class="pc-conn-main">
-              <div class="pc-conn-header">
+            <div class="pc-conn-header">
+              <div class="pc-conn-title-group">
                 <div class="node-icon-box checking" id="java-node-icon" aria-hidden="true">✦</div>
                 <div class="pc-conn-title-wrap">
                   <span class="pc-conn-tag">MÁY CHỦ PC CHÍNH</span>
                   <h3 class="pc-conn-title">Bản PC (Java &amp; Bedrock)</h3>
                 </div>
-                <div class="pc-conn-status-badge">
-                  <span class="node-status" id="java-node-status">Đang kiểm tra kết nối...</span>
+              </div>
+              <div class="pc-conn-status-badge">
+                <span class="node-status" id="java-node-status">Đang kiểm tra kết nối...</span>
+              </div>
+            </div>
+
+            <div class="pc-conn-address-row">
+              <div class="pc-conn-ip-group">
+                <span class="pc-conn-label">ĐỊA CHỈ MÁY CHỦ:</span>
+                <div class="pc-conn-ip-display">
+                  <span class="ip-domain" data-config-text="SERVER_HOST">LunarChill.club</span>
+                  <span class="ip-separator">:</span>
+                  <span class="ip-port" data-config-text="SERVER_PORT_JAVA">25572</span>
                 </div>
               </div>
 
-              <div class="pc-conn-address-row">
-                <div class="pc-conn-ip-group">
-                  <span class="pc-conn-label">ĐỊA CHỈ MÁY CHỦ:</span>
-                  <div class="pc-conn-ip-display">
-                    <span class="ip-domain" data-config-text="SERVER_HOST">LunarChill.club</span>
-                    <span class="ip-separator">:</span>
-                    <span class="ip-port" data-config-text="SERVER_PORT_JAVA">25572</span>
-                  </div>
-                </div>
-
-                <div class="pc-conn-actions">
-                  <button type="button" class="btn btn-primary btn-copy-pc" data-action="copy-ip" data-copy-target="pc" title="Sao chép IP máy chủ PC">
-                    <span class="btn-icon" aria-hidden="true">📋</span>
-                    <span>Sao chép IP PC</span>
-                  </button>
-                </div>
+              <div class="pc-conn-actions">
+                <button type="button" class="btn btn-primary btn-copy-pc" data-action="copy-ip" data-copy-target="pc" title="Sao chép IP máy chủ PC">
+                  <span class="btn-icon" aria-hidden="true">📋</span>
+                  <span>Sao chép IP PC</span>
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Row 3.5: Phone / Bedrock PE Information Callout Note -->
           <div class="portal-pe-note" role="note" aria-label="Thông tin kết nối cho người chơi điện thoại">
-            <div class="pe-note-icon-wrap" aria-hidden="true">
-              <span class="pe-note-icon">📱</span>
-            </div>
-            <div class="pe-note-content">
-              <div class="pe-note-title">
-                <strong>Ghi chú cho người chơi Điện thoại (Minecraft PE / Bedrock):</strong>
+            <div class="pe-note-left">
+              <div class="pe-note-icon-wrap" aria-hidden="true">
+                <span class="pe-note-icon">📱</span>
               </div>
-              <p class="pe-note-text">
-                Nhập <strong>Server Name:</strong> <code>LunarChill</code> &middot; 
-                <strong>Server Address:</strong> <code data-config-text="SERVER_HOST">LunarChill.club</code> &middot; 
-                <strong>Port:</strong> <code data-config-text="SERVER_PORT_BEDROCK">25572</code>. 
-                Hệ thống hỗ trợ chơi chung thế giới trực tiếp với người chơi PC.
-              </p>
+              <div class="pe-note-content">
+                <div class="pe-note-title">
+                  <strong>Ghi chú cho người chơi Điện thoại (Minecraft PE / Bedrock):</strong>
+                </div>
+                <p class="pe-note-text">
+                  Nhập <strong>Server Name:</strong> <code>LunarChill</code> &middot; 
+                  <strong>Server Address:</strong> <code data-config-text="SERVER_HOST">LunarChill.club</code> &middot; 
+                  <strong>Port:</strong> <code data-config-text="SERVER_PORT_BEDROCK">25572</code>. 
+                  Hệ thống hỗ trợ chơi chung thế giới trực tiếp với người chơi PC.
+                </p>
+              </div>
             </div>
             <div class="pe-note-action">
               <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="pe" title="Sao chép Host PE">
