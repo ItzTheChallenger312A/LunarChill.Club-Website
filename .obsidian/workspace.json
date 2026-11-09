@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/03 - Development/Technical Plan.md",
+                "file": "docs/03 - Development/Test Matrix & Bug Tracking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Technical Plan"
+              "title": "Test Matrix & Bug Tracking"
             }
           }
         ],
@@ -233,6 +233,7 @@
   },
   "active": "aedfe41b28c5a827",
   "lastOpenFiles": [
+    "docs/03 - Development/Technical Plan.md",
     "assets/images/weapons/prismember.png",
     "assets/images/weapons/prismatic_punch.png",
     "assets/images/weapons/kaleidoscope.png",
@@ -243,7 +244,6 @@
     "assets/images/entities/ender_dragon.png",
     "assets/images/entities/ender_cat.png",
     "assets/images/animated/prismite.webp",
-    "assets/images/animated/prismember.webp",
     "assets/images/eggs",
     "scratch/write_list_harvester.js",
     "scratch/verify_new_shulker.js",
@@ -261,7 +261,6 @@
     "scratch/source_pack/prismatic_punch.md",
     "scratch/source_pack/kaleidoscope.md",
     "file:C:/Users/The Challenger/Downloads/251021005260.md",
-    "docs/03 - Development/Technical Plan.md",
     "docs/03 - Development/Test Matrix & Bug Tracking.md",
     "docs/04 - Feedbacks/Feature Backlog & Future Improvements.md",
     "docs/04 - Feedbacks/Dev's Notes.md",

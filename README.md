@@ -7,9 +7,11 @@
   <p>Website chính thức của máy chủ Minecraft <strong>LunarChill.Club</strong> - Cổng thông tin, cẩm nang sinh tồn, hướng dẫn tối ưu và kết nối cộng đồng.</p>
 
   <p>
-    <a href="https://lunarchill.club"><strong>Khám phá Website »</strong></a>
+    <a href="https://www.lunarchill.club"><strong>Khám phá Website chính thức: www.lunarchill.club »</strong></a>
     <br />
     <br />
+    <a href="https://github.com/ItzTheChallenger312A/LunarChill.Club-Website">GitHub Repository</a>
+    ·
     <a href="docs/00 - Project Overview/Overview.md">Project Overview</a>
     ·
     <a href="docs/02 - Design/Borderline Of Slop & Human-like.md">Anti-Slop Standards</a>
@@ -27,7 +29,11 @@
 ## 🌟 Giới thiệu về LunarChill.Club
 
 **LunarChill.Club** là máy chủ sinh tồn Minecraft (Survival MultiPlayer) hướng tới trải nghiệm thư thái, công bằng và gắn kết:
-- **Thông số kết nối:**
+- **Liên kết chính thức:**
+  - **Website chính thức:** [www.lunarchill.club](https://www.lunarchill.club)
+  - **Mã nguồn GitHub:** [github.com/ItzTheChallenger312A/LunarChill.Club-Website](https://github.com/ItzTheChallenger312A/LunarChill.Club-Website)
+  - **Cộng đồng Discord:** [discord.gg/SM9cn8pQQH](https://discord.gg/SM9cn8pQQH)
+- **Thông số kết nối máy chủ:**
   - **Địa chỉ kết nối dùng chung:** `LunarChill.club` (Cổng duy nhất: `25572`)
   - **Bản PC (Java & Bedrock trên máy tính):** `LunarChill.club:25572` (Hỗ trợ từ 1.21.11 đến 26.3)
   - **Bản PE riêng (Điện thoại / Pocket Edition):** `LunarChill.club` (Port: `25572` | Hỗ trợ 26.30 đến 26.51)
@@ -42,7 +48,7 @@
 2. **Hệ Thống Cẩm Nang Toàn Diện (Knowledge Hub):** 
    - *Cẩm nang tân thủ:* Hướng dẫn nhập môn, mã quà tặng `/redeem tanthu`, lệnh cơ bản và quy tắc khởi đầu.
    - *Hướng dẫn chuyên sâu:* Phân tích chi tiết cơ chế khai khoáng tầng sâu Y ≤ 0, thể trạng oxy & cơn khát, đại tu The Nether (Wither 900 HP) và The End (Nullscape, Stellarity, hiệu ứng Infestation), kinh tế thị trường Dynamic Pricing và ngọc bảo mệnh Rune.
-   - *Bộ 3 chuyên trang The End:* Tổng quan The End & luật sinh tồn (`/the-end`), Chuyên đề Stellarity (`/stellarity`) với 23 quần xã và 52 thẻ vật phẩm & công thức chế tạo, Chuyên đề Nullscape (`/nullscape`) với cấu trúc địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và Đảo chính xoáy Hố giun (Wormhole).
+   - *Bộ 3 chuyên trang The End:* Tổng quan The End & luật sinh tồn (`/the-end`), Chuyên đề Stellarity (`/stellarity`) với 23 quần xã và hệ thống vật phẩm & công thức chế tạo, Chuyên đề Nullscape (`/nullscape`) với cấu trúc địa hình 384 blocks ($Y = -64$ đến $Y = 320$) và Đảo chính xoáy Hố giun (Wormhole).
    - *Cẩm nang Mod Client:* Gói mod tăng FPS cho máy yếu/laptop văn phòng (Sodium, Lithium, FerriteCore), hướng dẫn cài đặt Video Settings chuẩn và cẩm nang bắt bệnh sự cố.
 3. **Bộ mặt thương hiệu (Brand Identity):** Thiết kế theo phong cách *Cosmic Sanctuary* kết hợp Minecraft Voxel UI nguyên bản, phẳng sắc nét, đạt chuẩn 0 Slop theo bộ tiêu chí thiết kế con người.
 
@@ -52,8 +58,8 @@
 
 - **Frontend Core:** Vanilla HTML5, Modern CSS3 (CSS Variables, Flexbox/Grid, Pixel Voxel Borders, WCAG AAA Contrast), Vanilla JavaScript (ES6+ Modules).
 - **Trạng thái máy chủ thời gian thực:** Tích hợp REST API từ `mcstatus.io` với cơ chế kiểm tra song song độc lập cho PC (Java: 25572) và PE (Bedrock: 25572, hỗ trợ fallback 19143 chuyển tiếp), lưu cache động theo `X-Cache-Time-Remaining` và `expires_at`.
-- **Lưu trữ & Triển khai (Hosting & Edge Routing):** Vercel Edge Network với cấu hình `cleanUrls`, rewrites URL đẹp và chính sách cache header tối ưu.
-- **Cộng đồng & Hỗ trợ:** Tích hợp liên kết mời Discord chính thức ([discord.gg/SM9cn8pQQH](https://discord.gg/SM9cn8pQQH)).
+- **Lưu trữ & Triển khai (Hosting & Edge Routing):** Triển khai chính thức tại [www.lunarchill.club](https://www.lunarchill.club) trên hạ tầng Vercel Edge Network với cấu hình `cleanUrls`, rewrites URL đẹp và chính sách cache header tối ưu.
+- **Quản lý mã nguồn & Cộng đồng:** Lưu trữ mã nguồn tại [GitHub Repository chính thức](https://github.com/ItzTheChallenger312A/LunarChill.Club-Website) và hỗ trợ trực tiếp qua Discord ([discord.gg/SM9cn8pQQH](https://discord.gg/SM9cn8pQQH)).
 
 ---
 
@@ -106,21 +112,21 @@ LunarChill.Club-Website/
 └── README.md                      # Giới thiệu tổng quan dự án
 ```
 
-> 💡 **Lưu ý về tài liệu (`docs/`):** Hệ thống tài liệu trong thư mục `docs/` được duy trì phục vụ việc tra cứu và phối hợp phát triển trên GitHub. Thư mục này nằm trong `.vercelignore` nhằm đảm bảo website tĩnh khi xuất bản luôn đạt tốc độ tải trang cao nhất.
+> 💡 **Lưu ý về tài liệu (`docs/`):** Hệ thống tài liệu trong thư mục `docs/` được duy trì phục vụ việc tra cứu và phối hợp phát triển trên [GitHub Repository](https://github.com/ItzTheChallenger312A/LunarChill.Club-Website). Thư mục này nằm trong `.vercelignore` nhằm đảm bảo website tĩnh khi xuất bản luôn đạt tốc độ tải trang cao nhất.
 
 ---
 
 ## 🗺️ Hiện trạng & Lộ trình Triển khai
 
 > [!NOTE]
-> **Hiện trạng:** Đã deploy lên Vercel, domain có sẵn, đợi xác thực, tiến hành sang công đoạn liên tục cải thiện trang web.
+> **Hiện trạng:** Website đã hoạt động chính thức tại [www.lunarchill.club](https://www.lunarchill.club), đồng bộ cùng [GitHub Repository chính thức](https://github.com/ItzTheChallenger312A/LunarChill.Club-Website) và đang trong giai đoạn liên tục cải thiện nội dung & trải nghiệm.
 
 | Giai đoạn | Trọng tâm công việc | Trạng thái |
 | :--- | :--- | :--- |
 | **01. Research & Requirements** | Khảo sát nhu cầu, sitemap, ma trận tính năng và phân tích đối chuẩn | ✅ Hoàn thành |
 | **02. Brand & UI Architecture** | Bộ nhận diện Cosmic Sanctuary, hệ thống Pixel UI, bộ quy chuẩn 71 lỗi Anti-Slop | ✅ Hoàn thành |
 | **03. Development & Content** | Lập trình hoàn chỉnh 13 trang tĩnh HTML/CSS/JS (bao gồm bộ 3 chuyên trang The End), đồng bộ port 25572, API status | ✅ Hoàn thành |
-| **04. Vercel Deployment & Route** | Cấu hình clean URLs, rewrite `/mods`, `/advanced-guide`, nén ảnh WebP | ✅ Hoàn thành |
+| **04. Vercel Deployment & Route** | Kết nối tên miền chính thức `www.lunarchill.club`, cấu hình clean URLs, rewrite và nén ảnh WebP | ✅ Hoàn thành |
 | **05. Continuous Improvement** | Tiếp nhận góp ý từ cộng đồng, liên tục tối ưu hiệu năng và cập nhật cẩm nang | 🔄 **Đang tiến hành** |
 
 ---
@@ -134,5 +140,5 @@ LunarChill.Club-Website/
 ---
 
 <div align="center">
-  <sub>Được phát triển với tình yêu dành cho cộng đồng người chơi LunarChill.Club. 🌙</sub>
+  <sub>Được phát triển dành cho cộng đồng người chơi <a href="https://www.lunarchill.club">LunarChill.Club</a> · <a href="https://github.com/ItzTheChallenger312A/LunarChill.Club-Website">GitHub</a> 🌙</sub>
 </div>
