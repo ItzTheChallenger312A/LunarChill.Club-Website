@@ -5,8 +5,7 @@
 
 /* --- 1. Hero Section: Asymmetric 12-Column Stage --- */
 .hero-stage {
-  padding: var(--space-12) 0;
-  min-height: calc(100dvh - 68px);
+  padding: var(--space-16) 0;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-rule);
@@ -17,7 +16,7 @@
 .hero-stage-grid {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: var(--space-10);
+  gap: var(--space-12);
   align-items: center;
 }
 
@@ -36,8 +35,8 @@
 }
 
 .hero-logo-badge {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--color-border-hover);
@@ -47,7 +46,7 @@
 
 .hero-subtitle-en {
   font-family: var(--font-display);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-subheading);
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -59,17 +58,17 @@
   font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--color-text-heading);
-  line-height: 1.1;
+  line-height: 1.12;
   margin-bottom: var(--space-4);
   letter-spacing: -0.03em;
 }
 
 .hero-desc {
   font-size: var(--text-md);
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--color-text-body);
-  margin-bottom: var(--space-6);
-  max-width: 48ch;
+  margin-bottom: var(--space-8);
+  max-width: 46ch;
 }
 
 .hero-cta-group {
@@ -77,6 +76,11 @@
   align-items: center;
   gap: var(--space-4);
   flex-wrap: wrap;
+}
+
+.hero-cta-group .btn {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-base);
 }
 
 /* --- Framed Hero Stage Visual & Pauseable Ambient Video --- */
@@ -120,7 +124,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  padding: var(--space-3) var(--space-4);
+  padding: var(--space-3) var(--space-5);
   background-color: var(--color-paper-2);
   color: var(--color-ink);
   border-top: 1px solid var(--color-rule);
@@ -154,7 +158,7 @@
 
 .portal-card {
   position: relative;
-  padding: var(--space-8);
+  padding: var(--space-10);
   background-color: var(--color-bg-surface);
   background-image: var(--gradient-portal-surface);
   color: var(--color-ink);
@@ -190,7 +194,7 @@
   gap: var(--space-6);
   flex-wrap: wrap;
   padding-bottom: var(--space-6);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   border-bottom: 1px solid var(--color-rule);
 }
 
@@ -199,13 +203,13 @@
   font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-text-heading);
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-2);
   line-height: 1.15;
 }
 
 .portal-subtitle {
   color: var(--color-text-body);
-  font-size: var(--text-base);
+  font-size: var(--text-md);
   margin-bottom: 0;
 }
 
@@ -222,7 +226,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-6);
-  padding: var(--space-6);
+  padding: var(--space-8);
   background-color: var(--color-surface-inset);
   color: var(--color-ink);
   border: 1px solid var(--color-border-subtle);
@@ -238,7 +242,7 @@
 
 .metric-online {
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-weight: 700;
   color: var(--color-text-heading);
   line-height: 1;
@@ -254,7 +258,7 @@
 }
 
 .metric-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 600;
   color: var(--color-text-subheading);
   width: 100%;
@@ -265,7 +269,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  padding-top: var(--space-4);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--color-rule);
 }
 
@@ -278,7 +282,7 @@
 
 .version-box-value {
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 700;
   color: var(--color-text-heading);
   font-variant-numeric: tabular-nums;
@@ -289,11 +293,11 @@
   background-color: var(--color-surface-inset);
   color: var(--color-ink);
   border: 1px solid var(--color-border-hover);
-  padding: var(--space-6);
+  padding: var(--space-8);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--space-5);
+  gap: var(--space-6);
   min-width: 0;
 }
 
@@ -313,15 +317,15 @@
 
 .pc-conn-title {
   font-family: var(--font-sans);
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   font-weight: 700;
   color: var(--color-text-heading);
   margin-bottom: 0;
 }
 
 .node-icon-box {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -351,7 +355,7 @@
 
 .pc-conn-status-badge .node-status {
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--status-online);
   margin-bottom: 0;
@@ -370,7 +374,7 @@
   background-color: var(--color-surface-terminal);
   color: var(--color-ink);
   border: 1px solid var(--color-border-subtle);
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-5) var(--space-6);
 }
 
 .pc-conn-ip-group {
@@ -388,7 +392,7 @@
 
 .pc-conn-ip-display {
   font-family: var(--font-mono);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-text-heading);
   font-variant-numeric: tabular-nums;
@@ -406,13 +410,18 @@
   color: var(--color-accent-orbit);
 }
 
+.pc-conn-actions .btn-copy-pc {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-base);
+}
+
 /* Bedrock / PE Spec Strip */
 .portal-pe-note {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  padding-top: var(--space-4);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--color-rule);
   flex-wrap: wrap;
 }
@@ -424,7 +433,7 @@
 }
 
 .pe-note-title {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-subheading);
   margin-bottom: 0;
 }
@@ -432,9 +441,9 @@
 .pe-spec-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-5);
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--color-text-body);
 }
 
@@ -459,7 +468,7 @@
   align-items: center;
   gap: var(--space-4);
   flex-wrap: wrap;
-  padding-top: var(--space-4);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--color-rule);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
@@ -482,7 +491,7 @@
 }
 
 .section-header {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
 }
 
 .section-header h2 {
@@ -495,7 +504,7 @@
 
 .section-header p {
   color: var(--color-text-body);
-  font-size: var(--text-base);
+  font-size: var(--text-md);
 }
 
 .steps-grid {
@@ -508,36 +517,36 @@
 }
 
 .step-card {
-  padding: var(--space-6);
+  padding: var(--space-8);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
   min-width: 0;
+}
+
+.step-card:first-child {
+  padding-left: 0;
+}
+
+.step-card:last-child {
+  padding-right: 0;
 }
 
 .step-card + .step-card {
   border-left: 1px solid var(--color-rule);
 }
 
-.step-num {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: var(--color-accent-orbit);
-  font-variant-numeric: tabular-nums;
-}
-
 .step-card h3 {
   font-family: var(--font-display);
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   color: var(--color-text-heading);
   margin-bottom: 0;
 }
 
 .step-card p {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-body);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .step-card a {
@@ -560,7 +569,7 @@
 .features-layout {
   display: grid;
   grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
-  gap: var(--space-12);
+  gap: var(--space-8);
   align-items: start;
 }
 
@@ -573,7 +582,13 @@
 }
 
 .features-intro h2 {
+  font-size: var(--text-xl);
   margin-bottom: 0;
+}
+
+.features-intro p {
+  font-size: var(--text-md);
+  line-height: 1.6;
 }
 
 .features-ledger {
@@ -586,8 +601,8 @@
 .feature-row {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: var(--space-6);
-  padding: var(--space-5) 0;
+  gap: var(--space-8);
+  padding: var(--space-6) 0;
   border-top: 1px solid var(--color-rule);
   align-items: baseline;
 }
@@ -601,9 +616,9 @@
 }
 
 .feature-row dd {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-body);
-  line-height: 1.6;
+  line-height: 1.65;
   min-width: 0;
 }
 
@@ -618,7 +633,7 @@
   background-color: var(--color-paper-2);
   color: var(--color-ink);
   border: 1px solid var(--color-border-subtle);
-  padding: var(--space-8);
+  padding: var(--space-10);
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: var(--space-8);
@@ -628,29 +643,34 @@
 .showcase-copy {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
   min-width: 0;
 }
 
 .showcase-copy h2 {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   color: var(--color-text-heading);
   margin-bottom: 0;
 }
 
 .showcase-copy p {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-body);
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 0;
 }
 
 .showcase-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-4);
   justify-content: flex-end;
+}
+
+.showcase-actions .btn {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-sm);
 }
 
 /* Footer video disclaimer link */
@@ -669,7 +689,6 @@
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
   .hero-stage {
-    min-height: auto;
     padding: var(--space-10) 0;
   }
   .hero-stage-grid,
@@ -683,7 +702,7 @@
     grid-template-columns: minmax(0, 1fr);
   }
   .step-card {
-    padding: var(--space-5) 0;
+    padding: var(--space-6) 0;
   }
   .step-card + .step-card {
     border-left: none;
@@ -696,11 +715,11 @@
 
 @media (max-width: 768px) {
   .portal-card {
-    padding: var(--space-5);
+    padding: var(--space-6);
   }
   .portal-pc-connection,
   .portal-telemetry-pane {
-    padding: var(--space-4);
+    padding: var(--space-5);
   }
   .pc-conn-address-row {
     flex-direction: column;

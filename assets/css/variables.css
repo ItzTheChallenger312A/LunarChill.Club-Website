@@ -1,5 +1,5 @@
 /* Hallmark · shape: Workbench · genre: atmospheric · theme: brand · redesign: full
- * draw: c8f3f7 · job: join · paper: oklch(14% 0.025 268) · accent: oklch(66% 0.16 264) · display: Space Mono · body: Plus Jakarta Sans · hero: Stage · nav: edge-aligned · footer: index columns · signature: live server status and one-click IP console
+ * draw: c8f3f7 · job: join · paper: oklch(14% 0.025 268) · accent: oklch(66% 0.16 264) · display: Space Mono · body: Be Vietnam Pro · hero: Stage · nav: edge-aligned · footer: index columns · signature: live server status and one-click IP console
  * axes: dark/mono/chromatic-blue · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 · weakest: R, two 3-column card grids repeated the same box recipe; recomposed steps as an ordered hairline band and features as an asymmetric 4-8 ledger */
 
@@ -7,34 +7,49 @@
   color-scheme: dark;
 
   /* --- 1. Hallmark Core Scale & Spacing Tokens (4px Grid) --- */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-36: 144px;
+
+  /* Named spacing aliases */
   --space-3xs: 2px;
   --space-2xs: 4px;
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 16px;
-  --space-20: 20px;
   --space-lg: 24px;
-  --space-28: 28px;
-  --space-32: 32px;
-  --space-36: 36px;
   --space-xl: 40px;
-  --space-48: 48px;
   --space-2xl: 64px;
-  --space-72: 72px;
   --space-3xl: 96px;
   --space-4xl: 144px;
 
-  /* --- 2. Hallmark Typography Scale --- */
+  /* --- 2. Hallmark Typography Scale (Commanding Desktop & Mobile Proportions) --- */
   --text-xs: 0.8125rem;
-  --text-sm: 0.875rem;
-  --text-md: 1rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5625rem;
-  --text-2xl: 1.953rem;
-  --text-3xl: 2.441rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-md: 1.1875rem;
+  --text-lg: 1.4rem;
+  --text-xl: clamp(1.75rem, 2.8vw, 2.35rem);
+  --text-2xl: clamp(2.35rem, 4.2vw, 3.4rem);
+  --text-3xl: clamp(3rem, 5.2vw, 4.25rem);
   --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
   --text-display: clamp(2.5rem, 4.5vw + 0.75rem, 4.25rem);
-  --text-section: clamp(2rem, 2.5vw + 1rem, 3.25rem);
+  --text-section: clamp(1.85rem, 2.5vw + 0.75rem, 2.75rem);
   --text-title: clamp(1.25rem, 0.6vw + 0.9rem, 1.5rem);
   --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.3125rem);
   --tracking-display: -0.025em;
@@ -47,17 +62,19 @@
   --dur-micro: 120ms;
   --dur-short: 220ms;
   --dur-long: 420ms;
-  --transition-fast: 120ms cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 220ms;
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  --container: 1440px;
-  --container-max: 1440px;
+  --container: 1240px;
+  --container-max: 1240px;
   --reading-max: 860px;
-  --gutter: 64px;
+  --gutter: 32px;
   --gap-columns: 32px;
-  --section-gap-s: 120px;
-  --section-gap: 144px;
-  --section-gap-l: 176px;
+  --section-gap-s: 64px;
+  --section-gap: 80px;
+  --section-gap-l: 112px;
 
   --z-base: 1;
   --z-raised: 10;
@@ -122,7 +139,7 @@
 
   --color-text-heading: var(--color-ink);
   --color-text-subheading: var(--color-ink-2);
-  --color-text-body: oklch(76% 0.028 256);
+  --color-text-body: oklch(78% 0.025 256);
   --color-text-muted: var(--color-muted);
 
   /* --- 6. Functional Status Tokens --- */
@@ -164,8 +181,8 @@
   --color-scrollbar-thumb: oklch(42% 0.09 264 / 0.55);
   --color-scrollbar-thumb-hover: oklch(56% 0.13 264 / 0.75);
 
-  --gradient-hero-scrim: linear-gradient(180deg, oklch(14% 0.025 268 / 0.18) 0%, oklch(14% 0.025 268 / 0.52) 100%);
-  --gradient-portal-surface: radial-gradient(circle at 85% 15%, oklch(70% 0.15 162 / 0.07) 0%, oklch(76% 0.14 230 / 0.05) 38%, transparent 70%);
+  --gradient-hero-scrim: linear-gradient(180deg, oklch(14% 0.025 268 / 0.12) 0%, oklch(14% 0.025 268 / 0.45) 100%);
+  --gradient-portal-surface: radial-gradient(circle at 85% 15%, oklch(66% 0.16 264 / 0.09) 0%, oklch(58% 0.14 268 / 0.05) 42%, transparent 72%);
 
   --shadow-card: none;
   --shadow-elevated: 0 12px 28px -8px oklch(10% 0.02 268 / 0.65);
@@ -212,18 +229,18 @@
 @media (max-width: 60rem) {
   :root {
     --gutter: 24px;
-    --section-gap-s: 80px;
-    --section-gap: 96px;
-    --section-gap-l: 120px;
+    --section-gap-s: 48px;
+    --section-gap: 64px;
+    --section-gap-l: 80px;
   }
 }
 
 @media (max-width: 40rem) {
   :root {
     --gutter: 16px;
-    --section-gap-s: 56px;
-    --section-gap: 72px;
-    --section-gap-l: 96px;
+    --section-gap-s: 40px;
+    --section-gap: 56px;
+    --section-gap-l: 72px;
     --gap-columns: 16px;
   }
 }
