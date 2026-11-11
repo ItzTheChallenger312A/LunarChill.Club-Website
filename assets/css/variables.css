@@ -1,208 +1,113 @@
-/* Hallmark · shape: Workbench · genre: atmospheric · theme: brand · redesign: full
- * draw: c8f3f7 · job: join · paper: oklch(14% 0.025 268) · accent: oklch(66% 0.16 264) · display: Space Mono · body: Be Vietnam Pro · hero: Stage · nav: edge-aligned · footer: index columns · signature: live server status and one-click IP console
+/* Hallmark · shape: Workbench · genre: atmospheric · theme: brand · redesign: polish · copy: verbatim
+ * draw: c8f3f7 · job: join · paper: #090914 · accent: #688BF8 · display: Space Mono · body: Plus Jakarta Sans · hero: Stage · nav: edge-aligned · footer: index columns · signature: full-bleed night ambience video and voxel plaque portal
  * axes: dark/mono/chromatic-blue · posture: committed · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 · weakest: R, two 3-column card grids repeated the same box recipe; recomposed steps as an ordered hairline band and features as an asymmetric 4-8 ledger */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · weakest: E, lifted all raw colour literals and voxel bevel shadows into :root tokens while preserving the Cosmic Sanctuary full-bleed video hero and pixel-plaque components */
 
 :root {
   color-scheme: dark;
 
-  /* --- 1. Hallmark Core Scale & Spacing Tokens (4px Grid) --- */
-  --space-0: 0px;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-7: 28px;
-  --space-8: 32px;
-  --space-9: 36px;
-  --space-10: 40px;
-  --space-12: 48px;
-  --space-14: 56px;
-  --space-16: 64px;
-  --space-18: 72px;
-  --space-20: 80px;
-  --space-24: 96px;
-  --space-36: 144px;
+  /* --- 1. Surface & Background Colors --- */
+  --color-bg-base: #090914;                    /* Deep Abyss Black từ nền logo */
+  --color-bg-surface: #0b1026;                 /* Midnight Indigo Voxel Surface */
+  --color-bg-surface-hover: #121a3a;
+  --color-bg-elevated: #0d132c;                /* Nền thẻ nổi */
+  --color-paper: var(--color-bg-base);
+  --color-paper-2: var(--color-bg-surface);
+  --color-ink: #FEFDFD;
+  --color-accent: #688BF8;
+  --color-accent-ink: #090914;
+  --color-rule: #233163;
 
-  /* Named spacing aliases */
-  --space-3xs: 2px;
-  --space-2xs: 4px;
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 40px;
-  --space-2xl: 64px;
-  --space-3xl: 96px;
-  --space-4xl: 144px;
+  /* --- 2. Borders & Dividers (Viền khối Voxel sắc cạnh) --- */
+  --color-border-subtle: #233163;              /* Viền pixel trầm */
+  --color-border-hover: #4c69c7;               /* Viền pixel sáng khi tương tác */
+  --color-border-active: #688BF8;
 
-  /* --- 2. Hallmark Typography Scale (Commanding Desktop & Mobile Proportions) --- */
-  --text-xs: 0.8125rem;
-  --text-sm: 0.9375rem;
-  --text-base: 1rem;
-  --text-md: 1.1875rem;
-  --text-lg: 1.4rem;
-  --text-xl: clamp(1.75rem, 2.8vw, 2.35rem);
-  --text-2xl: clamp(2.35rem, 4.2vw, 3.4rem);
-  --text-3xl: clamp(3rem, 5.2vw, 4.25rem);
-  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
-  --text-display: clamp(2.5rem, 4.5vw + 0.75rem, 4.25rem);
-  --text-section: clamp(1.85rem, 2.5vw + 0.75rem, 2.75rem);
-  --text-title: clamp(1.25rem, 0.6vw + 0.9rem, 1.5rem);
-  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.3125rem);
-  --tracking-display: -0.025em;
-  --display-weight: 700;
+  /* --- 3. Brand Accent Colors --- */
+  --color-accent-primary: #688BF8;             /* Waterfall Glow Blue */
+  --color-accent-primary-hover: #7E9DFA;       /* Sáng hơn khi hover */
+  --color-accent-secondary: oklch(0.62 0.19 259);
+  --color-accent-orbit: #38BDF8;               /* Orbit Azure */
+  --color-accent-purple: #818CF8;              /* Cloud Lavender */
+  --color-on-accent: #090914;                  /* Deep Abyss Black trên nền nút xanh (6.26:1 WCAG AA) */
 
-  /* --- 3. Hallmark Motion & Z-Index Scale --- */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-micro: 120ms;
-  --dur-short: 220ms;
-  --dur-long: 420ms;
-  --duration-fast: 150ms;
-  --duration-normal: 220ms;
-  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* --- 4. Typography Colors (WCAG AA / AAA Verified) --- */
+  --color-text-heading: #FEFDFD;               /* Moon Core White (19.3:1) */
+  --color-text-subheading: #E0EFFF;            /* Moonlight Silver (16.4:1) */
+  --color-text-body: #94A3B8;                  /* Muted Sky Gray (7.72:1) */
+  --color-text-muted: #8899B0;                 /* Slate Muted (6.45:1) */
 
-  --container: 1240px;
-  --container-max: 1240px;
-  --reading-max: 860px;
-  --gutter: 32px;
-  --gap-columns: 32px;
-  --section-gap-s: 64px;
-  --section-gap: 80px;
-  --section-gap-l: 112px;
+  /* --- 5. Functional Status Colors (5 States) --- */
+  --status-online: #10B981;                    /* Emerald Green */
+  --status-checking: #38BDF8;                  /* Sky Blue */
+  --status-offline: #EF4444;                   /* Crimson Red */
+  --status-unable: #8899B0;                    /* Neutral Slate */
+  --status-maintenance: #F59E0B;               /* Amber Gold */
 
-  --z-base: 1;
-  --z-raised: 10;
-  --z-drawer: 99;
-  --z-dropdown: 100;
-  --z-sticky: 200;
-  --z-sticky-nav: 300;
-  --z-modal: 400;
-  --z-toast: 500;
-  --z-tooltip: 600;
+  /* --- 6. Component & Surface Tokenized Colors (Preserving Exact Original Colors) --- */
+  --color-paper-btn: #111836;
+  --color-paper-btn-hover: #19234d;
+  --color-btn-primary-border: #93affc;
+  --color-btn-primary-border-hover: #b4c7fe;
+  --color-rule-bevel-light: rgba(255, 255, 255, 0.25);
+  --color-rule-bevel-dark: rgba(0, 0, 0, 0.28);
 
-  /* --- 4. Hallmark OKLCH Palette (Cosmic Sanctuary × Voxel UI) --- */
-  --color-paper: oklch(14% 0.025 268);
-  --color-paper-2: oklch(17.5% 0.035 266);
-  --color-paper-3: oklch(21% 0.042 265);
-  --color-paper-deep: oklch(11.5% 0.022 268);
+  --color-status-pill-bg: #0d1430;
+  --color-chip-bg: #050816;
+  --color-chip-bg-hover: #0d1638;
+  --color-chip-border: #283870;
+  --color-toast-bg: #0d132e;
+  --color-faq-divider: rgba(104, 139, 248, 0.16);
 
-  --color-ink: oklch(96% 0.008 260);
-  --color-ink-2: oklch(88% 0.022 255);
-  --color-muted: oklch(70% 0.032 256);
+  --color-header-bg: rgba(9, 9, 20, 0.95);
+  --color-drawer-bg: rgba(9, 9, 20, 0.98);
+  --color-footer-bg: #060710;
+  --color-hairline-faint: rgba(255, 255, 255, 0.06);
 
-  --color-rule: oklch(29% 0.055 264);
-  --color-rule-strong: oklch(46% 0.11 264);
-  --color-rule-soft: oklch(96% 0.008 260 / 0.08);
-  --color-rule-notch-light: oklch(96% 0.008 260 / 0.24);
-  --color-rule-notch-dark: oklch(11.5% 0.022 268 / 0.36);
+  --color-selection-bg: rgba(104, 139, 248, 0.3);
+  --color-scrollbar-thumb: rgba(104, 139, 248, 0.3);
+  --color-scrollbar-thumb-hover: rgba(104, 139, 248, 0.55);
+  --color-scrollbar-track: rgba(10, 15, 30, 0.85);
 
-  --color-accent: oklch(66% 0.16 264);
-  --color-accent-hover: oklch(72% 0.145 264);
-  --color-accent-ink: oklch(14% 0.025 268);
-  --color-focus: oklch(76% 0.14 230);
+  /* Homepage specific tokens (exact original colors & gradients) */
+  --color-tag-bg: rgba(56, 189, 248, 0.08);
+  --color-tag-border: rgba(56, 189, 248, 0.25);
+  --color-badge-pill-bg: rgba(11, 16, 38, 0.95);
+  --color-video-credit-bg: rgba(10, 14, 42, 0.85);
+  --color-video-credit-bg-hover: rgba(10, 14, 42, 0.95);
+  --color-video-credit-border: rgba(104, 139, 248, 0.28);
+  --color-version-box-bg: rgba(6, 8, 20, 0.75);
+  --color-pc-conn-bg: #080C24;
+  --color-pc-conn-border: rgba(104, 139, 248, 0.35);
+  --color-pc-address-bg: #040614;
+  --color-pc-address-border: rgba(104, 139, 248, 0.2);
+  --color-pe-note-bg: rgba(10, 14, 42, 0.75);
+  --color-pe-note-border: rgba(104, 139, 248, 0.35);
+  --color-pe-code-bg: rgba(56, 189, 248, 0.12);
 
-  --color-error: oklch(62% 0.2 27);
-  --color-success: oklch(70% 0.15 162);
-  --color-warning: oklch(76% 0.16 75);
+  --color-node-online-bg: rgba(16, 185, 129, 0.12);
+  --color-node-online-border: rgba(16, 185, 129, 0.28);
+  --color-node-checking-bg: rgba(56, 189, 248, 0.12);
+  --color-node-checking-border: rgba(56, 189, 248, 0.28);
+  --color-node-offline-bg: rgba(239, 68, 68, 0.12);
+  --color-node-offline-border: rgba(239, 68, 68, 0.28);
+  --color-node-unable-bg: rgba(136, 153, 176, 0.12);
+  --color-node-unable-border: rgba(136, 153, 176, 0.28);
 
-  /* --- 5. Project Semantic Token Aliases --- */
-  --color-bg-base: var(--color-paper);
-  --color-bg-surface: var(--color-paper-2);
-  --color-bg-surface-hover: var(--color-paper-3);
-  --color-bg-elevated: var(--color-paper-2);
-  --color-bg-recessed: var(--color-paper-deep);
-  --color-surface: var(--color-paper-2);
-  --color-surface-inset: var(--color-paper-deep);
-  --color-surface-terminal: oklch(12% 0.024 268);
-  --color-surface-terminal-hover: oklch(19% 0.04 266);
-  --color-surface-footer: oklch(11.5% 0.022 268);
+  --gradient-hero-video-overlay:
+    radial-gradient(circle at 50% 32%, rgba(104, 139, 248, 0.14) 0%, transparent 68%),
+    linear-gradient(180deg, rgba(9, 9, 20, 0.72) 0%, rgba(9, 9, 20, 0.42) 35%, rgba(9, 9, 20, 0.72) 75%, #090914 100%);
+  --gradient-portal-card:
+    radial-gradient(circle at 82% 20%, rgba(104, 139, 248, 0.1) 0%, rgba(76, 105, 199, 0.05) 38%, transparent 68%),
+    var(--color-bg-surface);
 
-  --color-border-subtle: var(--color-rule);
-  --color-border-hover: var(--color-rule-strong);
-  --color-border-active: var(--color-accent);
-  --color-border-terminal: oklch(34% 0.075 264);
-  --color-btn-primary-border: oklch(76% 0.12 264);
-  --color-btn-primary-border-hover: oklch(84% 0.09 264);
-
-  --color-accent-primary: var(--color-accent);
-  --color-accent-primary-hover: var(--color-accent-hover);
-  --color-accent-secondary: oklch(60% 0.17 258);
-  --color-accent-orbit: var(--color-focus);
-  --color-accent-purple: oklch(68% 0.15 280);
-  --color-on-accent: var(--color-accent-ink);
-
-  --color-text-heading: var(--color-ink);
-  --color-text-subheading: var(--color-ink-2);
-  --color-text-body: oklch(78% 0.025 256);
-  --color-text-muted: var(--color-muted);
-
-  /* --- 6. Functional Status Tokens --- */
-  --status-online: var(--color-success);
-  --status-online-bg: oklch(70% 0.15 162 / 0.12);
-  --status-online-border: oklch(70% 0.15 162 / 0.32);
-
-  --status-checking: var(--color-focus);
-  --status-checking-bg: oklch(76% 0.14 230 / 0.12);
-  --status-checking-border: oklch(76% 0.14 230 / 0.32);
-
-  --status-offline: var(--color-error);
-  --status-offline-bg: oklch(62% 0.2 27 / 0.12);
-  --status-offline-border: oklch(62% 0.2 27 / 0.32);
-
-  --status-unable: var(--color-muted);
-  --status-unable-bg: oklch(70% 0.032 256 / 0.12);
-  --status-unable-border: oklch(70% 0.032 256 / 0.32);
-
-  --status-maintenance: var(--color-warning);
-
-  /* --- 7. Tints, Overlays & Tactile Shadows (All Tokenized for Gate 48) --- */
-  --color-tint-orbit-bg: oklch(76% 0.14 230 / 0.1);
-  --color-tint-orbit-border: oklch(76% 0.14 230 / 0.28);
-  --color-tint-success-bg: var(--status-online-bg);
-  --color-tint-success-border: var(--status-online-border);
-  --color-tint-danger-bg: var(--status-offline-bg);
-  --color-tint-danger-border: var(--status-offline-border);
-  --color-tint-muted-bg: var(--status-unable-bg);
-  --color-tint-muted-border: var(--status-unable-border);
-  --color-tint-accent-border: oklch(66% 0.16 264 / 0.35);
-  --color-hairline-subtle: oklch(96% 0.008 260 / 0.08);
-  --color-btn-bevel-light: oklch(96% 0.008 260 / 0.24);
-  --color-btn-bevel-dark: oklch(11.5% 0.022 268 / 0.36);
-  --color-scrim-top: oklch(14% 0.025 268 / 0.35);
-  --color-scrim-bottom: oklch(14% 0.025 268 / 0.82);
-  --color-selection-bg: oklch(66% 0.16 264 / 0.32);
-  --color-scrollbar-track: oklch(12% 0.022 268);
-  --color-scrollbar-thumb: oklch(42% 0.09 264 / 0.55);
-  --color-scrollbar-thumb-hover: oklch(56% 0.13 264 / 0.75);
-
-  --gradient-hero-scrim: linear-gradient(180deg, oklch(14% 0.025 268 / 0.12) 0%, oklch(14% 0.025 268 / 0.45) 100%);
-  --gradient-portal-surface: radial-gradient(circle at 85% 15%, oklch(66% 0.16 264 / 0.09) 0%, oklch(58% 0.14 268 / 0.05) 42%, transparent 72%);
-
-  --shadow-card: none;
-  --shadow-elevated: 0 12px 28px -8px oklch(10% 0.02 268 / 0.65);
-  --shadow-inset-card: inset 0 2px 0 oklch(96% 0.008 260 / 0.04), inset 0 -2px 0 oklch(10% 0.02 268 / 0.45);
-  --shadow-inset-plaque: inset 0 2px 0 oklch(96% 0.008 260 / 0.08), inset 0 -4px 0 oklch(10% 0.02 268 / 0.55);
-  --shadow-btn-primary: inset 0 2px 0 oklch(96% 0.008 260 / 0.32), inset 0 -3px 0 oklch(11.5% 0.022 268 / 0.38);
-  --shadow-btn-secondary: inset 0 1px 0 oklch(66% 0.16 264 / 0.16), inset 0 -2px 0 oklch(10% 0.02 268 / 0.48);
-  --shadow-plaque: inset 0 1px 0 oklch(96% 0.008 260 / 0.08), inset 0 -3px 0 oklch(10% 0.02 268 / 0.55);
-  --shadow-status-online: 0 0 0 2px oklch(70% 0.15 162 / 0.25);
-  --shadow-toast: 0 8px 0 oklch(10% 0.02 268 / 0.65);
-
-  /* --- 8. Radii & Pixel Stepped Clip-Paths --- */
-  --radius-xs: 2px;
+  /* --- 7. Border Radius (0px Voxel Pixel Corners) --- */
   --radius-tag: 0px;
   --radius-btn: 0px;
   --radius-card: 0px;
   --radius-dialog: 0px;
-  --radius-pill: 0px;
-  --rule-hair: 1px;
 
+  /* --- 8. Pixel Stepped Clip-Paths (Chính - Phụ) --- */
   --clip-pixel-card: polygon(
     0 4px, 4px 4px, 4px 0,
     calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
@@ -217,30 +122,38 @@
     6px 100%, 6px calc(100% - 3px), 3px calc(100% - 3px), 3px calc(100% - 6px), 0 calc(100% - 6px)
   );
 
-  /* --- 9. Typography Families (Max 3: Display, Body, Outlier Mono) --- */
-  --font-display: 'Space Mono', ui-monospace, monospace;
-  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
-  --font-outlier: 'JetBrains Mono', ui-monospace, monospace;
-  --font-sans: var(--font-body);
-  --font-mono: var(--font-outlier);
-  --font-pixel-mono: var(--font-display);
-}
+  /* --- 9. Voxel Tactile Shadows --- */
+  --shadow-card: 0 4px 0 rgba(0, 0, 0, 0.55);
+  --shadow-card-bevel: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -2px 0 rgba(0, 0, 0, 0.45);
+  --shadow-btn-primary: inset 0 2px 0 rgba(255, 255, 255, 0.35), inset 0 -3px 0 rgba(9, 9, 20, 0.35);
+  --shadow-btn-secondary: inset 0 2px 0 rgba(104, 139, 248, 0.18), inset 0 -3px 0 rgba(0, 0, 0, 0.5);
+  --shadow-status-pill: inset 0 2px 0 rgba(255, 255, 255, 0.06), inset 0 -2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-status-online: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  --shadow-chip: inset 0 -2px 0 rgba(0, 0, 0, 0.6);
+  --shadow-toast: 0 8px 0 rgba(0, 0, 0, 0.65);
+  --shadow-hero-logo: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-hero-title: 0 2px 18px rgba(0, 0, 0, 0.8), 0 0 28px rgba(104, 139, 248, 0.35);
+  --shadow-hero-sub: 0 2px 12px rgba(0, 0, 0, 0.85);
+  --shadow-hero-desc: 0 2px 10px rgba(0, 0, 0, 0.85);
+  --shadow-badge-pill: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-video-credit: 0 4px 14px rgba(0, 0, 0, 0.6);
+  --shadow-portal-card: inset 0 2px 0 rgba(255, 255, 255, 0.08), inset 0 -4px 0 rgba(0, 0, 0, 0.55);
+  --shadow-pc-conn: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-pc-conn-hover: 0 10px 36px rgba(104, 139, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --shadow-btn-copy-pc: 0 4px 18px rgba(104, 139, 248, 0.35);
 
-@media (max-width: 60rem) {
-  :root {
-    --gutter: 24px;
-    --section-gap-s: 48px;
-    --section-gap: 64px;
-    --section-gap-l: 80px;
-  }
-}
+  /* --- 10. Typography Ramp (Space Mono + JetBrains Mono + Plus Jakarta Sans) --- */
+  --font-display: 'Space Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Space Mono', ui-monospace, monospace;
+  --font-pixel-mono: 'Space Mono', 'JetBrains Mono', ui-monospace, monospace;
 
-@media (max-width: 40rem) {
-  :root {
-    --gutter: 16px;
-    --section-gap-s: 40px;
-    --section-gap: 56px;
-    --section-gap-l: 72px;
-    --gap-columns: 16px;
-  }
+  /* --- 11. Layout Widths (Chuẩn 16:9 Desktop: 1600×900 & 1920×1080) --- */
+  --container-max: 1280px;
+  --reading-max: 860px;
+
+  /* --- 12. Transitions --- */
+  --duration-fast: 0.12s;
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }

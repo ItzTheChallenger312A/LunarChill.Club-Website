@@ -39,22 +39,22 @@ body {
 
 ::selection {
   background-color: var(--color-selection-bg);
-  color: var(--color-ink);
+  color: var(--color-text-heading);
 }
 
 input,
 textarea {
-  caret-color: var(--color-accent);
+  caret-color: var(--color-accent-primary);
 }
 
-/* Typography Hierarchy */
+/* Typography Hierarchy: Space Mono thu gọn khoảng cách chữ cân đối */
 h1, h2, h3 {
   font-family: var(--font-display);
   color: var(--color-text-heading);
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.25;
   letter-spacing: -0.025em;
-  word-spacing: -0.04em;
+  word-spacing: -0.05em;
   overflow-wrap: break-word;
   min-width: 0;
   text-wrap: balance;
@@ -66,39 +66,28 @@ h4, h5, h6 {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  overflow-wrap: break-word;
-  min-width: 0;
 }
 
 h1 {
-  font-size: var(--text-2xl);
-  line-height: 1.1;
+  font-size: clamp(2.1rem, 4.8vw, 3.2rem);
 }
 
 h2 {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-3);
+  font-size: clamp(1.5rem, 3.5vw, 2.05rem);
+  margin-bottom: 12px;
 }
 
 h3 {
-  font-size: var(--text-lg);
-  margin-bottom: var(--space-2);
+  font-size: 1.22rem;
+  margin-bottom: 8px;
 }
 
 p {
-  margin-bottom: var(--space-4);
-  max-width: 65ch;
-  text-wrap: pretty;
+  margin-bottom: 16px;
 }
 
 p:last-child {
   margin-bottom: 0;
-}
-
-.lead {
-  font-size: var(--text-md);
-  line-height: 1.55;
-  color: var(--color-ink-2);
 }
 
 a {
@@ -111,7 +100,7 @@ a:hover {
   color: var(--color-accent-orbit);
 }
 
-img, svg, video {
+img, svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -123,8 +112,8 @@ img, svg, video {
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-6);
-  padding-right: var(--space-6);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .reading-container {
@@ -137,7 +126,7 @@ img, svg, video {
   outline-offset: 2px;
 }
 
-/* --- Accessibility: Reduced Motion Override --- */
+/* --- Accessibility: Reduced Motion Override (Tôn trọng thiết lập OS) --- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -147,7 +136,7 @@ img, svg, video {
   }
 }
 
-/* --- Sleek Dark Scrollbars & Hide Utilities --- */
+/* --- Sleek Dark Scrollbars & Hide Utilities (Khử thanh cuộn sáng chói mặc định) --- */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
@@ -164,13 +153,14 @@ img, svg, video {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-scrollbar-thumb);
-  border-radius: var(--radius-xs);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-scrollbar-thumb-hover);
 }
 
+/* Lớp tiện ích ẩn thanh cuộn nhưng vẫn hỗ trợ vuốt chạm/cuộn ngang mượt mà */
 .no-scrollbar,
 .table-responsive {
   scrollbar-width: none !important;
