@@ -1,0 +1,29 @@
+[
+  {
+    "theme": "brand",
+    "shape": "Workbench",
+    "hero": "Counter/Stage",
+    "nav": "masthead/edge-aligned",
+    "footer": "index columns",
+    "fonts": [
+      "Space Mono",
+      "Be Vietnam Pro",
+      "JetBrains Mono"
+    ],
+    "accent": "#688BF8",
+    "paper": "#090914",
+    "axes": "dark · medium · geometric-mono · atmospheric-voxel · hairlines",
+    "imagery": "looping night survival video in framed pixel-plaque stage with pause control",
+    "entry": "asymmetric 5:7 hero stage into live server workbench",
+    "fingerprint": "Cosmic night OKLCH paper + stepped voxel plaque corners + hairline workbench ledger",
+    "sections": [
+      "Hero Stage (5:7)",
+      "Server Portal Workbench (5:7)",
+      "Quick Join Band + Steps (3-col hairline)",
+      "Core Features Ledger (4:8 split)",
+      "Community Archive Callout (7:5 split)"
+    ],
+    "signature": "Stepped pixel-plaque workbench with live player counter and pauseable night stage",
+    "prompt": "Level 3 full Hallmark redesign of LunarChill.Club-Website"
+  }
+]

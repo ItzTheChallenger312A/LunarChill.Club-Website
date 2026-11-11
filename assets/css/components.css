@@ -1,21 +1,18 @@
 /* ==========================================================================
    LUNARCHILL COMPONENTS (components.css)
-   Hệ thống Khung Box Pixel (Chính - Phụ):
-   - Khung Chính (Plaque có gờ nhô giữa cạnh + góc bậc thang theo ảnh mẫu):
-     + Nút bấm (.btn), Status Badge (.status-pill), Bảng kết nối chính (.connection-card)
-   - Khung Phụ (Góc cắt bậc thang pixel 4px gọn gàng):
-     + Các thẻ nội dung (.lunar-card, .step-card, .feature-card, .faq-item, .command-chip)
+   Pixel Plaque Buttons, Status Pill, Command Chips, FAQ & Toast
    ========================================================================== */
 
-/* --- 1. Khung Phụ: Lunar Cards (Góc cắt bậc thang pixel 4px, viền khối sắc nét) --- */
+/* --- 1. Lunar Cards (Subpage compatibility) --- */
 .lunar-card {
   position: relative;
   background-color: var(--color-bg-surface);
-  border: 2px solid var(--color-border-subtle);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 0;
-  padding: 24px;
+  padding: var(--space-6);
   clip-path: var(--clip-pixel-card);
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.04), inset 0 -2px 0 rgba(0, 0, 0, 0.45);
+  box-shadow: var(--shadow-inset-card);
   transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
@@ -26,20 +23,20 @@ button.lunar-card:hover,
   background-color: var(--color-bg-surface-hover);
 }
 
-/* --- 2. Khung Chính: Buttons (Pixel Plaque có gờ nhô & cạnh nổi Voxel 3D) --- */
+/* --- 2. Buttons (Pixel Plaque Action System) --- */
 .btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-2);
   font-family: var(--font-display);
-  font-size: 0.94rem;
+  font-size: var(--text-sm);
   font-weight: 700;
-  letter-spacing: -0.035em;
-  word-spacing: -0.1em;
+  letter-spacing: -0.02em;
+  word-spacing: -0.06em;
   line-height: 1.2;
-  padding: 12px 20px;
+  padding: var(--space-3) var(--space-5);
   border-radius: 0;
   border: 2px solid transparent;
   clip-path: var(--clip-pixel-plaque);
@@ -48,7 +45,6 @@ button.lunar-card:hover,
   white-space: nowrap;
 }
 
-/* Mấu gờ nhô đặc trưng ở 2 bên trái/phải của nút (theo ảnh mẫu) */
 .btn::before,
 .btn::after {
   content: '';
@@ -62,68 +58,78 @@ button.lunar-card:hover,
 
 .btn::before {
   left: 0;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--color-rule-notch-light);
 }
 
 .btn::after {
   right: 0;
-  background-color: rgba(0, 0, 0, 0.28);
+  background-color: var(--color-rule-notch-dark);
 }
 
 .btn:active {
   transform: translateY(2px);
 }
 
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Primary filled button (single primary recipe per viewport) */
 .btn-primary {
   background-color: var(--color-accent-primary);
   color: var(--color-on-accent);
-  border-color: #93affc;
+  border-color: var(--color-btn-primary-border);
   box-shadow: var(--shadow-btn-primary);
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-primary-hover);
   color: var(--color-on-accent);
-  border-color: #b4c7fe;
+  border-color: var(--color-btn-primary-border-hover);
 }
 
+/* Secondary outlined button (transparent fill to preserve visual hierarchy) */
 .btn-secondary {
-  background-color: #111836;
-  color: var(--color-text-subheading);
+  background-color: transparent;
+  color: var(--color-ink);
   border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-btn-secondary);
 }
 
 .btn-secondary:hover {
-  background-color: #19234d;
+  background-color: var(--color-surface);
   border-color: var(--color-accent-primary);
   color: var(--color-text-heading);
 }
 
 .btn-sm {
-  padding: 8px 16px;
-  font-size: 0.9rem;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
 }
 
-/* --- 3. Khung Chính: Live Server Status Plaque (Hình dáng biển hiệu có gờ nhô theo ảnh mẫu) --- */
+/* --- 3. Live Server Status Plaque --- */
 .status-pill {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background-color: #0d1430;
-  border: 2px solid var(--color-border-hover);
+  gap: var(--space-2);
+  background-color: var(--color-paper-2);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-hover);
   border-radius: 0;
   clip-path: var(--clip-pixel-plaque);
-  padding: 8px 18px;
-  font-size: 0.88rem;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--color-text-subheading);
   font-variant-numeric: tabular-nums;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.06), inset 0 -2px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* Gờ điểm nhấn ở chính giữa đỉnh & đáy của Status Plaque (đúng hình thái ảnh mẫu) */
 .status-pill::before,
 .status-pill::after {
   content: '';
@@ -144,7 +150,6 @@ button.lunar-card:hover,
   bottom: 0;
 }
 
-/* Chấm trạng thái cũng vuông vức kiểu Pixel 8x8 */
 .status-dot {
   width: 8px;
   height: 8px;
@@ -156,7 +161,7 @@ button.lunar-card:hover,
 
 .status-dot.online {
   background-color: var(--status-online);
-  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  box-shadow: var(--shadow-status-online);
 }
 
 .status-dot.checking {
@@ -181,31 +186,31 @@ button.lunar-card:hover,
   50% { opacity: 1; }
 }
 
-/* --- 4. Khung Phụ: Command Chip (Ô lệnh kiểu khung chat Minecraft) --- */
+/* --- 4. Command Chip --- */
 .command-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background-color: #050816;
-  border: 2px solid #283870;
+  gap: var(--space-2);
+  background-color: var(--color-surface-terminal);
+  border: 1px solid var(--color-border-terminal);
   border-radius: 0;
   clip-path: var(--clip-pixel-card);
-  padding: 4px 12px;
+  padding: var(--space-1) var(--space-3);
   font-family: var(--font-mono);
-  font-size: 0.86rem;
+  font-size: var(--text-sm);
   line-height: 1.4;
   color: var(--color-accent-orbit);
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   text-align: left;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
   transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .command-chip:hover {
   border-color: var(--color-accent-primary);
-  background-color: #0d1638;
+  background-color: var(--color-surface-terminal-hover);
   color: var(--color-text-heading);
 }
 
@@ -213,16 +218,28 @@ button.lunar-card:hover,
   transform: translateY(1px);
 }
 
-/* --- 5. Khung Phụ: FAQ Accordion (<details> & <summary> góc cắt bậc thang) --- */
+.command-chip:disabled,
+.command-chip[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.command-chip[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* --- 5. FAQ Accordion (<details> & <summary>) --- */
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .faq-item {
   background-color: var(--color-bg-surface);
-  border: 2px solid var(--color-border-subtle);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 0;
   clip-path: var(--clip-pixel-card);
   overflow: hidden;
@@ -239,11 +256,11 @@ button.lunar-card:hover,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 18px 20px;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.98rem;
+  font-size: var(--text-base);
   color: var(--color-text-heading);
   cursor: pointer;
   user-select: none;
@@ -256,7 +273,7 @@ button.lunar-card:hover,
 .faq-question::after {
   content: '[+]';
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-accent-primary);
   flex-shrink: 0;
@@ -267,36 +284,36 @@ button.lunar-card:hover,
 }
 
 .faq-answer {
-  padding: 14px 20px 18px 20px;
-  font-size: 0.92rem;
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--text-sm);
   color: var(--color-text-body);
   line-height: 1.65;
-  border-top: 1px solid rgba(104, 139, 248, 0.16);
+  border-top: 1px solid var(--color-rule);
 }
 
-/* --- 6. Khung Chính: Toast Feedback Notification --- */
+/* --- 6. Toast Feedback Notification --- */
 .toast-container {
   position: fixed;
-  bottom: 24px;
+  bottom: var(--space-6);
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background-color: #0d132e;
+  background-color: var(--color-surface);
+  color: var(--color-text-heading);
   border: 2px solid var(--color-accent-primary);
   border-radius: 0;
   clip-path: var(--clip-pixel-plaque);
-  padding: 12px 22px;
-  color: var(--color-text-heading);
+  padding: var(--space-3) var(--space-5);
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   font-weight: 600;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.65);
-  z-index: 1000;
+  box-shadow: var(--shadow-toast);
+  z-index: var(--z-toast);
   pointer-events: none;
   opacity: 0;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-normal) var(--ease-out);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .toast-container.show {

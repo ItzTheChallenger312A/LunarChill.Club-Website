@@ -232,6 +232,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', syncFilterFromHash);
   }
 
+  // 6.5. Điều khiển tạm dừng / phát tiếp video nền lặp ([data-loop] & [data-loop-toggle])
+  document.querySelectorAll('[data-loop]').forEach(stage => {
+    const video = stage.querySelector('video');
+    const toggleBtn = stage.querySelector('[data-loop-toggle]');
+    if (!video || !toggleBtn) return;
+
+    toggleBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        toggleBtn.textContent = 'Tạm dừng cảnh';
+        toggleBtn.setAttribute('aria-pressed', 'false');
+      } else {
+        video.pause();
+        toggleBtn.textContent = 'Phát tiếp cảnh';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+      }
+    });
+  });
+
   // 7. Tương tác Hotspots trên Đảo Nổi (Hero Island Showcase)
   const islandHotspots = document.querySelectorAll('.island-hotspot');
   const btnExplore = document.getElementById('btn-explore-world');

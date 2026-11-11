@@ -52,7 +52,7 @@ export class StatusService {
     }
 
     // 2. State Checking khi cần gọi API
-    this.renderState('checking', 'Đang kiểm tra...');
+    this.renderState('checking', 'Đang kiểm tra…');
 
     const javaPromise = javaData !== null
       ? Promise.resolve({ platform: 'java', status: 'ok', data: javaData })

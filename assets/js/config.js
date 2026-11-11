@@ -15,7 +15,9 @@ const SERVER_PORT_BEDROCK_FALLBACK = 19143;
 export const CONFIG = Object.freeze({
   // 1. Server Connection Specs
   SERVER_HOST,
+  SERVER_IP: SERVER_HOST,
   SERVER_PORT: SERVER_PORT_COMMON,
+  BEDROCK_PORT: SERVER_PORT_BEDROCK,
   SERVER_IP_JAVA: SERVER_HOST,
   SERVER_PORT_JAVA,
   SERVER_ADDRESS_JAVA: `${SERVER_HOST}:${SERVER_PORT_JAVA}`,
@@ -27,8 +29,8 @@ export const CONFIG = Object.freeze({
   SERVER_ADDRESS_COMMON: `${SERVER_HOST}:${SERVER_PORT_COMMON}`,
 
   // 2. Supported Versions
-  VERSION_PC: '1.21.11 – 26.3', // Bản PC (Java & Bedrock máy tính)
-  VERSION_PE: '26.30 – 26.51',   // Bản PE riêng (Điện thoại)
+  VERSION_PC: '1.21.11 đến 26.3', // Bản PC (Java & Bedrock máy tính)
+  VERSION_PE: '26.30 đến 26.51',   // Bản PE riêng (Điện thoại)
 
   // 3. External Ecosystem URLs
   DISCORD_INVITE_URL: 'https://discord.gg/SM9cn8pQQH',

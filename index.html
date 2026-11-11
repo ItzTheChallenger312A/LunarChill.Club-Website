@@ -1,69 +1,67 @@
 <!DOCTYPE html>
+<!-- hallmark v2.0.0 · theme: brand · redesign: full · shape: Workbench · draw: c8f3f7 · genre: atmospheric · job: join -->
+<!-- critique: Focal point is the Hero Stage paired with the interactive Server Portal workbench (live player count + one-click IP copy); squint order moves from h1 & stage visual (1) to server connection workbench (2) to hairline steps & feature ledger (3); surface ladder stays at Rung 1-2 for steps/features so only the Portal workbench owns Rung 4 elevation. -->
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LunarChill - Chill thôi, đừng có vội. 🌙</title>
-  <meta name="description" content="Website chính thức của máy chủ Minecraft LunarChill - Nơi sinh tồn thư thái dưới ánh trăng. Hỗ trợ bản PC (Java & Bedrock) và bản PE riêng (Điện thoại).">
-  <link rel="canonical" href="https://LunarChill.club/">
+  <title>LunarChill | Máy chủ Minecraft Sinh Tồn Thanh Bình (PC &amp; PE)</title>
+  <meta name="description" content="LunarChill (LunarChill.club:25572) là máy chủ Minecraft Survival bình yên, hỗ trợ cả PC (1.21.11 đến 26.3) và Điện thoại PE (26.30 đến 26.51). Chill thôi, đừng có vội.">
+  <meta name="theme-color" content="#090914">
 
-  <!-- Favicon Icons -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-
-  <!-- OpenGraph / Discord Embed Cards -->
+  <!-- Open Graph / Discord Embed -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://LunarChill.club/">
-  <meta property="og:title" content="LunarChill - Chill thôi, đừng có vội. 🌙">
-  <meta property="og:description" content="Máy chủ Minecraft sinh tồn thư thái, công bằng, không pay-to-win. Tham gia ngay cùng cộng đồng LunarChill.">
-  <meta property="og:image" content="https://LunarChill.club/assets/images/og-banner.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="LunarChill Minecraft SMP - Chill thôi, đừng có vội.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#688BF8">
+  <meta property="og:title" content="LunarChill | Chill thôi, đừng có vội.">
+  <meta property="og:description" content="Thế giới Minecraft Sinh Tồn bình yên, hỗ trợ chơi chéo PC (1.21.11 đến 26.3) và PE (26.30 đến 26.51).">
+  <meta property="og:image" content="https://lunarchill.club/assets/images/logo.webp">
+  <meta property="og:url" content="https://lunarchill.club/">
 
-  <!-- Typography Fonts (Space Mono, Plus Jakarta Sans & JetBrains Mono) -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/images/logo.webp">
+
+  <!-- Google Fonts: Space Mono (Display) + Be Vietnam Pro (Body) + JetBrains Mono (Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <!-- Core Stylesheets (Zero Slop) -->
-  <link rel="stylesheet" href="assets/css/variables.css?v=20261107-2">
-  <link rel="stylesheet" href="assets/css/base.css?v=20261107-2">
-  <link rel="stylesheet" href="assets/css/components.css?v=20261107-2">
-  <link rel="stylesheet" href="assets/css/layout.css?v=20261107-2">
-  <link rel="stylesheet" href="assets/css/pages/home.css?v=20261107-2">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
 </head>
 <body>
 
-  <!-- Sticky Header -->
+  <!-- Sticky Masthead Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-link" title="LunarChill Trang chủ">
-        <img src="assets/images/logo-small.webp" alt="LunarChill Logo" class="brand-logo-img" width="36" height="36">
+      <a href="index.html" class="brand-link" aria-label="Trang chủ LunarChill">
+        <img src="assets/images/logo.webp" alt="Logo LunarChill" class="brand-logo-img" width="36" height="36">
         <span>LunarChill</span>
       </a>
 
-      <nav aria-label="Main Navigation">
+      <nav aria-label="Điều hướng chính">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active" aria-current="page">Trang chủ</a></li>
-          <li><a href="guide.html" class="nav-link">Cẩm nang</a></li>
-          <li><a href="advanced-guide.html" class="nav-link">HD Chi tiết</a></li>
-          <li><a href="towns.html" class="nav-link">Thị trấn &amp; Ảnh</a></li>
+          <li><a href="guide.html" class="nav-link">Hướng dẫn</a></li>
+          <li><a href="advanced-guide.html" class="nav-link">Cẩm nang nâng cao</a></li>
+          <li><a href="towns.html" class="nav-link">Thị trấn</a></li>
+          <li><a href="gallery.html" class="nav-link">Thư viện</a></li>
           <li><a href="rules.html" class="nav-link">Nội quy</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="java" title="Sao chép IP Java">
-          Sao chép IP Server
+        <button type="button" class="btn btn-secondary btn-sm btn-copy-header" data-action="copy-ip" data-copy-target="pc" aria-label="Sao chép IP máy chủ LunarChill.club:25572">
+          <span>LunarChill.club:25572</span>
         </button>
-        <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-sm">
-          Tham gia Discord
+
+        <a href="https://discord.gg/SM9cn8pQQH" data-link="discord" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Tham gia Discord</span>
         </a>
-        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobile-drawer">
+
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Mở menu điều hướng">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -72,350 +70,298 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu điều hướng di động" aria-hidden="true">
     <a href="index.html" class="mobile-nav-link" aria-current="page">Trang chủ</a>
-    <a href="guide.html" class="mobile-nav-link">Cẩm nang tân thủ</a>
-    <a href="towns.html" class="mobile-nav-link">Thị trấn (Towny)</a>
-    <a href="gallery.html" class="mobile-nav-link">Triển lãm ảnh (Gallery)</a>
-    <a href="rules.html" class="mobile-nav-link">Nội quy máy chủ</a>
+    <a href="guide.html" class="mobile-nav-link">Hướng dẫn</a>
+    <a href="advanced-guide.html" class="mobile-nav-link">Cẩm nang nâng cao</a>
+    <a href="towns.html" class="mobile-nav-link">Thị trấn</a>
+    <a href="gallery.html" class="mobile-nav-link">Thư viện</a>
+    <a href="rules.html" class="mobile-nav-link">Nội quy</a>
     <div class="mobile-drawer-actions">
       <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pc">
-        Sao chép IP PC (Java &amp; Bedrock): <span data-config-text="SERVER_ADDRESS_JAVA">LunarChill.club:25572</span>
+        Sao chép IP: LunarChill.club:25572
       </button>
-      <button type="button" class="btn btn-secondary" data-action="copy-ip" data-copy-target="pe">
-        Sao chép Host PE (Điện thoại): <span data-config-text="SERVER_HOST">LunarChill.club</span> (Port: <span data-config-text="SERVER_PORT_BEDROCK">25572</span>)
-      </button>
-      <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">
+      <a href="https://discord.gg/SM9cn8pQQH" data-link="discord" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
         Tham gia Discord
       </a>
     </div>
   </div>
 
+  <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero Section (Centered Cosmic Stage & Looping Ambient Video Backdrop) -->
-    <section class="hero-section hero-centered" id="hero">
-      <!-- Looping Ambient Video Backdrop -->
-      <div class="hero-video-backdrop" aria-hidden="true">
-        <video class="hero-video-element" autoplay loop muted playsinline poster="assets/images/hero-video-poster.webp" preload="auto">
-          <source src="assets/videos/hero-ambient-loop.mp4" type="video/mp4">
-        </video>
-        <div class="hero-video-overlay"></div>
-      </div>
 
-      <div class="container hero-container">
-
-        <!-- Top / Center Content -->
-        <div class="hero-center-content">
-          <div class="hero-logo-wrap">
-            <img src="assets/images/logo.webp" alt="Huy hiệu LunarChill" class="hero-logo-badge" width="130" height="130" fetchpriority="high">
+    <!-- 1. Hero Section: Asymmetric 12-Column Stage -->
+    <section class="hero-stage" id="hero">
+      <div class="container hero-stage-grid">
+        <div class="hero-stage-copy">
+          <div class="hero-brand-row">
+            <img src="assets/images/logo.webp" alt="Biểu tượng mặt trăng LunarChill" class="hero-logo-badge" width="64" height="64">
+            <p class="hero-subtitle-en">Chill out, don’t rush.</p>
           </div>
 
-          <span class="section-tag">Cosmic Sanctuary</span>
           <h1 class="hero-title">Chill thôi, đừng có vội.</h1>
-          <p class="hero-subtitle-en">Just chill, don't rush.</p>
+          <p class="lead hero-desc">Sinh tồn Minecraft bình yên, chơi chung PC và điện thoại.</p>
 
-          <p class="hero-desc">
-            Thế giới sinh tồn Minecraft thanh bình, ấm cúng và phi thương mại. Nơi bạn cùng bạn bè dựng nhà, xây thị trấn và thong thả ngắm sao đêm sau những giờ học tập, làm việc mệt mỏi.
-          </p>
-
-          <!-- Core Badges / Highlights -->
-          <div class="hero-badges">
-            <span class="hero-badge-pill">
-              <span class="badge-dot">✦</span> Không áp lực cày cuốc &amp; No P2W
-            </span>
-            <span class="hero-badge-pill">
-              <span class="badge-dot">✦</span> Hỗ trợ bản PC (Java &amp; Bedrock) lẫn bản PE riêng (Điện thoại)
-            </span>
-          </div>
-
-          <!-- CTA Actions -->
           <div class="hero-cta-group">
             <a href="#server-portal" class="btn btn-primary">
-              🎮 Lấy IP kết nối ngay ↓
-            </a>
-            <a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary">
-              Tham gia Discord
+              <span>Lấy IP kết nối ngay</span>
             </a>
             <a href="guide.html" class="btn btn-secondary">
-              📖 Cẩm nang tân thủ
+              <span>Cẩm nang tân thủ</span>
             </a>
           </div>
         </div>
 
-      </div>
-
-      <!-- Video Attribution Credit (Bottom-Right of Hero frame) -->
-      <div class="hero-video-credit" aria-label="Nguồn video nền">
-        <span class="credit-sparkle" aria-hidden="true">✦</span>
-        <span class="credit-text">
-          Background video: <a href="https://youtu.be/DPXs4YlNl7k" target="_blank" rel="noopener noreferrer" title="Xem video gốc trên YouTube">Ambient Worlds</a> &middot; <em>I do not own this video</em>
-        </span>
+        <figure class="hero-stage-visual" data-loop>
+          <div class="hero-video-frame">
+            <video class="hero-video-element" autoplay loop muted playsinline preload="metadata" poster="assets/images/hero-video-poster.webp">
+              <source src="assets/videos/hero-backdrop.webm" type="video/webm">
+              <source src="assets/videos/hero-backdrop.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="hero-stage-bar">
+            <figcaption class="hero-video-credit" data-credits>
+              Cảnh đêm bởi <a href="https://youtu.be/DPXs4YlNl7k" target="_blank" rel="noopener noreferrer">Walking Highlights</a> (minh họa không khí)
+            </figcaption>
+            <button type="button" class="btn btn-secondary btn-sm hero-loop-toggle" data-loop-toggle aria-pressed="false">
+              Tạm dừng cảnh
+            </button>
+          </div>
+        </figure>
       </div>
     </section>
 
-    <!-- Dedicated Server Portal & Live Status Section (Inspired by TheLovelyValley × LunarChill Cosmic Sanctuary) -->
+    <!-- 2. Server Portal Workbench Section -->
     <section class="server-portal-section" id="server-portal">
       <div class="container">
         <div class="portal-card">
-
-          <!-- Row 1: Top Header & Status Pill -->
           <div class="portal-top-bar">
-            <div class="portal-brand-group">
-              <div class="portal-eyebrow">
-                <span class="sparkle-icon" aria-hidden="true">✦</span>
-                <span>MINECRAFT PC (JAVA &amp; BEDROCK) · PE RIÊNG (CROSS-PLAY)</span>
-              </div>
-              <h2 class="portal-title">LunarChill.Club</h2>
-              <p class="portal-subtitle">Bản PC (Java &amp; Bedrock) cùng bản PE riêng biệt</p>
+            <div class="portal-title-group">
+              <h2 class="portal-title">Cổng kết nối máy chủ</h2>
+              <p class="portal-subtitle">Theo dõi trạng thái trực tuyến và sao chép địa chỉ vào game.</p>
             </div>
 
-            <div class="portal-status-wrap">
-              <div class="status-pill" id="server-status-pill" role="status" aria-live="polite">
-                <span class="status-dot checking" id="server-status-dot" aria-hidden="true"></span>
-                <span id="server-status-text">Đang kiểm tra...</span>
-              </div>
+            <div class="status-pill" id="server-status-pill" role="status" aria-live="polite">
+              <span class="status-dot checking" id="server-status-dot" aria-hidden="true"></span>
+              <span id="server-status-text">Đang kiểm tra…</span>
             </div>
           </div>
 
-          <!-- Row 2: Big Player Counter & Version Box -->
-          <div class="portal-metrics-row">
-            <div class="portal-player-metric">
-              <span class="metric-online" id="portal-players-online">--</span>
-              <span class="metric-max">/ <span id="portal-players-max">50</span></span>
-              <span class="metric-label">người đang chơi</span>
+          <div class="portal-workbench-grid">
+            <!-- Left Telemetry Pane -->
+            <div class="portal-telemetry-pane">
+              <div class="portal-player-metric">
+                <span class="metric-online" id="portal-players-online">0</span>
+                <span class="metric-max">/ <span id="portal-players-max">50</span></span>
+                <span class="metric-label">Người chơi trực tuyến</span>
+              </div>
+
+              <div class="portal-version-box">
+                <span class="version-box-label">Phiên bản hỗ trợ</span>
+                <span class="version-box-value">PC <span data-config-text="VERSION_PC">1.21.11 đến 26.3</span> / PE <span data-config-text="VERSION_PE">26.30 đến 26.51</span></span>
+              </div>
             </div>
 
-            <div class="portal-version-box">
-              <span class="version-box-label">PHIÊN BẢN HỖ TRỢ</span>
-              <strong class="version-box-value">
-                PC <span data-config-text="VERSION_PC">1.21.11 – 26.3</span> · PE <span data-config-text="VERSION_PE">26.30 – 26.51</span>
-              </strong>
-            </div>
-          </div>
-
-          <hr class="portal-divider" aria-hidden="true">
-
-          <!-- Row 3: Primary PC Connection Hero Card -->
-          <div class="portal-pc-connection" id="java-node-card">
-            <div class="pc-conn-header">
-              <div class="pc-conn-title-group">
-                <div class="node-icon-box checking" id="java-node-icon" aria-hidden="true">✦</div>
-                <div class="pc-conn-title-wrap">
-                  <span class="pc-conn-tag">MÁY CHỦ PC CHÍNH</span>
-                  <h3 class="pc-conn-title">Bản PC (Java &amp; Bedrock)</h3>
+            <!-- Right Connection Pane -->
+            <div class="portal-pc-connection" id="java-node-card">
+              <div class="pc-conn-header">
+                <div class="pc-conn-title-group">
+                  <div class="node-icon-box checking" id="java-node-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="4" width="20" height="16" rx="2"/>
+                      <path d="M6 12h4m-2-2v4m7-1h.01M18 11h.01"/>
+                    </svg>
+                  </div>
+                  <h3 class="pc-conn-title">Máy chủ PC &amp; Điện thoại</h3>
                 </div>
-              </div>
-              <div class="pc-conn-status-badge">
-                <span class="node-status" id="java-node-status">Đang kiểm tra kết nối...</span>
-              </div>
-            </div>
-
-            <div class="pc-conn-address-row">
-              <div class="pc-conn-ip-group">
-                <span class="pc-conn-label">ĐỊA CHỈ MÁY CHỦ:</span>
-                <div class="pc-conn-ip-display">
-                  <span class="ip-domain" data-config-text="SERVER_HOST">LunarChill.club</span>
-                  <span class="ip-separator">:</span>
-                  <span class="ip-port" data-config-text="SERVER_PORT_JAVA">25572</span>
+                <div class="pc-conn-status-badge">
+                  <p class="node-status" id="java-node-status">Đang kiểm tra…</p>
                 </div>
               </div>
 
-              <div class="pc-conn-actions">
-                <button type="button" class="btn btn-primary btn-copy-pc" data-action="copy-ip" data-copy-target="pc" title="Sao chép IP máy chủ PC">
-                  <span class="btn-icon" aria-hidden="true">📋</span>
-                  <span>Sao chép IP PC</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 3.5: Phone / Bedrock PE Information Callout Note -->
-          <div class="portal-pe-note" role="note" aria-label="Thông tin kết nối cho người chơi điện thoại">
-            <div class="pe-note-left">
-              <div class="pe-note-icon-wrap" aria-hidden="true">
-                <span class="pe-note-icon">📱</span>
-              </div>
-              <div class="pe-note-content">
-                <div class="pe-note-title">
-                  <strong>Ghi chú cho người chơi Điện thoại (Minecraft PE / Bedrock):</strong>
+              <div class="pc-conn-address-row">
+                <div class="pc-conn-ip-group">
+                  <span class="pc-conn-label">Địa chỉ kết nối chung</span>
+                  <div class="pc-conn-ip-display">
+                    <span class="ip-domain" data-config-text="SERVER_IP">LunarChill.club</span><span class="ip-separator">:</span><span class="ip-port" data-config-text="BEDROCK_PORT">25572</span>
+                  </div>
                 </div>
-                <p class="pe-note-text">
-                  Nhập <strong>Server Name:</strong> <code>LunarChill</code> &middot; 
-                  <strong>Server Address:</strong> <code data-config-text="SERVER_HOST">LunarChill.club</code> &middot; 
-                  <strong>Port:</strong> <code data-config-text="SERVER_PORT_BEDROCK">25572</code>. 
-                  Hệ thống hỗ trợ chơi chung thế giới trực tiếp với người chơi PC.
-                </p>
+                <div class="pc-conn-actions">
+                  <button type="button" class="btn btn-primary btn-copy-pc" data-action="copy-ip" data-copy-text="LunarChill.club:25572">
+                    <span>Sao chép IP</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="pe-note-action">
-              <button type="button" class="btn btn-secondary btn-sm" data-action="copy-ip" data-copy-target="pe" title="Sao chép Host PE">
-                Sao chép Host PE
-              </button>
+
+              <div class="portal-pe-note">
+                <div class="pe-note-content">
+                  <p class="pe-note-title"><strong>Điện thoại (Bedrock / MCPE)</strong></p>
+                  <dl class="pe-spec-list">
+                    <div class="pe-spec-item"><dt>Tên:</dt><dd>LunarChill</dd></div>
+                    <div class="pe-spec-item"><dt>Địa chỉ:</dt><dd>LunarChill.club</dd></div>
+                    <div class="pe-spec-item"><dt>Cổng:</dt><dd>25572</dd></div>
+                  </dl>
+                </div>
+                <div class="pe-note-action">
+                  <a href="guide.html" class="btn btn-secondary btn-sm">Hướng dẫn PE</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Row 4: Footer Meta & Timestamp -->
           <div class="portal-footer-meta">
-            <div class="meta-check-time">
-              <span class="sparkle-icon" aria-hidden="true">✦</span>
-              <span>Kiểm tra: <span id="status-checked-time">--:--:--</span></span>
-            </div>
-            <div class="meta-disclaimer">
-              Trạng thái đồng bộ thời gian thực từ máy chủ LunarChill
-            </div>
+            <span class="meta-check-time">
+              Kiểm tra lúc: <span id="status-checked-time">--:--:--</span>
+            </span>
+            <span class="meta-refresh-note">Làm mới mỗi 45 giây</span>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- Quick Join Section -->
+    <!-- 3. Quick Join Section (3 Bước vào thế giới) -->
     <section class="quick-join-section" id="steps">
       <div class="container">
         <div class="section-header">
-          <h2>3 bước vào game cực nhanh</h2>
-          <p>Chỉ cần nhập đúng địa chỉ và cổng kết nối theo bản game bạn đang dùng.</p>
+          <h2>Ba bước vào thế giới</h2>
+          <p>Hỗ trợ chơi chung mượt mà giữa máy tính và điện thoại.</p>
         </div>
 
-        <div class="steps-grid">
-          <div class="step-card">
-            <h3>1. Mở Minecraft</h3>
-            <p>Khởi động <strong>bản PC</strong> (hỗ trợ cả <strong>Java</strong> lẫn <strong>Bedrock</strong>: <span data-config-text="VERSION_PC">1.21.11 – 26.3</span>), hoặc <strong>bản PE riêng</strong> trên điện thoại (<span data-config-text="VERSION_PE">26.30 – 26.51</span>).</p>
-          </div>
+        <ol class="steps-grid">
+          <li class="step-card">
+            <h3>01. Chọn đúng phiên bản</h3>
+            <p>Mở Minecraft PC (<strong>1.21.11 đến 26.3</strong>) hoặc PE (<strong>26.30 đến 26.51</strong>).</p>
+          </li>
 
-          <div class="step-card">
-            <h3>2. Nhập địa chỉ và cổng</h3>
-            <p>Dùng chung địa chỉ <strong data-config-text="SERVER_HOST">LunarChill.club</strong> và cổng duy nhất <strong data-config-text="SERVER_PORT_JAVA">25572</strong> cho cả bản PC (Java &amp; Bedrock) và bản PE riêng (Điện thoại).</p>
-          </div>
+          <li class="step-card">
+            <h3>02. Nhập địa chỉ máy chủ</h3>
+            <p>PC nhập <strong>LunarChill.club:25572</strong>. Điện thoại nhập <strong>LunarChill.club</strong>, cổng <strong>25572</strong>.</p>
+          </li>
 
-          <div class="step-card">
-            <h3>3. Bắt đầu sinh tồn</h3>
-            <p>Vào game và xem trang <a href="guide.html">cẩm nang tân thủ</a> để nắm các lệnh cơ bản và chọn vùng đất dựng nhà.</p>
-          </div>
-        </div>
+          <li class="step-card">
+            <h3>03. Đăng nhập &amp; kết bạn</h3>
+            <p>Xem <a href="guide.html">hướng dẫn tân thủ</a> và ghé <a href="https://discord.gg/SM9cn8pQQH" data-link="discord" target="_blank" rel="noopener noreferrer">Discord</a> giao lưu.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- Core Features Section -->
+    <!-- 4. Core Features Section (Asymmetric 4+8 Split Ledger) -->
     <section class="features-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Sinh tồn thuần khiết, không pay-to-win</h2>
-          <p>Giữ trọn trải nghiệm sinh tồn Minecraft nguyên bản, bổ sung những tiện ích vừa đủ để chơi cùng bạn bè.</p>
+      <div class="container features-layout">
+        <div class="features-intro">
+          <h2>Sinh tồn có chiều sâu</h2>
+          <p>Giữ trọn nhịp sinh tồn nguyên bản, bổ sung kỹ năng, bốn mùa và quần xã mới cân bằng.</p>
+          <a href="advanced-guide.html" class="btn btn-secondary btn-sm">Cẩm nang nâng cao</a>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Thời tiết bốn mùa &amp; Ẩm thực</h3>
-            <p>Chu kỳ 4 mùa luân chuyển tự nhiên với Aternum Seasons. Bổ sung nhiều món ăn và nồi súp dinh dưỡng từ CropAndKettle để cùng bạn bè thưởng thức.</p>
+        <dl class="features-ledger">
+          <div class="feature-row">
+            <dt>Towny &amp; Bảo vệ đất</dt>
+            <dd>Lập thị trấn cùng bạn bè, phân quyền lãnh thổ và xây dựng công trình lâu dài.</dd>
           </div>
-
-          <div class="feature-card">
-            <h3>Bảo vệ công trình với Towny</h3>
-            <p>Hệ thống giữ đất và lập thị trấn bảo vệ công trình khỏi bị phá hoại hoặc cướp phá. Hỗ trợ giao diện Menu <code>/t menu</code> trực quan, thao tác nhanh không cần nhớ command. Xem thêm tại <a href="towns.html">trang Thị trấn</a>.</p>
+          <div class="feature-row">
+            <dt>Aura Skills</dt>
+            <dd>Rèn luyện 11 nhánh kỹ năng từ Khai mỏ, Chặt gỗ đến Chiến đấu để tăng chỉ số.</dd>
           </div>
-
-          <div class="feature-card">
-            <h3>Kỹ năng Aura Skills &amp; Thú cưng</h3>
-            <p>11 kỹ năng tăng cấp tự nhiên qua các hoạt động lao động thường ngày. Nuôi dưỡng và đồng hành cùng thú cưng MyPet trong mọi chuyến đi.</p>
+          <div class="feature-row">
+            <dt>Aternum Seasons</dt>
+            <dd>Chu kỳ bốn mùa Xuân, Hạ, Thu, Đông biến đổi rừng cây, thời tiết và mùa vụ.</dd>
           </div>
-
-          <div class="feature-card">
-            <h3>Thử thách The End: Nullscape &amp; Stellarity</h3>
-            <p>Địa hình The End cao 384 block với nhiều cấu trúc mới, boss thử thách và công thức chế tạo đặc biệt. Lưu ý không thể đặt nước tại The End.</p>
+          <div class="feature-row">
+            <dt>Nullscape &amp; Stellarity</dt>
+            <dd>Tái thiết chiều không gian The End với địa hình kỳ vĩ và thử thách cuối game.</dd>
           </div>
-
-          <div class="feature-card">
-            <h3>Cơ chế Đào sâu, Oxy &amp; Nước</h3>
-            <p>Cày Level 30 để mở khóa đào bình thường dưới Y≤0 (tránh Mining Fatigue 60s khi đào đá) và bảo vệ Ancient Debris Nether (phạt đào chậm 5 phút nếu chưa đủ cấp). Quản lý thanh nước và nạp oxy bằng Beacon.</p>
+          <div class="feature-row">
+            <dt>Thương trường động</dt>
+            <dd>Giá vật phẩm tại cửa hàng biến thiên theo cung cầu thực tế của cư dân.</dd>
           </div>
-
-          <div class="feature-card">
-            <h3>Giá thị trường biến động &amp; No P2W</h3>
-            <p>Kích hoạt cơ chế Dynamic Pricing tự cân bằng giá theo cung - cầu (xả nhiều hạ giá, mua nhiều tăng giá, tự hồi phục chu kỳ). Không bán rank hay can thiệp gameplay.</p>
+          <div class="feature-row">
+            <dt>Cộng đồng văn minh</dt>
+            <dd>Môi trường thân thiện, không gian lận hay phá hoại, quản trị viên luôn lắng nghe.</dd>
           </div>
-        </div>
+        </dl>
       </div>
     </section>
 
-    <!-- Community Gallery Section (Honest Update Notice per Anti-Slop) -->
+    <!-- 5. Community Showcase Section -->
     <section class="community-section">
       <div class="container">
-        <div class="section-header">
-          <h2>Hình ảnh thực tế trong server</h2>
-          <p>Ghi lại từ các góc sinh tồn và hoạt động thường nhật của cộng đồng LunarChill.</p>
-        </div>
-
         <div class="showcase-update-notice">
-          <span class="showcase-update-badge">Đang cập nhật tư liệu thực tế</span>
-          <h3>Bộ sưu tập ảnh chụp in-game đang được Ban Quản Trị tổng hợp</h3>
-          <p>
-            Chúng tôi chỉ đăng tải những bức ảnh chụp thực tế từ các thị trấn, công trình và khoảnh khắc sinh tồn của người chơi trong máy chủ, không sử dụng ảnh minh họa có sẵn. Bạn có thể chia sẻ góc nhà của mình tại kênh cộng đồng trên Discord.
-          </p>
-          <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-            <a href="gallery.html" class="btn btn-primary btn-sm">Mở Triển lãm Cộng đồng (Gallery)</a>
-            <a href="towns.html" class="btn btn-secondary btn-sm">Xem Danh bạ Thị trấn (Towns)</a>
+          <div class="showcase-copy">
+            <h2>Góc kỷ niệm &amp; Thị trấn</h2>
+            <p>Hình ảnh thực tế về các công trình và thị trấn của cư dân LunarChill đang được tuyển chọn định kỳ.</p>
+          </div>
+          <div class="showcase-actions">
+            <a href="towns.html" class="btn btn-secondary btn-sm">Danh sách thị trấn</a>
+            <a href="gallery.html" class="btn btn-secondary btn-sm">Thư viện cộng đồng</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Global Footer -->
+  <!-- Site Footer (Index Columns) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-brand">
-            <img src="assets/images/logo-small.webp" alt="LunarChill Logo" width="28" height="28" class="footer-brand-logo" loading="lazy">
-            <strong class="footer-brand-name">LunarChill</strong>
+            <img src="assets/images/logo.webp" alt="Logo LunarChill" width="28" height="28" class="footer-brand-logo">
+            <span class="footer-brand-name">LunarChill</span>
           </div>
           <p class="footer-desc">
-            Máy chủ sinh tồn Minecraft thư thái, công bằng và không pay-to-win.
+            Máy chủ Minecraft Sinh Tồn bình yên cho PC và PE. Chill thôi, đừng có vội.
           </p>
-          <p class="mojang-disclaimer">
-            Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.
-          </p>
-          <p class="video-credit-disclaimer">
-            Hero background ambience video &copy; <a href="https://youtu.be/DPXs4YlNl7k" target="_blank" rel="noopener noreferrer">Ambient Worlds</a> in partnership with @CozyCraftYT. Used under fair attribution. I do not own this video.
-          </p>
+          <button type="button" class="command-chip" data-action="copy-ip" data-copy-target="pc" aria-label="Sao chép IP máy chủ">
+            <span>LunarChill.club:25572</span>
+          </button>
         </div>
 
         <div class="footer-col">
-          <h4>Khám phá</h4>
+          <h3>Khám phá</h3>
           <ul class="footer-links">
             <li><a href="index.html" aria-current="page">Trang chủ</a></li>
-            <li><a href="guide.html">Cẩm nang</a></li>
-            <li><a href="towns.html">Thị trấn (Towny)</a></li>
-            <li><a href="gallery.html">Triển lãm (Gallery)</a></li>
-            <li><a href="rules.html">Nội quy</a></li>
+            <li><a href="guide.html">Hướng dẫn tân thủ</a></li>
+            <li><a href="advanced-guide.html">Cẩm nang nâng cao</a></li>
+            <li><a href="towns.html">Danh sách Thị trấn</a></li>
+            <li><a href="gallery.html">Thư viện cộng đồng</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Văn bản</h4>
+          <h3>Cộng đồng</h3>
+          <ul class="footer-links">
+            <li><a href="https://discord.gg/SM9cn8pQQH" data-link="discord" target="_blank" rel="noopener noreferrer">Máy chủ Discord</a></li>
+            <li><a href="rules.html">Nội quy máy chủ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Pháp lý</h3>
           <ul class="footer-links">
             <li><a href="terms.html">Điều khoản dịch vụ</a></li>
             <li><a href="privacy.html">Chính sách bảo mật</a></li>
           </ul>
         </div>
-
-        <div class="footer-col">
-          <h4>Cộng đồng</h4>
-          <ul class="footer-links">
-            <li><a href="https://discord.gg/SM9cn8pQQH" target="_blank" rel="noopener noreferrer" data-link="discord">Discord ↗</a></li>
-          </ul>
-        </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>&copy; 2026 LunarChill Club.</div>
+      <div class="footer-bottom" data-credits>
+        <p>&copy; 2026 LunarChill. Bảo lưu mọi quyền.</p>
+        <p class="mojang-disclaimer">
+          Không phải sản phẩm Minecraft chính thức. Không được phê duyệt bởi hoặc liên kết với Mojang hay Microsoft.
+        </p>
+        <p class="video-credit-disclaimer">
+          Video nền trang chủ được trích từ <a href="https://youtu.be/DPXs4YlNl7k" target="_blank" rel="noopener noreferrer">Walking Highlights (YouTube)</a>, chỉ sử dụng nhằm mục đích minh họa không khí thẩm mỹ, không đại diện cho hình ảnh gameplay trực tiếp trong máy chủ.
+        </p>
       </div>
     </div>
   </footer>
 
-  <!-- Application Logic -->
+  <!-- Main JS Entry -->
   <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
