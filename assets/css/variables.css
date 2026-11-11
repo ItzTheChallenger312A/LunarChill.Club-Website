@@ -167,3 +167,70 @@
   --transition-fast: 0.12s ease;
   --transition-normal: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Backwards-compatible spacing, typography & surface aliases for cached subpage stylesheets */
+:root,
+body {
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-28: 112px;
+  --space-32: 128px;
+  --space-36: 144px;
+
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-md: 1.05rem;
+  --text-lg: 1.22rem;
+  --text-xl: clamp(1.5rem, 3.5vw, 2.05rem);
+  --text-2xl: clamp(2.1rem, 4.8vw, 3.2rem);
+  --text-3xl: clamp(2.4rem, 5.2vw, 3.6rem);
+  --text-display-s: clamp(2.1rem, 4.2vw, 3.2rem);
+  --text-display: clamp(2.2rem, 4.8vw, 3.5rem);
+  --text-section: clamp(1.5rem, 3.5vw, 2.05rem);
+  --text-title: 1.22rem;
+  --text-lead: 1.08rem;
+
+  --color-ink-2: var(--color-text-subheading);
+  --color-muted: var(--color-text-muted);
+  --color-surface: var(--color-bg-surface);
+  --color-surface-2: var(--color-bg-surface-hover);
+  --color-surface-elevated: var(--color-bg-elevated);
+  --color-surface-terminal: var(--color-chip-bg);
+  --color-surface-terminal-hover: var(--color-chip-bg-hover);
+  --color-border-terminal: var(--color-chip-border);
+  --color-rule-notch-light: var(--color-rule-bevel-light);
+  --color-rule-notch-dark: var(--color-rule-bevel-dark);
+  --shadow-inset-card: var(--shadow-card-bevel);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --z-base: 1;
+  --z-sticky: 200;
+  --z-drawer: 210;
+  --z-toast: 1000;
+}

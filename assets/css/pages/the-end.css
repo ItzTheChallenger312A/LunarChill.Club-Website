@@ -4,7 +4,7 @@
    Tuân thủ anti-slop-design: radius <= 8px, không hover trên thẻ tĩnh, tabular-nums
    ========================================================================== */
 
-@import url('advanced-guide.css?v=20261111-4');
+@import url('advanced-guide.css?v=20261111-5');
 
 /* Badges phân loại */
 .badge-void {

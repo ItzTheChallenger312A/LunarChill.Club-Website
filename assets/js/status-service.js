@@ -3,7 +3,7 @@
  * Quản lý vòng đời 5 trạng thái độc lập cho PC (Java) và PE (Bedrock)
  * Tuân thủ AC-01.1, AC-01.2 (Dynamic Cache theo expires_at thực tế) & AC-01.3
  */
-import { CONFIG } from './config.js?v=20261111-4';
+import { CONFIG } from './config.js?v=20261111-5';
 
 export class StatusService {
   constructor(elements) {
