@@ -3,9 +3,9 @@
  * Khởi tạo SSOT bindings, Clipboard actions (chống race-condition timeout),
  * Mobile Drawer Accessibility (inert + Tab/Shift+Tab Focus Trap + Escape), và Server Status.
  */
-import { CONFIG } from './config.js';
-import { copyToClipboard, showToast } from './clipboard.js';
-import { StatusService } from './status-service.js';
+import { CONFIG } from './config.js?v=20261111-4';
+import { copyToClipboard, showToast } from './clipboard.js?v=20261111-4';
+import { StatusService } from './status-service.js?v=20261111-4';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Đồng bộ dữ liệu hiển thị từ CONFIG (Single Source of Truth)
